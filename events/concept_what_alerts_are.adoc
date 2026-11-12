@@ -1,0 +1,16 @@
+---
+permalink: events/concept_what_alerts_are.html 
+sidebar: sidebar 
+keywords: alerts 
+summary: Obwohl Ereignisse kontinuierlich auftreten, generiert der Unified Manager nur dann eine Warnung, wenn ein Ereignis festgelegte Filterkriterien erfüllt. Sie können die Ereignisse auswählen, für die Warnungen generiert werden sollen, zum Beispiel wenn ein Speicherplatzschwellenwert überschritten wird oder ein Objekt offline geht. Sie können eine Warnung auch mit einem Skript verknüpfen, das beim Auslösen der Warnung ausgeführt wird. 
+---
+= Informationen zu Warnmeldungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Obwohl Ereignisse kontinuierlich auftreten, generiert der Unified Manager nur dann eine Warnung, wenn ein Ereignis festgelegte Filterkriterien erfüllt. Sie können die Ereignisse auswählen, für die Warnungen generiert werden sollen--beispielsweise, wenn ein Speicherplatzschwellenwert überschritten wird oder ein Objekt offline geht. Sie können eine Warnung auch mit einem Skript verknüpfen, das beim Auslösen einer Warnung ausgeführt wird.
+
+Zu den Filterkriterien gehören Objektklasse, Name oder Ereignisschweregrad.

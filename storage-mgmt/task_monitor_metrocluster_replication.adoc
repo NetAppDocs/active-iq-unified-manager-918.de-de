@@ -1,0 +1,56 @@
+---
+permalink: storage-mgmt/task_monitor_metrocluster_replication.html 
+sidebar: sidebar 
+keywords: monitor, metrocluster, replication 
+summary: Sie können den allgemeinen Systemstatus der logischen Verbindungen während der Spiegelung der Daten überwachen und diagnostizieren. Sie können Probleme oder Risiken identifizieren, die die Spiegelung von Clusterkomponenten wie Aggregaten, Knoten und Storage Virtual Machines unterbrechen. 
+---
+= Überwachung der MetroCluster Replikation in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den allgemeinen Systemstatus der logischen Verbindungen während der Spiegelung der Daten überwachen und diagnostizieren. Sie können Probleme oder Risiken identifizieren, die die Spiegelung von Clusterkomponenten wie Aggregaten, Knoten und Storage Virtual Machines unterbrechen.
+
+Unified Manager verwendet Systemstatuswarnungen, um den Status der Komponenten und die Konnektivität in der MetroCluster Konfiguration zu überwachen.
+
+.Bevor Sie beginnen
+Sowohl der lokale als auch der Remote-Cluster in der MetroCluster Konfiguration müssen zu Unified Manager hinzugefügt werden
+
+
+
+[[view-replication-for-metrocluster-over-ip-configurations]]
+== Ansicht der Replikation für MetroCluster over IP Konfigurationen
+
+Bei MetroCluster over IP Konfigurationen wird der Status der Datenreplizierung in der Topologie-Übersicht für einen durch MetroCluster over IP geschützten Cluster in den folgenden Ansichten im linken Navigationsbereich von Unified Manager angezeigt:
+
+* *Storage* > *Cluster* > *Schutz: MetroCluster* Ansicht
+* *Schutz* > *Beziehungen* > *Beziehung: MetroCluster* Ansicht
+
+
+Informationen finden sich unter link:../storage-mgmt/task_monitor_metrocluster_configurations.html#monitor-connectivity-issues-in-metrocluster-over-ip-configuration["Überwachung von Verbindungsproblemen in MetroCluster over IP"].
+
+
+
+[[view-replication-for-metrocluster-over-fc-configurations]]
+== Replikation für MetroCluster over FC-Konfigurationen anzeigen
+
+Mit diesen Schritten lassen sich etwaige Probleme bei der Datenreplizierung in der MetroCluster over FC Konfiguration ermitteln.
+
+.Schritte
+. Im linken Navigationsbereich wird *Storage* > *Cluster* ausgewählt.
++
+Eine Liste der überwachten Cluster wird angezeigt.
+
+. In der Ansicht *Systemstatus: Alle Cluster* können Sie den Namen des Clusters auswählen, für den Sie die MetroCluster Replikationsdetails anzeigen möchten. Auf der Seite *Cluster / Systemstatusdetails* können Sie auf die Registerkarte *MetroCluster Replikation* klicken.
++
+Die Topologie der zu replizierenden MetroCluster Konfiguration wird am lokalen Standort im entsprechenden Clusterobjektbereich zusammen mit Informationen über den Remote-Standort angezeigt, an dem die Daten gespiegelt werden. Wenn Sie den Mauszeiger über das Symbol bewegen, können Sie detaillierte Informationen über das generierte Ereignis anzeigen.
+
+
+
+Anhand der auf der Seite „Cluster/Systemstatus-Details“ angezeigten Informationen lassen sich Replizierungsprobleme beheben. Wenn Sie in Ihrer MetroCluster Konfiguration Spiegelungsprobleme identifizieren, müssen Sie sich bei System Manager anmelden oder auf die ONTAP CLI zugreifen, um die Probleme zu beheben.
+
+*Verwandte Informationen*
+
+link:../health-checker/reference_health_cluster_details_page.html["Cluster-/Systemstatusdetailseite"]

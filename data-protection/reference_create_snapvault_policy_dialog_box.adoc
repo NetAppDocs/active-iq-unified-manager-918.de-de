@@ -1,0 +1,78 @@
+---
+permalink: data-protection/reference_create_snapvault_policy_dialog_box.html 
+sidebar: sidebar 
+keywords: create, snapvault, policy, dialog box 
+summary: Das Dialogfeld „SnapVault Richtlinie erstellen“ ermöglicht das Erstellen einer Richtlinie zum Festlegen der Priorität für SnapVault Übertragungen. Mithilfe von Richtlinien lässt sich die Effizienz von Übertragungen vom primären zum sekundären Volume maximieren. 
+---
+= Das Dialogfeld „Richtlinie erstellen“ für SnapVault in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Dialogfeld „SnapVault Richtlinie erstellen“ ermöglicht das Erstellen einer Richtlinie zum Festlegen der Priorität für SnapVault Übertragungen. Mithilfe von Richtlinien lässt sich die Effizienz von Übertragungen vom primären zum sekundären Volume maximieren.
+
+* *Ziel-Cluster*
++
+Der Name des Clusters, den Sie auf der SnapVault Registerkarte des Dialogfelds „Schutz konfigurieren“ ausgewählt haben.
+
+* *Ziel-SVM*
++
+Der Name der SVM, die Sie auf der SnapVault Registerkarte des Dialogfelds „Schutz konfigurieren“ ausgewählt haben.
+
+* *Richtlinienname*
++
+Der Name für die neue Richtlinie. Richtliniennamen können aus den Zeichen A bis Z, a bis z, 0 bis 9, Punkt (.), Bindestrich (-) und Unterstrich (_) bestehen.
+
+* *Transferpriorität*
++
+Die Priorität, mit der die Übertragung ausgeführt wird. Es kann entweder Normal oder Low ausgewählt werden. Übertragungsbeziehungen mit Richtlinien, die eine normale Übertragungspriorität festlegen, werden vor solchen mit Richtlinien ausgeführt, die eine niedrige Übertragungspriorität festlegen. Die Standardeinstellung ist Normal.
+
+* *Kommentar*
++
+Ein optionales Feld, in dem Sie einen Kommentar von bis zu 255 Zeichen zur SnapVault Richtlinie hinzufügen können.
+
+* *Zugriffszeit ignorieren*
++
+Legt fest, ob inkrementelle Übertragungen für Dateien ignoriert werden, bei denen sich nur die Zugriffszeit geändert hat.
+
+* *Replikationsetikett*
++
+Die Tabelle listet die Regeln auf, die den von ONTAP ausgewählten Snapshot Kopien mit einer bestimmten Replikationsbezeichnung in einer Richtlinie zugeordnet sind. Folgende Informationen und Aktionen sind ebenfalls verfügbar:
+
++
+** Befehlsschaltflächen
++
+Mithilfe der Befehlsschaltflächen können Sie folgende Aktionen ausführen:
+
++
+*** Hinzufügen
++
+Ermöglicht das Erstellen einer Snapshot Kopie Bezeichnung und einer Aufbewahrungsanzahl.
+
+*** Anzahl der Aufbewahrungen bearbeiten
++
+Ermöglicht das Ändern der Aufbewahrungsanzahl für eine vorhandene Snapshot-Kopierbezeichnung. Die Aufbewahrungsanzahl muss eine Zahl zwischen 1 und 251 sein. Die Summe aller Aufbewahrungsanzahlen für alle Regeln darf 251 nicht überschreiten.
+
+*** Löschen
++
+Ermöglicht das Löschen einer vorhandenen Bezeichnung für eine Snapshot Kopie.
+
+
+
+** Snapshot Kopie-Label
++
+Zeigt die Bezeichnung der Snapshot-Kopie an. Wenn Sie ein oder mehrere Volumes mit derselben lokalen Snapshot-Kopierrichtlinie auswählen, wird für jede Bezeichnung in der Richtlinie ein Eintrag angezeigt. Wenn Sie mehrere Volumes mit zwei oder mehr lokalen Snapshot-Kopierrichtlinien auswählen, zeigt die Tabelle alle Bezeichnungen aus allen Richtlinien an.
+
+** Zeitplan
++
+Zeigt den Zeitplan an, der jeder Snapshot-Kopiebezeichnung zugeordnet ist. Wenn einer Bezeichnung mehr als ein Zeitplan zugeordnet ist, werden die Zeitpläne für diese Bezeichnung in einer durch Kommas getrennten Liste angezeigt. Wenn mehrere Volumes mit derselben Bezeichnung, aber unterschiedlichen Zeitplänen ausgewählt werden, wird „Verschiedene“ angezeigt, um darauf hinzuweisen, dass den ausgewählten Volumes mehr als ein Zeitplan zugeordnet ist.
+
+** Anzahl der Aufbewahrungen am Ziel
++
+Zeigt die Anzahl der Snapshot Kopien mit der angegebenen Bezeichnung an, die auf dem SnapVault Sekundärsystem aufbewahrt werden. Bei Bezeichnungen mit mehreren Zeitplänen wird die Summe der Aufbewahrungsanzahlen aller Bezeichnungs- und Zeitplanpaare angezeigt. Wenn mehrere Volumes mit zwei oder mehr lokalen Snapshot Kopierichtlinien ausgewählt sind, ist die Aufbewahrungsanzahl leer.
+
+
+
+

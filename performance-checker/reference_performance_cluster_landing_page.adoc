@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/reference_performance_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: performance, cluster, landing page 
+summary: Die Landingpage „Performance Cluster“ zeigt den allgemeinen Performance-Status eines ausgewählten Clusters an. Die Seite ermöglicht den Zugriff auf vollständige Details zu jedem Performance-Zähler für die Storage-Objekte auf dem ausgewählten Cluster. 
+---
+= Überprüfung der Landingpage des Performance Clusters in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Landingpage „Performance Cluster“ zeigt den allgemeinen Performance-Status eines ausgewählten Clusters an. Die Seite ermöglicht den Zugriff auf vollständige Details zu jedem Performance-Zähler für die Storage-Objekte auf dem ausgewählten Cluster.
+
+Die Landingpage des Performance Clusters enthält vier Registerkarten, die die Clusterdetails in vier Informationsbereiche unterteilen:
+
+* Zusammenfassungsseite
++
+** Bereich „Cluster-Ereignisse“
+** MB/s- und IOPS-Performance-Diagramme
+** Bereich „Verwaltete Objekte“
+
+
+* Seite „Top Performers“
+* Explorer-Seite
+* Informationsseite
+

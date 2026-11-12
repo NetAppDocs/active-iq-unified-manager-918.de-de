@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_resolve_protection_job_failure.html 
+sidebar: sidebar 
+keywords: resolve, protection, job failure 
+summary: Dieser Workflow zeigt beispielhaft, wie sich ein Fehler bei einem Schutzauftrag im Unified Manager Dashboard identifizieren und beheben lässt. 
+---
+= Beheben eines Fehlers bei einem Schutzauftrag in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieser Workflow zeigt beispielhaft, wie sich ein Fehler bei einem Schutzauftrag im Unified Manager Dashboard identifizieren und beheben lässt.
+
+.Bevor Sie beginnen
+Da einige Aufgaben in diesem Arbeitsablauf die Anmeldung mit der Administratorrolle erfordern, müssen Sie mit den Rollen vertraut sein, die zur Nutzung der verschiedenen Funktionen erforderlich sind.
+
+In diesem Szenario greifen Sie auf die Dashboard Seite zu, um festzustellen, ob es Probleme mit Ihren Schutzaufträgen gibt. Im Bereich Protection Incident stellen Sie fest, dass ein Job Terminated Incident vorliegt, der auf einem Volume einen Fehler Protection Job Failed anzeigt. Sie untersuchen diesen Fehler, um die mögliche Ursache und eine potenzielle Lösung zu ermitteln.
+
+.Schritte
+. Im Bereich „Ungelöste Vorfälle und Risiken“ des Dashboards im Fenster „Schutzvorfälle“ klicken Sie auf das Ereignis „*Protection job failed*“.
++
+[TIP]
+====
+Der verlinkte Text für das Ereignis ist in der Form `object_name:/object_name - Error Name` geschrieben, z. B. `cluster2_src_svm:/cluster2_src_vol2 - Protection Job Failed`.
+
+====
++
+Die Seite mit den Ereignisdetails für den fehlgeschlagenen Schutzvorgang wird angezeigt.
+
+. Anhand der Fehlermeldung im Feld „Cause“ des Bereichs *Summary* lassen sich das Problem bestimmen und mögliche Korrekturmaßnahmen bewerten.
++
+Weitere Informationen finden Sie unter link:task_identify_problem_for_failed_protection_job.html["Identifizierung des Problems und Durchführung von Korrekturmaßnahmen für einen fehlgeschlagenen Schutzjob"].
+
+

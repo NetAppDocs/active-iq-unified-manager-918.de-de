@@ -1,0 +1,409 @@
+---
+permalink: events/reference_node_events.html 
+sidebar: sidebar 
+keywords: node, events, impact area, availability, capacity, configuration, performance, security 
+summary: Knotenereignisse liefern Ihnen Informationen zum Knotenstatus, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, Level, den Quelltyp und Schweregrad. 
+---
+= Informationen zu Knotenereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Knotenereignisse liefern Ihnen Informationen zum Knotenstatus, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, Level, den Quelltyp und Schweregrad.
+
+Ein Sternchen (*) kennzeichnet EMS-Ereignisse, die in Unified Manager-Ereignisse umgewandelt wurden.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Speicherplatz des Node Root Volume nahezu voll(ocumEvtClusterNodeRootVolumeSpaceNearlyFull)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Cloud AWS MetaDataConnFail *(ocumCloudAwsMetadataConnFail)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud AWS IAMCredsExpired *(ocumCloudAwsIamCredsExpired)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud AWS IAMCredsInvalid *(ocumCloudAwsIamCredsInvalid)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud AWS IAMCredsNotFound *(ocumCloudAwsIamCredsNotFound)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud AWS IAMCredsNotInitialized *(ocumCloudAwsIamCredsNotInitialized)
+ a| 
+Ereignis
+ a| 
+Node
+ a| 
+Informationen
+
+
+
+ a| 
+Cloud AWS IAMRoleInvalid *(ocumCloudAwsIamRoleInvalid)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud AWS IAMRoleNotFound *(ocumCloudAwsIamRoleNotFound)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud Tier Host nicht auflösbar *(ocumObjstoreHostUnresolvable)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud Tier Intercluster-Netzwerkschnittstelle ausgefallen *(ocumObjstoreInterClusterLifDown)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Einer der NFSv4 Pools ist erschöpft *(nbladeNfsv4PoolEXhaust)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+
+
+ a| 
+Anfrage stimmt nicht mit der Cloud Tier Signatur überein *(oscSignatureMismatch)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+|===
+
+
+[[impact-area-capacity]]
+== Wirkungsbereich: Kapazität
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+QoS Monitor Speicher voll ausgeschöpft *(ocumQosMonitorMemoryMaxed)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+QoS Monitor-Speicher reduziert *(ocumQosMonitorMemoryAbated)
+ a| 
+Ereignis
+ a| 
+Node
+ a| 
+Informationen
+
+|===
+
+
+[[impact-area-configuration]]
+== Wirkungsbereich: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Knoten umbenannt(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Node
+ a| 
+Informationen
+
+|===
+
+
+[[impact-area-performance]]
+== Wirkungsbereich: Performance
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Kritischer IOPS-Schwellenwert des Knotens überschritten(ocumNodeIopsIncident)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+
+
+ a| 
+Knoten-IOPS-Warnschwelle überschritten(ocumNodeIopsWarning)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für Knoten MB/s überschritten(ocumNodeMbpsIncident)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+
+
+ a| 
+Knoten-MB/s-Warnschwelle überschritten(ocumNodeMbpsWarning)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für Knotenlatenz ms/op überschritten(ocumNodeLatencyIncident)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwelle für Knotenlatenz ms/op überschritten(ocumNodeLatencyWarning)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für die genutzte Knoten-Performance-Kapazität überschritten(ocumNodePerfCapacityUsedIncident)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwelle für die genutzte Node-Performance-Kapazität überschritten(ocumNodePerfCapacityUsedWarning)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Genutzte Knoten-Performance-Kapazität - kritischer Schwellenwert für Übernahme überschritten(ocumNodePerfCapacityUsedTakeoverIncident)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+
+
+ a| 
+Genutzte Knoten-Performancekapazität - Schwellenwert für die Übernahmewarnung überschritten(ocumNodePerfCapacityUsedTakeoverWarning)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für die Knotenauslastung überschritten (ocumNodeUtilizationIncident)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+
+
+ a| 
+Schwellenwert für die Knotenauslastungswarnung überschritten (ocumNodeUtilizationWarning)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Überlastungsschwelle des Knoten-HA-Paares überschritten (ocumNodeHaPairOverUtilizedInformation)
+ a| 
+Ereignis
+ a| 
+Node
+ a| 
+Informationen
+
+
+
+ a| 
+Schwellenwert für die Festplattenfragmentierung des Knotens überschritten (ocumNodeDiskFragmentationWarning)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Schwellenwert für die genutzte Performance-Kapazität überschritten (ocumNodeOverUtilizedWarning)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Dynamischer Schwellenwert des Knotens überschritten (ocumNodeDynamicEventWarning)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+|===
+
+
+[[impact-area-security]]
+== Wirkungsbereich: Sicherheit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Beratungs-ID: NTAP-<__advisory ID__>(ocumx)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Kritisch
+
+|===

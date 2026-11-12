@@ -1,0 +1,61 @@
+---
+permalink: events/task_acknowledge_and_resolve_events.html 
+sidebar: sidebar 
+keywords: acknowledge, resolve, events 
+summary: Sie sollten ein Ereignis bestätigen, bevor Sie mit der Bearbeitung des Problems beginnen, durch das das Ereignis ausgelöst wurde, damit Sie nicht weiterhin wiederholte Alarmbenachrichtigungen erhalten. Nachdem Sie für ein bestimmtes Ereignis eine Korrekturmaßnahme durchgeführt haben, sollten Sie das Ereignis als gelöst markieren. 
+---
+= Bestätigen und Beheben von Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten ein Ereignis bestätigen, bevor Sie mit der Bearbeitung des Problems beginnen, durch das das Ereignis ausgelöst wurde, damit Sie nicht weiterhin wiederholte Alarmbenachrichtigungen erhalten. Nachdem Sie für ein bestimmtes Ereignis eine Korrekturmaßnahme durchgeführt haben, sollten Sie das Ereignis als gelöst markieren.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+Sie können mehrere Ereignisse gleichzeitig bestätigen und beheben.
+
+[NOTE]
+====
+Information Ereignisse können nicht quittiert werden.
+
+====
+.Schritte
+. Im linken Navigationsbereich auf *Event Management* klicken.
+. In der Ereignisliste stehen zum Bestätigen der Ereignisse die folgenden Aktionen zur Verfügung:
++
+|===
+| Wenn Sie möchten... | Folgendes ist zu tun... 
+
+
+ a| 
+Ein einzelnes Ereignis bestätigen und als gelöst markieren
+ a| 
+.. Den Ereignisnamen auswählen.
+.. Auf der Seite mit den Ereignisdetails lässt sich die Ursache des Ereignisses ermitteln.
+.. Auf *Bestätigen* klicken.
+.. Eine geeignete Korrekturmaßnahme ist einzuleiten.
+.. Anschließend *Als gelöst markieren* auswählen.
+
+
+
+
+ a| 
+Bestätigung und Kennzeichnung mehrerer Ereignisse als gelöst
+ a| 
+.. Die Ermittlung der Ursache der Ereignisse erfolgt auf der jeweiligen Ereignisdetailseite.
+.. Auswählen der Ereignisse.
+.. Auf *Bestätigen* klicken.
+.. Es sind geeignete Korrekturmaßnahmen einzuleiten.
+.. Anschließend *Als gelöst markieren* auswählen.
+
+
+|===
++
+Nachdem das Ereignis als behoben markiert wurde, wird es in die Liste der behobenen Ereignisse verschoben.
+
+. *Optional*: Im Bereich *Notizen und Aktualisierungen* lässt sich eine Notiz dazu hinzufügen, wie das Ereignis behandelt wurde; anschließend kann auf *Post* geklickt werden.
+

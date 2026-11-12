@@ -1,0 +1,101 @@
+---
+permalink: storage-mgmt/task_add_clusters.html 
+sidebar: sidebar 
+keywords: add cluster 
+summary: Sie können Active IQ Unified Manager einen Cluster hinzufügen, damit Sie den Cluster überwachen können. Dies umfasst die Möglichkeit, Clusterinformationen wie den Systemstatus, die Kapazität, die Performance und die Konfiguration des Clusters abzurufen, damit Sie auftretende Probleme erkennen und beheben können. 
+---
+= Cluster zu Active IQ Unified Manager hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Active IQ Unified Manager einen Cluster hinzufügen, damit Sie den Cluster überwachen können. Dies umfasst die Möglichkeit, Clusterinformationen wie den Systemstatus, die Kapazität, die Performance und die Konfiguration des Clusters abzurufen, damit Sie auftretende Probleme erkennen und beheben können.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle des Anwendungsadministrators oder die Rolle des Storage-Administrators.
+* Sie benötigen folgende Informationen:
++
+** Unified Manager unterstützt lokale ONTAP Cluster, ONTAP Select, Cloud Volumes ONTAP.
+** Sie benötigen den Hostnamen oder die Cluster-Management-IP-Adresse (IPv4 oder IPv6) für den Cluster.
++
+Bei Verwendung des Hostnamens muss dieser zur Clusterverwaltungs-IP-Adresse für die Clusterverwaltungs-LIF aufgelöst werden. Bei Verwendung einer Knotenverwaltungs-LIF schlägt der Vorgang fehl.
+
+** Sie benötigen den Benutzernamen und das Passwort, um auf den Cluster zugreifen zu können.
++
+Dieses Konto muss die Rolle _admin_ besitzen, wobei der Anwendungszugriff auf _ontapi_, _amqp_, _console_ und _http_ festgelegt sein muss.
+
+** Sie müssen die Portnummer kennen, um sich über das HTTPS-Protokoll mit dem Cluster zu verbinden (typischerweise Port 443).
+** Auf dem Cluster muss ONTAP Softwareversion 9.9 oder höher ausgeführt werden.
+** Auf dem Unified Manager Server muss ausreichend Speicherplatz vorhanden sein. Das Hinzufügen eines Clusters zum Server ist nicht möglich, wenn bereits mehr als 90 % des Speicherplatzes belegt sind.
+** Sie verfügen über die erforderlichen Zertifikate:
++
+*SSL-Zertifikat (HTTPS)*: Dieses Zertifikat gehört Unified Manager. Bei einer Neuinstallation von Unified Manager wird standardmäßig ein selbstsigniertes SSL-Zertifikat (HTTPS) generiert. NetApp empfiehlt, es für mehr Sicherheit auf ein von einer Zertifizierungsstelle signiertes Zertifikat umzustellen. Wenn das Serverzertifikat abläuft, sollten Sie es neu generieren und Unified Manager neu starten, damit die Services das neue Zertifikat übernehmen. Weitere Informationen zum Regenerieren von SSL-Zertifikaten enthält link:../config/task_generate_an_https_security_certificate_ocf.html["Generieren eines HTTPS-Sicherheitszertifikats"].
+
++
+*EMS-Zertifikat*: Dieses Zertifikat gehört dem Unified Manager. Es dient zur Authentifizierung von EMS-Benachrichtigungen, die von ONTAP empfangen werden.
+
++
+*Zertifikate für die gegenseitige TLS-Kommunikation*: Werden während der gegenseitigen TLS-Kommunikation zwischen Unified Manager und ONTAP verwendet. Die zertifikatbasierte Authentifizierung ist für einen Cluster abhängig von der ONTAP Version aktiviert. Wenn auf einem Cluster eine ONTAP Version niedriger als 9.5 ausgeführt wird, ist die zertifikatbasierte Authentifizierung nicht aktiviert.
+
++
+Die zertifikatbasierte Authentifizierung ist für einen Cluster nicht automatisch aktiviert, wenn Sie eine ältere Version von Unified Manager aktualisieren. Sie können sie jedoch aktivieren, indem Sie die Clusterdetails ändern und speichern. Wenn das Zertifikat abläuft, müssen Sie es neu generieren, um das neue Zertifikat einzubinden. Weitere Informationen zum Anzeigen und Neugenerieren des Zertifikats finden Sie unter link:../storage-mgmt/task_edit_clusters.html["Cluster bearbeiten"].
+
++
+[NOTE]
+====
+*** Über die Web-Benutzeroberfläche lässt sich ein Cluster hinzufügen, und die zertifikatbasierte Authentifizierung wird dabei automatisch aktiviert.
+*** Sie können einen Cluster über Unified Manager CLI hinzufügen, die zertifikatbasierte Authentifizierung ist standardmäßig nicht aktiviert. Wenn Sie einen Cluster mit Unified Manager CLI hinzufügen, müssen Sie den Cluster anschließend über Unified Manager UI bearbeiten. Unter link:https://docs.netapp.com/us-en/active-iq-unified-manager/events/reference_supported_unified_manager_cli_commands.html["Unterstützte Unified Manager CLI-Befehle"] finden Sie Informationen zum Hinzufügen eines Clusters mit Unified Manager CLI.
+*** Wenn die zertifikatbasierte Authentifizierung für einen Cluster aktiviert ist und Sie das Backup von Unified Manager auf einem Server erstellen und es auf einem anderen Unified Manager Server wiederherstellen, bei dem Hostname oder IP-Adresse geändert wurden, kann die Überwachung des Clusters fehlschlagen. Zur Vermeidung dieses Fehlers empfiehlt sich das Bearbeiten und Speichern der Clusterdetails. Weitere Informationen zum Bearbeiten von Clusterdetails finden Sie unter link:../storage-mgmt/task_edit_clusters.html["Cluster bearbeiten"].
+*** Auf Cluster-Level fügt die Active IQ Schnittstelle zwei neue Benutzergruppeneinträge für das Authentifizierungsverfahren „cert“ hinzu.
+
+
+====
++
+*Clusterzertifikate*: Dieses Zertifikat gehört ONTAP. Sie können keinen Cluster mit einem abgelaufenen Zertifikat zu Unified Manager hinzufügen. Wenn das Zertifikat bereits abgelaufen ist, müssen Sie es vor dem Hinzufügen des Clusters neu generieren. Informationen zur Zertifikatserstellung finden Sie im entsprechenden Knowledge-Base-Artikel https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_renew_an_SSL_certificate_in_ONTAP_9["Erneuern eines ONTAP selbstsignierten Zertifikats in der System Manager Benutzeroberfläche"^].
+
+
+
+* Eine einzelne Instanz von Unified Manager kann eine bestimmte Anzahl von Knoten unterstützen. Wenn Sie eine Umgebung überwachen müssen, die die unterstützte Knotenanzahl überschreitet, müssen Sie eine zusätzliche Instanz von Unified Manager installieren, um einige der Cluster zu überwachen. Die Liste der unterstützten Knotenanzahl finden Sie in der https://www.netapp.com/media/13504-tr4621.pdf["Unified Manager Best Practices-Leitfaden"^].
+
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Cluster Setup*.
+. Auf der Seite „Cluster Setup“ ist *Add* auszuwählen.
+. Im Dialogfeld „Cluster hinzufügen“ werden die erforderlichen Werte wie erforderlich angegeben; anschließend wird auf *Submit* geklickt.
+. Im Dialogfeld „Host autorisieren“ kann über *Zertifikat anzeigen* die Zertifikatsinformation zum Cluster angezeigt werden.
+. Klicken Sie auf *Ja*.
++
+Nach dem Speichern der Clusterdetails können Sie das Zertifikat für die gegenseitige TLS-Kommunikation für einen Cluster einsehen.
+
++
+Wenn die zertifikatbasierte Authentifizierung nicht aktiviert ist, prüft Unified Manager das Zertifikat nur beim erstmaligen Hinzufügen des Clusters. Unified Manager prüft das Zertifikat nicht bei jedem API-Aufruf an ONTAP.
+
+
+
+Nachdem alle Objekte für einen neuen Cluster erkannt wurden, beginnt Unified Manager mit der Erfassung historischer Performance-Daten der letzten 15 Tage. Diese Statistiken werden mithilfe der Funktion zur Erfassung der Datenkontinuität gesammelt. Diese Funktion stellt Ihnen unmittelbar nach dem Hinzufügen eines Clusters Performance-Informationen für mehr als zwei Wochen zur Verfügung. Nach Abschluss des Erfassungszyklus für die Datenkontinuität werden standardmäßig alle fünf Minuten Echtzeit-Performance-Daten für den Cluster erfasst.
+
+[NOTE]
+====
+* Die Erfassung von 15 Tagen Performance-Daten ist CPU-intensiv. NetApp empfiehlt, das Hinzufügen neuer Cluster zeitlich zu staffeln, damit die Abfragen zur Erfassung der Datenkontinuität nicht gleichzeitig auf zu vielen Clustern ausgeführt werden. Wenn Sie Unified Manager während des Zeitraums der Erfassung der Datenkontinuität neu starten, wird die Erfassung angehalten, und in den Performance-Diagrammen werden Lücken für den fehlenden Zeitraum angezeigt.
+* Beim Hinzufügen eines ONTAP Clusters ab Version 9.14.1 erfolgt die Kommunikation über die Cloud-Agent-Funktion. ONTAP erstellt automatisch einen internen Servicekonto-Benutzer mit schreibgeschützten Berechtigungen (z. B. clus-agent-xxxx). Unified Manager stellt die Datenerfassung von diesen Clustern ein, wenn der `clus-agent` Benutzer gelöscht wird.
+
+
+====
+[TIP]
+====
+Falls Sie eine Fehlermeldung erhalten, dass Sie den Cluster nicht hinzufügen können, kann eines der folgenden Probleme vorliegen:
+
+* Wenn die Uhren auf den beiden Systemen nicht synchronisiert sind und das Startdatum des Unified Manager HTTPS-Zertifikats nach dem Datum auf dem Cluster liegt. Die Uhren müssen mithilfe von NTP oder einem ähnlichen Dienst synchronisiert sein.
+* Wenn die maximale Anzahl an EMS-Benachrichtigungszielen im Cluster erreicht ist, kann die Unified Manager Adresse nicht hinzugefügt werden. Standardmäßig können im Cluster nur 20 EMS-Benachrichtigungsziele definiert werden.
+
+
+====
+*Verwandte Informationen*
+
+link:../config/task_add_users.html["Hinzufügen von Benutzern"]
+
+link:../health-checker/task_view_cluster_list_and_details.html["Anzeigen der Clusterliste und Details"]
+
+link:../config/task_install_ca_signed_and_returned_https_certificate.html#example-certificate-chain["Installation eines von einer CA signierten und zurückgegebenen HTTPS-Zertifikats"]

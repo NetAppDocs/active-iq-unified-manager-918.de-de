@@ -1,0 +1,61 @@
+---
+permalink: storage-mgmt/task_provision_luns.html 
+sidebar: sidebar 
+keywords: provision, luns 
+summary: 'Auf der Seite „Provision Workload“ können Sie LUNs erstellen, die die Protokolle CIFS/SMB und NFS unterstützen, und zwar auf einem bestehenden Cluster und einer Storage Virtual Machine (storage VM).' 
+---
+= Bereitstellung von LUNs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Provision Workload“ können Sie LUNs erstellen, die die Protokolle CIFS/SMB und NFS unterstützen, und zwar auf einem bestehenden Cluster und einer Storage Virtual Machine (storage VM).
+
+.Bevor Sie beginnen
+* Die Storage VM muss über ausreichend Speicherplatz für die Provisionierung der LUN verfügen.
+* Sowohl iSCSI als auch FCP müssen auf der Storage VM aktiviert sein, auf der Sie die LUN erstellen.
+* Für die Auswahl und Zuweisung des Performance Service Level (PSL) und der Storage Efficiency Policy (SEP) für den Workload ist es erforderlich, dass die Richtlinien bereits erstellt wurden, bevor Sie mit der Erstellung des Workloads beginnen.
+
+
+.Schritte
+. Auf der Seite *Provision Workload* können Sie den Namen des Workloads hinzufügen, den Sie erstellen möchten, und anschließend den Cluster aus der verfügbaren Liste auswählen.
++
+Basierend auf dem von Ihnen ausgewählten Cluster filtert das Feld *STORAGE VM* die für diesen Cluster verfügbaren Storage VMs.
+
+. Die Storage-VM, die die iSCSI- und FCP-Services unterstützt, wird aus der Liste ausgewählt.
++
+Aufgrund Ihrer Auswahl ist die SAN-Option im Abschnitt „Hostinformationen“ aktiviert.
+
+. Im Abschnitt *Storage und Optimierung* lassen sich der Arbeitslast die Speicherkapazität und der PSL sowie optional der SEP zuweisen.
++
+Die Spezifikationen für den SEP werden der LUN zugewiesen, und die Definitionen für den PSL gelten beim Erstellen der Arbeitslast.
+
+. Für das Erzwingen der zugewiesenen PSL für den Workload muss das Kästchen *Enforce performance limits* aktiviert sein.
++
+Die Zuweisung einer PSL zu einer Arbeitslast stellt sicher, dass das Aggregat, auf dem die Arbeitslast erstellt wird, die in der jeweiligen Richtlinie definierten Performance- und Kapazitätsziele unterstützen kann. Wenn einer Arbeitslast beispielsweise die PSL „Extreme Performance“ zugewiesen wird, sollte das Aggregat, auf dem die Arbeitslast provisioniert werden soll, die Performance- und Kapazitätsziele der Richtlinie „Extreme Performance“ unterstützen können, z. B. SSD-Storage.
+
++
+[NOTE]
+====
+Sofern dieses Kästchen nicht aktiviert ist, wird die PSL nicht auf die Workload angewendet, und der Status der Workload im Dashboard wird als  `unassigned` angezeigt.
+
+====
+. Die Option *SAN* wird ausgewählt. Wenn die Option *SAN* nicht aktiviert angezeigt wird, sollte geprüft werden, ob die ausgewählte Storage-VM iSCSI und FCP unterstützt.
+. Auswahl des Host-Betriebssystems.
+. Die Hostzuordnung zur Steuerung des Zugriffs der Initiatoren auf die LUN ist festzulegen. Vorhandene Initiatorgruppen (igroups) können zugewiesen oder neue igroups definiert und zugeordnet werden.
++
+[NOTE]
+====
+Wenn Sie während der Provisionierung der LUN eine neue Initiatorgruppe erstellen, können Sie diese erst nach dem nächsten Erkennungszyklus (bis zu 15 Minuten) verwenden. Daher empfiehlt sich die Verwendung einer vorhandenen Initiatorgruppe aus der Liste der verfügbaren Initiatorgruppen.
+
+====
++
+Wenn Sie eine neue Initiatorgruppe erstellen möchten, wählen Sie die Schaltfläche *Create a new initiator group* aus, und geben Sie die Informationen für die Initiatorgruppe ein.
+
+. Auf *Speichern* klicken.
++
+Die LUN wird der Liste der Storage-Workloads hinzugefügt.
+
+

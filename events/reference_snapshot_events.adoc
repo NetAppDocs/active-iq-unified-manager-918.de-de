@@ -1,0 +1,56 @@
+---
+permalink: events/reference_snapshot_events.html 
+sidebar: sidebar 
+keywords: snapshot, events, impact area, availability 
+summary: Snapshot-Ereignisse liefern Informationen zum Status von Snapshots und ermöglichen so die Überwachung der Snapshots auf potenzielle Probleme. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten Ereignisname, Trap-Name, Impact Level, Quelltyp und Schweregrad. 
+---
+= Informationen zu Snapshot-Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot-Ereignisse liefern Informationen zum Status von Snapshots und ermöglichen so die Überwachung der Snapshots auf potenzielle Probleme. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten Ereignisname, Trap-Name, Impact Level, Quelltyp und Schweregrad.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Automatische Snapshot-Löschung deaktiviert(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Volumen
+ a| 
+Informationen
+
+
+
+ a| 
+Automatische Snapshot Löschung aktiviert(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Volumen
+ a| 
+Informationen
+
+
+
+ a| 
+Snapshot Auto-delete-Konfiguration geändert(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Volumen
+ a| 
+Informationen
+
+|===

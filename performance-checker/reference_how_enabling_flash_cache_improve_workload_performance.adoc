@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/reference_how_enabling_flash_cache_improve_workload_performance.html 
+sidebar: sidebar 
+keywords: enabling, flash cache, node, improve, workload, performance 
+summary: Die Workload Performance lässt sich verbessern, indem auf jedem Knoten im Cluster Flash Cache™ intelligentes Daten-Caching aktiviert wird. 
+---
+= Die Workload-Performance lässt sich durch das Aktivieren von Flash Cache auf einem Knoten in Active IQ Unified Manager verbessern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Workload Performance lässt sich verbessern, indem auf jedem Knoten im Cluster Flash Cache™ intelligentes Daten-Caching aktiviert wird.
+
+Ein Flash Cache Modul, auch Performance Acceleration Module genannt, ein PCIe-basiertes Speichermodul, optimiert die Performance von random-read-intensiven Workloads, indem es als intelligenter externer Lesecache fungiert. Diese Hardware arbeitet mit der WAFL External Cache Softwarekomponente von ONTAP zusammen.
+
+Im Unified Manager ist auf der Seite mit den Ereignisdetails das Symbol der Clusterkomponente, die das betroffene Aggregat darstellt, rot hervorgehoben. Unter dem Symbol steht in Klammern der Name des Aggregats, der das Aggregat identifiziert. Sie können Flash Cache auf dem Node aktivieren, auf dem sich das Aggregat befindet.
+
+Sie können ONTAP System Manager oder die ONTAP-Befehle verwenden, um zu prüfen, ob Flash Cache installiert oder aktiviert ist, und ihn gegebenenfalls zu aktivieren. Der folgende Befehl zeigt an, ob Flash Cache auf einem bestimmten Knoten aktiviert ist: `*cluster::> run local options flexscale.enable*`
+
+Weitere Informationen zu Flash Cache und den Anforderungen für seine Verwendung enthält der folgende technische Bericht:
+
+https://www.netapp.com/pdf.html?item=/media/19754-tr-3832.pdf["Technischer Bericht 3832: Flash Cache Best Practices-Leitfaden"^]

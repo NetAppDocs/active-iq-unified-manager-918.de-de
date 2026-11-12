@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/task_search_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: object, inventory, performance, pages 
+summary: Auf den Performance-Seiten der Objektinventur können Sie nach Zeichenfolgen suchen. Das Suchfeld oben rechts auf der Seite ermöglicht das schnelle Auffinden von Daten anhand des Objektnamens oder des Richtliniennamens. Dadurch können Sie bestimmte Objekte und die zugehörigen Daten oder Richtlinien schnell auffinden und zugehörige Richtlinienobjektdaten anzeigen. 
+---
+= Suche auf den Seiten zur Performance des Objektbestands in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können auf den Leistungsseiten des Objektinventars nach Zeichenfolgen suchen. Das Feld *Search* oben rechts auf der Seite ermöglicht das schnelle Auffinden von Daten anhand des Objektnamens oder des Richtliniennamens. Dadurch können bestimmte Objekte und die zugehörigen Daten oder Richtlinien schnell gefunden und die zugehörigen Richtlinienobjektdaten angezeigt werden.
+
+.Schritt
+. Abhängig von Ihren Suchanforderungen kommt eine der folgenden Optionen in Frage:
++
+|===
+| Um dies zu finden... | Folgendes eingeben... 
+
+
+ a| 
+Ein bestimmtes Objekt
+ a| 
+Nach Eingabe des Objektnamens in das Feld *Search* und einem Klick auf *Search* werden das gesuchte Objekt und die zugehörigen Daten angezeigt.
+
+
+
+ a| 
+Eine benutzerdefinierte Performance-Schwellenwertrichtlinie
+ a| 
+Den vollständigen Richtliniennamen oder einen Teil davon in das Feld *Search* eingeben und auf *Search* klicken. Die der gesuchten Richtlinie zugeordneten Objekte werden angezeigt.
+
+|===
+

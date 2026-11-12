@@ -1,0 +1,24 @@
+---
+permalink: config/task_set_session_timeout_CLI.html 
+sidebar: sidebar 
+keywords: session timeout, CLI, maximum 
+summary: Sie können mithilfe der CLI für Unified Manager einen maximalen Wert für die Zeitüberschreitung der Sitzung festlegen, sodass die Sitzung nach einem bestimmten Zeitraum automatisch beendet wird. 
+---
+= Die Zeitüberschreitung der Sitzung kann über die CLI in Active IQ Unified Manager festgelegt werden.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über die Befehlszeilenschnittstelle (CLI) kann für Unified Manager ein maximaler Wert für die Sitzungs-Zeitüberschreitung festgelegt werden, sodass die Sitzung nach einer bestimmten Zeit automatisch beendet wird. Standardmäßig ist die Sitzungs-Zeitüberschreitung auf den Maximalwert von 4.320 Minuten (72 Stunden) eingestellt. Das bedeutet, dass Ihre Sitzung nach 72 Stunden automatisch endet, selbst wenn Sie angemeldet sind und Unified Manager aktiv nutzen.
+
+.Über diese Aufgabe
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Die Einstellung für die Zeitüberschreitung von Sitzungen betrifft alle angemeldeten Benutzersitzungen.
+
+.Schritte
+. Die Anmeldung bei der Unified Manager CLI erfolgt durch Eingabe des  `um cli login` Befehls. Für die Authentifizierung werden ein gültiger Benutzername und ein gültiges Passwort benötigt.
+. Der `um option set max.session.timeout.value=<in mins>` Befehl dient zum Ändern des Werts der Sitzungs-Zeitüberschreitung.
+

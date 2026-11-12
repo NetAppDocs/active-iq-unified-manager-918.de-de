@@ -1,0 +1,38 @@
+---
+permalink: storage-mgmt/task_change_time_um_retains_event_performance_data.html 
+sidebar: sidebar 
+keywords: change, length, time, unified manager, retains, event, performance, data 
+summary: Unified Manager speichert standardmäßig Ereignisdaten und Performance-Daten für 6 Monate für alle überwachten Cluster. Nach Ablauf dieser Frist werden ältere Daten automatisch gelöscht, um Platz für neue Daten zu schaffen. Dieser Standardzeitraum eignet sich für die meisten Konfigurationen gut, aber bei sehr großen Konfigurationen mit vielen Clustern und Knoten kann es erforderlich sein, die Aufbewahrungsdauer zu verkürzen, damit Unified Manager optimal arbeitet. 
+---
+= Ändern der Zeitspanne, für die Active IQ Unified Manager Ereignis- und Leistungsdaten speichert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager speichert standardmäßig Ereignisdaten und Performance-Daten für 6 Monate für alle überwachten Cluster. Nach Ablauf dieser Frist werden ältere Daten automatisch gelöscht, um Platz für neue Daten zu schaffen. Dieser Standardzeitraum eignet sich für die meisten Konfigurationen gut, aber bei sehr großen Konfigurationen mit vielen Clustern und Knoten kann es erforderlich sein, die Aufbewahrungsdauer zu verkürzen, damit Unified Manager optimal arbeitet.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Auf der Seite „Datenaufbewahrung“ können Sie die Aufbewahrungsfristen für diese beiden Datentypen ändern. Diese Einstellungen wirken sich auf die Aufbewahrung von Daten aus allen Clustern aus, die von dieser Unified Manager Instanz überwacht werden.
+
+[NOTE]
+====
+Unified Manager erfasst alle 5 Minuten Performance-Statistiken. Jeden Tag werden die 5-Minuten-Statistiken zu stündlichen Performance-Statistiken zusammengefasst. Standardmäßig werden 30 Tage lang historische Performance-Daten in 5-Minuten-Intervallen und 6 Monate lang zusammengefasste stündliche Performance-Daten aufbewahrt.
+
+====
+Die Aufbewahrungsfrist sollte nur verkürzt werden, wenn der Speicherplatz knapp wird oder Sicherungs- und andere Vorgänge sehr lange dauern. Eine Verkürzung der Aufbewahrungsfrist hat folgende Auswirkungen:
+
+* Alte Performance-Daten werden nach Mitternacht aus der Unified Manager Datenbank gelöscht.
+* Alte Ereignisdaten werden sofort aus der Unified Manager Datenbank gelöscht.
+* Ereignisse, die vor dem Aufbewahrungszeitraum liegen, können in der Benutzeroberfläche nicht mehr angezeigt werden.
+* Bereiche in der UI, in denen stündliche Performance Statistiken angezeigt werden, sind vor dem Aufbewahrungszeitraum leer.
+* Wenn die Aufbewahrungsfrist für Ereignisse die Aufbewahrungsfrist für Performance-Daten überschreitet, wird unter dem Performance-Regler eine Meldung angezeigt, die darauf hinweist, dass für ältere Performance-Ereignisse in den zugehörigen Diagrammen möglicherweise keine zugrunde liegenden Daten vorhanden sind.
+
+
+.Schritte
+. Im linken Navigationsbereich wählen Sie *Richtlinien* > *Datenaufbewahrung* aus.
+. Auf der Seite *Datenaufbewahrung* kann im Bereich Ereignisaufbewahrung oder Performance-Datenaufbewahrung mit dem Schieberegler die Anzahl der Monate festgelegt werden, für die Daten aufbewahrt werden; anschließend kann *Speichern* ausgewählt werden.
+

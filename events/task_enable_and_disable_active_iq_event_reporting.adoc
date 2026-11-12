@@ -1,0 +1,44 @@
+---
+permalink: events/task_enable_and_disable_active_iq_event_reporting.html 
+sidebar: sidebar 
+keywords: enable, disable, active iq, event, report 
+summary: Active IQ platform events werden standardmäßig in der Unified Manager-Benutzeroberfläche generiert und angezeigt. Wenn diese Ereignisse als zu viele Meldungen erscheinen oder wenn diese Ereignisse in Unified Manager nicht angezeigt werden sollen, kann ihre Generierung deaktiviert werden. Sie können sie später wieder aktivieren, wenn Sie diese Benachrichtigungen erneut erhalten möchten. 
+---
+= Aktivieren und Deaktivieren der Active IQ Ereignisberichterstattung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse der Active IQ Plattform werden standardmäßig in der Benutzeroberfläche des Unified Manager generiert und angezeigt. Falls diese Ereignisse als zu häufig empfunden werden oder sie in Unified Manager nicht angezeigt werden sollen, kann ihre Generierung deaktiviert werden. Sie können sie später wieder aktivieren, wenn Sie diese Benachrichtigungen erneut erhalten möchten.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Wenn Sie diese Funktion deaktivieren, empfängt Unified Manager sofort keine Ereignisse der Active IQ Plattform mehr.
+
+Wenn Sie diese Funktion aktivieren, beginnt Unified Manager kurz nach Mitternacht, basierend auf der Zeitzone des Clusters, Active IQ Plattformereignisse zu empfangen. Der Startzeitpunkt richtet sich danach, wann Unified Manager AutoSupport Nachrichten von den einzelnen Clustern empfängt.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Allgemein* > *Funktionseinstellungen*.
+. Auf der Seite *Funktionseinstellungen* können Sie Active IQ Plattformereignisse deaktivieren oder aktivieren, indem Sie eine der folgenden Optionen auswählen:
++
+|===
+| Wenn Sie möchten... | Fahren Sie dann wie folgt fort... 
+
+
+ a| 
+Active IQ Plattformereignisse deaktivieren
+ a| 
+Im Bereich *Active IQ Portal Events* den Schieberegler nach links verschieben.
+
+
+
+ a| 
+Aktivieren von Active IQ Plattformereignissen
+ a| 
+Im Bereich *Active IQ Portal Events* wird der Schieberegler nach rechts verschoben.
+
+|===
+

@@ -1,0 +1,95 @@
+---
+permalink: performance-checker/concept_cluster_configuration_and_performance_data_collection_activity.html 
+sidebar: sidebar 
+keywords: cluster, configuration, performance, data, collection, activity 
+summary: Das Erfassungsintervall für Clusterkonfigurationsdaten beträgt 15 Minuten. Nachdem Sie beispielsweise einen Cluster hinzugefügt haben, dauert es 15 Minuten, bis die Clusterdetails in der Benutzeroberfläche von Unified Manager angezeigt werden. Dieses Intervall gilt auch für Änderungen an einem Cluster. 
+---
+= Clusterkonfiguration und Leistungsdaten in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Erfassungsintervall für Clusterkonfigurationsdaten beträgt 15 Minuten. Nachdem Sie beispielsweise einen Cluster hinzugefügt haben, dauert es 15 Minuten, bis die Clusterdetails in der Unified Manager UI angezeigt werden. Dieses Intervall gilt auch für Änderungen an einem Cluster.
+
+Wenn beispielsweise zwei neue Volumes zu einer SVM in einem Cluster hinzugefügt werden, sind diese neuen Objekte nach dem nächsten Abfrageintervall in der UI sichtbar, was bis zu 15 Minuten dauern kann.
+
+Unified Manager erfasst aktuelle Performance-Statistiken aller überwachten Cluster alle fünf Minuten. Diese Daten werden analysiert, um Performance-Ereignisse und potenzielle Probleme zu identifizieren. 30 Tage lang werden historische Performance-Daten in Fünf-Minuten-Intervallen und 180 Tage lang historische Performance-Daten in Einstunden-Intervallen aufbewahrt. Dadurch lassen sich für den aktuellen Monat sehr granulare Performance-Details und für bis zu ein Jahr allgemeine Performance-Trends anzeigen.
+
+Die Erfassungsabfragen sind um einige Minuten versetzt, sodass Daten nicht von jedem Cluster gleichzeitig gesendet werden, was die Performance beeinträchtigen könnte.
+
+Die folgende Tabelle beschreibt die vom Unified Manager durchgeführten Datenerfassungsaktivitäten:
+
+|===
+| Aktivität | Zeitintervall | Beschreibung 
+
+
+ a| 
+Abfrage von Performance Statistiken
+ a| 
+Alle 5 Minuten
+ a| 
+Erfasst Performance-Daten in Echtzeit aus jedem Cluster.
+
+
+
+ a| 
+Statistische Analyse
+ a| 
+Alle 5 Minuten
+ a| 
+Nach jeder Abfrage der Statistiken vergleicht Unified Manager die erfassten Daten mit benutzerdefinierten, systemdefinierten und dynamischen Schwellenwerten.
+
+Wenn Schwellenwerte für die Performance überschritten wurden, generiert Unified Manager Ereignisse und sendet E-Mails an bestimmte Benutzer, sofern dies konfiguriert ist.
+
+
+
+ a| 
+Konfigurationsabfrage
+ a| 
+Alle 15 Minuten
+ a| 
+Erfasst detaillierte Inventarinformationen von jedem Cluster, um alle Storage-Objekte (Knoten, SVMs, Volumes usw.) zu identifizieren.
+
+
+
+ a| 
+Zusammenfassung
+ a| 
+Stündlich
+ a| 
+Fasst die letzten 12 fünfminütigen Performance-Datenerfassungen zu stündlichen Durchschnittswerten zusammen.
+
+Die stündlichen Durchschnittswerte werden auf einigen Seiten der Benutzeroberfläche verwendet und 180 Tage lang gespeichert.
+
+
+
+ a| 
+Prognoseanalyse und Datenbereinigung
+ a| 
+Jeden Tag nach Mitternacht
+ a| 
+Analysiert Clusterdaten, um für die nächsten 24 Stunden dynamische Schwellenwerte für Volume-Latenz und IOPS festzulegen.
+
+Löscht aus der Datenbank alle Fünf-Minuten-Performance-Daten, die älter als 30 Tage sind.
+
+
+
+ a| 
+Datenbereinigung
+ a| 
+Jeden Tag nach 2 Uhr morgens
+ a| 
+Löscht aus der Datenbank alle Ereignisse, die älter als 180 Tage sind, sowie dynamische Schwellenwerte, die älter als 180 Tage sind.
+
+
+
+ a| 
+Datenbereinigung
+ a| 
+Jeden Tag nach 3:30 Uhr morgens
+ a| 
+Löscht aus der Datenbank alle einstündigen Performance-Daten, die älter als 180 Tage sind.
+
+|===

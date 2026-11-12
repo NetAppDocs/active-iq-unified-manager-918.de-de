@@ -1,0 +1,58 @@
+---
+permalink: events/concept_guidelines_for_adding_alerts.html 
+sidebar: sidebar 
+keywords: guidelines, adding, alerts 
+summary: Sie können Warnungen basierend auf einer Ressource, z. B. einem Cluster, Knoten, Aggregat oder Volume, sowie auf Ereignissen eines bestimmten Typs des Schweregrads hinzufügen. Es empfiehlt sich, eine Warnung für jedes Ihrer kritischen Objekte hinzuzufügen, nachdem Sie den Cluster hinzugefügt haben, zu dem das Objekt gehört. 
+---
+= Richtlinien zum Hinzufügen von Warnmeldungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Warnungen basierend auf einer Ressource, z. B. einem Cluster, Knoten, Aggregat oder Volume, sowie auf Ereignissen eines bestimmten Typs des Schweregrads hinzufügen. Es empfiehlt sich, eine Warnung für jedes Ihrer kritischen Objekte hinzuzufügen, nachdem Sie den Cluster hinzugefügt haben, zu dem das Objekt gehört.
+
+Mithilfe der folgenden Richtlinien und Überlegungen lassen sich Warnmeldungen erstellen, um Ihre Systeme effektiv zu managen:
+
+* Alarmbeschreibung
++
+Sie sollten eine Beschreibung für die Warnmeldung angeben, damit Sie Ihre Warnmeldungen effektiv nachverfolgen können.
+
+* Ressourcen
++
+Sie sollten entscheiden, für welche physische oder logische Ressource eine Warnung erforderlich ist. Ressourcen können nach Bedarf ein- oder ausgeschlossen werden. Wenn beispielsweise Aggregate durch die Konfiguration einer Warnung genau überwacht werden sollen, müssen die erforderlichen Aggregate aus der Ressourcenliste ausgewählt werden.
+
++
+Wenn Sie eine Ressourcenkategorie auswählen, zum Beispiel *+<<All User or Group Quotas>>+*, dann erhalten Sie Warnmeldungen für alle Objekte in dieser Kategorie.
+
++
+[NOTE]
+====
+Die Auswahl eines Clusters als Ressource wählt die Storage Objekte innerhalb dieses Clusters nicht automatisch aus. Wenn Sie beispielsweise eine Warnung für alle kritischen Ereignisse für alle Cluster erstellen, erhalten Sie nur Warnungen für kritische Cluster-Ereignisse. Sie erhalten keine Warnungen für kritische Ereignisse auf Knoten, Aggregaten usw.
+
+====
+* Schweregrad
++
+Sie legen fest, ob ein Ereignis eines bestimmten Typs des Schweregrads (Kritisch, Fehler, Warnung) die Warnung auslösen soll und, falls ja, welcher Typ des Schweregrads.
+
+* Ausgewählte Ereignisse
++
+Wenn Sie eine Warnmeldung basierend auf dem Typ des generierten Ereignisses hinzufügen, sollten Sie entscheiden, welche Ereignisse eine Warnmeldung erfordern.
+
++
+Wenn Sie einen Ereignisschweregrad auswählen, aber keine einzelnen Ereignisse auswählen (wenn Sie die Spalte „Ausgewählte Ereignisse“ leer lassen), erhalten Sie Benachrichtigungen für alle Ereignisse in der Kategorie.
+
+* Aktionen
++
+Sie müssen die Benutzernamen und E-Mail-Adressen der Benutzer angeben, die die Benachrichtigung erhalten. Sie können auch einen SNMP-Trap als Benachrichtigungsmodus festlegen. Sie können Ihre Skripte mit einer Warnung verknüpfen, sodass sie ausgeführt werden, wenn eine Warnung generiert wird.
+
+* Benachrichtigungshäufigkeit
++
+Sie können einen Alert so konfigurieren, dass für einen festgelegten Zeitraum wiederholt Benachrichtigungen an die Empfänger gesendet werden. Sie sollten den Zeitpunkt festlegen, ab dem die Ereignisbenachrichtigung für den Alert aktiv ist. Wenn die Ereignisbenachrichtigung wiederholt werden soll, bis das Ereignis bestätigt wird, sollten Sie festlegen, wie oft die Benachrichtigung wiederholt werden soll.
+
+* Skript ausführen
++
+Sie können Ihr Skript mit einer Warnung verknüpfen. Ihr Skript wird ausgeführt, wenn die Warnung generiert wird.
+
+

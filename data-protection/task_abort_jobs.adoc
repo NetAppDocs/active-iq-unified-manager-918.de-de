@@ -1,0 +1,23 @@
+---
+permalink: data-protection/task_abort_jobs.html 
+sidebar: sidebar 
+keywords: abort, jobs 
+summary: Auf der Seite „Aufträge“ lässt sich ein Auftrag abbrechen, wenn sein Abschluss zu lange dauert, zu viele Fehler auftreten oder er nicht mehr benötigt wird. Ein Auftrag lässt sich nur abbrechen, wenn sein Status und Typ dies zulassen. Jeder laufende Auftrag lässt sich abbrechen. 
+---
+= Abbrechen von Jobs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Aufträge“ lässt sich ein Auftrag abbrechen, wenn sein Abschluss zu lange dauert, zu viele Fehler auftreten oder er nicht mehr benötigt wird. Ein Auftrag lässt sich nur abbrechen, wenn sein Status und Typ dies zulassen. Jeder laufende Auftrag lässt sich abbrechen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt der Aufruf von *Schutz* > *Aufträge*.
+. Aus der Liste der Aufträge kann ein Auftrag ausgewählt und anschließend auf *Abbrechen* geklickt werden.
+. Zum Abbrechen des ausgewählten Auftrags ist in der Bestätigungsabfrage *Ja* auszuwählen.
+

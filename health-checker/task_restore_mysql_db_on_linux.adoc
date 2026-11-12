@@ -1,0 +1,55 @@
+---
+permalink: health-checker/task_restore_mysql_db_on_linux.html 
+sidebar: sidebar 
+keywords: restore, linux system, mysql, database, backup 
+summary: Bei Datenverlust oder Datenbeschädigung können Sie Unified Manager mit minimalem Datenverlust in den vorherigen stabilen Zustand zurückversetzen. Sie können die Unified Manager Datenbank mithilfe der Unified Manager Managementplattform auf einem lokalen oder entfernten Red Hat Enterprise Linux-System wiederherstellen. 
+---
+= Wiederherstellung einer MySQL Datenbank Sicherung auf einem Linux-System in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei Datenverlust oder Datenbeschädigung können Sie Unified Manager mit minimalem Datenverlust in den vorherigen stabilen Zustand zurückversetzen. Sie können die Unified Manager Datenbank mithilfe der Unified Manager Managementplattform auf einem lokalen oder entfernten Red Hat Enterprise Linux-System wiederherstellen.
+
+.Bevor Sie beginnen
+* Sie benötigen die Anmeldedaten des Root-Benutzers für den Linux-Host, auf dem Unified Manager installiert ist.
+* Sie müssen über eine Benutzerkennung und ein Passwort verfügen, die für die Anmeldung an der Managementplattform für die Wartung des Unified Manager Servers autorisiert sind.
+* Sie müssen die Sicherungsdatei des Unified Manager und den Inhalt des Datenbank-Repository-Verzeichnisses auf das System kopiert haben, auf dem Sie den Wiederherstellungsvorgang durchführen werden.
++
+Es wird empfohlen, die Sicherungsdatei in das Standardverzeichnis /`data/ocum`-backup zu kopieren. Die Datenbank-Repository-Dateien müssen in das Unterverzeichnis /`database-dumps-repo` unter dem Verzeichnis /`ocum-backup` kopiert werden.
+
+* Die Sicherungsdateien müssen vom `.7z` Typ sein.
+
+
+Die Wiederherstellungsfunktion ist plattform- und versionsspezifisch. Eine Unified Manager Sicherung kann nur auf derselben Version von Unified Manager wiederhergestellt werden. Sie können eine Linux-Sicherungsdatei oder eine Sicherungsdatei einer virtuellen Appliance auf einem Red Hat Enterprise Linux-System wiederherstellen.
+
+[TIP]
+====
+Enthält der Name des Sicherungsordners ein Leerzeichen, muss der absolute oder relative Pfad in doppelte Anführungszeichen gesetzt werden.
+
+====
+.Schritte
+. Wenn Sie eine Wiederherstellung auf einem neuen Server durchführen, sollte nach der Installation von Unified Manager nach Abschluss der Installation weder die Benutzeroberfläche gestartet noch Cluster, Benutzer oder Authentifizierungseinstellungen konfiguriert werden. Die Sicherungsdatei ergänzt diese Informationen während des Wiederherstellungsprozesses.
+. Die Verbindung mit der IP-Adresse oder dem vollqualifizierten Domainnamen des Unified Manager Systems erfolgt mithilfe von Secure Shell.
+. Die Anmeldung am System erfolgt mit dem Benutzernamen und Passwort des Wartungsbenutzers (umadmin).
+. Den Befehl  `maintenance_console` eingeben und die Eingabetaste drücken.
+. Im *Main Menu* der Wartungskonsole erfolgt die Eingabe der Nummer für die Option *Backup Restore*.
+. Erforderlich ist die Eingabe der Nummer für *Restore MySQL Backup*.
+. Bei entsprechender Aufforderung erfolgt die Eingabe des absoluten Pfads der Sicherungsdatei.
++
+[listing]
+----
+Bundle to restore from: /data/ocum-backup/UM_9.8.N151113.1348_backup_rhel_02-20-2020-04-45.7z
+----
++
+Nach Abschluss des Wiederherstellungsvorgangs können Sie sich bei Unified Manager anmelden.
+
+
+
+Falls der OnCommand Workflow Automation Server nach dem Wiederherstellen der Sicherung nicht funktioniert, sind die folgenden Schritte erforderlich:
+
+. Auf dem Workflow Automation Server muss die IP-Adresse des Unified Manager Servers auf den neuesten Rechner umgestellt werden.
+. Wenn die Datenerfassung in Schritt 1 fehlschlägt, muss auf dem Unified Manager Server das Datenbankpasswort zurückgesetzt werden.
+

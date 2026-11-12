@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_respond_to_system_defined_performance_threshold_events.html 
+sidebar: sidebar 
+keywords: system-defined, performance, threshold, events 
+summary: Mit Unified Manager können Sie Performance Ereignisse untersuchen, die dadurch verursacht wurden, dass ein Performance Zähler einen systemdefinierten Warnschwellenwert überschritten hat. Sie können Unified Manager auch verwenden, um den Systemstatus der Clusterkomponente zu prüfen und festzustellen, ob kürzlich auf der Komponente erkannte Ereignisse zu dem Performance Ereignis beigetragen haben. 
+---
+= Reaktion auf systemdefinierte Leistungsschwellenereignisse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Unified Manager können Sie Performance Ereignisse untersuchen, die dadurch verursacht wurden, dass ein Performance Zähler einen systemdefinierten Warnschwellenwert überschritten hat. Sie können Unified Manager auch verwenden, um den Systemstatus der Clusterkomponente zu prüfen und festzustellen, ob kürzlich auf der Komponente erkannte Ereignisse zu dem Performance Ereignis beigetragen haben.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Es muss neue oder veraltete Performance-Ereignisse geben.
+
+
+.Schritte
+. Die Seite *Ereignisdetails* enthält Informationen zum Ereignis.
+. In der *Beschreibung* wird die Schwellenwertüberschreitung beschrieben, die das Ereignis verursacht hat.
++
+Beispielsweise zeigt die Meldung „`Node utilization value of 90 % has triggered a WARNING event based on threshold setting of 85 %`“ an, dass für das Clusterobjekt ein Warnereignis zur Knotenauslastung aufgetreten ist.
+
+. Es empfiehlt sich, den *Auslösezeitpunkt des Ereignisses* zu notieren, damit untersucht werden kann, ob gleichzeitig andere Ereignisse aufgetreten sind, die zu diesem Ereignis beigetragen haben könnten.
+. Unter *Systemdiagnose* ist eine kurze Beschreibung der Art der Analyse angegeben, die die systemdefinierte Richtlinie für das Clusterobjekt durchführt.
++
+Bei manchen Ereignissen wird neben der Diagnose ein grünes oder rotes Symbol angezeigt, das angibt, ob in dieser Diagnose ein Problem festgestellt wurde. Bei anderen Arten von systemdefinierten Ereignissen zeigen Zählerdiagramme die Performance des Objekts an.
+
+. Unter *Vorgeschlagene Aktionen* lässt sich über den Link *Help me do this* anzeigen, welche vorgeschlagenen Aktionen Sie ausführen können, um zu versuchen, das Performance-Ereignis selbst zu beheben.
+

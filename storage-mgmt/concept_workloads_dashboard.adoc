@@ -1,0 +1,76 @@
+---
+permalink: storage-mgmt/concept_workloads_dashboard.html 
+sidebar: sidebar 
+keywords: workloads, overview, data center, sections 
+summary: 'Eine Arbeitslast repräsentiert die Ein-/Ausgabeoperationen (E/A) eines Storage Objekts, wie z. B. eines Volumes oder einer LUN. Die Art der Provisionierung des Storage basiert auf den erwarteten Anforderungen der Arbeitslast. Statistiken zur Arbeitslast werden von Active IQ Unified Manager erst erfasst, wenn Datenverkehr zum und vom Storage Objekt vorhanden ist. Beispielsweise sind die IOPS- und Latenzwerte der Arbeitslast verfügbar, nachdem Benutzer eine Datenbank oder E-Mail-Applikation verwenden.' 
+---
+= Informationen zum Workloads-Dashboard in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Arbeitslast repräsentiert die Ein-/Ausgabeoperationen (E/A) eines Storage Objekts, wie z. B. eines Volumes oder einer LUN. Die Art der Provisionierung des Storage basiert auf den erwarteten Anforderungen der Arbeitslast. Statistiken zur Arbeitslast werden von Active IQ Unified Manager erst erfasst, wenn Datenverkehr zum und vom Storage Objekt vorhanden ist. Beispielsweise sind die IOPS- und Latenzwerte der Arbeitslast verfügbar, nachdem Benutzer eine Datenbank oder E-Mail-Applikation verwenden.
+
+Die Seite „Workloads“ zeigt eine Zusammenfassung der Storage Workloads der ONTAP Cluster an, die von Unified Manager gemanagt werden. Sie bietet kumulative Informationen auf einen Blick über die Storage Workloads, die dem Performance Service Level entsprechen, sowie über die nicht konformen Storage Workloads. Außerdem können Sie die Gesamtkapazität, die verfügbare und die genutzte Kapazität sowie die Performance (IOPS) der Cluster in Ihrem Datacenter beurteilen.
+
+[NOTE]
+====
+Es wird empfohlen, die Anzahl der Storage Workloads zu ermitteln, die nicht konform oder nicht verfügbar sind oder die von keinem Performance Service Level gemanagt werden, und die notwendigen Maßnahmen zu ergreifen, um deren Konformität, Kapazitätsauslastung und IOPS sicherzustellen.
+
+====
+Die Seite „Workloads“ enthält die folgenden zwei Abschnitte:
+
+* Workload-Übersicht: Bietet einen Überblick über die Anzahl der Storage Workloads auf den von Unified Manager gemanagten ONTAP Clustern.
+* Datacenter Übersicht: Bietet einen Überblick über die Kapazität und die IOPS der Storage Workloads im Datacenter. Die relevanten Daten werden auf Datacenter Level und für einzelne . angezeigt.
+
+
+
+
+[[workloads-overview-section]]
+== Abschnitt „Übersicht zu Workloads“
+
+Der Abschnitt „Workload-Übersicht“ bietet auf einen Blick kumulative Informationen zu den Storage Workloads. Der Status der Storage Workloads wird auf der Grundlage zugewiesener und nicht zugewiesener Performance Service Levels angezeigt.
+
+* *Zugewiesen*: Für Storage Workloads, denen Performance Service Levels zugewiesen wurden, werden die folgenden Status gemeldet:
++
+** *Konform*: Die Performance von Storage Workloads basiert auf den ihnen zugewiesenen Performance Service Levels. Wenn sich die Storage Workloads innerhalb der in den zugehörigen Performance Service Levels definierten Latenzschwelle befinden, werden sie als "`konform`" gekennzeichnet. Die konformen Workloads sind blau markiert.
+** *Nicht konform*: Während der Performance-Überwachung werden Storage Workloads als „`nicht konform`“ gekennzeichnet, wenn die Latenz der Storage Workloads die im zugehörigen Performance Service Level definierte Schwellenwertlatenz überschreitet. Die nicht konformen Workloads sind orange markiert.
+** *Nicht verfügbar*: Storage Workloads werden als „`unavailable`“ markiert, wenn sie offline sind oder der zugehörige Cluster nicht erreichbar ist. Nicht verfügbare Workloads werden rot markiert.
+
+
+* *Nicht zugewiesen*: Storage Workloads, denen kein Performance Service Level zugewiesen ist, werden als "`unassigned`" gemeldet. Die Zahl wird durch das Informationssymbol angezeigt.
+
+
+Die Gesamtanzahl der Arbeitslasten ergibt sich aus der Summe der zugewiesenen und nicht zugewiesenen Arbeitslasten.
+
+Die in diesem Abschnitt angezeigte Gesamtzahl der Workloads lässt sich anklicken; die Workloads werden dann auf der Seite „Workloads“ angezeigt.
+
+Der Unterabschnitt „Konformität nach Performance Service Levels“ zeigt die Gesamtzahl der verfügbaren Storage Workloads an:
+
+* Entsprechend jedem Typ von Performance Service Level
+* Bei denen eine Diskrepanz zwischen den zugewiesenen und den empfohlenen Performance Service Levels besteht
+
+
+
+
+[[data-center-overview-section]]
+== Abschnitt „Datacenter-Übersicht“
+
+Der Abschnitt zur Datacenter-Übersicht stellt die verfügbare und genutzte Kapazität sowie die IOPS für alle Cluster im Datacenter grafisch dar. Mithilfe dieser Daten sollten Sie die Kapazität und die IOPS der Storage-Workloads managen. Der Abschnitt zeigt außerdem die folgenden Informationen zu den Storage-Workloads über alle Cluster hinweg an:
+
+* Die gesamte, verfügbare und genutzte Kapazität aller Cluster in Ihrem Datacenter
+* Die gesamten, verfügbaren und genutzten IOPS für alle Cluster in Ihrem Datacenter
+* Die verfügbare und genutzte Kapazität auf Basis jedes Performance Service Level
+* Die verfügbaren und genutzten IOPS auf Basis jedes Performance Service Level
+* Der gesamte Speicherplatz und die IOPS, die von den Workloads ohne zugewiesenes Performance Service Level genutzt werden
+
+
+*Wie Kapazität und Performance des Datacenters auf Basis von Performance Service Levels berechnet werden*
+
+Die genutzte Kapazität und die IOPS werden anhand der gesamten genutzten Kapazität und der Performance aller Storage-Workloads in den Clustern ermittelt.
+
+Die verfügbaren IOPS werden auf Basis der erwarteten Latenz und der empfohlenen Performance Service Levels auf den Nodes berechnet. Sie umfassen die verfügbaren IOPS für alle Performance Service Levels, deren erwartete Latenz kleiner oder gleich ihrer eigenen erwarteten Latenz ist.
+
+Die verfügbare Kapazität wird auf Basis der erwarteten Latenz und der empfohlenen Performance Service Levels für Aggregate berechnet. Sie umfasst die verfügbare Kapazität für alle Performance Service Levels, deren erwartete Latenz kleiner oder gleich ihrer eigenen erwarteten Latenz ist.

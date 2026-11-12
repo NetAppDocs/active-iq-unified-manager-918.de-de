@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/concept_what_used_headroom_value_means.html 
+sidebar: sidebar 
+keywords: performance, capacity, value, means 
+summary: Der Wert für die genutzte Performance-Kapazität hilft Ihnen, die Knoten und Aggregate zu identifizieren, die derzeit über- oder unterausgelastet sind. Dies ermöglicht es Ihnen, Workloads neu zu verteilen, um Ihre Storage-Ressourcen effizienter zu nutzen. 
+---
+= Verwendung des Werts für die genutzte Performance-Kapazität in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Wert für die genutzte Performance-Kapazität hilft Ihnen, die Knoten und Aggregate zu identifizieren, die derzeit über- oder unterausgelastet sind. Dies ermöglicht es Ihnen, Workloads neu zu verteilen, um Ihre Storage-Ressourcen effizienter zu nutzen.
+
+Die folgende Abbildung zeigt die Kurve der Latenz im Verhältnis zur Auslastung für eine Ressource und kennzeichnet mit farbigen Punkten drei Bereiche, in denen sich der aktuelle Betriebspunkt befinden könnte.
+
+image::../media/headroom_chart_over_under.gif[Ein Screenshot der Benutzeroberfläche, der die Latenz im Verhältnis zur Auslastung einer Ressource darstellt.]
+
+* Ein Nutzungsprozentsatz der Performance-Kapazität von 100 entspricht dem optimalen Punkt.
++
+Die Ressourcen werden derzeit effizient genutzt.
+
+* Ein Prozentsatz der genutzten Performance-Kapazität von über 100 % weist darauf hin, dass der Knoten oder das Aggregat überlastet ist und dass Workloads eine suboptimale Performance erhalten.
++
+Der Ressource sollten keine neuen Workloads hinzugefügt werden, und die vorhandenen Workloads müssen möglicherweise neu verteilt werden.
+
+* Ein Prozentsatz der Performance-Kapazität von unter 100 % zeigt an, dass der Node oder das Aggregat unterausgelastet ist und Ressourcen damit nicht effektiv zum Einsatz kommen.
++
+Der Ressource lassen sich weitere Workloads hinzufügen.
+
+
+
+[NOTE]
+====
+Im Gegensatz zur Auslastung kann der Prozentsatz der genutzten Performance-Kapazität über 100 % liegen. Es gibt keinen maximalen Prozentsatz, aber bei überlasteten Ressourcen liegt er typischerweise im Bereich von 110 % bis 140 %. Höhere Prozentsätze deuten auf eine Ressource mit schwerwiegenden Problemen hin.
+
+====

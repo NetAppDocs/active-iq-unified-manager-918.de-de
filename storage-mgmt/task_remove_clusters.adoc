@@ -1,0 +1,38 @@
+---
+permalink: storage-mgmt/task_remove_clusters.html 
+sidebar: sidebar 
+keywords: remove, cluster 
+summary: Sie können einen Cluster aus Unified Manager über die Seite „Cluster Setup“ entfernen. Beispielsweise können Sie einen Cluster entfernen, wenn die Clustererkennung fehlschlägt oder wenn Sie ein Storage-System stilllegen möchten. 
+---
+= Entfernung von Clustern aus Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Cluster aus Unified Manager über die Seite „Cluster Setup“ entfernen. Beispielsweise können Sie einen Cluster entfernen, wenn die Clustererkennung fehlschlägt oder wenn Sie ein Storage-System stilllegen möchten.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators oder die Rolle des Storage-Administrators.
+
+Diese Aufgabe entfernt den ausgewählten Cluster aus Unified Manager. Nach dem Entfernen eines Clusters überwacht Unified Manager ihn nicht mehr. Die bei dem entfernten Cluster registrierte Instanz von Unified Manager wird ebenfalls von dem Cluster abgemeldet.
+
+Durch das Entfernen eines Clusters werden auch alle zugehörigen Storage-Objekte, Verlaufsdaten, Storage Services und alle zugehörigen Ereignisse aus Unified Manager gelöscht. Diese Änderungen werden nach dem nächsten Datenerfassungszyklus auf den Inventar- und Detailseiten angezeigt.
+
+[NOTE]
+====
+Sie müssen einen Cluster aus Unified Manager entfernen, bevor Sie ihn außer Betrieb nehmen. Wenn der Cluster bereits offline oder nicht erreichbar ist, wenn Sie versuchen, ihn zu entfernen, kann Unified Manager nicht mit dem Cluster kommunizieren, um den Anwendungsdatensatz und die konfigurierten Event Management System (EMS) Abonnements zu entfernen. Dies kann dazu führen, dass der Entfernungsprozess fehlschlägt oder nicht mehr reagiert, bevor er abgeschlossen ist.
+
+====
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Cluster Setup*.
+. Auf der Seite „Cluster Setup“ wählen Sie den Cluster aus, der entfernt werden soll, und klicken anschließend auf *Remove*.
+. Im Meldungsdialogfeld *Remove Data Source* wird durch Klicken auf *Remove* die Entfernungsanforderung bestätigt.
+
+
+*Verwandte Informationen*
+
+link:../config/task_add_users.html["Hinzufügen von Benutzern"]
+
+link:../health-checker/task_view_cluster_list_and_details.html["Anzeigen der Clusterliste und Details"]

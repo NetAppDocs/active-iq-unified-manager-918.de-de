@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_add_values_to_annotations.html 
+sidebar: sidebar 
+keywords: add, values, annotations 
+summary: Sie können Annotationen Werte hinzufügen und anschließend Storage-Objekte mit einem bestimmten Annotationsname-Wert-Paar verknüpfen. Das Hinzufügen von Werten zu Annotationen hilft Ihnen, Storage-Objekte effektiver zu managen. 
+---
+= Werte zu Anmerkungen in Active IQ Unified Manager hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Annotationen Werte hinzufügen und anschließend Storage-Objekte mit einem bestimmten Annotationsname-Wert-Paar verknüpfen. Das Hinzufügen von Werten zu Annotationen hilft Ihnen, Storage-Objekte effektiver zu managen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Sie können vordefinierten Annotationen keine Werte hinzufügen.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Annotations*.
+. Auf der Seite *Anmerkungen* können Sie die Anmerkung auswählen, der Sie einen Wert hinzufügen möchten, und anschließend im Abschnitt *Werte* auf *Hinzufügen* klicken.
+. Im Dialogfeld *Anmerkungswert hinzufügen* ist für die Anmerkung ein Wert anzugeben.
++
+Der von Ihnen angegebene Wert muss für die ausgewählte Annotation eindeutig sein.
+
+. Klicken Sie auf *Add*.
+

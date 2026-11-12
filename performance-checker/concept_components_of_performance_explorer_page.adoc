@@ -1,0 +1,70 @@
+---
+permalink: performance-checker/concept_components_of_performance_explorer_page.html 
+sidebar: sidebar 
+keywords: components, performance, explorer, page 
+summary: Die Seite „Performance Explorer“ ermöglicht den Vergleich der Performance ähnlicher Objekte in einem Cluster, beispielsweise aller Volumes in einem Cluster. Dies ist bei der Fehlerbehebung von Performance Ereignissen und bei der Feinabstimmung der Objekt Performance von Vorteil. Sie können Objekte auch mit dem Stammobjekt vergleichen, das die Basis ist, anhand derer andere Objektvergleiche vorgenommen werden. 
+---
+= Die Seite „Performance Explorer“ in Active IQ Unified Manager kann überprüft werden.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Performance Explorer“ ermöglicht den Vergleich der Performance ähnlicher Objekte in einem Cluster, beispielsweise aller Volumes in einem Cluster. Dies ist bei der Fehlerbehebung von Performance-Ereignissen und bei der Feinabstimmung der Objekt-Performance hilfreich. Objekte können außerdem mit dem Root-Objekt verglichen werden, das die Basis bildet, mit der andere Objektvergleiche durchgeführt werden.
+
+Sie können auf die Schaltfläche *Zur Systemstatusansicht wechseln* klicken, um die Seite mit den Systemstatusdetails für dieses Objekt anzuzeigen. In manchen Fällen erhalten Sie wichtige Informationen zu den Storage-Konfigurationseinstellungen dieses Objekts, die bei der Fehlerbehebung hilfreich sein können.
+
+Die Seite „Performance Explorer“ zeigt eine Liste der Clusterobjekte und ihrer Performancedaten. Auf dieser Seite werden alle Clusterobjekte desselben Typs (z. B. Volumes und ihre objektspezifischen Performance-Statistiken) in Tabellenform angezeigt. Diese Ansicht bietet einen effizienten Überblick über die Performance der Clusterobjekte.
+
+[NOTE]
+====
+Wenn in einer Zelle der Tabelle "`N/A`" erscheint, bedeutet dies, dass für diesen Zähler kein Wert verfügbar ist, da zu diesem Zeitpunkt keine Ein-/Ausgabe für dieses Objekt stattfindet.
+
+====
+Die Seite „Performance Explorer“ enthält die folgenden Komponenten:
+
+* *Zeitraum*
++
+Ermöglicht die Auswahl eines Zeitbereichs für die Objektdaten.
+
++
+Sie können einen vordefinierten Zeitraum auswählen oder einen eigenen benutzerdefinierten Zeitraum festlegen.
+
+* *Anzeigen und vergleichen*
++
+Hier können Sie auswählen, welcher Typ korrelierter Objekte im Raster angezeigt wird.
+
++
+Die verfügbaren Optionen hängen vom Stammobjekttyp und den verfügbaren Daten ab. In der Dropdown-Liste „Anzeigen und Vergleichen“ lässt sich ein Objekttyp auswählen. Der ausgewählte Objekttyp wird in der Liste angezeigt.
+
+* *Filtern*
++
+Ermöglicht es Ihnen, die Datenmenge, die Sie erhalten, anhand Ihrer Vorgaben einzugrenzen.
+
++
+Sie können Filter erstellen, die auf die Objektdaten angewendet werden, zum Beispiel IOPS größer als 4. Sie können bis zu vier Filter gleichzeitig hinzufügen.
+
+* *Vergleich*
++
+Zeigt eine Liste der Objekte an, die Sie zum Vergleich mit dem Stammobjekt ausgewählt haben.
+
++
+Die Daten für die Objekte im Vergleichsbereich werden in den Zählerdiagrammen angezeigt.
+
+* *Statistiken anzeigen in*
++
+Für Volumes und LUNs können Sie auswählen, ob die Statistiken nach jedem Erfassungszyklus (standardmäßig 5 Minuten) angezeigt oder als stündlicher Durchschnitt dargestellt werden. Mit dieser Funktion können Sie das Latenzdiagramm zur Unterstützung des NetApp „Performance Guarantee“-Programms anzeigen.
+
+* *Zählerdiagramme*
++
+Zeigt grafisch dargestellte Daten für jede Performance Kategorie an.
+
++
+In der Regel werden standardmäßig nur drei oder vier Diagramme angezeigt. Über die Komponente „Diagramme auswählen“ können Sie weitere Diagramme einblenden oder bestimmte Diagramme ausblenden. Sie können außerdem die Ereignis-Zeitleiste ein- oder ausblenden.
+
+* *Zeitleiste der Ereignisse*
++
+Zeigt Performance- und Systemstatusereignisse an, die auf der Zeitachse für den Zeitraum auftreten, den Sie in der Zeitbereichskomponente ausgewählt haben.
+
+

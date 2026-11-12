@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_happens_when_performance_threshold_policy_is_changed.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policy, changed 
+summary: Wenn Sie den Zählerwert oder die Dauer einer bestehenden Performance-Schwellenwertrichtlinie anpassen, wird die Richtlinienänderung auf alle Storage-Objekte angewendet, die diese Richtlinie verwenden. Die neue Einstellung wird sofort wirksam, und Unified Manager beginnt, die Performance-Zählerwerte für alle neu erfassten Performance-Daten mit den neuen Schwellenwerteinstellungen zu vergleichen. 
+---
+= Änderungen an Leistungsschwellenwertrichtlinien in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie den Zählerwert oder die Dauer einer bestehenden Performance-Schwellenwertrichtlinie anpassen, wird die Richtlinienänderung auf alle Storage-Objekte angewendet, die diese Richtlinie verwenden. Die neue Einstellung wird sofort wirksam, und Unified Manager beginnt, die Performance-Zählerwerte für alle neu erfassten Performance-Daten mit den neuen Schwellenwerteinstellungen zu vergleichen.
+
+Falls für Objekte, die die geänderte Schwellenwertrichtlinie verwenden, noch aktive Ereignisse vorhanden sind, werden diese Ereignisse als veraltet markiert, und die Schwellenwertrichtlinie beginnt, den Zähler als neu definierte Schwellenwertrichtlinie zu überwachen.
+
+Bei der Anzeige des Zählers, auf den der Schwellenwert angewendet wurde, in der Detailansicht der Zählerdiagramme spiegeln die Linien für kritische Schwellenwerte und Warnschwellenwerte die aktuellen Schwellenwerteinstellungen wider. Die ursprünglichen Schwellenwerteinstellungen werden auf dieser Seite nicht angezeigt, selbst wenn Sie historische Daten anzeigen, als die alte Schwellenwerteinstellung noch gültig war.
+
+[NOTE]
+====
+Da ältere Schwellenwerteinstellungen in der Detailansicht der Zählerdiagramme nicht angezeigt werden, sehen Sie möglicherweise historische Ereignisse, die unterhalb der aktuellen Schwellenwertlinien liegen.
+
+====

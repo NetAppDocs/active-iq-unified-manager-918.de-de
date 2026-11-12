@@ -1,0 +1,68 @@
+---
+permalink: events/reference_dynamic_performance_event_chart_details.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, chart, details 
+summary: Bei dynamischen Performance Ereignissen werden im Abschnitt „Systemdiagnose“ auf der Seite mit den Ereignisdetails die wichtigsten Workloads mit der höchsten Latenz oder Auslastung der Clusterkomponente mit Ressourcenengpass aufgelistet. Die Performance Statistiken basieren auf dem Zeitraum von der Erkennung des Performance Ereignisses bis zur letzten Analyse des Ereignisses. Die Diagramme zeigen außerdem historische Performance Statistiken für die Clusterkomponente mit Ressourcenengpass an. 
+---
+= Informationen zu dynamischen Leistungsereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei dynamischen Performance-Ereignissen werden im Abschnitt „Systemdiagnose“ auf der Seite mit den Ereignisdetails die wichtigsten Workloads mit der höchsten Latenz oder Auslastung der Clusterkomponente aufgelistet, um die ein Ressourcenkonflikt besteht.
+
+Die Performance Statistiken basieren auf dem Zeitraum von der Erkennung des Performance-Ereignisses bis zur letzten Analyse des Ereignisses. Die Diagramme zeigen außerdem historische Performance Statistiken für die Clusterkomponente, um die ein Konflikt besteht.
+
+Sie können beispielsweise Workloads mit hoher Auslastung einer Komponente identifizieren, um zu bestimmen, welcher Workload auf eine weniger ausgelastete Komponente verschoben werden sollte. Durch das Verschieben des Workloads würde sich die Arbeitslast auf der aktuellen Komponente verringern, wodurch die Komponente möglicherweise nicht mehr um Ressourcen konkurriert. Oben in diesem Abschnitt werden der Uhrzeit- und Datumsbereich angezeigt, in dem ein Ereignis erkannt und zuletzt analysiert wurde. Bei aktiven Ereignissen (neu oder bestätigt) wird der Zeitpunkt der letzten Analyse aktualisiert.
+
+Die Diagramme zu Latenz und Aktivität zeigen die Namen der wichtigsten Workloads an, wenn Sie den Mauszeiger über das Diagramm bewegen. Über das Menü „Workload Type“ rechts neben dem Diagramm können Sie die Workloads nach ihrer Rolle im Ereignis sortieren, darunter „Haie“, „Angreifer“ oder „Opfer“, und Details zu ihrer Latenz sowie zu ihrer Auslastung auf der betroffenen Clusterkomponente anzeigen. Sie können den Istwert mit dem erwarteten Wert vergleichen, um zu erkennen, wann sich der Workload außerhalb seines erwarteten Latenz- oder Auslastungsbereichs befand. Informationen dazu enthält link:..//performance-checker/concept_types_of_workloads_monitored_by_unified_manager.html["Von Unified Manager überwachte Workload-Typen"].
+
+[NOTE]
+====
+Wenn Sie nach der maximalen Latenzabweichung sortieren, werden systemdefinierte Workloads nicht in der Tabelle angezeigt, da die Latenz nur für benutzerdefinierte Workloads gilt. Workloads mit sehr niedrigen Latenzwerten werden nicht in der Tabelle angezeigt.
+
+====
+Weitere Informationen zu den dynamischen Performance-Schwellenwerten finden Sie unter link:../performance-checker/concept_analyze_events_from_dynamic_performance_thresholds.html["Analyse von Ereignissen anhand dynamischer Performance-Schwellenwerte"].
+
+Informationen darüber, wie Unified Manager die Workloads einstuft und die Sortierreihenfolge bestimmt, finden Sie unter link:../performance-checker/concept_how_um_determines_performance_impact_for_incident.html["Wie Unified Manager die Performance-Auswirkungen eines Ereignisses ermittelt"].
+
+Die Daten in den Diagrammen zeigen 24 Stunden Performance Statistiken vor dem letzten Zeitpunkt, zu dem das Ereignis analysiert wurde. Die tatsächlichen Werte und erwarteten Werte für jede Arbeitslast basieren auf dem Zeitpunkt, zu dem die Arbeitslast an dem Ereignis beteiligt war. Beispielsweise kann eine Arbeitslast erst nach der Erkennung des Ereignisses an einem Ereignis beteiligt sein, sodass ihre Performance Statistiken möglicherweise nicht mit den Werten zum Zeitpunkt der Ereigniserkennung übereinstimmen. Standardmäßig sind die Arbeitslasten nach der Spitzenabweichung (höchsten Abweichung) bei der Latenz sortiert.
+
+[NOTE]
+====
+Da Unified Manager maximal 30 Tage an historischen Performance- und Ereignisdaten im 5-Minuten-Takt speichert, werden keine Performance-Daten angezeigt, wenn das Ereignis älter als 30 Tage ist.
+
+====
+* *Spalte „Arbeitslastsortierung“*
++
+** *Latenzdiagramm*
++
+Zeigt die Auswirkungen des Ereignisses auf die Latenz der Arbeitslast während der letzten Analyse an.
+
+** *Spalte „Komponentenverwendung“*
++
+Zeigt Details zur Auslastung der Clusterkomponente im Konfliktfall an. In den Diagrammen stellt die blaue Linie die tatsächliche Auslastung dar. Ein roter Balken markiert die Ereignisdauer vom Zeitpunkt der Erkennung bis zum Zeitpunkt der letzten Analyse. Weitere Informationen sind unter link:../performance-checker/reference_workload_performance_measurement_values.html["Messwerte zur Workload Performance"] verfügbar.
+
++
+[NOTE]
+====
+Für die Netzwerkkomponente wird diese Spalte nicht angezeigt, da Performance Statistiken aus Aktivitäten außerhalb des Clusters stammen.
+
+====
+** *Komponentenverwendung*
++
+Zeigt den Nutzungsverlauf in Prozent für die Netzwerk-, Datenverarbeitungs- und Aggregatkomponenten bzw. den Aktivitätsverlauf in Prozent für die QoS-Richtliniengruppenkomponente an. Für die Netzwerk- und Interconnect-Komponenten wird kein Diagramm angezeigt. Durch Zeigen auf die Statistiken können die Nutzungsstatistiken zu einem bestimmten Zeitpunkt angezeigt werden.
+
+** *Verlauf der gesamten Schreibvorgänge in MB/s*
++
+Nur für die Komponente „MetroCluster Resources“ wird der gesamte Schreibdurchsatz in Megabyte pro Sekunde (MBps) für alle Volume-Workloads angezeigt, die in einer MetroCluster Konfiguration auf den Partner-Cluster gespiegelt werden.
+
+** *Ereignisverlauf*
++
+Zeigt rot schattierte Linien an, um die historischen Ereignisse der betroffenen Komponente darzustellen. Bei veralteten Ereignissen werden Ereignisse angezeigt, die vor der Erkennung des ausgewählten Ereignisses und nach dessen Behebung stattfanden.
+
+
+
+

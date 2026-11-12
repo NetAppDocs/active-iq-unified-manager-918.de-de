@@ -1,0 +1,23 @@
+---
+permalink: events/task_delete_alerts.html 
+sidebar: sidebar 
+keywords: delete, alerts 
+summary: Sie können eine Warnung löschen, wenn sie nicht mehr benötigt wird. Beispielsweise können Sie eine Warnung löschen, die für eine bestimmte Ressource erstellt wurde, wenn diese Ressource nicht mehr von Unified Manager überwacht wird. 
+---
+= Warnmeldungen in Active IQ Unified Manager löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Warnung löschen, wenn sie nicht mehr benötigt wird. Beispielsweise können Sie eine Warnung löschen, die für eine bestimmte Ressource erstellt wurde, wenn diese Ressource nicht mehr von Unified Manager überwacht wird.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+.Schritte
+. Im linken Navigationsbereich auf *Storage Management* > *Alert Setup* klicken.
+. Auf der Seite *Benachrichtigungseinstellungen* die zu löschenden Benachrichtigungen auswählen und auf *Löschen* klicken.
+. Mit *Ja* wird die Löschanfrage bestätigt.
+

@@ -1,0 +1,27 @@
+---
+permalink: config/task_disable_nested_groups_from_remote_authentication.html 
+sidebar: sidebar 
+keywords: disable, nested groups, remote, authentication 
+summary: Wenn die Remote-Authentifizierung aktiviert ist, kann die Authentifizierung verschachtelter Gruppen deaktiviert werden, sodass sich nur einzelne Benutzer und nicht Gruppenmitglieder remote bei Unified Manager authentifizieren können. Verschachtelte Gruppen können deaktiviert werden, wenn die Antwortzeit der Active Directory-Authentifizierung verbessert werden soll. 
+---
+= Verschachtelte Gruppen aus der Remote Authentifizierung in Active IQ Unified Manager sind deaktiviert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die Remote-Authentifizierung aktiviert ist, kann die Authentifizierung verschachtelter Gruppen deaktiviert werden, sodass sich nur einzelne Benutzer und nicht Gruppenmitglieder remote bei Unified Manager authentifizieren können. Verschachtelte Gruppen können deaktiviert werden, wenn die Antwortzeit der Active Directory-Authentifizierung verbessert werden soll.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle des Anwendungsadministrators.
+* Die Deaktivierung verschachtelter Gruppen gilt nur bei Verwendung von Active Directory.
+
+
+Die Deaktivierung der Unterstützung für verschachtelte Gruppen in Unified Manager kann die Authentifizierungszeit verkürzen. Wenn die Unterstützung für verschachtelte Gruppen deaktiviert ist und eine Remote-Gruppe zu Unified Manager hinzugefügt wird, müssen die einzelnen Benutzer Mitglieder der Remote-Gruppe sein, um sich bei Unified Manager zu authentifizieren.
+
+.Schritte
+. Im linken Navigationsbereich wählen Sie *Allgemein* > *Remote-Authentifizierung* aus.
+. Das Kontrollkästchen für *Verschachtelte Gruppensuche deaktivieren* muss aktiviert sein.
+. Auf *Speichern* klicken.
+

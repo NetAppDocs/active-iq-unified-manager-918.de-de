@@ -1,0 +1,29 @@
+---
+permalink: config/reference_support_and_diagnostics_menu.html 
+sidebar: sidebar 
+keywords: support and diagnostics, menu 
+summary: Über das Menü „Support und Diagnose“ können Sie ein Supportpaket erstellen, das Sie zur Fehlerbehebung an den technischen Support senden können. 
+---
+= Das Menü „Support und Diagnose“ in Active IQ Unified Manager kann verwendet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über das Menü „Support und Diagnose“ können Sie ein Supportpaket erstellen, das Sie zur Fehlerbehebung an den technischen Support senden können.
+
+Folgende Menüoptionen stehen zur Verfügung:
+
+* *Light Support Bundle generieren*
++
+Ermöglicht die Erstellung eines schlanken Support-Bundles, das nur 30 Tage Protokolle und Konfigurationsdatenbankeinträge enthält; Performance-Daten, Erfassungsaufzeichnungsdateien und Server-Heap-Dump sind ausgeschlossen.
+
+* *Support Bundle generieren*
++
+Ermöglicht das Erstellen eines vollständigen Support-Pakets (7-Zip-Datei) mit Diagnoseinformationen im Home-Verzeichnis des Diagnosebenutzers. Wenn Ihr System mit dem Internet verbunden ist, kann das Support-Paket auch auf NetApp hochgeladen werden.
+
++
+Die Datei enthält Informationen, die durch eine AutoSupport Nachricht generiert werden, den Inhalt der Unified Manager Datenbank, detaillierte Daten über die Interna des Unified Manager Servers sowie ausführliche Protokolle, die normalerweise nicht in AutoSupport Nachrichten oder im Lightweight Support Bundle enthalten sind.
+
+

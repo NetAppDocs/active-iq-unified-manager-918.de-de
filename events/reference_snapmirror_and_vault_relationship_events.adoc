@@ -1,0 +1,110 @@
+---
+permalink: events/reference_snapmirror_and_vault_relationship_events.html 
+sidebar: sidebar 
+keywords: asynchronous, mirror, vault, relationship, events, impact area, protection 
+summary: Ereignisse für Asynchronous Mirror- und Vault-Beziehungen liefern Ihnen Informationen über den Status Ihrer Asynchronous SnapMirror- und Vault-Beziehungen, sodass Sie potenzielle Probleme überwachen können. Ereignisse für Asynchronous Mirror- und Vault-Beziehungen werden sowohl für Volume- als auch für Storage VM-Schutzbeziehungen unterstützt. Nur Vault-Beziehungen werden für die Storage VM-Notfallwiederherstellung nicht unterstützt. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten Ereignis- und Trap-Name, Auswirkungsstufe, Quelltyp und Schweregrad. 
+---
+= Informationen zu Ereignissen der asynchronen Spiegelung und der Vault Beziehung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse für Asynchronous Mirror- und Vault-Beziehungen liefern Ihnen Informationen über den Status Ihrer Asynchronous SnapMirror- und Vault-Beziehungen, sodass Sie potenzielle Probleme überwachen können. Ereignisse für Asynchronous Mirror- und Vault-Beziehungen werden sowohl für Volume- als auch für Storage VM-Schutzbeziehungen unterstützt. Nur Vault-Beziehungen werden für die Storage VM-Notfallwiederherstellung nicht unterstützt. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten Ereignis- und Trap-Name, Auswirkungsstufe, Quelltyp und Schweregrad.
+
+
+
+[[impact-area-protection]]
+== Wirkungsbereich: Schutz
+
+[NOTE]
+====
+Die Ereignisse für SnapMirror und Vault Beziehungen werden auch für Storage VMs generiert, die durch Storage VM Disaster Recovery geschützt sind, jedoch nicht für Beziehungen zwischen Teilobjekten.
+
+====
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Asynchrone Spiegelung und Vault fehlerhaft(ocumEvtMirrorVaultRelationshipUnhealthy)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Asynchroner Mirror und Vault abgebrochen(ocumEvtMirrorVaultRelationshipStateBrokenoff)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchrone Spiegelung und Vault Initialisierung fehlgeschlagen(ocumEvtMirrorVaultRelationshipInitializeFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchrone Mirror- und Vault-Aktualisierung fehlgeschlagen(ocumEvtMirrorVaultRelationshipUpdateFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchroner Spiegelungs- und Vault Verzögerungsfehler(ocumEvtMirrorVaultRelationshipLagError)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Warnung vor Verzögerungen bei asynchronem Spiegeln und Vault (ocumEvtMirrorVaultRelationshipLagWarning)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Asynchrone Spiegelung und Vault-Resynchronisierung fehlgeschlagen(ocumEvtMirrorVaultRelationshipResyncFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+|===
+[NOTE]
+====
+Das Ereignis "SnapMirror update failure" wird vom Active IQ Portal (Config Advisor) ausgelöst.
+
+====

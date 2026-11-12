@@ -1,0 +1,67 @@
+---
+permalink: performance-checker/task_filter_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: filter, data, object, inventory, performance, pages 
+summary: Sie können Daten auf den Object Inventory Performance pages filtern, um anhand bestimmter Kriterien schnell Daten zu finden. Mithilfe der Filterfunktion können Sie den Inhalt der Object Inventory Performance pages so eingrenzen, dass nur die von Ihnen angegebenen Ergebnisse angezeigt werden. Dies ist eine sehr effiziente Methode, um nur die Performance Daten anzuzeigen, für die Sie sich interessieren. 
+---
+= Filtern von Daten auf den Seiten zur Objektinventar-Performance in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Daten auf den Object Inventory Performance pages filtern, um anhand bestimmter Kriterien schnell Daten zu finden. Mithilfe der Filterfunktion können Sie den Inhalt der Object Inventory Performance pages so eingrenzen, dass nur die von Ihnen angegebenen Ergebnisse angezeigt werden. Dies ist eine sehr effiziente Methode, um nur die Performance Daten anzuzeigen, für die Sie sich interessieren.
+
+Im Filterbereich können Sie die Rasteransicht an Ihre Bedürfnisse anpassen. Die verfügbaren Filteroptionen hängen vom angezeigten Objekttyp ab. Wenn derzeit Filter angewendet werden, wird die Anzahl der angewendeten Filter rechts neben der Schaltfläche „Filter“ angezeigt.
+
+Drei Arten von Filterparametern stehen zur Verfügung.
+
+|===
+| Parameter | Validierung 
+
+
+ a| 
+Zeichenkette (Text)
+ a| 
+Die Operatoren sind *enthält*, *beginnt mit*, *endet mit* und *enthält nicht*.
+
+
+
+ a| 
+Anzahl
+ a| 
+Die Operatoren sind *größer als*, *kleiner als*, *im letzten* und *zwischen*.
+
+
+
+ a| 
+Enum (Text)
+ a| 
+Die Operatoren sind *is* und *is not*.
+
+|===
+Die Felder „Spalte“, „Operator“ und „Wert“ sind für jeden Filter erforderlich; die verfügbaren Filter entsprechen den filterbaren Spalten auf der aktuellen Seite. Es können maximal vier Filter angewendet werden. Gefilterte Ergebnisse basieren auf kombinierten Filterparametern. Gefilterte Ergebnisse gelten für alle Seiten Ihrer gefilterten Suche, nicht nur für die aktuell angezeigte Seite.
+
+Sie können Filter über den Bereich „Filtering“ hinzufügen.
+
+. Oben auf der Seite wählen Sie die Schaltfläche *Filter* aus. Der Filterbereich wird angezeigt.
+. Über die linke Dropdown-Liste lässt sich ein Objekt auswählen, z. B. _Cluster_ oder ein Performance-Zähler.
+. In der mittleren Dropdown-Liste wählen Sie den Operator aus, den Sie verwenden möchten.
+. In der letzten Liste erfolgt die Auswahl oder Eingabe eines Werts, um den Filter für dieses Objekt zu vervollständigen.
+. Zum Hinzufügen eines weiteren Filters klicken Sie auf *+Add Filter*. Ein zusätzliches Filterfeld wird angezeigt. Dieses Filterfeld wird mithilfe des in den vorherigen Schritten beschriebenen Verfahrens ausgefüllt. Es ist zu beachten, dass die Schaltfläche *+Add Filter* nach dem Hinzufügen des vierten Filters nicht mehr angezeigt wird.
+. Zum Anwenden des Filters *Filter anwenden* auswählen. Die Filteroptionen werden auf das Raster angewendet, und die Anzahl der Filter wird rechts neben der Schaltfläche „Filter“ angezeigt.
+. Im Filterbereich können einzelne Filter entfernt werden, indem auf das Papierkorbsymbol rechts neben dem zu entfernenden Filter geklickt wird.
+. Zum Entfernen aller Filter steht unten im Filterbereich *Zurücksetzen* zur Verfügung.
+
+
+
+
+[[filtering-example]]
+== Filterbeispiel
+
+Die Abbildung zeigt das Filterfeld mit drei Filtern. Die Schaltfläche *+Filter hinzufügen* erscheint, wenn weniger als die maximale Anzahl von vier Filtern vorhanden ist.
+
+image::../media/opm_filtering_panel_draft_3.gif[Ein Screenshot der Benutzeroberfläche, der den Filterbereich mit drei Filtern zeigt.]
+
+Nach einem Klick auf *Filter anwenden* schließt sich der Filterbereich, übernimmt Ihre Filter und zeigt die Anzahl der angewendeten Filter an (image:../media/opm_filters_applied.gif[""]).

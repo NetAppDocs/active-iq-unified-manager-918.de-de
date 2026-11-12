@@ -1,0 +1,44 @@
+---
+permalink: reporting/task_download_reports.html 
+sidebar: sidebar 
+keywords: download, reports 
+summary: 'Sie können Berichte herunterladen und die Daten als CSV-Datei (Comma-Separated Values), als Microsoft Excel-Datei (.XLSX) oder als PDF-Datei auf einem lokalen Laufwerk oder einem Netzlaufwerk speichern. CSV- und XLSX-Dateien lassen sich mit Tabellenkalkulationsprogrammen wie Microsoft Excel und PDF-Dateien mit Readern wie Adobe Acrobat öffnen.' 
+---
+= Herunterladen von Berichten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Berichte herunterladen und die Daten als CSV-Datei (Comma-Separated Values), als Microsoft Excel-Datei (.XLSX) oder als PDF-Datei auf einem lokalen Laufwerk oder einem Netzlaufwerk speichern. CSV- und XLSX-Dateien lassen sich mit Tabellenkalkulationsprogrammen wie Microsoft Excel und PDF-Dateien mit Readern wie Adobe Acrobat öffnen.
+
+.Schritte
+. Mit der Schaltfläche *Reports* lässt sich der Bericht in einem der folgenden Formate herunterladen:
++
+[cols="2*"]
+|===
+| Auswählen | Zu... 
+
+
+ a| 
+CSV herunterladen
+ a| 
+Sie können den Bericht als CSV-Datei (Comma-Separated Values) speichern.
+
+
+
+ a| 
+PDF herunterladen
+ a| 
+Bericht als .pdf-Datei speichern.
+
+
+
+ a| 
+Excel Download
+ a| 
+Sie können den Bericht als Microsoft Excel (XLSX)-Datei speichern.
+
+|===
+

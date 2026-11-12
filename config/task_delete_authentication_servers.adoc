@@ -1,0 +1,28 @@
+---
+permalink: config/task_delete_authentication_servers.html 
+sidebar: sidebar 
+keywords: delete, authentication, servers 
+summary: Sie können einen Authentifizierungsserver löschen, wenn Sie verhindern möchten, dass der Unified Manager Server mit dem Authentifizierungsserver kommuniziert. Wenn Sie beispielsweise einen Authentifizierungsserver ändern möchten, mit dem der Verwaltungsserver kommuniziert, können Sie den Authentifizierungsserver löschen und einen neuen Authentifizierungsserver hinzufügen. 
+---
+= Authentifizierungsserver in Active IQ Unified Manager löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Authentifizierungsserver löschen, wenn Sie verhindern möchten, dass der Unified Manager Server mit dem Authentifizierungsserver kommuniziert. Wenn Sie beispielsweise einen Authentifizierungsserver ändern möchten, mit dem der Verwaltungsserver kommuniziert, können Sie den Authentifizierungsserver löschen und einen neuen Authentifizierungsserver hinzufügen.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Wenn Sie einen Authentifizierungsserver löschen, können Remote-Benutzer oder -Gruppen des Authentifizierungsservers nicht mehr auf Unified Manager zugreifen.
+
+.Schritte
+. Im linken Navigationsbereich wählen Sie *Allgemein* > *Remote-Authentifizierung* aus.
+. Einen oder mehrere Authentifizierungsserver, die gelöscht werden sollen, auswählen und anschließend auf *Löschen* klicken.
+. Mit *Ja* wird die Löschanfrage bestätigt.
++
+Wenn die Option *Sichere Verbindung verwenden* aktiviert ist, werden die mit dem Authentifizierungsserver verknüpften Zertifikate zusammen mit dem Authentifizierungsserver gelöscht.
+
+

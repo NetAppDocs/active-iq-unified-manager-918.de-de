@@ -1,0 +1,107 @@
+---
+permalink: api-automation/concept_manage_sep.html 
+sidebar: sidebar 
+keywords: manage, storage, efficiency, policy 
+summary: Sie können Speichereffizienzrichtlinien mithilfe der Storage APIs des Speicheranbieters anzeigen, erstellen, ändern und löschen. 
+---
+= Verwaltung von Speichereffizienzrichtlinien mithilfe von APIs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Speichereffizienzrichtlinien mithilfe der Storage APIs des Speicheranbieters anzeigen, erstellen, ändern und löschen.
+
+[NOTE]
+====
+Folgende Punkte sind zu beachten:
+
+* Es ist nicht zwingend erforderlich, beim Erstellen einer Arbeitslast auf Unified Manager eine Speichereffizienzrichtlinie zuzuweisen.
+* Eine Storage-Effizienzrichtlinie kann nicht von einer Arbeitslast entfernt werden, nachdem ihr eine Richtlinie zugewiesen wurde.
+* Wenn für einen Workload bestimmte Storage Einstellungen auf ONTAP Volumes festgelegt sind, wie z. B. Deduplizierung und Komprimierung, können diese Einstellungen durch die in der Storage Efficiency Policy angegebenen Einstellungen überschrieben werden, die Sie beim Hinzufügen der Storage Workloads in Unified Manager anwenden.
+
+
+====
+
+
+[[view-storage-efficiency-policies]]
+== Anzeigen von Storage-Effizienzrichtlinien
+
+Sie können die Speichereffizienzrichtlinien mithilfe der folgenden Methode anzeigen, bevor Sie sie Storage Workloads zuweisen. Diese API listet alle systemdefinierten und benutzerdefinierten Speichereffizienzrichtlinien auf und ruft deren Attribute ab. Um eine bestimmte Speichereffizienzrichtlinie abzufragen, müssen Sie deren eindeutige ID eingeben, um deren Details abzurufen.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+[[add-storage-efficiency-policies]]
+== Hinzufügen von Storage-Effizienzrichtlinien
+
+Mit der folgenden Methode lassen sich benutzerdefinierte Speichereffizienzrichtlinien erstellen und Ihren Storage-Workloads zuweisen, wenn die systemdefinierten Richtlinien die Anforderungen an die Provisionierung Ihrer Storage-Workloads nicht erfüllen. Als Eingabeparameter dienen die Details der Speichereffizienzrichtlinie, die erstellt werden soll.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+POST
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+
+
+[[delete-storage-efficiency-policies]]
+== Storage-Effizienzrichtlinien löschen
+
+Mit der folgenden Methode kann eine bestimmte Storage Efficiency Policy gelöscht werden. Eine Storage Efficiency Policy kann nicht gelöscht werden, wenn sie einem Workload zugewiesen ist oder wenn sie die einzige verfügbare Storage Efficiency Policy ist. Zum Löschen einer bestimmten Storage Efficiency Policy muss ihre eindeutige ID als Eingabeparameter angegeben werden.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+LÖSCHEN
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+[[modify-storage-efficiency-policies]]
+== Storage-Effizienzrichtlinien ändern
+
+Sie können die folgende Methode verwenden, um eine Storage Efficiency Policy zu ändern und ihre Eigenschaften zu aktualisieren. Eine Storage Efficiency Policy, die systemdefiniert ist oder einem Workload zugewiesen wurde, kann nicht geändert werden. Um eine bestimmte Storage Efficiency Policy zu ändern, müssen Sie die eindeutige ID der Storage Efficiency Policy angeben. Zusätzlich müssen Sie die Eigenschaft, die Sie aktualisieren möchten, zusammen mit ihrem Wert angeben.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+PATCH
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===

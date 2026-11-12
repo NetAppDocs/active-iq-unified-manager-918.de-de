@@ -1,0 +1,46 @@
+---
+permalink: health-checker/task_restore_snapshot_backup.html 
+sidebar: sidebar 
+keywords: restore, unified manager, snapshot copy, copies, 
+summary: Bei Datenverlust oder Datenbeschädigung können Sie Unified Manager mit minimalem Datenverlust in den vorherigen stabilen Zustand zurückversetzen. Sie können die Unified Manager Snapshot-Datenbank über die Unified Manager Managementplattform auf einem lokalen oder entfernten Betriebssystem wiederherstellen. 
+---
+= Active IQ Unified Manager mithilfe von Snapshot Kopien wiederherstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei Datenverlust oder Datenbeschädigung können Sie Unified Manager mit minimalem Datenverlust in den vorherigen stabilen Zustand zurückversetzen. Sie können die Unified Manager Snapshot-Datenbank über die Unified Manager Managementplattform auf einem lokalen oder entfernten Betriebssystem wiederherstellen.
+
+.Bevor Sie beginnen
+* Sie benötigen die Anmeldedaten des Root-Benutzers für den Linux-Host und Administratorrechte für den Windows-Hostrechner, auf dem Unified Manager installiert ist.
+* Sie müssen über eine Benutzerkennung und ein Passwort verfügen, die für die Anmeldung an der Managementplattform für die Wartung des Unified Manager Servers autorisiert sind.
+
+
+Die Wiederherstellungsfunktion ist plattform- und versionsspezifisch. Eine Unified Manager Sicherung kann nur auf derselben Version von Unified Manager wiederhergestellt werden.
+
+.Schritte
+. Die Verbindung erfolgt über die IP-Adresse oder die vollqualifizierte Domain des Unified Manager Systems.
++
+** Linux: Secure Shell
+** Windows: PowerShell
+
+
+. Zur Anmeldung am System dienen die Anmeldedaten des Root-Benutzers.
+. Den Befehl  `maintenance_console` eingeben und die Eingabetaste drücken.
+. Im *Hauptmenü* der Wartungs-Managementplattform wird für die Option *Sicherung wiederherstellen* die Nummer 4 eingegeben.
+. Die Auswahl von *Sichern und Wiederherstellen mit NetApp Snapshot* erfolgt mit 2.
++
+Wenn Sie eine Wiederherstellung auf einem neuen Server durchführen, sollte nach Abschluss der Installation von Unified Manager die Benutzeroberfläche nicht gestartet und es sollten keine Cluster, Benutzer oder Authentifizierungseinstellungen konfiguriert werden. Für die Auswahl von *Configure NetApp Snapshot Backup* ist 1 einzugeben, und die Einstellungen für Snapshot Kopien sind wie auf dem ursprünglichen System zu konfigurieren.
+
+. 3 dient zur Auswahl von *Wiederherstellung mithilfe von NetApp Snapshot*.
+. Die Snapshot-Kopie, aus der Unified Manager wiederhergestellt werden soll, wird ausgewählt. Anschließend wird *Enter* gedrückt.
+. Nach Abschluss des Wiederherstellungsprozesses können Sie sich an der Unified Manager Benutzeroberfläche anmelden.
+
+
+Falls der Workflow Automation Server nach dem Wiederherstellen der Sicherung nicht funktioniert, sind folgende Schritte erforderlich:
+
+. Auf dem Workflow Automation Server muss die IP-Adresse des Unified Manager Servers auf den neuesten Rechner umgestellt werden.
+. Wenn die Datenerfassung in Schritt 1 fehlschlägt, muss auf dem Unified Manager Server das Datenbankpasswort zurückgesetzt werden.
+

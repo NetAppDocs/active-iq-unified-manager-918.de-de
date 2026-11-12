@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/reference_performance_event_severity_types.html 
+sidebar: sidebar 
+keywords: performance, event, severity, types 
+summary: Jedes Performance-Ereignis ist einem Typ des Schweregrads zugeordnet, damit Sie die Ereignisse priorisieren können, die eine sofortige Korrekturmaßnahme erfordern. 
+---
+= Leistungsereignisse nach Schweregrad in Active IQ Unified Manager priorisieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jedes Performance-Ereignis ist einem Typ des Schweregrads zugeordnet, damit Sie die Ereignisse priorisieren können, die eine sofortige Korrekturmaßnahme erfordern.
+
+* *Kritisch*
++
+Ein Performance-Ereignis ist aufgetreten, das zu einer Dienstunterbrechung führen könnte, wenn nicht umgehend eine Korrekturmaßnahme ergriffen wird.
+
++
+Kritische Ereignisse werden nur auf Grundlage benutzerdefinierter Schwellenwerte gesendet.
+
+* *Warnung*
++
+Ein Performance Zähler für ein Clusterobjekt liegt außerhalb des normalen Bereichs und sollte überwacht werden, um sicherzustellen, dass er nicht den kritischen Schweregrad erreicht. Ereignisse dieses Schweregrads führen nicht zu einer Dienstunterbrechung, und sofortige Korrekturmaßnahmen sind möglicherweise nicht erforderlich.
+
++
+Benutzerdefinierte, systemdefinierte oder dynamische Schwellenwerte senden Warnereignisse.
+
+* *Informationen*
++
+Das Ereignis tritt auf, wenn ein neues Objekt erkannt oder eine Benutzeraktion ausgeführt wird. Wenn beispielsweise ein beliebiges Storage Objekt gelöscht wird oder Konfigurationsänderungen vorgenommen werden, wird ein Ereignis mit dem Typ des Schweregrads Information generiert.
+
++
+Informationsereignisse werden direkt von ONTAP gesendet, wenn eine Konfigurationsänderung erkannt wird.
+
+
+
+Weitere Informationen sind unter den folgenden Links verfügbar:
+
+* link:../events/concept_what_happens_when_an_event_is_received.html["Was passiert, wenn ein Ereignis empfangen wird"]
+* link:../events/concept_what_information_is_contained_in_an_alert_email.html["Welche Informationen in einer Benachrichtigungs-E-Mail enthalten sind"]
+* link:../events/task_add_alerts.html["Hinzufügen von Warnmeldungen"]
+* link:../events/task_add_alerts_for_performance_events.html["Hinzufügen von Benachrichtigungen für Performance-Ereignisse"]
+

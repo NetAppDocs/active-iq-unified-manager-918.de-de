@@ -1,0 +1,48 @@
+---
+permalink: config/task_configure_event_notification_settings.html 
+sidebar: sidebar 
+keywords: configure, event, notification, settings 
+summary: Sie können Unified Manager so konfigurieren, dass Warnungsbenachrichtigungen gesendet werden, wenn ein Ereignis generiert oder einem Benutzer zugewiesen wird. Sie können den SMTP-Server konfigurieren, der zum Senden der Warnung verwendet wird, und verschiedene Benachrichtigungsmechanismen festlegen, z. B. können Warnungsbenachrichtigungen als E-Mails oder SNMP-Traps gesendet werden. 
+---
+= Konfiguration der Einstellungen für Ereignisbenachrichtigungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager so konfigurieren, dass Alarmbenachrichtigungen gesendet werden, sobald ein Ereignis generiert oder einem Benutzer zugewiesen wird. Sie können den SMTP-Server konfigurieren, der zum Senden der Alarmbenachrichtigung verwendet wird, und verschiedene Benachrichtigungsmechanismen festlegen, beispielsweise können Alarmbenachrichtigungen als E-Mails oder SNMP-Traps gesendet werden.
+
+.Bevor Sie beginnen
+Sie benötigen folgende Informationen:
+
+* E-Mail-Adresse, von der die Alert-Benachrichtigung gesendet wird
++
+Die E-Mail-Adresse wird im Feld „`From`“ in gesendeten Alarmbenachrichtigungen angezeigt. Falls die E-Mail aus irgendeinem Grund nicht zugestellt werden kann, wird diese E-Mail-Adresse auch als Empfänger für unzustellbare E-Mails verwendet.
+
+* Hostname des SMTP-Servers sowie Benutzername und Passwort für den Zugriff auf den Server
+* Hostname oder IP-Adresse des Zielhosts, der den SNMP-Trap empfängt, zusammen mit der SNMP-Version, dem ausgehenden Trap-Port, der Community und anderen erforderlichen SNMP-Konfigurationswerten
++
+Zur Angabe mehrerer Trap-Ziele dienen Kommas als Trennzeichen zwischen den einzelnen Hosts. In diesem Fall müssen alle anderen SNMP-Einstellungen, wie Version und ausgehender Trap-Port, für alle Hosts in der Liste identisch sein.
+
+
+
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Allgemein* > *Benachrichtigungen*.
+. Auf der Seite „Benachrichtigungen“ können Sie die entsprechenden Einstellungen konfigurieren.
++
+*Anmerkungen:*
+
++
+** Wenn die Absenderadresse mit der Adresse "+ActiveIQUnifiedManager@localhost.com+" vorausgefüllt ist, sollte sie in eine echte, funktionierende E-Mail-Adresse geändert werden, um sicherzustellen, dass alle E-Mail-Benachrichtigungen erfolgreich zugestellt werden.
+** Kann der Hostname des SMTP-Servers nicht aufgelöst werden, können Sie anstelle des Hostnamens die IP-Adresse (IPv4 oder IPv6) des SMTP-Servers angeben.
+
+
+. Auf *Speichern* klicken.
+. Wenn Sie die Option *STARTTLS verwenden* oder *SSL verwenden* ausgewählt haben, wird nach dem Klicken auf die Schaltfläche *Speichern* eine Zertifikatsseite angezeigt. Zum Speichern der Benachrichtigungseinstellungen ist eine Überprüfung der Zertifikatsdetails sowie die Annahme des Zertifikats erforderlich.
++
+Über die Schaltfläche *View Certificate Details* können die Zertifikatsdetails angezeigt werden. Wenn das vorhandene Zertifikat abgelaufen ist, kann die Markierung im Kontrollkästchen *Use STARTTLS* oder *Use SSL* entfernt, die Benachrichtigungseinstellungen gespeichert und anschließend das Kontrollkästchen *Use STARTTLS* oder *Use SSL* erneut aktiviert werden, um ein neues Zertifikat anzuzeigen.
+
+

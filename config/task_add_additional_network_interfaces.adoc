@@ -1,0 +1,49 @@
+---
+permalink: config/task_add_additional_network_interfaces.html 
+sidebar: sidebar 
+keywords: add, network, interfaces 
+summary: Neue Netzwerkschnittstellen lassen sich hinzufügen, wenn eine Trennung des Netzwerkverkehrs erforderlich ist. 
+---
+= Netzwerkschnittstellen zu Active IQ Unified Manager hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Neue Netzwerkschnittstellen lassen sich hinzufügen, wenn eine Trennung des Netzwerkverkehrs erforderlich ist.
+
+.Bevor Sie beginnen
+Sie müssen die Netzwerkschnittstelle mithilfe von vSphere zur virtuellen Appliance hinzugefügt haben.
+
+Die virtuelle Appliance muss eingeschaltet sein.
+
+[NOTE]
+====
+Sie können diesen Vorgang nicht ausführen, wenn Unified Manager auf Red Hat Enterprise Linux oder Microsoft Windows installiert ist.
+
+====
+.Schritte
+. Im Hauptmenü der vSphere Managementplattform *System Configuration* > *Reboot Operating System* auswählen.
++
+Nach dem Neustart kann die Wartungskonsole die neu hinzugefügte Netzwerkschnittstelle erkennen.
+
+. Auf die Wartungskonsole zugreifen.
+. Die Auswahl erfolgt über *Netzwerkkonfiguration* > *Netzwerkschnittstelle aktivieren*.
+. Anschließend die neue Netzwerkschnittstelle auswählen und die *Eingabetaste* drücken.
++
+*eth1* wird ausgewählt und mit *Enter* bestätigt.
+
+. Zur Aktivierung der Netzwerkschnittstelle ist die Eingabe von *y* erforderlich.
+. Nun erfolgt die Eingabe der Netzwerkeinstellungen.
++
+Die Eingabe der Netzwerkeinstellungen ist erforderlich, wenn eine statische Schnittstelle verwendet wird oder DHCP nicht erkannt wird.
+
++
+Nach Eingabe der Netzwerkeinstellungen kehren Sie automatisch zum Menü *Netzwerkkonfiguration* zurück.
+
+. *Änderungen übernehmen* auswählen.
++
+Sie müssen die Änderungen übernehmen, um die Netzwerkschnittstelle hinzuzufügen.
+
+

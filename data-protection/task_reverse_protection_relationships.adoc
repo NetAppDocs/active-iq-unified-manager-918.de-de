@@ -1,0 +1,48 @@
+---
+permalink: data-protection/task_reverse_protection_relationships.html 
+sidebar: sidebar 
+keywords: reverse, protection, relationships, volume, relationships page 
+summary: Wenn ein Katastrophenfall das Quellvolume in Ihrer Schutzbeziehung außer Betrieb setzt, können Sie das Zielvolume für die Bereitstellung von Daten verwenden, indem Sie es während der Reparatur oder des Austauschs des Quellvolumes in ein Volume mit lesen/schreiben Zugriff konvertieren. Sobald das Quellvolume wieder für den Datenempfang verfügbar ist, kann mit dem Vorgang zur umgekehrten Resynchronisierung die Beziehung in umgekehrter Richtung eingerichtet werden, wobei die Daten auf dem Quellvolume mit den Daten auf dem Zielvolume mit lesen/schreiben Zugriff synchronisiert werden. 
+---
+= Umgekehrte Schutzbeziehungen auf der Seite „Volume Beziehungen“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Katastrophenfall das Quellvolume in Ihrer Schutzbeziehung außer Betrieb setzt, können Sie das Zielvolume für die Bereitstellung von Daten verwenden, indem Sie es während der Reparatur oder des Austauschs des Quellvolumes in ein Volume mit lesen/schreiben Zugriff konvertieren. Sobald das Quellvolume wieder für den Datenempfang verfügbar ist, kann mit dem Vorgang zur umgekehrten Resynchronisierung die Beziehung in umgekehrter Richtung eingerichtet werden, wobei die Daten auf dem Quellvolume mit den Daten auf dem Zielvolume mit lesen/schreiben Zugriff synchronisiert werden.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+* Die Beziehung darf keine SnapVault Beziehung sein.
+* Eine Schutzbeziehung muss bereits vorhanden sein.
+* Die Schutzbeziehung muss getrennt werden.
+* Sowohl Quelle als auch Ziel müssen online sein.
+* Die Quelle darf nicht das Ziel eines anderen Datensicherungs-Volumes sein.
+* Wenn Sie diese Aufgabe ausführen, werden auf der Quelle Daten gelöscht, die neuer sind als die Daten in der gemeinsamen Snapshot Kopie.
+* Richtlinien und Zeitpläne, die für Beziehungen zur umgekehrten Resynchronisierung erstellt wurden, sind dieselben wie bei der ursprünglichen Schutzbeziehung.
++
+Falls keine Richtlinien und Zeitpläne existieren, werden sie erstellt.
+
+
+
+.Schritte
+. Auf der Seite *Volume-Beziehungen* können Sie ein oder mehrere Volumes mit Beziehungen auswählen, die umgekehrt werden sollen, und anschließend in der Symbolleiste auf *Resynchronisierung umkehren* klicken.
++
+Das Dialogfeld „Umgekehrte Resynchronisierung“ wird angezeigt.
+
+. Im Dialogfeld *Reverse Resync* ist zu überprüfen, ob die angezeigten Beziehungen diejenigen sind, für die die umgekehrte Resynchronisierung ausgeführt werden soll; anschließend ist auf *Submit* zu klicken.
++
+Der umgekehrte Resynchronisierungsvorgang startet, anschließend gelangen Sie zurück zur Seite „Volume Relationships“, und oben auf der Seite wird ein Link zu Jobs angezeigt.
+
+. *Optional:* Auf der Seite *Volume Relationships* lässt sich über *View Jobs* der Status jedes Auftrags zur umgekehrten Resynchronisierung nachverfolgen.
++
+Eine gefilterte Liste der mit diesem Vorgang zusammenhängenden Jobs wird angezeigt.
+
+. *Optional:* Über den Pfeil *Back* in Ihrem Browser ist die Rückkehr zur Seite *Volume Relationships* möglich.
++
+Der umgekehrte Resynchronisierungsvorgang ist beendet, wenn alle Jobaufgaben erfolgreich abgeschlossen sind.
+
+

@@ -1,0 +1,21 @@
+---
+permalink: health-checker/concept_understand_capacity_events_and_thresholds_for_node.html 
+sidebar: sidebar 
+keywords: understand, events, thresholds, node, root, aggregates 
+summary: Sie können das Root-Aggregat des Knotens mit Unified Manager überwachen. Es empfiehlt sich, das Root-Volume im Root-Aggregat per Thick Provisioning zu provisionieren, um zu verhindern, dass der Knoten angehalten wird. 
+---
+= Ereignisse und Schwellenwerte für Node-Root-Aggregate in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Root-Aggregat des Knotens mit Unified Manager überwachen. Es empfiehlt sich, das Root-Volume im Root-Aggregat per Thick Provisioning zu provisionieren, um zu verhindern, dass der Knoten angehalten wird.
+
+Standardmäßig werden für Root-Aggregate keine Kapazitäts- und Performance-Ereignisse generiert. Auch die von Unified Manager verwendeten Schwellenwerte gelten nicht für die Root-Aggregate der Nodes. Nur ein Mitarbeiter des technischen Supports kann die Einstellungen für die Generierung dieser Ereignisse ändern. Wenn die Einstellungen von einem Mitarbeiter des technischen Supports geändert werden, werden die Kapazitätsschwellenwerte auf das Root-Aggregat des Nodes angewendet.
+
+Sie können geeignete Maßnahmen ergreifen, um ein Anhalten des Knotens zu verhindern, indem Sie entweder ONTAP System Manager oder die ONTAP CLI verwenden.
+
+
+NOTE: Die Funktionalität zur Überwachung von Knoten-Root-Aggregaten ist nicht verfügbar, wenn Cluster mit ONTAP Version 9.14.1 oder höher ausgeführt werden.

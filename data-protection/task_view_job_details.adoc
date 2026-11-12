@@ -1,0 +1,23 @@
+---
+permalink: data-protection/task_view_job_details.html 
+sidebar: sidebar 
+keywords: view, job, details 
+summary: Nachdem Sie einen Auftrag gestartet haben, können Sie dessen Fortschritt auf der Seite mit den Auftragsdetails verfolgen und die zugehörigen Aufgaben auf mögliche Fehler überwachen. 
+---
+= Auftragsdetails in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie einen Auftrag gestartet haben, können Sie dessen Fortschritt auf der Seite mit den Auftragsdetails verfolgen und die zugehörigen Aufgaben auf mögliche Fehler überwachen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt der Aufruf von *Schutz* > *Aufträge*.
+. Auf der Seite „Jobs“ öffnet ein Klick auf einen Jobnamen in der Spalte „Name“ die Liste der dem Job zugeordneten Aufgaben.
+. Bei Auswahl einer Aufgabe erscheinen rechts neben der Aufgabenliste zusätzliche Informationen im Bereich *Aufgabendetails* und im Bereich *Aufgabenmeldungen*.
+

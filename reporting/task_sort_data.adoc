@@ -1,0 +1,19 @@
+---
+permalink: reporting/task_sort_data.html 
+sidebar: sidebar 
+keywords: sort, data 
+summary: Zum Sortieren der Ergebnisse können Sie eine Spalte auswählen und die aufsteigende oder absteigende Reihenfolge angeben. Durch das Sortieren der Daten lassen sich die Informationen priorisieren, die Sie für den Bericht benötigen. 
+---
+= Daten in Active IQ Unified Manager sortieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zum Sortieren der Ergebnisse können Sie eine Spalte auswählen und die aufsteigende oder absteigende Reihenfolge angeben. Durch das Sortieren der Daten lassen sich die Informationen priorisieren, die Sie für den Bericht benötigen.
+
+.Schritte
+. Durch Klicken auf den oberen Rand einer Spalte lassen sich die Ergebnisse so sortieren, dass die wichtigsten Informationen oben in der Ansicht angezeigt werden.
+. Zum Speichern Ihrer Änderungen ist die Benennung der nicht gespeicherten Ansicht erforderlich.
+

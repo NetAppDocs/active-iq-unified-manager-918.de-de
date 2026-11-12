@@ -1,0 +1,20 @@
+---
+permalink: events/concept_manage_scripts.html 
+sidebar: sidebar 
+keywords: manage, scripts 
+summary: Sie können Skripte verwenden, um mehrere Storage Objekte in Unified Manager automatisch zu ändern oder zu aktualisieren. Das Skript ist mit einer Warnung verknüpft. Wenn ein Ereignis eine Warnung auslöst, führt Unified Manager das Skript aus. Sie können benutzerdefinierte Skripte hochladen und ihre Ausführung beim Erstellen einer Warnung testen. 
+---
+= Skripte in Active IQ Unified Manager verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Skripte verwenden, um mehrere Storage Objekte in Unified Manager automatisch zu ändern oder zu aktualisieren. Das Skript ist mit einer Warnung verknüpft. Wenn ein Ereignis eine Warnung auslöst, führt Unified Manager das Skript aus. Sie können benutzerdefinierte Skripte hochladen und ihre Ausführung beim Erstellen einer Warnung testen.
+
+Das Hochladen und Ausführen von Skripten in Unified Manager ist standardmäßig aktiviert. Falls Ihr Unternehmen diese Funktion aus Sicherheitsgründen nicht zulassen möchte, können Sie sie unter *Speicherverwaltung* > *Funktionseinstellungen* deaktivieren.
+
+*Verwandte Informationen*
+
+link:../config/task_enable_and_disable_ability_to_upload_scripts.html["Aktivieren und Deaktivieren der Möglichkeit zum Hochladen von Skripten"]

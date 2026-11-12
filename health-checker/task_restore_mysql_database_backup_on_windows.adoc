@@ -1,0 +1,54 @@
+---
+permalink: health-checker/task_restore_mysql_database_backup_on_windows.html 
+sidebar: sidebar 
+keywords: restore, windows, mysql, database, backup 
+summary: Im Falle eines Datenverlusts oder einer Datenbeschädigung können Sie die Wiederherstellungsfunktion verwenden, um Unified Manager mit minimalem Datenverlust in den vorherigen stabilen Zustand wiederherzustellen. Sie können die Unified Manager MySQL-Datenbank mithilfe der Unified Manager Managementplattform auf einem lokalen Windows-System oder einem entfernten Windows-System wiederherstellen. 
+---
+= Wiederherstellung einer MySQL Datenbank Sicherung unter Windows in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Falle eines Datenverlusts oder einer Datenbeschädigung können Sie die Wiederherstellungsfunktion verwenden, um Unified Manager mit minimalem Datenverlust in den vorherigen stabilen Zustand wiederherzustellen. Sie können die Unified Manager MySQL-Datenbank mithilfe der Unified Manager Managementplattform auf einem lokalen Windows-System oder einem entfernten Windows-System wiederherstellen.
+
+.Bevor Sie beginnen
+* Sie benötigen Windows-Administratorrechte.
+* Sie müssen die Sicherungsdatei des Unified Manager und den Inhalt des Datenbank-Repository-Verzeichnisses auf das System kopiert haben, auf dem Sie den Wiederherstellungsvorgang durchführen werden.
++
+Es wird empfohlen, die Sicherungsdatei in das Standardverzeichnis `\ProgramData\NetApp\OnCommandAppData\ocum\backup` zu kopieren. Die Dateien des Datenbank-Repositorys müssen in das `\database_dumps_repo` Unterverzeichnis des `\backup` Verzeichnisses kopiert werden.
+
+* Die Sicherungsdateien müssen vom `.7z` Typ sein.
+
+
+Die Wiederherstellungsfunktion ist plattform- und versionsspezifisch. Sie können eine Unified Manager MySQL-Sicherung nur auf derselben Unified Manager Version wiederherstellen, und eine Windows-Sicherung lässt sich nur auf einer Windows-Plattform wiederherstellen.
+
+[TIP]
+====
+Wenn die Ordnernamen ein Leerzeichen enthalten, ist der absolute oder relative Pfad der Sicherungsdatei in doppelten Anführungszeichen anzugeben.
+
+====
+.Schritte
+. Wenn Sie eine Wiederherstellung auf einem neuen Server durchführen, sollte nach der Installation von Unified Manager nach Abschluss der Installation weder die Benutzeroberfläche gestartet noch Cluster, Benutzer oder Authentifizierungseinstellungen konfiguriert werden. Die Sicherungsdatei ergänzt diese Informationen während des Wiederherstellungsprozesses.
+. Für die Anmeldung am Unified Manager System werden Administratoranmeldedaten verwendet.
+. PowerShell oder die Eingabeaufforderung wird als Windows-Administrator gestartet.
+. Den Befehl  `maintenance_console` eingeben und die Eingabetaste drücken.
+. Im *Main Menu* der Wartungskonsole erfolgt die Eingabe der Nummer für die Option *Backup Restore*.
+. Erforderlich ist die Eingabe der Nummer für *Restore MySQL Backup*.
+. Bei entsprechender Aufforderung erfolgt die Eingabe des absoluten Pfads der Sicherungsdatei.
++
+[listing]
+----
+Bundle to restore from: \ProgramData\NetApp\OnCommandAppData\ocum\backup\UM_9.8.N151118.2300_backup_windows_02-20-2020-02-51.7z
+----
++
+Nach Abschluss des Wiederherstellungsvorgangs können Sie sich bei Unified Manager anmelden.
+
+
+
+Falls der OnCommand Workflow Automation Server nach dem Wiederherstellen der Sicherung nicht funktioniert, sind die folgenden Schritte erforderlich:
+
+. Auf dem Workflow Automation Server muss die IP-Adresse des Unified Manager Servers auf den neuesten Rechner umgestellt werden.
+. Wenn die Datenerfassung in Schritt 1 fehlschlägt, muss auf dem Unified Manager Server das Datenbankpasswort zurückgesetzt werden.
+

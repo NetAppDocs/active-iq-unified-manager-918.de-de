@@ -1,0 +1,71 @@
+---
+permalink: performance-checker/task_view_workload_qos_minimum_and_maximum_settings.html 
+sidebar: sidebar 
+keywords: view, workload, qos, minimum, maximum, settings, performance, explorer 
+summary: 'Die von ONTAP definierten QoS-Richtlinieneinstellungen (Quality of Service) für ein Volume oder eine LUN können Sie in den Diagrammen des Performance Explorer anzeigen. Eine maximale Durchsatzeinstellung begrenzt die Auswirkungen konkurrierender Workloads auf die Systemressourcen. Eine minimale Durchsatzeinstellung stellt sicher, dass ein kritischer Workload die Mindestdurchsatzziele unabhängig von der Nachfrage konkurrierender Workloads erreicht.' 
+---
+= Anzeige der minimalen und maximalen QoS-Einstellungen für Workloads in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die von ONTAP definierten QoS-Richtlinieneinstellungen (Quality of Service) für ein Volume oder eine LUN können Sie in den Diagrammen des Performance Explorer anzeigen. Eine maximale Durchsatzeinstellung begrenzt die Auswirkungen konkurrierender Workloads auf die Systemressourcen. Eine minimale Durchsatzeinstellung stellt sicher, dass ein kritischer Workload die Mindestdurchsatzziele unabhängig von der Nachfrage konkurrierender Workloads erreicht.
+
+Die QoS-Durchsatzwerte "`minimum`" und "`maximum`" für IOPS und MB/s werden in den Zählerdiagrammen nur angezeigt, wenn sie in ONTAP konfiguriert wurden. Minimale Durchsatzeinstellungen sind nur auf Systemen mit ONTAP 9.2 oder höher, nur auf AFF Systemen und derzeit nur für IOPS verfügbar.
+
+Adaptive QoS-Richtlinien sind ab ONTAP 9.3 verfügbar und werden mit IOPS/TB anstelle von IOPS ausgedrückt. Diese Richtlinien passen den QoS-Richtlinienwert basierend auf der Volume-Größe pro Workload automatisch an, wodurch das Verhältnis von IOPS zu Terabyte bei einer Änderung der Volume-Größe beibehalten wird. Sie können eine adaptive QoS-Richtliniengruppe nur auf Volumes anwenden. Für adaptive QoS-Richtlinien werden anstelle von Minimum und Maximum die QoS-Begriffe „`expected`“ und „`peak`“ verwendet.
+
+Unified Manager generiert Warnereignisse bei Verstößen gegen die QoS-Richtlinie, wenn der Workload-Durchsatz während jedes Performance-Erfassungszeitraums der vorherigen Stunde den definierten maximalen QoS-Richtlinienwert überschritten hat. Der Workload-Durchsatz kann den QoS-Schwellenwert während jedes Erfassungszeitraums nur für kurze Zeit überschreiten, Unified Manager zeigt im Diagramm jedoch den "`durchschnittlichen`" Durchsatz während des Erfassungszeitraums an. Aus diesem Grund können QoS-Ereignisse auftreten, obwohl der Durchsatz eines Workloads den im Diagramm angezeigten Richtlinienschwellenwert möglicherweise nicht überschritten hat.
+
+.Schritte
+. Auf der Seite *Performance Explorer* für das ausgewählte Volume oder die ausgewählte LUN können mit den folgenden Aktionen die QoS-Ober- und Untergrenzeneinstellungen angezeigt werden:
++
+|===
+| Wenn Sie möchten... | Folgendes ist zu tun... 
+
+
+ a| 
+Anzeige der IOPS-Obergrenze (QoS-Maximum)
+ a| 
+Im Diagramm *IOPS Total* oder *Breakdown* können Sie *Zoom View* auswählen.
+
+
+
+ a| 
+Anzeige der MB/s-Obergrenze (des QoS-Maximums)
+ a| 
+Im Diagramm „MB/s Gesamt“ oder „Aufschlüsselung“ kann *Zoom View* ausgewählt werden.
+
+
+
+ a| 
+Anzeige des IOPS-Mindestwerts (des QoS-Minimums)
+ a| 
+Im Diagramm *IOPS Total* oder *Breakdown* können Sie *Zoom View* auswählen.
+
+
+
+ a| 
+IOPS/TB-Obergrenze anzeigen (QoS-Spitze)
+ a| 
+Bei Volumes erfolgt dies im IOPS/TB-Diagramm über *Zoom View*.
+
+
+
+ a| 
+Anzeige der IOPS/TB-Untergrenze (die erwartete QoS)
+ a| 
+Bei Volumes erfolgt dies im IOPS/TB-Diagramm über *Zoom View*.
+
+|===
++
+Die gestrichelte, horizontale Linie zeigt den in ONTAP festgelegten maximalen oder minimalen Durchsatzwert an. Sie können außerdem sehen, wann Änderungen an den QoS-Werten implementiert wurden.
+
+. Die spezifischen IOPS- und MB/s-Werte im Vergleich zur QoS-Einstellung werden angezeigt, wenn sich der Cursor im Diagrammbereich befindet und das Popup-Fenster eingeblendet wird.
+
+
+Wenn Sie feststellen, dass bestimmte Volumes oder LUNs sehr hohe IOPS- oder MB/s-Werte aufweisen und die Systemressourcen stark beanspruchen, können Sie mithilfe von System Manager oder der ONTAP CLI die QoS-Einstellungen so anpassen, dass diese Arbeitslasten die Performance anderer Arbeitslasten nicht beeinträchtigen.
+
+Weitere Informationen zum Anpassen der QoS-Einstellungen finden Sie unter http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-perf-mon/home.html["Überblick über das Performance-Management"]

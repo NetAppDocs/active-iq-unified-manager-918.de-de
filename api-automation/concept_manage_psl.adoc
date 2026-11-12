@@ -1,0 +1,119 @@
+---
+permalink: api-automation/concept_manage_psl.html 
+sidebar: sidebar 
+keywords: manage, performance, service, level 
+summary: Sie können Performance Service Levels mithilfe der Storage Provider APIs auf Ihrem Active IQ Unified Manager anzeigen, erstellen, ändern und löschen. 
+---
+= Verwaltung von Performance Service Levels mithilfe von APIs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Performance Service Levels mithilfe der Storage Provider APIs auf Ihrem Active IQ Unified Manager anzeigen, erstellen, ändern und löschen.
+
+
+
+[[view-performance-service-levels]]
+== Performance Service Levels anzeigen
+
+Mit der folgenden Methode lassen sich die Performance Service Levels anzeigen, um sie Storage Workloads zuzuweisen. Die API listet alle systemdefinierten und benutzererstellten Performance Service Levels auf und ruft die Attribute aller Performance Service Levels ab. Wenn ein bestimmtes Performance Service Level abgefragt werden soll, muss die eindeutige ID des Performance Service Levels eingegeben werden, um dessen Details abzurufen.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/performance-service-levels`
+
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+[[add-performance-service-levels]]
+== Hinzufügen von Performance Service Levels
+
+Sie können die folgende Methode verwenden, um benutzerdefinierte Performance Service Levels zu erstellen und sie Ihren Storage Workloads zuzuweisen, wenn die systemdefinierten Performance Service Levels die erforderlichen Service Level Objectives (SLOs) für die Storage Workloads nicht erfüllen. Anschließend erfolgt die Eingabe der Details für das Performance Service Level, das erstellt werden soll. Bei den IOPS-Eigenschaften muss ein gültiger Wertebereich eingegeben werden.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+POST
+ a| 
+`/storage-provider/performance-service-levels`
+
+|===
+
+
+[[delete-performance-service-levels]]
+== Löschen von Performance Service Levels
+
+Sie können mit der folgenden Methode ein bestimmtes Performance Service Level löschen. Ein Performance Service Level kann nicht gelöscht werden, wenn es einer Workload zugewiesen ist oder wenn es das einzige verfügbare Performance Service Level ist. Zum Löschen eines bestimmten Performance Service Level müssen Sie dessen eindeutige ID als Eingabeparameter angeben.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+LÖSCHEN
+ a| 
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+[[modify-performance-service-levels]]
+== Performance Service Levels ändern
+
+Sie können die folgende Methode verwenden, um ein Performance Service Level zu ändern und dessen Eigenschaften zu aktualisieren. Systemdefinierte oder einem Workload zugewiesene Performance Service Level können nicht geändert werden. Um ein bestimmtes Performance Service Level zu ändern, benötigen Sie die eindeutige ID. Außerdem müssen Sie die zu aktualisierende IOPS-Eigenschaft sowie einen gültigen Wert angeben.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+PATCH
+ a| 
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+[[view-aggregate-capabilities-based-on-performance-service-levels]]
+== Anzeige der Aggregate-Funktionen basierend auf Performance Service Levels
+
+Sie können die folgende Methode verwenden, um die Aggregatfunktionen basierend auf Performance Service Levels abzufragen. Diese API gibt die Liste der in Ihrem Datacenter verfügbaren Aggregate zurück und zeigt die Funktionen im Hinblick auf die Performance Service Levels an, die von diesen Aggregaten unterstützt werden können. Bei der Provisionierung von Workloads auf einem Volume können Sie die Fähigkeit eines Aggregats anzeigen, ein bestimmtes Performance Service Level zu unterstützen, und Workloads auf der Grundlage dieser Fähigkeit provisionieren. Die Möglichkeit, das Aggregat anzugeben, ist nur verfügbar, wenn Sie einen Workload mithilfe von APIs provisionieren. Diese Funktionalität ist in der Unified Manager web UI nicht verfügbar.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/aggregate-capabilities`
+
+`/storage-provider/aggregate-capabilities/\{key}`
+
+|===

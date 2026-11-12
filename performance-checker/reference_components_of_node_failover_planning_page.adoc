@@ -1,0 +1,80 @@
+---
+permalink: performance-checker/reference_components_of_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: components, node, failover, planning page, performance, statistics, grid 
+summary: Die Komponenten der Seite „Performance/Node Failover Planning“ werden in einer Tabelle und im Vergleichsbereich angezeigt. Mithilfe dieser Abschnitte können Sie die Auswirkungen eines Node-Failovers auf die Performance des übernehmenden Node beurteilen. 
+---
+= Eine Übersicht über die Komponenten der Seite „Leistung/Knoten-Failover-Planung“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Komponenten der Seite „Performance/Node Failover Planning“ werden in einer Tabelle und im Vergleichsbereich angezeigt. Mithilfe dieser Abschnitte können Sie die Auswirkungen eines Node-Failovers auf die Performance des übernehmenden Node beurteilen.
+
+
+
+[[performance-statistics-grid]]
+== Performance-Statistikraster
+
+Die Seite „Performance/Node Failover Planning“ zeigt eine Tabelle mit Statistiken zu Latenz, IOPS, Auslastung und genutzter Performancekapazität an.
+
+[NOTE]
+====
+Die auf dieser Seite und auf der Seite „Performance/Node Performance Explorer“ angezeigten Latenz- und IOPS-Werte stimmen möglicherweise nicht überein, da unterschiedliche Performance-Zähler zur Berechnung der Werte verwendet werden, um das Node-Failover vorherzusagen.
+
+====
+Im Raster hat jeder Knoten eine der folgenden Rollen:
+
+* Primär
++
+Der Knoten, der die Funktion des HA-Partners übernimmt, wenn dieser ausfällt. Das Stammobjekt ist immer der primäre Knoten.
+
+* Partner
++
+Der Knoten, der im Failover-Szenario ausfällt.
+
+* Geschätzte Übernahme
++
+Dasselbe wie beim primären Node. Die für diesen Node angezeigten Performance-Statistiken zeigen die Performance des Takeover-Node, nachdem er den ausgefallenen Partner übernommen hat.
+
+
+
+[NOTE]
+====
+Obwohl die Workload des Übernahmeknotens nach einem Failover der kombinierten Workload beider Knoten entspricht, ergeben sich die Statistiken für den geschätzten Übernahmeknoten nicht aus der Summe der Statistiken des primären Knotens und des Partnerknotens. Wenn die Latenz des primären Knotens beispielsweise 2 ms/op und die Latenz des Partnerknotens 3 ms/op beträgt, kann der geschätzte Übernahmeknoten eine Latenz von 4 ms/op aufweisen. Dieser Wert ist eine Berechnung, die Unified Manager durchführt.
+
+====
+Sie können auf den Namen des Partner-Node klicken, wenn dieser zum Root-Objekt werden soll. Nachdem die Seite „Performance/Node Performance Explorer“ angezeigt wird, können Sie auf die Registerkarte *Failover Planning* klicken, um zu sehen, wie sich die Performance in diesem Node-Ausfallszenario ändert. Wenn beispielsweise Node1 der primäre Node und Node2 der Partner-Node ist, können Sie auf Node2 klicken, damit dieser zum primären Node wird. Auf diese Weise ist erkennbar, wie sich die geschätzte Performance je nachdem ändert, welcher Node ausfällt.
+
+
+
+[[comparing-pane]]
+== Vergleichsfenster
+
+Die folgende Liste beschreibt die Komponenten, die standardmäßig im Vergleichsbereich angezeigt werden:
+
+* *Ereignisdiagramme*
++
+Sie werden im gleichen Format wie auf der Seite „Leistung/Knotenleistungs-Explorer“ angezeigt. Sie beziehen sich ausschließlich auf den primären Knoten.
+
+* *Zählerdiagramme*
++
+Sie zeigen historische Statistiken für den in der Tabelle angezeigten Performance-Zähler an. In jedem Diagramm zeigt das Diagramm für den Node „Geschätzte Übernahme“ die geschätzte Performance, wenn zu einem beliebigen Zeitpunkt ein Failover erfolgt wäre.
+
++
+Angenommen, das Auslastungsdiagramm zeigt für den geschätzten Übernahmeknoten am 8. Februar um 11 Uhr 73 % an. Wenn zu diesem Zeitpunkt ein Failover aufgetreten wäre, hätte die Auslastung des Übernahmeknotens 73 % betragen.
+
++
+Die historischen Statistiken helfen Ihnen, den optimalen Zeitpunkt für die Einleitung eines Failover zu finden und so die Möglichkeit einer Überlastung des Übernahmeknotens zu minimieren. Sie können ein Failover nur zu Zeitpunkten planen, an denen die prognostizierte Performance des Übernahmeknotens akzeptabel ist.
+
+
+
+Standardmäßig werden im Vergleichsbereich Statistiken sowohl für das Stammobjekt als auch für den Partnerknoten angezeigt. Anders als auf der Seite „Performance/Node Performance Explorer“ wird auf dieser Seite keine Schaltfläche „Add“ zum Hinzufügen von Objekten für den Statistikvergleich angezeigt.
+
+Der Bereich „Vergleichen“ kann auf die gleiche Weise angepasst werden wie auf der Seite „Performance/Node Performance Explorer“. Die folgende Liste zeigt Beispiele für die Anpassung der Diagramme:
+
+* Durch Klicken auf einen Node-Name werden die Statistiken des Node in den Zählerdiagrammen ein- oder ausgeblendet.
+* Über *Zoom View* lässt sich ein detailliertes Diagramm für einen bestimmten Zähler in einem neuen Fenster anzeigen.
+

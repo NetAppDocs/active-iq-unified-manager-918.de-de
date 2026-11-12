@@ -1,0 +1,75 @@
+---
+permalink: data-protection/task_restore_data_use_health_volume_details_page.html 
+sidebar: sidebar 
+keywords: restore, data, volume, health details page, console 
+summary: Sie können überschriebene oder gelöschte Dateien, Verzeichnisse oder ein gesamtes Volume aus einer Snapshot-Kopie wiederherstellen, indem Sie die Wiederherstellungsfunktion auf der Seite „Volume / Integritätsdetails“ verwenden. 
+---
+= Die Wiederherstellung von Daten erfolgt mithilfe der Seiten „Volume“ und „Volume/Integritätsdetails“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Überschriebene oder gelöschte Dateien, Verzeichnisse oder ein gesamtes Volume lassen sich mithilfe der Wiederherstellungsfunktion auf den Seiten „Volume“ und „Volume/Integritätsdetails“ aus einer Snapshot Kopie wiederherstellen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+NOTE: Folgende Punkte sind zu beachten:
+
+* Sie können ein Verzeichnis oder ein Volume in keiner der folgenden Szenarien aus einem Snapshot wiederherstellen:
++
+** Die Option *Yes, preserve all snapshot copies* ist ausgewählt.
+** Sie verwenden ein LDAP-Konto zur Überwachung des Clusters.
+** Sie sind als Domänenbenutzer angemeldet.
+** Ihr Konto ist für die SAML-Authentifizierung konfiguriert.
+** Sie verwenden das NDMP-Protokoll.
++
+Weitere Einzelheiten finden Sie im Knowledge Base Artikel https://kb.netapp.com/on-prem/ontap/DP/NDMP/NDMP-KBs/How_to_configure_NDMP_authentication_in_the_SVM-scope_previously_known_as_Vserver-scope_mode["So konfigurieren Sie die NDMP Authentifizierung im 'SVM-scope'-Modus"^].
+
+
+
+* Sie können NTFS-Dateistreams nicht wiederherstellen.
+* Die Wiederherstellungsoption ist nicht verfügbar, wenn:
++
+** Die Volume-ID ist unbekannt, zum Beispiel wenn Sie über eine Intercluster-Beziehung verfügen und der Ziel-Cluster noch nicht entdeckt wurde.
+** Das Volume ist für die synchrone SnapMirror Replikation konfiguriert.
+
+
+
+
+.Schritte
+. Der Pfad im linken Navigationsbereich lautet *Storage > Volumes*.
+. Nach Auswahl des Volumes erfolgt ein Klick auf die Schaltfläche *Wiederherstellen*. Alternativ führt ein Klick auf das Volume zu *Volume / Zustandsdetails > Aktionen > Wiederherstellen*. Das Dialogfeld „Wiederherstellen“ wird angezeigt. Informationen zu dieser Seite sind unter link:../data-protection/reference_restore_dialog_box.html["Wiederherstellungsdialogfeld"] verfügbar.
+. Das Volume und die Snapshot-Kopie, aus denen Daten wiederhergestellt werden sollen, können ausgewählt werden, wenn sie von der Standardeinstellung abweichen.
+. Die Auswahl umfasst die Elemente, die wiederhergestellt werden sollen, z. B. die Quell-LUN.
++
+Sie können das gesamte Volume wiederherstellen, oder Sie können die Ordner und Dateien angeben, die Sie wiederherstellen möchten.
+
+. Der Speicherort, an dem die ausgewählten Elemente wiederhergestellt werden sollen, ist auszuwählen: entweder *Ursprünglicher Speicherort* oder *Alternativer vorhandener Speicherort*.
+. Wenn Sie einen alternativen, bereits vorhandenen Standort auswählen, ist eine der folgenden Aktionen erforderlich:
++
+** Im Textfeld „Wiederherstellungspfad“ geben Sie den Pfad des Speicherorts ein, an dem Sie die Daten wiederherstellen möchten, und klicken dann auf *Verzeichnis auswählen*.
+** Über *Durchsuchen* lässt sich das Dialogfeld „Verzeichnisse durchsuchen“ öffnen; anschließend sind die folgenden Schritte auszuführen:
++
+... Wählen Sie den Ziel-Cluster, die Storage VM (SVM) und das Volume aus, auf dem die Wiederherstellung erfolgen soll.
+... In der Tabelle Name erfolgt die Auswahl eines Verzeichnisnamens, der wiederhergestellt werden muss.
+... Es ist auf *Verzeichnis auswählen* zu klicken.
+
+
+
+
+. Klicken Sie auf *Wiederherstellen*.
++
+Der Wiederherstellungsprozess beginnt. Im Backend wird ein Auftrag erstellt, der den Wiederherstellungsprozess abschließt.
+
+. Wenn Sie den Auftragsfortschritt anzeigen möchten, wechseln Sie im linken Navigationsbereich zu *Schutz > Aufträge*, um den Status des Wiederherstellungsauftrags in der Auftragsliste anzuzeigen.
++
+[NOTE]
+====
+Wenn ein Wiederherstellungsvorgang zwischen Cloud Volumes ONTAP HA Clustern mit einem NDMP-Fehler fehlschlägt, kann es erforderlich sein, im Ziel-Cluster eine explizite AWS Route hinzuzufügen, damit das Ziel mit der Cluster-Management-LIF des Quellsystems kommunizieren kann. Dieser Konfigurationsschritt wird über die NetApp Console ausgeführt.
+
+====
+

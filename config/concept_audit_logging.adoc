@@ -1,0 +1,82 @@
+---
+permalink: config/concept_audit_logging.html 
+sidebar: sidebar 
+keywords: audit, logging 
+summary: Mithilfe von Revisionsprotokollen lässt sich feststellen, ob die Revisionsprotokolle manipuliert wurden. Alle von einem Benutzer ausgeführten Aktivitäten werden überwacht und in den Revisionsprotokollen protokolliert. Die Audits werden für alle Funktionen der Benutzeroberfläche und der öffentlich zugänglichen APIs von Active IQ Unified Manager durchgeführt. 
+---
+= Informationen zu Audit-Protokollen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Revisionsprotokollen lässt sich feststellen, ob die Revisionsprotokolle manipuliert wurden. Alle von einem Benutzer durchgeführten Aktivitäten werden überwacht und in den Revisionsprotokollen protokolliert. Die Audits werden für alle Funktionen der Benutzeroberfläche und der öffentlich zugänglichen APIs von Active IQ Unified Manager durchgeführt.
+
+Mit der *Audit Log: File View* können Sie alle in Ihrem Active IQ Unified Manager verfügbaren Revisionsprotokolldateien anzeigen und darauf zugreifen. Die Dateien in der *Audit Log: File View* sind nach ihrem Erstellungsdatum aufgelistet. Diese Ansicht zeigt Informationen zu allen Revisionsprotokollen an, die seit der Installation oder dem Upgrade bis zum aktuellen Zeitpunkt im System erfasst wurden. Wenn Sie im Unified Manager eine Aktion ausführen, werden die Informationen aktualisiert und sind in den Protokollen verfügbar. Der Status jeder Protokolldatei wird mithilfe des Attributs "`File Integrity Status`" erfasst, das aktiv überwacht wird, um Manipulationen oder das Löschen der Protokolldatei zu erkennen. Die Revisionsprotokolle können einen der folgenden Status aufweisen, wenn sie im System verfügbar sind:
+
+[cols="2*"]
+|===
+| Status | Beschreibung 
+
+
+ a| 
+AKTIV
+ a| 
+Datei, in der Protokolle derzeit protokolliert werden.
+
+
+
+ a| 
+NORMAL
+ a| 
+Eine inaktive, komprimierte und im System gespeicherte Datei.
+
+
+
+ a| 
+MANIPULIERT
+ a| 
+Datei, die von einem Benutzer kompromittiert wurde, der die Datei manuell bearbeitet hat.
+
+
+
+ a| 
+MANUAL_DELETE
+ a| 
+Datei, die ein autorisierter Benutzer gelöscht hat.
+
+
+
+ a| 
+ROLLOVER_DELETE
+ a| 
+Datei, die aufgrund des auf der Rolling Configuration Policy basierenden Entfernens gelöscht wurde.
+
+
+
+ a| 
+UNEXPECTED_DELETE
+ a| 
+Datei, die aus unbekannten Gründen gelöscht wurde.
+
+|===
+Die Seite „Revisionsprotokoll“ enthält die folgenden Befehlsschaltflächen:
+
+* Konfigurieren
+* Löschen
+* Download
+
+
+Mit der Schaltfläche *DELETE* können Sie alle in der Ansicht „Audit Logs“ aufgeführten Revisionsprotokolle löschen. Sie können ein Revisionsprotokoll löschen und optional einen Grund für das Löschen der Datei angeben, was künftig dabei hilft, eine gültige Löschung nachzuvollziehen. In der Spalte REASON werden der Grund zusammen mit dem Namen des Benutzers aufgeführt, der den Löschvorgang durchgeführt hat.
+
+[NOTE]
+====
+Das Löschen einer Protokolldatei führt dazu, dass die Datei aus dem System gelöscht wird, der Eintrag in der DB-Tabelle jedoch nicht.
+
+====
+Sie können die Revisionsprotokolle aus Active IQ Unified Manager über die Schaltfläche *HERUNTERLADEN* im Bereich „Audit Logs“ herunterladen und die Revisionsprotokolldateien exportieren. Die Dateien, die als „`NORMAL`“ oder „`TAMPERED`“ gekennzeichnet sind, werden in einem komprimierten `.gzip` Format heruntergeladen.
+
+Die Revisionsprotokoll-Dateien werden regelmäßig archiviert und zur späteren Referenz in der Datenbank gespeichert. Vor der Archivierung werden die Revisionsprotokolle digital signiert, um die Sicherheit und Integrität zu wahren.
+
+Wenn ein vollständiges AutoSupport Bundle generiert wird, enthält das Support Bundle sowohl archivierte als auch aktive Revisionsprotokolldateien. Wenn jedoch ein kompaktes Support Bundle generiert wird, enthält es nur die aktiven Revisionsprotokolle. Die archivierten Revisionsprotokolle sind nicht enthalten.

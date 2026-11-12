@@ -1,0 +1,86 @@
+---
+permalink: api-automation/concept_administration_apis.html 
+sidebar: sidebar 
+keywords: perform, administrative, tasks 
+summary: Sie können die APIs in der Kategorie „Administration“ verwenden, um Sicherungseinstellungen zu ändern, die Informationen der Sicherungsdatei und Clusterzertifikate zu überprüfen und ONTAP Cluster auch als Datenquellen für Active IQ Unified Manager zu managen. 
+---
+= Administrative Aufgaben mithilfe von APIs in Active IQ Unified Manager ausführen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die APIs der Kategorie  `administration` verwenden, um Sicherungseinstellungen zu ändern, die Informationen zur Sicherungsdatei und Clusterzertifikate zu überprüfen und ONTAP Cluster auch als Active IQ Unified Manager Datenquellen zu managen.
+
+[NOTE]
+====
+Sie benötigen die Rolle Application Administrator, um diese Vorgänge auszuführen. Alternativ können Sie die Web-Benutzeroberfläche von Unified Manager verwenden, um diese Einstellungen zu konfigurieren.
+
+====
+[cols="3*"]
+|===
+| HTTP-Verb | Pfad | Beschreibung 
+
+
+ a| 
+`GET`
+
+`PATCH`
+ a| 
+`/admin/backup-settings`
+
+`/admin/backup-settings`
+ a| 
+Mit der `GET`Methode können Sie die Einstellungen des in Unified Manager standardmäßig konfigurierten Sicherungszeitplans anzeigen. Sie können Folgendes überprüfen:
+
+* Ob der Zeitplan aktiviert oder deaktiviert ist
+* Häufigkeit der geplanten Datensicherung (täglich oder wöchentlich)
+* Zeitpunkt der Datensicherung
+* Maximale Anzahl der Backup-Dateien, die in der Applikation aufbewahrt werden sollten
+
+
+Die Uhrzeit der Datensicherung wird in der Zeitzone des Servers angegeben.
+
+Die Einstellungen für die Datenbanksicherung sind in Unified Manager standardmäßig verfügbar, und es lässt sich kein Sicherungszeitplan erstellen. Die Standardeinstellungen lassen sich jedoch mit der `PATCH`Methode ändern.
+
+
+
+ a| 
+`GET`
+ a| 
+`/admin/backup-file-info`
+ a| 
+Bei jeder Änderung des Sicherungsplans für Unified Manager wird eine Sicherungsdumpdatei generiert. Mit dieser Methode können Sie überprüfen, ob die Sicherungsdatei gemäß den geänderten Sicherungseinstellungen generiert wurde und ob die Informationen in der Datei mit den geänderten Einstellungen übereinstimmen.
+
+
+
+ a| 
+`GET`
+ a| 
+`/admin/datasource-certificate`
+ a| 
+Mit dieser Methode können Sie das Datenquellenzertifikat (Clusterzertifikat) aus dem Truststore anzeigen. Die Validierung des Zertifikats ist erforderlich, bevor ein ONTAP Cluster als Unified Manager Datenquelle hinzugefügt wird.
+
+
+
+ a| 
+`GET`
+
+`POST`
+
+`PATCH`
+
+`DELETE`
+ a| 
+`/admin/datasources/clusters`
+
+`/admin/datasources/clusters/\{key}`
+ a| 
+Mit der `GET` Methode können Sie die Details der von Unified Manager gemanagten Datenquellen (ONTAP Cluster) abrufen.
+
+Sie können Unified Manager auch einen neuen Cluster als Datenquelle hinzufügen. Zum Hinzufügen eines Clusters benötigen Sie dessen Hostnamen, Benutzernamen und Passwort.
+
+Zum Ändern und Löschen eines Clusters, das von Unified Manager als Datenquelle gemanagt wird, dient der ONTAP Clusterschlüssel.
+
+|===

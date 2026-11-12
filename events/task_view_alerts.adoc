@@ -1,0 +1,24 @@
+---
+permalink: events/task_view_alerts.html 
+sidebar: sidebar 
+keywords: view, alerts 
+summary: Auf der Seite „Alert Setup“ können Sie die Liste der für verschiedene Ereignisse erstellten Warnmeldungen einsehen. Dort finden Sie auch Eigenschaften der Warnmeldungen wie die Beschreibung, die Benachrichtigungsmethode und -häufigkeit, die Ereignisse, die die Warnmeldung auslösen, die E-Mail-Empfänger der Warnmeldungen sowie betroffene Ressourcen wie Cluster, Aggregate und Volumes. 
+---
+= Anzeigen von Warnmeldungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Alert Setup“ können Sie die Liste der für verschiedene Ereignisse erstellten Warnmeldungen einsehen. Dort finden Sie auch Eigenschaften der Warnmeldungen wie die Beschreibung, die Benachrichtigungsmethode und -häufigkeit, die Ereignisse, die die Warnmeldung auslösen, die E-Mail-Empfänger der Warnmeldungen sowie betroffene Ressourcen wie Cluster, Aggregate und Volumes.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+.Schritt
+. Im linken Navigationsbereich auf *Storage Management* > *Alert Setup* klicken.
++
+Die Liste der Warnmeldungen wird auf der Seite „Benachrichtigungseinrichtung“ angezeigt.
+
+

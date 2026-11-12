@@ -1,0 +1,29 @@
+---
+permalink: include/upgrade-path.html 
+sidebar: sidebar 
+keywords: supported upgrade path, upgrade path, n-2, which versions can be upgraded 
+summary: Unterstützter Upgrade-Pfad 
+---
+= Der unterstützte Upgrade-Pfad für Versionen von Active IQ Unified Manager ist zu verwenden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager unterstützt für jede Version einen spezifischen Upgrade-Pfad.
+
+Nicht alle Versionen von Unified Manager unterstützen ein direktes Upgrade auf neuere Versionen. Die Upgrades von Unified Manager sind auf ein N-2-Modell beschränkt. Das bedeutet, dass auf allen Plattformen nur Upgrades auf die nächsten beiden Releases möglich sind. Beispielsweise ist ein Upgrade auf Unified Manager 9.18 nur von Unified Manager 9.14 und 9.16 aus möglich.
+
+Falls Sie eine ältere Version als die unterstützten Versionen verwenden, muss Ihre Unified Manager Instanz zunächst auf eine der unterstützten Versionen und anschließend auf die aktuelle Version aktualisiert werden.
+
+Wenn beispielsweise Unified Manager 9.9 installiert ist und eine Aktualisierung auf Unified Manager 9.14 vorgesehen ist, ist dafür eine Abfolge von Upgrades erforderlich.
+
+.Beispielhafter Upgrade-Pfad:
+. Upgrade 9.11 -> 9.13
+. Upgrade 9.13 -> 9.14
+. Upgrade von 9.13 auf 9.16
+. Upgrade 9.14 oder 9.16 -> 9.18
+
+
+Weitere Informationen zur Upgrade-Pfadmatrix finden Sie in diesem https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/What_is_the_upgrade_path_for_Active_IQ_Unified_Manager_versions["Knowledge Base Artikel (KB)"].

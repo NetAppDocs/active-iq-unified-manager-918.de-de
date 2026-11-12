@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_troubleshooting_workloads_using_workload_analyzer.html 
+sidebar: sidebar 
+keywords: workload analyzer, troubleshoot 
+summary: Der Workload-Analyzer ermöglicht die übersichtliche Darstellung wichtiger Systemstatus- und Performance-Kriterien für einen einzelnen Workload auf einer einzigen Seite und unterstützt so die Fehlerbehebung. Durch die Anzeige aller aktuellen und vergangenen Ereignisse eines Workloads erhalten Sie einen besseren Überblick darüber, warum der Workload derzeit möglicherweise ein Performance- oder Kapazitätsproblem aufweist. 
+---
+= Fehlerbehebung bei Workloads mit dem Workload Analyzer in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Workload-Analyzer ermöglicht die übersichtliche Darstellung wichtiger Systemstatus- und Performance-Kriterien für einen einzelnen Workload auf einer einzigen Seite und unterstützt so die Fehlerbehebung. Durch die Anzeige aller aktuellen und vergangenen Ereignisse eines Workloads erhalten Sie einen besseren Überblick darüber, warum der Workload derzeit möglicherweise ein Performance- oder Kapazitätsproblem aufweist.
+
+Mithilfe dieses Tools können Sie auch feststellen, ob Storage die Ursache für Performanceprobleme einer Applikation ist oder ob das Problem durch ein Netzwerkproblem oder ein anderes damit zusammenhängendes Problem verursacht wird.
+
+Diese Funktion lässt sich an verschiedenen Stellen in der Benutzeroberfläche starten:
+
+* Über die Option „Arbeitslastanalyse“ im linken Navigationsmenü
+* Auf der Seite mit den Ereignisdetails durch Klicken auf die Schaltfläche *Analyze Workload*
+* Auf jeder Workload-Inventarseite (Volume, LUN, Workload, NFS-Freigabe oder SMB/CIFS-Freigabe) nach einem Klick auf das Symbol „Mehr“ image:../media/more_icon.gif[""] und anschließend auf *Analyze Workload*
+* Auf der Seite Virtual Machines durch Klicken auf die Schaltfläche *Analyze Workload* in einem beliebigen Datastore-Objekt
+
+
+Wenn Sie das Tool über das linke Navigationsmenü starten, können Sie den Namen einer beliebigen Workload eingeben, die Sie analysieren möchten, und den Zeitraum auswählen, für den Sie die Fehlerbehebung durchführen möchten. Wenn Sie das Tool über eine der Inventarseiten für Workloads oder virtuelle Maschinen starten, wird der Name der Workload automatisch eingetragen, und die Daten der Workload werden mit dem standardmäßigen Zeitraum von 2 Stunden angezeigt. Wenn Sie das Tool über die Seite mit den Ereignisdetails starten, wird der Name der Workload automatisch eingetragen, und die Daten von 10 Tagen werden angezeigt.

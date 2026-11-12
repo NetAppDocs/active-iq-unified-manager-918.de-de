@@ -1,0 +1,37 @@
+---
+permalink: data-protection/task_edit_protection_relationships_from_health_volume.html 
+sidebar: sidebar 
+keywords: edit, protection, relationships, volume, health details page 
+summary: Sie können bestehende Sicherungsbeziehungen bearbeiten, um die aktuelle maximale Transferrate, Datensicherungsstrategie oder den aktuellen Sicherungszeitplan zu ändern. Eine Beziehung kann bearbeitet werden, um die für Übertragungen verwendete Bandbreite zu verringern oder die Häufigkeit geplanter Übertragungen zu erhöhen, weil sich die Daten häufig ändern. 
+---
+= Auf der Seite „Volume-/Integritätsdetails“ in Active IQ Unified Manager können Schutzbeziehungen bearbeitet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können bestehende Sicherungsbeziehungen bearbeiten, um die aktuelle maximale Transferrate, Datensicherungsstrategie oder den aktuellen Sicherungszeitplan zu ändern. Eine Beziehung kann bearbeitet werden, um die für Übertragungen verwendete Bandbreite zu verringern oder die Häufigkeit geplanter Übertragungen zu erhöhen, weil sich die Daten häufig ändern.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation installiert und konfiguriert haben.
+
+
+Die ausgewählten Volumes müssen Ziele von Datensicherungsbeziehungen sein. Beziehungen können nicht bearbeitet werden, wenn Quell-Volumes, Load-Sharing-Volumes oder Volumes ausgewählt sind, die nicht das Ziel einer SnapMirror oder SnapVault Beziehung sind.
+
+.Schritte
+. Auf der Registerkarte *Protection* der Detailseite *Volume / Health* in der Topologie die zu bearbeitende Schutzbeziehung lokalisieren und mit der rechten Maustaste anklicken.
+. Die Auswahl im Menü erfolgt über *Bearbeiten*.
++
+Alternativ können Sie im Menü *Aktionen* die Option *Beziehung* > *Bearbeiten* auswählen, um die Beziehung zu bearbeiten, deren Details Sie gerade anzeigen.
+
++
+Das Dialogfeld *Beziehung bearbeiten* wird angezeigt.
+
+. Im Dialogfeld „Beziehung bearbeiten“ lassen sich die maximale Transferrate, die Datensicherungsstrategie oder der Sicherungszeitplan nach Bedarf bearbeiten.
+. Auf *Anwenden* klicken.
++
+Die Änderungen gelten für die ausgewählten Beziehungen.
+
+

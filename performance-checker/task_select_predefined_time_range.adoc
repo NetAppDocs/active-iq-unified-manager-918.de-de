@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/task_select_predefined_time_range.html 
+sidebar: sidebar 
+keywords: select, predefined, time, range 
+summary: Die Auswahl eines vordefinierten Zeitraums ist eine schnelle und effiziente Möglichkeit, die Datenausgabe bei der Anzeige von Performance-Daten zu Cluster-Objekten anzupassen und gezielt darauf zu fokussieren. Bei Auswahl eines vordefinierten Zeitraums stehen Daten für bis zu 13 Monate zur Verfügung. 
+---
+= Auswahl eines vordefinierten Zeitbereichs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Auswahl eines vordefinierten Zeitraums ist eine schnelle und effiziente Möglichkeit, die Datenausgabe bei der Anzeige von Performance-Daten zu Cluster-Objekten anzupassen und gezielt darauf zu fokussieren. Bei Auswahl eines vordefinierten Zeitraums stehen Daten für bis zu 13 Monate zur Verfügung.
+
+.Schritte
+. Oben rechts auf der Seite *Performance Explorer* lässt sich *Time Range* auswählen.
+. Auf der rechten Seite des Bereichs *Zeitbereichsauswahl* wird ein vordefinierter Zeitbereich ausgewählt.
+. *Bereich anwenden* auswählen.
+

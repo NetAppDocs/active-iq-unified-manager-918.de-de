@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/concept_performance_monitor_of_metrocluster_configurations.html 
+sidebar: sidebar 
+keywords: performance, monitor, metrocluster, throughput 
+summary: Unified Manager ermöglicht Ihnen, den Schreibdurchsatz zwischen Clustern in einer MetroCluster Konfiguration zu überwachen, um Workloads mit hohem Schreibdurchsatz zu identifizieren. Wenn diese leistungsstarken Workloads bei anderen Volumes im lokalen Cluster hohe E/A-Antwortzeiten verursachen, löst Unified Manager Performance Ereignisse aus, um Sie zu benachrichtigen. 
+---
+= Überwachung der MetroCluster Leistung mit Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager ermöglicht es Ihnen, den Schreibdurchsatz zwischen Clustern in einer MetroCluster Konfiguration zu überwachen, um Workloads mit einem hohen Schreibdurchsatz zu identifizieren.
+
+Wenn diese leistungsstarken Workloads dazu führen, dass andere Volumes im lokalen Cluster hohe E/A-Antwortzeiten aufweisen, löst Unified Manager Performance-Ereignisse aus, um Sie zu benachrichtigen.
+
+
+NOTE: Unified Manager behandelt die Cluster in einer MetroCluster Konfiguration als einzelne Cluster. Unified Manager unterscheidet nicht zwischen Partnerclustern und korreliert auch nicht den Schreibdurchsatz der einzelnen Cluster.
+
+Wenn ein lokaler Cluster in einer MetroCluster Konfiguration seine Daten auf seinen Partnercluster spiegelt, werden die Daten in NVRAM geschrieben und dann über die Interswitch Links (ISLs) an die Remote-Aggregate übertragen. Unified Manager analysiert den NVRAM, um die Workloads zu identifizieren, deren hoher Schreibdurchsatz den NVRAM überlastet und dadurch zu Ressourcenkonflikten im NVRAM führt.
+
+Workloads, deren Abweichung bei der Antwortzeit den Performance-Schwellenwert überschritten hat, werden als _victims_ bezeichnet, und Workloads, deren Abweichung beim Schreibdurchsatz zum NVRAM höher als üblich ist und dadurch die Ressourcenkonkurrenz verursacht, werden als _bullies_ bezeichnet. Da nur die Schreibanforderungen an den Partnercluster gespiegelt werden, analysiert Unified Manager den Lesedurchsatz nicht.
+
+Sie können den Durchsatz jedes Clusters in einer MetroCluster Konfiguration anzeigen, indem Sie die Workloads der entsprechenden LUNs und Volumes auf den folgenden Bildschirmen analysieren. Sie können die Ergebnisse nach dem Cluster filtern. Im linken Navigationsbereich:
+
+* *Storage > Cluster > Performance: Alle Cluster*-Ansicht. Siehe
+* *Storage > Volumes > Performance: Alle Volumes* Ansicht.
+* *Storage > LUNs > Performance: Alle LUNs* Ansicht.
+* *Workload Analyse > Alle Workloads*
+
+
+*Verwandte Informationen*
+
+link:../performance-checker/reference_performance_event_analysis_and_notification.html["Performance Ereignisanalyse und Benachrichtigung"]
+
+link:../performance-checker/concept_performance_incident_analysis_for_metrocluster_configuration.html["Performance Ereignisanalyse für eine MetroCluster Konfiguration"]
+
+link:../performance-checker/concept_roles_of_workloads_involved_in_performance_incident.html["Rollen der an einem Performance-Ereignis beteiligten Workloads"]
+
+link:../performance-checker/task_identify_victim_workloads_involved_in_performance_event.html["Identifizieren von betroffenen Workloads bei einem Performance-Ereignis"]
+
+link:../performance-checker/task_identify_bully_workloads_involved_in_performance_event.html["Identifizieren von Bully Workloads, die an einem Performance-Ereignis beteiligt sind"]
+
+link:../performance-checker/task_identify_shark_workloads_involved_in_performance_event.html["Ermitteln der Shark-Workloads, die an einem Performance-Ereignis beteiligt sind"]

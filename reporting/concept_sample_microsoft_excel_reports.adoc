@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept_sample_microsoft_excel_reports.html 
+sidebar: sidebar 
+keywords: sample, microsoft, excel, reports 
+summary: Diese Beispielberichte in Microsoft Excel dienen als Einführung in die Berichtsoptionen, die mit den erweiterten Funktionen von Excel verfügbar sind. 
+---
+= Beispielberichte in Microsoft Excel in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Beispielberichte in Microsoft Excel dienen als Einführung in die Berichtsoptionen, die mit den erweiterten Funktionen von Excel verfügbar sind.
+
+Die erweiterten Funktionen von Excel ermöglichen die Erstellung vielfältiger, auf Ihre Bedürfnisse zugeschnittener Berichte. Ausführliche Informationen zur Verwendung von Excel finden Sie in der Produktdokumentation.
+
+[NOTE]
+====
+Zum Managen von Berichten ist die Rolle „Application Administrator“ oder „Storage Administrator“ erforderlich.
+
+====

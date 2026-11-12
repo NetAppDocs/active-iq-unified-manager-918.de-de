@@ -1,0 +1,41 @@
+---
+permalink: data-protection/task_resume_scheduled_transfers_on_quiesced_relationship.html 
+sidebar: sidebar 
+keywords: resume, schedule, transfers, quiesce, relationship, volume relationships page 
+summary: Nachdem Sie eine Beziehung in den Ruhezustand versetzt haben, um geplante Übertragungen zu stoppen, können Sie mit Resume die geplanten Übertragungen wieder aktivieren, sodass die Daten auf dem Quell- oder Primär-Volume geschützt sind. Die Übertragungen werden beim nächsten geplanten Übertragungsintervall von einem Checkpoint aus fortgesetzt, sofern einer vorhanden ist. 
+---
+= Geplante Transfers für eine ruhende Beziehung können auf der Seite „Volumenbeziehungen“ in Active IQ Unified Manager fortgesetzt werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie eine Beziehung in den Ruhezustand versetzt haben, um geplante Übertragungen zu stoppen, können Sie mit *Resume* geplante Übertragungen wieder aktivieren, sodass die Daten auf dem Quell- oder Primär-Volume geschützt bleiben. Beim nächsten geplanten Übertragungsintervall werden die Übertragungen, sofern vorhanden, von einem Checkpoint aus fortgesetzt.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+Sie können maximal 10 ruhende Beziehungen auswählen, für die Übertragungen wieder aufgenommen werden sollen.
+
+.Schritte
+. Auf der Seite „Volume Beziehungen“ lassen sich ein oder mehrere Volumes mit angehaltenen Beziehungen auswählen; in der Symbolleiste kann anschließend auf „Fortsetzen“ geklickt werden.
+. Im Dialogfeld *Resume* wählen Sie *Continue*.
++
+Sie kehren zur Seite „Volume Relationships“ zurück.
+
+. Die zugehörigen Job-Aufgaben und ihr Fortschritt lassen sich über den Job-Link anzeigen, der oben auf der Seite *Volume Relationships* angezeigt wird.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Wenn nur ein Auftrag angezeigt wird, können auf der Seite „Auftragsdetails“ durch Klicken auf *Aktualisieren* die Aufgabenliste und die mit dem Schutzkonfigurationsauftrag verknüpften Aufgabendetails aktualisiert sowie der Abschluss des Auftrags festgestellt werden.
+** Wenn mehr als ein Job angezeigt wird,
++
+... Auf der Seite „Jobs“ lässt sich der Job auswählen, dessen Details angezeigt werden sollen.
+... Auf der Seite „Auftragsdetails“ dient *Aktualisieren* dazu, die Aufgabenliste und die zugehörigen Aufgabendetails des Schutzkonfigurationsauftrags zu aktualisieren und festzustellen, wann der Auftrag abgeschlossen ist. Nach Abschluss der Aufträge werden die Datenübertragungen im nächsten geplanten Übertragungsintervall fortgesetzt.
+
+
+
+
+

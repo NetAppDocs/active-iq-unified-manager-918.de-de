@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_about_quotas.html 
+sidebar: sidebar 
+keywords: about, quotas 
+summary: Quotas ermöglichen das Einschränken oder Nachverfolgen des von einem Benutzer, einer Gruppe oder einem qtree verwendeten Speicherplatzes und der Anzahl der Dateien. Quotas werden in der Datei /etc/quotas angegeben. Quotas werden auf ein bestimmtes Volume oder einen bestimmten qtree angewendet. 
+---
+= Informationen zu Quoten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quotas ermöglichen es, den von einem Benutzer, einer Gruppe oder einem Qtree verwendeten Speicherplatz und die Anzahl der Dateien einzuschränken oder nachzuverfolgen. Quotas werden mithilfe der  `/etc/quotas`Datei angegeben. Quotas werden auf ein bestimmtes Volume oder einen bestimmten Qtree angewendet.

@@ -1,0 +1,30 @@
+---
+permalink: health-checker/concept_understand_quorum_and_epsilon.html 
+sidebar: sidebar 
+keywords: understand, quorum, epsilon 
+summary: Quorum und Epsilon sind wichtige Kennzahlen für die Gesundheit und Funktionsfähigkeit eines Clusters, die zusammen angeben, wie Cluster potenzielle Kommunikations- und Konnektivitätsherausforderungen adressieren. 
+---
+= Quorum und Epsilon in ONTAP Clustern in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quorum und Epsilon sind wichtige Kennzahlen für die Gesundheit und Funktionsfähigkeit eines Clusters, die zusammen angeben, wie Cluster potenzielle Kommunikations- und Konnektivitätsherausforderungen adressieren.
+
+_Quorum_ ist eine Grundvoraussetzung für einen voll funktionsfähigen Cluster. Befindet sich ein Cluster im Quorum, ist die einfache Mehrheit der Knoten fehlerfrei und kann miteinander kommunizieren. Geht das Quorum verloren, verliert der Cluster die Fähigkeit, normale Clusteroperationen durchzuführen. Nur eine Knotengruppe kann zu einem bestimmten Zeitpunkt ein Quorum aufweisen, da alle Knoten gemeinsam eine einheitliche Datensicht nutzen. Wenn daher zwei nicht kommunizierende Knoten die Daten auf unterschiedliche Weise verändern, ist es nicht mehr möglich, die Daten zu einer einheitlichen Datensicht zusammenzuführen.
+
+Jeder Knoten im Cluster nimmt an einem Abstimmungsprotokoll teil, das einen Knoten zum Master wählt; jeder verbleibende Knoten ist ein sekundärer Knoten. Der Masterknoten ist für die Synchronisierung der Informationen im gesamten Cluster verantwortlich. Sobald ein Quorum gebildet ist, wird es durch kontinuierliche Abstimmung aufrechterhalten. Wenn der Masterknoten offline geht und das Cluster weiterhin im Quorum ist, wird von den Knoten, die online bleiben, ein neuer Master gewählt.
+
+Da in einem Cluster mit einer geraden Anzahl von Knoten ein Stimmengleichstand möglich ist, erhält ein Knoten ein zusätzliches, bruchstückhaftes Stimmgewicht, genannt Epsilon. Fällt die Verbindung zwischen zwei gleich großen Teilen eines großen Clusters aus, bleibt die Gruppe der Knoten mit _epsilon_ beschlussfähig, vorausgesetzt, alle Knoten sind funktionsfähig. Die folgende Abbildung zeigt beispielsweise ein Vier-Node-Cluster, in dem zwei der Knoten ausgefallen sind. Da jedoch einer der verbleibenden Knoten _epsilon_ hält, bleibt der Cluster beschlussfähig, obwohl keine einfache Mehrheit funktionsfähiger Knoten vorhanden ist.
+
+image::../media/epsilon_preserving_quorum.gif[Dieses Bild wird im umgebenden Text erläutert.]
+
+Epsilon wird beim Erstellen des Clusters automatisch dem ersten Knoten zugewiesen. Wenn der Knoten, der Epsilon enthält, fehlerhaft wird, seinen Hochverfügbarkeitspartner übernimmt oder von seinem Hochverfügbarkeitspartner übernommen wird, wird Epsilon automatisch einem fehlerfreien Knoten in einem anderen HA-Paar neu zugewiesen.
+
+Das Offline-Nehmen eines Knotens kann die Fähigkeit des Clusters beeinträchtigen, im Quorum zu bleiben. Daher gibt ONTAP eine Warnmeldung aus, wenn Sie einen Vorgang ausführen, der entweder den Cluster aus dem Quorum bringt oder bei einem weiteren Ausfall zum Verlust des Quorums führen würde. Sie können die Quorum-Warnmeldungen deaktivieren, indem Sie den Befehl cluster quorum-service options modify auf der erweiterten Berechtigungsebene verwenden.
+
+Im Allgemeinen gilt: Bei zuverlässiger Verbindung zwischen den Knoten des Clusters ist ein größerer Cluster stabiler als ein kleinerer. Die Quorumsanforderung einer einfachen Mehrheit (die Hälfte der Knoten plus Epsilon) lässt sich in einem Cluster mit 24 Knoten leichter erfüllen als in einem Zwei-Node-Cluster.
+
+Ein Zwei-Node-Cluster stellt besondere Herausforderungen für die Aufrechterhaltung des Quorums dar. Zwei-Node-Cluster nutzen Cluster HA, bei der keiner der Nodes Epsilon hält. Stattdessen werden beide Nodes kontinuierlich abgefragt, um sicherzustellen, dass bei einem Ausfall eines Node der andere vollen Lese- und Schreibzugriff auf die Daten sowie Zugriff auf logische Schnittstellen und Managementfunktionen hat.

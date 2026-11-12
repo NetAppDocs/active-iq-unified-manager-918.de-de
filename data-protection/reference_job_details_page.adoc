@@ -1,0 +1,129 @@
+---
+permalink: data-protection/reference_job_details_page.html 
+sidebar: sidebar 
+keywords: job, details, page 
+summary: Auf der Seite „Auftragsdetails“ lassen sich Status und weitere Informationen zu bestimmten Aufgaben von Datensicherungsaufträgen anzeigen, die ausgeführt werden, in der Warteschlange stehen oder abgeschlossen sind. Anhand dieser Informationen lassen sich der Fortschritt von Datensicherungsaufträgen überwachen und Fehler bei Aufträgen beheben. 
+---
+= Informationen zur Seite mit den Auftragsdetails in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Auftragsdetails“ lassen sich Status und weitere Informationen zu bestimmten Aufgaben von Datensicherungsaufträgen anzeigen, die ausgeführt werden, in der Warteschlange stehen oder abgeschlossen sind. Anhand dieser Informationen lassen sich der Fortschritt von Datensicherungsaufträgen überwachen und Fehler bei Aufträgen beheben.
+
+
+
+[[job-summary]]
+== Stellenbeschreibung
+
+Die Auftragsübersicht enthält folgende Informationen:
+
+* Job-ID
+* Typ
+* Status
+* Übermittlungszeitpunkt
+* Abschlusszeit
+* Dauer
+
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Aktualisieren*
++
+Aktualisiert die Aufgabenliste und die Eigenschaften, die mit jeder Aufgabe verknüpft sind.
+
+* *Jobs anzeigen*
++
+Sie gelangen zurück zur Seite „Jobs“.
+
+
+
+
+
+[[job-tasks-list]]
+== Aufgabenliste
+
+Die Liste der Job-Aufgaben zeigt in einer Tabelle alle Aufgaben an, die einem bestimmten Job zugeordnet sind, sowie die Eigenschaften der einzelnen Aufgaben.
+
+* *Startzeit*
++
+Zeigt Datum und Uhrzeit des Aufgabenstarts an. Standardmäßig werden die neuesten Aufgaben oben in der Spalte und ältere Aufgaben unten angezeigt.
+
+* *Typ*
++
+Zeigt die Art der Aufgabe an.
+
+* *Zustand*
++
+Der Status einer bestimmten Aufgabe:
+
++
+** *Abgeschlossen*
++
+Die Aufgabe ist abgeschlossen.
+
+** *In der Warteschlange*
++
+Der Task wird in Kürze ausgeführt.
+
+** *Läuft*
++
+Die Aufgabe wird ausgeführt.
+
+** *Warten*
++
+Ein Auftrag wurde übermittelt, und einige zugehörige Aufgaben warten noch auf ihre Einreihung in die Warteschlange und Ausführung.
+
+
+
+* *Status*
++
+Zeigt den Aufgabenstatus an:
+
++
+** *Fehler (image:../media/sev_error.gif[""])*
++
+Die Aufgabe ist fehlgeschlagen.
+
+** *Normal (image:../media/sev_normal.gif[""])*
++
+Die Aufgabe wurde erfolgreich abgeschlossen.
+
+** *Übersprungen (image:../media/icon_skipped.gif[""])*
++
+Eine Aufgabe ist fehlgeschlagen, wodurch nachfolgende Aufgaben übersprungen wurden.
+
+
+
+* *Dauer*
++
+Zeigt die seit Beginn der Aufgabe verstrichene Zeit an.
+
+* *Abschlusszeit*
++
+Zeigt den Zeitpunkt des Abschlusses der Aufgabe an. Diese Spalte ist standardmäßig ausgeblendet.
+
+* *Aufgaben-ID*
++
+Zeigt die GUID an, die eine einzelne Aufgabe eines Auftrags identifiziert. Die Spalte kann sortiert und gefiltert werden. Standardmäßig ist diese Spalte ausgeblendet.
+
+* *Abhängigkeitsreihenfolge*
++
+Zeigt eine ganze Zahl an, die die Reihenfolge der Aufgaben in einem Diagramm darstellt, wobei der ersten Aufgabe der Wert Null zugewiesen wird. Standardmäßig ist diese Spalte ausgeblendet.
+
+* *Bereich Aufgabendetails*
++
+Zeigt zusätzliche Informationen zu jeder Aufgabe eines Jobs an, einschließlich des Aufgabennamens, der Aufgabenbeschreibung und, falls die Aufgabe fehlgeschlagen ist, des Grundes für den Fehler.
+
+* *Aufgabennachrichtenbereich*
++
+Zeigt Meldungen speziell für die ausgewählte Aufgabe an. Diese Meldungen können den Grund für den Fehler und Lösungsvorschläge enthalten. Nicht für alle Aufgaben werden Meldungen angezeigt.
+
+

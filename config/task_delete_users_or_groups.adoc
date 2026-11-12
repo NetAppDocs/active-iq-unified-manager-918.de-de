@@ -1,0 +1,28 @@
+---
+permalink: config/task_delete_users_or_groups.html 
+sidebar: sidebar 
+keywords: delete, users, groups 
+summary: Sie können einen oder mehrere Benutzer aus der Datenbank des Managementservers löschen, um bestimmten Benutzern den Zugriff auf Unified Manager zu verweigern. Sie können auch Gruppen löschen, sodass alle Benutzer dieser Gruppe keinen Zugriff mehr auf den Managementserver haben. 
+---
+= Löschen von Benutzern oder Gruppen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen oder mehrere Benutzer aus der Datenbank des Managementservers löschen, um bestimmten Benutzern den Zugriff auf Unified Manager zu verweigern. Sie können auch Gruppen löschen, sodass alle Benutzer dieser Gruppe keinen Zugriff mehr auf den Managementserver haben.
+
+.Bevor Sie beginnen
+* Wenn Sie Remote-Gruppen löschen, müssen Sie die den Benutzern der Remote-Gruppen zugewiesenen Ereignisse zuvor neu zugewiesen haben.
++
+Wenn Sie lokale Benutzer oder Remote-Benutzer löschen, wird die Zuweisung der diesen Benutzern zugewiesenen Ereignisse automatisch aufgehoben.
+
+* Sie benötigen die Rolle des Anwendungsadministrators.
+
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Allgemein* > *Benutzer*.
+. Auf der Seite „Benutzer“ erfolgt die Auswahl der Benutzer oder Gruppen, die gelöscht werden sollen; anschließend erfolgt ein Klick auf *Löschen*.
+. Zum Bestätigen der Löschung auf *Ja* klicken.
+

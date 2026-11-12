@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/reference_understand_and_use_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: understanding, node, failover, planning page 
+summary: 'Die Seite „Performance/Node Failover Planning“ schätzt die Auswirkungen auf die Performance eines Knotens, wenn der Hochverfügbarkeits-Partnerknoten (HA-Partnerknoten) des Knotens ausfällt. Unified Manager stützt diese Schätzungen auf die bisherige Performance der Knoten im HA-Paar.' 
+---
+= Die Seite „Knotenausfallplanung“ in Active IQ Unified Manager kann verwendet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Performance/Knoten-Failover-Planung“ schätzt die Auswirkungen auf die Performance eines Knotens, wenn der High-Availability-Partnerknoten (HA-Partnerknoten) des Knotens ausfällt. Unified Manager stützt diese Schätzungen auf die historische Performance der Knoten im HA-Paar.
+
+Die Abschätzung der Performance-Auswirkungen eines Failovers hilft Ihnen bei der Planung in den folgenden Szenarien:
+
+* Wenn ein Failover die geschätzte Performance des Takeover-Node dauerhaft auf ein inakzeptables Level reduziert, können Sie Korrekturmaßnahmen in Erwägung ziehen, um die Performance-Auswirkungen eines Failover zu verringern.
+* Vor der Einleitung eines manuellen Failover zur Durchführung von Hardwarewartungsarbeiten kann abgeschätzt werden, wie sich das Failover auf die Performance des Übernahmeknotens auswirkt, um den besten Zeitpunkt für die Durchführung der Aufgabe zu bestimmen.
+

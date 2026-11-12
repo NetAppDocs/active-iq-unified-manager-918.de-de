@@ -1,0 +1,62 @@
+---
+permalink: config/task_change_um_host_name_on_rhel.html 
+sidebar: sidebar 
+keywords: change, unified manager, host name, linux systems 
+summary: Gegebenenfalls möchten Sie den Hostnamen des Red Hat Enterprise Linux Rechners ändern, auf dem Unified Manager installiert ist. Beispielsweise können Sie den Host umbenennen, um Ihre Unified Manager Server beim Auflisten Ihrer Linux Rechner leichter nach Typ, Arbeitsgruppe oder überwachter Clustergruppe zu identifizieren. 
+---
+= Ändern des Hostnamens von Active IQ Unified Manager auf Linux Systemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gegebenenfalls möchten Sie den Hostnamen des Red Hat Enterprise Linux Rechners ändern, auf dem Unified Manager installiert ist. Beispielsweise können Sie den Host umbenennen, um Ihre Unified Manager Server beim Auflisten Ihrer Linux Rechner leichter nach Typ, Arbeitsgruppe oder überwachter Clustergruppe zu identifizieren.
+
+.Bevor Sie beginnen
+Sie benötigen Zugriff als Root-Benutzer auf das Linux-System, auf dem Unified Manager installiert ist.
+
+Sie können den Hostnamen (oder die Host-IP-Adresse) verwenden, um auf die Web UI von Unified Manager zuzugreifen. Wenn Sie während des Deployment eine statische IP-Adresse für Ihr Netzwerk konfiguriert haben, haben Sie dem Netzwerkhost einen Namen zugewiesen. Wenn Sie das Netzwerk mit DHCP konfiguriert haben, sollte der Hostname vom DNS-Server übernommen werden.
+
+Unabhängig davon, wie der Hostname zugewiesen wurde, müssen Sie ein neues Sicherheitszertifikat generieren, wenn Sie den Hostnamen ändern und beabsichtigen, den neuen Hostnamen für den Zugriff auf die Unified Manager Weboberfläche zu verwenden.
+
+Wenn Sie über die IP-Adresse des Servers anstatt über den Hostnamen auf die Web-Oberfläche zugreifen, müssen Sie bei einer Änderung des Hostnamens kein neues Zertifikat generieren. Es empfiehlt sich jedoch, das Zertifikat zu aktualisieren, sodass der Hostname im Zertifikat mit dem tatsächlichen Hostnamen übereinstimmt. Das neue Zertifikat wird erst nach einem Neustart des Linux-Rechners wirksam.
+
+Wenn Sie den Hostnamen in Unified Manager ändern, müssen Sie den Hostnamen in OnCommand Workflow Automation (WFA) manuell aktualisieren. Der Hostname wird in WFA nicht automatisch aktualisiert.
+
+.Schritte
+. Sie melden sich als Root-Benutzer bei dem Unified Manager System an, das Sie ändern möchten.
+. Zum Beenden der Unified Manager Software und der zugehörigen MySQL Software ist der folgende Befehl einzugeben:
++
+`systemctl stop ocieau ocie mysqld`
+
+. Die Änderung des Hostnamens erfolgt mit dem Linux `hostnamectl` Befehl:
++
+`hostnamectl set-hostname new_FQDN`
+
++
+`hostnamectl set-hostname nuhost.corp.widget.com`
+
+. Das HTTPS-Zertifikat für den Server neu generieren:
++
+`/opt/netapp/essentials/bin/cert.sh create`
+
+. Neustart des Netzwerkservice:
++
+`systemctl restart NetworkManager.service`
+
+. Nach dem Neustart des Dienstes sollte geprüft werden, ob der neue Hostname sich selbst anpingen kann:
++
+`ping new_hostname`
+
++
+`ping nuhost`
+
++
+Dieser Befehl sollte dieselbe IP-Adresse zurückgeben, die zuvor für den ursprünglichen Hostnamen festgelegt wurde.
+
+. Nachdem Sie die Änderung Ihres Hostnamens abgeschlossen und überprüft haben, muss Unified Manager mit dem folgenden Befehl neu gestartet werden:
++
+`systemctl start mysqld ocie ocieau`
+
+

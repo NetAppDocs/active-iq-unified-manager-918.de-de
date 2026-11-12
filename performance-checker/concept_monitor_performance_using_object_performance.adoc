@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_monitor_performance_using_object_performance.html 
+sidebar: sidebar 
+keywords: monitoring, performance, inventory, pages 
+summary: Die Objektinventar-Performance-Seiten zeigen Performance-Informationen, Performance-Ereignisse und den Systemstatus für alle Objekte innerhalb einer Objekttyp-Kategorie an. Dadurch erhalten Sie einen schnellen Überblick über den Performance-Status jedes Objekts innerhalb eines Clusters, beispielsweise für alle Knoten oder alle Volumes. 
+---
+= Die Objektleistung kann mithilfe der Performance Inventory Seiten in Active IQ Unified Manager überwacht werden.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Objektinventar-Performance-Seiten zeigen Performance-Informationen, Performance-Ereignisse und den Systemstatus für alle Objekte innerhalb einer Objekttyp-Kategorie an. Dadurch erhalten Sie einen schnellen Überblick über den Performance-Status jedes Objekts innerhalb eines Clusters, beispielsweise für alle Knoten oder alle Volumes.
+
+Objektinventar-Performance-Seiten bieten einen allgemeinen Überblick über den Objektstatus, sodass Sie die Gesamt-Performance aller Objekte beurteilen und die Performance-Daten der Objekte vergleichen können. Sie können den Inhalt von Objektinventar-Seiten durch Suchen, Sortieren und Filtern verfeinern. Dies ist bei der Überwachung und Verwaltung der Objekt-Performance hilfreich, da Sie damit Objekte mit Performance-Problemen schnell finden und mit der Fehlerbehebung beginnen können.
+
+image::../media/perf_node_inventory.gif[Ein Screenshot der Benutzeroberfläche, der die Details des Objekts auf der Inventarseite „Performance/Alle Knoten“ anzeigt.]
+
+Standardmäßig werden Objekte auf den Performance-Inventarseiten nach der Kritikalität ihrer Objekt-Performance sortiert. Objekte mit neuen kritischen Performance-Ereignissen werden zuerst aufgeführt, Objekte mit Warnereignissen an zweiter Stelle. Dadurch werden Probleme, die behoben werden müssen, sofort sichtbar. Alle Performance-Daten basieren auf einem 72-Stunden-Durchschnitt.
+
+Sie können einfach von der Objektinventar-Performance-Seite zu einer Objektdetailseite navigieren, indem Sie in der Spalte „Objektname“ auf den Objektnamen klicken. Auf der Inventarseite „Performance/All Nodes“ klicken Sie beispielsweise in der Spalte *Nodes* auf ein Knotenobjekt. Die Objektdetailseite bietet ausführliche Informationen und Details zum ausgewählten Objekt, einschließlich eines direkten Vergleichs aktiver Ereignisse.

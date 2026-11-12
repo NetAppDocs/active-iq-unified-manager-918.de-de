@@ -1,0 +1,74 @@
+---
+permalink: reporting/task_schedule_report.html 
+sidebar: sidebar 
+keywords: report, schedule 
+summary: Sobald Sie eine Ansicht oder eine Excel-Datei haben, die Sie regelmäßig generieren und verteilen möchten, können Sie den Bericht planen. 
+---
+= Ein Bericht in Active IQ Unified Manager kann geplant werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sobald Sie eine Ansicht oder eine Excel-Datei haben, die Sie regelmäßig generieren und verteilen möchten, können Sie den Bericht planen.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Die SMTP Servereinstellungen müssen auf der Seite *Allgemein* > *Benachrichtigungen* konfiguriert worden sein, damit die Berichts-Engine Berichte als E-Mail-Anhänge an die Empfängerliste des Unified Manager Server senden kann.
+* Der E-Mail-Server muss so konfiguriert sein, dass Anhänge mit den generierten E-Mails versendet werden können.
+
+
+Mit den folgenden Schritten kann ein Bericht für eine Ansicht getestet und seine Erstellung geplant werden. Die zu verwendende Ansicht wird ausgewählt oder angepasst. Im folgenden Verfahren wird eine Netzwerkansicht verwendet, die die Performance Ihrer Netzwerkschnittstellen anzeigt, Sie können jedoch jede beliebige Ansicht verwenden.
+
+.Schritte
+. Öffnen der Ansicht. Dieses Beispiel verwendet die Standardnetzwerkansicht, die die LIF Performance anzeigt. Im linken Navigationsbereich auf *Network > Network Interfaces* klicken.
+. Bei Bedarf lässt sich die Ansicht mithilfe der integrierten Unified Manager Funktionen anpassen.
+. Nachdem Sie die Ansicht angepasst haben, können Sie im Feld *View* einen eindeutigen Namen eingeben und auf das Häkchen klicken, um sie zu speichern.
++
+image::../media/view_save.gif[Ein Screenshot der Benutzeroberfläche, der zeigt, wie eine Ansicht gespeichert wird.]
+
+. Sie können die erweiterten Funktionen von Microsoft® Excel nutzen, um Ihren Bericht anzupassen. Weitere Informationen finden Sie unter link:task_use_excel_to_customize_your_report.html["Verwenden von Excel zum Anpassen Ihres Berichts"].
+. Um die Ausgabe vor der Planung oder Freigabe anzuzeigen:
++
+[cols="2*"]
+|===
+| Option | Beschreibung 
+
+
+ a| 
+*Wenn Sie Excel zur Anpassung des Berichts verwendet haben*
+ a| 
+Anzeige der bereits heruntergeladenen Excel-Datei.
+
+
+
+ a| 
+*Falls Sie Excel nicht zur Anpassung des Berichts verwendet haben*
+ a| 
+Der Bericht steht als *CSV*-, *PDF*- oder *XLSX*-Datei zum Download zur Verfügung.
+
+|===
++
+Die Datei kann mit einer installierten Applikation wie Microsoft Excel (CSV/XSLX) oder Adobe Acrobat (PDF) geöffnet werden.
+
+. Wenn Sie mit dem Bericht zufrieden sind, erfolgt die Auswahl von *Scheduled Reports*.
+. Auf der Seite „Berichtszeitpläne“ erfolgt ein Klick auf *Zeitplan hinzufügen*.
+. Der Standardname, eine Kombination aus dem Ansichtsname und der Häufigkeit, kann übernommen oder der *Zeitplanname* angepasst werden.
+. Zum erstmaligen Testen des geplanten Berichts sollte zunächst nur die eigene Adresse als *Empfänger* hinzugefügt werden. Sobald alles passt, können die E-Mail-Adressen aller Berichtsempfänger hinzugefügt werden.
+. Sie geben an, wie häufig der Bericht erstellt und an die Empfänger gesendet werden soll. Sie können *täglich*, *wöchentlich* oder *monatlich* auswählen.
+. Zur Auswahl stehen die Formate *PDF*, *CSV* oder *XSLX*.
++
+[NOTE]
+====
+Bei Berichten, deren Inhalt mit Excel angepasst wurde, ist immer *XSLX* zu wählen.
+
+====
+. Zum Speichern des Berichtszeitplans ist das Häkchen (image:../media/blue_check.gif[""]) auszuwählen.
++
+image::../media/scheduled_reports.gif[Ein Screenshot der Benutzeroberfläche, der zeigt, wie der Berichtszeitplan gespeichert wird.]
+
++
+Der Bericht wird sofort testweise versendet. Danach wird der Bericht generiert und mit der geplanten Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+

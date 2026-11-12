@@ -1,0 +1,22 @@
+---
+permalink: install-linux/concept_browser_and_platform_requirements.html 
+sidebar: sidebar 
+keywords: supported browsers 
+summary: Der Zugriff auf die Web-Benutzeroberfläche des Unified Manager erfolgt über einen unterstützten Browser. 
+---
+= Unterstützte Browser für Active IQ Unified Manager verwenden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Zugriff auf die Web-Benutzeroberfläche des Unified Manager erfolgt über einen unterstützten Browser.
+
+Die Interoperability Matrix enthält die Liste der unterstützten Browserversionen.
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]
+
+Bei allen Browsern gewährleistet das Deaktivieren von Pop-up-Blockern, dass die Softwarefunktionen ordnungsgemäß angezeigt werden.
+
+Wenn Sie Unified Manager für die SAML-Authentifizierung konfigurieren möchten, damit ein Identitätsanbieter (IdP) Benutzer authentifizieren kann, sollten Sie auch die Liste der vom IdP unterstützten Browser überprüfen.

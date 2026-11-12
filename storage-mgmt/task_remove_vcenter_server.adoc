@@ -1,0 +1,29 @@
+---
+permalink: storage-mgmt/task_remove_vcenter_server.html 
+sidebar: sidebar 
+keywords: review, vcenter, server 
+summary: Sie können vCenter Servers aus Ihrer Active IQ Unified Manager Instanz entfernen, wenn diese nicht mehr benötigt werden. 
+---
+= Entfernung eines vCenter Server aus Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können vCenter Server aus Ihrer Active IQ Unified Manager Instanz entfernen. Sie können beispielsweise einen vCenter Server entfernen, wenn die Erkennung des vCenter Server fehlschlägt oder wenn er nicht mehr erforderlich ist.
+
+Das Entfernen eines vCenter Server löscht auch alle virtuellen Maschinen (VMs), die auf diesem vCenter gehostet werden, sowie seine Konfigurationsdaten. Nach dem Entfernen des vCenter Server wird dieser zusammen mit den zugehörigen Objekten und Verlaufsdaten nicht mehr überwacht. Diese Änderungen werden auf den Inventarseiten für vCenter und virtuelle Maschinen angezeigt.
+
+.Bevor Sie beginnen
+Vor dem Entfernen von vCenter Servern ist Folgendes sicherzustellen:
+
+* Sie verfügen über die Rolle des Anwendungsadministrators oder des Storage-Administrators.
+* Die Namen der vCenter Server und die jeweils zugehörigen IP-Adressen sollten Ihnen bekannt sein.
+
+
+.Schritte
+. Im linken Navigationsbereich befindet sich *VMWARE>vCenter*.
+. Auf der Seite vCenters können Sie den vCenter Server auswählen, den Sie entfernen möchten, und auf *Remove* klicken.
+. Im Meldungsdialogfeld *vCenter entfernen* wird die Entfernungsanforderung mit *OK* bestätigt.
+

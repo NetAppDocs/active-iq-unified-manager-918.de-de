@@ -1,0 +1,29 @@
+---
+permalink: data-protection/task_configure_protection_destination_settings.html 
+sidebar: sidebar 
+keywords: configure, destination, efficiency, settings 
+summary: Im Dialogfeld „Erweiterte Zieleinstellungen“ können Sie die Effizienzeinstellungen für ein Schutzziel konfigurieren, z. B. Deduplizierung, Komprimierung, automatisches Wachstum und Speicherplatzzusage. Sie verwenden diese Einstellungen, wenn Sie die Speicherplatznutzung auf einem Ziel oder sekundären Volume maximieren möchten. 
+---
+= Konfiguration der Zieleffizienzeinstellungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Erweiterte Zieleinstellungen“ können Sie die Effizienzeinstellungen für ein Schutzziel konfigurieren, z. B. Deduplizierung, Komprimierung, automatisches Wachstum und Speicherplatzzusage. Sie verwenden diese Einstellungen, wenn Sie die Speicherplatznutzung auf einem Ziel oder sekundären Volume maximieren möchten.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Standardmäßig entsprechen die Effizienzeinstellungen denen des Quell-Volumes, mit Ausnahme der Komprimierungseinstellungen in einer SnapVault Beziehung, die standardmäßig deaktiviert sind.
+
+.Schritte
+. Im Dialogfeld *Schutz konfigurieren* hängt die Auswahl der Registerkarte *SnapMirror* bzw. *SnapVault* vom Typ der zu konfigurierenden Beziehung ab.
+. Im Bereich *Zielinformationen* kann *Erweitert* ausgewählt werden.
++
+Das Dialogfeld „Erweiterte Zieleinstellungen“ wird geöffnet.
+
+. Die Effizienzeinstellungen für Deduplizierung, Komprimierung, automatisches Wachstum und Speicherplatzzusage können je nach Bedarf aktiviert oder deaktiviert werden.
+. Wenn Sie *Anwenden* auswählen, wird Ihre Auswahl gespeichert, und Sie kehren zum Dialogfeld *Schutz konfigurieren* zurück.
+

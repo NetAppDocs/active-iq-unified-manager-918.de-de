@@ -1,0 +1,35 @@
+---
+permalink: data-protection/task_resume_scheduled_transfers_voldtls_page.html 
+sidebar: sidebar 
+keywords: resume schedule, transfers, quiesce, relationship,  volume, health details page 
+summary: Nachdem Sie eine Beziehung in den Ruhezustand versetzt haben, um geplante Übertragungen zu stoppen, können Sie auf der Seite „Volume/Integritätsdetails“ die Funktion „Fortsetzen“ verwenden, um geplante Übertragungen wieder zu aktivieren, sodass die Daten auf dem Quell- oder primären Volume geschützt sind. Beim nächsten geplanten Übertragungsintervall werden die Übertragungen ab einem Checkpoint fortgesetzt, sofern ein solcher vorhanden ist. 
+---
+= Fortsetzen von Übertragungen in einer angehaltenen Beziehung auf der Seite „Volume-/Integritätsdetails“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie eine Beziehung in den Ruhezustand versetzt haben, um zu verhindern, dass geplante Übertragungen stattfinden, können Sie auf der Seite „Volume-/Integritätsdetails“ *Resume* verwenden, um geplante Übertragungen wieder zu aktivieren, sodass die Daten auf dem Quell- oder primären Volume geschützt sind. Die Übertragungen werden beim nächsten geplanten Übertragungsintervall von einem Checkpoint aus fortgesetzt, sofern ein solcher vorhanden ist.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+.Schritte
+. Auf der Registerkarte *Schutz* der Detailseite *Volume / Integrität* kann in der Topologieansicht mit der rechten Maustaste auf eine angehaltene Beziehung geklickt werden, die fortgesetzt werden soll.
++
+Alternativ kann im Menü *Aktionen* > *Beziehung* die Option *Fortsetzen* ausgewählt werden.
+
+. Im Dialogfeld *Resume* wählen Sie *Continue*.
++
+Sie gelangen zurück zur Seite „Volume / Health details“.
+
+. Die zugehörigen Job-Aufgaben und ihr Fortschritt lassen sich über den Job-Link oben auf der Detailseite *Volume / Health* anzeigen und nachverfolgen.
+. Auf der Seite *Auftragsdetails* aktualisiert *Aktualisieren* die Aufgabenliste und die mit dem Schutzkonfigurationsauftrag verknüpften Aufgabendetails; außerdem lässt sich damit feststellen, wann der Auftrag abgeschlossen ist.
++
+Nach Abschluss der Jobs werden die Datenübertragungen beim nächsten geplanten Übertragungsintervall wieder aufgenommen.
+
+

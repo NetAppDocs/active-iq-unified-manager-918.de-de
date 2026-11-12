@@ -1,0 +1,140 @@
+---
+permalink: health-checker/concept_how_group_rules_work_for_groups.html 
+sidebar: sidebar 
+keywords: group rules, work, groups 
+summary: 'Eine Gruppenregel ist ein Kriterium, das Sie definieren, damit Storage-Objekte (Volumes, Cluster oder SVMs) in eine bestimmte Gruppe aufgenommen werden können. Zum Definieren einer Gruppenregel für eine Gruppe können Sie Bedingungsgruppen oder Bedingungen verwenden.' 
+---
+= Grundlegendes zur Funktionsweise von Gruppenregeln für Gruppen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Gruppenregel ist ein Kriterium, das Sie definieren, damit Storage-Objekte (Volumes, Cluster oder SVMs) in eine bestimmte Gruppe aufgenommen werden können. Zum Definieren einer Gruppenregel für eine Gruppe können Sie Bedingungsgruppen oder Bedingungen verwenden.
+
+* Für eine Gruppe ist die Zuordnung einer Gruppenregel erforderlich.
+* Einer Gruppenregel muss ein Objekttyp zugeordnet werden; pro Gruppenregel ist nur ein Objekttyp möglich.
+* Nach jedem Überwachungszyklus sowie beim Erstellen, Bearbeiten oder Löschen einer Regel werden Storage-Objekte der Gruppe hinzugefügt oder aus ihr entfernt.
+* Eine Gruppenregel kann eine oder mehrere Bedingungsgruppen haben, und jede Bedingungsgruppe kann eine oder mehrere Bedingungen haben.
+* Speicherobjekte können basierend auf von Ihnen erstellten Gruppenregeln mehreren Gruppen angehören.
+
+
+
+
+[[conditions]]
+== Bedingungen
+
+Sie können mehrere Bedingungsgruppen erstellen, und jede Bedingungsgruppe kann eine oder mehrere Bedingungen enthalten. Sie können alle definierten Bedingungsgruppen in einer Gruppenregel anwenden, um festzulegen, welche Storage-Objekte in die Gruppe aufgenommen werden.
+
+Bedingungen innerhalb einer Bedingungsgruppe werden mit einem logischen UND ausgeführt. Alle Bedingungen in einer Bedingungsgruppe müssen erfüllt sein. Wenn Sie eine Gruppenregel erstellen oder ändern, wird eine Bedingung erstellt, die nur die Storage-Objekte anwendet, auswählt und gruppiert, die alle Bedingungen in der Bedingungsgruppe erfüllen. Sie können mehrere Bedingungen innerhalb einer Bedingungsgruppe verwenden, wenn Sie den Umfang der Storage-Objekte eingrenzen möchten, die in eine Gruppe aufgenommen werden.
+
+Sie können Bedingungen mit Storage-Objekten erstellen, indem Sie die folgenden Operanden und Operatoren verwenden und den erforderlichen Wert angeben.
+
+[cols="2*"]
+|===
+| Storage-Objekttyp | Anwendbare Operanden 
+
+
+ a| 
+Volumen
+ a| 
+* Objektname
+* Name des besitzenden Clusters
+* Name der zugehörigen SVM
+* Anmerkungen
+
+
+
+
+ a| 
+SVM
+ a| 
+* Objektname
+* Name des besitzenden Clusters
+* Anmerkungen
+
+
+
+
+ a| 
+Cluster
+ a| 
+* Objektname
+* Anmerkungen
+
+
+|===
+Wenn Sie Annotation als Operand für ein Storage-Objekt auswählen, ist der Operator „`Is`“ verfügbar. Für alle anderen Operanden können Sie entweder „`Is`“ oder „`Contains`“ als Operator auswählen.
+
+* Operand
++
+Die Liste der Operanden im Unified Manager ändert sich je nach ausgewähltem Objekttyp. Die Liste umfasst den Objektnamen, den Namen des zugehörigen Clusters, den Namen der zugehörigen SVM und die im Unified Manager definierten Annotationen.
+
+* Operator
++
+Die Liste der Operatoren ändert sich abhängig vom für eine Bedingung ausgewählten Operanden. Die in Unified Manager unterstützten Operatoren sind „`Is`“ und „`Contains`“.
+
++
+Wenn Sie den Operator "`Is`" auswählen, prüft das System die Bedingung auf eine exakte Übereinstimmung des Operandenwerts mit dem für den ausgewählten Operanden angegebenen Wert.
+
++
+Wenn Sie den Operator „`Contains`“ auswählen, wird die Bedingung daraufhin geprüft, ob eines der folgenden Kriterien erfüllt ist:
+
++
+** Der Operandenwert stimmt exakt mit dem für den ausgewählten Operanden angegebenen Wert überein
+** Der Operandenwert enthält den für den ausgewählten Operanden angegebenen Wert
+
+
+* Wert
++
+Das Wertfeld ändert sich je nach ausgewähltem Operanden.
+
+
+
+
+
+[[example-of-a-group-rule-with-conditions]]
+== Beispiel einer Gruppenregel mit Bedingungen
+
+Eine Bedingungsgruppe für ein Volume mit den folgenden zwei Bedingungen:
+
+* Der Name enthält "`vol`"
+* Der SVM-Name lautet "`data_svm`"
+
+
+Diese Bedingungsgruppe wählt alle Volumes aus, die "`vol`" in ihrem Namen enthalten und auf SVMs mit dem Namen "`data_svm`" gehostet sind.
+
+
+
+[[condition-groups]]
+== Bedingungsgruppen
+
+Bedingungsgruppen werden mit logischem ODER verknüpft und anschließend auf Storage-Objekte angewendet. Storage-Objekte müssen mindestens eine der Bedingungsgruppen erfüllen, um in eine Gruppe aufgenommen zu werden. Die Storage-Objekte aller Bedingungsgruppen werden kombiniert. Sie können Bedingungsgruppen verwenden, um den Umfang der Storage-Objekte zu erweitern, die in eine Gruppe aufgenommen werden.
+
+
+
+[[example-of-a-group-rule-with-condition-groups]]
+== Beispiel einer Gruppenregel mit Bedingungsgruppen
+
+Für ein Volumen werden zwei Bedingungsgruppen berücksichtigt, wobei jede Gruppe die folgenden zwei Bedingungen enthält:
+
+* Bedingungsgruppe 1
++
+** Der Name enthält "`vol`"
+** Der SVM-Name ist "`data_svm`" Bedingungsgruppe 1 wählt alle Volumes aus, die "`vol`" in ihrem Namen enthalten und auf SVMs mit dem Namen "`data_svm`" gehostet sind.
+
+
+* Bedingungsgruppe 2
++
+** Der Name enthält "`vol`"
+** Der Annotationswert von data-priority ist "`critical`" Bedingungsgruppe 2 wählt alle Volumes aus, die "`vol`" in ihrem Namen enthalten und mit dem Annotationswert data-priority als "`critical`" annotiert sind.
+
+
+
+
+Wenn eine Gruppenregel, die diese beiden Bedingungsgruppen enthält, auf Storage Objekte angewendet wird, werden die folgenden Storage Objekte einer ausgewählten Gruppe hinzugefügt:
+
+* Alle Volumes, die "`vol`" in ihrem Namen enthalten und auf der SVM mit dem Namen "`data_svm`" gehostet sind.
+* Alle Volumes, deren Namen "`vol`" enthalten und die mit dem Anmerkungswert für die Datenpriorität "`critical`" gekennzeichnet sind.
+

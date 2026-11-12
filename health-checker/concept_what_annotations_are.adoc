@@ -1,0 +1,18 @@
+---
+permalink: health-checker/concept_what_annotations_are.html 
+sidebar: sidebar 
+keywords: annotations 
+summary: 'Eine Annotation ist ein Text-String (der Name), der einem anderen Text-String (dem Wert) zugeordnet ist. Jedes Annotationsname-Wert-Paar kann mithilfe von Annotationsregeln dynamisch Storage Objekten zugeordnet werden. Wenn Sie Storage Objekte vordefinierten Annotationen zuordnen, können Sie die damit verbundenen Ereignisse filtern und anzeigen. Sie können Annotationen auf Cluster, Volumes und Storage Virtual Machines (SVMs) anwenden.' 
+---
+= Informationen zu Annotationen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Annotation ist ein Text-String (der Name), der einem anderen Text-String (dem Wert) zugeordnet ist. Jedes Annotationsname-Wert-Paar kann mithilfe von Annotationsregeln dynamisch Storage Objekten zugeordnet werden. Wenn Sie Storage Objekte vordefinierten Annotationen zuordnen, können Sie die damit verbundenen Ereignisse filtern und anzeigen. Sie können Annotationen auf Cluster, Volumes und Storage Virtual Machines (SVMs) anwenden.
+
+Jeder Annotationsname kann mehrere Werte haben; jedes Name-Wert-Paar kann über Regeln einem Storage Objekt zugeordnet werden.
+
+Sie können beispielsweise eine Annotation namens „`data-center`“ mit den Werten „`Boston`“ und „`Canada`“ erstellen. Anschließend können Sie die Annotation „`data-center`“ mit dem Wert „`Boston`“ auf Volume v1 anwenden. Wenn für ein beliebiges Ereignis auf Volume v1, das mit „`data-center`“ annotiert ist, eine Warnung generiert wird, gibt die generierte E-Mail den Standort des Volumes, „`Boston`“, an. Dadurch können Sie das Problem priorisieren und beheben.

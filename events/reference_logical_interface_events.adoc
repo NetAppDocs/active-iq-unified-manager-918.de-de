@@ -1,0 +1,160 @@
+---
+permalink: events/reference_logical_interface_events.html 
+sidebar: sidebar 
+keywords: network, interface, lif events, impact area, availability, configuration, performance 
+summary: 'Ereignisse für Netzwerkschnittstellen liefern Informationen über den Status Ihrer Netzwerkschnittstellen (LIFs), sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad.' 
+---
+= Netzwerkschnittstellenereignisse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse für Netzwerkschnittstellen liefern Informationen über den Status Ihrer Netzwerkschnittstellen (LIFs), sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Netzwerkschnittstellenstatus ausgefallen(ocumEvtLifStatusDown)
+ a| 
+Risiko
+ a| 
+Schnittstelle
+ a| 
+Fehler
+
+
+
+ a| 
+FC/FCoE Netzwerkschnittstellenstatus ausgefallen(ocumEvtFCLifStatusDown)
+ a| 
+Risiko
+ a| 
+Schnittstelle
+ a| 
+Fehler
+
+
+
+ a| 
+Failover der Netzwerkschnittstelle nicht möglich(ocumEvtLifFailoverNotPossible)
+ a| 
+Risiko
+ a| 
+Schnittstelle
+ a| 
+Warnung
+
+
+
+ a| 
+Netzwerkschnittstelle nicht am Home Port(ocumEvtLifNotAtHomePort)
+ a| 
+Risiko
+ a| 
+Schnittstelle
+ a| 
+Warnung
+
+|===
+
+
+[[impact-area-configuration]]
+== Wirkungsbereich: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Netzwerkschnittstellenroute nicht konfiguriert(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Schnittstelle
+ a| 
+Informationen
+
+|===
+
+
+[[impact-area-performance]]
+== Wirkungsbereich: Performance
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Kritischer Schwellenwert für Netzwerkschnittstelle MB/s überschritten(ocumNetworkLifMbpsIncident)
+ a| 
+Vorfall
+ a| 
+Schnittstelle
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwelle für Netzwerkschnittstelle MB/s überschritten(ocumNetworkLifMbpsWarning)
+ a| 
+Risiko
+ a| 
+Schnittstelle
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für die FC Netzwerkschnittstelle in MB/s überschritten(ocumFcpLifMbpsIncident)
+ a| 
+Vorfall
+ a| 
+Schnittstelle
+ a| 
+Kritisch
+
+
+
+ a| 
+FC Netzwerkschnittstelle MB/s Warnschwelle überschritten(ocumFcpLifMbpsWarning)
+ a| 
+Risiko
+ a| 
+Schnittstelle
+ a| 
+Warnung
+
+
+
+ a| 
+NVMf FC Netzwerkschnittstelle MB/s Kritischer Schwellenwert überschritten(ocumNvmfFcLifMbpsIncident)
+ a| 
+Vorfall
+ a| 
+Schnittstelle
+ a| 
+Kritisch
+
+
+
+ a| 
+NVMf FC Netzwerkschnittstelle MB/s Warnschwelle überschritten(ocumNvmfFcLifMbpsWarning)
+ a| 
+Risiko
+ a| 
+Schnittstelle
+ a| 
+Warnung
+
+|===

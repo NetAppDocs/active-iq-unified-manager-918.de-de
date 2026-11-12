@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: counter, charts, zoom, view 
+summary: Die Zählerdiagramme bieten eine Zoom-Ansicht, mit der Sie die Performance-Details für den von Ihnen angegebenen Zeitraum vergrößert anzeigen können. Dadurch erhalten Sie eine deutlich höhere Granularität bei der Anzeige von Performance-Details und Ereignissen, was bei der Fehlerbehebung von Performance-Problemen von Vorteil ist. 
+---
+= Informationen zur Zoomansicht in Zählerdiagrammen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Zählerdiagramme bieten eine Zoom-Ansicht, mit der Sie die Performance-Details für den von Ihnen angegebenen Zeitraum vergrößert anzeigen können. Dadurch erhalten Sie eine deutlich höhere Granularität bei der Anzeige von Performance-Details und Ereignissen, was bei der Fehlerbehebung von Performance-Problemen von Vorteil ist.
+
+In der Zoom-Ansicht liefern einige der Aufschlüsselungsdiagramme zusätzliche Informationen im Vergleich zur Anzeige ohne Zoom-Ansicht. Beispielsweise zeigen die Zoom-Ansichtsseiten der Aufschlüsselungsdiagramme für IOPS, IOPS/TB und MBps QoS-Richtlinienwerte für Volumes und LUNs an, sofern diese in ONTAP festgelegt wurden.
+
+[NOTE]
+====
+Für systemdefinierte Performance-Schwellenwertrichtlinien sind in der Liste *Policies* nur die Richtlinien „`Node resources over-utilized`“ und „`QoS throughput limit breached`“ verfügbar. Die anderen systemdefinierten Schwellenwertrichtlinien sind derzeit nicht verfügbar.
+
+====

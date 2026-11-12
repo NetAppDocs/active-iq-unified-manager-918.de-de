@@ -1,0 +1,16 @@
+---
+permalink: install-windows/concept_upgrade_third_party_products_on_windows_um.html 
+sidebar: sidebar 
+keywords: data center manager, third-party, products, upgrade 
+summary: Sie können Drittanbieterprodukte wie JRE in Unified Manager aktualisieren, wenn Unified Manager auf Windows-Systemen installiert ist. 
+---
+= Upgrade von Drittanbieterprodukten in Active IQ Unified Manager unter Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Drittanbieterprodukte wie JRE in Unified Manager aktualisieren, wenn Unified Manager auf Windows-Systemen installiert ist.
+
+Die Unternehmen, die diese Drittanbieterprodukte entwickeln, melden regelmäßig Sicherheitslücken. Sie können die Software nach eigenem Zeitplan auf neuere Versionen aktualisieren.

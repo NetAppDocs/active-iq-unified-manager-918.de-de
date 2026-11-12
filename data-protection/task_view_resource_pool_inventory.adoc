@@ -1,0 +1,24 @@
+---
+permalink: data-protection/task_view_resource_pool_inventory.html 
+sidebar: sidebar 
+keywords: view, resource pools, inventory 
+summary: Auf der Seite „Ressourcenpools“ können Sie den Bestand der Ressourcenpools anzeigen und die verbleibende Kapazität für jeden Ressourcenpool überwachen. 
+---
+= Anzeigen des Ressourcenpool-Inventars in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Ressourcenpools“ können Sie den Bestand der Ressourcenpools anzeigen und die verbleibende Kapazität für jeden Ressourcenpool überwachen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+.Schritt
+. Im linken Navigationsbereich erfolgt die Auswahl von *Protection* > *Resource Pools*.
++
+Das Inventar des Ressourcenpools wird angezeigt.
+
+

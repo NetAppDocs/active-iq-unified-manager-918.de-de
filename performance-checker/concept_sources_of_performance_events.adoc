@@ -1,0 +1,39 @@
+---
+permalink: performance-checker/concept_sources_of_performance_events.html 
+sidebar: sidebar 
+keywords: sources, performance, events 
+summary: Performance-Ereignisse sind Probleme im Zusammenhang mit der Performance von Workloads auf einem Cluster. Sie helfen Ihnen, Storage-Objekte mit langsamen Antwortzeiten zu identifizieren, die auch als hohe Latenz bezeichnet werden. Zusammen mit anderen Systemstatusereignissen, die zur gleichen Zeit aufgetreten sind, können Sie die Probleme ermitteln, die die langsamen Antwortzeiten möglicherweise verursacht oder dazu beigetragen haben. 
+---
+= Quellen von Leistungsereignissen in Active IQ Unified Manager identifizieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Performance-Ereignisse sind Probleme im Zusammenhang mit der Performance von Workloads auf einem Cluster. Sie helfen Ihnen, Storage-Objekte mit langsamen Antwortzeiten zu identifizieren, die auch als hohe Latenz bezeichnet werden. Zusammen mit anderen Systemstatusereignissen, die zur gleichen Zeit aufgetreten sind, können Sie die Probleme ermitteln, die die langsamen Antwortzeiten möglicherweise verursacht oder dazu beigetragen haben.
+
+Unified Manager empfängt Performance-Ereignisse aus folgenden Quellen:
+
+* *Benutzerdefinierte Performance-Schwellenwertrichtlinienereignisse*
++
+Performance-Probleme aufgrund von benutzerdefinierten Schwellenwerten, die Sie festgelegt haben. Performance-Schwellenwertrichtlinien werden für Storage-Objekte, zum Beispiel Aggregate und Volumes, konfiguriert, sodass Ereignisse generiert werden, wenn ein Schwellenwert für einen Performance-Zähler überschritten wurde.
+
++
+Zum Empfangen dieser Ereignisse müssen Sie eine Performance-Schwellenwertrichtlinie definieren und sie einem Storage-Objekt zuweisen.
+
+* *Systemdefinierte Ereignisse von Performance-Schwellenwertrichtlinien*
++
+Performance Probleme aufgrund von Schwellenwerten, die systemdefiniert sind. Diese Schwellenwertrichtlinien sind in der Installation von Unified Manager enthalten, um häufig auftretende Performance Probleme abzudecken.
+
++
+Diese Schwellenwertrichtlinien sind standardmäßig aktiviert, und Sie sehen möglicherweise kurz nach dem Hinzufügen eines Clusters Ereignisse.
+
+* *Dynamische Performance-Schwellenwert-Ereignisse*
++
+Performanceprobleme, die auf Ausfälle oder Fehler in einer IT-Infrastruktur oder auf Workloads zurückzuführen sind, die Clusterressourcen übermäßig nutzen. Die Ursache dieser Ereignisse kann ein einfaches Problem sein, das sich im Lauf der Zeit von selbst behebt oder durch eine Reparatur oder Konfigurationsänderung behoben werden kann. Ein dynamisches Schwellenwertereignis zeigt an, dass die Workloads auf einem ONTAP System aufgrund anderer Workloads mit hoher Auslastung gemeinsam genutzter Clusterkomponenten langsam sind.
+
++
+Diese Schwellenwerte sind standardmäßig aktiviert, und es kann vorkommen, dass nach drei Tagen der Datenerfassung von einem neuen Cluster Ereignisse auftreten.
+
+

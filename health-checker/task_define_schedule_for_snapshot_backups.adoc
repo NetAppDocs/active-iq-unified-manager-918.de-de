@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_define_schedule_for_snapshot_backups.html 
+sidebar: sidebar 
+keywords: define, backup, schedule, linux, windows, snapshot copy, copies 
+summary: Über die Unified Manager Benutzeroberfläche können Sie den Zeitplan konfigurieren, nach dem Unified Manager Snapshot Kopien erstellt werden. 
+---
+= In Active IQ Unified Manager lässt sich ein Sicherungszeitplan für Linux und Windows festlegen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über die Unified Manager Benutzeroberfläche können Sie den Zeitplan konfigurieren, nach dem Unified Manager Snapshot Kopien erstellt werden.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Die Einstellungen für die Erstellung von Snapshot-Kopien über die Managementplattform müssen konfiguriert worden sein, damit das Ziel identifiziert werden kann, an dem die Snapshots erstellt werden.
+
+
+Snapshot Kopien werden in nur wenigen Minuten erstellt, und die Unified Manager Datenbank wird nur für wenige Sekunden gesperrt.
+
+[NOTE]
+====
+Ein Backup, das in den ersten 15 Tagen nach dem Hinzufügen eines neuen Clusters erstellt wurde, ist möglicherweise nicht genau genug, um die historischen Performance-Daten zu erhalten.
+
+====
+.Schritte
+. Im linken Navigationsbereich können Sie *General* > *Database Backup* auswählen.
+. Auf der Seite *Datenbanksicherung* können die *Sicherungseinstellungen* ausgewählt werden.
+. Im Feld *Aufbewahrungsanzahl* wird die maximale Anzahl der Snapshot Kopien festgelegt, die beibehalten werden soll.
++
+Der Standardwert für die Aufbewahrungsanzahl ist 10. Die maximale Anzahl an Snapshot Kopien hängt von der ONTAP Softwareversion im Cluster ab. Sie können dieses Feld leer lassen, um unabhängig von der ONTAP Version den Maximalwert zu implementieren.
+
+. Sie wählen die Schaltfläche *Scheduled Daily* oder *Scheduled Weekly* aus und geben anschließend die Details des Zeitplans an.
+. Auf *Anwenden* klicken.
+
+
+Snapshot-Kopien werden gemäß dem Zeitplan erstellt. Die verfügbaren Backup-Dateien sind auf der Seite „Datenbank-Backup“ zu sehen.
+
+Aufgrund der Wichtigkeit dieses Volumes und der Snapshots empfiehlt es sich, eine oder zwei Warnmeldungen für dieses Volume zu erstellen, damit Sie benachrichtigt werden, wenn eines der folgenden Ereignisse eintritt:
+
+* Der Speicherplatz des Volumes ist zu 90 % belegt. Für das Einrichten der Benachrichtigung dient das Ereignis *Volume Space Full*.
++
+Sie können die Kapazität des Volumes mithilfe von ONTAP System Manager oder der ONTAP CLI erhöhen, damit der Unified Manager Datenbank nicht der Speicherplatz ausgeht.
+
+* Die Anzahl der Snapshots nähert sich der maximalen Anzahl. Die Warnung lässt sich mit dem Ereignis *Too Many Snapshot Copies* einrichten.
++
+Sie können ältere Snapshots mit ONTAP System Manager oder der ONTAP CLI löschen, sodass immer Platz für neue Snapshot Kopien vorhanden ist.
+
+
+
+Sie konfigurieren Warnmeldungen auf der Seite „Alert Setup“.

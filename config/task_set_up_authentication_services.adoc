@@ -1,0 +1,74 @@
+---
+permalink: config/task_set_up_authentication_services.html 
+sidebar: sidebar 
+keywords: set up, authentication, services 
+summary: 'Authentifizierungs Services ermöglichen die Authentifizierung von Remote-Benutzern oder Remote-Gruppen auf einem Authentifizierungsserver, bevor sie Zugriff auf Unified Manager erhalten. Sie können Benutzer mithilfe vordefinierter Authentifizierungs Services (wie Active Directory oder OpenLDAP) authentifizieren oder einen eigenen Authentifizierungsmechanismus konfigurieren.' 
+---
+= Einrichtung von Authentifizierungsdiensten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Authentifizierungs Services ermöglichen die Authentifizierung von Remote-Benutzern oder Remote-Gruppen auf einem Authentifizierungsserver, bevor sie Zugriff auf Unified Manager erhalten. Sie können Benutzer mithilfe vordefinierter Authentifizierungs Services (wie Active Directory oder OpenLDAP) authentifizieren oder einen eigenen Authentifizierungsmechanismus konfigurieren.
+
+.Bevor Sie beginnen
+* Die Remote-Authentifizierung muss aktiviert sein.
+* Sie benötigen die Rolle des Anwendungsadministrators.
+
+
+.Schritte
+. Im linken Navigationsbereich wählen Sie *Allgemein* > *Remote-Authentifizierung* aus.
+. Auswahl eines der folgenden Authentifizierung Services:
++
+[cols="2*"]
+|===
+| Wenn Sie auswählen... | Fahren Sie dann wie folgt fort... 
+
+
+ a| 
+Active Directory
+ a| 
+.. Administratorname und Passwort eingeben.
+.. Der Basis-individuelle Name des Authentifizierungsservers ist festzulegen.
++
+Wenn beispielsweise der Domänenname des Authentifizierungsservers +ou@domain.com+ lautet, dann lautet der grundlegende individuelle Name *cn=ou,dc=domain,dc=com*.
+
+
+
+
+
+ a| 
+OpenLDAP
+ a| 
+.. Sie geben den individuellen Namen für Bind und das Passwort für Bind ein.
+.. Der Basis-individuelle Name des Authentifizierungsservers ist festzulegen.
++
+Wenn beispielsweise der Domänenname des Authentifizierungsservers +ou@domain.com+ lautet, dann lautet der grundlegende individuelle Name *cn=ou,dc=domain,dc=com*.
+
+
+
+
+
+ a| 
+Andere
+ a| 
+.. Sie geben den individuellen Namen für Bind und das Passwort für Bind ein.
+.. Der Basis-individuelle Name des Authentifizierungsservers ist festzulegen.
++
+Wenn beispielsweise der Domänenname des Authentifizierungsservers +ou@domain.com+ lautet, dann lautet der grundlegende individuelle Name *cn=ou,dc=domain,dc=com*.
+
+.. Die vom Authentifizierungsserver unterstützte LDAP Protokollversion.
+.. Einzugeben sind Benutzername, Gruppenzugehörigkeit, Benutzergruppe und Mitgliedsattribute.
+
+
+|===
++
+[NOTE]
+====
+Wenn Sie den Authentifizierungsdienst ändern möchten, müssen Sie alle vorhandenen Authentifizierungsserver löschen und anschließend neue Authentifizierungsserver hinzufügen.
+
+====
+. Auf *Speichern* klicken.
+

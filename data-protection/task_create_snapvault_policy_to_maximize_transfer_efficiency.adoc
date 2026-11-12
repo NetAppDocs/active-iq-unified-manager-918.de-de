@@ -1,0 +1,35 @@
+---
+permalink: data-protection/task_create_snapvault_policy_to_maximize_transfer_efficiency.html 
+sidebar: sidebar 
+keywords: create, snapvault, policy,  maximize, transfer, efficiency 
+summary: Sie können eine neue SnapVault Richtlinie erstellen, um die Priorität für eine SnapVault Übertragung festzulegen. Richtlinien werden verwendet, um die Effizienz von Transfers vom primären zum sekundären System in einer Datensicherungsbeziehung zu maximieren. 
+---
+= Erstellung einer SnapVault Richtlinie zur Maximierung der Übertragungseffizienz in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine neue SnapVault Richtlinie erstellen, um die Priorität für eine SnapVault Übertragung festzulegen. Richtlinien werden verwendet, um die Effizienz von Transfers vom primären zum sekundären System in einer Datensicherungsbeziehung zu maximieren.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+* Sie müssen den Bereich „Zielinformationen“ im Dialogfeld „Schutz konfigurieren“ bereits ausgefüllt haben.
+
+
+.Schritte
+. Auf der Registerkarte *SnapVault* des Dialogfelds *Configure Protection* befindet sich im Bereich *Relationship Settings* der Link *Create Policy*.
++
+Der SnapVault Tab wird angezeigt.
+
+. Im Feld *Richtlinienname* können Sie den Namen eingeben, den Sie der Richtlinie geben möchten.
+. Im Feld *Übertragungspriorität* ist die Übertragungspriorität auszuwählen, die der Richtlinie zugewiesen werden soll.
+. *Optional:* Im Feld *Kommentar* kann ein Kommentar für die Richtlinie eingegeben werden.
+. Im Bereich *Replikationsbezeichnung* können Sie bei Bedarf eine Replikationsbezeichnung hinzufügen oder bearbeiten.
+. Klicken Sie auf *Create*.
++
+Die neue Richtlinie wird in der Dropdown-Liste „Richtlinie erstellen“ angezeigt.
+
+

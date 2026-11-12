@@ -1,0 +1,50 @@
+---
+permalink: health-checker/task_disable_specific_security_events.html 
+sidebar: sidebar 
+keywords: disable, specific, security events 
+summary: Alle Ereignisse sind standardmäßig aktiviert. Sie können bestimmte Ereignisse deaktivieren, um zu verhindern, dass Benachrichtigungen für Ereignisse generiert werden, die in Ihrer Umgebung nicht relevant sind. Sie können deaktivierte Ereignisse wieder aktivieren, wenn Sie wieder Benachrichtigungen dafür erhalten möchten. 
+---
+= Deaktivieren bestimmter Sicherheitsereignisse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Alle Ereignisse sind standardmäßig aktiviert. Sie können bestimmte Ereignisse deaktivieren, um zu verhindern, dass Benachrichtigungen für Ereignisse generiert werden, die in Ihrer Umgebung nicht relevant sind. Sie können deaktivierte Ereignisse wieder aktivieren, wenn Sie wieder Benachrichtigungen dafür erhalten möchten.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Wenn Sie Ereignisse deaktivieren, werden die zuvor im System generierten Ereignisse als veraltet markiert, und die für diese Ereignisse konfigurierten Warnmeldungen werden nicht ausgelöst. Wenn Sie deaktivierte Ereignisse wieder aktivieren, werden die Benachrichtigungen für diese Ereignisse ab dem nächsten Überwachungszyklus generiert.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage Management* > *Ereigniseinrichtung*.
+. Auf der Seite *Event* Setup können Ereignisse deaktiviert oder aktiviert werden, indem eine der folgenden Optionen ausgewählt wird:
++
+[cols="2*"]
+|===
+| Wenn Sie möchten... | Fahren Sie dann wie folgt fort... 
+
+
+ a| 
+Ereignisse deaktivieren
+ a| 
+.. Klicken Sie auf *Deaktivieren*.
+.. Im Dialogfeld „Ereignisse deaktivieren“ wird der Schweregrad *Warning* ausgewählt. Dies ist die Kategorie für alle Sicherheitsereignisse.
+.. In der Spalte „Übereinstimmende Ereignisse“ lassen sich die Sicherheitsereignisse auswählen, die deaktiviert werden sollen; anschließend lassen sich diese Ereignisse mit dem Pfeil nach rechts in die Spalte „Ereignisse deaktivieren“ verschieben.
+.. Anschließend erfolgt die Auswahl von *Save and Close*.
+.. Stellen Sie sicher, dass die deaktivierten Ereignisse in der Listenansicht der Seite „Ereigniseinrichtung“ angezeigt werden.
+
+
+
+
+ a| 
+Ereignisse aktivieren
+ a| 
+.. In der Liste der deaktivierten Ereignisse erfolgt die Auswahl des Kästchens für das Ereignis oder die Ereignisse, die wieder aktiviert werden sollen.
+.. Klicken Sie auf *Enable*.
+
+
+|===
+

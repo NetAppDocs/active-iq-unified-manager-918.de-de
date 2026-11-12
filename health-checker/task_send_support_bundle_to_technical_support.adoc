@@ -1,0 +1,27 @@
+---
+permalink: health-checker/task_send_support_bundle_to_technical_support.html 
+sidebar: sidebar 
+keywords: support bundle, technical support 
+summary: Wenn ein Problem detailliertere Diagnose- und Fehlerbehebungsinformationen erfordert, als eine AutoSupport Nachricht liefern kann, können Sie ein Supportpaket an den technischen Support senden. 
+---
+= Ein Supportpaket kann aus Active IQ Unified Manager an den technischen Support gesendet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Problem detailliertere Diagnose- und Fehlerbehebungsinformationen erfordert, als eine AutoSupport Nachricht liefern kann, können Sie ein Supportpaket an den technischen Support senden.
+
+.Bevor Sie beginnen
+Sie benötigen Zugriff auf das Support-Bundle, um es an den technischen Support senden zu können.
+
+Sie benötigen eine Fallnummer, die über die Website des technischen Supports erstellt wurde.
+
+.Schritte
+. Anmeldung bei der NetApp Support Site.
+. Hochladen der Datei.
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/How_to_upload_a_file_to_NetApp["Hochladen einer Datei auf NetApp"]
+
+

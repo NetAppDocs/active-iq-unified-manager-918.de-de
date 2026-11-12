@@ -1,0 +1,27 @@
+---
+permalink: storage-mgmt/task_use_unified_manager_help.html 
+sidebar: sidebar 
+keywords: use, unified manager, help 
+summary: Die Hilfe enthält Informationen zu allen Funktionen von Active IQ Unified Manager. Mithilfe des Inhaltsverzeichnisses, des Index oder der Suchfunktion finden Sie Informationen zu den Funktionen und deren Verwendung. 
+---
+= Verwendung der Active IQ Unified Manager Hilfe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Hilfe enthält Informationen zu allen Funktionen von Active IQ Unified Manager. Mithilfe des Inhaltsverzeichnisses, des Index oder der Suchfunktion finden Sie Informationen zu den Funktionen und deren Verwendung.
+
+Hilfe ist über die einzelnen Registerkarten und die Menüleiste der Benutzeroberfläche von Unified Manager verfügbar.
+
+Die Suchfunktion in der Hilfe funktioniert nicht für Wortteile.
+
+* Informationen zu bestimmten Feldern oder Parametern finden Sie unter image:../media/helpicon_um60.gif["Symbol für kontextbezogene Hilfe"].
+* Zum Anzeigen des gesamten Hilfseinhalts wählen Sie in der Menüleiste *image:../media/helpicon_um60.gif["Symbol für kontextbezogene Hilfe"]* > *Hilfe/Dokumentation* aus.
++
+Detailliertere Informationen finden Sie, wenn Sie einen beliebigen Abschnitt des Inhaltsverzeichnisses im Navigationsbereich erweitern.
+
+* Zum Durchsuchen der Hilfethemen können Sie im Navigationsbereich die Registerkarte *Search* auswählen, das gewünschte Wort oder die gewünschte Wortfolge eingeben und auf *Go!* klicken.
+* Hilfethemen lassen sich über das Druckersymbol drucken.
+

@@ -1,0 +1,23 @@
+---
+permalink: performance-checker/task_sort_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: sort, object, inventory, performance, pages 
+summary: Sie können alle Daten auf den Performance-Seiten der Objektinventur nach jeder Spalte in aufsteigender oder absteigender Reihenfolge sortieren. Dadurch lassen sich Objektinventardaten schnell auffinden, was bei der Untersuchung der Performance oder beim Beginn eines Fehlerbehebungsprozesses hilfreich ist. 
+---
+= Die Daten auf den Seiten zur Objektinventar-Performance in Active IQ Unified Manager können sortiert werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können alle Daten auf den Performance-Seiten der Objektinventur nach jeder Spalte in aufsteigender oder absteigender Reihenfolge sortieren. Dadurch lassen sich Objektinventardaten schnell auffinden, was bei der Untersuchung der Performance oder beim Beginn eines Fehlerbehebungsprozesses hilfreich ist.
+
+Die zum Sortieren ausgewählte Spalte wird durch den Namen einer hervorgehobenen Spaltenüberschrift und ein Pfeilsymbol rechts neben dem Namen angezeigt, das die Sortierrichtung angibt. Ein Pfeil nach oben weist auf aufsteigende Sortierung hin, ein Pfeil nach unten auf absteigende Sortierung. Die Standardsortierreihenfolge erfolgt nach *Status* (Ereigniskritikalität) in absteigender Reihenfolge, wobei die kritischsten Performance-Ereignisse zuerst aufgeführt werden.
+
+.Schritt
+. Durch Klicken auf einen Spaltennamen kann die Sortierreihenfolge der Spalte zwischen aufsteigender und absteigender Reihenfolge umgeschaltet werden.
++
+Die Inhalte der Seite „Objektinventar-Performance“ sind auf Grundlage der ausgewählten Spalte in aufsteigender oder absteigender Reihenfolge sortiert.
+
+

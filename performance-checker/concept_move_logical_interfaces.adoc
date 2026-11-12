@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/concept_move_logical_interfaces.html 
+sidebar: sidebar 
+keywords: move, logical, interfaces, lifs 
+summary: 'Das Verschieben logischer Schnittstellen (LIFs) auf einen weniger ausgelasteten Port kann dazu beitragen, die Lastverteilung zu verbessern, Wartungsarbeiten und das Performance-Tuning zu unterstützen sowie indirekte Zugriffe zu reduzieren.' 
+---
+= Verschieben von LIFs zur Verbesserung der Leistung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Verschieben logischer Schnittstellen (LIFs) auf einen weniger ausgelasteten Port kann dazu beitragen, die Lastverteilung zu verbessern, Wartungsarbeiten und das Performance-Tuning zu unterstützen sowie indirekte Zugriffe zu reduzieren.
+
+Indirekter Zugriff kann die Systemeffizienz beeinträchtigen. Er tritt auf, wenn die Workload eines Volume unterschiedliche Knoten für die Netzwerkverarbeitung und die Datenverarbeitung verwendet. Um indirekten Zugriff zu reduzieren, können Sie LIFs neu anordnen. Dies umfasst das Verschieben von LIFs, sodass sie denselben Knoten für die Netzwerkverarbeitung und die Datenverarbeitung verwenden. Sie können den Lastausgleich so konfigurieren, dass ONTAP ausgelastete LIFs automatisch auf einen anderen Port verschiebt, oder Sie können eine LIF manuell verschieben.
+
+[cols="2*"]
+|===
+| *Vorteile* | *Überlegungen* 
+
+
+ a| 
+* Verbesserung der Lastverteilung.
+* Indirekten Zugriff reduzieren.
+
+ a| 
+[NOTE]
+====
+Beim Verschieben einer LIF, die mit CIFS-Freigaben verbunden ist, werden Clients, die auf die CIFS-Freigaben zugreifen, getrennt. Sämtliche Lese- und Schreibanforderungen an die CIFS-Freigaben werden unterbrochen.
+
+====
+|===
+Sie verwenden die ONTAP Befehle zur Konfiguration des Lastausgleichs. Weitere Informationen finden Sie in der ONTAP Networking-Dokumentation.
+
+Sie verwenden ONTAP System Manager und die ONTAP CLI-Befehle, um LIFs manuell zu verschieben.

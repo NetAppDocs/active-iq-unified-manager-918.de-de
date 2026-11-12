@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_break_snapmirror_relationship.html 
+sidebar: sidebar 
+keywords: break, snapmirror, relationship, volume, relationship page 
+summary: Sie können eine Schutzbeziehung aufheben, um Datentransfers zwischen einem Quell-Volume und einem Ziel-Volume in einer SnapMirror Beziehung zu stoppen. Eine Beziehung kann beispielsweise für die Datenmigration, die Notfallwiederherstellung oder für Applikationstests aufgehoben werden. Das Ziel-Volume wird in ein lesen/schreiben-Volume geändert. Eine SnapVault Beziehung kann nicht aufgehoben werden. 
+---
+= Eine SnapMirror Beziehung auf der Seite „Volume Beziehungen“ von Active IQ Unified Manager aufheben
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Schutzbeziehung aufheben, um Datentransfers zwischen einem Quell-Volume und einem Ziel-Volume in einer SnapMirror Beziehung zu stoppen. Eine Beziehung kann beispielsweise für die Datenmigration, die Notfallwiederherstellung oder für Applikationstests aufgehoben werden. Das Ziel-Volume wird in ein lesen/schreiben-Volume geändert. Eine SnapVault Beziehung kann nicht aufgehoben werden.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+.Schritte
+. Auf der Seite *Volume-Beziehungen* sind ein oder mehrere Volumes mit Schutzbeziehungen auszuwählen, für die der Datentransfer gestoppt werden soll; anschließend ist in der Symbolleiste auf *Unterbrechen* zu klicken.
++
+Das Dialogfeld „Beziehung aufheben“ wird angezeigt.
+
+. Über *Weiter* lässt sich die Beziehung beenden.
+. Auf der Seite *Volume-Beziehungen* muss in der Spalte *Beziehungsstatus* ersichtlich sein, dass die Beziehung unterbrochen ist.
++
+Die Spalte „Beziehungsstatus“ ist standardmäßig ausgeblendet, sodass Sie sie möglicherweise in der Liste der ein-/ausblendbaren Spalten auswählen müssen image:../media/icon_columnshowhide_sm_onc.gif[""].
+
+

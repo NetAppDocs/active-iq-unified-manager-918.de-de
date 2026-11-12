@@ -1,0 +1,33 @@
+---
+permalink: storage-mgmt/task_add_space_to_data_disk_of_vmware.html 
+sidebar: sidebar 
+keywords: add space, data, disk, vmware, virtual, machine 
+summary: Wenn Sie den Speicherplatz auf der Datenfestplatte für die Unified Manager Datenbank erhöhen müssen, können Sie nach der Installation Kapazität hinzufügen, indem Sie den Festplattenspeicher über die Unified Manager Wartungs-Managementplattform vergrößern. 
+---
+= Hinzufügen von Speicherplatz zur Datenfestplatte der VMware Virtual Machine in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie den Speicherplatz auf der Datenfestplatte für die Unified Manager Datenbank erhöhen müssen, können Sie nach der Installation Kapazität hinzufügen, indem Sie den Festplattenspeicher über die Unified Manager Wartungs-Managementplattform vergrößern.
+
+.Bevor Sie beginnen
+* Sie müssen Zugriff auf den vSphere Client haben.
+* Die virtuelle Maschine darf keine lokal gespeicherten Snapshots enthalten.
+* Sie benötigen die Zugangsdaten für den Wartungsbenutzer.
+
+
+Wir empfehlen Ihnen, Ihre virtuelle Maschine zu sichern, bevor Sie die Größe der virtuellen Festplatten erhöhen.
+
+.Schritte
+. Im vSphere Client können Sie die virtuelle Maschine Unified Manager auswählen und dann die Festplattenkapazität für Daten `disk 3` erweitern. Einzelheiten sind der VMware Dokumentation zu entnehmen.
++
+In einigen seltenen Fällen verwendet das Unified Manager Deployment statt „Festplatte 3“ „Festplatte 2“ als Datenfestplatte. Falls dies in Ihrem Deployment der Fall ist, ist der Speicherplatz der jeweils größeren Festplatte zu erhöhen. Die Datenfestplatte verfügt stets über mehr Speicherplatz als die andere Festplatte.
+
+. Im vSphere Client werden die virtuelle Maschine Unified Manager und anschließend die Registerkarte *Console* ausgewählt.
+. Im Fenster der Managementplattform erfolgt anschließend die Anmeldung an der Wartungskonsole mit Ihrem Benutzernamen und Passwort.
+. Im *Hauptmenü* erfolgt die Eingabe der Nummer für die Option *Systemkonfiguration*.
+. Im *Systemkonfigurationsmenü* ist die Zahl für die Option *Datenträgergröße erhöhen* einzugeben.
+

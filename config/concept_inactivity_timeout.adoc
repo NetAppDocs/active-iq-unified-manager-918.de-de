@@ -1,0 +1,22 @@
+---
+permalink: config/concept_inactivity_timeout.html 
+sidebar: sidebar 
+keywords: inactivity timeout, feature settings 
+summary: Sie können den Wert für die Zeitüberschreitung bei Inaktivität für Active IQ Unified Manager festlegen. Nach der angegebenen Dauer der Inaktivität wird die Applikation automatisch abgemeldet. Diese Option ist standardmäßig aktiviert. 
+---
+= Angeben der Zeitüberschreitung bei Inaktivität in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Wert für die Zeitüberschreitung bei Inaktivität für Active IQ Unified Manager festlegen. Nach der angegebenen Dauer der Inaktivität wird die Applikation automatisch abgemeldet. Diese Option ist standardmäßig aktiviert.
+
+Sie können diese Funktion unter *Allgemein* > *Funktionseinstellungen* > *Inaktivitäts-Timeout* deaktivieren oder die Zeit anpassen. Nach der Aktivierung sollten Sie im Feld *ABMELDEN NACH* die maximale Inaktivitätszeit (in Minuten) festlegen, nach der das System Sie automatisch abmeldet. Der Standardwert beträgt 4320 Minuten (72 Stunden).
+
+[NOTE]
+====
+Diese Option ist nicht verfügbar, wenn Sie die Security Assertion Markup Language (SAML) Authentifizierung aktiviert haben.
+
+====

@@ -1,0 +1,92 @@
+---
+permalink: health-checker/concept_introduction_to_unified_manager_health_monitoring.html 
+sidebar: sidebar 
+keywords: introduction, active iq, unified manager, health, monitor 
+summary: 'Active IQ Unified Manager (formerly OnCommand Unified Manager) ermöglicht die Überwachung einer großen Anzahl von Systemen mit ONTAP-Software über eine zentrale Benutzeroberfläche. Die Unified Manager Serverinfrastruktur bietet Skalierbarkeit, Supportfähigkeit sowie erweiterte Überwachungs- und Benachrichtigungsfunktionen.' 
+---
+= Informationen zur Zustandsüberwachung von Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager (formerly OnCommand Unified Manager) ermöglicht die Überwachung einer großen Anzahl von Systemen mit ONTAP-Software über eine zentrale Benutzeroberfläche. Die Unified Manager Serverinfrastruktur bietet Skalierbarkeit, Supportfähigkeit sowie erweiterte Überwachungs- und Benachrichtigungsfunktionen.
+
+Zu den wichtigsten Funktionen des Unified Manager gehören Überwachung, Alarmierung, das Managen der Verfügbarkeit und Kapazität von Clustern, das Managen der Schutzfunktionen sowie die Bündelung von Diagnosedaten und deren Weiterleitung an den technischen Support.
+
+Mit Unified Manager können Sie Ihre Cluster überwachen. Wenn Probleme im Cluster auftreten, benachrichtigt Sie Unified Manager über Ereignisse mit detaillierten Informationen zu diesen Problemen. Einige Ereignisse bieten Ihnen auch Abhilfemaßnahmen, mit denen Sie die Probleme beheben können. Sie können Warnmeldungen für Ereignisse konfigurieren, sodass Sie bei Problemen per E-Mail und SNMP-Traps benachrichtigt werden.
+
+Mit Unified Manager können Sie Storage Objekte in Ihrer Umgebung managen, indem Sie sie mit Annotationen verknüpfen. Sie können benutzerdefinierte Annotationen erstellen und Cluster, Storage Virtual Machines (SVMs) und Volumes dynamisch über Regeln mit den Annotationen verknüpfen.
+
+Sie können auch die Storage-Anforderungen Ihrer Clusterobjekte anhand der Informationen in den Kapazitäts- und Systemstatusdiagrammen für das jeweilige Clusterobjekt planen.
+
+
+
+[[physical-and-logical-capacity]]
+== Physische und logische Kapazität
+
+Unified Manager verwendet für ONTAP Storage Objekte die Konzepte des physischen und logischen Speicherplatzes.
+
+* Physische Kapazität: Der physische Speicherplatz bezieht sich auf die physischen Blöcke des Storage, die im Volume verwendet werden. „Genutzte physische Kapazität“ ist typischerweise kleiner als die genutzte logische Kapazität, da Daten durch Storage-Effizienzfunktionen (wie Deduplizierung und Komprimierung) reduziert werden.
+* Logische Kapazität: Logischer Speicherplatz bezeichnet den nutzbaren Speicherplatz (die logischen Blöcke) in einem Volume. Logischer Speicherplatz bezieht sich darauf, wie theoretischer Speicherplatz genutzt werden kann, ohne die Ergebnisse von Deduplizierung oder Komprimierung zu berücksichtigen. „Genutzter logischer Speicherplatz“ ist der genutzte physische Speicherplatz zuzüglich der Einsparungen durch konfigurierte Storage-Effizienzfunktionen (wie Deduplizierung und Komprimierung). Dieser Wert erscheint oft höher als die genutzte physische Kapazität, da er die Datenkomprimierung und andere Verringerungen des physischen Speicherplatzes nicht widerspiegelt. Daher könnte die gesamte logische Kapazität höher sein als der bereitgestellte Speicherplatz.
+
+
+
+
+[[capacity-measurement-units]]
+== Kapazitätsmaßeinheiten
+
+Unified Manager berechnet die Storage-Kapazität auf der Grundlage binärer Einheiten von 1024 (2^10^) Byte. In ONTAP 9.10.0 und früheren Versionen wurden diese Einheiten als KB, MB, GB, TB und PB angezeigt. Ab ONTAP 9.10.1 werden sie in Unified Manager als KiB, MiB, GiB, TiB und PiB angezeigt.
+
+
+NOTE: Die für den Datendurchsatz verwendeten Einheiten sind weiterhin Kilobyte pro Sekunde (Kbps), Megabyte pro Sekunde (Mbps), Gigabyte pro Sekunde (Gbit/s), Terabyte pro Sekunde (Tbps) usw. für alle Releases von ONTAP.
+
+[cols="4*"]
+|===
+| Im Unified Manager für ONTAP 9.10.0 und frühere Versionen angezeigte Kapazitätseinheit | In Unified Manager für ONTAP 9.10.1 angezeigte Kapazitätseinheit | Berechnung | Wert in Bytes 
+
+
+ a| 
+KB
+ a| 
+KiB
+ a| 
+1024
+ a| 
+1024 Bytes
+
+
+
+ a| 
+MB
+ a| 
+MiB
+ a| 
+1024 * 1024
+ a| 
+1.048.576 Bytes
+
+
+
+ a| 
+GB
+ a| 
+GiB
+ a| 
+1024 * 1024 * 1024
+ a| 
+1.073.741.824 Bytes
+
+
+
+ a| 
+TB
+ a| 
+TiB
+ a| 
+1024 * 1024 * 1024 * 1024
+ a| 
+1.099.511.627.776 Bytes
+
+|===

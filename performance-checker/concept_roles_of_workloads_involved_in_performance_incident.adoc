@@ -1,0 +1,49 @@
+---
+permalink: performance-checker/concept_roles_of_workloads_involved_in_performance_incident.html 
+sidebar: sidebar 
+keywords: roles, workloads, involved, performance, event 
+summary: Unified Manager verwendet Rollen, um die Beteiligung eines Workloads an einem Performance-Ereignis zu identifizieren. Zu diesen Rollen gehören Opfer, Täter und Aggressoren. Ein benutzerdefinierter Workload kann gleichzeitig Opfer, Täter und Aggressor sein. 
+---
+= Arbeitslastrollen in Leistungsereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager verwendet Rollen, um die Beteiligung eines Workloads an einem Performance-Ereignis zu identifizieren. Zu diesen Rollen gehören Opfer, Täter und Aggressoren. Ein benutzerdefinierter Workload kann gleichzeitig Opfer, Täter und Aggressor sein.
+
+|===
+| Rolle | Beschreibung 
+
+
+ a| 
+Opfer
+ a| 
+Eine benutzerdefinierte Arbeitslast, deren Performance aufgrund anderer Arbeitslasten, sogenannter Bullies, die eine Clusterkomponente übermäßig beanspruchen, gesunken ist. Nur benutzerdefinierte Arbeitslasten werden als Opfer identifiziert. Unified Manager identifiziert Opfer-Arbeitslasten anhand ihrer Latenzabweichung, wobei die tatsächliche Latenz während eines Ereignisses im Vergleich zur Latenzprognose (erwarteter Bereich) deutlich angestiegen ist.
+
+
+
+ a| 
+Mobber
+ a| 
+Eine benutzerdefinierte oder systemdefinierte Arbeitslast, deren übermäßige Nutzung einer Clusterkomponente dazu geführt hat, dass die Performance anderer Arbeitslasten, sogenannter Opfer, abgenommen hat. Unified Manager identifiziert Bully-Workloads anhand ihrer Abweichung bei der Nutzung einer Clusterkomponente, wobei die tatsächliche Nutzung während eines Ereignisses im Vergleich zum erwarteten Nutzungsbereich stark angestiegen ist.
+
+
+
+ a| 
+Hai
+ a| 
+Eine benutzerdefinierte Workload mit der höchsten Auslastung einer Clusterkomponente im Vergleich zu allen an einem Ereignis beteiligten Workloads. Unified Manager identifiziert Shark Workloads anhand ihrer Nutzung einer Clusterkomponente während eines Ereignisses.
+
+|===
+Workloads auf einem Cluster können viele der Cluster-Komponenten gemeinsam nutzen, wie z. B. Aggregate und die CPU für Netzwerk- und Datenverarbeitung. Wenn ein Workload, wie z. B. ein Volume, seine Nutzung einer Cluster-Komponente so weit steigert, dass die Komponente die Workload-Anforderungen nicht mehr effizient erfüllen kann, befindet sich die Komponente in Ressourcenkonflikten (Contention). Der Workload, der eine Cluster-Komponente übermäßig nutzt, wird als Bully bezeichnet. Die anderen Workloads, die diese Komponenten gemeinsam nutzen und deren Performance durch den Bully beeinträchtigt wird, sind die Opfer (Victims). Aktivitäten von systemdefinierten Workloads wie Deduplizierung oder Snapshot Kopien können ebenfalls zu "`Bullying`" eskalieren.
+
+Wenn Unified Manager ein Ereignis erkennt, identifiziert er alle beteiligten Workloads und Clusterkomponenten, einschließlich der Bully-Workloads, die das Ereignis verursacht haben, der Clusterkomponente, um die konkurriert wird, und der Opfer-Workloads, deren Performance aufgrund der erhöhten Aktivität der Bully-Workloads abgenommen hat.
+
+[NOTE]
+====
+Kann Unified Manager die ressourcenintensiven Workloads nicht identifizieren, gibt er nur eine Warnung zu den betroffenen Workloads und der beteiligten Clusterkomponente aus.
+
+====
+Unified Manager kann Workloads identifizieren, die Opfer dominanter Workloads sind, und auch erkennen, wann diese Workloads selbst zu dominanten Workloads werden. Ein Workload kann für sich selbst ein dominanter Workload sein. Beispielsweise führt ein hochperformanter Workload, der durch ein Limit einer Richtliniengruppe gedrosselt wird, dazu, dass alle Workloads in der Richtliniengruppe gedrosselt werden, einschließlich ihm selbst. Ein Workload, der bei einem laufenden Performance-Ereignis ein dominanter Workload oder ein Opfer ist, kann seine Rolle ändern oder nicht mehr an dem Ereignis beteiligt sein.

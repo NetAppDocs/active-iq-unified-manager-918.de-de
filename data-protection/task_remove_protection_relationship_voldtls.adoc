@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_remove_protection_relationship_voldtls.html 
+sidebar: sidebar 
+keywords: remove, protection, relationship,  volume, health details page 
+summary: Die Schutzbeziehung zwischen einer ausgewählten Quelle und einem Ziel wird dauerhaft entfernt. Dadurch werden alle Metadaten gelöscht; dieser Vorgang kann nicht rückgängig gemacht werden. 
+---
+= Eine Schutzbeziehung wird auf der Seite „Volume-/Integritätsdetails“ in Active IQ Unified Manager entfernt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Schutzbeziehung entfernen, um eine bestehende Beziehung zwischen der ausgewählten Quelle und dem Ziel dauerhaft zu löschen, beispielsweise wenn Sie eine Beziehung mit einem anderen Ziel erstellen möchten. Dieser Vorgang löscht alle Metadaten und kann nicht rückgängig gemacht werden.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+.Schritte
+. Auf der Registerkarte *Protection* der Detailseite *Volume / Health* wird in der Topologie die SnapMirror Beziehung ausgewählt, die entfernt werden soll.
+. Sie entfernen das Ziel, indem Sie mit der rechten Maustaste auf den Namen des Ziels klicken und im Menü *Entfernen* auswählen.
++
+Das Dialogfeld „Beziehung entfernen“ wird angezeigt.
+
+. Mit *Weiter* lässt sich die Beziehung entfernen.
++
+Die Beziehung wird von der Seite „Volume / Health details“ entfernt.
+
+

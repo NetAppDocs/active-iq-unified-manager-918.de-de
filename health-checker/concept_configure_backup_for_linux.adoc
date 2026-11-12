@@ -1,0 +1,109 @@
+---
+permalink: health-checker/concept_configure_backup_for_linux.html 
+sidebar: sidebar 
+keywords: netapp, snapshot copy, copies, linux, operate, system, configure, backup 
+summary: Wenn Ihr Active IQ Unified Manager auf einem Linux-Rechner installiert ist, können Sie Ihr Backup und Ihre Wiederherstellung mithilfe von NetApp Snapshots konfigurieren. 
+---
+= Konfiguration der Sicherung unter Linux in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Ihr Active IQ Unified Manager auf einem Linux-Rechner installiert ist, können Sie Ihr Backup und Ihre Wiederherstellung mithilfe von NetApp Snapshots konfigurieren.
+
+Snapshot-Kopien benötigen nur sehr wenig Zeit, in der Regel nur wenige Minuten, und die Unified Manager Datenbank ist nur für einen sehr kurzen Zeitraum gesperrt, sodass es nur zu sehr geringen Beeinträchtigungen Ihrer Installation kommt. Das Image benötigt nur minimalen Storage-Platz und verursacht einen vernachlässigbaren Performance-Overhead, da nur Änderungen an Dateien seit der letzten Snapshot-Kopie aufgezeichnet werden. Da der Snapshot auf einem ONTAP Cluster erstellt wird, können bei Bedarf andere NetApp Funktionen wie SnapMirror genutzt werden, um einen sekundären Schutz zu erstellen.
+
+Vor Beginn eines Sicherungsvorgangs führt Unified Manager eine Integritätsprüfung durch, um sicherzustellen, dass das Zielsystem verfügbar ist.
+
+[NOTE]
+====
+* Eine Snapshot-Kopie kann nur in derselben Version von Active IQ Unified Manager wiederhergestellt werden.
++
+Wurde beispielsweise ein Backup auf Unified Manager 9.18 erstellt, lässt es sich nur auf Unified Manager 9.18 Systemen wiederherstellen.
+
+* Jede Änderung an der Snapshot-Konfiguration kann dazu führen, dass der Snapshot ungültig wird.
+
+
+====
+
+
+[[configure-snapshot-copy-location-in-active-iq-unified-manager]]
+== Konfiguration des Speicherorts für Snapshot Kopien in Active IQ Unified Manager
+
+Sie können mit ONTAP System Manager oder der ONTAP CLI das Volume konfigurieren, in dem Snapshot-Kopien auf einem Ihrer ONTAP Cluster gespeichert werden.
+
+.Bevor Sie beginnen
+Der Cluster, die Storage VM und das Volume müssen die folgenden Anforderungen erfüllen:
+
+* Clusteranforderungen:
++
+** ONTAP 9.3 oder höher muss installiert sein
+** Es sollte sich in geografischer Nähe zum Unified Manager Server befinden
+** Es kann von Unified Manager überwacht werden, ist aber nicht erforderlich
+
+
+* Anforderungen an die Storage VM:
++
+** Der Namensschalter und die Namenszuordnung müssen so eingestellt sein, dass "`files`" verwendet wird
+** Lokale Benutzer, die den Client-seitigen Benutzern entsprechen
+** Stellen Sie sicher, dass „Alle Lese-/Schreibzugriffe“ ausgewählt ist
+** Der Superuser-Zugriff sollte in der Exportrichtlinie auf „`any`“ gesetzt sein.
+** NFS für NetApp Snapshot für Linux
+** NFSv4 muss auf dem NFS-Server aktiviert sein, und die NFSv4-ID-Domäne muss auf dem Client und der Storage VM angegeben sein
+** Das Volume sollte mindestens doppelt so groß sein wie das Verzeichnis Unified Manager/opt/netapp/data
++
+Die aktuelle Größe lässt sich mit dem Befehl du -sh /opt/netapp/data/ überprüfen.
+
+
+
+* Volume-Anforderungen:
++
+** Das Volume sollte mindestens doppelt so groß sein wie das Verzeichnis /opt/netapp/data des Unified Manager
+** Der Sicherheitsstil muss auf UNIX eingestellt sein
+** Die lokale Snapshot-Richtlinie muss deaktiviert sein
+** Die automatische Größenanpassung des Volume sollte aktiviert sein.
+** Das Performance Service Level sollte auf eine Richtlinie mit hohen IOPS und niedriger Latenz festgelegt werden, wie z. B. "`Extreme`"
+
+
+
+
+Ausführliche Schritte zum Erstellen des NFS-Volumes finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_configure_NFSv4_in_Cluster-Mode["Konfiguration von NFSv4 in ONTAP 9"] und im http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-nfsv3-cg/home.html["ONTAP 9 NFS Express-Leitfaden für die Konfiguration"].
+
+
+
+[[specify-the-destination-location-for-snapshot-copies-in-active-iq-unified-manager]]
+== Der Zielspeicherort für Snapshot-Kopien in Active IQ Unified Manager ist anzugeben
+
+Sie sollten den Zielspeicherort für Active IQ Unified Manager Snapshot Kopien auf einem Volume konfigurieren, das Sie bereits in einem Ihrer ONTAP Cluster eingerichtet haben. Sie sollten zum Definieren des Speicherorts die Managementplattform verwenden.
+
+* Sie benötigen die Anmeldedaten des Root-Benutzers für den Linux-Host, auf dem Active IQ Unified Manager installiert ist.
+* Sie müssen über eine Benutzerkennung und ein Passwort verfügen, die für die Anmeldung an der Managementplattform für die Wartung des Unified Manager Servers autorisiert sind.
+* Sie benötigen die Cluster Management IP-Adresse, den Namen der Storage VM, den Namen des Volumes sowie den Benutzernamen und das Kennwort des Storage-Systems.
+* Voraussetzung ist, dass Sie das Volume auf dem Active IQ Unified Manager Host eingebunden haben und den Mount-Pfad kennen.
+
+
+.Schritte
+. Secure Shell dient zum Herstellen einer Verbindung mit der IP-Adresse oder dem FQDN des Active IQ Unified Manager Systems.
+. Die Anmeldung am System erfolgt mit dem Benutzernamen und Passwort des Wartungsbenutzers (umadmin).
+. Den Befehl  `maintenance_console` eingeben und die Eingabetaste drücken.
+. Im *Main Menu* der Wartungskonsole erfolgt die Eingabe der Nummer für die Option *Backup Restore*.
+. Die Nummer für *Konfigurieren von NetApp Snapshot Backup* eingeben.
+. Sie geben die Nummer ein, um NFS zu konfigurieren.
+. Nachdem die erforderlichen Informationen geprüft wurden, kann die Nummer für *Details zur Backup-Konfiguration eingeben* eingegeben werden.
+. Zur Identifizierung des Volumes, auf dem der Snapshot gespeichert werden soll, werden die IP-Adresse der Cluster-Management-Schnittstelle, der Name der Storage VM, der Name des Volumes, der LUN-Name, der Storage-System-Benutzername und das Kennwort sowie der Mount-Pfad angegeben.
+. Diese Angaben überprüfen und `y` eingeben.
++
+Das System führt folgende Aufgaben aus:
+
++
+** Stellt die Verbindung zum Cluster her
+** Beendet alle Services
+** Erstellt ein neues Verzeichnis im Volume und kopiert die Konfigurationsdateien der Active IQ Unified Manager Datenbank
+** Dateien aus Active IQ Unified Manager löschen und einen symbolischen Link zum neuen Datenbankverzeichnis erstellen
+** Neustart aller Services
+
+
+. Sofern dies noch nicht erfolgt ist, können Sie nach dem Verlassen der Managementplattform und dem Starten der Active IQ Unified Manager Oberfläche einen Zeitplan für die Snapshot-Kopie erstellen.
+

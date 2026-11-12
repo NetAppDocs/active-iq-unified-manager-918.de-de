@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/task_rediscover_clusters.html 
+sidebar: sidebar 
+keywords: rediscover clusters, 
+summary: Auf der Seite „Cluster Setup“ kann ein Cluster manuell erneut identifiziert werden, um die neuesten Informationen über den Systemstatus, den Überwachungsstatus und den Performance-Status des Clusters zu erhalten. 
+---
+= Cluster in Active IQ Unified Manager erneut erkennen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Cluster Setup“ kann ein Cluster manuell erneut identifiziert werden, um die neuesten Informationen über den Systemstatus, den Überwachungsstatus und den Performance-Status des Clusters zu erhalten.
+
+Sie können einen Cluster manuell erneut identifizieren, wenn Sie den Cluster aktualisieren möchten, beispielsweise durch Erhöhen der Größe eines Aggregats, wenn nicht genügend Speicherplatz vorhanden ist, und wenn Unified Manager die von Ihnen vorgenommenen Änderungen identifizieren soll.
+
+Wenn Unified Manager mit OnCommand Workflow Automation (WFA) gekoppelt ist, löst die Kopplung die erneute Erfassung der von WFA zwischengespeicherten Daten aus.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Cluster Setup*.
+. Auf der Seite *Cluster Setup* erfolgt die Auswahl von *Rediscover*.
++
+Unified Manager identifiziert den ausgewählten Cluster erneut und zeigt den aktuellen Systemstatus und Performance-Status an.
+
+
+
+*Verwandte Informationen*
+
+link:../health-checker/task_view_cluster_list_and_details.html["Anzeigen der Clusterliste und Details"]

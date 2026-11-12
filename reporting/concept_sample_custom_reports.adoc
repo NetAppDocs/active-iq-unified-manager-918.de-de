@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept_sample_custom_reports.html 
+sidebar: sidebar 
+keywords: sample, custom, reports 
+summary: Diese benutzerdefinierten Beispielberichte dienen häufig dazu, potenzielle Probleme zu erkennen und auf mögliche Schwierigkeiten zu reagieren, bevor Probleme auftreten. 
+---
+= Informationen zu beispielhaften benutzerdefinierten Berichten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese benutzerdefinierten Beispielberichte dienen häufig dazu, potenzielle Probleme zu erkennen und auf mögliche Schwierigkeiten zu reagieren, bevor Probleme auftreten.
+
+Die Liste der Berichte in diesem Abschnitt ist nicht vollständig und wird im Laufe der Zeit erweitert. Sie können durch Feedback zur Dokumentation benutzerdefinierte Berichte vorschlagen, die diesem Abschnitt hinzugefügt werden sollen.
+
+[NOTE]
+====
+Zum Managen von Berichten ist die Rolle „Application Administrator“ oder „Storage Administrator“ erforderlich.
+
+====

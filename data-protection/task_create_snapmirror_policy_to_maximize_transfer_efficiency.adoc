@@ -1,0 +1,34 @@
+---
+permalink: data-protection/task_create_snapmirror_policy_to_maximize_transfer_efficiency.html 
+sidebar: sidebar 
+keywords: create, snapmirror, policy, maximize, transfer, efficiency 
+summary: Sie können eine SnapMirror Richtlinie erstellen, um die SnapMirror Übertragungspriorität für Schutzbeziehungen festzulegen. SnapMirror Richtlinien ermöglichen es Ihnen, die Übertragungseffizienz von der Quelle zum Ziel zu maximieren, indem Sie Prioritäten zuweisen, sodass Übertragungen mit niedrigerer Priorität nach Übertragungen mit normaler Priorität eingeplant werden. 
+---
+= Eine SnapMirror Richtlinie zur Maximierung der Übertragungseffizienz in Active IQ Unified Manager erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine SnapMirror Richtlinie erstellen, um die SnapMirror Übertragungspriorität für Schutzbeziehungen festzulegen. SnapMirror Richtlinien ermöglichen es Ihnen, die Übertragungseffizienz von der Quelle zum Ziel zu maximieren, indem Sie Prioritäten zuweisen, sodass Übertragungen mit niedrigerer Priorität nach Übertragungen mit normaler Priorität eingeplant werden.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+* Diese Aufgabe setzt voraus, dass Sie den Bereich „Zielinformationen“ im Dialogfeld „Schutz konfigurieren“ bereits ausgefüllt haben.
+
+
+.Schritte
+. Im Dialogfeld *Configure Protection* lässt sich auf der Registerkarte *SnapMirror* im Bereich *Relationship Settings* der Link *Create Policy* auswählen.
++
+Das Dialogfeld zum Erstellen der SnapMirror Richtlinie wird angezeigt.
+
+. Im Feld *Richtlinienname* ist ein Name einzugeben, den Sie der Richtlinie geben möchten.
+. Im Feld *Übertragungspriorität* wird die Übertragungspriorität ausgewählt, die der Richtlinie zugewiesen werden soll.
+. Im Feld *Comment* können Sie optional einen Kommentar für die Richtlinie eingeben.
+. Klicken Sie auf *Create*.
++
+Die neue Richtlinie wird in der Dropdown-Liste SnapMirror Policy angezeigt.
+
+

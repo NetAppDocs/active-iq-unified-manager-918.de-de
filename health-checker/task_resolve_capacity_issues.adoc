@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task_resolve_capacity_issues.html 
+sidebar: sidebar 
+keywords: resolve, capacity issues 
+summary: Dieser Workflow zeigt beispielhaft, wie Sie ein Kapazitätsproblem beheben können. In diesem Szenario sind Sie Administrator oder Operator und greifen auf die Dashboard-Seite von Unified Manager zu, um zu prüfen, ob bei den überwachten Storage-Objekten Kapazitätsprobleme vorliegen. Sie möchten die mögliche Ursache des Problems und dessen Lösung ermitteln. 
+---
+= Kapazitätsprobleme in Active IQ Unified Manager beheben
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieser Workflow enthält ein Beispiel dafür, wie Sie ein Kapazitätsproblem beheben können. In diesem Szenario sind Sie Administrator oder Operator und greifen auf die Unified ManagerDashboard Seite zu, um zu prüfen, ob bei den überwachten Storage Objekten Kapazitätsprobleme vorliegen. Sie möchten die mögliche Ursache des Problems und dessen Lösung ermitteln.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+Auf der Dashboard-Seite ist im Bereich „Kapazität“ unter der Dropdown-Liste „Ereignisse“ nach einem Fehlerereignis mit der Meldung „`Volume Space Full`“ zu suchen.
+
+.Schritte
+. Im *Capacity*-Bereich der *Dashboard*-Seite den Namen des Fehlerereignisses „Volume Space Full“ auswählen.
++
+Die Seite mit den Ereignisdetails zum Fehler erscheint.
+
+. Auf der Detailseite *Event* können Sie eine oder mehrere der folgenden Aufgaben ausführen:
++
+** Im Feld „Ursache“ kann die Fehlermeldung geprüft werden; die Vorschläge unter „Vorgeschlagene Abhilfemaßnahmen“ führen zu Beschreibungen möglicher Abhilfemaßnahmen.
+** Wenn Sie im Feld „Quelle“ auf den Objektnamen, in diesem Fall ein Volume, klicken, werden Details zum Objekt angezeigt.
+** Möglicherweise wurden diesem Ereignis Notizen hinzugefügt.
+** Dem Ereignis eine Notiz hinzufügen.
+** Die Zuweisung des Ereignisses an einen anderen Benutzer ist möglich.
+** Quittierung des Ereignisses.
+** Das Ereignis als erledigt markieren.
+
+
+
+
+*Verwandte Informationen*
+
+link:../events/reference_event_details_page.html["Seite mit Ereignisdetails"]

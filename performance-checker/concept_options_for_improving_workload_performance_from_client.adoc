@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_options_for_improving_workload_performance_from_client.html 
+sidebar: sidebar 
+keywords: options, improving, workload, performance, client-side 
+summary: Sie können Ihre Client-Workloads, wie z. B. Applikationen oder Datenbanken, die E/A an Volumes senden, die an einem Performance-Ereignis beteiligt sind, überprüfen, um festzustellen, ob eine Client-seitig Änderung das Ereignis korrigieren könnte. 
+---
+= Die Workload-Performance kann durch Anpassen der Client-seitig Einstellungen in Active IQ Unified Manager verbessert werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ihre Client-Workloads, wie z. B. Applikationen oder Datenbanken, die E/A an Volumes senden, die an einem Performance-Ereignis beteiligt sind, überprüfen, um festzustellen, ob eine Client-seitig Änderung das Ereignis korrigieren könnte.
+
+Wenn die Clients, die mit Volumes auf einem Cluster verbunden sind, ihre E/A-Anforderungen erhöhen, muss der Cluster mehr leisten, um die Nachfrage zu erfüllen. Wenn Sie wissen, welche Clients eine hohe Anzahl von E/A-Anforderungen an ein bestimmtes Volume auf dem Cluster stellen, können Sie die Cluster Performance verbessern, indem Sie die Anzahl der Clients anpassen, die auf das Volume zugreifen, oder die Menge der E/A-Vorgänge für das Volume verringern. Sie können außerdem ein Limit auf die QoS-Richtliniengruppe anwenden oder erhöhen, der das Volume angehört.
+
+Sie können Clients und deren Applikationen untersuchen, um festzustellen, ob die Clients mehr E/A-Operationen als üblich senden, was zu Engpässen bei einer Clusterkomponente führen könnte. Auf der Seite „Ereignisdetails“ zeigt der Abschnitt „Systemdiagnose“ die Volume-Workloads mit der höchsten Auslastung an, die die von Engpässen betroffene Komponente verwenden. Wenn Sie wissen, welcher Client auf ein bestimmtes Volume zugreift, können Sie zum Client wechseln, um festzustellen, ob die Clienthardware oder eine Applikation nicht wie erwartet funktioniert oder mehr Arbeit als üblich ausführt.
+
+In einer MetroCluster Konfiguration werden Schreibanforderungen an ein Volume auf einem lokalen Cluster auf ein Volume auf dem Remote-Cluster gespiegelt. Die Synchronisierung des Quell-Volumes auf dem lokalen Cluster mit dem Ziel-Volume auf dem Remote-Cluster kann in der MetroCluster Konfiguration auch die Auslastung beider Cluster erhöhen. Durch die Reduzierung der Schreibanforderungen an diese gespiegelten Volumes können die Cluster weniger Synchronisierungsvorgänge durchführen, wodurch sich die Performance-Auswirkungen auf andere Workloads verringern.

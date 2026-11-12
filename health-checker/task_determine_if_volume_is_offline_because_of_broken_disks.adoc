@@ -1,0 +1,37 @@
+---
+permalink: health-checker/task_determine_if_volume_is_offline_because_of_broken_disks.html 
+sidebar: sidebar 
+keywords: determine, volume, offline, broken disks, aggregate 
+summary: Mithilfe der Unified Manager Weboberfläche können Sie bestätigen oder ausschließen, dass ein Volume offline ist, weil RAID-Festplattenprobleme das zugehörige Host-Aggregat offline genommen haben. 
+---
+= Ermitteln, ob ein Volume in Active IQ Unified Manager aufgrund defekter Festplatten offline ist
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe der Unified Manager Weboberfläche können Sie bestätigen oder ausschließen, dass ein Volume offline ist, weil RAID-Festplattenprobleme das zugehörige Host-Aggregat offline genommen haben.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+Mit den folgenden Schritten lässt sich feststellen, ob der Offline-Zustand des Volumes durch RAID-Festplattenprobleme verursacht wird, die das hostende Aggregat offline schalten:
+
+.Schritte
+. Die unter „Aggregat“ im Bereich „Zugehörige Geräte“ auf der Detailseite „Volume / Systemstatus“ angezeigte Hypertext-Verknüpfung ist auszuwählen.
++
+Die Detailseite „Aggregate / Systemstatus“ zeigt den Online- oder Offline-Status des hostenden Aggregats an. Wenn der Aggregatstatus online ist, sind RAID-Festplattenprobleme nicht die Ursache dafür, dass das Volume offline ist.
+
+. Falls der Aggregatstatus offline ist, erfolgt die Auswahl von *Disk Information*; anschließend ist auf der Registerkarte *Disk Information* in der Liste *Events* nach Ereignissen für defekte Datenträger zu suchen.
+. Zur weiteren Identifizierung der defekten Datenträger dient der Hypertext-Link, der im Bereich *Related Devices* unter Node angezeigt wird.
++
+Die Seite mit den Details zu Cluster/Systemstatus wird angezeigt.
+
+. Nach einem Klick auf *Disks* und der Auswahl von *Broken* im Bereich *Filters* werden alle Disks im Status *Broken* aufgelistet.
++
+Wenn die defekten Festplatten den Offline-Status des Host-Aggregats verursacht haben, wird der Name des Aggregats in der Spalte Impacted Aggregate angezeigt.
+
+
+
+Nach der Bestätigung, dass der Offline-Zustand des Volume durch defekte RAID-Festplatten und das daraus resultierende Offline-Host-Aggregat verursacht wird, ist eine Kontaktaufnahme mit dem zuständigen Administrator oder Bediener erforderlich, damit die defekten Festplatten manuell ausgetauscht und das Aggregat wieder online gebracht werden können.

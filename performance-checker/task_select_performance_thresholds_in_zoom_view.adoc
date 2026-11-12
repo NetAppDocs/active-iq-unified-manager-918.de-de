@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_select_performance_thresholds_in_zoom_view.html 
+sidebar: sidebar 
+keywords: select, performance, thresholds, counter, charts, zoom, view 
+summary: Durch das Anwenden von Schwellenwerten in der Zoomansicht der Zählerdiagramme erhalten Sie eine detaillierte Übersicht über das Auftreten von Performance-Schwellenwertereignissen. So können Sie Schwellenwerte anwenden oder entfernen und die Ergebnisse sofort einsehen. Dies kann hilfreich sein, um zu entscheiden, ob die Fehlerbehebung der nächste Schritt sein sollte. 
+---
+= Auswahl von Leistungsschwellenwerten in der Zoomansicht der Zählerdiagramme in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch das Anwenden von Schwellenwerten in der Zoomansicht der Zählerdiagramme erhalten Sie eine detaillierte Übersicht über das Auftreten von Performance-Schwellenwertereignissen. So können Sie Schwellenwerte anwenden oder entfernen und die Ergebnisse sofort einsehen. Dies kann hilfreich sein, um zu entscheiden, ob die Fehlerbehebung der nächste Schritt sein sollte.
+
+Durch Auswählen von Schwellenwerten in der Zoomansicht der Zählerdiagramme lassen sich präzise Daten zu Performance-Schwellenwertereignissen anzeigen. Sie können jeden Schwellenwert anwenden, der im Bereich *Richtlinien* der Zoomansicht der Zählerdiagramme angezeigt wird.
+
+In der Zoomansicht der Zählerdiagramme kann jeweils nur eine Richtlinie auf das Objekt angewendet werden.
+
+.Schritt
+. Auswählen oder Aufheben der Auswahl der image:../media/eye_icon.gif["Augensymbol"] , die mit einer Richtlinie verknüpft ist.
++
+Der ausgewählte Schwellenwert gilt für die Zoomansicht der Zählerdiagramme. Kritische Schwellenwerte werden als rote Linie dargestellt; Warnschwellenwerte werden als gelbe Linie dargestellt.
+
+

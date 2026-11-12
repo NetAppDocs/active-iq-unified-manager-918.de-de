@@ -1,0 +1,45 @@
+---
+permalink: health-checker/task_delete_snapshot_copies.html 
+sidebar: sidebar 
+keywords: delete, snapshot copies 
+summary: Sie können eine Snapshot-Kopie löschen, um Speicherplatz zu sparen oder Festplattenspeicher freizugeben, oder wenn sie nicht mehr benötigt wird. 
+---
+= Löschen von Snapshot Kopien in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Snapshot-Kopie löschen, um Speicherplatz zu sparen oder Festplattenspeicher freizugeben, oder wenn sie nicht mehr benötigt wird.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Das Volume muss online sein.
+
+Zum Löschen einer Snapshot Kopie, die belegt oder gesperrt ist, muss die Snapshot Kopie von der Applikation freigegeben worden sein, die sie verwendet hat.
+
+* Sie können die Basis-Snapshot-Kopie in einem übergeordneten Volume nicht löschen, wenn ein FlexClone Volume diese Snapshot-Kopie verwendet.
++
+Die Basis Snapshot Kopie ist die Snapshot Kopie, die zum Erstellen des FlexClone Volume verwendet wird und den Status `Busy` und die Anwendungsabhängigkeit als `Busy, Vclone` im übergeordneten Volume anzeigt.
+
+* Eine gesperrte Snapshot-Kopie, die in einer SnapMirror Beziehung verwendet wird, kann nicht gelöscht werden.
++
+Die Snapshot-Kopie ist gesperrt und wird für das nächste Update benötigt.
+
+
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. In der Ansicht *Systemstatus: Alle Volumes* erfolgt die Auswahl des Volumes, das die anzuzeigenden Snapshot Kopien enthält.
++
+Die Liste der Snapshot-Kopien wird angezeigt.
+
+. Auf der Detailseite *Volume / Systemstatus* ist die Registerkarte *Kapazität* auszuwählen.
+. Im Bereich *Details* der Registerkarte *Capacity* wird im Abschnitt „Weitere Details“ der Link neben *Snapshot Copies* ausgewählt.
++
+Die Anzahl der Snapshot-Kopien ist ein Link, der die Liste der Snapshot-Kopien anzeigt.
+
+. In der Ansicht *Snapshot Copies* können Sie die Snapshot-Kopien auswählen, die Sie löschen möchten, und anschließend auf *Delete Selected* klicken.
+

@@ -1,0 +1,95 @@
+---
+permalink: reporting/task_create_report_to_view_capacity.html 
+sidebar: sidebar 
+keywords: create, report, show, aggregate, capacity, table, chart 
+summary: Sie können einen Bericht zur Kapazitätsanalyse in einer Excel-Datei erstellen, indem Sie Summen und das Format eines gruppierten Säulendiagramms verwenden. 
+---
+= Es kann ein Bericht erstellt werden, der eine Tabelle und ein Diagramm der aggregierten Kapazität in Active IQ Unified Manager anzeigt.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht zur Kapazitätsanalyse in einer Excel-Datei erstellen, indem Sie Summen und das Format eines gruppierten Säulendiagramms verwenden.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mit den folgenden Schritten können Sie eine Ansicht „Health: All Aggregates“ öffnen, die Ansicht in Excel herunterladen, ein Diagramm der verfügbaren Kapazität erstellen, die angepasste Excel-Datei hochladen und den Abschlussbericht planen.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage* > *Aggregates*.
+. Die Auswahl erfolgt über *Reports* > *Download Excel*.
++
+image::../media/download_excel_menu.png[Ein Screenshot der Benutzeroberfläche, der zeigt, wie der Download von excel aus Berichten erfolgt.]
+
++
+Je nach Browser müssen Sie möglicherweise auf *OK* klicken, um die Datei zu speichern.
+
+. Falls erforderlich, kann auf *Bearbeitung aktivieren* geklickt werden.
+. Die heruntergeladene Datei lässt sich in Excel öffnen.
+. Ein neues Tabellenblatt (image:../media/excel_new_sheet_icon.png[""]) nach dem `data` Tabellenblatt erstellen und *Total Data Capacity* nennen.
+. Dem neuen Tabellenblatt „Gesamtdatenkapazität“ sind die folgenden Spalten hinzuzufügen:
++
+.. Gesamte Datenkapazität (GB)
+.. Zugesicherte Kapazität (GB)
+.. Verwendete Datenkapazität (GB)
+.. Verfügbare Datenkapazität (GB)
+
+
+. In die erste Zeile jeder Spalte wird die folgende Formel eingegeben; dabei ist darauf zu achten, dass sie auf das Datenblatt (data!) verweist und die korrekten Spalten- und Zeilenspezifizierer für die erfassten Daten verwendet (Total Data Capacity bezieht Daten aus Spalte E, Zeilen 2 bis 20).
++
+.. =SUM(data!E$2:data!E$20)
+.. =SUM(data!F$2:data!F$50)
+.. =SUM(data!G$2:data!G$50)
+.. =SUM(data!H$2:data!H$50)
+
+
++
+Die Formel summiert jede Spalte auf Basis der aktuellen Daten.
+
+
+
+image::../media/capacitysums.png[Ein Screenshot der Benutzeroberfläche eines Datenblatts, das die Gesamtkapazität basierend auf den aktuellen Daten anzeigt.]
+
+. Im Datenblatt erfolgt die Auswahl der Spalten *Gesamtdatenkapazität (GB)* und *Zugesicherte Kapazität (GB)*.
+. Die Auswahl erfolgt im Menü *Einfügen* über *Empfohlene Diagramme* und anschließend über das Diagramm *Gruppierte Säulen*.
+. Mit einem Rechtsklick auf das Diagramm und der Auswahl von *Diagramm verschieben* lässt sich das Diagramm auf das  `Total Data Capacity`Tabellenblatt verschieben.
+. Über die Menüs *Design* und *Format*, die bei ausgewähltem Diagramm verfügbar sind, können Sie das Aussehen des Diagramms anpassen.
+. Wenn Sie zufrieden sind, können Sie die Datei mit Ihren Änderungen speichern. Dateiname und Speicherort sind unverändert zu lassen.
++
+image::../media/cluster_column_chart_2.png[Ein Screenshot der Benutzeroberfläche eines Diagramms, das die Gesamtdaten und die zugesicherte Kapazität anzeigt.]
+
+. In Unified Manager befindet sich die Option unter *Reports* > *Upload Excel*.
++
+[NOTE]
+====
+Wichtig ist, dass Sie sich in derselben Ansicht befinden, in der Sie die Excel-Datei heruntergeladen haben.
+
+====
+. Auszuwählen ist die Excel-Datei, die Sie geändert haben.
+. Auf *Öffnen* klicken.
+. Anschließend *Absenden* auswählen.
++
+Neben dem Menüpunkt *Reports* > *Upload Excel* erscheint ein Häkchen.
+
++
+image::../media/upload_excel.png[Ein Screenshot der Benutzeroberfläche, der das Hochladen von Excel-Dateien in Berichte zeigt.]
+
+. Anschließend erfolgt die Auswahl von *Scheduled Reports*.
+. Über *Add Schedule* lässt sich der Seite „Berichtszeitpläne“ eine neue Zeile hinzufügen, sodass die Zeitplanmerkmale für den neuen Bericht definiert werden können.
++
+[NOTE]
+====
+Für den Bericht ist das *XLSX* Format auszuwählen.
+
+====
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Auf Grundlage der im Bericht dargestellten Ergebnisse kann es sinnvoll sein zu untersuchen, wie sich die verfügbare Kapazität in Ihrem Netzwerk optimal nutzen lässt.

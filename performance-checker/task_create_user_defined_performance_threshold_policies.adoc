@@ -1,0 +1,78 @@
+---
+permalink: performance-checker/task_create_user_defined_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: create, user-defined, performance, threshold, policies 
+summary: Sie erstellen Performance-Schwellenwertrichtlinien für Storage-Objekte, sodass Benachrichtigungen gesendet werden, wenn ein Performance-Zähler einen bestimmten Wert überschreitet. Die Ereignisbenachrichtigung weist darauf hin, dass im Cluster ein Performanceproblem auftritt. 
+---
+= In Active IQ Unified Manager können benutzerdefinierte Leistungsschwellenwertrichtlinien erstellt werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie erstellen Performance-Schwellenwertrichtlinien für Storage-Objekte, sodass Benachrichtigungen gesendet werden, wenn ein Performance-Zähler einen bestimmten Wert überschreitet. Die Ereignisbenachrichtigung weist darauf hin, dass im Cluster ein Performanceproblem auftritt.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Sie erstellen Performance-Schwellenwertrichtlinien, indem Sie die Schwellenwerte auf der Seite „Performance-Schwellenwertrichtlinie erstellen“ eingeben. Sie können neue Richtlinien erstellen, indem Sie alle Richtlinienwerte auf dieser Seite definieren, oder eine Kopie einer vorhandenen Richtlinie erstellen und die Werte in der Kopie ändern (sogenanntes Klonen).
+
+Gültige Schwellenwerte sind 0,001 bis 10.000.000 für Zahlen, 0,001-100 für Prozentsätze und 0,001-200 für Prozentsätze der verwendeten Performance-Kapazität.
+
+[NOTE]
+====
+Die aktuelle Version bietet Schwellenwerte, die Ereignisse auslösen, wenn ein Zählerwert den festgelegten Schwellenwert überschreitet. Es können keine Schwellenwerte festgelegt werden, die Ereignisse auslösen, wenn ein Zählerwert unter einen festgelegten Schwellenwert fällt.
+
+====
+.Schritte
+. Im linken Navigationsbereich ist *Ereignisschwellenwerte* > *Performance* auszuwählen.
++
+Die Seite „Performance-Schwellenwerte“ wird angezeigt.
+
+. Die entsprechende Schaltfläche ist abhängig davon auszuwählen, ob eine neue Richtlinie erstellt oder eine ähnliche Richtlinie geklont und die geklonte Version geändert werden soll.
++
+|===
+| Zu... | Klicken... 
+
+
+ a| 
+Eine neue Richtlinie erstellen
+ a| 
+*Erstellen*
+
+
+
+ a| 
+Eine bestehende Richtlinie klonen
+ a| 
+Eine vorhandene Richtlinie auswählen und auf *Clone* klicken
+
+|===
++
+Die Seite „Performance-Schwellenwertrichtlinie erstellen“ oder die Seite „Performance-Schwellenwertrichtlinie klonen“ wird angezeigt.
+
+. Die Schwellenwertrichtlinie wird durch Angabe der Schwellenwerte für Performance-Zähler definiert, die für bestimmte Storage Objekte festgelegt werden sollen:
++
+.. Auszuwählen sind der Storage Objekttyp sowie ein Name und eine Beschreibung für die Richtlinie.
+.. Es werden der zu überwachende Performance-Zähler und die Grenzwerte festgelegt, die Warn- und kritische Ereignisse definieren.
++
+Sie müssen mindestens einen Warn- oder einen kritischen Grenzwert definieren. Es ist nicht erforderlich, beide Grenzwerttypen zu definieren.
+
+.. Falls erforderlich, erfolgt die Auswahl eines sekundären Performance-Zählers sowie die Festlegung der Grenzwerte für Warn- und kritische Ereignisse.
++
+Die Einbeziehung eines sekundären Zählers erfordert, dass beide Zähler die Grenzwerte überschreiten, bevor der Schwellenwert überschritten und ein Ereignis gemeldet wird. Nur bestimmte Objekte und Zähler können mithilfe einer Kombinationsrichtlinie konfiguriert werden.
+
+.. Hier wird die Zeitspanne festgelegt, in der die Grenzwerte überschritten werden müssen, damit ein Ereignis gesendet wird.
+
+
++
+Beim Klonen einer bestehenden Richtlinie müssen Sie einen neuen Namen für die Richtlinie eingeben.
+
+. Mit *Speichern* speichern Sie die Richtlinie.
++
+Sie werden zur Seite „Performance Thresholds“ zurückgeleitet. Eine Erfolgsmeldung oben auf der Seite bestätigt, dass die Schwellenwertrichtlinie erstellt wurde, und stellt einen Link zur Seite „Inventory“ für diesen Objekttyp bereit, sodass die neue Richtlinie sofort auf Storage-Objekte angewendet werden kann.
+
+
+
+Wenn Sie die neue Schwellenwertrichtlinie jetzt auf Storage-Objekte anwenden möchten, können Sie auf den Link *Go to object_type now* klicken, um zur Inventarseite zu gelangen.

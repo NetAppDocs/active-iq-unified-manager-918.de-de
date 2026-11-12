@@ -1,0 +1,86 @@
+---
+permalink: events/reference_storage_services_events.html 
+sidebar: sidebar 
+keywords: storage, services, events, impact area, configuration, protection 
+summary: Storage Services Ereignisse liefern Ihnen Informationen zur Erstellung und zum Abonnement von Storage Services, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungs-Level, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Speicherdienstereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage Services Ereignisse liefern Ihnen Informationen zur Erstellung und zum Abonnement von Storage Services, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungs-Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-configuration]]
+== Wirkungsbereich: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Storage Service erstellt(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Speicherservice
+ a| 
+Informationen
+
+
+
+ a| 
+Storage Service abonniert(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Speicherservice
+ a| 
+Informationen
+
+
+
+ a| 
+Storage Service abgemeldet(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Speicherservice
+ a| 
+Informationen
+
+|===
+
+
+[[impact-area-protection]]
+== Wirkungsbereich: Schutz
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Unerwartete Löschung der verwalteten SnapMirror RelationshipocumEvtStorageServiceUnsupportedRelationshipDeletion
+ a| 
+Risiko
+ a| 
+Speicherservice
+ a| 
+Warnung
+
+
+
+ a| 
+Unerwartete Löschung eines Speicherdienstmitglieds-Volumes(ocumEvtStorageServiceUnexpectedVolumeDeletion)
+ a| 
+Vorfall
+ a| 
+Speicherservice
+ a| 
+Kritisch
+
+|===

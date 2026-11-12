@@ -1,0 +1,46 @@
+---
+permalink: storage-mgmt/concept_provision_and_manage_workloads.html 
+sidebar: sidebar 
+keywords: provision, manage, workloads 
+summary: Die aktive Managementfunktion von Active IQ Unified Manager bietet Performance Service Levels, Storage Efficiency Policies und Storage Provider APIs für die Provisionierung, Überwachung und das Managen von Storage Workloads in einem Datacenter. 
+---
+= Bereitstellen und Verwalten von Workloads in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die aktive Managementfunktion von Active IQ Unified Manager bietet Performance Service Levels, Storage Efficiency Policies und Storage Provider APIs für die Provisionierung, Überwachung und das Managen von Storage Workloads in einem Datacenter.
+
+[NOTE]
+====
+Unified Manager bietet diese Funktionalität standardmäßig. Sie können sie unter *Speicherverwaltung* > *Funktionseinstellungen* deaktivieren, wenn Sie diese Funktionalität nicht nutzen möchten.
+
+====
+Wenn diese Funktion aktiviert ist, können Sie Workloads auf den ONTAP Clustern provisionieren, die von Ihrer Unified Manager Instanz verwaltet werden. Sie können den Workloads außerdem Richtlinien wie Performance Service Levels und Storage Efficiency Policies zuweisen und Ihre Storage Umgebung auf Grundlage dieser Richtlinien managen.
+
+Dieses Feature ermöglicht die folgenden Funktionen:
+
+* Die automatische Erkennung von Storage Workloads auf den hinzugefügten Clustern ermöglicht eine einfache Bewertung und ein einfaches Deployment von Storage Workloads
+* Provisionierung von NAS-Workloads mit Unterstützung der Protokolle NFS und CIFS
+* Provisionierung von SAN-Workloads mit Unterstützung für iSCSI- und FCP-Protokolle
+* Unterstützung für die Protokolle NFS und CIFS auf derselben Dateifreigabe
+* Management von Performance Service Levels und Speichereffizienzrichtlinien
+* Zuweisung von Performance Service Levels und Storage-Effizienzrichtlinien zu Storage Workloads
+
+
+Mit den Optionen *Provisioning*, *Storage* > *Workloads* und *Policies* im linken Bereich der UI lassen sich verschiedene Konfigurationen ändern.
+
+Mit diesen Optionen können Sie folgende Funktionen ausführen:
+
+* Storage Workloads auf der Seite *Storage* > *Workloads* anzeigen
+* Erstellung von Storage Workloads auf der Seite „Provision Workload“
+* Erstellen und Managen von Performance Service Levels aus Richtlinien
+* Storage Efficiency Policies in Policies erstellen und managen
+* Zuweisen von Richtlinien zu Storage Workloads auf der Seite „Workloads“
+
+
+*Verwandte Informationen*
+
+link:../config/concept_policy_based_storage_management.html["Richtlinienbasierte Storage-Verwaltung"]

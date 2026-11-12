@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_what_timestamp_means_in_collected_data_and_events.html 
+sidebar: sidebar 
+keywords: timestamp, means, collected, data, events 
+summary: Der Zeitstempel, der in den erfassten Systemstatus- und Performance-Daten erscheint oder der als Erkennungszeitpunkt für ein Ereignis angezeigt wird, basiert auf der Clusterzeit von ONTAP, angepasst an die im Webbrowser eingestellte Zeitzone. 
+---
+= Informationen zu Zeitstempeln in erfassten Daten und Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Zeitstempel, der in den erfassten Systemstatus- und Performance-Daten erscheint oder der als Erkennungszeitpunkt für ein Ereignis angezeigt wird, basiert auf der Clusterzeit von ONTAP, angepasst an die im Webbrowser eingestellte Zeitzone.
+
+Es wird dringend empfohlen, einen Network Time Protocol (NTP)-Server zu verwenden, um die Zeit auf Ihren Unified Manager-Servern, ONTAP-Clustern und Webbrowsern zu synchronisieren.
+
+[NOTE]
+====
+Wenn Zeitstempel für einen bestimmten Cluster falsch erscheinen, ist möglicherweise zu prüfen, ob die Clusterzeit korrekt eingestellt ist.
+
+====

@@ -1,0 +1,37 @@
+---
+permalink: data-protection/task_monitor_storage_vms_using_relationships_page.html 
+sidebar: sidebar 
+keywords: relationships page, monitor, storage, vm 
+summary: Sie können Ihre Disaster-Recovery-Beziehungen für Storage VMs auf der Seite „Beziehungen“ im Abschnitt „SCHUTZ“ des INVENTARS überwachen. Standardmäßig werden auf der Seite „Beziehungen“ nur die Beziehungen der obersten Ebene aufgeführt, da der Filter für die zugehörigen Beziehungen angewendet wird. 
+---
+= Die Überwachung von Storage VMs erfolgt über die Seite „Beziehungen“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ihre Disaster-Recovery-Beziehungen für Storage VMs auf der Seite „Beziehungen“ im Abschnitt „SCHUTZ“ des INVENTARS überwachen. Standardmäßig werden auf der Seite „Beziehungen“ nur die Beziehungen der obersten Ebene aufgeführt, da der Filter für die zugehörigen Beziehungen angewendet wird.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Sie verwenden Filter, um die Disaster-Recovery-Beziehungen der Storage VM anzuzeigen.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *SCHUTZ* > *Beziehungen*.
++
+Die Seite zeigt alle Arten von Beziehungen an: Volume-, Konsistenzgruppen- und Storage VM Beziehungen.
+
+. Mit *Filter* sowie *Relationship Object Type* und *Storage VM* lassen sich nur Disaster-Recovery-Beziehungen von Storage VMs anzeigen.
+. *Filter anwenden* auswählen.
++
+[NOTE]
+====
+Zum Anzeigen aller Schutzbeziehungen sollte der Filter für die Beziehungen zwischen den Bestandteilen gelöscht werden.
+
+====
++
+Auf der Seite werden nur die Disaster-Recovery-Beziehungen der Storage-VMs angezeigt.
+
+

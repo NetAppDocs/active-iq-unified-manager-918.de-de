@@ -1,0 +1,35 @@
+---
+permalink: health-checker/task_add_alerts_for_security_events.html 
+sidebar: sidebar 
+keywords: add, alerts, security events 
+summary: Sie können Benachrichtigungen für einzelne Sicherheitsereignisse genauso konfigurieren wie für alle anderen Ereignisse, die von Unified Manager empfangen werden. Außerdem können Sie, wenn alle Sicherheitsereignisse gleich behandelt werden sollen und eine E-Mail an dieselbe Person gesendet werden soll, eine einzelne Benachrichtigung erstellen, die Sie informiert, sobald Sicherheitsereignisse ausgelöst werden. 
+---
+= Hinzufügen von Warnmeldungen für Sicherheitsereignisse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Benachrichtigungen für einzelne Sicherheitsereignisse genauso konfigurieren wie für alle anderen Ereignisse, die von Unified Manager empfangen werden. Außerdem können Sie, wenn alle Sicherheitsereignisse gleich behandelt werden sollen und eine E-Mail an dieselbe Person gesendet werden soll, eine einzelne Benachrichtigung erstellen, die Sie informiert, sobald Sicherheitsereignisse ausgelöst werden.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Das folgende Beispiel zeigt, wie eine Warnung für das Sicherheitsereignis "`Telnet Protocol Enabled`" erstellt wird. Dadurch wird eine Warnung gesendet, wenn der Telnet-Zugriff für den administrativen Fernzugriff auf den Cluster konfiguriert ist. Diese Vorgehensweise kann verwendet werden, um Warnungen für alle Sicherheitsereignisse zu erstellen.
+
+.Schritte
+. Im linken Navigationsbereich auf *Storage Management* > *Alert Setup* klicken.
+. Auf der Seite *Alarmeinstellungen* *Hinzufügen* auswählen.
+. Im Dialogfeld *Warnung hinzufügen* auf *Name* klicken und einen Namen sowie eine Beschreibung für die Warnung eingeben.
+. Unter *Ressourcen* erfolgt die Auswahl des Clusters oder der Cluster, für den bzw. die diese Warnung aktiviert werden soll.
+. Nach Auswahl von *Events* können die folgenden Aktionen durchgeführt werden:
++
+.. In der Liste „Ereignisschweregrad“ wird die Option *Warnung* ausgewählt.
+.. In der Liste „Übereinstimmende Ereignisse“ ist *Telnet Protocol Enabled* auszuwählen.
+
+
+. Unter *Aktionen* folgt im Feld *Diese Benutzer benachrichtigen* die Auswahl des Namens des Benutzers, der die Benachrichtigungs-E-Mail erhalten soll.
+. Auf dieser Seite können alle weiteren Optionen für die Benachrichtigungshäufigkeit, das Auslösen von SNMP-Taps und das Ausführen eines Skripts konfiguriert werden.
+. Auf *Speichern* klicken.
+

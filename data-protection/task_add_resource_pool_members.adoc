@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_add_resource_pool_members.html 
+sidebar: sidebar 
+keywords: add, resource, pool, members 
+summary: Ein Ressourcenpool besteht aus einer Anzahl von Mitgliedsaggregaten. Vorhandenen Ressourcenpools können Aggregate hinzugefügt werden, um den für die Provisionierung sekundärer Volumes verfügbaren Speicherplatz zu vergrößern. 
+---
+= Hinzufügen von Ressourcenpoolmitgliedern in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Ressourcenpool besteht aus einer Anzahl von Mitgliedsaggregaten. Vorhandenen Ressourcenpools können Aggregate hinzugefügt werden, um den für die Provisionierung sekundärer Volumes verfügbaren Speicherplatz zu vergrößern.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Sie können einem Ressourcenpool maximal 200 Aggregate gleichzeitig hinzufügen. Die im Dialogfeld „Aggregate“ angezeigten Aggregate gehören keinem anderen Ressourcenpool an.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Protection* > *Resource Pools*.
+. In der Liste *Resource Pools* wird ein Ressourcenpool ausgewählt.
++
+Die Mitglieder des Ressourcenpools sind im Bereich unterhalb der Ressourcenpoolliste aufgeführt.
+
+. Im Mitgliederbereich des Ressourcenpools erfolgt ein Klick auf *Hinzufügen*.
++
+Das Dialogfeld „Aggregate“ wird angezeigt.
+
+. Ein oder mehrere Aggregate auswählen.
+. Klicken Sie auf *Add*.
++
+Nach dem Schließen des Dialogfelds werden die Aggregate in der Mitgliederliste für den ausgewählten Ressourcenpool angezeigt.
+
+

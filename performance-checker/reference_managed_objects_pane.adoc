@@ -1,0 +1,50 @@
+---
+permalink: performance-checker/reference_managed_objects_pane.html 
+sidebar: sidebar 
+keywords: managed, objects, pane 
+summary: Der Bereich „Verwaltete Objekte“ auf der Registerkarte „Leistungsübersicht“ bietet einen Überblick auf hoher Ebene über die Storage Objekttypen und deren Anzahl für den Cluster. Dieser Bereich ermöglicht die Verfolgung des Status der Objekte in jedem Cluster. 
+---
+= Prüfen des Bereichs „Verwaltete Objekte“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Bereich „Verwaltete Objekte“ auf der Registerkarte „Leistungsübersicht“ bietet einen Überblick auf hoher Ebene über die Storage Objekttypen und deren Anzahl für den Cluster. Dieser Bereich ermöglicht die Verfolgung des Status der Objekte in jedem Cluster.
+
+Die Anzahl der verwalteten Objekte entspricht zeitpunktgenauen Daten aus dem letzten Erfassungszeitraum. Neue Objekte werden in Intervallen von 15 Minuten erkannt.
+
+Durch Klicken auf die verlinkte Nummer für einen beliebigen Objekttyp wird die Objekt-Performance-Inventarseite für diesen Objekttyp angezeigt. Die Objektinventarseite ist so gefiltert, dass nur die Objekte auf diesem Cluster angezeigt werden.
+
+Die verwalteten Objekte sind:
+
+* *Knoten*
++
+Ein physisches System in einem Cluster.
+
+* *Aggregate*
++
+Ein Satz aus mehreren Gruppen redundanter Arrays unabhängiger Festplatten (RAID-Gruppen), der als einzelne Einheit für Schutz und Provisionierung verwaltet werden kann.
+
+* *Ports*
++
+Ein physischer Verbindungspunkt an Knoten, der zur Verbindung mit anderen Geräten in einem Netzwerk dient.
+
+* *Storage-VMs*
++
+Eine virtuelle Maschine ermöglicht Netzwerkzugriff über eindeutige Netzwerkadressen. Eine SVM kann Daten aus einem separaten Namespace bereitstellen und ist unabhängig vom Rest des Clusters administrierbar.
+
+* *Volumes*
++
+Eine logische Einheit, die über eines oder mehrere der unterstützten Zugriffsprotokolle zugängliche Benutzerdaten enthält. Die Zählung umfasst sowohl FlexVol Volumes als auch FlexGroup Volumes; FlexGroup Bestandteile werden nicht berücksichtigt.
+
+* *LUNs*
++
+Die Kennung einer Fibre Channel (FC) logischen Einheit oder einer iSCSI logischen Einheit. Eine logische Einheit entspricht typischerweise einem Storage-Volume und wird im Betriebssystem eines Computers als Gerät dargestellt.
+
+* *Netzwerkschnittstellen*
++
+Eine logische Netzwerkschnittstelle, die einen Netzwerkzugriffspunkt für einen Node darstellt. Die Anzahl umfasst alle Schnittstellentypen.
+
+

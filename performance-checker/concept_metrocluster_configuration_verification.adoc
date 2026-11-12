@@ -1,0 +1,30 @@
+---
+permalink: performance-checker/concept_metrocluster_configuration_verification.html 
+sidebar: sidebar 
+keywords: metrocluster, configuration, verification 
+summary: Sie können Performanceprobleme bei gespiegelten Workloads in einer MetroCluster Konfiguration vermeiden, indem Sie sicherstellen, dass die MetroCluster Konfiguration korrekt eingerichtet ist. Sie können die Workload-Performance auch durch Konfigurationsänderungen oder durch das Upgrade von Software- oder Hardwarekomponenten verbessern. 
+---
+= Überprüfung der MetroCluster Konfigurationen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Performanceprobleme bei gespiegelten Workloads in MetroCluster FC- und IP-Konfigurationen lassen sich vermeiden, indem sichergestellt wird, dass die MetroCluster Konfiguration korrekt eingerichtet ist. Die Performance von Workloads kann auch durch Änderungen an der Konfiguration oder durch Upgrades von Software- oder Hardwarekomponenten verbessert werden.
+
+Anweisungen zum Einrichten der Cluster in der MetroCluster Konfiguration, einschließlich der Fibre Channel (FC) Switches, Kabel und Inter-Switch-Links (ISLs), finden Sie in https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster Dokumentation"]. Außerdem unterstützt sie Sie bei der Konfiguration der MetroCluster Software, sodass die lokalen und Remote-Cluster mit gespiegelten Volume-Daten kommunizieren können. Spezifische Informationen zu Ihrer MetroCluster over IP Konfiguration finden Sie in https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/index.html["Installation einer MetroCluster IP Konfiguration"].
+
+Sie können Ihre MetroCluster Konfiguration mit den Anforderungen in https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster Dokumentation"] vergleichen, um festzustellen, ob eine Änderung oder Aktualisierung von Komponenten in Ihrer MetroCluster Konfiguration die Workload-Performance verbessern könnte. Dieser Vergleich kann Ihnen helfen, die folgenden Fragen zu beantworten:
+
+* Sind die Controller für Ihre Workloads geeignet?
+* Müssen Sie Ihre ISL Bundles auf eine höhere Bandbreite aufrüsten, um einen höheren Durchsatz zu bewältigen?
+* Können Sie die Buffer-to-Buffer-Credits (BBC) an Ihren Switches anpassen, um die Bandbreite zu erhöhen?
+* Wenn Ihre Workloads einen hohen Schreibdurchsatz auf Solid-State-Drive-(SSD)-Storage aufweisen, müssen Sie dann Ihre FC-zu-SAS-Brücken aufrüsten, um den Durchsatz zu bewältigen?
+
+
+*Verwandte Informationen*
+
+* Informationen zum Austausch oder zur Aufrüstung von MetroCluster Komponenten finden Sie im  https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster Dokumentation"].
+* Informationen zum Upgrade von Controllern finden Sie unter https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_fc_mcc_us_switchover_and_switchback_mcc_fc_4n_cu.html["Aktualisierung von Controllern in einer MetroCluster FC-Konfiguration mittels Switchover und Switchback"] und https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_ip_mcc_us_switchover_and_switchback_mcc_ip.html["Aktualisierung von Controllern in einer MetroCluster IP-Konfiguration mittels Switchover und Switchback"]
+

@@ -1,0 +1,25 @@
+---
+permalink: events/task_delete_scripts.html 
+sidebar: sidebar 
+keywords: delete, scripts 
+summary: Sie können ein Skript aus dem Unified Manager löschen, wenn das Skript nicht mehr benötigt wird oder ungültig ist. 
+---
+= Skripte in Active IQ Unified Manager löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Skript aus dem Unified Manager löschen, wenn das Skript nicht mehr benötigt wird oder ungültig ist.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Das Skript darf nicht mit einer Warnmeldung verknüpft sein.
+
+
+.Schritte
+. Im linken Navigationsbereich wird *Storage Management* > *Scripts* ausgewählt.
+. Auf der Seite *Skripte* wählen Sie das Skript aus, das Sie löschen möchten, und klicken dann auf *Löschen*.
+. Die Bestätigung der Löschung erfolgt im Dialogfeld *Warning* durch Klicken auf *Yes*.
+

@@ -1,0 +1,29 @@
+---
+permalink: health-checker/concept_how_group_actions_work_on_storage_objects.html 
+sidebar: sidebar 
+keywords: group actions, work, storage, objects 
+summary: Eine Gruppenaktion ist ein Vorgang, der auf alle Storage-Objekte in einer Gruppe angewendet wird. Beispielsweise lässt sich die Gruppenaktion „Volume-Schwellenwert“ so konfigurieren, dass die Schwellenwerte aller Volumes in einer Gruppe gleichzeitig geändert werden. 
+---
+= Informationen zur Funktionsweise von Gruppenaktionen auf Speicherobjekten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Gruppenaktion ist ein Vorgang, der auf alle Storage-Objekte in einer Gruppe angewendet wird. Beispielsweise lässt sich die Gruppenaktion „Volume-Schwellenwert“ so konfigurieren, dass die Schwellenwerte aller Volumes in einer Gruppe gleichzeitig geändert werden.
+
+Gruppen unterstützen eindeutige Gruppenaktionstypen. Eine Gruppe kann nur über einen Gruppenaktionstyp für den Systemstatusschwellenwert von Volumes verfügen. Für dieselbe Gruppe kann jedoch, sofern verfügbar, ein anderer Gruppenaktionstyp konfiguriert werden. Der Rang einer Gruppenaktion bestimmt die Reihenfolge, in der die Aktion auf Storage-Objekte angewendet wird. Die Detailseite eines Storage-Objekts enthält Informationen darüber, welche Gruppenaktion auf das Storage-Objekt angewendet wird.
+
+
+
+[[example-of-unique-group-actions]]
+== Beispiel für eindeutige Gruppenaktionen
+
+Angenommen, ein Volume A gehört zu den Gruppen G1 und G2, und für diese Gruppen sind die folgenden Aktionen der Systemstatus-Schwellenwertgruppe für Volumes konfiguriert:
+
+* `Change_capacity_threshold` Gruppenaktion mit Rang 1 zur Konfiguration der Kapazität des Volume
+* `Change_snapshot_copies` Gruppenaktion mit Rang 2 zur Konfiguration der Snapshot-Kopien des Volumes
+
+
+Die  `Change_capacity_threshold`Gruppenaktion hat stets Vorrang vor der  `Change_snapshot_copies`anderen Gruppenaktion und wird auf Volume A angewendet. Wenn Unified Manager einen Überwachungszyklus abschließt, werden die mit den Systemstatus-Schwellenwerten zusammenhängenden Ereignisse von Volume A gemäß der  `Change_capacity_threshold`Gruppenaktion neu ausgewertet. Für die Gruppen G1 und G2 kann keine weitere Gruppenaktion vom Typ „Volume-Schwellenwert“ konfiguriert werden.

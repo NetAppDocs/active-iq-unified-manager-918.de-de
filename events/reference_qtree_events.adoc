@@ -1,0 +1,100 @@
+---
+permalink: events/reference_qtree_events.html 
+sidebar: sidebar 
+keywords: qtree, events, impact area, capacity 
+summary: Qtree Ereignisse liefern Ihnen Informationen über die qtree Kapazität sowie über Datei- und Festplattenbeschränkungen, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Qtree-Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Qtree Ereignisse liefern Ihnen Informationen über die qtree Kapazität sowie über Datei- und Festplattenbeschränkungen, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-capacity]]
+== Wirkungsbereich: Kapazität
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Qtree-Speicher fast voll(ocumEvtQtreeSpaceNearlyFull)
+ a| 
+Risiko
+ a| 
+Qtree
+ a| 
+Warnung
+
+
+
+ a| 
+Qtree-Speicherplatz voll (ocumEvtQtreeSpaceFull)
+ a| 
+Risiko
+ a| 
+Qtree
+ a| 
+Fehler
+
+
+
+ a| 
+Qtree-Speicherplatz normal (ocumEvtQtreeSpaceThresholdOk)
+ a| 
+Ereignis
+ a| 
+Qtree
+ a| 
+Informationen
+
+
+
+ a| 
+Qtree-Dateien: Hartes Limit erreicht(ocumEvtQtreeFilesHardLimitReached)
+ a| 
+Vorfall
+ a| 
+Qtree
+ a| 
+Kritisch
+
+
+
+ a| 
+Soft Limit von Qtree Dateien überschritten(ocumEvtQtreeFilesSoftLimitBreached)
+ a| 
+Risiko
+ a| 
+Qtree
+ a| 
+Warnung
+
+
+
+ a| 
+Hartes Qtree Speicherplatzlimit erreicht(ocumEvtQtreeSpaceHardLimitReached)
+ a| 
+Vorfall
+ a| 
+Qtree
+ a| 
+Kritisch
+
+
+
+ a| 
+Softlimit für den Qtree-Speicherbereich überschritten(ocumEvtQtreeSpaceSoftLimitBreached)
+ a| 
+Risiko
+ a| 
+Qtree
+ a| 
+Warnung
+
+|===

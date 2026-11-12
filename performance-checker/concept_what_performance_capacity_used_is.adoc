@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_performance_capacity_used_is.html 
+sidebar: sidebar 
+keywords: performance, capacity, used 
+summary: Der Zähler für die genutzte Performance-Kapazität hilft Ihnen dabei zu erkennen, ob die Performance eines Knotens oder Aggregats einen Punkt erreicht, an dem sie sich bei steigenden Workloads verschlechtern könnte. Er kann Ihnen auch anzeigen, ob ein Knoten oder Aggregat in bestimmten Zeiträumen derzeit übermäßig genutzt wird. Die genutzte Performance-Kapazität ist der Auslastung ähnlich, bietet jedoch mehr Einblick in die verfügbaren Performance-Fähigkeiten einer physischen Ressource für einen bestimmten Workload. 
+---
+= Die verwendete Leistungs kapazität in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Zähler für die genutzte Performance-Kapazität hilft Ihnen dabei zu erkennen, ob die Performance eines Knotens oder Aggregats einen Punkt erreicht, an dem sie sich bei steigenden Workloads verschlechtern könnte. Er kann Ihnen auch anzeigen, ob ein Knoten oder Aggregat in bestimmten Zeiträumen derzeit übermäßig genutzt wird. Die genutzte Performance-Kapazität ist der Auslastung ähnlich, bietet jedoch mehr Einblick in die verfügbaren Performance-Fähigkeiten einer physischen Ressource für einen bestimmten Workload.
+
+Die optimale genutzte Performance-Kapazität ist der Punkt, an dem ein Knoten oder ein Aggregat optimal ausgelastet ist, eine optimale Latenz (Antwortzeit) aufweist und effizient genutzt wird. Die folgende Abbildung zeigt eine beispielhafte Latenz-Auslastungs-Kurve für ein Aggregat.
+
+image::../media/headroom_chart.gif[Ein Screenshot der Benutzeroberfläche, der eine beispielhafte Kurve für Latenz im Vergleich zur Auslastung für ein Aggregat zeigt.]
+
+In diesem Beispiel zeigt der _Betriebspunkt_ an, dass das Aggregat derzeit mit 50 % Auslastung und einer Latenz von 1,0 ms/Operation arbeitet. Anhand der vom Aggregat erfassten Statistiken ermittelt Unified Manager, dass für dieses Aggregat zusätzliche Performance-Kapazität verfügbar ist. In diesem Beispiel wird der _optimale Punkt_ als der Punkt definiert, an dem das Aggregat eine Auslastung von 80 % und eine Latenz von 2,0 ms/Operation aufweist. Daher können diesem Aggregat weitere Volumes und LUNs hinzugefügt werden, sodass Ihre Systeme effizienter genutzt werden.
+
+Der Zähler für die genutzte Performance-Kapazität ist voraussichtlich ein größerer Wert als der Zähler „`utilization`“, da die Performance-Kapazität die Auswirkungen auf die Latenz mit einbezieht. Wenn beispielsweise ein Node oder ein Aggregat zu 70 % ausgelastet ist, kann der Wert für die Performance-Kapazität je nach Latenzwert im Bereich von 80 % bis 100 % liegen.
+
+In manchen Fällen kann der Auslastungszähler auf der Dashboard-Seite jedoch höher sein. Dies ist normal, da das Dashboard die aktuellen Zählerwerte bei jeder Erfassung aktualisiert; es zeigt keine Durchschnittswerte über einen bestimmten Zeitraum an, wie dies auf den anderen Seiten der Unified Manager-Benutzeroberfläche der Fall ist. Der Zähler für die verwendete Performance-Kapazität eignet sich am besten als Indikator für die über einen bestimmten Zeitraum gemittelte Performance, während sich der Auslastungszähler am besten zur Bestimmung der momentanen Ressourcennutzung eignet.

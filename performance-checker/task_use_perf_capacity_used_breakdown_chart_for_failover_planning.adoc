@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/task_use_perf_capacity_used_breakdown_chart_for_failover_planning.html 
+sidebar: sidebar 
+keywords: performance, capacity, used, breakdown, chart, failover, planning 
+summary: Das detaillierte Diagramm „Ausgenutzte Performance Kapazität - Aufschlüsselung“ zeigt die genutzte Performance Kapazität für den primären Knoten und den Partnerknoten. Es zeigt außerdem die Menge an freier Performance Kapazität auf dem geschätzten Übernahmeknoten. Anhand dieser Informationen lässt sich feststellen, ob bei einem Ausfall des Partnerknotens ein Performance Problem auftreten könnte. 
+---
+= Das Diagramm „Aufschlüsselung der genutzten Performance-Kapazität“ wird für die Failover-Planung in Active IQ Unified Manager verwendet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das detaillierte Diagramm „Ausgenutzte Performance Kapazität - Aufschlüsselung“ zeigt die genutzte Performance Kapazität für den primären Knoten und den Partnerknoten. Es zeigt außerdem die Menge an freier Performance Kapazität auf dem geschätzten Übernahmeknoten. Anhand dieser Informationen lässt sich feststellen, ob bei einem Ausfall des Partnerknotens ein Performance Problem auftreten könnte.
+
+Zusätzlich zur Anzeige der für die Knoten insgesamt genutzten Performance-Kapazität schlüsselt das Aufschlüsselungsdiagramm die Werte für jeden Knoten in Benutzerprotokolle und Hintergrundprozesse auf.
+
+* Benutzerprotokolle sind die E/A-Operationen von Benutzerapplikationen zum und vom Cluster.
+* Hintergrundprozesse sind die internen Systemprozesse, die an Storage, Datenreplizierung und Systemstatus beteiligt sind.
+
+
+Diese zusätzliche Detailebene ermöglicht es Ihnen, festzustellen, ob ein Performanceproblem durch die Aktivität von Benutzerapplikationen oder durch Hintergrundprozesse des Systems, wie z. B. Deduplizierung, RAID-Rekonstruktion, Datenträgerbereinigung und SnapMirror Kopiervorgänge, verursacht wird.
+
+.Schritte
+. Zur Seite *Performance/Node Failover Planning* für den Knoten wechseln, der als geschätzter Übernahmeknoten dienen soll.
+. Über das Auswahlfeld *Zeitraum* lässt sich der Zeitraum festlegen, für den die historischen Statistiken im Zählerraster und in den Zählerdiagrammen angezeigt werden.
++
+Die Zählerdiagramme mit Statistiken für den Primärknoten, den Partnerknoten und den Knoten „Geschätzte Übernahme“ werden angezeigt.
+
+. In der Liste *Diagramme auswählen* ist *Perf. Verwendete Kapazität* auszuwählen.
+. Im Diagramm *Perf. Capacity Used* werden *Breakdown* ausgewählt und *Zoom View* angeklickt.
++
+Das detaillierte Diagramm für Perf. Capacity Used wird angezeigt.
+
++
+image::../media/headroom_advanced_zoom_chart.gif[Ein Screenshot der Benutzeroberfläche, der das detaillierte Diagramm für Perf. zeigt. Genutzte Kapazität.]
+
+. Beim Bewegen des Cursors über das detaillierte Diagramm werden im Popup-Fenster Informationen zur verwendeten Performance-Kapazität angezeigt.
++
+Der Perf. Prozentsatz der freien Performance-Kapazität ist die Performance-Kapazität, die auf dem Knoten für die geschätzte Übernahme verfügbar ist. Er gibt an, wie viel Performance-Kapazität nach einem Failover auf dem Übernahmeknoten verbleibt. Wenn er 0 % beträgt, verursacht ein Failover auf dem Übernahmeknoten einen Anstieg der Latenz auf ein inakzeptables Level.
+
+. Zur Vermeidung eines niedrigen freien Prozentsatzes der Performance-Kapazität empfiehlt sich die Prüfung von Korrekturmaßnahmen.
++
+Wenn Sie einen Failover für die Knotenwartung einleiten möchten, wählen Sie einen Zeitpunkt für den Failover des Partnerknotens, zu dem der Prozentsatz der freien Performance-Kapazität nicht 0 beträgt.
+
+

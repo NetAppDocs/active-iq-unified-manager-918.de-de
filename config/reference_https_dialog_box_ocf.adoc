@@ -1,0 +1,37 @@
+---
+permalink: config/reference_https_dialog_box_ocf.html 
+sidebar: sidebar 
+keywords: https certificate page 
+summary: Die Seite „HTTPS-Zertifikat“ ermöglicht das Anzeigen des aktuellen Sicherheitszertifikats, das Herunterladen einer Zertifikatsignierungsanforderung, das Generieren eines neuen HTTPS-Zertifikats oder das Installieren eines neuen HTTPS-Zertifikats. 
+---
+= Informationen zur HTTPS-Zertifikatsseite in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „HTTPS-Zertifikat“ ermöglicht das Anzeigen des aktuellen Sicherheitszertifikats, das Herunterladen einer Anforderung zur Zertifikatsignierung, das Generieren eines neuen selbstsignierten HTTPS-Zertifikats oder das Installieren eines neuen HTTPS-Zertifikats.
+
+Wenn Sie kein neues selbstsigniertes HTTPS-Zertifikat erstellt haben, wird auf dieser Seite das Zertifikat angezeigt, das während der Installation generiert wurde.
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie die folgenden Vorgänge durchführen:
+
+* *HTTPS-Zertifikatsignierungsanforderung herunterladen*
++
+Lädt eine Zertifikatanforderung für das derzeit installierte HTTPS-Zertifikat herunter. Ihr Browser fordert Sie auf, die <hostname>.csr-Datei zu speichern, damit Sie die Datei einer Zertifizierungsstelle zum Signieren bereitstellen können.
+
+* *Installation des HTTPS-Zertifikats*
++
+Ermöglicht das Hochladen und Installieren eines Sicherheitszertifikats, nachdem dieses von einer Zertifizierungsstelle signiert und zurückgesendet wurde. Das neue Zertifikat ist nach einem Neustart des Verwaltungsservers wirksam.
+
+* *HTTPS-Zertifikat neu generieren*
++
+Ermöglicht die Generierung eines neuen selbstsignierten HTTPS-Zertifikats, das das aktuelle Sicherheitszertifikat ersetzt. Das neue Zertifikat ist nach einem Neustart des Unified Manager gültig.
+
+

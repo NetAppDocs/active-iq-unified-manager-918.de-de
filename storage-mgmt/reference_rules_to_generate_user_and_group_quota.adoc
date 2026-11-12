@@ -1,0 +1,85 @@
+---
+permalink: storage-mgmt/reference_rules_to_generate_user_and_group_quota.html 
+sidebar: sidebar 
+keywords: rules, generate, user, group, quota, email, address, page, area, define, add comments, syntax, command buttons 
+summary: Auf der Seite „Regeln zum Generieren von E-Mail-Adressen für Benutzer- und Gruppenkontingente“ können Sie Regeln erstellen, um E-Mail-Adressen auf der Grundlage des Benutzerkontingents festzulegen, das Clustern, SVMs, Volumes, qtrees, Benutzern oder Benutzergruppen zugeordnet ist. Wenn ein Kontingent überschritten wird, wird eine Benachrichtigung an die angegebene E-Mail-Adresse gesendet. 
+---
+= Informationen zu den Regeln für Kontingent-E-Mail-Adressen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Regeln zum Generieren von E-Mail-Adressen für Benutzer- und Gruppenkontingente“ können Sie Regeln erstellen, um E-Mail-Adressen auf der Grundlage des Benutzerkontingents festzulegen, das Clustern, SVMs, Volumes, qtrees, Benutzern oder Benutzergruppen zugeordnet ist. Wenn ein Kontingent überschritten wird, wird eine Benachrichtigung an die angegebene E-Mail-Adresse gesendet.
+
+
+
+[[rules-area]]
+== Regelbereich
+
+Sie müssen die Regeln für eine Kontingent-E-Mail-Adresse festlegen. Sie können auch Kommentare hinzufügen, um die Regeln zu erläutern.
+
+
+
+[[how-you-define-rules]]
+== Definition von Regeln
+
+Sie müssen die Regeln in der Reihenfolge eingeben, in der sie ausgeführt werden sollen. Wenn das Kriterium der ersten Regel erfüllt ist, wird die E-Mail-Adresse auf Grundlage dieser Regel generiert. Wenn das Kriterium nicht erfüllt ist, wird das Kriterium der nächsten Regel berücksichtigt und so weiter. Jede Zeile enthält eine separate Regel. Die Standardregel ist die letzte Regel in der Liste. Sie können die Prioritätsreihenfolge der Regeln ändern. Die Reihenfolge der Standardregel kann jedoch nicht geändert werden.
+
+Wenn Sie beispielsweise die E-Mail-Adresse qtree1@xyz.com verwenden möchten, um Benachrichtigungen über Quotenüberschreitungen für qtree1 zu erhalten, und die E-Mail-Adresse admin@xyz.com für alle anderen qtrees verwenden möchten, müssen die Regeln in der folgenden Reihenfolge aufgelistet werden:
+
+* if ( $QTREE == 'qtree1' ) then qtree1@xyz.com
+* if ( $QTREE == * ) then admin@xyz.com
+
+
+Wenn keines der Kriterien für die von Ihnen angegebenen Regeln erfüllt ist, gilt die Standardregel:
+
+if ( $USER_OR_GROUP == * ) then $USER_OR_GROUP@$DOMAIN
+
+Wenn mehr als ein Benutzer dasselbe Kontingent hat, werden die Namen der Benutzer als kommagetrennte Werte angezeigt, und die Regeln gelten nicht für das Kontingent.
+
+
+
+[[how-you-add-comments]]
+== Hinzufügen von Kommentaren
+
+Sie können Kommentare hinzufügen, um die Regeln zu erläutern. Am Anfang jedes Kommentars steht ein #, und jede Zeile enthält einen separaten Kommentar.
+
+
+
+[[rules-syntax]]
+== Regelsyntax
+
+Die Syntax der Regel muss einer der folgenden entsprechen:
+
+* wenn ( `valid variableoperator *`) dann `email ID@domain name`
++
+if ist ein Schlüsselwort und wird kleingeschrieben. Der Operator ist ==. Die E-Mail-ID kann beliebige Zeichen, die gültigen Variablen $USER_OR_GROUP, $USER oder $GROUP oder eine Kombination aus beliebigen Zeichen und den gültigen Variablen $USER_OR_GROUP, $USER oder $GROUP enthalten. Der Domainname kann beliebige Zeichen, die gültige Variable $DOMAIN oder eine Kombination aus beliebigen Zeichen und der gültigen Variable $DOMAIN enthalten. Gültige Variablen können in Groß- oder Kleinbuchstaben geschrieben werden, dürfen aber keine Kombination aus beidem sein. Beispielsweise sind $domain und $DOMAIN gültig, aber $Domain ist keine gültige Variable.
+
+* wenn ( `valid variableoperator `string``) dann `email ID@domain name`
++
+if ist ein Schlüsselwort und wird kleingeschrieben. Der Operator kann contains oder == sein. Die E-Mail-ID kann beliebige Zeichen, die gültigen Variablen $USER_OR_GROUP, $USER oder $GROUP oder eine Kombination aus beliebigen Zeichen und den gültigen Variablen $USER_OR_GROUP, $USER oder $GROUP enthalten. Der Domainname kann beliebige Zeichen, die gültige Variable $DOMAIN oder eine Kombination aus beliebigen Zeichen und der gültigen Variable $DOMAIN enthalten. Gültige Variablen können in Groß- oder Kleinbuchstaben geschrieben werden, dürfen aber keine Kombination aus beidem sein. Beispielsweise sind $domain und $DOMAIN gültig, $Domain ist jedoch keine gültige Variable.
+
+
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie die erstellten Regeln speichern, validieren oder abbrechen:
+
+* *Validieren*
++
+Prüft die Syntax der erstellten Regel. Treten während der Prüfung Fehler auf, wird die fehlerhafte Regel zusammen mit einer Fehlermeldung angezeigt.
+
+* *Auf Werkseinstellungen zurücksetzen*
++
+Damit können Sie die Adressregeln auf die werkseitigen Standardwerte zurücksetzen.
+
+* *Speichern*
++
+Die Syntax der Regel wird geprüft, und die Regel wird gespeichert, wenn keine Fehler vorliegen. Wenn bei der Validierung Fehler auftreten, wird die Regel, die den Fehler verursacht, zusammen mit einer Fehlermeldung angezeigt.
+
+

@@ -1,0 +1,259 @@
+---
+permalink: api-automation/concept_data_center_apis.html 
+sidebar: sidebar 
+keywords: manage, storage, objects, data center 
+summary: Die REST-APIs in der Kategorie Datacenter ermöglichen Ihnen, die Storage Objekte in Ihrem Datacenter zu managen, z. B. Cluster, Knoten, Aggregate, Storage VMs, Volumes, LUNs, Dateifreigaben und Namespaces. Diese APIs sind für die Abfrage der Konfiguration der Objekte verfügbar, während einige von ihnen auch das Hinzufügen, Löschen oder Ändern dieser Objekte ermöglichen. 
+---
+= Verwaltung von Speicherobjekten in einem Rechenzentrum mithilfe von APIs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die REST-APIs in der  `datacenter` Kategorie ermöglichen Ihnen das Managen der Storage Objekte in Ihrem Datacenter, wie z. B. Cluster, Knoten, Aggregate, Storage VMs, Volumes, LUNs, Dateifreigaben und Namespaces. Diese APIs stehen zum Abfragen der Konfiguration der Objekte zur Verfügung, während einige von ihnen das Hinzufügen, Löschen oder Ändern dieser Objekte ermöglichen.
+
+Die meisten dieser APIs sind GET-Aufrufe, die clusterübergreifende Aggregation mit Unterstützung für Filtern, Sortieren und Paginierung bereitstellen. Bei der Ausführung dieser APIs geben sie Daten aus der Datenbank zurück. Daher müssen neu erstellte Objekte im nächsten Datenabrufzyklus erkannt werden, damit sie in der Antwort erscheinen.
+
+Um die Details eines bestimmten Objekts abzufragen, müssen Sie die eindeutige ID dieses Objekts eingeben, um dessen Details anzuzeigen. Informationen zu Metriken und Analysen der Storage Objekte finden Sie beispielsweise unter link:concept_metrics_apis.html["Anzeigen von Performance-Kennzahlen"].
+
+[listing]
+----
+curl -X GET "https://<hostname>/api/datacenter/cluster/clusters/4c6bf721-2e3f-11e9-a3e2-00a0985badbb" -H "accept: application/json" -H "Authorization: Basic <Base64EncodedCredentials>"
+----
+[NOTE]
+====
+Die CURL-Befehle, Beispiele, Anfragen und Antworten zu den APIs sind über Ihre Swagger API Schnittstelle verfügbar. Sie können die Ergebnisse anhand bestimmter Parameter filtern und sortieren, wie in Swagger angegeben. Diese APIs ermöglichen es Ihnen, die Ergebnisse nach bestimmten Storage Objekten wie Cluster, Volume oder Storage VM zu filtern.
+
+====
+
+
+[[apis-for-storage-objects-in-your-data-center]]
+== APIs für Storage-Objekte in Ihrem Datacenter
+
+[cols="3*"]
+|===
+| HTTP-Verb | Pfad | Beschreibung 
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/cluster/clusters`
+
+`/datacenter/cluster/clusters/\{key}`
+ a| 
+Mit dieser Methode lassen sich die Details der ONTAP Cluster im gesamten Datacenter anzeigen. Die API liefert Informationen wie die IPv4- oder IPv6-Adresse des Clusters, Informationen über den Node, z. B. den Systemstatus des Node, die Performance Kapazität und das High Availability (HA) Paar, und gibt an, ob der Cluster ein All SAN Array ist.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/cluster/licensing/licenses /datacenter/cluster/licensing/licenses/\{key}`
+ a| 
+Diese Funktion liefert Details zu den auf den Clustern in Ihrem Datacenter installierten Lizenzen. Sie können Ihre Ergebnisse anhand der erforderlichen Kriterien filtern. Informationen wie der Lizenzschlüssel, der Clusterschlüssel, das Ablaufdatum und der Lizenzumfang werden angezeigt. Sie können einen Lizenzschlüssel eingeben, um die Details einer bestimmten Lizenz abzurufen.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/cluster/nodes`
+
+`/datacenter/cluster/nodes/\{key}`
+ a| 
+Mit dieser Methode können Sie die Details der Knoten im Datacenter anzeigen. Sie können Informationen über den Cluster, den Systemstatus des Knotens, die Performancekapazität und das High Availability (HA)-Paar des Knotens anzeigen.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/protocols/cifs/shares`
+
+`/datacenter/protocols/cifs/shares/\{key}`
+ a| 
+Mit dieser Methode können Sie die Details der CIFS-Freigaben im Datacenter anzeigen. Neben Cluster-, SVM- und Volume-Details werden auch Informationen zur Access Control List (ACL) zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/protocols/nfs/export-policies`
+
+`/datacenter/protocols/nfs/export-policies/\{key}`
+ a| 
+Mit dieser Methode können Sie die Details der Exportrichtlinien für die unterstützten NFS Services anzeigen.
+
+Sie können die Exportrichtlinien für einen Cluster oder eine Storage VM abfragen und den Exportrichtlinienschlüssel für die Provisionierung von NFS-Dateifreigaben wiederverwenden. Weitere Informationen zum Zuweisen und Wiederverwenden von Exportrichtlinien für Workloads finden Sie unter "`Provisioning CIFS and NFS file shares`".
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/aggregates`
+
+`/datacenter/storage/aggregates/\{key}`
+ a| 
+Mit dieser Methode können Sie die Sammlung der Aggregate im Datacenter oder ein bestimmtes Aggregat anzeigen, um Workloads darauf zu provisionieren oder sie zu überwachen. Informationen wie Cluster- und Knotendetails, die genutzte Performance-Kapazität, der verfügbare und verwendete Speicherplatz sowie die Storage-Effizienz werden zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/luns`
+
+`/datacenter/storage/luns/\{key}`
+ a| 
+Mit dieser Methode lässt sich die Sammlung von LUNs im gesamten Datacenter anzeigen. Informationen zur LUN, wie Cluster- und SVM-Details, QoS-Richtlinien und Initiatorgruppen, lassen sich anzeigen.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/qos/policies`
+
+`/datacenter/storage/qos/policies/\{key}`
+ a| 
+Mit dieser Methode können Sie die Details aller QoS Richtlinien anzeigen, die für die Storage Objekte im Datacenter gelten. Informationen wie die Cluster- und SVM-Details, die Details der festen oder adaptiven Richtlinie sowie die Anzahl der Objekte, für die diese Richtlinie gilt, werden zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/qtrees`
+
+`/datacenter/storage/qtrees/\{key}`
+ a| 
+Mit dieser Methode können Sie die Qtree-Details im gesamten Datacenter für alle FlexVol Volumes oder FlexGroup Volumes anzeigen. Informationen wie die Cluster- und SVM-Details, das FlexVol Volume und die Exportrichtlinie werden zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/volumes`
+
+`/datacenter/storage/volumes/{key}`
+ a| 
+Mit dieser Methode lässt sich die Sammlung von Volumes im Datacenter anzeigen. Informationen über die Volumes, z. B. SVM- und Clusterdetails, QoS- und Exportrichtlinien sowie dazu, ob das Volume vom Typ Lesen/Schreiben, Datenschutz oder Lastverteilung ist, werden zurückgegeben.
+
+Für FlexVol- und FlexClone-Volumes können Sie die Informationen zu den jeweiligen Aggregaten anzeigen. Für ein FlexGroup-Volume gibt die Abfrage die Liste der zugehörigen Aggregate zurück.
+
+
+
+ a| 
+`GET`
+
+`POST`
+
+`DELETE`
+
+`PATCH`
+ a| 
+`/datacenter/protocols/san/igroups`
+
+`/datacenter/protocols/san/igroups/{key}`
+ a| 
+Sie können Initiatorgruppen (igroups) zuweisen, die zum Zugriff auf bestimmte LUN-Ziele berechtigt sind. Falls bereits eine Initiatorgruppe vorhanden ist, können Sie diese zuweisen. Alternativ können Sie igroups erstellen und sie den LUNs zuordnen.
+
+Mit diesen Methoden können Sie Initiatorgruppen abfragen, erstellen, löschen bzw. ändern.
+
+Wichtige Punkte:
+
+* `POST:`Beim Erstellen einer Initiatorgruppe können Sie die Storage VM festlegen, auf der Sie den Zugriff zuweisen möchten.
+* `DELETE:` Zum Löschen einer bestimmten Initiatorgruppe muss der Schlüssel der Initiatorgruppe als Eingabeparameter angegeben werden. Wenn einer LUN bereits eine Initiatorgruppe zugewiesen wurde, kann diese Initiatorgruppe nicht gelöscht werden.
+* `PATCH:` Als Eingabeparameter muss der Schlüssel der Initiatorgruppe angegeben werden, um eine bestimmte Initiatorgruppe zu ändern. Außerdem müssen Sie die Eigenschaft eingeben, die aktualisiert werden soll, sowie deren Wert.
+
+
+
+
+ a| 
+`GET`
+
+`POST`
+
+`DELETE`
+
+`PATCH`
+ a| 
+`/datacenter/svm/svms`
+
+`/datacenter/svm/svms/\{key}`
+ a| 
+Mit diesen Methoden können Sie Storage Virtual Machines (storage VMs) anzeigen, erstellen, löschen und ändern.
+
+* `POST:` Sie müssen das Storage VM-Objekt, das Sie erstellen möchten, als Eingabeparameter angeben. Sie können eine benutzerdefinierte Storage VM erstellen und ihr anschließend die erforderlichen Eigenschaften zuweisen.
+* `DELETE:` Zum Löschen einer bestimmten Storage VM müssen Sie den Storage VM Schlüssel angeben.
+* `PATCH:`Sie müssen den Storage VM-Schlüssel angeben, um eine bestimmte Storage VM zu ändern. Außerdem müssen Sie die Eigenschaften, die Sie aktualisieren möchten, zusammen mit ihren Werten eingeben.
+
+
+|===
+
+NOTE: Wichtige Punkte:
+
+Wenn in Ihrer Umgebung die SLO-basierte Workload Provisionierung aktiviert ist, muss beim Erstellen der Storage VM sichergestellt sein, dass sie alle Protokolle unterstützt, die für die Provisionierung von LUNs und Dateifreigaben darauf erforderlich sind, z. B. CIFS oder SMB, NFS, FCP und iSCSI. Die Provisionierung Workflows können fehlschlagen, wenn die Storage VM die erforderlichen Services nicht unterstützt. Es wird empfohlen, die Services für die jeweiligen Workload-Typen ebenfalls auf der Storage VM zu aktivieren.
+
+Wenn Sie die SLO-basierte Workload Provisionierung in Ihrer Umgebung aktiviert haben, können Sie die Storage VM, auf der Storage Workloads provisioniert wurden, nicht löschen. Wenn Sie eine Storage VM löschen, auf der ein CIFS- oder SMB-Server konfiguriert wurde, löscht diese API auch den CIFS- oder SMB-Server sowie die lokale Active Directory-Konfiguration. Der Name des CIFS- oder SMB-Servers bleibt jedoch in der Active Directory-Konfiguration bestehen, und Sie müssen ihn manuell vom Active Directory-Server löschen.
+
+
+
+[[apis-for-network-elements-in-your-data-center]]
+== APIs für Netzwerkelemente in Ihrem Datacenter
+
+Die folgenden APIs in der Kategorie Datacenter rufen Informationen über die Ports und Netzwerkschnittstellen in Ihrer Umgebung ab, insbesondere über die FC-Ports, FC-Schnittstellen, Ethernet-Ports und IP-Schnittstellen.
+
+[cols="3*"]
+|===
+| HTTP-Verb | Pfad | Beschreibung 
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/ethernet/ports`
+
+`/datacenter/network/ethernet/ports/{key}`
+ a| 
+Ruft Informationen zu allen Ethernet-Ports in Ihrer Datacenter-Umgebung ab. Mit einem Portschlüssel als Eingabeparameter können Sie die Informationen dieses spezifischen Ports anzeigen. Abgerufen werden unter anderem Clusterdetails, die Broadcast-Domäne, Portdetails wie Status, Geschwindigkeit und Typ sowie die Information, ob der Port aktiviert ist.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/fc/interfaces`
+
+`/datacenter/network/fc/interfaces/{key}`
+ a| 
+Mit dieser Methode können Sie die Details der FC-Schnittstellen in Ihrer Datacenter-Umgebung anzeigen. Mit einem Schnittstellenschlüssel als Eingabeparameter können Sie die Informationen zu dieser spezifischen Schnittstelle anzeigen. Dabei werden Informationen wie Clusterdetails, Details zum Home-Knoten und Details zum Home-Port abgerufen.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/fc/ports`
+
+`/datacenter/network/fc/ports/{key}`
+ a| 
+Ruft Informationen zu allen FC-Ports ab, die in den Knoten Ihrer Datacenter-Umgebung verwendet werden. Mit einem Portschlüssel als Eingabeparameter können Sie die Informationen des jeweiligen Ports anzeigen. Abgerufen werden unter anderem Clusterdetails, Portbeschreibung, unterstütztes Protokoll und Portstatus.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/ip/interfaces`
+
+`/datacenter/network/ip/interfaces/{key}`
+ a| 
+Mit dieser Methode lassen sich die Details der IP-Schnittstellen in Ihrer Datacenter-Umgebung anzeigen. Mit einem Schnittstellenschlüssel als Eingabeparameter lassen sich die Informationen zu dieser spezifischen Schnittstelle anzeigen. Dabei werden Informationen wie Clusterdetails, IPspace-Details, Home-Node-Details und die Angabe, ob Failover aktiviert ist, abgerufen.
+
+|===

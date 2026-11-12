@@ -1,0 +1,42 @@
+---
+permalink: data-protection/task_quiesce_protection_relationship_from_volume_relationships.html 
+sidebar: sidebar 
+keywords: quiesce, protection, relationship, volume, relationships page 
+summary: Auf der Seite „Volume-Beziehungen“ können Sie eine Schutzbeziehung anhalten, um Datenübertragungen vorübergehend zu verhindern. Dies kann beispielsweise sinnvoll sein, wenn Sie eine Snapshot Kopie eines SnapMirror Ziel-Volumes erstellen möchten, das eine Datenbank enthält, und sicherstellen möchten, dass sein Inhalt während des Vorgangs zum Erstellen der Snapshot Kopie stabil bleibt. 
+---
+= Eine Schutzbeziehung auf der Seite „Volume Beziehungen“ in Active IQ Unified Manager anhalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Volume-Beziehungen“ können Sie eine Schutzbeziehung anhalten, um Datenübertragungen vorübergehend zu verhindern. Dies kann beispielsweise sinnvoll sein, wenn Sie eine Snapshot Kopie eines SnapMirror Ziel-Volumes erstellen möchten, das eine Datenbank enthält, und sicherstellen möchten, dass sein Inhalt während des Vorgangs zum Erstellen der Snapshot Kopie stabil bleibt.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+Die Quiesce-Aktion wird in folgenden Fällen nicht angezeigt:
+
+* Wenn die RBAC-Einstellungen diese Aktion nicht zulassen; z. B. wenn Sie nur über Bedienerrechte verfügen
+* Wenn die Volume-ID unbekannt ist, beispielsweise bei einer clusterübergreifenden Beziehung, wenn der Ziel-Cluster noch nicht erkannt wurde
+* Wenn Sie Workflow Automation und Unified Manager noch nicht gekoppelt haben
+
+
+.Schritte
+. Übertragungen für eine oder mehrere Schutzbeziehungen lassen sich auf der Seite *Volume Relationships* anhalten, indem ein oder mehrere Volumes ausgewählt und in der Symbolleiste *Quiesce* angeklickt werden.
++
+Das Dialogfeld „Quiesce“ wird angezeigt.
+
+. Klicken Sie auf *Weiter*.
++
+Oben auf der Seite „Volume / Zustandsdetails“ erscheint der Status des Quiesce-Jobs zusammen mit einem Link zu den Jobdetails.
+
+. Über den Link *Details anzeigen* sind auf der *Job*-Detailseite zusätzliche Details und der Fortschritt des Jobs verfügbar.
+. *Optional:* Über den Pfeil *Back* in Ihrem Browser ist die Rückkehr zur Seite *Volume Relationships* möglich.
++
+Der Quiesce-Job ist abgeschlossen, wenn alle Aufgaben des Jobs erfolgreich abgeschlossen sind.
+
+

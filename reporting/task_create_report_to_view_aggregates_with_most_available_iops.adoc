@@ -1,0 +1,80 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_with_most_available_iops.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, available, IOPS 
+summary: Dieser Bericht zeigt, welche Aggregate pro Aggregattyp über die meisten verfügbaren IOPS verfügen und auf denen Sie neue Workloads provisionieren können. 
+---
+= Ein Bericht zum Anzeigen von Aggregaten mit den meisten verfügbaren IOPS in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieser Bericht zeigt, welche Aggregate pro Aggregattyp über die meisten verfügbaren IOPS verfügen und auf denen Sie neue Workloads provisionieren können.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mit den folgenden Schritten lässt sich eine Ansicht „Health: All Volumes“ öffnen, die Ansicht in Excel herunterladen, ein Diagramm zur verfügbaren Kapazität erstellen, die angepasste Excel-Datei hochladen und der Abschlussbericht planen.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage* > *Aggregates*.
+. Die Auswahl der Option *Performance: Alle Aggregate* erfolgt im Dropdown-Menü *Ansicht*.
+. Mit *Anzeigen/Ausblenden* werden die  `Available IOPS` Spalte angezeigt und die  `Cluster FQDN, Inactive Data Reporting,` und  `Threshold Policy` Spalten ausgeblendet.
+. Die  `Available IOPS`- und  `Free Capacity`-Spalten lassen sich per Drag-and-drop neben der  `Type`-Spalte platzieren.
+. Benutzerdefinierte Ansicht benennen und speichern `Available IOPS Per Aggr.`
+. Die Auswahl erfolgt über *Reports* > *Download Excel*.
++
+image::../media/download_excel_menu.png[Ein Screenshot der Benutzeroberfläche, der zeigt, wie der Download von excel aus Berichten erfolgt.]
+
++
+Je nach Browser müssen Sie möglicherweise auf *OK* klicken, um die Datei zu speichern.
+
+. Falls erforderlich, kann auf *Bearbeitung aktivieren* geklickt werden.
+. Die heruntergeladene Datei lässt sich in Excel öffnen.
+. Im Datenblatt lässt sich durch Klicken auf das kleine Dreieck oben links im Blatt das gesamte Blatt auswählen.
+. Im Menüband *Daten* die Option *Sortieren* aus dem `Sort & Filter area.`
+. Folgende Sortierebenen sind festzulegen:
++
+.. Für *Sortieren nach* ist `Available IOPS` (IOPS), für *Sortieren auf* ist `Cell Values,` und für *Reihenfolge* ist `Largest to Smallest.` auszuwählen.
+.. Im nächsten Schritt erfolgt die Auswahl von *Ebene hinzufügen*.
+.. Für *Sortieren nach* ist `Type`, für *Sortieren auf* `Cell Values,` und für *Reihenfolge* `Z to A.` festzulegen.
+.. Im nächsten Schritt erfolgt die Auswahl von *Ebene hinzufügen*.
+.. Für *Sortieren nach*  `Free Capacity (GB),`, für *Sortierkriterium*  `Cell Values,` und für *Reihenfolge*  `Largest to Smallest.` festlegen
+.. Klicken Sie auf *OK*.
+
+
+. Die Excel-Datei anschließend speichern und schließen.
+. In Unified Manager befindet sich die Option unter *Reports* > *Upload Excel*.
++
+[NOTE]
+====
+Wichtig ist, dass Sie sich in derselben Ansicht befinden, in der Sie die Excel-Datei heruntergeladen haben.
+
+====
+. Die geänderte Excel-Datei wird ausgewählt, in diesem Fall `performance-aggregates-<date>.xlsx.`
+. Auf *Öffnen* klicken.
+. Anschließend *Absenden* auswählen.
++
+Neben dem Menüpunkt *Reports* > *Upload Excel* erscheint ein Häkchen.
+
++
+image::../media/upload_excel.png[Ein Screenshot der Benutzeroberfläche, der das Hochladen von Excel-Dateien in Berichte zeigt.]
+
+. Anschließend erfolgt die Auswahl von *Scheduled Reports*.
+. Über *Add Schedule* lässt sich der Seite „Berichtszeitpläne“ eine neue Zeile hinzufügen, sodass die Zeitplanmerkmale für den neuen Bericht definiert werden können.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+[NOTE]
+====
+Für den Bericht ist das *XLSX* Format auszuwählen.
+
+====
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Auf Grundlage der im Bericht dargestellten Ergebnisse kann es sinnvoll sein, neue Workloads auf den Aggregaten mit den meisten verfügbaren IOPS zu provisionieren.

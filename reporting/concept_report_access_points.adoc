@@ -1,0 +1,25 @@
+---
+permalink: reporting/concept_report_access_points.html 
+sidebar: sidebar 
+keywords: access, points, generating, reports 
+summary: Im Unified Manager können Sie Informationen über Ihre Cluster sammeln, um Berichte über die Benutzeroberfläche, MySQL-Datenbankabfragen und REST-APIs zu erstellen. 
+---
+= Es gibt drei Möglichkeiten, auf die Berichtsfunktionen in Active IQ Unified Manager zuzugreifen.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Unified Manager können Sie Informationen über Ihre Cluster sammeln, um Berichte über die Benutzeroberfläche, MySQL-Datenbankabfragen und REST-APIs zu erstellen.
+
+Diese Abschnitte beschreiben das Berichtswesen und die Terminplanung von Unified Manager über die Benutzeroberfläche.
+
+Es gibt drei Möglichkeiten, auf die Berichtsfunktionen von Unified Manager zuzugreifen:
+
+* Direktes Extrahieren von Daten aus den Inventarseiten in der Benutzeroberfläche.
+* Der Zugriff auf alle verfügbaren Objekte erfolgt über Open Database Connectivity (ODBC) und ODBC-Tools.
+* Ausführen von Unified Manager REST APIs, um die Informationen zurückzugeben, die Sie überprüfen möchten.
+
+
+Diese Abschnitte beschreiben das Berichtswesen und die Terminplanung von Unified Manager über die Benutzeroberfläche.

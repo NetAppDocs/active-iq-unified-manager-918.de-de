@@ -1,0 +1,776 @@
+---
+permalink: health-checker/reference_health_svm_details_page.html 
+sidebar: sidebar 
+keywords: storage VM, health details page 
+summary: 'Auf der Seite „Storage VM / Systemstatusdetails“ können Sie detaillierte Informationen zur ausgewählten Storage VM anzeigen, z. B. deren Systemstatus, Kapazität, Konfiguration, Datenrichtlinien, logische Schnittstellen (LIFs), LUNs, qtrees, Benutzer, Benutzergruppenkontingente und Schutzdetails. Außerdem können Sie Informationen zu den zugehörigen Objekten und zugehörigen Warnungen für die Storage VM anzeigen.' 
+---
+= Die Seite Storage VM / Health-Details in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Storage VM / Systemstatusdetails“ können Sie detaillierte Informationen zur ausgewählten Storage VM anzeigen, z. B. deren Systemstatus, Kapazität, Konfiguration, Datenrichtlinien, logische Schnittstellen (LIFs), LUNs, qtrees, Benutzer, Benutzergruppenkontingente und Schutzdetails. Außerdem können Sie Informationen zu den zugehörigen Objekten und zugehörigen Warnungen für die Storage VM anzeigen.
+
+[NOTE]
+====
+Sie können nur die Daten-Storage-VM überwachen.
+
+====
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie die folgenden Aufgaben für die ausgewählte Storage VM ausführen:
+
+* *Zur Performance Ansicht wechseln*
++
+Ermöglicht die Navigation zur Seite mit den Details zu Storage VM und Performance.
+
+* *Aktionen*
++
+** Benachrichtigung hinzufügen
++
+Damit können Sie der ausgewählten Storage VM eine Warnung hinzufügen.
+
+** Annotieren
++
+Ermöglicht Ihnen, die ausgewählte storage VM mit Anmerkungen zu versehen.
+
+
+
+* *Storage VMs anzeigen*
++
+Ermöglicht die Navigation zur Ansicht „Systemstatus: Alle Storage VMs“.
+
+
+
+
+
+[[health-tab]]
+== Registerkarte „Systemstatus“
+
+Die Registerkarte „Systemstatus“ zeigt detaillierte Informationen über Datenverfügbarkeit, Datenkapazität und Schutzprobleme verschiedener Objekte wie Volumes, Aggregate, NAS LIFs, SAN LIFs, LUNs, Protokolle, Services, NFS-Freigaben und CIFS-Freigaben an.
+
+Sie können auf das Diagramm eines Objekts klicken, um die gefilterte Liste der Objekte anzuzeigen. Beispielsweise können Sie auf das Diagramm zur Volumenkapazität klicken, das Warnungen anzeigt, um die Liste der Volumes mit Kapazitätsproblemen mit dem Schweregrad „Warnung“ anzuzeigen.
+
+* *Verfügbarkeitsprobleme*
++
+Zeigt als Diagramm die Gesamtzahl der Objekte an, einschließlich der Objekte mit Verfügbarkeitsproblemen und der Objekte ohne Verfügbarkeitsprobleme. Die Farben im Diagramm stehen für die unterschiedlichen Schweregrade der Probleme. Die Informationen unterhalb des Diagramms enthalten Details zu Verfügbarkeitsproblemen, die die Datenverfügbarkeit in der Storage VM beeinträchtigen können oder bereits beeinträchtigt haben. Beispielsweise werden Informationen zu NAS LIFs und SAN LIFs angezeigt, die ausgefallen sind, sowie zu Volumes, die offline sind.
+
++
+Sie können außerdem Informationen über die zugehörigen Protokolle und Services, die aktuell ausgeführt werden, sowie über die Anzahl und den Status der NFS- und CIFS-Freigaben anzeigen.
+
+* *Kapazitätsprobleme*
++
+Die Gesamtzahl der Objekte, einschließlich Objekten mit Kapazitätsproblemen und Objekten ohne kapazitätsbezogene Probleme, wird grafisch dargestellt. Die Farben im Diagramm stehen für die verschiedenen Schweregrade der Probleme. Die Informationen unterhalb des Diagramms enthalten Details zu Kapazitätsproblemen, die sich auf die Datenkapazität in der storage VM auswirken können oder bereits ausgewirkt haben. Beispielsweise werden Informationen zu Aggregaten angezeigt, die die festgelegten Schwellenwerte voraussichtlich überschreiten.
+
+* *Schutzprobleme*
++
+Bietet einen schnellen Überblick über den Systemstatus in Bezug auf den Schutz der Storage VM, indem in einem Dialogfeld die Gesamtzahl der Beziehungen angezeigt wird, einschließlich Beziehungen mit Schutzproblemen und Beziehungen ohne schutzbezogene Probleme. Außerdem kann der Status der Storage VM DR Beziehung für die ausgewählte Storage VM angezeigt werden. Die Ereignisse der Storage VM DR Beziehungen werden hier angezeigt, und durch Klicken auf die Ereignisse wird die Seite mit den Ereignisdetails geöffnet. Wenn ungeschützte Volumes vorhanden sind, wird durch Klicken auf den Link die Ansicht „Systemstatus: Alle Volumes“ geöffnet, in der eine gefilterte Liste der ungeschützten Volumes auf der Storage VM angezeigt werden kann. Die Farben im Diagramm stehen für die verschiedenen Schweregrade der Probleme. Durch Klicken auf ein Diagramm wird die Ansicht „Beziehung: Alle Beziehungen“ geöffnet, in der eine gefilterte Liste der Details zu Schutzbeziehungen angezeigt werden kann. Die Informationen unterhalb des Diagramms enthalten Details zu Schutzproblemen, die den Schutz der Daten in der Storage VM beeinträchtigen können oder bereits beeinträchtigt haben. Beispielsweise werden Informationen zu Volumes angezeigt, deren Reserve für Snapshot Kopien fast voll ist, oder zu Problemen mit der Verzögerung von SnapMirror Beziehungen.
+
+
+
+
+
+[[capacity-tab]]
+== Registerkarte Kapazität
+
+Die Registerkarte „Kapazität“ zeigt detaillierte Informationen zur Datenkapazität der ausgewählten SVM an.
+
+Die folgenden Informationen werden für eine Storage VM mit FlexVol volume oder FlexGroup volume angezeigt:
+
+* *Kapazität*
++
+Der Bereich „Kapazität“ zeigt Details zur genutzten und verfügbaren Kapazität an, die aus allen Volumes zugewiesen wurde:
+
++
+** Gesamtkapazität
++
+Zeigt die Gesamtkapazität der Storage VM an.
+
+** Gebraucht
++
+Zeigt den von den Daten in den Volumes belegten Speicherplatz an, die zur Storage VM gehören.
+
+** Garantiert verfügbar
++
+Zeigt den garantiert verfügbaren Speicherplatz für Daten in Volumes der Storage VM an.
+
+** Nicht garantiert
++
+Zeigt den verbleibenden verfügbaren Speicherplatz für Daten an, die für Thin Provisioning Volumes in der Storage VM zugewiesen sind.
+
+
+
+* *Volumina mit Kapazitätsproblemen*
++
+Die Liste „Volumes mit Kapazitätsproblemen“ zeigt in Tabellenform Details zu den Volumes an, die Kapazitätsprobleme aufweisen:
+
++
+** Status
++
+Weist darauf hin, dass das Volume ein kapazitätsbezogenes Problem mit dem angegebenen Schweregrad aufweist.
+
++
+Beim Bewegen des Mauszeigers auf den Status erscheinen weitere Informationen zu dem oder den für das Volume generierten kapazitätsbezogenen Ereignissen.
+
++
+Wenn der Status des Volume durch ein einzelnes Ereignis bestimmt wird, können Sie Informationen wie den Ereignisnamen, Datum und Uhrzeit der Auslösung, den Namen des Administrators, dem das Ereignis zugewiesen ist, und die Ursache des Ereignisses anzeigen. Mit der Schaltfläche *View Details* können Sie weitere Informationen zum Ereignis anzeigen.
+
++
+Wenn der Status des Volume durch mehrere Ereignisse mit demselben Schweregrad bestimmt wird, werden die drei wichtigsten Ereignisse mit Informationen wie dem Ereignisnamen, der Uhrzeit und dem Datum der Auslösung sowie dem Namen des Administrators angezeigt, dem das Ereignis zugewiesen ist. Weitere Details zu jedem dieser Ereignisse können durch Klicken auf den Ereignisnamen angezeigt werden. Außerdem kann über den Link *View All Events* die Liste der generierten Ereignisse angezeigt werden.
+
++
+[NOTE]
+====
+Ein Volume kann mehrere Ereignisse mit demselben Schweregrad oder mit unterschiedlichen Schweregraden aufweisen. Es wird jedoch nur der höchste Schweregrad angezeigt. Wenn ein Volume beispielsweise zwei Ereignisse mit den Schweregraden „Fehler“ und „Warnung“ aufweist, wird nur der Schweregrad „Fehler“ angezeigt.
+
+====
+** Volumen
++
+Zeigt den Namen des Volumes an.
+
+** Genutzte Datenkapazität
++
+Stellt Informationen zur Kapazitätsauslastung des Volumes (in Prozent) grafisch dar.
+
+** Tage bis voll
++
+Zeigt die geschätzte Anzahl der verbleibenden Tage an, bis das Volume seine volle Kapazität erreicht.
+
+** Thin-provisioniert
++
+Zeigt an, ob für das ausgewählte Volume eine Speicherplatzzusage festgelegt ist. Gültige Werte sind Ja und Nein.
+
+** Aggregate
++
+Bei FlexVol Volumes wird der Name des Aggregats angezeigt, das das Volume enthält. Bei FlexGroup Volumes wird die Anzahl der Aggregate angezeigt, die die FlexGroup verwendet.
+
+
+
+
+
+
+
+[[configuration-tab]]
+== Registerkarte „Konfiguration“
+
+Die Registerkarte „Konfiguration“ zeigt Konfigurationsdetails zur ausgewählten Storage VM an, z. B. ihren Cluster, ihr Root-Volume, den Typ der enthaltenen Volumes (FlexVol Volumes), Richtlinien und den auf der Storage VM erstellten Schutz:
+
+* *Überblick*
++
+** Cluster
++
+Zeigt den Namen des Clusters an, zu dem die Storage VM gehört.
+
+** Zulässiger Volumentyp
++
+Zeigt die Arten von Volumes an, die in der Storage VM erstellt werden können. Der Typ kann FlexVol oder FlexVol/FlexGroup sein.
+
+** Root-Volume
++
+Zeigt den Namen des Root-Volumes der storage VM an.
+
+** Zulässige Protokolle
++
+Zeigt die auf der Storage VM konfigurierbaren Protokolltypen an. Außerdem wird angezeigt, ob ein Protokoll aktiv (image:../media/availability_up_um60.gif["Symbol für LIF-Verfügbarkeit - Aktiv"]), inaktiv (image:../media/availability_down_um60.gif["Symbol für LIF-Verfügbarkeit - Down"]) oder nicht konfiguriert (image:../media/disabled_um60.gif["Symbol für LIF-Verfügbarkeit: Unbekannt"]) ist.
+
+
+
+* *Datennetzwerkschnittstellen*
++
+** NAS
++
+Zeigt die Anzahl der NAS-Schnittstellen an, die der Storage VM zugeordnet sind. Außerdem zeigt dies an, ob die Schnittstellen aktiv (image:../media/availability_up_um60.gif["Symbol für LIF-Verfügbarkeit - Aktiv"]) oder inaktiv (image:../media/availability_down_um60.gif["Symbol für LIF-Verfügbarkeit - Down"]) sind.
+
+** SAN
++
+Zeigt die Anzahl der SAN-Schnittstellen an, die der Storage VM zugeordnet sind. Außerdem wird angezeigt, ob die Schnittstellen aktiv (image:../media/availability_up_um60.gif["Symbol für LIF-Verfügbarkeit - Aktiv"]) oder inaktiv (image:../media/availability_down_um60.gif["Symbol für LIF-Verfügbarkeit - Down"]) sind.
+
+** FC-NVMe
++
+Zeigt die Anzahl der FC-NVMe-Schnittstellen an, die der Storage VM zugeordnet sind. Außerdem wird angezeigt, ob die Schnittstellen aktiv (image:../media/availability_up_um60.gif["Symbol für LIF-Verfügbarkeit - Aktiv"]) oder inaktiv (image:../media/availability_down_um60.gif["Symbol für LIF-Verfügbarkeit - Down"]) sind.
+
+
+
+* *Management Netzwerkschnittstellen*
++
+** Verfügbarkeit
++
+Zeigt die Anzahl der Verwaltungsschnittstellen an, die der Storage VM zugeordnet sind. Außerdem wird angezeigt, ob die Verwaltungsschnittstellen aktiv (image:../media/availability_up_um60.gif["Symbol für LIF-Verfügbarkeit - Aktiv"]) oder inaktiv (image:../media/availability_down_um60.gif["Symbol für LIF-Verfügbarkeit - Down"]) sind.
+
+
+
+* *Richtlinien*
++
+** Snapshots
++
+Zeigt den Namen der Snapshot-Richtlinie an, die auf der Storage VM erstellt wird.
+
+** Exportrichtlinien
++
+Zeigt entweder den Namen der Exportrichtlinie an, wenn nur eine Richtlinie erstellt wurde, oder die Anzahl der Exportrichtlinien, wenn mehrere Richtlinien erstellt wurden.
+
+
+
+* *Schutz*
++
+** Storage VM DR
++
+Zeigt an, ob die ausgewählte Storage VM geschützt, Ziel oder ungeschützt ist, sowie den Namen des Ziels, auf dem die Storage VM geschützt ist. Wenn die ausgewählte Storage VM ein Ziel ist, werden die Details der Quell-Storage VM angezeigt. Im Fall von Fan-out zeigt dieses Feld die Gesamtzahl der Ziel-Storage VMs an, auf denen die Storage VM geschützt ist. Der Link „Anzahl“ führt zur Storage VM Beziehungsübersicht, gefiltert nach der Quell-Storage VM.
+
+** Geschützte Volumes
++
+Zeigt die Anzahl der geschützten Volumes auf der ausgewählten Storage VM im Verhältnis zur Gesamtzahl der Volumes an. Wenn Sie eine Ziel Storage VM anzeigen, bezieht sich der Zahlenlink auf die Ziel-Volumes der ausgewählten Storage VM.
+
+** Ungeschützte Volumes
++
+Zeigt die Anzahl der ungeschützten Volumes auf der ausgewählten storage VM an.
+
+
+
+* *Services*
++
+** Typ
++
+Zeigt den auf der Storage VM konfigurierten Diensttyp an. Mögliche Typen sind Domain Name System (DNS) oder Network Information Service (NIS).
+
+** Status
++
+Zeigt den Status des Dienstes an, der entweder Aktiv (image:../media/availability_up_um60.gif["Symbol für LIF-Verfügbarkeit - Aktiv"]), Inaktiv (image:../media/availability_down_um60.gif["Symbol für LIF-Verfügbarkeit - Down"]) oder Nicht konfiguriert (image:../media/disabled_um60.gif["Symbol für LIF-Verfügbarkeit: Unbekannt"]) sein kann.
+
+** Domainname
++
+Zeigt die vollqualifizierten Domainnamen (FQDNs) des DNS-Servers für die DNS Services bzw. des NIS-Servers für die NIS Services an. Wenn der NIS-Server aktiviert ist, wird der aktive FQDN des NIS-Servers angezeigt. Wenn der NIS-Server deaktiviert ist, wird die Liste aller FQDNs angezeigt.
+
+** IP-Adresse
++
+Zeigt die IP-Adressen des DNS- oder NIS-Servers an. Wenn der NIS-Server aktiviert ist, wird dessen aktive IP-Adresse angezeigt. Wenn der NIS-Server deaktiviert ist, wird die Liste aller IP-Adressen angezeigt.
+
+
+
+
+
+
+
+[[network-interfaces-tab]]
+== Registerkarte „Netzwerkschnittstellen“
+
+Die Registerkarte „Netzwerkschnittstellen“ zeigt Details zu den Datennetzwerkschnittstellen (LIFs) an, die auf der ausgewählten Storage VM erstellt wurden:
+
+* *Netzwerkschnittstelle*
++
+Zeigt den Namen der Schnittstelle an, die auf der ausgewählten storage VM erstellt wird.
+
+* *Betriebsstatus*
++
+Zeigt den Betriebsstatus der Schnittstelle an, der Aktiv (image:../media/lif_status_up.gif["Symbol für LIF-Status: Aktiv"]), Inaktiv (image:../media/lif_status_down.gif["Symbol für LIF-Status: Ausgefallen"]) oder Unbekannt (image:../media/hastate_unknown.gif["Symbol für HA-Status: unbekannt"]) sein kann. Der Betriebsstatus einer Schnittstelle hängt vom Status ihrer physischen Ports ab.
+
+* *Verwaltungsstatus*
++
+Zeigt den administrativen Status der Schnittstelle an, der „Up“ (image:../media/lif_status_up.gif["Symbol für LIF-Status: Aktiv"]), „Down“ (image:../media/lif_status_down.gif["Symbol für LIF-Status: Ausgefallen"]) oder „Unknown“ (image:../media/hastate_unknown.gif["Symbol für HA-Status: unbekannt"]) sein kann. Der administrative Status einer Schnittstelle wird vom Storage Administrator gesteuert, um Änderungen an der Konfiguration vorzunehmen oder Wartungsarbeiten durchzuführen. Der administrative Status kann vom Betriebsstatus abweichen. Ist der administrative Status einer Schnittstelle jedoch „Down“, ist der Betriebsstatus standardmäßig ebenfalls „Down“.
+
+* *IP-Adresse / WWPN*
++
+Zeigt die IP-Adresse für Ethernet-Schnittstellen und den World Wide Port Name (WWPN) für FC LIFs an.
+
+* *Protokolle*
++
+Zeigt die Liste der für die Schnittstelle angegebenen Datenprotokolle an, wie z. B. CIFS, NFS, iSCSI, FC/FCoE, FC-NVMe und FlexCache.
+
+* *Rolle*
++
+Zeigt die Schnittstellenrolle an. Die Rollen können Data oder Management sein.
+
+* *Home-Port*
++
+Zeigt den physischen Port an, dem die Schnittstelle ursprünglich zugeordnet war.
+
+* *Aktueller Port*
++
+Zeigt den physischen Port an, dem die Schnittstelle aktuell zugeordnet ist. Wenn die Schnittstelle migriert wird, kann der aktuelle Port vom ursprünglichen Port abweichen.
+
+* *Portsatz*
++
+Zeigt den Portsatz an, dem die Schnittstelle zugeordnet ist.
+
+* *Failover Richtlinie*
++
+Zeigt die für die Schnittstelle konfigurierte Failover-Richtlinie an. Für NFS-, CIFS- und FlexCache Schnittstellen ist die Standard-Failover-Richtlinie Next Available. Die Failover-Richtlinie gilt nicht für FC- und iSCSI-Schnittstellen.
+
+* *Routing-Gruppen*
++
+Zeigt den Namen der Routing-Gruppe an. Über den Namen der Routing-Gruppe lassen sich weitere Informationen zu den Routen und dem Ziel-Gateway anzeigen.
+
++
+Routing-Gruppen werden für ONTAP 8.3 oder höher nicht unterstützt, daher wird für diese Cluster eine leere Spalte angezeigt.
+
+* *Failover Gruppe*
++
+Zeigt den Namen der Failover-Gruppe an.
+
+
+
+
+
+[[qtrees-tab]]
+== Registerkarte Qtrees
+
+Die Registerkarte „Qtrees“ zeigt Details zu Qtrees und ihren Kontingenten an. Wenn Sie die Systemstatus-Schwellenwerteinstellungen für die Qtree-Kapazität für einen oder mehrere Qtrees bearbeiten möchten, können Sie auf die Schaltfläche „Schwellenwerte bearbeiten“ klicken.
+
+Mit der Schaltfläche *Exportieren* wird eine Datei mit kommagetrennten Werten (.csv) erstellt, die die Details aller überwachten qtrees enthält. Beim Export in eine CSV-Datei kann ein qtrees-Bericht für die aktuelle Storage VM, für alle Storage VMs im aktuellen Cluster oder für alle Storage VMs aller Cluster in Ihrem Datacenter erstellt werden. In der exportierten CSV-Datei werden einige zusätzliche qtrees-Felder angezeigt.
+
+* *Status*
++
+Zeigt den aktuellen Status des qtree an. Der Status kann Kritisch (image:../media/sev_critical_um60.png["Symbol für Schweregrad, kritisch"]), Fehler (image:../media/sev_error_um60.png["Symbol für Schweregrad - Fehler"]), Warnung (image:../media/sev_warning_um60.png["Symbol für Schweregrad: Warnung"]) oder Normal (image:../media/sev_normal_um60.png["Symbol für Ereignisschweregrad - normal"]) sein.
+
++
+Sie können den Mauszeiger über das Statussymbol bewegen, um weitere Informationen über das oder die für den qtree generierten Ereignisse anzuzeigen.
+
++
+Wenn ein einzelnes Ereignis den Status des qtree bestimmt, können Informationen wie der Ereignisname, Datum und Uhrzeit der Auslösung, der Name des Administrators, dem das Ereignis zugewiesen ist, und die Ursache des Ereignisses angezeigt werden. Mit *View Details* können weitere Informationen zu dem Ereignis angezeigt werden.
+
++
+Wird der Status des qtree durch mehrere Ereignisse desselben Schweregrads bestimmt, werden die drei wichtigsten Ereignisse mit Informationen wie dem Ereignisnamen, der Uhrzeit und dem Datum der Auslösung sowie dem Namen des Administrators angezeigt, dem das Ereignis zugewiesen ist. Weitere Details zu jedem dieser Ereignisse lassen sich durch Klicken auf den Ereignisnamen anzeigen. Auch *View All Events* kann zum Anzeigen der Liste der generierten Ereignisse verwendet werden.
+
++
+[NOTE]
+====
+Ein Qtree kann mehrere Ereignisse mit demselben oder mit unterschiedlichen Schweregraden aufweisen. Es wird jedoch nur der höchste Schweregrad angezeigt. Wenn ein Qtree beispielsweise zwei Ereignisse mit den Schweregraden „Fehler“ und „Warnung“ aufweist, wird nur der Schweregrad „Fehler“ angezeigt.
+
+====
+* *Qtree*
++
+Zeigt den Namen des qtree an.
+
+* *Cluster*
++
+Zeigt den Namen des Clusters an, der den qtree enthält. Erscheint nur in der exportierten CSV-Datei.
+
+* *Storage Virtual Machine*
++
+Zeigt den Namen der Storage Virtual Machine (SVM) an, die den qtree enthält. Erscheint nur in der exportierten CSV-Datei.
+
+* *Volumen*
++
+Zeigt den Namen des Volumes an, das den qtree enthält.
+
++
+Weitere Informationen zum Volume werden angezeigt, wenn sich der Mauszeiger über dem Volume-Namen befindet.
+
+* *Kontingentsatz*
++
+Zeigt an, ob ein Kontingent auf dem qtree aktiviert oder deaktiviert ist.
+
+* *Quotenart*
++
+Gibt an, ob das Kontingent für einen Benutzer, eine Benutzergruppe oder einen qtree gilt. Wird nur in der exportierten CSV-Datei angezeigt.
+
+* *Benutzer oder Gruppe*
++
+Zeigt den Namen des Benutzers oder der Benutzergruppe an. Für jeden Benutzer und jede Benutzergruppe werden mehrere Zeilen angezeigt. Bei Quota-Typ qtree oder wenn kein Quota festgelegt ist, ist die Spalte leer. Sie ist nur in der exportierten CSV-Datei enthalten.
+
+* *Festplattenauslastung %*
++
+Zeigt den prozentualen Anteil des belegten Festplattenspeichers an. Wenn ein endgültiges Festplatten-Limit festgelegt ist, basiert dieser Wert auf diesem endgültigen Festplatten-Limit. Wenn das Kontingent ohne endgültiges Festplatten-Limit festgelegt ist, basiert der Wert auf dem Datenspeicherplatz des Volume. Wenn das Kontingent nicht festgelegt ist oder wenn Kontingente auf dem Volume, zu dem der qtree gehört, deaktiviert sind, wird auf der Rasterseite "`Not applicable`" angezeigt, und das Feld ist in den CSV-Exportdaten leer.
+
+* *Endgültiges Limit für Datenträger*
++
+Zeigt den maximalen dem Qtree zugewiesenen Speicherplatz an. Unified Manager generiert ein kritisches Ereignis, wenn dieses Limit erreicht wird und keine weiteren Schreibvorgänge auf den Datenträger zulässig sind. Der Wert wird unter den folgenden Bedingungen als "`Unlimited`" angezeigt: wenn das Kontingent ohne endgültiges Limit für den Datenträger festgelegt ist, wenn kein Kontingent festgelegt ist oder wenn Kontingente für das Volume, zu dem der Qtree gehört, deaktiviert sind.
+
+* *Soft Limit für Datenträger*
++
+Zeigt den für den qtree zugewiesenen Speicherplatz an, bevor ein Warnereignis generiert wird. Der Wert wird unter folgenden Bedingungen als "`Unlimited`" angezeigt: wenn das Quota ohne Softlimit für den Speicherplatz festgelegt ist, wenn kein Quota festgelegt ist oder wenn Quotas auf dem Volume, zu dem der qtree gehört, deaktiviert sind. Standardmäßig ist diese Spalte ausgeblendet.
+
+* *Festplattenschwellenwert*
++
+Zeigt den für den Speicherplatz festgelegten Schwellenwert an. Der Wert wird unter den folgenden Bedingungen als "`Unlimited`" angezeigt: wenn das Kontingent ohne Grenzwert für den Speicherplatzschwellenwert festgelegt ist, wenn kein Kontingent festgelegt ist oder wenn Kontingente auf dem Volume, zu dem der qtree gehört, deaktiviert sind. Standardmäßig ist diese Spalte ausgeblendet.
+
+* *Verwendete Dateien %*
++
+Zeigt den Prozentsatz der im qtree verwendeten Dateien an. Wenn das endgültige Dateilimit festgelegt ist, basiert dieser Wert auf dem endgültigen Dateilimit. Wenn das Kontingent ohne endgültiges Dateilimit festgelegt ist, wird kein Wert angezeigt. Wenn das Kontingent nicht festgelegt ist oder wenn Kontingente auf dem Volume, zu dem der qtree gehört, deaktiviert sind, wird auf der Rasterseite "`Not applicable`" angezeigt, und das Feld in den CSV-Exportdaten bleibt leer.
+
+* *Endgültiges Dateilimit*
++
+Zeigt das endgültige Limit für die Anzahl der auf den qtrees zulässigen Dateien an. Der Wert wird unter den folgenden Bedingungen als „`Unlimited`“ angezeigt: wenn das Quota ohne endgültiges Dateilimit festgelegt ist, wenn das Quota nicht festgelegt ist oder wenn Quotas auf dem Volume, zu dem der qtree gehört, deaktiviert sind.
+
+* *Datei-Soft-Limit*
++
+Zeigt das Soft-Limit für die Anzahl der auf den qtrees zulässigen Dateien an. Der Wert wird unter den folgenden Bedingungen als "`Unlimited`" angezeigt: wenn das Quota ohne Soft-Limit für Dateien festgelegt ist, wenn das Quota nicht festgelegt ist oder wenn Quotas auf dem Volume deaktiviert sind, zu dem der qtree gehört. Standardmäßig ist diese Spalte ausgeblendet.
+
+
+
+
+
+[[user-and-group-quotas-tab]]
+== Registerkarte „Benutzer- und Gruppenkontingente“
+
+Zeigt Details zu den Benutzer- und Benutzergruppenkontingenten für die ausgewählte Storage VM an. Sie können Informationen wie den Status des Kontingents, den Namen des Benutzers oder der Benutzergruppe, die für Festplatten und Dateien festgelegten Soft Limits und endgültigen Limits, den belegten Speicherplatz und die Anzahl der verwendeten Dateien sowie den Festplattenschwellenwert anzeigen. Außerdem kann die einem Benutzer oder einer Benutzergruppe zugeordnete E-Mail-Adresse geändert werden.
+
+* *Schaltfläche „E-Mail-Adresse bearbeiten“*
++
+Öffnet das Dialogfeld „E-Mail-Adresse bearbeiten“, in dem die aktuelle E-Mail-Adresse des ausgewählten Benutzers oder der ausgewählten Benutzergruppe angezeigt wird. Die E-Mail-Adresse lässt sich ändern. Wenn das Feld „E-Mail-Adresse bearbeiten“ leer ist, wird die Standardregel verwendet, um eine E-Mail-Adresse für den ausgewählten Benutzer oder die ausgewählte Benutzergruppe zu generieren.
+
++
+Wenn mehrere Benutzer das gleiche Kontingent haben, werden ihre Namen durch Kommas getrennt angezeigt. Die Standardregel wird nicht zur Generierung der E-Mail-Adresse verwendet; daher müssen Sie die erforderliche E-Mail-Adresse für den Versand von Benachrichtigungen angeben.
+
+* *Befehlsschaltfläche „E-Mail-Regeln konfigurieren“*
++
+Ermöglicht das Erstellen oder Ändern von Regeln zur Generierung einer E-Mail-Adresse für die auf der Storage VM konfigurierten Benutzer- oder Benutzergruppenkontingente. Bei einer Kontingentüberschreitung wird eine Benachrichtigung an die angegebene E-Mail-Adresse gesendet.
+
+* *Status*
++
+Zeigt den aktuellen Status des Kontingents an. Der Status kann Kritisch (image:../media/sev_critical_um60.png["Symbol für Schweregrad, kritisch"]), Warnung (image:../media/sev_warning_um60.png["Symbol für Schweregrad: Warnung"]) oder Normal (image:../media/sev_normal_um60.png["Symbol für Ereignisschweregrad - normal"]) sein.
+
++
+Sie können den Mauszeiger über das Statussymbol bewegen, um weitere Informationen zu dem oder den für das Kontingent generierten Ereignissen anzuzeigen.
+
++
+Wenn der Kontingentstatus durch ein einzelnes Ereignis bestimmt wird, können Sie Informationen wie den Ereignisnamen, Datum und Uhrzeit der Auslösung, den Namen des Administrators, dem das Ereignis zugewiesen ist, und die Ursache des Ereignisses einsehen. Mit *View Details* können Sie weitere Informationen zum Ereignis einsehen.
+
++
+Wenn der Status des Kontingents durch mehrere Ereignisse mit demselben Schweregrad bestimmt wird, werden die drei wichtigsten Ereignisse mit Informationen wie dem Ereignisnamen, der Uhrzeit und dem Datum der Auslösung sowie dem Namen des Administrators angezeigt, dem das Ereignis zugewiesen ist. Weitere Details zu jedem dieser Ereignisse können durch Klicken auf den Ereignisnamen angezeigt werden. Außerdem kann *View All Events* verwendet werden, um die Liste der generierten Ereignisse anzuzeigen.
+
++
+[NOTE]
+====
+Ein Kontingent kann mehrere Ereignisse mit demselben oder mit unterschiedlichen Schweregraden enthalten. Es wird jedoch nur der höchste Schweregrad angezeigt. Wenn ein Kontingent beispielsweise zwei Ereignisse mit den Schweregraden „Fehler“ und „Warnung“ enthält, wird nur der Schweregrad „Fehler“ angezeigt.
+
+====
+* *Benutzer oder Gruppe*
++
+Zeigt den Namen des Benutzers oder der Benutzergruppe an. Wenn mehrere Benutzer dasselbe Kontingent haben, erscheinen die Benutzernamen als kommagetrennte Werte.
+
++
+Der Wert wird als "`Unknown`" angezeigt, wenn ONTAP aufgrund von SecD-Fehlern keinen gültigen Benutzernamen angibt.
+
+* *Typ*
++
+Gibt an, ob das Kontingent für einen Benutzer oder eine Benutzergruppe gilt.
+
+* *Volume oder Qtree*
++
+Zeigt den Namen des Volumes oder qtree an, für den das Benutzer- oder Gruppenkontingent festgelegt ist.
+
++
+Sie können den Mauszeiger über den Namen des Volumes oder qtree bewegen, um weitere Informationen über das Volume oder den qtree anzuzeigen.
+
+* *Festplattenauslastung %*
++
+Zeigt den Prozentsatz des belegten Speicherplatzes an. Der Wert wird als "`Nicht anwendbar`" angezeigt, wenn das Kontingent ohne endgültiges Limit festgelegt ist.
+
+* *Endgültiges Limit für Datenträger*
++
+Zeigt den maximal für das Kontingent reservierten Speicherplatz an. Unified Manager löst ein kritisches Ereignis aus, sobald dieses Limit erreicht ist; weitere Schreibvorgänge sind dann nicht mehr möglich. Der Wert wird als "`Unlimited`" angezeigt, wenn für das Kontingent kein endgültiges Limit für den Speicherplatz festgelegt ist.
+
+* *Soft Limit für Datenträger*
++
+Zeigt die dem Kontingent zugewiesene Speichermenge an, bevor ein Warnereignis generiert wird. Der Wert wird als "`Unlimited`" angezeigt, wenn das Kontingent ohne Softlimit für den Speicherplatz festgelegt ist. Standardmäßig ist diese Spalte ausgeblendet.
+
+* *Festplattenschwellenwert*
++
+Zeigt den für den Speicherplatz festgelegten Schwellenwert an. Der Wert wird als "`Unlimited`" angezeigt, wenn das Kontingent ohne Speicherplatz-Schwellenwertlimit festgelegt ist. Standardmäßig ist diese Spalte ausgeblendet.
+
+* *Verwendete Dateien %*
++
+Zeigt den Prozentsatz der im Qtree verwendeten Dateien an. Der Wert wird als "`Not applicable`" angezeigt, wenn das Kontingent ohne endgültiges Limit für Dateien festgelegt ist.
+
+* *Endgültiges Dateilimit*
++
+Zeigt das endgültige Limit für die Anzahl der im Rahmen des Kontingents zulässigen Dateien an. Der Wert wird als "`Unlimited`" angezeigt, wenn das Kontingent ohne endgültiges Limit für Dateien festgelegt ist.
+
+* *Datei-Soft-Limit*
++
+Zeigt das weiche Limit für die Anzahl der im Kontingent zulässigen Dateien an. Der Wert wird als "`Unlimited`" angezeigt, wenn das Kontingent ohne weiches Dateilimit festgelegt ist. Standardmäßig ist diese Spalte ausgeblendet.
+
+* *E-Mail-Adresse*
++
+Zeigt die E-Mail-Adresse des Benutzers oder der Benutzergruppe an, an die Benachrichtigungen bei einer Kontingentüberschreitung gesendet werden.
+
+
+
+
+
+[[nfs-shares-tab]]
+== Registerkarte NFS-Freigaben
+
+Die Registerkarte „NFS-Freigaben“ zeigt Informationen zu NFS-Freigaben an, z. B. deren Status, den dem Volume zugeordneten Pfad (FlexGroup Volumes oder FlexVol Volumes), die Zugriffsebenen von Clients auf die NFS-Freigaben und die Exportrichtlinie, die für die exportierten Volumes definiert ist. NFS-Freigaben werden unter folgenden Bedingungen nicht angezeigt: wenn das Volume nicht eingebunden ist oder wenn die der Exportrichtlinie für das Volume zugeordneten Protokolle keine NFS-Freigaben enthalten.
+
+* *Status*
++
+Zeigt den aktuellen Status der NFS-Freigaben an. Der Status kann Error (image:../media/sev_error_um60.png["Symbol für Schweregrad - Fehler"]) oder Normal (image:../media/sev_normal_um60.png["Symbol für Ereignisschweregrad - normal"]) sein.
+
+* *Verbindungspfad*
++
+Zeigt den Pfad an, unter dem das Volume gemountet ist. Wenn eine explizite NFS-Exportrichtlinie auf einen Qtree angewendet wird, zeigt die Spalte den Pfad des Volumes an, über den auf den Qtree zugegriffen werden kann.
+
+* *Verbindungspfad aktiv*
++
+Zeigt an, ob der Pfad für den Zugriff auf das gemountete Volume aktiv oder inaktiv ist.
+
+* *Volume oder Qtree*
++
+Zeigt den Namen des Volumes oder Qtrees an, für den die NFS-Exportrichtlinie gilt. Wenn eine NFS-Exportrichtlinie für einen Qtree im Volume gilt, zeigt die Spalte sowohl den Namen des Volumes als auch den des Qtrees an.
+
++
+Über den Link lassen sich Details zum Objekt auf der entsprechenden Detailseite anzeigen. Wenn es sich bei dem Objekt um einen qtree handelt, werden Links sowohl für den qtree als auch für das Volume angezeigt.
+
+* *Volume Status*
++
+Zeigt den Status des exportierten Volumes an. Der Status kann Offline, Online, Eingeschränkt oder Gemischt sein.
+
++
+** Offline
++
+Lese- oder Schreibzugriff auf das Volume ist nicht gestattet.
+
+** Online
++
+Lese- und Schreibzugriff auf das Volume ist zulässig.
+
+** Eingeschränkt
++
+Begrenzte Operationen wie Paritätsrekonstruktion sind zulässig, der Datenzugriff ist jedoch nicht gestattet.
+
+** Gemischt
++
+Die Bestandteile eines FlexGroup Volume befinden sich nicht alle im gleichen Zustand.
+
+
+
+* *Sicherheitsstil*
++
+Zeigt die Zugriffsberechtigungen für die exportierten Volumes an. Der Sicherheitsstil kann UNIX, Unified, NTFS oder Mixed sein.
+
++
+** UNIX (NFS Clients)
++
+Die Dateien und Verzeichnisse im Volume haben UNIX-Berechtigungen.
+
+** Vereinheitlicht
++
+Dateien und Verzeichnisse im Volume haben einen einheitlichen Sicherheitsstil.
+
+** NTFS (CIFS-Clients)
++
+Die Dateien und Verzeichnisse auf dem Volume verfügen über Windows NTFS-Berechtigungen.
+
+** Gemischt
++
+Dateien und Verzeichnisse im Volume können entweder UNIX-Berechtigungen oder Windows NTFS-Berechtigungen haben.
+
+
+
+* *UNIX-Berechtigung*
++
+Zeigt die UNIX-Berechtigungsbits in einem Oktalstringformat an, die für die exportierten Volumes festgelegt sind. Sie ähneln den Berechtigungsbits im UNIX-Stil.
+
+* *Exportrichtlinie*
++
+Zeigt die Regeln an, die die Zugriffsberechtigung für exportierte Volumes definieren. Über den Link lassen sich Details zu den mit der Exportrichtlinie verknüpften Regeln anzeigen, z. B. zu den Authentifizierungsprotokollen und der Zugriffsberechtigung.
+
+
+
+
+
+[[smb-shares-tab]]
+== Registerkarte „SMB-Freigaben“
+
+Zeigt Informationen zu den SMB-Freigaben auf der ausgewählten Storage VM an. Sie können Informationen wie den Status der SMB-Freigabe, den Freigabenamen, den mit der Storage VM verknüpften Pfad, den Status des Verbindungspfads der Freigabe, das übergeordnete Objekt, den Status des übergeordneten Volumes, die Sicherheitsdaten der Freigabe und die für die Freigabe definierten Exportrichtlinien anzeigen. Außerdem können Sie feststellen, ob ein äquivalenter NFS-Pfad für die SMB-Freigabe existiert.
+
+[NOTE]
+====
+Auf der Registerkarte „SMB-Freigaben“ sind keine Freigaben in Ordnern sichtbar.
+
+====
+* *Befehlsschaltfläche „Benutzerzuordnung anzeigen“*
++
+Öffnet das Dialogfeld „Benutzerzuordnung“.
+
++
+Die Details der Benutzerzuordnung für die Storage VM lassen sich anzeigen.
+
+* *Schaltfläche zum Anzeigen des ACL-Befehls*
++
+Öffnet das Dialogfeld „Zugriffskontrolle“ für die Freigabe.
+
++
+Sie können die Benutzer- und Berechtigungsdetails für die ausgewählte Freigabe anzeigen.
+
+* *Status*
++
+Zeigt den aktuellen Status der Freigabe an. Der Status kann Normal (image:../media/sev_normal_um60.png["Symbol für Ereignisschweregrad - normal"]) oder Fehler (image:../media/sev_error_um60.png["Symbol für Schweregrad - Fehler"]) sein.
+
+* *Name der Freigabe*
++
+Zeigt den Namen der SMB-Freigabe an.
+
+* *Pfad*
++
+Zeigt den Verbindungspfad an, auf dem die Freigabe erstellt wird.
+
+* *Verbindungspfad aktiv*
++
+Zeigt an, ob der Pfad zum Zugriff auf die Freigabe aktiv oder inaktiv ist.
+
+* *Enthaltendes Objekt*
++
+Zeigt den Namen des übergeordneten Objekts an, zu dem die Freigabe gehört. Das übergeordnete Objekt kann ein Volume oder ein qtree sein.
+
++
+Nach dem Klicken auf den Link zeigt die entsprechende Detailseite Details zum übergeordneten Objekt an. Wenn das übergeordnete Objekt ein qtree ist, werden Links sowohl für qtree als auch für Volume angezeigt.
+
+* *Volume Status*
++
+Zeigt den Status des exportierten Volumes an. Der Status kann Offline, Online, Eingeschränkt oder Gemischt sein.
+
++
+** Offline
++
+Lese- oder Schreibzugriff auf das Volume ist nicht gestattet.
+
+** Online
++
+Lese- und Schreibzugriff auf das Volume ist zulässig.
+
+** Eingeschränkt
++
+Begrenzte Operationen wie Paritätsrekonstruktion sind zulässig, der Datenzugriff ist jedoch nicht gestattet.
+
+** Gemischt
++
+Die Bestandteile eines FlexGroup Volume befinden sich nicht alle im gleichen Zustand.
+
+
+
+* *Sicherheit*
++
+Zeigt die Zugriffsberechtigungen für die exportierten Volumes an. Der Sicherheitsstil kann UNIX, Unified, NTFS oder Mixed sein.
+
++
+** UNIX (NFS Clients)
++
+Die Dateien und Verzeichnisse im Volume haben UNIX-Berechtigungen.
+
+** Vereinheitlicht
++
+Dateien und Verzeichnisse im Volume haben einen einheitlichen Sicherheitsstil.
+
+** NTFS (CIFS-Clients)
++
+Die Dateien und Verzeichnisse auf dem Volume verfügen über Windows NTFS-Berechtigungen.
+
+** Gemischt
++
+Dateien und Verzeichnisse im Volume können entweder UNIX-Berechtigungen oder Windows NTFS-Berechtigungen haben.
+
+
+
+* *Exportrichtlinie*
++
+Zeigt den Namen der für die Freigabe geltenden Exportrichtlinie an. Wenn für die Storage VM keine Exportrichtlinie angegeben ist, wird der Wert als Not Enabled angezeigt.
+
++
+Über den Link lassen sich Details zu den mit der Exportrichtlinie verknüpften Regeln anzeigen, z. B. Zugriffsprotokolle und Berechtigungen. Der Link ist deaktiviert, wenn die Exportrichtlinie für die ausgewählte Storage VM deaktiviert ist.
+
+* *NFS Äquivalent*
++
+Gibt an, ob es ein NFS-Äquivalent für die Freigabe gibt.
+
+
+
+
+
+[[san-tab]]
+== Registerkarte SAN
+
+Zeigt Details zu LUNs, Initiatorgruppen und Initiatoren für die ausgewählte Storage VM an. Standardmäßig wird die LUN-Ansicht angezeigt. Details zu den Initiatorgruppen werden auf der Registerkarte „Initiator Groups“ und Details zu den Initiatoren auf der Registerkarte „Initiators“ angezeigt.
+
+* *Registerkarte „LUNs“*
++
+Zeigt Details zu den LUNs an, die zur ausgewählten Storage VM gehören. Angezeigt werden Informationen wie der LUN-Name, der LUN-Status (online oder offline), der Name des Dateisystems (Volume oder qtree), das die LUN enthält, der Typ des Host-Betriebssystems, die gesamte Datenkapazität und die Seriennummer der LUN. Die Spalte „LUN Performance“ enthält einen Link zur Detailseite „LUN/Performance“.
+
++
+Sie können außerdem Informationen darüber anzeigen, ob Thin Provisionierung auf der LUN aktiviert ist und ob die LUN einer Initiatorgruppe zugeordnet ist. Falls sie einem Initiator zugeordnet ist, können Sie die Initiatorgruppen und Initiatoren anzeigen, die der ausgewählten LUN zugeordnet sind.
+
+* *Registerkarte „Initiatorgruppen“*
++
+Zeigt Details zu Initiatorgruppen an. Es lassen sich Angaben wie der Name der Initiatorgruppe, der Zugriffsstatus, das von allen Initiatoren der Gruppe verwendete Host-Betriebssystem und das unterstützte Protokoll einsehen. Durch Klicken auf den Link in der Spalte „Zugriffsstatus“ lässt sich der aktuelle Zugriffsstatus der Initiatorgruppe einsehen.
+
++
+** *Normal*
++
+Die Initiatorgruppe ist mit mehreren Zugriffspfaden verbunden.
+
+** *Einzelpfad*
++
+Die Initiatorgruppe ist mit einem einzigen Zugriffspfad verbunden.
+
+** *Keine Pfade*
++
+Es ist kein Zugriffspfad mit der Initiatorgruppe verbunden.
+
++
+Es kann angezeigt werden, ob Initiatorgruppen über ein Portset allen Schnittstellen oder bestimmten Schnittstellen zugeordnet sind. Beim Klicken auf den Link für die Anzahl in der Spalte „Zugeordnete Schnittstellen“ werden entweder alle Schnittstellen oder bestimmte Schnittstellen für ein Portset angezeigt. Schnittstellen, die über das Zielportal zugeordnet sind, werden nicht angezeigt. Die Gesamtzahl der Initiatoren und LUNs, die einer Initiatorgruppe zugeordnet sind, wird angezeigt.
+
++
+Sie können auch die LUNs und Initiatoren anzeigen, die der ausgewählten Initiatorgruppe zugeordnet sind.
+
+
+
+* *Registerkarte „Initiatoren“*
++
+Zeigt den Namen und Typ des Initiators sowie die Gesamtzahl der diesem Initiator zugeordneten Initiatorgruppen für die ausgewählte Storage VM an.
+
++
+ initiator groups that are mapped to the selected initiator group.
+
+
+
+
+[[related-annotations-pane]]
+== Bereich „Verwandte Anmerkungen“
+
+Im Bereich „Zugehörige Anmerkungen“ können Sie die Anmerkungsdetails anzeigen, die der ausgewählten Storage VM zugeordnet sind. Zu den Details gehören der Anmerkungsname und die Anmerkungswerte, die auf die Storage VM angewendet werden. Im Bereich „Zugehörige Anmerkungen“ können Sie auch manuelle Anmerkungen entfernen.
+
+
+
+[[related-devices-pane]]
+== Bereich „Verwandte Geräte“
+
+Im Bereich „Zugehörige Geräte“ lassen sich die Cluster, Aggregate und Volumes anzeigen, die mit der Storage VM verknüpft sind:
+
+* *Cluster*
++
+Zeigt den Systemstatus des Clusters an, zu dem die Storage VM gehört.
+
+* *Aggregate*
++
+Zeigt die Anzahl der Aggregate an, die zur ausgewählten Storage VM gehören. Der Systemstatus der Aggregate wird ebenfalls angezeigt, basierend auf dem höchsten Schweregrad. Wenn eine Storage VM beispielsweise zehn Aggregate enthält, von denen fünf den Status „Warnung“ und die restlichen fünf den Status „Kritisch“ anzeigen, wird der Status „Kritisch“ angezeigt.
+
+* *Zugewiesene Aggregate*
++
+Zeigt die Anzahl der Aggregate an, die einer Storage VM zugewiesen sind. Der Systemstatus der Aggregate wird ebenfalls basierend auf dem höchsten Schweregrad angezeigt.
+
+* *Volumes*
++
+Die Anzahl und Kapazität der Volumes, die zur ausgewählten Storage VM gehören, werden angezeigt. Der Systemstatus der Volumes wird ebenfalls angezeigt, basierend auf dem höchsten Schweregrad. Wenn in der Storage VM FlexGroup Volumes vorhanden sind, umfasst die Anzahl auch FlexGroups; FlexGroup Bestandteile sind nicht enthalten.
+
+
+
+
+
+[[related-groups-pane]]
+== Bereich „Verwandte Gruppen“
+
+Im Bereich „Verwandte Gruppen“ kann die Liste der Gruppen angezeigt werden, die der ausgewählten Storage VM zugeordnet sind.
+
+
+
+[[related-alerts-pane]]
+== Bereich „Zugehörige Warnungen“
+
+Im Bereich „Zugehörige Warnungen“ können Sie die Liste der für die ausgewählte Storage VM erstellten Warnungen anzeigen. Sie können außerdem eine Warnung hinzufügen, indem Sie auf den Link *Add Alert* klicken, oder eine vorhandene Warnung bearbeiten, indem Sie auf den Warnungsnamen klicken.

@@ -1,0 +1,23 @@
+---
+permalink: performance-checker/concept_navigate_performance_workflows_in_unified_manager_ui.html 
+sidebar: sidebar 
+keywords: navigating, performance, workflows, unified manager, gui 
+summary: Die Unified Manager Oberfläche bietet zahlreiche Seiten zum Erfassen und Anzeigen von Performance Informationen. Der linke Navigationsbereich dient zum Navigieren zu Seiten in der GUI, und Registerkarten und Links auf den Seiten dienen zum Anzeigen und Konfigurieren von Informationen. 
+---
+= Navigation durch Performance-Workflows in der Active IQ Unified Manager GUI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Unified Manager Oberfläche bietet zahlreiche Seiten zum Erfassen und Anzeigen von Performance Informationen. Der linke Navigationsbereich dient zum Navigieren zu Seiten in der GUI, und Registerkarten und Links auf den Seiten dienen zum Anzeigen und Konfigurieren von Informationen.
+
+Sie verwenden alle folgenden Seiten zur Überwachung und Fehlerbehebung bei Informationen zur Cluster-Performance:
+
+* Dashboard-Seite
+* Storage- und Netzwerkobjektinventarseiten
+* Detailseiten für Storage-Objekte (einschließlich des Performance Explorers)
+* Konfigurations- und Einrichtungsseiten
+* Ereignisseiten
+

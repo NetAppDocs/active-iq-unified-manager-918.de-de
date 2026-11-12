@@ -1,0 +1,30 @@
+---
+permalink: performance-checker/task_specify_custom_time_range.html 
+sidebar: sidebar 
+keywords: specify, custom, time range 
+summary: Die Seite „Performance Explorer“ ermöglicht es Ihnen, den Datums- und Zeitbereich für Ihre Performance-Daten festzulegen. Die Angabe eines benutzerdefinierten Zeitraums bietet mehr Flexibilität als die Verwendung vordefinierter Zeitbereiche bei der Verfeinerung von Clusterobjektdaten. 
+---
+= Angeben eines benutzerdefinierten Zeitbereichs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Performance Explorer“ ermöglicht es Ihnen, den Datums- und Zeitbereich für Ihre Performance-Daten festzulegen. Die Angabe eines benutzerdefinierten Zeitraums bietet mehr Flexibilität als die Verwendung vordefinierter Zeitbereiche bei der Verfeinerung von Clusterobjektdaten.
+
+Sie können einen Zeitraum zwischen einer Stunde und 390 Tagen auswählen. 13 Monate entsprechen 390 Tagen, da jeder Monat mit 30 Tagen gezählt wird. Die Angabe eines Datums- und Zeitbereichs liefert detailliertere Informationen und ermöglicht es Ihnen, bestimmte Performance-Ereignisse oder Ereignisreihen genauer zu betrachten. Die Angabe eines Zeitraums erleichtert auch die Fehlerbehebung bei potenziellen Performance-Problemen, da bei der Angabe eines Datums- und Zeitbereichs Daten rund um das Performance-Ereignis detaillierter angezeigt werden. Mit der Option *Zeitbereich* lassen sich vordefinierte Datums- und Zeitbereiche auswählen oder ein eigener benutzerdefinierter Datums- und Zeitbereich von bis zu 390 Tagen angeben. Die Schaltflächen für vordefinierte Zeitbereiche reichen von der *Letzten Stunde* bis zu den *Letzten 13 Monaten*.
+
+Wenn Sie die Option *Letzte 13 Monate* auswählen oder einen benutzerdefinierten Datumsbereich von mehr als 30 Tagen angeben, wird ein Dialogfeld angezeigt, das darauf hinweist, dass für Performance-Daten, die für einen Zeitraum von mehr als 30 Tagen angezeigt werden, stündliche Durchschnittswerte und keine 5-Minuten-Datenabfrage verwendet werden. Daher kann es zu einem Verlust der visuellen Granularität der Zeitachse kommen. Wenn Sie im Dialogfeld auf die Option *Nicht mehr anzeigen* klicken, wird die Meldung nicht angezeigt, wenn Sie die Option *Letzte 13 Monate* auswählen oder einen benutzerdefinierten Datumsbereich von mehr als 30 Tagen angeben. Zusammenfassende Daten gelten auch für einen kleineren Zeitbereich, wenn der Zeitbereich eine Uhrzeit/ein Datum umfasst, die bzw. das mehr als 30 Tage vom heutigen Tag entfernt ist.
+
+Bei der Auswahl eines Zeitraums (benutzerdefiniert oder vordefiniert) basieren Zeiträume von 30 Tagen oder weniger auf Datenstichproben im 5-Minuten-Intervall. Zeiträume von mehr als 30 Tagen basieren auf Datenstichproben im einstündigen Intervall.
+
+image::../media/time_range_selector.gif[Ein UI-Screenshot, der das Bedienfeld „Time Range“ zeigt.]
+
+. Nach einem Klick auf das Dropdown-Feld *Zeitbereich* erscheint der Bereich „Zeitbereich“.
+. Für die Auswahl eines vordefinierten Zeitraums ist rechts neben dem Bereich *Time Range* eine der Schaltflächen *Last...* anzuklicken. Bei Auswahl eines vordefinierten Zeitraums stehen Daten für bis zu 13 Monate zur Verfügung. Die ausgewählte Schaltfläche für den vordefinierten Zeitraum wird hervorgehoben, und die entsprechenden Tage und Uhrzeiten werden in den Kalendern und in den Zeitauswahlfeldern angezeigt.
+. Zum Auswählen eines benutzerdefinierten Datumsbereichs wird im Kalender *Von* auf der linken Seite auf das Startdatum geklickt. Zum Vorwärts- oder Rückwärtsnavigieren im Kalender wird auf *<* or *>* geklickt. Zum Festlegen des Enddatums wird im Kalender *Bis* auf der rechten Seite auf ein Datum geklickt. Das Standard-Enddatum ist das aktuelle Datum, sofern kein anderes Enddatum angegeben wird. Die Schaltfläche *Custom Range* rechts im Zeitbereich-Bedienfeld ist hervorgehoben und zeigt damit an, dass ein benutzerdefinierter Datumsbereich ausgewählt wurde.
+. Ein benutzerdefinierter Zeitraum wird über das Steuerelement *Time* unter dem Kalender *From* ausgewählt; dort wird die Startzeit festgelegt. Für die Festlegung der Endzeit dient rechts unter dem Kalender *To* das Steuerelement *Time*; dort wird die Endzeit ausgewählt. Die Schaltfläche *Custom Range* rechts im Bedienfeld Time Range ist hervorgehoben und zeigt damit an, dass ein benutzerdefinierter Zeitraum ausgewählt wurde.
+. Optional können Sie beim Auswählen eines vordefinierten Datumsbereichs Start- und Endzeitpunkt festlegen. Die Auswahl erfolgt wie zuvor beschrieben zunächst für den vordefinierten Datumsbereich und anschließend für den Start- und Endzeitpunkt. Die ausgewählten Daten werden in den Kalendern hervorgehoben, die von Ihnen festgelegten Start- und Endzeitpunkte werden in den *Time*-Steuerelementen angezeigt, und die Schaltfläche *Custom Range* wird hervorgehoben.
+. Nach Auswahl des Datums- und Zeitbereichs ist *Apply Range* auszuwählen. Die Performance-Statistiken für diesen Zeitraum sind in den Diagrammen und in der Ereigniszeitleiste zu sehen.
+

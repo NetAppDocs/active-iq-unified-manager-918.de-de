@@ -1,0 +1,71 @@
+---
+permalink: performance-checker/task_move_workloads_to_different_aggregate.html 
+sidebar: sidebar 
+keywords: move, workloads, different, aggregate 
+summary: Mit Unified Manager können Sie ein Aggregat identifizieren, das weniger ausgelastet ist als das Aggregat, auf dem sich Ihre Workloads derzeit befinden. Anschließend können Sie ausgewählte Volumes oder LUNs auf dieses Aggregat verschieben. Durch das Verschieben leistungsstarker Workloads auf ein weniger ausgelastetes Aggregat oder auf ein Aggregat mit aktiviertem Flash Storage können die Workloads effizienter ausgeführt werden. 
+---
+= Workloads in Active IQ Unified Manager in ein anderes Aggregat verschieben
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Unified Manager können Sie ein Aggregat identifizieren, das weniger ausgelastet ist als das Aggregat, auf dem sich Ihre Workloads derzeit befinden. Anschließend können Sie ausgewählte Volumes oder LUNs auf dieses Aggregat verschieben. Durch das Verschieben leistungsstarker Workloads auf ein weniger ausgelastetes Aggregat oder auf ein Aggregat mit aktiviertem Flash Storage können die Workloads effizienter ausgeführt werden.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Sie müssen den Namen des Aggregats notiert haben, bei dem aktuell ein Performance Problem vorliegt.
+* Sie müssen das Datum und die Uhrzeit protokolliert haben, zu denen das Aggregat das Ereignis erhalten hat.
+* Unified Manager muss Performance-Daten von mindestens einem Monat erfasst und analysiert haben.
+
+
+Diese Schritte helfen Ihnen, die folgenden Ressourcen zu identifizieren, damit Sie leistungsstarke Workloads auf ein weniger ausgelastetes Aggregat verschieben können:
+
+* Die Aggregate im selben Cluster, die weniger ausgelastet sind
+* Die Volumes mit der höchsten Performance im aktuellen Aggregat
+
+
+.Schritte
+. Zu identifizieren ist das im Cluster am wenigsten ausgelastete Aggregat:
++
+.. Auf der *Ereignis*-Detailseite erfolgt die Auswahl des Namens des Clusters, auf dem sich das Aggregat befindet.
++
+Auf der Seite Performance/Cluster-Startseite sind die Clusterdetails zu sehen.
+
+.. Auf der Seite *Zusammenfassung* erfolgt die Auswahl von *Aggregate* im Bereich *Verwaltete Objekte*.
++
+Die Liste der Aggregate in diesem Cluster wird angezeigt.
+
+.. Ein Klick auf die Spalte *Auslastung* sortiert die Aggregate nach der geringsten Auslastung.
++
+Sie können auch diejenigen Aggregate identifizieren, die über die größte *Free Capacity* verfügen. Dadurch erhalten Sie eine Liste potenzieller Aggregate, auf die Sie Workloads verschieben könnten.
+
+.. Zu notieren ist der Name des Aggregats, in das die Workloads verschoben werden sollen.
+
+
+. Leistungsstarke Volumes des Aggregats, das das Ereignis erhalten hat:
++
+.. Das Aggregat, bei dem das Performanceproblem auftritt, ist auszuwählen.
++
+Die Aggregatdetails sind auf der Seite „Performance/Aggregate Explorer“ zu sehen.
+
+.. Im Auswahlfeld *Zeitraum* ist die Option *Letzte 30 Tage* auszuwählen; anschließend ist auf *Bereich anwenden* zu klicken.
++
+Dadurch können Sie einen längeren Zeitraum des Performance Verlaufs als die standardmäßigen 72 Stunden anzeigen. Sie möchten ein Volume verschieben, das dauerhaft viele Ressourcen nutzt, nicht nur in den letzten 72 Stunden.
+
+.. Im Steuerelement *View and Compare* erfolgt die Auswahl von *Volumes on this Aggregate*.
++
+Auf diesem Aggregat wird eine Liste der FlexVol Volumes und der FlexGroup Bestandteil-Volumes angezeigt.
+
+.. Durch das Sortieren der Volumes nach der höchsten MB/s-Rate und anschließend nach der höchsten IOPS-Rate werden die Volumes mit der höchsten Performance angezeigt.
+.. Zu notieren sind die Namen der Volumes, die in ein anderes Aggregate verschoben werden sollen.
+
+
+. Die Volumes mit hoher Performance in das als gering ausgelastet identifizierte Aggregat verschieben.
++
+Sie können den Verschiebevorgang mit ONTAP System Manager, OnCommand Workflow Automation, ONTAP Befehlen oder einer Kombination dieser Tools durchführen.
+
+
+
+Nach einigen Tagen lässt sich prüfen, ob Sie von diesem Knoten oder Aggregat dieselbe Art von Ereignissen erhalten.

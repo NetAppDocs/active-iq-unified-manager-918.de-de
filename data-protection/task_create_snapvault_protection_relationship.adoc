@@ -1,0 +1,60 @@
+---
+permalink: data-protection/task_create_snapvault_protection_relationship.html 
+sidebar: sidebar 
+keywords: create, snapvault, protection, relationship, health, volumes view 
+summary: In der Ansicht „Alle Volumes“ auf der Seite „Integrität“ lassen sich SnapVault Beziehungen für ein oder mehrere Volumes auf derselben Storage VM für Datensicherungen erstellen. 
+---
+= Erstellung einer SnapVault Beziehung in der Ansicht „Gesundheit: Alle Volumes“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Ansicht „Integrität: Alle Volumes“ verwenden, um für ein oder mehrere Volumes auf derselben Storage VM SnapVault Beziehungen zu erstellen und so Datensicherungen zu Schutzzwecken zu ermöglichen.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+Das Menü *Protect* wird in den folgenden Fällen nicht angezeigt:
+
+* Wenn die RBAC-Einstellungen diese Aktion nicht zulassen: beispielsweise wenn Sie nur über Operator-Berechtigungen verfügen
+* Wenn die Volume-ID unbekannt ist: beispielsweise, wenn eine clusterübergreifende Beziehung besteht und der Ziel-Cluster noch nicht erkannt wurde
+
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. In der Ansicht *Integrität: Alle Volumes* können Sie ein Volume auswählen, das Sie schützen möchten, und auf *Schützen* klicken.
++
+Alternativ können Sie mehrere Schutzbeziehungen auf derselben Storage Virtual Machine (SVM) erstellen, indem Sie in der Ansicht „Health: All Volumes“ ein oder mehrere Volumes auswählen und in der Symbolleiste auf „Protect“ klicken.
+
+. Im Menü erfolgt die Auswahl von *SnapVault*.
++
+Das Dialogfeld „Schutz konfigurieren“ wird angezeigt.
+
+. Mit *SnapVault* lässt sich die Registerkarte *SnapVault* anzeigen und die Informationen zum sekundären Volume konfigurieren.
+. Über *Advanced* lassen sich Deduplizierung, Komprimierung, automatisches Wachstum und Speicherplatzzusage nach Bedarf festlegen; anschließend kann auf *Apply* geklickt werden.
+. Die Vervollständigung des Bereichs *Zielinformationen* und des Bereichs *Beziehungseinstellungen* erfolgt im *SnapVault* Tab.
+. Auf *Anwenden* klicken.
++
+Sie kehren zur Ansicht „Gesundheit: Alle Volumes“ zurück.
+
+. Der Link zum Schutzkonfigurationsjob befindet sich oben in der Ansicht *Integrität: Alle Volumes*.
++
+Wenn Sie nur eine Schutzbeziehung erstellen, wird die Seite „Auftragsdetails“ angezeigt. Wenn Sie jedoch mehr als eine Schutzbeziehung erstellen, wird eine gefilterte Liste aller Aufträge angezeigt, die mit dem Schutzvorgang verknüpft sind.
+
+. Führen Sie einen der folgenden Schritte aus:
++
+** Wenn nur ein Auftrag vorhanden ist, kann die Aufgabenliste sowie die mit dem Schutzkonfigurationsauftrag verknüpften Aufgabendetails durch Klicken auf *Aktualisieren* aktualisiert werden, um festzustellen, wann der Auftrag abgeschlossen ist.
+** Wenn Sie mehr als einen Job haben:
++
+... In der Jobliste ist ein Job auszuwählen.
+... Mit *Aktualisieren* werden die Aufgabenliste und die mit dem Schutzkonfigurationsauftrag verbundenen Aufgabendetails aktualisiert, außerdem lässt sich feststellen, wann der Auftrag abgeschlossen ist.
+... Mit der Schaltfläche *Zurück* kehren Sie zur gefilterten Liste zurück und können einen anderen Job anzeigen.
+
+
+
+
+

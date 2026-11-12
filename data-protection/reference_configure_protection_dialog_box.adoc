@@ -1,0 +1,268 @@
+---
+permalink: data-protection/reference_configure_protection_dialog_box.html 
+sidebar: sidebar 
+keywords: configure, protection, dialog box 
+summary: Im Dialogfeld „Schutz konfigurieren“ können Sie SnapMirror- und SnapVault-Beziehungen für alle Volumes mit Lese-/Schreibzugriff sowie Datenschutz-Volumes auf Clustern erstellen, um sicherzustellen, dass die Daten auf einem Quellvolume oder primären Volume repliziert werden. 
+---
+= Im Active IQ Unified Manager steht das Dialogfeld „Schutz konfigurieren“ zur Verfügung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Schutz konfigurieren“ können Sie SnapMirror- und SnapVault-Beziehungen für alle Volumes mit Lese-/Schreibzugriff sowie Datenschutz-Volumes auf Clustern erstellen, um sicherzustellen, dass die Daten auf einem Quellvolume oder primären Volume repliziert werden.
+
+
+
+[[source-tab]]
+== Registerkarte „Quelle“
+
+* *Topologieansicht*
++
+Zeigt eine visuelle Darstellung der Beziehung, die Sie erstellen. Die Quelle in der Topologie ist standardmäßig hervorgehoben.
+
+* *Quellinformationen*
++
+Zeigt Details zu den ausgewählten Quellvolumes an, einschließlich der folgenden Informationen:
+
++
+** Name des Quell-Clusters
+** Name der Quell-SVM
+** Kumulative Gesamtgröße des Volumens
++
+Zeigt die Gesamtgröße aller ausgewählten Quell-Volumes an.
+
+** Kumulierte verwendete Volume-Größe
++
+Zeigt die kumulative verwendete Größe aller ausgewählten Quell-Volumes an.
+
+** Quellvolumen
++
+Die folgende Tabelle enthält diese Informationen:
+
++
+*** Quellvolumen
++
+Zeigt die Namen der ausgewählten Quell-Volumes an.
+
+*** Typ
++
+Zeigt den Volumentyp an.
+
+*** SnapLock Typ
++
+Zeigt den SnapLock Typ des Volume an. Die Optionen sind Compliance, Enterprise und Non-SnapLock.
+
+*** Snapshot Kopie
++
+Zeigt die Snapshot-Kopie an, die für den Basistransfer verwendet wird. Wenn das Quell-Volume lesen/schreiben ist, bedeutet der Wert „Default“ in der Spalte „Snapshot-Kopie“, dass standardmäßig eine neue Snapshot-Kopie erstellt und für den Basistransfer verwendet wird. Wenn das Quell-Volume ein Datensicherungs-Volume ist, bedeutet der Wert „Default“ in der Spalte „Snapshot-Kopie“, dass keine neue Snapshot-Kopie erstellt wird und alle vorhandenen Snapshot-Kopien an das Ziel übertragen werden. Beim Klicken auf den Wert der Snapshot-Kopie wird eine Liste von Snapshot-Kopien angezeigt, aus der eine vorhandene Snapshot-Kopie für den Basistransfer ausgewählt werden kann. Wenn der Quelltyp Datensicherung ist, kann keine andere Standard-Snapshot-Kopie ausgewählt werden.
+
+
+
+
+
+
+
+
+
+[[snapmirror-tab]]
+== SnapMirror Registerkarte
+
+Ermöglicht die Angabe eines Ziel-Clusters, einer Storage Virtual Machine (SVM) und eines Aggregats für eine Schutzbeziehung sowie einer Namenskonvention für Ziele beim Erstellen einer SnapMirror Beziehung. Sie können außerdem eine SnapMirror Richtlinie und einen Zeitplan festlegen.
+
+* *Topologieansicht*
++
+Zeigt eine visuelle Darstellung der Beziehung an, die Sie erstellen. Die SnapMirror Zielressource in der Topologie ist standardmäßig hervorgehoben.
+
+* *Zielinformationen*
++
+Ermöglicht die Auswahl der Zielressourcen für eine Schutzbeziehung:
+
++
+** Erweiterter Link
++
+Öffnet das Dialogfeld „Erweiterte Zieleinstellungen“, wenn Sie eine SnapMirror Beziehung erstellen.
+
+** Cluster
++
+Listet die Cluster auf, die als Schutzzielhosts verfügbar sind. Dieses Feld ist erforderlich.
+
+** Storage Virtual Machine (SVM)
++
+Listet die auf dem ausgewählten Cluster verfügbaren SVMs auf. Ein Cluster muss ausgewählt werden, bevor die SVM-Liste angezeigt wird. Dieses Feld ist erforderlich.
+
+** Aggregat
++
+Listet die für die ausgewählte SVM verfügbaren Aggregate auf. Vor der Anzeige der Aggregatliste muss ein Cluster ausgewählt werden. Dieses Feld ist erforderlich. Die Aggregatliste enthält folgende Informationen:
+
++
+*** Rang
++
+Wenn mehrere Aggregate alle Anforderungen für ein Ziel erfüllen, gibt der Rang gemäß den folgenden Bedingungen die Priorität an, in der das Aggregat aufgeführt ist:
+
++
+.... Zur Trennung der Fehlerdomänen ist ein Aggregat auf einem anderen Knoten als dem Knoten des Quell-Volumes vorzuziehen.
+.... Ein Aggregat auf einem Knoten mit weniger Volumes ist zu bevorzugen, um den Lastausgleich zwischen den Knoten in einem Cluster zu ermöglichen.
+.... Ein Aggregat, das mehr freien Platz als andere Aggregate hat, wird bevorzugt, um einen Kapazitätsausgleich zu ermöglichen. Ein Rang von 1 bedeutet, dass das Aggregat gemäß den drei Kriterien am meisten bevorzugt wird.
+
+
+*** Aggregatname
++
+Name des Aggregats
+
+*** Verfügbare Kapazität
+*** Verfügbarer Speicherplatz auf dem Aggregat für Daten
+*** Ressourcenpool
++
+Name des Ressourcenpools, zu dem das Aggregat gehört
+
+
+
+** Namenskonvention
++
+Legt die standardmäßige Namenskonvention fest, die auf das Zielvolume angewendet wird. Sie können die bereitgestellte Namenskonvention übernehmen oder eine benutzerdefinierte erstellen. Die Namenskonvention kann die folgenden Attribute enthalten: %C, %M, %V und %N, wobei %C der Clustername, %M der SVM-Name, %V das Quellvolume und %N der Topologie-Ziel-Node-Name ist.
+
++
+Das Feld für die Namenskonvention wird rot hervorgehoben, wenn Ihre Eingabe ungültig ist. Durch Klicken auf den Link „`Preview Name`“ wird eine Vorschau der von Ihnen eingegebenen Namenskonvention angezeigt, und der Vorschautext wird beim Eingeben einer Namenskonvention in das Textfeld dynamisch aktualisiert. Beim Erstellen der Beziehung wird dem Zielnamen ein Suffix zwischen 001 und 999 angehängt, das das im Vorschautext angezeigte nnn ersetzt, wobei zuerst 001, dann 002 usw. zugewiesen wird.
+
+
+
+* *Beziehungseinstellungen*
++
+Ermöglicht Ihnen, die maximale Transferrate, die SnapMirror Richtlinie und den Zeitplan festzulegen, die für die Schutzbeziehung verwendet werden:
+
++
+** Maximale Transferrate
++
+Gibt die maximale Transferrate an, mit der Daten zwischen Clustern über das Netzwerk übertragen werden. Falls keine maximale Transferrate verwendet wird, ist der Basistransfer zwischen Beziehungen unbegrenzt.
+
+** SnapMirror Richtlinie
++
+Legt die ONTAP SnapMirror Richtlinie für die Beziehung fest. Der Standardwert ist DPDefault.
+
+** Richtlinie erstellen
++
+Öffnet das Dialogfeld „SnapMirror Richtlinie erstellen“, in dem Sie eine neue SnapMirror Richtlinie erstellen und verwenden können.
+
+** SnapMirror Zeitplan
++
+Gibt die ONTAP SnapMirror Richtlinie für die Beziehung an. Verfügbare Zeitpläne sind None, 5min, 8hour, daily, hourly und weekly. Der Standardwert ist None, was angibt, dass der Beziehung kein Zeitplan zugeordnet ist. Beziehungen ohne Zeitpläne haben keine Lag-Statuswerte, es sei denn, sie gehören zu einem Storage-Service.
+
+** Zeitplan erstellen
++
+Öffnet das Dialogfeld „Zeitplan erstellen“, mit dem ein neuer SnapMirror Zeitplan erstellt werden kann.
+
+
+
+
+
+
+
+[[snapvault-tab]]
+== SnapVault Registerkarte
+
+Damit können Sie ein sekundäres Cluster, eine SVM und ein Aggregat für eine Schutzbeziehung sowie eine Namenskonvention für sekundäre Volumes beim Erstellen einer SnapVault Beziehung angeben. Außerdem können Sie eine SnapVault Richtlinie und einen Zeitplan angeben.
+
+* *Topologieansicht*
++
+Zeigt eine visuelle Darstellung der erstellten Beziehung. Die SnapVault sekundäre Ressource in der Topologie ist standardmäßig hervorgehoben.
+
+* *Sekundärinformationen*
++
+Ermöglicht die Auswahl der sekundären Ressourcen für eine Schutzbeziehung:
+
++
+** Erweiterter Link
++
+Öffnet das Dialogfeld „Erweiterte Sekundäreinstellungen“.
+
+** Cluster
++
+Listet die Cluster auf, die als sekundäre Schutzhosts verfügbar sind. Dieses Feld ist erforderlich.
+
+** Storage Virtual Machine (SVM)
++
+Listet die auf dem ausgewählten Cluster verfügbaren SVMs auf. Ein Cluster muss ausgewählt werden, bevor die SVM-Liste angezeigt wird. Dieses Feld ist erforderlich.
+
+** Aggregat
++
+Listet die für die ausgewählte SVM verfügbaren Aggregate auf. Vor der Anzeige der Aggregatliste muss ein Cluster ausgewählt werden. Dieses Feld ist erforderlich. Die Aggregatliste enthält folgende Informationen:
+
++
+*** Rang
++
+Wenn mehrere Aggregate alle Anforderungen für ein Ziel erfüllen, gibt der Rang gemäß den folgenden Bedingungen die Priorität an, in der das Aggregat aufgeführt ist:
+
++
+.... Für die Trennung der Fehlerdomänen ist ein Aggregat vorzuziehen, das sich auf einem anderen Node als dem Node des primären Volume befindet.
+.... Ein Aggregat auf einem Knoten mit weniger Volumes ist zu bevorzugen, um den Lastausgleich zwischen den Knoten in einem Cluster zu ermöglichen.
+.... Ein Aggregat, das mehr freien Platz als andere Aggregate hat, wird bevorzugt, um einen Kapazitätsausgleich zu ermöglichen. Ein Rang von 1 bedeutet, dass das Aggregat gemäß den drei Kriterien am meisten bevorzugt wird.
+
+
+*** Aggregatname
++
+Name des Aggregats
+
+*** Verfügbare Kapazität
+*** Verfügbarer Speicherplatz auf dem Aggregat für Daten
+*** Ressourcenpool
++
+Name des Ressourcenpools, zu dem das Aggregat gehört
+
+
+
+** Namenskonvention
++
+Gibt die Standard-Namenskonvention an, die auf das sekundäre Volume angewendet wird. Sie können die bereitgestellte Namenskonvention übernehmen oder eine benutzerdefinierte erstellen. Die Namenskonvention kann die folgenden Attribute enthalten: %C, %M, %V und %N, wobei %C der Clustername, %M der SVM-Name, %V das Quell-Volume und %N der Node-Name des sekundären Topologieknotens ist.
+
++
+Das Feld „Namenskonvention“ wird rot hervorgehoben, wenn Ihr Eintrag ungültig ist. Beim Klicken auf den Link „`Preview Name`“ wird eine Vorschau der eingegebenen Namenskonvention angezeigt, und der Vorschautext wird beim Eingeben einer Namenskonvention in das Textfeld dynamisch aktualisiert. Wenn ein ungültiger Wert eingegeben wird, werden die ungültigen Informationen im Vorschaubereich als rote Fragezeichen angezeigt. Beim Erstellen der Beziehung wird an den sekundären Namen ein Suffix zwischen 001 und 999 angehängt, das die im Vorschautext angezeigte Zeichenfolge „nnn“ ersetzt, wobei zuerst 001, dann 002 usw. zugewiesen wird.
+
+
+
+* *Beziehungseinstellungen*
++
+Damit können Sie die maximale Transferrate, die SnapVault Richtlinie und den SnapVault Zeitplan festlegen, die bzw. den die Schutzbeziehung verwendet:
+
++
+** Maximale Transferrate
++
+Gibt die maximale Transferrate an, mit der Daten zwischen Clustern über das Netzwerk übertragen werden. Falls keine maximale Transferrate verwendet wird, ist der Basistransfer zwischen Beziehungen unbegrenzt.
+
+** SnapVault Richtlinie
++
+Legt die ONTAP SnapVault Richtlinie für die Beziehung fest. Der Standardwert ist XDPDefault.
+
+** Richtlinie erstellen
++
+Öffnet das Dialogfeld „SnapVault Richtlinie erstellen“, mit dem Sie eine neue SnapVault Richtlinie erstellen und verwenden können.
+
+** SnapVault Zeitplan
++
+Gibt den ONTAP SnapVault Zeitplan für die Beziehung an. Verfügbare Zeitpläne sind None, 5min, 8hour, daily, hourly und weekly. Der Standardwert ist None, was angibt, dass der Beziehung kein Zeitplan zugeordnet ist. Beziehungen ohne Zeitpläne haben keine Lag-Statuswerte, es sei denn, sie gehören zu einem Storage-Service.
+
+** Zeitplan erstellen
++
+Öffnet das Dialogfeld „Zeitplan erstellen“, mit dem Sie einen SnapVault Zeitplan erstellen können.
+
+
+
+
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Stornieren*
++
+Verwirft Ihre Auswahl und schließt das Dialogfeld „Schutz konfigurieren“.
+
+* *Anwenden*
++
+Wendet Ihre Auswahl an und startet den Schutzprozess.
+
+

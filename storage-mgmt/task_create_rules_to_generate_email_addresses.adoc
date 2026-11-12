@@ -1,0 +1,40 @@
+---
+permalink: storage-mgmt/task_create_rules_to_generate_email_addresses.html 
+sidebar: sidebar 
+keywords: create, rules, generate, email, addresses 
+summary: 'Sie können Regeln erstellen, um die E-Mail-Adresse auf der Grundlage des Benutzerkontingents festzulegen, das Clustern, storage virtual machines (SVMs), Volumes, qtrees, Benutzern oder Benutzergruppen zugeordnet ist. Bei einer Kontingentüberschreitung wird eine Benachrichtigung an die angegebene E-Mail-Adresse gesendet.' 
+---
+= Regeln zum Generieren von E-Mail-Adressen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Regeln erstellen, um die E-Mail-Adresse auf der Grundlage des Benutzerkontingents festzulegen, das Clustern, storage virtual machines (SVMs), Volumes, qtrees, Benutzern oder Benutzergruppen zugeordnet ist. Bei einer Kontingentüberschreitung wird eine Benachrichtigung an die angegebene E-Mail-Adresse gesendet.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen die Richtlinien auf der Seite „Regeln zur Generierung von E-Mail-Adressen für Benutzer- und Gruppenkontingente“ gelesen haben.
+
+
+Sie müssen die Regeln für die Kontingent-E-Mail-Adressen definieren und sie in der Reihenfolge eingeben, in der sie ausgeführt werden sollen. Wenn Sie beispielsweise die E-Mail-Adresse abc@xyz.com verwenden möchten, um Benachrichtigungen über Kontingentüberschreitungen für abc zu erhalten, und die E-Mail-Adresse dl-$GROUP@$DOMAIN für alle anderen Gruppen, müssen die Regeln in folgender Reihenfolge aufgelistet werden:
+
+* if ( $USER == 'abc' ) then abc@xyz.com
+* if ( $GROUP == * ) then dl-$GROUP@$DOMAIN
+
+
+Wenn keines der Kriterien für die von Ihnen angegebenen Regeln erfüllt ist, gilt die Standardregel:
+
+if ( $USER_OR_GROUP == * ) then $USER_OR_GROUP@$DOMAIN
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *General* > *Quota Email Rules*.
+. Die Regel wird anhand Ihrer Kriterien eingegeben.
+. Durch Klicken auf *Validate* können Sie die Syntax der Regel überprüfen.
++
+Wenn die Syntax der Regel fehlerhaft ist, wird eine Fehlermeldung angezeigt. Sie müssen die Syntax korrigieren und erneut auf *Validate* klicken.
+
+. Auf *Speichern* klicken.
+. Zu prüfen ist, ob die von Ihnen erstellte E-Mail-Adresse auf der Registerkarte *Benutzer- und Gruppenkontingente* der Detailseite *Storage VM / Systemstatus* angezeigt wird.
+

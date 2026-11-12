@@ -1,0 +1,33 @@
+---
+permalink: health-checker/task_view_health_and_capacity_status_of_all_san_array_clusters.html 
+sidebar: sidebar 
+keywords: view, all san array, health and capacity, clusters 
+summary: Auf den Cluster-Inventarseiten können Sie den Systemstatus und den Kapazitätsstatus Ihrer All SAN Array Cluster anzeigen. 
+---
+= Der Gesundheits- und Kapazitätsstatus aller All SAN Array Cluster in Active IQ Unified Manager kann angezeigt werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf den Cluster-Inventarseiten können Sie den Systemstatus und den Kapazitätsstatus Ihrer All SAN Array Cluster anzeigen.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+Übersichtsinformationen zu allen SAN Array Clustern finden Sie in den Ansichten „Systemstatus: Alle Cluster“ und „Kapazität: Alle Cluster“. Außerdem finden Sie Details auf der Seite „Cluster/Systemstatusdetails“.
+
+.Schritte
+. Im linken Navigationsbereich wird *Storage* > *Cluster* ausgewählt.
+. Es muss sichergestellt sein, dass die Spalte "`Personality`" in der Ansicht *Systemstatus: Alle Cluster* angezeigt wird, oder dass sie über das Steuerelement *Ein-/Ausblenden* hinzugefügt wird.
++
+In dieser Spalte wird „`All SAN Array`“ für Ihre All SAN Array Cluster angezeigt.
+
+. Informationen prüfen.
+. Informationen zur Storage Kapazität in diesen Clustern werden in der Ansicht „Kapazität: Alle Cluster“ angezeigt.
+. Detaillierte Informationen über Systemstatus und Storage-Kapazität in diesen Clustern sind nach Auswahl des Namens eines All SAN Array Clusters verfügbar.
++
+Die Details sind auf den Registerkarten „Systemstatus“, „Kapazität“ und „Knoten“ auf der Seite „Cluster / Systemstatusdetails“ zu sehen.
+
+

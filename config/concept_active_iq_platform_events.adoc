@@ -1,0 +1,20 @@
+---
+permalink: config/concept_active_iq_platform_events.html 
+sidebar: sidebar 
+keywords: feature settings, active iq, portal, events 
+summary: Sie können festlegen, ob Ereignisse des Active IQ Portals aktiviert oder deaktiviert werden sollen. Diese Einstellung ermöglicht es dem Active IQ Portal, zusätzliche Ereignisse zur Systemkonfiguration, Verkabelung usw. zu identifizieren und anzuzeigen. Diese Option ist standardmäßig aktiviert. 
+---
+= Aktivierung von Active IQ Portalereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können festlegen, ob Ereignisse des Active IQ Portals aktiviert oder deaktiviert werden sollen. Diese Einstellung ermöglicht es dem Active IQ Portal, zusätzliche Ereignisse zur Systemkonfiguration, Verkabelung usw. zu identifizieren und anzuzeigen. Diese Option ist standardmäßig aktiviert.
+
+Nach der Aktivierung dieser Funktion zeigt Active IQ Unified Manager Ereignisse an, die vom Active IQ Portal identifiziert wurden. Diese Ereignisse werden durch die Ausführung einer Reihe von Regeln auf AutoSupport Meldungen erstellt, die von allen überwachten Storage Systemen generiert werden. Diese Ereignisse unterscheiden sich von den anderen Unified Manager Ereignissen und identifizieren Vorfälle oder Risiken im Zusammenhang mit Systemkonfiguration, Verkabelung, Best Practices und Verfügbarkeitsproblemen.
+
+Sie können diese Funktion unter *General* > *Feature Settings* > *Active IQ Portal Events* aktivieren oder deaktivieren. An Standorten ohne externen Netzwerkzugriff müssen Sie die Regeln manuell unter *Storage Management* > *Event Setup* > *Upload Rules* hochladen.
+
+Diese Funktion ist standardmäßig aktiviert. Die Deaktivierung dieser Funktion bewirkt, dass Active IQ Ereignisse nicht mehr von Unified Manager identifiziert oder dort angezeigt werden. Wenn diese Funktion deaktiviert ist, kann Unified Manager nach ihrer Aktivierung Active IQ Ereignisse auf einem Cluster zu einer vordefinierten Zeit von 00:15 Uhr in der Zeitzone dieses Clusters empfangen.

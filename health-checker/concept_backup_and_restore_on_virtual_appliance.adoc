@@ -1,0 +1,29 @@
+---
+permalink: health-checker/concept_backup_and_restore_on_virtual_appliance.html 
+sidebar: sidebar 
+keywords: backup, restore, unified manager, virtual, appliance, snapshot copy, copies 
+summary: Das Backup- und Wiederherstellungsmodell für Unified Manager bei der Installation auf einer virtuellen Appliance ist das Erfassen und Wiederherstellen eines Images der vollständigen virtuellen Applikation. 
+---
+= Sicherung und Wiederherstellung für Active IQ Unified Manager auf einer virtuellen Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Backup- und Wiederherstellungsmodell für Unified Manager bei der Installation auf einer virtuellen Appliance ist das Erfassen und Wiederherstellen eines Images der vollständigen virtuellen Applikation.
+
+Die folgenden Schritte ermöglichen Ihnen die Erstellung einer Sicherung der virtuellen Appliance:
+
+. Erforderlich sind das Ausschalten der VM und das Erstellen eines VMware Snapshot der virtuellen Unified Manager Appliance.
+. Sie können auf dem Datenspeicher eine NetApp Snapshot Kopie erstellen, um den VMware Snapshot zu erfassen.
++
+Wenn der Datenspeicher nicht auf einem System gehostet wird, auf dem ONTAP software ausgeführt wird, erfolgt das Erstellen einer Sicherung des VMware-Snapshots gemäß den Richtlinien des Storage-Herstellers.
+
+. Replizieren der NetApp Snapshot-Kopie oder eines gleichwertigen Snapshots in einen alternativen Storage.
+. Den VMware Snapshot löschen.
+
+
+Mithilfe dieser Aufgaben lässt sich ein Backup-Zeitplan implementieren, damit die virtuelle Appliance Unified Manager geschützt ist, falls Probleme auftreten.
+
+Um die VM wiederherzustellen, können Sie den von Ihnen erstellten VMware Snapshot verwenden, um die VM in den zeitpunktgenauen Zustand zum Zeitpunkt der Sicherung zurückzusetzen.

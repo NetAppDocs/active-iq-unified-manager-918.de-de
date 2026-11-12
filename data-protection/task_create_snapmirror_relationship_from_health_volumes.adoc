@@ -1,0 +1,65 @@
+---
+permalink: data-protection/task_create_snapmirror_relationship_from_health_volumes.html 
+sidebar: sidebar 
+keywords: create, snapmirror, protection, relationship, health, volumes view 
+summary: Mithilfe der Ansicht „Alle Volumes“ auf der Seite „Integrität“ lassen sich mehrere SnapMirror Schutzbeziehungen gleichzeitig für Volumes auf derselben Speicher-VM erstellen. 
+---
+= Erstellung einer SnapMirror Beziehung in der Ansicht „Integrität: Alle Volumes“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Ansicht „Integrität: Alle Volumes“ ermöglicht Ihnen, mehrere SnapMirror Schutzbeziehungen gleichzeitig zu erstellen, indem Sie mehr als ein Volume auf derselben Storage VM auswählen.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+Das Menü *Protect* wird in den folgenden Fällen nicht angezeigt:
+
+* Wenn die RBAC-Einstellungen diese Aktion nicht zulassen: beispielsweise wenn Sie nur über Operator-Berechtigungen verfügen
+* Wenn die Volume-ID unbekannt ist: beispielsweise, wenn eine clusterübergreifende Beziehung besteht und der Ziel-Cluster noch nicht erkannt wurde
+
+
+.Schritte
+. In der Ansicht *Health: All Volumes* wählen Sie das Volume aus, das Sie schützen möchten.
++
+Alternativ können Sie mehrere Schutzbeziehungen auf derselben SVM erstellen, indem Sie in der Ansicht „Integrität: Alle Volumes“ ein oder mehrere Volumes auswählen und in der Symbolleiste auf „Schützen“ > „SnapMirror“ klicken.
+
++
+Das Dialogfeld „Schutz konfigurieren“ wird angezeigt.
+
+. Durch Auswählen von *SnapMirror* lassen sich die Registerkarte *SnapMirror* anzeigen und die Zielinformationen konfigurieren.
+. Über *Erweitert* kann die Speicherplatzzusage bei Bedarf festgelegt werden; anschließend kann *Anwenden* ausgewählt werden.
+. Der Bereich *Destination Information* und der Bereich *Relationship Settings* werden in der Registerkarte *SnapMirror* vervollständigt.
+. Auf *Anwenden* klicken.
++
+Sie kehren zur Ansicht „Gesundheit: Alle Volumes“ zurück.
+
+. Oben in der Ansicht *Integrität: Alle Volumes* befindet sich der Link zum Konfigurationsauftrag für den Schutz.
++
+Wenn Sie nur eine Schutzbeziehung erstellen, wird die Seite mit den Jobdetails angezeigt; wenn Sie jedoch mehr als eine Schutzbeziehung erstellen, wird eine Liste aller Jobs angezeigt, die mit dem Schutzvorgang verknüpft sind.
+
+. Führen Sie einen der folgenden Schritte aus:
++
+** Wenn nur ein Auftrag vorhanden ist, kann die Aufgabenliste sowie die mit dem Schutzkonfigurationsauftrag verknüpften Aufgabendetails durch Klicken auf *Aktualisieren* aktualisiert werden, um festzustellen, wann der Auftrag abgeschlossen ist.
+** Wenn Sie mehr als einen Job haben:
++
+... In der Jobliste ist ein Job auszuwählen.
+... Mit *Aktualisieren* werden die Aufgabenliste und die mit dem Schutzkonfigurationsauftrag verbundenen Aufgabendetails aktualisiert, außerdem lässt sich feststellen, wann der Auftrag abgeschlossen ist.
+... Mit der Schaltfläche *Zurück* kehren Sie zur gefilterten Liste zurück und können einen anderen Job anzeigen.
+
+
+
+
+
+
+Abhängig von der Ziel-SVM, die Sie während der Konfiguration angegeben haben, oder von den Optionen, die Sie in Ihren erweiterten Einstellungen aktiviert haben, kann die resultierende SnapMirror Beziehung eine von mehreren möglichen Varianten aufweisen:
+
+* Wenn Sie eine Ziel-SVM angegeben haben, die unter derselben oder einer neueren Version von ONTAP als das Quell-Volume ausgeführt wird, ist eine blockreplikationsbasierte SnapMirror Beziehung das Standardergebnis.
+* Wenn Sie eine Ziel-SVM angegeben haben, die unter derselben oder einer neueren Version von ONTAP als das Quell-Volume ausgeführt wird, aber in den erweiterten Einstellungen die versionsflexible Replikation aktiviert haben, ist das Ergebnis eine SnapMirror Beziehung mit versionsflexibler Replikation.
+* Wenn Sie eine Ziel-SVM angegeben haben, die unter einer früheren Version von ONTAP als das Quell-Volume ausgeführt wird, und wenn die frühere Version versionsflexible Replikation unterstützt, ist eine SnapMirror Beziehung mit versionsflexibler Replikation das automatische Ergebnis.
+

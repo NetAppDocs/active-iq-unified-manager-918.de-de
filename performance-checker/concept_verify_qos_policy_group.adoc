@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_verify_qos_policy_group.html 
+sidebar: sidebar 
+keywords: verify, volumes, qos, policy, group, unusually, high, activity 
+summary: 'Die Arbeitslasten in einer Quality of Service (QoS)-Richtliniengruppe mit der größten Aktivitätsänderung geben Aufschluss darüber, welche Arbeitslast das Ereignis verursacht hat.' 
+---
+= Analyse von Volumes mit hoher Aktivität innerhalb einer QoS-Richtliniengruppe in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Workloads in der Quality of Service (QoS)-Richtliniengruppe mit der größten Aktivitätsänderung überprüfen, um festzustellen, ob mehr als ein Workload das Ereignis verursacht hat. Außerdem können Sie prüfen, ob andere Workloads die festgelegte Durchsatzbegrenzung noch überschreiten oder ob sie sich wieder innerhalb ihres erwarteten Aktivitätsbereichs befinden.
+
+Auf der Seite mit den Ereignisdetails können Sie im Abschnitt „Systemdiagnose“ die Workloads nach der maximalen Aktivitätsabweichung sortieren, um die Workloads mit der größten Aktivitätsänderung oben in der Tabelle anzuzeigen. Diese Workloads könnten die „`bullies`“ sein, deren Aktivität den festgelegten Grenzwert überschritten hat und das Ereignis möglicherweise verursacht hat.
+
+Sie können für jede Volume-Workload die Seite „Workload Analysis“ aufrufen, um deren IOPS-Aktivität zu überprüfen. Falls die Workload Phasen mit sehr hoher Vorgangsaktivität aufweist, könnte dies zu dem Ereignis beigetragen haben. Sie können die Richtliniengruppeneinstellungen für die Workload ändern oder die Workload in eine andere Richtliniengruppe verschieben.
+
+Mit ONTAP System Manager oder den ONTAP CLI-Befehlen können Sie Richtliniengruppen wie folgt managen:
+
+* Eine Richtliniengruppe erstellen.
+* Workloads in einer Richtliniengruppe hinzufügen oder entfernen.
+* Eine Arbeitslast zwischen Richtliniengruppen verschieben.
+* Die Durchsatzbegrenzung einer Richtliniengruppe ändern.
+

@@ -1,0 +1,43 @@
+---
+permalink: reporting/task_delete_scheduled_reports.html 
+sidebar: sidebar 
+keywords: delete, reports 
+summary: Nachdem Berichte terminiert wurden, können Sie sie auf der Seite „Report Schedules“ löschen. 
+---
+= Geplante Berichte in Active IQ Unified Manager löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Berichte terminiert wurden, können Sie sie auf der Seite „Report Schedules“ löschen.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+.Schritte
+. Im linken Navigationsbereich ist *Storage Management* > *Report Schedules* auszuwählen.
++
+image::../media/scheduled_reports_2.gif[Ein Screenshot der Benutzeroberfläche, der geplante Berichte anzeigt.]
+
++
+[NOTE]
+====
+Wenn Sie über die entsprechenden Berechtigungen verfügen, können Sie jeden Bericht und dessen Zeitplan im System entfernen.
+
+====
+. Zum Entfernen eines Zeitplans ist beim entsprechenden Zeitplan das Symbol „Mehr image:../media/more_icon.gif[""]“ zu wählen.
+. Klicken Sie auf *Delete*.
+. Bestätigung Ihrer Entscheidung.
++
+Der geplante Bericht wurde aus der Liste entfernt und wird nicht mehr nach dem festgelegten Zeitplan erstellt und verteilt.
+
++
+[NOTE]
+====
+Wenn Sie eine benutzerdefinierte Ansicht von der Inventarseite löschen, werden auch alle benutzerdefinierten Excel-Dateien oder geplanten Berichte gelöscht, die diese Ansicht verwenden.
+
+====
+

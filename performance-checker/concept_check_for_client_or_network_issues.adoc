@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_check_for_client_or_network_issues.html 
+sidebar: sidebar 
+keywords: check, client, network, issues 
+summary: Wenn die E/A-Anforderungen der Clients, die mit Volumes in einem Cluster verbunden sind, steigen, muss der Cluster härter arbeiten, um die Nachfrage zu erfüllen. Die erhöhte Belastung des Clusters kann dazu führen, dass eine Komponente in einen Engpass gerät, die Latenz der Workloads erhöht wird, die sie verwenden, und ein Ereignis in Unified Manager ausgelöst wird. 
+---
+= Wie sich Client- oder Netzwerkprobleme auf die Leistung in Active IQ Unified Manager auswirken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die E/A-Anforderungen der Clients, die mit Volumes in einem Cluster verbunden sind, steigen, muss der Cluster härter arbeiten, um die Nachfrage zu erfüllen. Die erhöhte Belastung des Clusters kann dazu führen, dass eine Komponente in einen Engpass gerät, die Latenz der Workloads erhöht wird, die sie verwenden, und ein Ereignis in Unified Manager ausgelöst wird.
+
+Auf der Seite mit den Ereignisdetails zeigt der Abschnitt „Systemdiagnose“ die wichtigsten Volume-Workloads an, die die umkämpfte Komponente verwenden. Wenn Sie wissen, welcher Client auf ein bestimmtes Volume zugreift, können Sie auf dem Client feststellen, ob die Clienthardware oder eine Applikation nicht wie erwartet funktioniert oder mehr Arbeit als üblich ausführt. Gegebenenfalls ist Unterstützung durch Ihren Clientadministrator oder den Anbieter der Applikation erforderlich.
+
+Sie können Ihre Netzwerkinfrastruktur prüfen, um festzustellen, ob Hardwareprobleme, Engpässe oder konkurrierende Workloads vorliegen, die möglicherweise dazu geführt haben, dass E/A-Anfragen zwischen dem Cluster und den verbundenen Clients langsamer als erwartet ausgeführt werden. Gegebenenfalls ist die Unterstützung durch Ihren Netzwerkadministrator erforderlich.

@@ -1,0 +1,53 @@
+---
+permalink: config/concept_security_dashboard.html 
+sidebar: sidebar 
+keywords: security compliance settings, security feature settings, ONTAP hardening guide, AutoSupport settings, authentication settings 
+summary: Sie können die Sicherheitsparameter für die Compliance-Überwachung in Unified Manager aktivieren oder deaktivieren. 
+---
+= Aktivieren und Deaktivieren von Sicherheitseinstellungen für die Compliance in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe der Schaltfläche *Anpassen* im Bereich *Sicherheits-Dashboard* der Seite „Funktionseinstellungen“ können Sie die Sicherheitsparameter für die Compliance-Überwachung in Unified Manager aktivieren oder deaktivieren.
+
+Die auf dieser Seite aktivierten oder deaktivierten Einstellungen steuern den allgemeinen Compliance Status der Cluster und Storage VMs in Unified Manager. Je nach Auswahl sind die entsprechenden Spalten in der Ansicht *Security: All Clusters* auf der Cluster-Inventarseite und in der Ansicht *Security: All Storage VMs* auf der Storage VMs-Inventarseite sichtbar.
+
+[NOTE]
+====
+Nur Benutzer mit Administratorrolle können diese Einstellungen bearbeiten.
+
+====
+Die Sicherheitskriterien für Ihre ONTAP Cluster, Storage-VMs und Volumes werden anhand der in der link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["Leitfaden zur Sicherheitshärtung für NetApp ONTAP 9"] definierten Empfehlungen bewertet. Im Sicherheitsbereich des Dashboard und auf der Seite Sicherheit wird der standardmäßige Sicherheits-Compliance-Status Ihrer Cluster, Storage-VMs und Volumes angezeigt. Für Cluster und Storage-VMs mit Sicherheitsverstößen werden außerdem Sicherheitsereignisse generiert und Managementaktionen aktiviert.
+
+
+
+[[customize-security-settings]]
+== Sicherheitseinstellungen anpassen
+
+Zur Anpassung der Einstellungen für die Compliance-Überwachung an Ihre ONTAP Umgebung sind die folgenden Schritte relevant:
+
+.Schritte
+. Die Auswahl erfolgt über *Allgemein > Funktionseinstellungen > Sicherheits-Dashboard > Anpassen*. Das Popup *Einstellungen für das Sicherheits-Dashboard anpassen* wird angezeigt.
++
+[NOTE]
+====
+Die von Ihnen aktivierten oder deaktivierten Sicherheits-Compliance-Parameter können sich direkt auf die standardmäßigen Sicherheitsansichten, Berichte und geplanten Berichte in den Bildschirmen „Clusters“ und „Storage VMs“ auswirken. Wenn Sie vor der Änderung der Sicherheitsparameter einen Excel-Bericht aus diesen Bildschirmen hochgeladen hatten, könnten die heruntergeladenen Excel-Berichte fehlerhaft sein.
+
+====
+. Das Aktivieren oder Deaktivieren der benutzerdefinierten Einstellungen für Ihre ONTAP Cluster erfolgt durch Auswahl der gewünschten allgemeinen Einstellung unter *Cluster*. Informationen zu den Optionen für die Anpassung der Cluster Compliance finden Sie unter link:../health-checker/reference_cluster_compliance_categories.html["Compliance-Kategorien für Cluster"].
+. Zum Aktivieren oder Deaktivieren der benutzerdefinierten Einstellungen für Ihre Storage VMs können Sie unter *Storage VM* die gewünschte allgemeine Einstellung auswählen. Informationen zu den Optionen zum Anpassen der Storage VM Compliance finden Sie unter link:../health-checker/reference_svm_compliance_categories.html["Compliance-Kategorien für Storage-VMs"].
+
+
+
+
+[[customize-autosupport-and-authentication-settings]]
+== Anpassen von AutoSupport und Authentifizierungseinstellungen
+
+Im Abschnitt *AutoSupport Settings* können Sie festlegen, ob HTTPS für das Senden von AutoSupport Nachrichten von ONTAP verwendet werden soll.
+
+Im Abschnitt *Authentifizierungseinstellungen* können Sie aktivieren, dass Unified Manager Warnungen für den standardmäßigen ONTAP Administratorbenutzer ausgegeben werden.
+
+'''

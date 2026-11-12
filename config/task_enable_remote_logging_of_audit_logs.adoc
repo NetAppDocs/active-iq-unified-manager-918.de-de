@@ -1,0 +1,50 @@
+---
+permalink: config/task_enable_remote_logging_of_audit_logs.html 
+sidebar: sidebar 
+keywords: enable, remote, logging, audit, logs 
+summary: Sie können im Dialogfeld „Revisionsprotokolle konfigurieren“ das Kontrollkästchen „Remote-Protokollierung aktivieren“ auswählen, um die Remote-Revisionsprotokollierung zu aktivieren. Mit dieser Funktion können Sie Revisionsprotokolle an einen Remote-Syslog-Server übertragen. Dies ermöglicht Ihnen, Ihre Revisionsprotokolle auch bei begrenztem Speicherplatz zu managen. 
+---
+= Die Remote-Protokollierung von Audit-Protokollen in Active IQ Unified Manager kann aktiviert werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können im Dialogfeld „Revisionsprotokolle konfigurieren“ das Kontrollkästchen „Remote-Protokollierung aktivieren“ auswählen, um die Remote-Revisionsprotokollierung zu aktivieren. Mit dieser Funktion können Sie Revisionsprotokolle an einen Remote-Syslog-Server übertragen. Dies ermöglicht Ihnen, Ihre Revisionsprotokolle auch bei begrenztem Speicherplatz zu managen.
+
+Die Remote-Protokollierung von Revisionsprotokollen bietet eine manipulationssichere Sicherung für den Fall, dass die Revisionsprotokoll-Dateien auf dem Active IQ Unified Manager Server manipuliert werden.
+
+.Schritte
+. Im Dialogfeld *Revisionsprotokolle konfigurieren* kann das Kontrollkästchen *Remote-Protokollierung aktivieren* ausgewählt werden.
++
+Es werden zusätzliche Felder zum Konfigurieren der Remote-Protokollierung angezeigt.
+
+. Für die Verbindung mit dem gewünschten Remote-Server werden *HOSTNAME* und *PORT* eingegeben.
+. Im Feld *SERVER CA CERTIFICATE* erfolgt die Auswahl eines öffentlichen Zertifikats des Zielservers über *BROWSE*.
++
+Das Zertifikat sollte im `.pem` Format hochgeladen werden. Dieses Zertifikat sollte vom Ziel Syslog-Server bezogen werden und darf nicht abgelaufen sein. Das Zertifikat sollte den ausgewählten "`hostname`" als Teil des `SubjectAltName`(SAN)-Attributs enthalten.
+
+. Einzugeben sind die Werte für die folgenden Felder: *CHARSET*, *CONNECTION TIMEOUT*, *RECONNECTION DELAY*.
++
+Die Werte sollten für diese Felder in Millisekunden angegeben werden.
+
+. Die Auswahl des gewünschten Syslog-Formats und der TLS Protokollversion erfolgt in den Feldern *FORMAT* und *PROTOCOL*.
+. Wenn der Ziel-Syslog-Server eine zertifikatbasierte Authentifizierung erfordert, ist das Kontrollkästchen *Client-Authentifizierung aktivieren* auszuwählen.
++
+Sie müssen das Zertifikat für die Client-Authentifizierung herunterladen und vor dem Speichern der Konfiguration des Revisionsprotokolls auf den Syslog-Server hochladen, andernfalls schlägt die Verbindung fehl. Je nach Typ des Syslog-Servers müssen Sie möglicherweise einen Hash des Zertifikats für die Client-Authentifizierung erstellen.
+
++
+Beispiel: syslog-ng erfordert, dass ein <hash> des Zertifikats mit dem Befehl  `openssl x509 -noout -hash -in cert.pem` erstellt wird. Anschließend sollten Sie das Client-Authentifizierungs-Zertifikat symbolisch mit einer Datei verknüpfen, die nach dem <hash> .0 benannt ist.
+
+. *Speichern* konfiguriert die Verbindung mit Ihrem Server und aktiviert die Remote-Protokollierung.
++
+Sie werden zur Seite „Revisionsprotokolle“ weitergeleitet.
+
++
+[NOTE]
+====
+Der Wert für *Verbindungs-Zeitüberschreitung* kann sich auf die Konfiguration auswirken. Wenn die Konfiguration länger für eine Antwort benötigt als der definierte Wert, kann dies aufgrund eines Verbindungsfehlers zu einem Konfigurationsfehler führen. Für den Aufbau einer erfolgreichen Verbindung sollte der Wert für *Verbindungs-Zeitüberschreitung* erhöht und die Konfiguration erneut versucht werden.
+
+====
+

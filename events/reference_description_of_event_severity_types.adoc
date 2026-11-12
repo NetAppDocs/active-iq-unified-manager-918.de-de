@@ -1,0 +1,41 @@
+---
+permalink: events/reference_description_of_event_severity_types.html 
+sidebar: sidebar 
+keywords: description, event, severity, types 
+summary: Jedem Ereignis ist ein Typ des Schweregrads zugeordnet, der Sie bei der Priorisierung der Ereignisse unterstützt, die eine sofortige Korrekturmaßnahme erfordern. 
+---
+= Informationen zu Ereignis-Schweregradtypen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jedem Ereignis ist ein Typ des Schweregrads zugeordnet, der Sie bei der Priorisierung der Ereignisse unterstützt, die eine sofortige Korrekturmaßnahme erfordern.
+
+* *Kritisch*
++
+Es ist ein Problem aufgetreten, das zu einer Serviceunterbrechung führen könnte, wenn nicht umgehend eine Korrekturmaßnahme ergriffen wird.
+
++
+Performance-kritische Ereignisse werden nur auf Grundlage benutzerdefinierter Schwellenwerte gesendet.
+
+* *Fehler*
++
+Die Ereignisquelle funktioniert weiterhin; jedoch ist eine Korrekturmaßnahme erforderlich, um eine Dienstunterbrechung zu vermeiden.
+
+* *Warnung*
++
+Bei der Ereignisquelle ist ein Ereignis aufgetreten, dessen Sie sich bewusst sein sollten, oder ein Performance-Zähler für ein Clusterobjekt liegt außerhalb des normalen Bereichs und sollte überwacht werden, um sicherzustellen, dass er nicht den kritischen Schweregrad erreicht. Ereignisse dieses Schweregrads führen nicht zu einer Dienstunterbrechung, und sofortige Korrekturmaßnahmen sind möglicherweise nicht erforderlich.
+
++
+Performance-Warnereignisse werden von benutzerdefinierten, systemdefinierten oder dynamischen Schwellenwerten gesendet.
+
+* *Informationen*
++
+Das Ereignis tritt auf, wenn ein neues Objekt erkannt oder eine Benutzeraktion ausgeführt wird. Wenn beispielsweise ein beliebiges Storage Objekt gelöscht wird oder Konfigurationsänderungen vorgenommen werden, wird ein Ereignis mit dem Typ des Schweregrads Information generiert.
+
++
+Informationsereignisse werden direkt von ONTAP gesendet, wenn eine Konfigurationsänderung erkannt wird.
+
+

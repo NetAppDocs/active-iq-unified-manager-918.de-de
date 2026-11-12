@@ -1,0 +1,72 @@
+---
+permalink: install-vapp/task_upgrade_unified_manager_virtual_appliance_vapp.html 
+sidebar: sidebar 
+keywords: upgrade, unified manager, virtual, appliance 
+summary: Sie können die virtuelle Unified Manager Appliance aktualisieren 
+---
+= Aktualisierung der Active IQ Unified Manager virtuellen Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die virtuelle Appliance Active IQ Unified Manager von den Versionen 9.14 oder 9.16 auf 9.18 aktualisieren.
+
+.Bevor Sie beginnen
+Stellen Sie Folgendes sicher:
+
+* Sie haben die Upgrade-Datei, das ISO-Image von der NetApp Support Site heruntergeladen.
+* Das System, auf dem Sie Unified Manager aktualisieren, muss die System- und Softwareanforderungen erfüllen.
++
+Weitere Informationen finden Sie unter link:concept_virtual_infrastructure_or_hardware_system_requirements.html["Anforderungen an die virtuelle Infrastruktur"].
+
++
+Weitere Informationen finden Sie unter link:reference_vmware_software_and_installation_requirements.html["VMware Software und Installationsanforderungen"].
+
+* Für Benutzer von vSphere 6.5 und höher haben Sie die VMware Remote Console (VMRC) installiert.
+* Während des Upgrades werden Sie möglicherweise aufgefordert zu bestätigen, ob Sie die bisherigen Standardeinstellungen für die Speicherung von Performance-Daten über 13 Monate beibehalten oder auf 6 Monate ändern möchten. Nach der Bestätigung werden die historischen Performance-Daten nach 6 Monaten gelöscht.
+* Sie verfügen über folgende Informationen:
++
+** Anmeldedaten für die NetApp Support Site
+** Anmeldeinformationen für den Zugriff auf den VMware vCenter Server und den vSphere Web Client
+** Anmeldeinformationen für den Wartungsbenutzer von Unified Manager
+
+
+
+
+Während des Upgrade-Prozesses ist Unified Manager nicht verfügbar. Vor dem Upgrade von Unified Manager sollten Sie alle laufenden Vorgänge abschließen.
+
+Wenn Sie Workflow Automation und Unified Manager gekoppelt haben, sollten Sie den Hostnamen in Workflow Automation manuell aktualisieren.
+
+.Schritte
+. Im vSphere Client wählen Sie *Startseite* > *Inventar* > *VMs und Vorlagen* aus.
+. Auszuwählen ist die virtuelle Maschine (VM), auf der die virtuelle Appliance Unified Manager installiert ist.
+. Wenn die Unified Manager VM ausgeführt wird, finden Sie die entsprechende Option unter *Zusammenfassung* > *Befehle* > *Gast herunterfahren*.
+. Eine applikationskonsistente Sicherung entsteht durch das Erstellen einer Sicherungskopie der Unified Manager VM, z. B. eines Snapshots oder eines Klons.
+. Im vSphere Client können Sie die Unified Manager VM einschalten.
+. Die VMware Remote Console wird gestartet.
+. Nach einem Klick auf das Symbol *CDROM* ist *Mit Disk-Image-Datei (.iso) verbinden* auszuwählen.
+. Die  `ActiveIQUnifiedManager-<version>-virtual-update.iso`Datei wird ausgewählt, und anschließend wird auf *Open* geklickt.
+. Sie wählen die Registerkarte *Console* aus.
+. Die Anmeldung bei der Unified Manager Managementplattform erfolgt.
+. Im Hauptmenü erfolgt die Auswahl der Option *Upgrade*.
++
+Es wird eine Meldung angezeigt, dass Unified Manager während des Upgrade-Vorgangs nicht verfügbar sein wird und nach Abschluss des Vorgangs wieder verfügbar ist.
+
+. Zum Fortfahren  `y` eingeben.
++
+Es erscheint eine Warnung, die Sie daran erinnert, die virtuelle Maschine zu sichern, auf der sich die virtuelle Appliance befindet.
+
+. Zum Fortfahren  `y` eingeben.
++
+Der Aktualisierungsprozess und der Neustart der Unified Manager Services können mehrere Minuten dauern.
+
+. Zum Fortfahren eine beliebige Taste drücken.
++
+Sie werden automatisch von der Wartungs-Managementplattform abgemeldet.
+
+. *Optional:* Eine Anmeldung an der Wartungskonsole sowie die Überprüfung der Version von Unified Manager sind möglich.
+
+
+Sie können die Web-Benutzeroberfläche in einem neuen Fenster in einem unterstützten Webbrowser starten und sich anmelden, um die aktualisierte Version von Unified Manager zu verwenden. Vor der Ausführung von Aufgaben in der Benutzeroberfläche muss gewartet werden, bis der Erkennungsprozess abgeschlossen ist.

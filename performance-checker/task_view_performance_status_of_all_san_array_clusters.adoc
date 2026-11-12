@@ -1,0 +1,37 @@
+---
+permalink: performance-checker/task_view_performance_status_of_all_san_array_clusters.html 
+sidebar: sidebar 
+keywords: all san, array, performance, clusters 
+summary: Auf der Seite „Leistung“ wird in der Ansicht „Alle Cluster“ der Leistungsstatus Ihrer All SAN Array Cluster angezeigt. 
+---
+= Anzeigen der Leistung für All SAN Array Cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Ansicht „Performance: Alle Cluster“ kann der Performance Status Ihrer All SAN Array Cluster angezeigt werden.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+Übersichtsinformationen für All SAN Array Cluster sind in der Ansicht „Performance: All Clusters“ und Details auf der Seite „Cluster / Performance Explorer“ verfügbar.
+
+.Schritte
+. Im linken Navigationsbereich wird *Storage* > *Cluster* ausgewählt.
+. Es muss sichergestellt sein, dass die Spalte "`Personality`" in der Ansicht *Systemstatus: Alle Cluster* angezeigt wird, oder dass sie über das Steuerelement *Ein-/Ausblenden* hinzugefügt wird.
++
+In dieser Spalte wird „`All SAN Array`“ für Ihre All SAN Array Cluster angezeigt.
+
+. Informationen zur Performance in diesen Clustern sind in der Ansicht *Performance: All Clusters* verfügbar.
++
+Anzeige der Performance-Informationen für den All SAN Array Cluster.
+
+. Detaillierte Informationen zur Performance in diesen Clustern lassen sich über den Namen eines All SAN Array Clusters aufrufen.
+. Die Registerkarte *Explorer* auswählen.
+. Auf der Seite *Cluster / Performance Explorer* erfolgt die Auswahl von *Nodes on this Cluster* im Menü *View and Compare*.
++
+Sie können die Performance Statistiken beider Knoten in diesem Cluster vergleichen, um sicherzustellen, dass die Last auf beiden Knoten nahezu identisch ist. Bei größeren Abweichungen zwischen den beiden Knoten können Sie den zweiten Knoten zu den Diagrammen hinzufügen und die Werte über einen längeren Zeitraum vergleichen, um mögliche Konfigurationsprobleme zu identifizieren.
+
+

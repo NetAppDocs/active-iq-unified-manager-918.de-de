@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_change_counter_charts_focus_to_smaller_period_of_time.html 
+sidebar: sidebar 
+keywords: change, counter, charts, focus, shorter, period, time 
+summary: Sie können mithilfe der Maus den Zeitbereich verkleinern, um sich im Bereich des Zählerdiagramms oder im Fenster der Zoom Ansicht der Zählerdiagramme auf einen bestimmten Zeitraum zu konzentrieren. Dadurch erhalten Sie eine feinkörnigere Ansicht bis auf Mikroebene von beliebigen Teilen der Zeitleiste mit Performance Daten, Ereignissen und Schwellenwerten. 
+---
+= Der Fokus der Zählerdiagramme in Active IQ Unified Manager wird auf einen kürzeren Zeitraum geändert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können mithilfe der Maus den Zeitbereich verkleinern, um sich im Bereich des Zählerdiagramms oder im Fenster der Zoom Ansicht der Zählerdiagramme auf einen bestimmten Zeitraum zu konzentrieren. Dadurch erhalten Sie eine feinkörnigere Ansicht bis auf Mikroebene von beliebigen Teilen der Zeitleiste mit Performance Daten, Ereignissen und Schwellenwerten.
+
+.Bevor Sie beginnen
+Der Cursor muss sich in eine Lupe geändert haben, was anzeigt, dass diese Funktion aktiv ist.
+
+[NOTE]
+====
+Bei Verwendung dieser Funktion, die die Zeitleiste so ändert, dass Werte angezeigt werden, die der feiner granulierten Darstellung entsprechen, ändert sich der Zeit- und Datumsbereich im Auswahlfeld *Time Range* nicht gegenüber den ursprünglichen Werten des Diagramms.
+
+====
+.Schritte
+. Zum Vergrößern eines bestimmten Zeitraums wird mit der Lupe geklickt und der Mauszeiger gezogen, um den Bereich hervorzuheben, der im Detail angezeigt werden soll.
++
+Die Zählerwerte für den von Ihnen ausgewählten Zeitraum füllen das Zählerdiagramm.
+
+. Für die Rückkehr zum ursprünglichen Zeitraum gemäß Auswahlfeld *Zeitbereich* steht die Schaltfläche *Diagrammzoom zurücksetzen* zur Verfügung.
++
+Das Zählerdiagramm erscheint in seinem Originalzustand.
+
+

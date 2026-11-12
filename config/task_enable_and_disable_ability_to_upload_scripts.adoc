@@ -1,0 +1,41 @@
+---
+permalink: config/task_enable_and_disable_ability_to_upload_scripts.html 
+sidebar: sidebar 
+keywords: script upload, enable, disable 
+summary: Das Hochladen und Ausführen von Skripten in Unified Manager ist standardmäßig aktiviert. Wenn Ihr Unternehmen diese Aktivität aus Sicherheitsgründen nicht zulassen möchte, können Sie diese Funktion deaktivieren. 
+---
+= Aktivieren und Deaktivieren des Skript-Uploads in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Hochladen und Ausführen von Skripten in Unified Manager ist standardmäßig aktiviert. Wenn Ihr Unternehmen diese Aktivität aus Sicherheitsgründen nicht zulassen möchte, können Sie diese Funktion deaktivieren.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Allgemein* > *Funktionseinstellungen*.
+. Auf der Seite *Funktionseinstellungen* können Sie die Skriptausführung deaktivieren oder aktivieren, indem Sie eine der folgenden Optionen auswählen:
++
+[cols="2*"]
+|===
+| Wenn Sie möchten... | Fahren Sie dann wie folgt fort... 
+
+
+ a| 
+Skripte deaktivieren
+ a| 
+Im Bereich *Script Upload* lässt sich der Schieberegler nach links bewegen.
+
+
+
+ a| 
+Aktivierung von Skripten
+ a| 
+Im Bereich *Script Upload* den Schieberegler nach rechts stellen.
+
+|===
+

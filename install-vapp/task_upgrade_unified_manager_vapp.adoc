@@ -1,0 +1,28 @@
+---
+permalink: install-vapp/task_upgrade_unified_manager_vapp.html 
+sidebar: sidebar 
+keywords: upgrade, unified manager 
+summary: Sie können ein Upgrade auf Unified Manager auf VMware vSphere durchführen. 
+---
+= Aktualisieren von Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Upgrade von Active IQ Unified Manager auf Version 9.18 ist nur von Version 9.14 oder 9.16 möglich.
+
+Während des Upgrade-Prozesses ist Unified Manager nicht verfügbar. Vor dem Upgrade von Unified Manager sollten Sie alle laufenden Vorgänge abschließen.
+
+Wenn Unified Manager mit einer Instanz von OnCommand Workflow Automation gekoppelt ist und für beide Produkte neue Softwareversionen verfügbar sind, müssen Sie die beiden Produkte trennen und nach den Aktualisierungen eine neue Workflow Automation Verbindung einrichten. Wenn Sie nur eines der Produkte aktualisieren, sollten Sie sich nach der Aktualisierung bei Workflow Automation anmelden und überprüfen, ob Workflow Automation weiterhin Daten aus Unified Manager bezieht.
+
+[NOTE]
+====
+Wenn Ihr System von Unified Manager 9.7 aktualisiert wurde, ist ein direktes Upgrade von 9.14 auf 9.18 aufgrund von Dateisystemänderungen in den Debian-Versionen nicht möglich. Empfohlen wird stattdessen folgender Upgrade-Pfad: 9.14 → 9.16P2 → 9.18.
+
+====
+.Schritte
+. Die entsprechenden Schritte finden Sie in link:task_download_unified_manager_iso_image_vapp.html["Herunterladen des Unified Manager ISO-Images"].
+. Zusätzlich sind die in link:task_upgrade_unified_manager_virtual_appliance_vapp.html["Upgrade von Unified Manager"] beschriebenen Schritte auszuführen.
+

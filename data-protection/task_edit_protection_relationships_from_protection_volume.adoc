@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_edit_protection_relationships_from_protection_volume.html 
+sidebar: sidebar 
+keywords: edit, protection, relationships, volume, relationships, page 
+summary: Sie können bestehende Schutzbeziehungen bearbeiten, um die maximale Transferrate, die Datensicherungsstrategie oder den Schutzzeitplan zu ändern. Sie können beispielsweise eine Beziehung bearbeiten, um die für Übertragungen verwendete Bandbreite zu verringern oder die Häufigkeit geplanter Übertragungen zu erhöhen, weil sich die Daten häufig ändern. 
+---
+= Auf der Seite „Volume-Beziehungen“ in Active IQ Unified Manager können Schutzbeziehungen bearbeitet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können bestehende Schutzbeziehungen bearbeiten, um die maximale Transferrate, die Datensicherungsstrategie oder den Schutzzeitplan zu ändern. Sie können beispielsweise eine Beziehung bearbeiten, um die für Übertragungen verwendete Bandbreite zu verringern oder die Häufigkeit geplanter Übertragungen zu erhöhen, weil sich die Daten häufig ändern.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Die ausgewählten Volumes müssen Ziele von Datensicherungsbeziehungen sein. Beziehungen können nicht bearbeitet werden, wenn Quell-Volumes, Load-Sharing-Volumes oder Volumes ausgewählt sind, die nicht das Ziel einer SnapMirror oder SnapVault Beziehung sind.
+
+.Schritte
+. Auf der Seite *Volume Relationships* sind in der Volume-Liste ein oder mehrere Volumes in derselben SVM auszuwählen, deren Beziehungseinstellungen bearbeitet werden sollen; anschließend ist in der Symbolleiste *Edit* auszuwählen.
++
+Das Dialogfeld „Beziehung bearbeiten“ wird angezeigt.
+
+. Im Dialogfeld *Beziehung bearbeiten* lassen sich bei Bedarf die maximale Transferrate, die Datensicherungsstrategie oder der Sicherungszeitplan bearbeiten.
+. Auf *Anwenden* klicken.
++
+Die Änderungen gelten für die ausgewählten Beziehungen.
+
+

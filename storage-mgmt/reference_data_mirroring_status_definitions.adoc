@@ -1,0 +1,42 @@
+---
+permalink: storage-mgmt/reference_data_mirroring_status_definitions.html 
+sidebar: sidebar 
+keywords: data mirror, status, definitions 
+summary: MetroCluster Konfigurationen ermöglichen Datenspiegelung sowie die zusätzliche Möglichkeit, ein Failover einzuleiten, wenn ein ganzer Standort nicht mehr verfügbar ist. Der Status der Datenspiegelung zwischen den Clustern in einer MetroCluster Konfiguration kann entweder „Normal“ oder „Spiegelung nicht verfügbar“ sein. Die Kenntnis dieses Status ermöglicht ein effektives Managen Ihrer MetroCluster Konfigurationen. 
+---
+= Informationen zu MetroCluster über FC-Datenspiegelung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MetroCluster over FC Konfigurationen bieten Datenspiegelung und zusätzlich die Möglichkeit, ein Failover einzuleiten, wenn ein gesamter Standort nicht verfügbar wird. Der Status der Datenspiegelung zwischen den Clustern in einer MetroCluster over FC Konfiguration kann entweder „Normal“ oder „Spiegelung nicht verfügbar“ sein. Das Verständnis des Status ermöglicht Ihnen, Ihre MetroCluster Konfigurationen effektiv zu managen.
+
+|===
+| Status der Datenspiegelung | Beschreibung | Symbol angezeigt 
+
+
+ a| 
+Normal
+ a| 
+Die Datenspiegelung zwischen den Clustern in der MetroCluster Konfiguration ist normal.
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif["Symbol für optimale MetroCluster Konnektivität"]
+
+
+
+ a| 
+Spiegelung nicht verfügbar
+ a| 
+Die Datenspiegelung zwischen den Clustern in der MetroCluster Konfiguration ist aufgrund eines Switchovers nicht verfügbar. Dies kann beispielsweise der Fall sein, wenn der Partnercluster aufgrund eines Notfalls ausgefallen ist oder ein geplanter Switchover zu Testzwecken erfolgt.
+ a| 
+Umschaltung mit Fehlern:
+
+image::../media/metrocluster_connectivity_down.gif[Symbol für unterbrochene MetroCluster Verbindung]
+
+Umschaltung erfolgreich:
+
+image::../media/metrocluster_connectivity_failover.gif[MetroCluster Konnektivitäts-Failover-Symbol]
+
+|===

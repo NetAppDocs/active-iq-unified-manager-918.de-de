@@ -1,0 +1,69 @@
+---
+permalink: performance-checker/concept_understand_events_from_adaptive_qos_policies.html 
+sidebar: sidebar 
+keywords: understand, events, adaptive, qos, policies, defined, block, size 
+summary: Adaptive QoS Richtliniengruppen skalieren automatisch eine maximale oder minimale Durchsatzgrenze basierend auf der Volume-Größe und halten dabei das Verhältnis von IOPS zu TB aufrecht, wenn sich die Größe des Volume ändert. Ab ONTAP 9.5 lässt sich die Blockgröße in der QoS Richtlinie angeben, um gleichzeitig effektiv einen MB/s-Schwellenwert anzuwenden. 
+---
+= Adaptive QoS-Ereignisse mit einer definierten Blockgröße in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Adaptive QoS Richtliniengruppen skalieren automatisch eine maximale oder minimale Durchsatzgrenze basierend auf der Volume-Größe und halten dabei das Verhältnis von IOPS zu TB aufrecht, wenn sich die Größe des Volume ändert. Ab ONTAP 9.5 lässt sich die Blockgröße in der QoS Richtlinie angeben, um gleichzeitig effektiv einen MB/s-Schwellenwert anzuwenden.
+
+Die Zuweisung eines IOPS-Schwellenwerts in einer adaptiven QoS-Richtlinie begrenzt lediglich die Anzahl der Operationen pro Arbeitslast. Abhängig von der auf dem Client, der die Arbeitslasten generiert, festgelegten Blockgröße umfassen manche IOPS deutlich mehr Daten und belasten daher die Knoten, die die Operationen verarbeiten, wesentlich stärker.
+
+Der MB/s-Wert für eine Workload wird anhand der folgenden Formel berechnet:
+
+[listing]
+----
+MB/s = (IOPS * Block Size) / 1000
+----
+Wenn eine Workload im Durchschnitt 3.000 IOPS aufweist und die Blockgröße auf dem Client auf 32 KB festgelegt ist, beträgt der effektive MB/s-Wert für diese Workload 96. Wenn dieselbe Workload im Durchschnitt 3.000 IOPS aufweist und die Blockgröße auf dem Client auf 48 KB festgelegt ist, beträgt der effektive MB/s-Wert für diese Workload 144. Sie sehen, dass der Node bei einer größeren Blockgröße 50 % mehr Daten verarbeitet.
+
+Im Folgenden geht es um die folgende adaptive QoS-Richtlinie mit definierter Blockgröße und darum, wie Ereignisse auf Grundlage der auf dem Client festgelegten Blockgröße ausgelöst werden.
+
+Erforderlich ist eine Richtlinie, bei der der Spitzendurchsatz auf 2.500 IOPS/TB und die Blockgröße auf 32 KB festgelegt ist. Dadurch wird der MB/s-Schwellenwert für ein Volume mit 1 TB belegter Kapazität effektiv auf 80 MB/s ((2.500 IOPS * 32 KB) / 1.000) festgelegt. Beachten Sie, dass Unified Manager ein Warnungsereignis generiert, wenn der Durchsatzwert 10 % unter dem definierten Schwellenwert liegt. Ereignisse werden in den folgenden Situationen generiert:
+
+|===
+| Verwendete Kapazität 2+| Ein Ereignis wird ausgelöst, wenn der Durchsatz diesen Wert überschreitet ... 
+
+
+|  | IOPS | MB/s 
+
+
+ a| 
+1 TB
+ a| 
+2.250 IOPS
+ a| 
+72 MB/s
+
+
+
+ a| 
+2 TB
+ a| 
+4.500 IOPS
+ a| 
+144 MB/s
+
+
+
+ a| 
+5 TB
+ a| 
+11.250 IOPS
+ a| 
+360 MB/s
+
+|===
+Wenn das Volume 2 TB des verfügbaren Speicherplatzes belegt, die IOPS 4.000 beträgt und die QoS-Blockgröße auf dem Client auf 32 KB eingestellt ist, ergibt sich ein Durchsatz von 128 MB/s ((4.000 IOPS * 32 KB) / 1.000). In diesem Szenario wird kein Ereignis generiert, da sowohl 4.000 IOPS als auch 128 MB/s unter dem Schwellenwert für ein Volume liegen, das 2 TB Speicherplatz belegt.
+
+Wenn das Volume 2TB des verfügbaren Speicherplatzes nutzt, die IOPS 4,000 betragen und die QoS-Blockgröße auf dem Client auf 64KB festgelegt ist, beträgt der MB/s-Durchsatz 256 MB/s ((4,000 IOPS * 64 KB) / 1000). In diesem Fall erzeugen die 4,000 IOPS kein Ereignis, der MB/s-Wert von 256 MB/s liegt jedoch über dem Schwellenwert von 144 MB/s, und es wird ein Ereignis generiert.
+
+Aus diesem Grund wird, wenn ein Ereignis durch eine Überschreitung der MB/s-Grenze für eine adaptive QoS-Richtlinie ausgelöst wird, die die Blockgröße umfasst, im Abschnitt „Systemdiagnose“ auf der Seite mit den Ereignisdetails ein MB/s-Diagramm angezeigt. Wenn das Ereignis hingegen durch eine Überschreitung der IOPS-Grenze für die adaptive QoS-Richtlinie ausgelöst wird, wird im Abschnitt „Systemdiagnose“ ein IOPS-Diagramm angezeigt. Wenn sowohl bei IOPS als auch bei MB/s eine Überschreitung auftritt, erhalten Sie zwei Ereignisse.
+
+Weitere Informationen zur Anpassung der QoS-Einstellungen finden Sie unter https://docs.netapp.com/us-en/ontap/performance-admin/index.html["Überblick über das Performance-Management"].

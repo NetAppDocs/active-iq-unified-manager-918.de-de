@@ -1,0 +1,37 @@
+---
+permalink: reporting/task_create_report_to_view_capacity_by_cluster_model.html 
+sidebar: sidebar 
+keywords: create, report, view, capacity, cluster, model 
+summary: Ein Bericht zur Analyse der Storage-Kapazität und -Auslastung von Clustern basierend auf dem Storage-Systemmodell kann erstellt werden. 
+---
+= In Active IQ Unified Manager kann ein Bericht zur Anzeige der Kapazität nach Clustermodell erstellt werden.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Bericht zur Analyse der Storage-Kapazität und -Auslastung von Clustern basierend auf dem Storage-Systemmodell kann erstellt werden.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Im Folgenden finden Sie die Schritte zum Erstellen einer benutzerdefinierten Ansicht, die die Kapazität nach Clustermodell anzeigt, sowie zum anschließenden Planen der Berichterstellung für diese Ansicht.
+
+.Schritte
+. Im linken Navigationsbereich wird *Storage* > *Cluster* ausgewählt.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Kapazität* > *Alle Cluster*.
+. Mit *Anzeigen/Ausblenden* lassen sich Spalten wie "`Cluster FQDN`" und "`OS Version`" ausblenden, die im Bericht nicht benötigt werden.
+. Sinnvoll ist es, die Spalten „`Total Raw Capacity`“, „`Model/Family`“ und die drei Aggregatspalten in die Nähe der Spalte „`Cluster`“ zu ziehen.
+. Die Ergebnisse werden nach Clustertyp sortiert, wenn Sie auf den oberen Rand der Spalte „`Model/Family`“ klicken.
+. Die Ansicht sollte unter einem spezifischen Namen gespeichert werden, der widerspiegelt, was in der Ansicht angezeigt wird, zum Beispiel „`Kapazität nach Clustermodell`“.
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Durch Klicken auf *Zeitplan hinzufügen* wird der Seite *Berichtszeitpläne* eine neue Zeile hinzugefügt, sodass die Zeitplanmerkmale für den neuen Bericht definiert werden können.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht dargestellten Ergebnissen sollten Sie gegebenenfalls die Kapazität bestimmter Cluster erhöhen oder ältere Clustermodelle aufrüsten.

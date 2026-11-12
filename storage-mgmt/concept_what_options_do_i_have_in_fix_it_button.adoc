@@ -1,0 +1,81 @@
+---
+permalink: storage-mgmt/concept_what_options_do_i_have_in_fix_it_button.html 
+sidebar: sidebar 
+keywords: fix it,fix all 
+summary: Auf der Seite „Management Actions“ stehen die Schaltflächen „Fix It“ und „Fix All“ zur Verfügung, um Probleme zu beheben, über die Unified Manager durch ein Ereignis benachrichtigt wurde. 
+---
+= Informationen zu den Schaltflächenoptionen „Reparieren“ und „Alle reparieren“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Verwaltungsaktionen“ steht die Schaltfläche *Fix It* oder *Fix All* zur Verfügung, um Probleme zu beheben, über die Unified Manager durch ein Ereignis benachrichtigt wurde.
+
+Wir empfehlen, bei Bedarf auf die Schaltflächen zu klicken, um ein Problem zu beheben. Sollten Sie sich jedoch nicht sicher sein, ob Sie das Problem wie von Unified Manager empfohlen beheben möchten, können Sie die folgenden Aktionen ausführen:
+
+|===
+| Was möchten Sie tun? | *Aktion* 
+
+
+ a| 
+Unified Manager das Problem bei allen identifizierten Objekten beheben lassen.
+ a| 
+Die Auswahl erfolgt über die Schaltfläche *Fix All*.
+
+
+
+ a| 
+Das Problem wird derzeit für keines der identifizierten Objekte behoben, und diese Verwaltungsaktion bleibt ausgeblendet, bis das Ereignis erneut auftritt.
+ a| 
+Über den Abwärtspfeil kann *Alle verwerfen* ausgewählt werden.
+
+
+
+ a| 
+Das Problem nur bei einigen der identifizierten Objekte beheben.
+ a| 
+Ein Klick auf den Namen der Verwaltungsmaßnahme erweitert die Liste und zeigt alle einzelnen *Fix It*-Aktionen an. Anschließend folgen die Schritte zum Beheben oder Verwerfen einzelner Verwaltungsmaßnahmen.
+
+|===
+|===
+| Was möchten Sie tun? | Aktion 
+
+
+ a| 
+Unified Manager behebt das Problem.
+ a| 
+Auf die Schaltfläche *Fix It* klicken.
+
+
+
+ a| 
+Das Problem wird zu diesem Zeitpunkt nicht behoben, und diese Verwaltungsaktion bleibt ausgeblendet, bis das Ereignis erneut auftritt.
+ a| 
+Auf den Abwärtspfeil und anschließend auf *Dismiss* klicken.
+
+
+
+ a| 
+Die Anzeige der Details zu diesem Ereignis erleichtert das Verständnis des Problems.
+ a| 
+* Nach Auswahl der Schaltfläche *Fix It* kann die Korrektur im daraufhin angezeigten Dialogfeld überprüft werden.
+* Über den Abwärtspfeil und *Ereignisdetails anzeigen* lässt sich die Seite mit den Ereignisdetails öffnen.
+
+
+Anschließend kann auf einer der beiden daraufhin angezeigten Seiten *Fix It* ausgewählt werden, wenn das Problem behoben werden soll.
+
+
+
+ a| 
+Die Anzeige der Details dieses Storage Objekts erleichtert das Verständnis des Problems.
+ a| 
+Wenn Sie den Namen des Storage Objekts auswählen, werden Details entweder im Performance Explorer oder auf der Seite „Health Details“ angezeigt.
+
+|===
+In manchen Fällen wird die Korrektur in der nächsten 15-Minuten-Konfigurationsabfrage berücksichtigt. In anderen Fällen kann es viele Stunden dauern, bis die Konfigurationsänderung verifiziert und das entsprechende Ereignis als veraltet eingestuft wird.
+
+Die Liste der abgeschlossenen oder laufenden Verwaltungsaktionen lässt sich über das Filtersymbol anzeigen, indem *Abgeschlossen* oder *In Bearbeitung* ausgewählt wird.
+
+Alle Vorgänge von Fix All werden seriell ausgeführt, sodass beim Anzeigen des Bereichs *In Progress* einige Objekte den Status *In Progress* und andere den Status *Scheduled* haben; das bedeutet, dass sie noch auf ihre Implementierung warten.

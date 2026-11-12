@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html 
+sidebar: sidebar 
+keywords: view, node, aggregate, performance, capacity, used, values 
+summary: Sie können die Werte der genutzten Performance-Kapazität für alle Knoten oder für alle Aggregate in einem Cluster überwachen oder Details zu einem einzelnen Knoten oder Aggregat anzeigen. 
+---
+= Verwendete Werte der Leistungsfähigkeit von Nodes und Aggregaten in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Werte der genutzten Performance-Kapazität für alle Knoten oder für alle Aggregate in einem Cluster überwachen oder Details zu einem einzelnen Knoten oder Aggregat anzeigen.
+
+Die Werte für die genutzte Performance-Kapazität erscheinen im Dashboard, auf den Seiten Performance Inventory, auf der Seite Top Performers, auf der Seite Create Threshold Policy, auf den Seiten Performance Explorer sowie in Detaildiagrammen. Beispielsweise enthält die Seite Performance: All Aggregates die Spalte Performance Capacity Used, in der der Wert der genutzten Performance-Kapazität für alle Aggregate angezeigt wird.
+
+image::../media/node_inventory_used_headroom.gif[Ein Screenshot der Benutzeroberfläche der Seite „Performance: Alle Aggregate“]
+
+Mithilfe der Überwachung des Zählers für die genutzte Performance-Kapazität können Sie Folgendes identifizieren:
+
+* Ob Knoten oder Aggregate in Clustern einen hohen Wert für die genutzte Performance-Kapazität aufweisen
+* Ob auf Knoten oder Aggregaten in beliebigen Clustern aktive Ereignisse zur genutzten Performance-Kapazität vorliegen
+* Die Knoten und Aggregate mit dem höchsten und niedrigsten Wert für die genutzte Performance-Kapazität in einem Cluster
+* Latenz- und Auslastungszählerwerte in Verbindung mit Knoten oder Aggregaten mit hohen Werten für die genutzte Performance Kapazität
+* Wie sich die Werte der genutzten Performance-Kapazität für Knoten in einem HA-Paar ändern, wenn einer der Knoten ausfällt
+* Die am stärksten ausgelasteten Volumes und LUNs auf einem Aggregat mit einem hohen Wert für die genutzte Performance-Kapazität
+

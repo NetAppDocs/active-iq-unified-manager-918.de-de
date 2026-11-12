@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_add_disks_and_perform_aggregate_layout_reconstruction.html 
+sidebar: sidebar 
+keywords: add, disks, perform, aggregate, layout, reconstruction 
+summary: Sie können einem Aggregat Festplatten hinzufügen, um die Storage Kapazität und die Performance dieses Aggregats zu erhöhen. Nach dem Hinzufügen der Festplatten zeigt sich eine Verbesserung der Performance erst nach der Rekonstruktion des Aggregats. 
+---
+= Grundlegende Informationen dazu, wie sich das Hinzufügen von Datenträgern auf das Aggregatlayout in Active IQ Unified Manager auswirkt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einem Aggregat Festplatten hinzufügen, um die Storage Kapazität und die Performance dieses Aggregats zu erhöhen. Nach dem Hinzufügen der Festplatten zeigt sich eine Verbesserung der Performance erst nach der Rekonstruktion des Aggregats.
+
+Wenn auf der Seite „Ereignisdetails“ ein systemdefiniertes Schwellenwertereignis angezeigt wird, enthält die Ereignisbeschreibung den Namen des betroffenen Aggregats. Sie können Datenträger hinzufügen und die Daten auf diesem Aggregat rekonstruieren.
+
+Die dem Aggregat hinzugefügten Datenträger müssen bereits im Cluster vorhanden sein. Falls im Cluster keine zusätzlichen Datenträger verfügbar sind, ist möglicherweise eine Kontaktaufnahme mit Ihrem Administrator oder der Erwerb weiterer Datenträger erforderlich. Sie können ONTAP System Manager oder die ONTAP-Befehle verwenden, um Datenträger zu einem Aggregat hinzuzufügen.
+
+https://www.netapp.com/pdf.html?item=/media/19675-tr-3838.pdf["Technischer Bericht 3838: Konfigurationsleitfaden für das Speichersubsystem"^]

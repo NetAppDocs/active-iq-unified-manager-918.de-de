@@ -1,0 +1,28 @@
+---
+permalink: data-protection/task_delete_resource_pools.html 
+sidebar: sidebar 
+keywords: delete, resource, pools 
+summary: Sie können Ressourcenpools löschen, wenn sie nicht mehr benötigt werden. Beispielsweise können Sie die Mitgliedsaggregate eines Ressourcenpools auf mehrere andere Ressourcenpools verteilen, wodurch der ursprüngliche Ressourcenpool überflüssig wird. 
+---
+= Löschen von Ressourcenpools in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ressourcenpools löschen, wenn sie nicht mehr benötigt werden. Beispielsweise können Sie die Mitgliedsaggregate eines Ressourcenpools auf mehrere andere Ressourcenpools verteilen, wodurch der ursprüngliche Ressourcenpool überflüssig wird.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Die Schaltfläche *Löschen* ist nur aktiviert, wenn mindestens ein Ressourcenpool ausgewählt ist.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Protection* > *Resource Pools*.
+. Wählen Sie den Ressourcenpool aus, der gelöscht werden soll.
+. Klicken Sie auf *Delete*.
++
+Der Ressourcenpool wird aus der Liste der Ressourcenpools entfernt, und seine Aggregate werden aus der Mitgliederliste entfernt.
+
+

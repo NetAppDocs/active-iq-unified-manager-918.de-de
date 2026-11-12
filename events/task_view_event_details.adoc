@@ -1,0 +1,31 @@
+---
+permalink: events/task_view_event_details.html 
+sidebar: sidebar 
+keywords: view, events, details 
+summary: Sie können Details zu einem Ereignis anzeigen, das Unified Manager auslöst, damit Korrekturmaßnahmen ergriffen werden können. Wenn beispielsweise das Systemstatusereignis Volume Offline vorliegt, können Sie auf dieses Ereignis klicken, um die Details anzuzeigen und Korrekturmaßnahmen durchzuführen. 
+---
+= Ereignisdetails in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Details zu einem Ereignis anzeigen, das Unified Manager auslöst, damit Korrekturmaßnahmen ergriffen werden können. Wenn beispielsweise das Systemstatusereignis Volume Offline vorliegt, können Sie auf dieses Ereignis klicken, um die Details anzuzeigen und Korrekturmaßnahmen durchzuführen.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+Die Ereignisdetails umfassen Informationen wie die Quelle des Ereignisses, die Ursache des Ereignisses und alle zum Ereignis gehörenden Hinweise.
+
+.Schritte
+. Im linken Navigationsbereich auf *Event Management* klicken.
++
+Standardmäßig werden in der Ansicht „Alle aktiven Ereignisse“ die neuen und bestätigten (aktiven) Ereignisse angezeigt, die in den letzten 7 Tagen generiert wurden und die Auswirkungsstufe „Incident“ oder „Risiko“ aufweisen.
+
+. Wenn Sie eine bestimmte Kategorie von Ereignissen, z. B. Kapazitätsereignisse oder Performance Ereignisse, anzeigen möchten, können Sie auf *View* klicken und im Menü der Ereignistypen eine Auswahl treffen.
+. Details lassen sich anzeigen, indem der Name des entsprechenden Ereignisses ausgewählt wird.
++
+Die Ereignisdetails werden auf der Seite „Ereignisdetails“ angezeigt.
+
+

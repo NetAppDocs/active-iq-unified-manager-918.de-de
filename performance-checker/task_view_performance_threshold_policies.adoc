@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_view_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: view, performance, threshold, policies 
+summary: Auf der Seite „Leistungsschwellenwerte“ können Sie alle derzeit definierten Performance-Schwellenwertrichtlinien anzeigen. 
+---
+= Leistungsschwellenwertrichtlinien in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Leistungsschwellenwerte“ können Sie alle derzeit definierten Performance-Schwellenwertrichtlinien anzeigen.
+
+Die Liste der Schwellenwertrichtlinien ist alphabetisch nach Richtliniennamen sortiert und umfasst Richtlinien für alle Arten von Storage-Objekten. Sie können auf eine Spaltenüberschrift klicken, um die Richtlinien nach dieser Spalte zu sortieren. Falls eine bestimmte Richtlinie gesucht wird, lassen sich mit den Filter- und Suchfunktionen die in der Inventarliste angezeigten Schwellenwertrichtlinien eingrenzen.
+
+Durch Bewegen des Mauszeigers über den Richtliniennamen und den Bedingungsnamen werden die Konfigurationsdetails der Richtlinie angezeigt. Zusätzlich können Sie mithilfe der bereitgestellten Schaltflächen benutzerdefinierte Schwellenwertrichtlinien erstellen, klonen, bearbeiten und löschen.
+
+.Schritt
+. Im linken Navigationsbereich ist *Ereignisschwellenwerte* > *Performance* auszuwählen.
++
+Die Seite „Performance-Schwellenwerte“ wird angezeigt.
+
+

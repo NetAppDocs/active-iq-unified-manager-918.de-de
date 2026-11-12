@@ -1,0 +1,48 @@
+---
+permalink: reporting/task_create_report_volumes_that_should_move_data_to_cloud_tier.html 
+sidebar: sidebar 
+keywords: create, report, identify, volumes, FabricPool, aggregates, data, cloud tier 
+summary: 'Sie können einen Bericht erstellen, der die Liste der Volumes enthält, die sich aktuell auf FabricPool Aggregaten befinden, für die eine Cloud-Empfehlung für Tier vorliegt und die eine große Menge an kalten Daten enthalten. Dieser Bericht kann Sie bei der Entscheidung unterstützen, ob Sie die Tiering-Richtlinie für bestimmte Volumes in „auto“ oder „all“ ändern sollten, um mehr kalte (inaktive) Daten in die Cloud-Ebene auszulagern.' 
+---
+= Ermittlung von Volumes, die Daten in die Cloud-Ebene in Active IQ Unified Manager verschieben sollten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, der die Liste der Volumes enthält, die sich aktuell auf FabricPool Aggregaten befinden, die eine Cloud-Empfehlung vom Typ Tier haben und die eine große Menge an kalten Daten enthalten. Dieser Bericht kann Sie bei der Entscheidung unterstützen, ob die Tiering-Richtlinie für bestimmte Volumes in "`auto`" oder "`all`" geändert werden sollte, um mehr kalte (inaktive) Daten in die Cloud-Ebene auszulagern.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen FabricPool Aggregate konfiguriert haben und Volumes auf diesen Aggregaten besitzen.
+
+
+Im Folgenden wird beschrieben, wie eine benutzerdefinierte Ansicht erstellt wird, die die erforderlichen Spalten in der richtigen Reihenfolge anzeigt, und wie anschließend die Generierung eines Berichts für diese Ansicht geplant wird.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Performance* > *Alle Volumes*.
+. Im Spaltenauswahldialog muss die Spalte „`Disk Type`“ in der Ansicht erscheinen.
++
+Durch das Hinzufügen oder Entfernen weiterer Spalten lässt sich eine für Ihren Bericht wichtige Ansicht erstellen.
+
+. Die Spalte „`Disk Type`“ lässt sich per Drag & Drop in die Nähe der Spalte „`Cloud Recommendation`“ ziehen.
+. Nach dem Klicken auf das Filtersymbol die folgenden drei Filter hinzufügen und anschließend *Filter anwenden* auswählen:
++
+** Der Datenträgertyp enthält FabricPool
+** Cloud Recommendation enthält Tier
+** Kalte Daten größer als 10 GB image:../media/filter_cold_data.gif["Ein Screenshot der Benutzeroberfläche, der zeigt, wie sich Filter hinzufügen und anwenden lassen."]
+
+
+. Durch Auswahl des oberen Bereichs der Spalte „Kalte Daten“ erscheinen die Volumes mit den meisten kalten Daten oben in der Ansicht.
+. Die Ansicht sollte unter einem Namen gespeichert werden, der widerspiegelt, was in der Ansicht angezeigt wird, zum Beispiel "`Vols change tiering policy`".image:../media/report_vol_cold_data.gif["Ein Screenshot der Benutzeroberfläche, der die Seite zum Ändern der Tiering-Richtlinie von Vols mit den erforderlichen Spalten in der richtigen Reihenfolge zeigt."]
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Über *Add Schedule* lässt sich der Seite „Berichtszeitpläne“ eine neue Zeile hinzufügen, sodass die Zeitplanmerkmale für den neuen Bericht definiert werden können.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht dargestellten Ergebnissen kann es sinnvoll sein, mit System Manager oder der ONTAP CLI die Tiering-Richtlinie für bestimmte Volumes in "`auto`" oder "`all`" zu ändern, um mehr selten genutzte Daten in das Cloud Tier auszulagern.

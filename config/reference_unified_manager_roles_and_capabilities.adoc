@@ -1,0 +1,228 @@
+---
+permalink: config/reference_unified_manager_roles_and_capabilities.html 
+sidebar: sidebar 
+keywords: unified manager, user, roles, capabilities 
+summary: Anhand Ihrer zugewiesenen Benutzerrolle können Sie ermitteln, welche Operationen Sie im Unified Manager durchführen können. 
+---
+= Informationen zu Benutzerrollen und Berechtigungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anhand Ihrer zugewiesenen Benutzerrolle können Sie ermitteln, welche Operationen Sie im Unified Manager durchführen können.
+
+Die folgende Tabelle zeigt die Funktionen, die jede Benutzerrolle ausführen kann:
+
+[cols="6*"]
+|===
+| Funktion | Operator | Storage-Administrator | Anwendungsadministrator | Integrationsschema | Berichtsschema 
+
+
+ a| 
+Anzeigen von Informationen zum Storage-System
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+Andere Daten wie z. B. Verläufe und Kapazitätstrends lassen sich anzeigen.
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+Ereignisse anzeigen, zuweisen und beheben
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Storage-Service-Objekte wie SVM-Zuordnungen und Ressourcenpools anzeigen
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Anzeige von Schwellenwertrichtlinien
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Management von Storage-Serviceobjekten wie SVM-Zuordnungen und Ressourcenpools
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Warnmeldungen definieren
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Storage-Managementoptionen managen
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Storage-Managementrichtlinien managen
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Benutzer verwalten
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Administrative Optionen managen
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Definition von Schwellenwertrichtlinien
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Datenbankzugriff managen
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Integration mit WFA managen und Zugriff auf die Datenbankansichten gewähren
+ a| 
+ a| 
+ a| 
+ a| 
+•
+ a| 
+
+
+
+ a| 
+Berichte planen und speichern
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Ausführung von "`Fix It`"-Vorgängen über Management Actions
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Bereitstellung von schreibgeschütztem Zugriff auf Datenbankansichten
+ a| 
+ a| 
+ a| 
+ a| 
+ a| 
+•
+
+|===

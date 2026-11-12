@@ -1,0 +1,28 @@
+---
+permalink: install-linux/task_remove_custom_umadmin_user_and_maintenance_group.html 
+sidebar: sidebar 
+keywords: remove, custom, umadmin, user, maintenance group 
+summary: Wenn Sie vor der Installation von Unified Manager ein benutzerdefiniertes Home-Verzeichnis erstellt haben, um Ihren eigenen umadmin-Benutzer und Ihr Wartungskonto zu definieren, sollten Sie diese Elemente nach der Deinstallation von Unified Manager entfernen. 
+---
+= Der benutzerdefinierte Benutzer „umadmin“ und die Wartungsgruppe für Active IQ Unified Manager werden entfernt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie vor der Installation von Unified Manager ein benutzerdefiniertes Home-Verzeichnis erstellt haben, um Ihren eigenen umadmin-Benutzer und Ihr Wartungskonto zu definieren, sollten Sie diese Elemente nach der Deinstallation von Unified Manager entfernen.
+
+Bei der Standarddeinstallation von Unified Manager werden ein benutzerdefinierter Benutzer umadmin und ein Wartungskonto nicht entfernt. Diese Elemente müssen manuell gelöscht werden.
+
+.Schritte
+. Für die Anmeldung am Red Hat Enterprise Linux Server ist der Root-Benutzer zu verwenden.
+. Der Benutzer umadmin wird gelöscht:
++
+`userdel umadmin`
+
+. Löschen der Wartungsgruppe:
++
+`groupdel maintenance`
+
+

@@ -1,0 +1,14 @@
+---
+permalink: events/concept_how_object_status_is_computed.html 
+sidebar: sidebar 
+keywords: object, status, computed 
+summary: Der Objektstatus wird durch das schwerwiegendste Ereignis bestimmt, das aktuell den Status „Neu“ oder „Bestätigt“ aufweist. Wenn der Objektstatus beispielsweise „Fehler“ lautet, hat eines der Ereignisse des Objekts den Typ des Schweregrads „Fehler“. Sobald eine Korrekturmaßnahme ergriffen wurde, ändert sich der Ereignisstatus zu „Behoben“. 
+---
+= Wie Active IQ Unified Manager den Objektstatus berechnet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Objektstatus wird durch das schwerwiegendste Ereignis bestimmt, das aktuell den Status „Neu“ oder „Bestätigt“ aufweist. Wenn der Objektstatus beispielsweise „Fehler“ lautet, hat eines der Ereignisse des Objekts den Typ des Schweregrads „Fehler“. Sobald eine Korrekturmaßnahme ergriffen wurde, ändert sich der Ereignisstatus zu „Behoben“.

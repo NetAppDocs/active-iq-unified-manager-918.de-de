@@ -1,0 +1,452 @@
+---
+permalink: api-automation/concept_provision_file_share.html 
+sidebar: sidebar 
+keywords: provision, cifs, nfs, file, shares 
+summary: 'Sie können CIFS-Freigaben und NFS-Dateifreigaben auf Ihren Storage Virtual Machines (SVMs) mithilfe der Provisionierungs-APIs provisionieren, die als Teil von Active IQ Unified Manager bereitgestellt werden. Dieser Provisionierungs-Workflow beschreibt die Schritte zum Abrufen der Schlüssel der SVMs, der Performance Service Levels und der Storage Efficiency Policies vor dem Erstellen der Dateifreigaben.' 
+---
+= Bereitstellung von CIFS- und NFS-Dateifreigaben mithilfe von Active IQ Unified Manager APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können CIFS-Freigaben und NFS-Dateifreigaben auf Ihren Storage Virtual Machines (SVMs) mithilfe der Provisionierungs-APIs provisionieren, die als Teil von Active IQ Unified Manager bereitgestellt werden. Dieser Provisionierungs-Workflow beschreibt die Schritte zum Abrufen der Schlüssel der SVMs, der Performance Service Levels und der Storage Efficiency Policies vor dem Erstellen der Dateifreigaben.
+
+Das folgende Diagramm veranschaulicht jeden Schritt in einem Workflow zur Provisionierung von Dateifreigaben. Es umfasst die Provisionierung sowohl von CIFS-Freigaben als auch von NFS-Dateifreigaben.
+
+image::../media/create_fileshares.gif[Ein Diagramm, das einen Workflow für die Bereitstellung von CIFS- und NFS-Dateifreigaben von der SVM-Einrichtung bis zur Freigabeerstellung zeigt]
+
+[NOTE]
+====
+Stellen Sie Folgendes sicher:
+
+* ONTAP Cluster wurden zu Unified Manager hinzugefügt, und der Clusterschlüssel wurde abgerufen.
+* Auf den Clustern wurden SVMs erstellt.
+* Die SVMs unterstützen CIFS- und NFS-Services. Die Provisionierung von Dateifreigaben kann fehlschlagen, wenn die SVMs die erforderlichen Services nicht unterstützen.
+* Der FCP-Port ist für die Port-Provisionierung online.
+
+
+====
+. Es ist festzustellen, ob auf der SVM, auf der die CIFS-Freigabe erstellt werden soll, Data LIFs oder Zugriffs-Endpunkte verfügbar sind. Die Liste der auf der SVM verfügbaren Zugriffs-Endpunkte:
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/access-endpoints`
+`/storage-provider/access-endpoints/\{key}`
+
+|===
++
+*Beispiel cURL*
+
++
+[listing]
+----
+curl -X GET "https://<hostname>/api/storage-provider/access-endpoints?resource.key=7d5a59b3-953a-11e8-8857-00a098dcc959" -H "accept: application/json" -H "Authorization: Basic <Base64EncodedCredentials>"
+----
+. Sofern Ihr Zugriffsendpunkt in der Liste verfügbar ist, erfolgt der Abruf des Schlüssels des Zugriffsendpunkts, andernfalls die Erstellung des Zugriffsendpunkts.
++
+[NOTE]
+====
+Es muss sichergestellt werden, dass Zugriffs-Endpunkte erstellt werden, auf denen das CIFS-Protokoll aktiviert ist. Die Provisionierung von CIFS-Freigaben schlägt fehl, wenn kein Zugriffs-Endpunkt mit aktiviertem CIFS-Protokoll erstellt wurde.
+
+====
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+POST
+ a| 
+`/storage-provider/access-endpoints`
+
+|===
++
+*Beispiel cURL*
+
++
+Sie müssen die Details des Zugriffsendpunkts, den Sie erstellen möchten, als Eingabeparameter eingeben.
+
++
+[listing]
+----
+curl -X POST "https://<hostname>/api/storage-provider/access-endpoints" -H "accept: application/json" -H "Content-Type: application/json" -H "Authorization: Basic <Base64EncodedCredentials>"
+{ \"data_protocols\": \"nfs\",
+\"fileshare\": { \"key\": \"cbd1757b-0580-11e8-bd9d-00a098d39e12:type=volume,uuid=f3063d27-2c71-44e5-9a69-a3927c19c8fc\" },
+\"gateway\": \"10.132.72.12\",
+\"ip\": { \"address\": \"10.162.83.26\",
+\"ha_address\": \"10.142.83.26\",
+\"netmask\": \"255.255.0.0\" },
+\"lun\": { \"key\": \"cbd1757b-0580-11e8-bd9d-00a098d39e12:type=lun,uuid=d208cc7d-80a3-4755-93d4-5db2c38f55a6\" },
+\"mtu\": 15000, \"name\": \"aep1\",
+\"svm\": { \"key\": \"cbd1757b-0580-11e8-bd9d-00a178d39e12:type=vserver,uuid=1d1c3198-fc57-11e8-99ca-00a098d38e12\" },
+\"vlan\": 10}"
+----
++
+Die JSON-Ausgabe zeigt einen Job-Objektschlüssel an, mit dem Sie den von Ihnen erstellten Zugriffs-Endpunkt überprüfen können.
+
+. Überprüfung des Zugriffs-Endpunkts:
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Management-Server
+ a| 
+GET
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
+. Es ist zu ermitteln, ob eine CIFS-Freigabe oder eine NFS-Dateifreigabe erstellt werden muss. Für die Erstellung von CIFS-Freigaben gelten die folgenden Unterschritte:
++
+.. Es ist festzustellen, ob der CIFS-Server auf Ihrer SVM konfiguriert ist, das heißt, ob auf der SVM eine Active Directory-Zuordnung eingerichtet ist.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/active-directories-mappings`
+
+|===
+.. Wenn die Active Directory-Zuordnung erstellt wurde, ist der Schlüssel zu verwenden, andernfalls ist die Active Directory-Zuordnung auf der SVM zu erstellen.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+POST
+ a| 
+`/storage-provider/active-directories-mappings`
+
+|===
++
+*Beispiel cURL*
+
++
+Als Eingabeparameter sind die Details zum Erstellen der Active Directory Zuordnung anzugeben.
+
++
+[listing]
+----
+curl -X POST "https://<hostname>/api/storage-provider/active-directories-mappings" -H "accept: application/json" -H "Content-Type: application/json" -H "Authorization: Basic <Base64EncodedCredentials>"
+{ \"_links\": {},
+\"dns\": \"10.000.000.000\",
+\"domain\": \"example.com\",
+\"password\": \"string\",
+\"svm\": { \"key\": \"9f4ddea-e395-11e9-b660-005056a71be9:type=vserver,uuid=191a554a-f0ce-11e9-b660-005056a71be9\" },
+\"username\": \"string\"}"
+----
++
+Dies ist ein synchroner Aufruf, und die Erstellung der Active Directory-Zuordnung lässt sich in der Ausgabe überprüfen. Im Fehlerfall wird eine Fehlermeldung angezeigt, anhand derer sich das Problem beheben und die Anfrage erneut ausführen lässt.
+
+
+
+. Die Ermittlung des SVM-Schlüssels für die SVM, auf der die CIFS-Freigabe oder die NFS-Dateifreigabe erstellt werden soll, erfolgt wie im Workflow-Thema _Verifying SVMs on clusters_ beschrieben.
+. Den Schlüssel für das Performance Service Level erhalten Sie, indem Sie die folgende API ausführen und den Schlüssel aus der Antwort abrufen.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/performance-service-levels`
+
+|===
++
+[NOTE]
+====
+Sie können die Details der systemdefinierten Performance Service Levels abrufen, indem Sie den `system_defined` Eingabeparameter auf `true` „true“ setzen. In der Ausgabe befindet sich der Schlüssel des Performance Service Levels, das Sie auf die Dateifreigabe anwenden möchten.
+
+====
+. Optional können Sie den Schlüssel der Storage Efficiency Policy, die Sie auf die Dateifreigabe anwenden möchten, abrufen, indem Sie die folgende API ausführen und den Schlüssel aus der Antwort extrahieren.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+. Erstellung der Dateifreigabe. Sie können eine Dateifreigabe erstellen, die sowohl CIFS als auch NFS unterstützt, indem Sie die Zugriffssteuerungsliste und die Exportrichtlinie angeben. Die folgenden Teilschritte enthalten Informationen, wenn Sie eine Dateifreigabe erstellen möchten, die auf dem Volume nur eines der Protokolle unterstützt. Sie können eine NFS-Dateifreigabe auch aktualisieren, um die Zugriffssteuerungsliste einzuschließen, nachdem Sie die NFS-Freigabe erstellt haben. Informationen dazu enthält das Thema _Modifying storage workloads_.
++
+.. Für die Erstellung nur einer CIFS-Freigabe werden die Informationen zur Zugriffssteuerungsliste (ACL) benötigt. Für die Erstellung der CIFS-Freigabe sind für die folgenden Eingabeparameter gültige Werte anzugeben. Für jede Benutzergruppe, die zugewiesen wird, wird beim Provisionieren einer CIFS/SMB-Freigabe eine ACL erstellt. Anhand der für ACL und Active Directory-Zuordnung eingegebenen Werte werden Zugriffskontrolle und Zuordnung für die CIFS-Freigabe bei ihrer Erstellung festgelegt.
++
+*Ein cURL-Befehl mit Beispielwerten*
+
++
+[listing]
+----
+{
+  "access_control": {
+    "acl": [
+      {
+        "permission": "read",
+        "user_or_group": "everyone"
+      }
+    ],
+    "active_directory_mapping": {
+      "key": "3b648c1b-d965-03b7-20da-61b791a6263c"
+    },
+----
+.. Für die Erstellung nur einer NFS-Dateifreigabe sind die Informationen zur Exportrichtlinie erforderlich. Für die Erstellung der NFS-Dateifreigabe sind für die folgenden Eingabeparameter gültige Werte erforderlich. Anhand dieser Werte wird die Exportrichtlinie bei der Erstellung mit der NFS-Dateifreigabe verknüpft.
++
+[NOTE]
+====
+Bei der Provisionierung der NFS-Freigabe können Sie entweder eine Exportrichtlinie erstellen, indem Sie alle erforderlichen Werte angeben, oder den Exportrichtlinienschlüssel angeben und eine bestehende Exportrichtlinie wiederverwenden. Wenn Sie eine Exportrichtlinie für die Storage VM wiederverwenden möchten, müssen Sie den Exportrichtlinienschlüssel hinzufügen. Falls Sie den Schlüssel nicht kennen, können Sie den Exportrichtlinienschlüssel über die `/datacenter/protocols/nfs/export-policies` API abrufen. Zum Erstellen einer neuen Richtlinie müssen Sie die Regeln wie im folgenden Beispiel gezeigt eingeben. Anhand der eingegebenen Regeln versucht die API, eine bestehende Exportrichtlinie zu finden, indem sie Host, Storage VM und Regeln abgleicht. Wenn bereits eine Exportrichtlinie vorhanden ist, wird sie verwendet. Andernfalls wird eine neue Exportrichtlinie erstellt.
+
+====
++
+*Ein cURL-Befehl mit Beispielwerten*
+
++
+[listing]
+----
+"export_policy": {
+      "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=export_policy,uuid=1460288880641",
+      "name_tag": "ExportPolicyNameTag",
+      "rules": [
+        {
+          "clients": [
+            {
+              "match": "0.0.0.0/0"
+            }
+----
+
+
++
+Nach der Konfiguration der Zugriffssteuerungsliste und der Exportrichtlinie sind die gültigen Werte für die obligatorischen Eingabeparameter sowohl für CIFS- als auch für NFS-Dateifreigaben anzugeben:
+
+
+
+[NOTE]
+====
+Storage Efficiency Policy ist ein optionaler Parameter für die Erstellung von Dateifreigaben.
+
+====
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+POST
+ a| 
+`/storage-provider/file-shares`
+
+|===
+Die JSON-Ausgabe zeigt einen Job-Objektschlüssel an, mit dem sich die erstellte Dateifreigabe überprüfen lässt . Die Erstellung der Dateifreigabe lässt sich mithilfe des Job-Objektschlüssels überprüfen, der bei der Abfrage des Jobs zurückgegeben wird:
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Management-Server
+ a| 
+GET
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
+Am Ende der Antwort sehen Sie den Schlüssel der erstellten Dateifreigabe.
+
+[listing]
+----
+
+    ],
+    "job_results": [
+        {
+            "name": "fileshareKey",
+            "value": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=volume,uuid=e581c23a-1037-11ea-ac5a-00a098dcc6b6"
+        }
+    ],
+    "_links": {
+        "self": {
+            "href": "/api/management-server/jobs/06a6148bf9e862df:-2611856e:16e8d47e722:-7f87"
+        }
+    }
+}
+----
+. Zur Überprüfung der Erstellung der Dateifreigabe wird die folgende API mit dem zurückgegebenen Schlüssel ausgeführt:
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===
++
+*Beispielhafte JSON-Ausgabe*
+
++
+Es ist ersichtlich, dass die POST-Methode  `/storage-provider/file-shares`intern alle für die einzelnen Funktionen erforderlichen APIs aufruft und das Objekt erstellt. Beispielsweise ruft sie die  `/storage-provider/performance-service-levels/`API auf, um das Performance Service Level der Dateifreigabe zuzuweisen.
+
++
+[listing]
+----
+{
+    "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=volume,uuid=e581c23a-1037-11ea-ac5a-00a098dcc6b6",
+    "name": "FileShare_377",
+    "cluster": {
+        "uuid": "7d5a59b3-953a-11e8-8857-00a098dcc959",
+        "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=cluster,uuid=7d5a59b3-953a-11e8-8857-00a098dcc959",
+        "name": "AFFA300-206-68-70-72-74",
+        "_links": {
+            "self": {
+                "href": "/api/datacenter/cluster/clusters/7d5a59b3-953a-11e8-8857-00a098dcc959:type=cluster,uuid=7d5a59b3-953a-11e8-8857-00a098dcc959"
+            }
+        }
+    },
+    "svm": {
+        "uuid": "b106d7b1-51e9-11e9-8857-00a098dcc959",
+        "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=vserver,uuid=b106d7b1-51e9-11e9-8857-00a098dcc959",
+        "name": "RRT_ritu_vs1",
+        "_links": {
+            "self": {
+                "href": "/api/datacenter/svm/svms/7d5a59b3-953a-11e8-8857-00a098dcc959:type=vserver,uuid=b106d7b1-51e9-11e9-8857-00a098dcc959"
+            }
+        }
+    },
+    "assigned_performance_service_level": {
+        "key": "1251e51b-069f-11ea-980d-fa163e82bbf2",
+        "name": "Value",
+        "peak_iops": 75,
+        "expected_iops": 75,
+        "_links": {
+            "self": {
+                "href": "/api/storage-provider/performance-service-levels/1251e51b-069f-11ea-980d-fa163e82bbf2"
+            }
+        }
+    },
+    "recommended_performance_service_level": {
+        "key": null,
+        "name": "Idle",
+        "peak_iops": null,
+        "expected_iops": null,
+        "_links": {}
+    },
+    "space": {
+        "size": 104857600
+    },
+    "assigned_storage_efficiency_policy": {
+        "key": null,
+        "name": "Unassigned",
+        "_links": {}
+    },
+    "access_control": {
+        "acl": [
+            {
+                "user_or_group": "everyone",
+                "permission": "read"
+            }
+        ],
+        "export_policy": {
+            "id": 1460288880641,
+            "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=export_policy,uuid=1460288880641",
+            "name": "default",
+            "rules": [
+                {
+                    "anonymous_user": "65534",
+                    "clients": [
+                        {
+                            "match": "0.0.0.0/0"
+                        }
+                    ],
+                    "index": 1,
+                    "protocols": [
+                        "nfs3",
+                        "nfs4"
+                    ],
+                    "ro_rule": [
+                        "sys"
+                    ],
+                    "rw_rule": [
+                        "sys"
+                    ],
+                    "superuser": [
+                        "none"
+                    ]
+                },
+                {
+                    "anonymous_user": "65534",
+                    "clients": [
+                        {
+                            "match": "0.0.0.0/0"
+                        }
+                    ],
+                    "index": 2,
+                    "protocols": [
+                        "cifs"
+                    ],
+                    "ro_rule": [
+                        "ntlm"
+                    ],
+                    "rw_rule": [
+                        "ntlm"
+                    ],
+                    "superuser": [
+                        "none"
+                    ]
+                }
+            ],
+            "_links": {
+                "self": {
+                    "href": "/api/datacenter/protocols/nfs/export-policies/7d5a59b3-953a-11e8-8857-00a098dcc959:type=export_policy,uuid=1460288880641"
+                }
+            }
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "/api/storage-provider/file-shares/7d5a59b3-953a-11e8-8857-00a098dcc959:type=volume,uuid=e581c23a-1037-11ea-ac5a-00a098dcc6b6"
+        }
+    }
+}
+----
+

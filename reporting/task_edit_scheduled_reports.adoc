@@ -1,0 +1,35 @@
+---
+permalink: reporting/task_edit_scheduled_reports.html 
+sidebar: sidebar 
+keywords: editing, schedule, reports 
+summary: Nachdem Berichte geplant wurden, können Sie sie auf der Seite „Berichtstermine“ bearbeiten. 
+---
+= Geplante Berichte in Active IQ Unified Manager bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Berichte geplant wurden, können Sie sie auf der Seite „Berichtstermine“ bearbeiten.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+.Schritte
+. Im linken Navigationsbereich ist *Storage Management* > *Report Schedules* auszuwählen.
++
+image::../media/scheduled_reports_2.gif[Ein Screenshot der Benutzeroberfläche, der geplante Berichte anzeigt.]
+
++
+[NOTE]
+====
+Wenn Sie über die entsprechenden Berechtigungen verfügen, können Sie jeden Bericht und dessen Zeitplan im System ändern.
+
+====
+. Zum Ändern des gewünschten Zeitplans ist das Symbol „Mehr image:../media/more_icon.gif[""]“ auszuwählen.
+. Klicken Sie auf *Bearbeiten*.
+. Sie können den *Zeitplannamen*, die *Empfängerliste*, die *Häufigkeit* und das *Format* für den Berichtszeitplan ändern.
+. Wenn Sie fertig sind, kann das Häkchen zum Speichern Ihrer Änderungen ausgewählt werden.
+

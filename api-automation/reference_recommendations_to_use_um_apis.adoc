@@ -1,0 +1,29 @@
+---
+permalink: api-automation/reference_recommendations_to_use_um_apis.html 
+sidebar: sidebar 
+keywords: recommendations, apis, active iq, unified, manager 
+summary: Bei der Verwendung der APIs in Active IQ Unified Manager sollten Sie bestimmte empfohlene Vorgehensweisen beachten. 
+---
+= Empfohlene Vorgehensweisen für die Verwendung von Active IQ Unified Manager APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Verwendung der APIs in Active IQ Unified Manager sollten Sie bestimmte empfohlene Vorgehensweisen beachten.
+
+* Für eine gültige Ausführung müssen alle Antwortinhalte folgendes Format aufweisen:
++
+[listing]
+----
+application/json
+----
+* Die API-Versionsnummer steht in keinem Zusammenhang mit der Produktversionsnummer. Sie sollten die neueste Version der API verwenden, die für Ihre Unified Manager Instanz verfügbar ist. Weitere Informationen zu Unified Manager API-Versionen finden Sie im Abschnitt "`REST API versioning in Active IQ Unified Manager`".
+* Beim Aktualisieren von Array-Werten mithilfe der Unified Manager API muss die gesamte Zeichenfolge der Werte aktualisiert werden. Es ist nicht möglich, Werte an ein Array anzuhängen. Ein vorhandenes Array kann lediglich ersetzt werden.
+* Sie können Filteroperatoren wie Pipe (|) und Wildcard (+*+) für alle Abfrageparameter verwenden, außer für Double-Werte, zum Beispiel IOPS und Performance in den metrics APIs.
+* Von Abfragen von Objekten mit einer Kombination der Filteroperatoren Wildcard (+*+) und Pipe (|) ist abzuraten. Dabei könnte eine falsche Anzahl von Objekten abgerufen werden.
+* Bei der Verwendung von Werten für Filter ist sicherzustellen, dass der Wert keine `?`Zeichen enthält. Dies dient der Verringerung des Risikos von SQL-Injection.
+* Es ist zu beachten, dass die `GET` (all)-Anfrage für jede API maximal 1000 Datensätze zurückgibt. Auch wenn die Abfrage mit dem `max_records` Parameter auf einen Wert über 1000 gesetzt wird, werden nur 1000 Datensätze zurückgegeben.
+* Für die Durchführung administrativer Funktionen empfiehlt sich die Verwendung der Unified Manager UI.
+

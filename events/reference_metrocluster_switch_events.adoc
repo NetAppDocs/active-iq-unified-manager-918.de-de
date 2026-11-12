@@ -1,0 +1,83 @@
+---
+permalink: events/reference_metrocluster_switch_events.html 
+sidebar: sidebar 
+keywords: metrocluster, switch, events, impact area, availability 
+summary: MetroCluster Switch-Ereignisse liefern Ihnen Informationen über den Status der MetroCluster Switches, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu MetroCluster Switch-Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MetroCluster Switch-Ereignisse für MetroCluster over FC Konfigurationen bieten Informationen zum Status der MetroCluster Switches, um potenzielle Probleme zu überwachen. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten Ereignis- und Trap-Name, Impact Level, Quelltyp und Schweregrad.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Abnormale Switch-Temperatur(ocumEvtSwitchTemperatureAbnormal)
+ a| 
+Vorfall
+ a| 
+MetroCluster Switch
+ a| 
+Kritisch
+
+
+
+ a| 
+Switch nicht erreichbar(ocumEvtSwitchUnreachable)
+ a| 
+Vorfall
+ a| 
+MetroCluster Switch
+ a| 
+Kritisch
+
+
+
+ a| 
+Lüfter des Switches ausgefallen(ocumEvtSwitchFansOneOrMoreFailed)
+ a| 
+Vorfall
+ a| 
+MetroCluster Switch
+ a| 
+Kritisch
+
+
+
+ a| 
+Netzteile des Switches ausgefallen(ocumEvtSwitchPowerSuppliesOneOrMoreFailed)
+ a| 
+Vorfall
+ a| 
+MetroCluster Switch
+ a| 
+Kritisch
+
+
+
+ a| 
+Temperatursensoren des Switches ausgefallen(ocumEvtSwitchTemperatureSensorFailed)
+
+[NOTE]
+====
+Dieses Ereignis gilt nur für Cisco Switches.
+
+==== a| 
+Vorfall
+ a| 
+MetroCluster Switch
+ a| 
+Kritisch
+
+|===

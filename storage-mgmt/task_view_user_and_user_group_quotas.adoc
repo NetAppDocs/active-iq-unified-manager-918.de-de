@@ -1,0 +1,26 @@
+---
+permalink: storage-mgmt/task_view_user_and_user_group_quotas.html 
+sidebar: sidebar 
+keywords: view, user, user, group, quotas 
+summary: Die Seite „Storage VM / Systemstatusdetails“ zeigt Informationen zu den auf der SVM konfigurierten Benutzer- und Benutzergruppenkontingenten an. Angezeigt werden der Name des Benutzers oder der Benutzergruppe, die für die Datenträger und Dateien festgelegten Grenzwerte, der belegte Datenträger- und Dateispeicherplatz sowie die E-Mail-Adresse für Benachrichtigungen. 
+---
+= Benutzer- und Benutzergruppenkontingente in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Storage VM / Systemstatusdetails“ zeigt Informationen zu den auf der SVM konfigurierten Benutzer- und Benutzergruppenkontingenten an. Angezeigt werden der Name des Benutzers oder der Benutzergruppe, die für die Datenträger und Dateien festgelegten Grenzwerte, der belegte Datenträger- und Dateispeicherplatz sowie die E-Mail-Adresse für Benachrichtigungen.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+.Schritte
+. Die Auswahl erfolgt im linken Navigationsbereich über *Storage* > *Storage VMs*.
+. In der Ansicht *Systemstatus: Alle Storage VMs* ist eine Storage VM auszuwählen und anschließend die Registerkarte *Benutzer- und Gruppenkontingente* anzuklicken.
+
+
+*Verwandte Informationen*
+
+link:../config/task_add_users.html["Hinzufügen von Benutzern"]

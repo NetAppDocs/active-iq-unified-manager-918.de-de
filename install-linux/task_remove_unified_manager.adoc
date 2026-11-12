@@ -1,0 +1,38 @@
+---
+permalink: install-linux/task_remove_unified_manager.html 
+sidebar: sidebar 
+keywords: remove, unified manager 
+summary: Unified Manager kann mit einem einzigen Befehl vom Red Hat Enterprise Linux Host gestoppt und deinstalliert werden. 
+---
+= Active IQ Unified Manager entfernen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager kann mit einem einzigen Befehl vom Red Hat Enterprise Linux Host gestoppt und deinstalliert werden.
+
+.Bevor Sie beginnen
+* Sie müssen über Root-Benutzerzugriff auf den Server verfügen, von dem Sie Unified Manager entfernen möchten.
+* Security-Enhanced Linux (SELinux) muss auf dem Linux-System deaktiviert sein. Der SELinux-Laufzeitmodus wird mit dem entsprechenden `setenforce 0` Befehl auf „Permissive“ gesetzt.
+* Vor dem Entfernen der Software müssen alle Cluster (Datenquellen) vom Unified Manager Server entfernt werden.
+* Die zum Zulassen oder Blockieren von MySQL Port 3306 erstellten Firewall-Regeln sollten manuell gelöscht werden. Die Firewall-Regeln werden nicht automatisch gelöscht.
+
+
+.Schritte
+. Die Anmeldung als Root-Benutzer auf dem Server, auf dem Sie Unified Manager entfernen möchten, ist erforderlich.
+. Anhalten und Entfernen von Unified Manager vom Server:
++
+`rpm -e netapp-um`
+
++
+Dieser Schritt entfernt alle zugehörigen NetApp RPM-Pakete. Die erforderlichen Softwaremodule wie Java, MySQL und 7zip werden dabei nicht entfernt.
+
+. *Optional:* Gegebenenfalls sind die unterstützenden Softwaremodule wie Java, MySQL und 7zip zu entfernen:
++
+`rpm -e mysql-community-client mysql-community-server mysql-community-common mysql-community-libs java-x.y`
+
+
+
+Nach Abschluss dieses Vorgangs wird die Software entfernt. Alle Daten aus dem `/opt/netapp/data` Verzeichnis werden nach der Deinstallation in den `/opt/netapp/data/BACKUP` Ordner verschoben. Die Deinstallation von Unified Manager entfernt auch die Java- und MySQL-Pakete, es sei denn, diese werden von anderen Applikationen auf dem System benötigt und verwendet. Die MySQL-Daten selbst bleiben jedoch erhalten.

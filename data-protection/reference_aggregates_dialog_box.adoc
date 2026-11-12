@@ -1,0 +1,162 @@
+---
+permalink: data-protection/reference_aggregates_dialog_box.html 
+sidebar: sidebar 
+keywords: aggregates, dialog box 
+summary: Im Dialogfeld „Aggregate“ können Sie die Aggregate auswählen, die Sie Ihrem Ressourcenpool hinzufügen möchten. 
+---
+= Im Active IQ Unified Manager steht das Dialogfeld „Aggregate“ zur Verfügung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Aggregate“ können Sie die Aggregate auswählen, die Sie Ihrem Ressourcenpool hinzufügen möchten.
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Hinzufügen*
++
+Fügt die ausgewählten Aggregate dem Ressourcenpool hinzu. Die Schaltfläche „Hinzufügen“ ist erst aktiviert, wenn mindestens ein Aggregat ausgewählt ist.
+
+* *Stornieren*
++
+Verwirft die Änderungen und schließt das Dialogfeld „Aggregate“.
+
+
+
+
+
+[[aggregates-list]]
+== Aggregatliste
+
+Die Liste der Aggregate zeigt (in Tabellenform) die Namen und Eigenschaften der überwachten Aggregate an.
+
+* *Status*
++
+Zeigt den aktuellen Status eines Volumes an. Der Status kann Kritisch (image:../media/sev_critical_um60.png[""]), Fehler (image:../media/sev_error_um60.png[""]), Warnung (image:../media/sev_warning_um60.png[""]) oder Normal (image:../media/sev_normal_um60.png[""]) sein.
+
++
+Wenn Sie den Mauszeiger über den Status bewegen, erhalten Sie weitere Informationen zu dem Ereignis bzw. den Ereignissen, die für das Volume generiert wurden.
+
+* *Aggregatname*
++
+Zeigt den Namen des Aggregats an.
+
+* *Zustand*
++
+Zeigt den aktuellen Zustand des Aggregats an, der einen der folgenden Werte annehmen kann:
+
++
+** Offline
++
+Lese- und Schreibzugriff ist nicht gestattet.
+
+** Eingeschränkt
++
+Begrenzte Operationen (wie z. B. Paritätsrekonstruktion) sind zulässig, der Datenzugriff jedoch nicht.
+
+** Online
++
+Lese- und Schreibzugriff auf die Volumes, die auf diesem Aggregat gehostet werden, ist zulässig.
+
+** Erstellen
++
+Das Aggregat wird erstellt.
+
+** Zerstören
++
+Das Aggregat wird zerstört.
+
+** Fehlgeschlagen
++
+Das Aggregat kann nicht online geschaltet werden.
+
+** Gefroren
++
+Das Aggregat verarbeitet (vorübergehend) keine Anfragen.
+
+** Inkonsistent
++
+Das Aggregat wurde als beschädigt markiert; Sie sollten sich an den technischen Support wenden.
+
+** Eisen eingeschränkt
++
+Diagnosetools können nicht auf dem Aggregat ausgeführt werden.
+
+** Montage
++
+Das Aggregat wird derzeit eingehängt.
+
+** Teilweise
++
+Für das Aggregat wurde mindestens eine Festplatte gefunden, es fehlen jedoch zwei oder mehr Festplatten.
+
+** Anhalten
++
+Das Aggregat wird in den Ruhezustand versetzt.
+
+** Ruhend
++
+Das Aggregat ist angehalten.
+
+** Zurückgesetzt
++
+Die Rücksetzung eines Aggregats ist abgeschlossen.
+
+** Nicht eingehängt
++
+Das Aggregat ist offline.
+
+** Aushängen
++
+Das Aggregat wird offline genommen.
+
+** Unbekannt
++
+Das Aggregat wurde gefunden, die Aggregatinformationen wurden jedoch noch nicht vom Unified Manager Server abgerufen.
+
+
+
+* *Cluster*
++
+Zeigt den Namen des Clusters an, auf dem sich das Aggregat befindet.
+
+* *Knoten*
++
+Zeigt den Namen des Storage Controllers an, der das Aggregat enthält.
+
+* *Gesamtkapazität*
++
+Zeigt die Gesamtdatengröße des Aggregats (in MB, GB usw.) an. Diese Spalte ist standardmäßig ausgeblendet.
+
+* *Zugesicherte Kapazität*
++
+Zeigt den gesamten zugesicherten Speicherplatz (in MB, GB usw.) an, der für alle Volumes im Aggregat reserviert ist. Diese Spalte ist standardmäßig ausgeblendet.
+
+* *Genutzte Kapazität*
++
+Zeigt die im Aggregat belegte Speicherplatzmenge (in MB, GB usw.) an.
+
+* *Verfügbare Kapazität*
++
+Zeigt die Menge an Speicherplatz (in MB, GB usw.) an, die im Aggregat für Daten verfügbar ist. Diese Spalte ist standardmäßig ausgeblendet.
+
+* *Verfügbar %*
++
+Zeigt den prozentualen Speicherplatz an, der für Daten im Aggregat verfügbar ist. Standardmäßig ist diese Spalte ausgeblendet.
+
+* *Verwendet %*
++
+Zeigt den Prozentsatz des Speicherplatzes an, der von Daten im Aggregat verwendet wird.
+
+* *RAID-Typ*
++
+Zeigt den RAID-Typ des ausgewählten Volumes an. Der RAID-Typ kann RAID0, RAID4, RAID-DP, RAID-TEC oder Mixed RAID sein.
+
+

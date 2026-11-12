@@ -1,0 +1,37 @@
+---
+permalink: config/concept_maintenance_console_menu.html 
+sidebar: sidebar 
+keywords: maintenance, console, menus 
+summary: Die Managementplattform besteht aus verschiedenen Menüs, die die Wartung und Verwaltung spezieller Funktionen und Konfigurationseinstellungen des Unified Manager Servers ermöglichen. 
+---
+= Informationen zu den Wartungskonsolenmenüs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Managementplattform besteht aus verschiedenen Menüs, die die Wartung und Verwaltung spezieller Funktionen und Konfigurationseinstellungen des Unified Manager Servers ermöglichen.
+
+Je nach Betriebssystem, auf dem Sie Unified Manager installiert haben, besteht die Wartungs-Managementplattform aus den folgenden Menüs:
+
+* Upgrade von Unified Manager (nur VMware)
+* Netzwerkkonfiguration (nur VMware)
+* Systemkonfiguration (nur VMware)
++
+.. Support/Diagnostik
+.. Serverzertifikat zurücksetzen
+.. Client Zertifikat neu generieren
+.. Backup-Wiederherstellung
+.. Externer Datenanbieter
+.. Konfiguration des Abfrageintervalls für die Performance
+.. SAML-Authentifizierung deaktivieren
+.. Applikationsports anzeigen/ändern
+.. Konfiguration des Debug-Protokolls
+.. Zugriff auf MySQL Port 3306 steuern
+.. Beenden
+
+
+
+
+Sie wählen die Nummer aus der Liste aus, um auf die entsprechende Menüoption zuzugreifen. Beispielsweise wählen Sie für Backup und Wiederherstellung die Nummer 4.

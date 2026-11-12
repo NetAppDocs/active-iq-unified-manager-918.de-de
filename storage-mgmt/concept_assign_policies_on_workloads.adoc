@@ -1,0 +1,70 @@
+---
+permalink: storage-mgmt/concept_assign_policies_on_workloads.html 
+sidebar: sidebar 
+keywords: assign, policies, workloads, single, multiple, storage, system-recommended, psls 
+summary: 'Sie können Storage Efficiency Policies (SEPs) und Performance Service Levels (PSLs) Storage Workloads auf der Seite „All Workloads“ mithilfe der verschiedenen Navigationsoptionen zuweisen.' 
+---
+= Zuweisung von Richtlinien zu Workloads in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Storage Efficiency Policies (SEPs) und Performance Service Levels (PSLs) Storage Workloads auf der Seite „All Workloads“ mithilfe der verschiedenen Navigationsoptionen zuweisen.
+
+
+
+[[assign-policies-to-a-single-workload]]
+== Einer einzelnen Arbeitslast Richtlinien zuweisen
+
+Sie können einer einzelnen Arbeitslast entweder eine PSL oder eine SEP oder beides zuweisen. Dazu sind die folgenden Schritte erforderlich:
+
+. Auswahl der Arbeitslast.
+. Das Bearbeitungssymbol neben der Zeile und anschließend *Bearbeiten* auswählen.
++
+Die Felder *Zugewiesenes Performance Service Level* und *Speichereffizienzrichtlinie* sind aktiviert.
+
+. Es ist der gewünschte PSL oder SEP oder beides auszuwählen.
+. Mit dem Häkchensymbol lassen sich die Änderungen übernehmen.
+
+
+[NOTE]
+====
+Sie können auch eine Workload auswählen und auf *Weitere Aktionen* klicken, um die Richtlinien zuzuweisen.
+
+====
+
+
+[[assign-policies-to-multiple-storage-workloads]]
+== Zuweisen von Richtlinien zu mehreren Storage Workloads
+
+Sie können eine PSL oder eine SEP mehreren Storage Workloads gleichzeitig zuweisen. Dafür sind folgende Schritte erforderlich:
+
+. Die Kontrollkästchen für die Workloads, denen die Richtlinie zugewiesen werden soll, oder alle Workloads im Datacenter können ausgewählt werden.
+. *Weitere Aktionen* auswählen.
+. Zum Zuweisen einer PSL ist *Leistungs-Servicelevel zuweisen* auszuwählen. Zum Zuweisen einer SEP ist *Speichereffizienzrichtlinie zuweisen* auszuwählen. Ein Pop-up-Fenster wird angezeigt, in dem die Richtlinie ausgewählt werden kann.
+. Die passende Richtlinie auswählen und auf *Apply* klicken. Die Anzahl der Workloads, denen die Richtlinien zugewiesen sind, wird angezeigt. Die Workloads, denen die Richtlinien nicht zugewiesen sind, werden ebenfalls mit Angabe der Ursache aufgelistet.
++
+[NOTE]
+====
+Das Anwenden von Richtlinien auf Workloads in großen Mengen kann je nach Anzahl der ausgewählten Workloads einige Zeit in Anspruch nehmen. Sie können auf die Schaltfläche *Run in background* klicken und mit anderen Aufgaben fortfahren, während der Vorgang im Hintergrund ausgeführt wird. Nach Abschluss der Massenzuweisung können Sie den Abschlussstatus anzeigen. Wenn Sie eine PSL auf mehrere Workloads anwenden, können Sie keine weitere Anfrage auslösen, solange der vorherige Auftrag der Massenzuweisung ausgeführt wird.
+
+====
+
+
+
+
+[[assign-system-recommended-psls-to-workloads]]
+== Zuweisung der vom System empfohlenen PSLs zu Workloads
+
+Sie können diesen Storage Workloads in einem Datacenter, denen keine PSLs zugewiesen sind oder deren zugewiesene PSLs nicht der Systemempfehlung entsprechen, systemseitig empfohlene PSLs zuweisen. Zum Verwenden dieser Funktion steht die Schaltfläche *Assign System Recommended PSLs* zur Verfügung. Sie müssen keine spezifischen Workloads auswählen.
+
+Die Empfehlung wird intern durch Systemanalysen ermittelt und für Workloads übersprungen, deren IOPS und andere Parameter nicht mit den Definitionen der verfügbaren PSLs übereinstimmen. Speicherworkloads mit  `Waiting for I/O` und Lernstatus sind ebenfalls ausgeschlossen.
+
+[NOTE]
+====
+Es gibt spezielle Schlüsselwörter, nach denen Unified Manager im Workload-Namen sucht, um die Systemanalysen zu überschreiben und eine andere PSL für den Workload zu empfehlen. Wenn der Workload die Buchstaben "`ora`" im Namen enthält, wird die **Extreme Performance**PSL empfohlen. Und wenn der Workload die Buchstaben "`vm`" im Namen enthält, wird die **Performance**PSL empfohlen.
+
+====
+Weitere Informationen enthält der Artikel in der Wissensdatenbank (KB) https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/Performance_Service_Level'_is_not_adaptive_to_a_highly_variable_workload["„Assign System Recommended Performance Service Level“ in ActiveIQ Unified Manager ist nicht an eine stark schwankende Workload anpassbar."]

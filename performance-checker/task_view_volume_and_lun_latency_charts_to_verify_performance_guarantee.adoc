@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_view_volume_and_lun_latency_charts_to_verify_performance_guarantee.html 
+sidebar: sidebar 
+keywords: view, volume, lun, latency, charts, verify, performance, guarantee 
+summary: Sie können die Volumes und LUNs anzeigen, die Sie für das „Performance Guarantee“-Programm abonniert haben, um zu überprüfen, ob die Latenz den Ihnen garantierten Level nicht überschritten hat. 
+---
+= Anzeigen von Latenzdiagrammen für Volumes und LUNs zur Überprüfung der Leistungsgarantie in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Volumes und LUNs anzeigen, die Sie für das Programm "`Performance Guarantee`" abonniert haben, um zu überprüfen, ob die Latenz den Ihnen garantierten Level nicht überschritten hat.
+
+Die Performance-Garantie für die Latenz ist ein Wert in Millisekunden pro Operation, der nicht überschritten werden sollte. Sie basiert auf einem stündlichen Durchschnitt, nicht auf dem standardmäßigen fünfminütigen Zeitraum der Performance-Erfassung.
+
+.Schritte
+. In der Ansicht *Performance: Alle Volumes* oder *Performance: Alle LUNs* kann das Volume oder die LUN ausgewählt werden, das bzw. die von Interesse ist.
+. Für das ausgewählte Volume oder die ausgewählte LUN erfolgt die Auswahl *Stündlicher Durchschnitt* auf der Seite *Performance Explorer* im Auswahlfeld *Statistiken anzeigen in*.
++
+Die horizontale Linie im Latenzdiagramm zeigt einen gleichmäßigeren Verlauf, wenn die Fünf-Minuten-Erfassungen durch den stündlichen Durchschnitt ersetzt werden.
+
+. Wenn Sie weitere Volumes auf demselben Aggregat haben, die unter die Performance-Garantie fallen, können Sie diese Volumes hinzufügen, um ihren Latenzwert im selben Diagramm anzuzeigen.
+

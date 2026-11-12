@@ -1,0 +1,47 @@
+---
+permalink: config/task_create_database_user.html 
+sidebar: sidebar 
+keywords: create, database, user 
+summary: Um eine Verbindung zwischen Workflow Automation und Unified Manager zu unterstützen oder auf Datenbankansichten zuzugreifen, müssen Sie zunächst in der Unified Manager web UI einen Datenbankbenutzer mit der Rolle Integration Schema oder Report Schema erstellen. 
+---
+= Erstellen eines Datenbankbenutzers in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um eine Verbindung zwischen Workflow Automation und Unified Manager zu unterstützen oder auf Datenbankansichten zuzugreifen, müssen Sie zunächst in der Unified Manager web UI einen Datenbankbenutzer mit der Rolle Integration Schema oder Report Schema erstellen.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Datenbankbenutzer ermöglichen die Integration mit Workflow Automation und den Zugriff auf berichtsspezifische Datenbankansichten. Datenbankbenutzer haben keinen Zugriff auf die Web-UI von Unified Manager oder die Wartungs-Managementplattform und können keine API-Aufrufe ausführen.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Allgemein* > *Benutzer*.
+. Auf der Seite „Benutzer“ wählen Sie *Hinzufügen* aus.
+. Im Dialogfeld „Benutzer hinzufügen“ ist in der Dropdown-Liste „Typ“ die Option „Datenbankbenutzer“ auszuwählen.
+. Für den Datenbankbenutzer werden ein Name und ein Passwort eingegeben.
+. In der Dropdown-Liste *Rolle* wird die passende Rolle gewählt.
++
+[cols="2*"]
+|===
+| Wenn Sie... | Diese Rolle auswählen 
+
+
+ a| 
+Verbinden von Unified Manager mit Workflow Automation
+ a| 
+Integrationsschema
+
+
+
+ a| 
+Zugriff auf Berichte und andere Datenbankansichten
+ a| 
+Berichtsschema
+
+|===
+. Klicken Sie auf *Add*.
+

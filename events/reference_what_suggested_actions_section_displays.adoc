@@ -1,0 +1,26 @@
+---
+permalink: events/reference_what_suggested_actions_section_displays.html 
+sidebar: sidebar 
+keywords: suggest, actions, section, displays 
+summary: Der Abschnitt „Empfohlene Maßnahmen“ auf der Seite mit den Ereignisdetails bietet mögliche Gründe für das Ereignis und schlägt einige Maßnahmen vor, damit das Ereignis selbst behoben werden kann. Die empfohlenen Maßnahmen sind auf die Art des Ereignisses oder auf die Art des Schwellenwerts zugeschnitten, der überschritten wurde. 
+---
+= Informationen zu empfohlenen Aktionen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Abschnitt „Empfohlene Maßnahmen“ auf der Seite mit den Ereignisdetails bietet mögliche Gründe für das Ereignis und schlägt einige Maßnahmen vor, damit das Ereignis selbst behoben werden kann. Die empfohlenen Maßnahmen sind auf die Art des Ereignisses oder auf die Art des Schwellenwerts zugeschnitten, der überschritten wurde.
+
+Dieser Bereich wird nur für bestimmte Ereignistypen angezeigt.
+
+In einigen Fällen enthält die Seite *Hilfe*-Links mit weiterführenden Informationen zu vielen vorgeschlagenen Aktionen, einschließlich Anleitungen zur Durchführung bestimmter Aktionen. Einige dieser Aktionen können die Verwendung von Unified Manager, ONTAP System Manager, OnCommand Workflow Automation, ONTAP CLI-Befehlen oder einer Kombination dieser Tools erfordern.
+
+Die hier vorgeschlagenen Maßnahmen sollten nur als Orientierungshilfe bei der Behebung dieses Ereignisses betrachtet werden. Die Maßnahmen, die Sie zur Behebung dieses Ereignisses ergreifen, sollten sich nach den Gegebenheiten Ihrer Umgebung richten.
+
+Für eine detailliertere Analyse von Objekt und Ereignis steht die Schaltfläche *Analyze Workload* zur Verfügung, über die die Seite Workload Analysis angezeigt wird.
+
+Bestimmte Ereignisse kann Unified Manager umfassend diagnostizieren und eine einzelne Lösung bereitstellen. Sofern verfügbar, werden diese Lösungen mit einer Schaltfläche *Fix It* angezeigt. Mit dieser Schaltfläche behebt Unified Manager das Problem, das das Ereignis verursacht.
+
+Bei Active IQ Plattformereignissen kann dieser Abschnitt, sofern verfügbar, einen Link zu einem NetApp Knowledgebase-Artikel enthalten, der das Problem und mögliche Lösungen beschreibt. An Standorten ohne externen Netzwerkzugriff wird lokal ein PDF des Knowledgebase-Artikels geöffnet; das PDF ist Teil der Regeldatei, die Sie manuell auf die Unified Manager Instanz herunterladen.

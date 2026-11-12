@@ -1,0 +1,53 @@
+---
+permalink: performance-checker/concept_performance_capacity_used_threshold_conditions.html 
+sidebar: sidebar 
+keywords: performance, capacity, threshold, conditions 
+summary: Sie können benutzerdefinierte Performance-Schwellenwertrichtlinien erstellen, sodass Ereignisse ausgelöst werden, wenn der Wert für die genutzte Performance-Kapazität für einen Knoten oder ein Aggregat den definierten Schwellenwert für die genutzte Performance-Kapazität überschreitet. 
+---
+= Die Schwellenwerte für die genutzte Leistungskapazität in Active IQ Unified Manager konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können benutzerdefinierte Performance-Schwellenwertrichtlinien erstellen, sodass Ereignisse ausgelöst werden, wenn der Wert für die genutzte Performance-Kapazität für einen Knoten oder ein Aggregat den definierten Schwellenwert für die genutzte Performance-Kapazität überschreitet.
+
+Zusätzlich können Knoten mit einer Schwellenwertrichtlinie für „`Performance capacity used takeover`“ konfiguriert werden. Diese Schwellenwertrichtlinie summiert die Statistiken zur genutzten Performance Kapazität für beide Knoten in einem HA-Paar, um festzustellen, ob einem der Knoten bei Ausfall des anderen Knotens ausreichende Kapazität fehlen würde. Da die Workload während eines Failover die kombinierte Workload beider Partnerknoten ist, kann dieselbe Richtlinie für „`Performance capacity used takeover`“ auf beide Knoten angewendet werden.
+
+[NOTE]
+====
+Diese Gleichwertigkeit der genutzten Performance Kapazität gilt im Allgemeinen zwischen den Knoten. Wenn jedoch deutlich mehr knotenübergreifender Datenverkehr über den Failover-Partner zu einem der Knoten geleitet wird, kann die insgesamt genutzte Performance Kapazität bei der Ausführung aller Workloads auf dem einen Partnerknoten im Vergleich zum anderen Partnerknoten je nachdem, welcher Knoten ausgefallen ist, geringfügig abweichen.
+
+====
+Die Bedingungen für die verwendete Performance Kapazität können auch als sekundäre Einstellungen für Performance Schwellenwerte verwendet werden, um beim Definieren von Schwellenwerten für LUNs und Volumes eine kombinierte Schwellenwertrichtlinie zu erstellen. Die Bedingung für die verwendete Performance Kapazität wird auf das Aggregat oder den Knoten angewendet, auf dem sich das Volume oder die LUN befindet. Beispielsweise kann anhand der folgenden Kriterien eine kombinierte Schwellenwertrichtlinie erstellt werden:
+
+|===
+| Speicherobjekt | Performance-Zähler | Warnschwelle | Kritischer Schwellenwert | Dauer 
+
+
+ a| 
+Volumen
+ a| 
+Latenz
+ a| 
+15 ms/op
+ a| 
+25 ms/op
+ a| 
+20 Minuten
+
+
+
+ a| 
+Aggregat
+ a| 
+Genutzte Performance-Kapazität
+ a| 
+80%
+ a| 
+95%
+ a| 
+
+|===
+Kombinationsschwellenwertrichtlinien bewirken, dass ein Ereignis nur dann ausgelöst wird, wenn beide Bedingungen über die gesamte Dauer hinweg verletzt werden.

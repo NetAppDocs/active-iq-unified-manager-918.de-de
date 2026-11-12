@@ -1,0 +1,244 @@
+---
+permalink: performance-checker/reference_what_performance_metrics_can_be_monitored_using_thresholds.html 
+sidebar: sidebar 
+keywords: performance, counters, tracked, thresholds 
+summary: Einige gängige Performance-Zähler, wie IOPS und MB/s, können Schwellenwerte für alle Storage-Objekte festlegen. Es gibt andere Zähler, für die sich Schwellenwerte nur für bestimmte Storage-Objekte festlegen lassen. 
+---
+= Leistungsindikatoren verstehen, die mithilfe von Schwellenwerten in Active IQ Unified Manager verfolgt werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Einige gängige Performance-Zähler, wie IOPS und MB/s, können Schwellenwerte für alle Storage-Objekte festlegen. Es gibt andere Zähler, für die sich Schwellenwerte nur für bestimmte Storage-Objekte festlegen lassen.
+
+
+
+[[available-performance-counters]]
+== Verfügbare Performance-Zähler
+
+|===
+| Speicherobjekt | Performance-Zähler | Beschreibung 
+
+
+ a| 
+Cluster
+ a| 
+IOPS
+ a| 
+Durchschnittliche Anzahl der Eingabe-/Ausgabeoperationen, die der Cluster pro Sekunde verarbeitet.
+
+
+
+ a| 
+MB/s
+ a| 
+Durchschnittliche Anzahl der Megabyte an Daten, die pro Sekunde zu und von diesem Cluster übertragen werden.
+
+
+
+ a| 
+Node
+ a| 
+IOPS
+ a| 
+Durchschnittliche Anzahl der Eingabe-/Ausgabeoperationen, die der Knoten pro Sekunde verarbeitet.
+
+
+
+ a| 
+MB/s
+ a| 
+Durchschnittliche Anzahl von Megabyte an Daten, die pro Sekunde zu und von diesem Knoten übertragen werden.
+
+
+
+ a| 
+Latenz
+ a| 
+Durchschnittliche Anzahl der Millisekunden, die der Knoten benötigt, um auf Applikationsanforderungen zu reagieren.
+
+
+
+ a| 
+Verwendung
+ a| 
+Durchschnittlicher Prozentsatz der CPU- und RAM-Auslastung des Knotens.
+
+
+
+ a| 
+Verwendete Performance-Kapazität
+ a| 
+Durchschnittlicher Prozentsatz der Performance-Kapazität, die vom Knoten verbraucht wird.
+
+
+
+ a| 
+Genutzte Performance-Kapazität - Takeover
+ a| 
+Durchschnittlicher Prozentsatz der Performancekapazität, der vom Knoten verbraucht wird, zuzüglich der Performancekapazität seines Partnerknotens.
+
+
+
+ a| 
+Aggregat
+ a| 
+IOPS
+ a| 
+Durchschnittliche Anzahl der Eingabe-/Ausgabeoperationen, die das Aggregat pro Sekunde verarbeitet.
+
+
+
+ a| 
+MB/s
+ a| 
+Durchschnittliche Anzahl der Megabyte an Daten, die pro Sekunde zu und von diesem Aggregat übertragen werden.
+
+
+
+ a| 
+Latenz
+ a| 
+Durchschnittliche Anzahl der Millisekunden, die das Aggregat benötigt, um auf Anfragen der Applikation zu antworten.
+
+
+
+ a| 
+Verwendung
+ a| 
+Durchschnittlicher Prozentsatz der im Aggregat verwendeten Festplatten.
+
+
+
+ a| 
+Verwendete Performance-Kapazität
+ a| 
+Durchschnittlicher Prozentsatz der Performancekapazität, der vom Aggregat verbraucht wird.
+
+
+
+ a| 
+Speicher-VM
+ a| 
+IOPS
+ a| 
+Durchschnittliche Anzahl der Eingabe-/Ausgabeoperationen, die die SVM pro Sekunde verarbeitet.
+
+
+
+ a| 
+MB/s
+ a| 
+Durchschnittliche Anzahl der Megabyte an Daten, die pro Sekunde zu und von dieser SVM übertragen werden.
+
+
+
+ a| 
+Latenz
+ a| 
+Durchschnittliche Anzahl von Millisekunden, die die SVM benötigt, um auf Applikationsanforderungen zu reagieren.
+
+
+
+ a| 
+Volumen
+ a| 
+IOPS
+ a| 
+Durchschnittliche Anzahl der Eingabe-/Ausgabeoperationen, die das Volume pro Sekunde verarbeitet.
+
+
+
+ a| 
+MB/s
+ a| 
+Durchschnittliche Anzahl an Megabyte Daten, die pro Sekunde zu und von diesem Volume übertragen werden.
+
+
+
+ a| 
+Latenz
+ a| 
+Durchschnittliche Anzahl der Millisekunden, die das Volume für die Beantwortung von Anforderungen der Applikation benötigt.
+
+
+
+ a| 
+Cache-Miss-Verhältnis
+ a| 
+Durchschnittlicher Prozentsatz der Leseanfragen von Client-Applikationen, die vom Volume statt aus dem Cache zurückgegeben werden.
+
+
+
+ a| 
+LUN
+ a| 
+IOPS
+ a| 
+Durchschnittliche Anzahl der Eingabe-/Ausgabeoperationen, die die LUN pro Sekunde verarbeitet.
+
+
+
+ a| 
+MB/s
+ a| 
+Durchschnittliche Anzahl der Megabyte an Daten, die pro Sekunde zu und von dieser LUN übertragen werden.
+
+
+
+ a| 
+Latenz
+ a| 
+Durchschnittliche Anzahl an Millisekunden, die die LUN benötigt, um auf Anfragen der Applikation zu reagieren.
+
+
+
+ a| 
+Namensraum
+ a| 
+IOPS
+ a| 
+Durchschnittliche Anzahl von Eingabe-/Ausgabeoperationen, die der Namespace pro Sekunde verarbeitet.
+
+
+
+ a| 
+MB/s
+ a| 
+Durchschnittliche Anzahl an Megabyte an Daten, die pro Sekunde zu diesem Namespace und von diesem Namespace übertragen werden.
+
+
+
+ a| 
+Latenz
+ a| 
+Durchschnittliche Anzahl der Millisekunden, die der Namespace benötigt, um auf Applikationsanforderungen zu reagieren.
+
+
+
+ a| 
+Port
+ a| 
+Bandbreitenauslastung
+ a| 
+Durchschnittlicher Prozentsatz der verfügbaren Bandbreite des Ports, der genutzt wird.
+
+
+
+ a| 
+MB/s
+ a| 
+Durchschnittliche Anzahl der Megabyte an Daten, die pro Sekunde zu und von diesem Port übertragen werden.
+
+
+
+ a| 
+Netzwerkschnittstelle (LIF)
+ a| 
+MB/s
+ a| 
+Durchschnittliche Anzahl der Megabyte an Daten, die pro Sekunde zu und von diesem LIF übertragen werden.
+
+|===

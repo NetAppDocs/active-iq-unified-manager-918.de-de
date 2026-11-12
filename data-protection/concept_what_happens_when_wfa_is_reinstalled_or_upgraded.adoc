@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_what_happens_when_wfa_is_reinstalled_or_upgraded.html 
+sidebar: sidebar 
+keywords: what happens, oncommand, workflow automation, reinstalled, upgraded 
+summary: Vor der Neuinstallation oder dem Upgrade von OnCommand Workflow Automation müssen Sie zunächst die Verbindung zwischen OnCommand Workflow Automation und Unified Manager entfernen und sicherstellen, dass alle derzeit ausgeführten oder geplanten Aufträge von OnCommand Workflow Automation gestoppt sind. 
+---
+= Wie sich die Neuinstallation oder das Upgrade von OnCommand Workflow Automation auf Active IQ Unified Manager auswirken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vor der Neuinstallation oder dem Upgrade von OnCommand Workflow Automation müssen Sie zunächst die Verbindung zwischen OnCommand Workflow Automation und Unified Manager entfernen und sicherstellen, dass alle derzeit ausgeführten oder geplanten Aufträge von OnCommand Workflow Automation gestoppt sind.
+
+Sie müssen Unified Manager außerdem manuell aus OnCommand Workflow Automation löschen.
+
+Nach der Neuinstallation oder dem Upgrade von OnCommand Workflow Automation müssen Sie die Verbindung mit Unified Manager erneut einrichten.

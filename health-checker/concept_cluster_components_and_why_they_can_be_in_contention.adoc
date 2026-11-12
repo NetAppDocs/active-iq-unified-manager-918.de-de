@@ -1,0 +1,69 @@
+---
+permalink: health-checker/concept_cluster_components_and_why_they_can_be_in_contention.html 
+sidebar: sidebar 
+keywords: cluster, components, contention 
+summary: 'Cluster-Performance-Probleme lassen sich erkennen, wenn eine Clusterkomponente in einen Ressourcenkonflikt gerät. Die Performance der Workloads, die die Komponente nutzen, nimmt ab, und ihre Antwortzeit (Latenz) für Clientanfragen steigt, was ein Ereignis in Unified Manager auslöst.' 
+---
+= Informationen zu Konflikten zwischen Clusterkomponenten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cluster-Performance-Probleme lassen sich erkennen, wenn eine Clusterkomponente in einen Ressourcenkonflikt gerät. Die Performance der Workloads, die die Komponente nutzen, nimmt ab, und ihre Antwortzeit (Latenz) für Clientanfragen steigt, was ein Ereignis in Unified Manager auslöst.
+
+Eine Komponente, die um Ressourcen konkurriert, kann nicht auf einem optimalen Level arbeiten. Ihre Performance hat abgenommen, und die Performance anderer Clusterkomponenten und Workloads, die als _victims_ bezeichnet werden, kann eine erhöhte Latenz aufweisen. Eine Komponente lässt sich aus der Ressourcenkonkurrenz herausbringen, indem ihre Workload reduziert oder ihre Fähigkeit erhöht wird, mehr Arbeit zu bewältigen, sodass die Performance wieder normale Werte erreicht. Da Unified Manager die Workload-Performance in Fünf-Minuten-Intervallen erfasst und analysiert, erkennt Unified Manager nur, wenn eine Clusterkomponente dauerhaft überbeansprucht wird. Vorübergehende Spitzen der Überbeanspruchung, die innerhalb des Fünf-Minuten-Intervalls nur kurz andauern, werden nicht erkannt.
+
+Ein Storage-Aggregat kann beispielsweise überlastet sein, weil ein oder mehrere Workloads darauf um die Erfüllung ihrer E/A-Anforderungen konkurrieren. Andere Workloads auf dem Aggregat können dadurch beeinträchtigt werden, was zu einer geringeren Performance führt. Um den Aktivitätsgrad auf dem Aggregat zu verringern, stehen verschiedene Maßnahmen zur Verfügung, z. B. das Verschieben eines oder mehrerer Workloads auf ein weniger stark ausgelastetes Aggregat oder einen weniger stark ausgelasteten Knoten, um die Gesamtlast auf dem aktuellen Aggregat zu senken. Bei einer QoS-Richtliniengruppe kann die Durchsatzbegrenzung angepasst werden, oder Workloads können in eine andere Richtliniengruppe verschoben werden, sodass die Workloads nicht mehr gedrosselt werden.
+
+Unified Manager überwacht die folgenden Clusterkomponenten und benachrichtigt Sie, wenn diese in Konflikt geraten:
+
+* *Netzwerk*
++
+Stellt die Wartezeit von E/A-Anfragen durch die externen Netzwerkprotokolle im Cluster dar. Die Wartezeit entspricht der Zeit, die vergeht, bis „`transfer ready`“-Transaktionen abgeschlossen sind, bevor der Cluster auf eine E/A-Anfrage reagieren kann. Bei einer Überlastung der Netzwerkkomponente bedeutet dies, dass eine hohe Wartezeit auf der Protokollschicht die Latenz eines oder mehrerer Workloads beeinträchtigt.
+
+* *Netzwerkverarbeitung*
++
+Stellt die Softwarekomponente im Cluster dar, die an der E/A-Verarbeitung zwischen der Protokollschicht und dem Cluster beteiligt ist. Der Knoten, der die Netzwerkverarbeitung übernimmt, kann sich seit der Erkennung des Ereignisses geändert haben. Wenn die Netzwerkverarbeitungskomponente um Ressourcen konkurriert, bedeutet dies, dass eine hohe Auslastung des Netzwerkverarbeitungsknotens die Latenz eines oder mehrerer Workloads beeinträchtigt.
+
++
+Bei Verwendung eines All SAN Array Cluster in einer Aktiv/Aktiv-Konfiguration wird der Wert der Netzwerkverarbeitungslatenz für beide Knoten angezeigt, sodass Sie überprüfen können, ob die Knoten die Last gleichmäßig teilen.
+
+* *Maximaler QoS-Grenzwert*
++
+Stellt die maximale Durchsatzeinstellung (Spitzenwert) der dem Storage Workload zugewiesenen QoS-Richtliniengruppe (Quality of Service) dar. Wenn die Richtliniengruppenkomponente um Ressourcen konkurriert, bedeutet dies, dass alle Workloads in der Richtliniengruppe durch die festgelegte Durchsatzbegrenzung gedrosselt werden, was sich auf die Latenz eines oder mehrerer dieser Workloads auswirkt.
+
+* *Mindest-QoS-Grenzwert*
++
+Stellt die Latenz einer Arbeitslast dar, die durch die für andere Arbeitslasten zugewiesene minimale QoS-Durchsatzeinstellung (erwartet) verursacht wird. Wenn die für bestimmte Arbeitslasten festgelegte minimale QoS-Vorgabe den Großteil der Bandbreite nutzt, um den zugesicherten Durchsatz zu gewährleisten, werden andere Arbeitslasten gedrosselt und weisen eine höhere Latenz auf.
+
+* *Cluster-Verbindung*
++
+Stellt die Kabel und Adapter dar, mit denen Cluster-Knoten physisch verbunden sind. Wenn die Cluster-Interconnect-Komponente ausgelastet ist, bedeutet dies, dass hohe Wartezeiten für E/A-Anforderungen am Cluster-Interconnect die Latenz eines oder mehrerer Workloads beeinträchtigen.
+
+* *Data Processing*
++
+Stellt die Softwarekomponente im Cluster dar, die an der E/A-Verarbeitung zwischen dem Cluster und dem Storage-Aggregat beteiligt ist, das die Workload enthält. Der Knoten, der die Data Processing verarbeitet, hat sich seit der Erkennung des Ereignisses möglicherweise geändert. Wenn die Data Processing Komponente einen Ressourcenkonflikt aufweist, bedeutet dies, dass eine hohe Auslastung des Data Processing Knotens die Latenz einer oder mehrerer Workloads beeinträchtigt.
+
+* *Volume Aktivierung*
++
+Stellt den Prozess dar, der die Nutzung aller aktiven Volumes verfolgt. In großen Umgebungen, in denen mehr als 1000 Volumes aktiv sind, verfolgt dieser Prozess, wie viele kritische Volumes gleichzeitig über den Knoten auf Ressourcen zugreifen müssen. Wenn die Anzahl gleichzeitig aktiver Volumes den empfohlenen maximalen Schwellenwert überschreitet, tritt bei einigen der nicht kritischen Volumes die hier angegebene Latenz auf.
+
+* *MetroCluster Ressourcen*
++
+Stellt die MetroCluster Ressourcen dar, einschließlich NVRAM und Interswitch Links (ISLs), die zum Spiegeln von Daten zwischen Clustern in einer MetroCluster Konfiguration verwendet werden. Wenn bei der MetroCluster Komponente eine Ressourcenkonkurrenz besteht, bedeutet dies, dass ein hoher Schreibdurchsatz von Workloads im lokalen Cluster oder ein Problem mit dem Zustand einer Verbindung die Latenz eines oder mehrerer Workloads im lokalen Cluster beeinträchtigt. Wenn sich der Cluster nicht in einer MetroCluster Konfiguration befindet, erscheint dieses Symbol nicht.
+
+* *Aggregat- oder SSD-Aggregat-Operationen*
++
+Stellt das Storage-Aggregat dar, auf dem die Workloads ausgeführt werden. Wenn die Aggregatkomponente in Konkurrenz steht, bedeutet dies, dass eine hohe Auslastung des Aggregats die Latenz eines oder mehrerer Workloads beeinträchtigt. Ein Aggregat besteht entweder ausschließlich aus HDDs, aus einer Mischung aus HDDs und SSDs (ein Flash Pool Aggregat) oder aus einer Mischung aus HDDs und einer Cloud-Tier-Ebene (ein FabricPool Aggregat). Ein „SSD Aggregate“ besteht ausschließlich aus SSDs (ein All-Flash-Aggregat) oder aus einer Mischung aus SSDs und einer Cloud-Tier-Ebene (ein FabricPool Aggregat).
+
+* *Cloud-Latenz*
++
+Stellt die Softwarekomponente im Cluster dar, die für die E/A-Verarbeitung zwischen dem Cluster und dem Cloud-Tier zuständig ist, auf dem Benutzerdaten gespeichert werden. Wenn die Cloud-Latenzkomponente ausgelastet ist, bedeutet dies, dass eine große Anzahl von Lesezugriffen auf Volumes, die auf dem Cloud-Tier gehostet werden, die Latenz eines oder mehrerer Workloads beeinträchtigt.
+
+* *Synchrones SnapMirror*
++
+Stellt die Softwarekomponente im Cluster dar, die an der Replikation von Benutzerdaten vom primären Volume zum sekundären Volume in einer synchronen SnapMirror Beziehung beteiligt ist. Wenn die synchrone SnapMirror Komponente um Ressourcen konkurriert, bedeutet dies, dass die Aktivität synchroner SnapMirror Operationen die Latenz eines oder mehrerer Workloads beeinträchtigt.
+
+

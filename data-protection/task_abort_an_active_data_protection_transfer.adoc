@@ -1,0 +1,43 @@
+---
+permalink: data-protection/task_abort_an_active_data_protection_transfer.html 
+sidebar: sidebar 
+keywords: abort, active data protection, transfer, volume relationships page, SnapMirror active sync 
+summary: Sie können einen aktiven Datenschutztransfer abbrechen, wenn Sie eine laufende SnapMirror Replikation stoppen möchten. Sie können auch den Neustart-Checkpoint für Übertragungen nach dem Basistransfer löschen. Ein Transfer kann beispielsweise abgebrochen werden, wenn er mit einem anderen Vorgang, wie etwa dem Verschieben eines Volume, in Konflikt steht. 
+---
+= Abbrechen einer Übertragung auf der Seite „Volume Beziehungen“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen aktiven Datenschutztransfer abbrechen, wenn Sie eine laufende SnapMirror Replikation stoppen möchten. Sie können auch den Neustart-Checkpoint für Übertragungen nach dem Basistransfer löschen. Ein Transfer kann beispielsweise abgebrochen werden, wenn er mit einem anderen Vorgang, wie etwa dem Verschieben eines Volume, in Konflikt steht.
+
+
+NOTE: Sie können keine Volume-Beziehungen abbrechen, die durch die Consistency Group geschützt sind.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+Die Abbruchoption ist in den folgenden Fällen nicht verfügbar:
+
+* Wenn die RBAC-Einstellungen diese Aktion nicht zulassen: beispielsweise wenn Sie nur über Operator-Berechtigungen verfügen
+* Wenn die Volume-ID unbekannt ist: beispielsweise, wenn eine clusterübergreifende Beziehung besteht und der Ziel-Cluster noch nicht erkannt wurde
+
+
+Der Neustart-Checkpoint für einen Basistransfer kann nicht gelöscht werden.
+
+.Schritte
+. Zum Abbrechen von Übertragungen für eine oder mehrere Schutzbeziehungen können auf der Seite *Volume Relationships* ein oder mehrere Volumes ausgewählt und anschließend in der Symbolleiste *Abort* angeklickt werden.
++
+Das Dialogfeld „Übertragung abbrechen“ wird angezeigt.
+
+. Wenn der Neustart-Checkpoint für einen Transfer gelöscht werden soll, der kein Basistransfer ist, steht *Checkpoints löschen* zur Verfügung.
+. Klicken Sie auf *Weiter*.
++
+Das Dialogfeld „Abort Transfer“ wird geschlossen, und der Status des Abbruchjobs wird oben auf der Seite „Volume Relationships“ zusammen mit einem Link zu den Jobdetails angezeigt.
+
+. *Optional:* Über den Link *View details* gelangen Sie zur Detailseite *Job*, auf der zusätzliche Details und der Auftragsfortschritt angezeigt werden.
+

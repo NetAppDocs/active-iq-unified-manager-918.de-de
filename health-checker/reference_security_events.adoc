@@ -1,0 +1,16 @@
+---
+permalink: health-checker/reference_security_events.html 
+sidebar: sidebar 
+keywords: security events 
+summary: 'Sicherheitsereignisse liefern Ihnen Informationen über den Sicherheitsstatus von ONTAP Clustern, Storage Virtual Machines (SVMs) und Volumes basierend auf Parametern, die im NetApp Security Hardening Guide für ONTAP 9 definiert sind. Diese Ereignisse benachrichtigen Sie über potenzielle Probleme, sodass Sie deren Schweregrad bewerten und das Problem gegebenenfalls beheben können.' 
+---
+= Sicherheitsereignisse in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sicherheitsereignisse liefern Ihnen Informationen zum Sicherheitsstatus von ONTAP Clustern, Storage Virtual Machines (SVMs) und Volumes basierend auf den im _NetApp Security Hardening Guide for ONTAP 9_ definierten Parametern. Diese Ereignisse benachrichtigen Sie über potenzielle Probleme, sodass Sie deren Schweregrad bewerten und das Problem gegebenenfalls beheben können.
+
+Sicherheitsereignisse sind nach Quelltyp gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungslevel und den Schweregrad. Diese Ereignisse werden in den Ereigniskategorien für Cluster und Storage VM angezeigt.

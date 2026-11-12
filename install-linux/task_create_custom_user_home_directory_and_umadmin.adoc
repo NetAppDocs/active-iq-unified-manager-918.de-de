@@ -1,0 +1,60 @@
+---
+permalink: install-linux/task_create_custom_user_home_directory_and_umadmin.html 
+sidebar: sidebar 
+keywords: create, custom, user, home, directory, umadmin, password, prior, installation 
+summary: Vor der Installation von Unified Manager kann ein benutzerdefiniertes Home-Verzeichnis erstellt und ein eigenes Benutzerpasswort für umadmin definiert werden. Diese Aufgabe ist optional, aber an manchen Standorten ist möglicherweise die Flexibilität erforderlich, die Standardinstallationseinstellungen von Unified Manager zu überschreiben. 
+---
+= Erstellen Sie vor der Installation von Active IQ Unified Manager ein benutzerdefiniertes Home-Verzeichnis für den Benutzer und ein umadmin Passwort
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vor der Installation von Unified Manager kann ein benutzerdefiniertes Home-Verzeichnis erstellt und ein eigenes Benutzerpasswort für umadmin definiert werden. Diese Aufgabe ist optional, aber an manchen Standorten ist möglicherweise die Flexibilität erforderlich, die Standardinstallationseinstellungen von Unified Manager zu überschreiben.
+
+.Bevor Sie beginnen
+* Das System muss die in link:concept_virtual_infrastructure_or_hardware_system_requirements.html["Hardwaresystemanforderungen"] beschriebenen Anforderungen erfüllen.
+* Sie müssen sich als Root-Benutzer beim Red Hat Enterprise Linux System anmelden können.
+
+
+Die Standardinstallation des Unified Manager führt folgende Aufgaben aus:
+
+* Erstellt den Benutzer umadmin mit `/home/umadmin`als Home-Verzeichnis.
+* Weist dem Benutzer umadmin das Standardpasswort "`admin`" zu.
+
+
+Da manche Installationsumgebungen den Zugriff auf `/home` das Home-Verzeichnis einschränken, schlägt die Installation fehl. Das Home-Verzeichnis ist an einem anderen Ort zu erstellen. Darüber hinaus gelten an manchen Standorten möglicherweise Regeln zur Passwortkomplexität, oder es wird verlangt, dass Passwörter von lokalen Administratoren statt vom Installationsprogramm festgelegt werden.
+
+Wenn Ihre Installationsumgebung das Überschreiben dieser Standardinstallationseinstellungen erfordert, dienen die folgenden Schritte zum Erstellen eines benutzerdefinierten Home-Verzeichnisses und zum Festlegen des Passworts des Benutzers umadmin.
+
+Wenn diese Informationen vor der Installation definiert werden, erkennt das Installationsskript diese Einstellungen und verwendet die definierten Werte anstelle der Standardeinstellungen der Installation.
+
+Zusätzlich enthält die Standardinstallation von Unified Manager den Benutzer umadmin in den sudoers-Dateien (`ocum_sudoers` und `ocie_sudoers`) im `/etc/sudoers.d/` Verzeichnis. Wenn Sie diese Einträge aufgrund von Sicherheitsrichtlinien oder eines Sicherheitsüberwachungstools aus Ihrer Umgebung entfernen, müssen Sie sie wieder hinzufügen. Sie müssen die sudoers-Konfiguration beibehalten, da einige Unified Manager-Operationen diese sudo-Berechtigungen erfordern.
+
+Die Sicherheitsrichtlinien Ihrer Umgebung dürfen die sudo-Berechtigungen des Unified Manager-Wartungsbenutzers nicht einschränken. Einige Unified Manager-Vorgänge können fehlschlagen, wenn die Berechtigungen eingeschränkt sind. Nach erfolgreicher Installation sollte bei der Anmeldung als umadmin-Benutzer überprüft werden, dass der folgende sudo-Befehl ausgeführt werden kann.
+
+`sudo systemctl  status ocie`
+
+Dieser Befehl sollte den entsprechenden Status des ocie Service ohne Fehler zurückgeben.
+
+.Schritte
+. Die Anmeldung am Server erfolgt als Root-Benutzer.
+. Erstellung des umadmin Gruppenkontos mit dem Namen "`maintenance`":
++
+`groupadd maintenance`
+
+. Die Erstellung des Benutzerkontos "`umadmin`" erfolgt in der Wartungsgruppe unter einem Home-Verzeichnis Ihrer Wahl:
++
+`adduser --home <home_directory\> -g maintenance umadmin`
+
+. Definition des umadmin Passworts:
++
+`passwd umadmin`
+
++
+Das System fordert Sie auf, eine neue Passwortzeichenfolge für den Benutzer umadmin einzugeben.
+
+
+
+Nach der Installation von Unified Manager müssen Sie die Login-Shell des Benutzers umadmin angeben.

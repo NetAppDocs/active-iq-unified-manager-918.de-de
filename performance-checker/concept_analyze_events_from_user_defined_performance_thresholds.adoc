@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_analyze_events_from_user_defined_performance_thresholds.html 
+sidebar: sidebar 
+keywords: analyze, events, user-defined, performance, thresholds 
+summary: Ereignisse, die durch benutzerdefinierte Schwellenwerte generiert werden, zeigen an, dass ein Performance-Zähler für ein bestimmtes Storage-Objekt, beispielsweise ein Aggregat oder Volume, den in der Richtlinie definierten Schwellenwert überschritten hat. Dies weist darauf hin, dass bei dem Cluster-Objekt ein Performance-Problem vorliegt. 
+---
+= Analyse von Ereignissen anhand benutzerdefinierter Leistungsschwellenwerte in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse, die durch benutzerdefinierte Schwellenwerte generiert werden, zeigen an, dass ein Performance-Zähler für ein bestimmtes Storage-Objekt, beispielsweise ein Aggregat oder Volume, den in der Richtlinie definierten Schwellenwert überschritten hat. Dies weist darauf hin, dass bei dem Cluster-Objekt ein Performance-Problem vorliegt.
+
+Die Seite mit den Ereignisdetails dient zur Analyse des Performance-Ereignisses und gegebenenfalls zur Ergreifung einer Korrekturmaßnahme, um die Performance wieder auf den Normalzustand zurückzuführen.

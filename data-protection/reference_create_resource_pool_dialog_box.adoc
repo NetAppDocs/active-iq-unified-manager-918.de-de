@@ -1,0 +1,62 @@
+---
+permalink: data-protection/reference_create_resource_pool_dialog_box.html 
+sidebar: sidebar 
+keywords: create, resource pool, dialog box 
+summary: Im Dialogfeld „Ressourcenpool erstellen“ können Sie einen neuen Ressourcenpool benennen und beschreiben sowie Aggregate zu diesem Ressourcenpool hinzufügen und Aggregate aus diesem Ressourcenpool löschen. 
+---
+= Das Dialogfeld „Ressourcenpool erstellen“ in Active IQ Unified Manager kann verwendet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Ressourcenpool erstellen“ können Sie einen neuen Ressourcenpool benennen und beschreiben sowie Aggregate zu diesem Ressourcenpool hinzufügen und Aggregate aus diesem Ressourcenpool löschen.
+
+
+
+[[resource-pool-name]]
+== Name des Ressourcenpools
+
+Mithilfe der Textfelder können Sie die folgenden Informationen hinzufügen, um einen Ressourcenpool zu erstellen:
+
+Ermöglicht die Angabe des Namens eines Ressourcenpools.
+
+
+
+[[description]]
+== Beschreibung
+
+Ermöglicht die Beschreibung eines Ressourcenpools.
+
+
+
+[[members]]
+== Mitglieder
+
+Anzeige der Mitglieder des Ressourcenpools. Sie können auch Mitglieder hinzufügen und löschen.
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Hinzufügen*
++
+Öffnet das Dialogfeld „Aggregate“, sodass Sie Aggregate aus einem bestimmten Cluster zum Ressourcenpool hinzufügen können. Sie können Aggregate aus verschiedenen Clustern hinzufügen, jedoch können dieselben Aggregate nicht zu mehr als einem Ressourcenpool hinzugefügt werden.
+
+* *Entfernen*
++
+Ermöglicht das Entfernen ausgewählter Aggregate aus dem Ressourcenpool.
+
+* *Erstellen*
++
+Erstellt den Ressourcenpool. Diese Schaltfläche ist erst aktiviert, wenn in die Felder „Name des Ressourcenpools“ oder „Beschreibung“ Informationen eingegeben wurden.
+
+* *Stornieren*
++
+Verwirft die Änderungen und schließt das Dialogfeld „Ressourcenpool erstellen“.
+
+

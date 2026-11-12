@@ -1,0 +1,57 @@
+---
+permalink: api-automation/concept_api_logs.html 
+sidebar: sidebar 
+keywords: logs, troubleshooting 
+summary: Systemprotokolle ermöglichen es Ihnen, die Ursachen von Fehlern zu analysieren und Probleme bei der Fehlerbehebung zu untersuchen, die beim Ausführen der APIs auftreten können. 
+---
+= Fehlerbehebung mithilfe von Systemprotokollen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Systemprotokolle ermöglichen es Ihnen, die Ursachen von Fehlern zu analysieren und Probleme bei der Fehlerbehebung zu untersuchen, die beim Ausführen der APIs auftreten können.
+
+Für die Fehlerbehebung bei Problemen im Zusammenhang mit den API-Aufrufen sind die Protokolle am folgenden Speicherort abrufbar.
+
+[cols="2*"]
+|===
+| Protokollspeicherort | Verwenden 
+
+
+ a| 
+`/var/log/ocie/access_log.log`
+ a| 
+Enthält alle Details zum API-Aufruf, wie z. B. den Benutzernamen des Benutzers, der die API aufruft, Startzeit, Ausführungszeit, Status und URL.
+
+Mithilfe dieser Protokolldatei können Sie die häufig genutzten APIs überprüfen oder Fehler bei jedem GUI-Workflow beheben. Außerdem können Sie sie auf Grundlage der Ausführungszeit zur Skalierung von Analysen verwenden.
+
+
+
+ a| 
+`/var/log/ocum/ocumserver.log`
+ a| 
+Enthält alle API-Ausführungsprotokolle.
+
+Mit dieser Protokolldatei können Sie Fehler bei den API-Aufrufen beheben und die API-Aufrufe debuggen.
+
+
+
+ a| 
+`/var/log/ocie/server.log`
+ a| 
+Enthält alle Wildfly Server Deployments und Protokolle zu Services für Start/Stopp.
+
+Mithilfe dieser Protokolldatei können Sie die Grundursache von Problemen ermitteln, die beim Starten, Stoppen oder Deployment des Wildfly Servers auftreten.
+
+
+
+ a| 
+`/var/log/ocie/au.log`
+ a| 
+Enthält Protokolle im Zusammenhang mit der Acquisition Unit.
+
+Sie können diese Protokolldatei verwenden, wenn Sie in ONTAP Objekte erstellt, geändert oder gelöscht haben, diese Änderungen jedoch nicht in den Active IQ Unified Manager REST APIs berücksichtigt werden.
+
+|===

@@ -1,0 +1,16 @@
+---
+permalink: config/concept_login_banner.html 
+sidebar: sidebar 
+keywords: login banner, feature settings 
+summary: Diese Funktion ermöglicht es Ihrem Unternehmen, beim Ein- und Ausloggen beliebige Informationen anzuzeigen, z. B. wer Zugriff auf das System hat und welche Nutzungsbedingungen gelten. 
+---
+= Hinzufügen eines Anmeldebanners in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch das Hinzufügen eines Anmeldebanners kann Ihr Unternehmen beliebige Informationen anzeigen, z. B. wer Zugriff auf das System hat und welche Nutzungsbedingungen gelten, sowohl beim An- als auch beim Abmelden.
+
+Jeder Benutzer, z. B. Storage Operatoren oder Administratoren, kann dieses Anmeldebanner-Popup bei der Anmeldung, Abmeldung und bei Zeitüberschreitung der Sitzung anzeigen.

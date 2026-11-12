@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_view_failed_or_successful_volume_transfers.html 
+sidebar: sidebar 
+keywords: create, report, view, failed, successful, volume, transfer 
+summary: Sie können einen Bericht erstellen, der den Status von Volume-Übertragungen anzeigt. In diesem Bericht können Sie sowohl fehlgeschlagene als auch erfolgreiche Volume-Übertragungen einsehen. 
+---
+= Ein Bericht zur Anzeige fehlgeschlagener oder erfolgreicher Volume-Übertragungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, der den Status von Volume-Übertragungen anzeigt. In diesem Bericht können Sie sowohl fehlgeschlagene als auch erfolgreiche Volume-Übertragungen einsehen.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mit den folgenden Schritten wird eine benutzerdefinierte Ansicht erstellt, die anzeigt, welche Übertragungen fehlgeschlagen sind und welche erfolgreich waren; anschließend wird die Generierung eines Berichts für diese Ansicht geplant.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Beziehung* > *Transferstatus des letzten Monats*.
+. Mit *Anzeigen/Ausblenden* können Sie alle Spalten ausblenden, die Sie im Bericht nicht benötigen.
+. Positionieren der Spalte "`Operation Result`" in der Nähe der Spalte "`State`".
+. Mit einem Klick auf den oberen Bereich der Spalte "`Operation Result`" lassen sich die Volumes nach dem Status sortieren.
+. Als Name für die Ansicht eignet sich ein spezifischer Name, der widerspiegelt, was in der Ansicht angezeigt wird, zum Beispiel „`Volumes by transfer status`“.
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Anhand der im Bericht dargestellten Ergebnisse können Sie den Transferstatus überprüfen.

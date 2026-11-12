@@ -1,0 +1,61 @@
+---
+permalink: events/reference_disable_events_dialog_box.html 
+sidebar: sidebar 
+keywords: disable, events, dialog box, properties, area, command buttons 
+summary: Im Dialogfeld „Ereignisse deaktivieren“ wird die Liste der Ereignistypen angezeigt, für die Sie Ereignisse deaktivieren können. Sie können Ereignisse für einen Ereignistyp auf Grundlage eines bestimmten Schweregrads oder für eine Gruppe von Ereignissen deaktivieren. 
+---
+= Das Dialogfeld „Ereignisse“ in Active IQ Unified Manager wird deaktiviert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Ereignisse deaktivieren“ wird die Liste der Ereignistypen angezeigt, für die Sie Ereignisse deaktivieren können. Sie können Ereignisse für einen Ereignistyp auf Grundlage eines bestimmten Schweregrads oder für eine Gruppe von Ereignissen deaktivieren.
+
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+
+[[event-properties-area]]
+== Bereich „Ereigniseigenschaften“
+
+Der Bereich „Ereigniseigenschaften“ enthält die folgenden Ereigniseigenschaften:
+
+* *Ereignisschweregrad*
++
+Ermöglicht die Auswahl von Ereignissen anhand des Typs des Schweregrads, der Kritisch, Fehler, Warnung oder Information sein kann.
+
+* *Ereignisname enthält*
++
+Ermöglicht das Filtern von Ereignissen, deren Name die angegebenen Zeichen enthält.
+
+* *Passende Ereignisse*
++
+Zeigt die Liste der Ereignisse an, die dem von Ihnen angegebenen Typ des Schweregrads des Ereignisses und dem Text-String entsprechen.
+
+* *Ereignisse deaktivieren*
++
+Zeigt die Liste der Ereignisse an, die Sie zum Deaktivieren ausgewählt haben.
+
++
+Der Schweregrad des Ereignisses wird auch zusammen mit dem Ereignisnamen angezeigt.
+
+
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie für die ausgewählten Ereignisse folgende Aufgaben ausführen:
+
+* *Speichern und schließen*
++
+Deaktiviert den Ereignistyp und schließt das Dialogfeld.
+
+* *Stornieren*
++
+Verwirft die Änderungen und schließt das Dialogfeld.
+
+

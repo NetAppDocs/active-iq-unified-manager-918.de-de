@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_edit_group_rules.html 
+sidebar: sidebar 
+keywords: edit, group rules 
+summary: Sie können Gruppenregeln bearbeiten, um die Bedingungsgruppen und die Bedingungen innerhalb einer Bedingungsgruppe zu ändern und so Storage Objekte zu einer bestimmten Gruppe hinzuzufügen oder daraus zu entfernen. 
+---
+= Bearbeiten von Gruppenregeln in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Gruppenregeln bearbeiten, um die Bedingungsgruppen und die Bedingungen innerhalb einer Bedingungsgruppe zu ändern und so Storage Objekte zu einer bestimmten Gruppe hinzuzufügen oder daraus zu entfernen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage Management* > *Gruppen*.
+. Auf der Registerkarte *Gruppenregeln* ist die Gruppenregel auszuwählen, die bearbeitet werden soll, und anschließend auf *Bearbeiten* zu klicken.
+. Im Dialogfeld *Gruppenregel bearbeiten* können Sie den Gruppenregelnamen, den zugehörigen Gruppennamen, die Bedingungsgruppen und die Bedingungen nach Bedarf ändern.
++
+[NOTE]
+====
+Der Zielobjekttyp für eine Gruppenregel kann nicht geändert werden.
+
+====
+. Auf *Speichern* klicken.
+

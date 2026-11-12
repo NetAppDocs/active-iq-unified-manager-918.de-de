@@ -1,0 +1,36 @@
+---
+permalink: health-checker/task_view_cluster_list_and_details.html 
+sidebar: sidebar 
+keywords: view, cluster list, details 
+summary: Auf der Seite „Integrität“ bietet die Ansicht „Alle Cluster“ einen Überblick über Ihren Clusterbestand, und auf der Seite „Kapazität“ bietet die Ansicht „Alle Cluster“ Details zur Speicherkapazität und -auslastung. 
+---
+= Die Clusterliste und Details sind im Active IQ Unified Manager verfügbar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Ansicht „Systemstatus: Alle Cluster“ können Sie Ihren Bestand an Clustern einsehen. Die Ansicht „Kapazität: Alle Cluster“ zeigt zusammengefasste Informationen zur Storage-Kapazität und -Auslastung aller Cluster an.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+Details zu einzelnen Clustern, wie dem Systemstatus des Clusters, der Kapazität, der Konfiguration, den LIFs, den Nodes und den Datenträgern in diesem Cluster, können auch auf der Seite „Cluster / Systemstatusdetails“ angezeigt werden.
+
+Die Details in der Ansicht „Systemstatus: Alle Cluster“, der Ansicht „Kapazität: Alle Cluster“ und auf der Seite „Cluster/Systemstatus-Details“ helfen Ihnen bei der Planung Ihres Storage. Beispielsweise können Sie vor der Provisionierung eines neuen Aggregats einen bestimmten Cluster in der Ansicht „Systemstatus: Alle Cluster“ auswählen und die Kapazitätsdetails abrufen, um festzustellen, ob der Cluster über den erforderlichen Speicherplatz verfügt.
+
+.Schritte
+. Im linken Navigationsbereich wird *Storage* > *Cluster* ausgewählt.
+. Im Menü „Ansicht“ steht die Ansicht *Systemstatus: Alle Cluster* zum Anzeigen von Informationen zum Systemstatus sowie die Ansicht *Kapazität: Alle Cluster* zum Anzeigen von Details zur Storage-Kapazität und -Auslastung in allen Clustern zur Verfügung.
+. Durch Klicken auf den Namen eines Clusters können Sie die vollständigen Details des Clusters auf der Detailseite *Cluster / Systemstatus* anzeigen.
+
+
+*Verwandte Informationen*
+
+* link:../health-checker/reference_health_cluster_details_page.html["Cluster-/Systemstatusdetailseite"]
+* link:../performance-checker/performance-view-all.html#performance-all-clusters-view["Leistung: Ansicht „Alle Cluster“"]
+* link:../storage-mgmt/task_monitor_metrocluster_configurations.html["Überwachung von MetroCluster Konfigurationen"]
+* link:../health-checker/task_view_detailed_security_status_for_clusters_and_svms.html["Anzeigen des Sicherheitsstatus für Cluster und Storage VMs"]
+* link:../health-checker/concept_what_security_criteria_is_being_evaluated.html["Welche Sicherheitskriterien werden bewertet"]
+

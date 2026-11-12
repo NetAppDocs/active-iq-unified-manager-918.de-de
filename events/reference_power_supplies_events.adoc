@@ -1,0 +1,34 @@
+---
+permalink: events/reference_power_supplies_events.html 
+sidebar: sidebar 
+keywords: power, supplies, events, impact area, availability 
+summary: Ereignisse zu Netzteilen liefern Ihnen Informationen zum Status Ihrer Hardware, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungslevel, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Ereignissen im Zusammenhang mit der Stromversorgung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse zu Netzteilen liefern Ihnen Informationen zum Status Ihrer Hardware, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungslevel, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Ein oder mehrere ausgefallene Netzteile(ocumEvtPowerSupplyOneOrMoreFailed)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+|===

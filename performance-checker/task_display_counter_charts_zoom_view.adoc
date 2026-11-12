@@ -1,0 +1,21 @@
+---
+permalink: performance-checker/task_display_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: display, counter charts, zoom, view 
+summary: Die Counter Charts Zoom View bietet für das ausgewählte Counter Chart und die zugehörige Zeitleiste ein höheres Detail Level. Dies vergrößert die Daten des Counter Chart, sodass Sie eine präzisere Ansicht von Performance Ereignissen und ihren zugrunde liegenden Ursachen erhalten. 
+---
+= Anzeige der Zoomansicht der Zählerdiagramme in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Counter Charts Zoom View bietet für das ausgewählte Counter Chart und die zugehörige Zeitleiste ein höheres Detail Level. Dies vergrößert die Daten des Counter Chart, sodass Sie eine präzisere Ansicht von Performance Ereignissen und ihren zugrunde liegenden Ursachen erhalten.
+
+Sie können die Zoom-Ansicht des Zählerdiagramms für jedes Zählerdiagramm anzeigen.
+
+.Schritte
+. Mit *Zoom View* wird das ausgewählte Diagramm in einem neuen Browserfenster geöffnet.
+. Wenn Sie ein Aufschlüsselungsdiagramm anzeigen und dann auf *Zoom View* klicken, wird das Aufschlüsselungsdiagramm in *Zoom View* angezeigt. In *Zoom View* kann *Total* ausgewählt werden, wenn die Ansichtsoption geändert werden soll.
+

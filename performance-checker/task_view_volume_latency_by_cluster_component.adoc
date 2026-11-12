@@ -1,0 +1,41 @@
+---
+permalink: performance-checker/task_view_volume_latency_by_cluster_component.html 
+sidebar: sidebar 
+keywords: view, volume, latency, cluster, component 
+summary: Detaillierte Latenzinformationen für ein Volume können Sie auf der Seite „Volume Performance Explorer“ einsehen. Das Diagramm „Latenz - Gesamt“ zeigt die Gesamtlatenz des Volumes an, während das Diagramm „Latenz - Aufschlüsselung“ hilfreich ist, um die Auswirkungen von Lese- und Schreiblatenz auf das Volume zu ermitteln. 
+---
+= Volumenlatenz nach Clusterkomponente in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Detaillierte Latenzinformationen für ein Volume können Sie auf der Seite „Volume Performance Explorer“ einsehen. Das Diagramm „Latenz - Gesamt“ zeigt die Gesamtlatenz des Volumes an, während das Diagramm „Latenz - Aufschlüsselung“ hilfreich ist, um die Auswirkungen von Lese- und Schreiblatenz auf das Volume zu ermitteln.
+
+Zusätzlich bietet das Diagramm „Latenz - Clusterkomponenten“ einen detaillierten Vergleich der Latenz jeder Clusterkomponente, um zu verdeutlichen, wie jede Komponente zur Gesamtlatenz des Volumes beiträgt. Folgende Clusterkomponenten werden angezeigt:
+
+* Netzwerk
+* Maximales QoS-Limit
+* QoS-Limit (Min.)
+* Netzwerkverarbeitung
+* Cluster Interconnect
+* Data Processing
+* Aggregatoperationen
+* Volume-Aktivierung
+* MetroCluster Ressourcen
+* Cloud-Latenz
+* Synchrone SnapMirror Beziehung
+
+
+.Schritte
+. Auf der Seite *Volume Performance Explorer* für das ausgewählte Volume erfolgt die Auswahl der Option *Cluster Components* im Dropdown-Menü des Diagramms „Latenz“.
++
+Das Diagramm „Latenz - Clusterkomponenten“ wird angezeigt.
+
+. Mit *Zoom View* lässt sich eine größere Version des Diagramms anzeigen.
++
+Das Vergleichsdiagramm der Clusterkomponenten wird angezeigt. Sie können den Vergleich einschränken, indem Sie die image:../media/eye_icon.gif["Augensymbol"] Optionen auswählen oder abwählen, die den einzelnen Clusterkomponenten zugeordnet sind.
+
+. Zum Anzeigen der einzelnen Werte wird der Cursor in den Diagrammbereich bewegt, damit das Popup-Fenster angezeigt wird.
+

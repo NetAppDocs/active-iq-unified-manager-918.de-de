@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task_view_aggregate_list_and_details.html 
+sidebar: sidebar 
+keywords: view, aggregate list, details 
+summary: Die Ansicht „Alle Aggregate“ auf der Seite „Integrität“ dient zur Überwachung Ihres Aggregatbestands, und die Ansicht „Alle Aggregate“ auf der Seite „Kapazität“ bietet Details zu Kapazität und Auslastung. 
+---
+= Die Aggregatliste und Details sind in Active IQ Unified Manager verfügbar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Ansicht „Systemstatus: Alle Aggregate“ können Sie Ihren Bestand an Aggregaten überwachen. Die Ansicht „Kapazität: Alle Aggregate“ ermöglicht es Ihnen, Informationen über die Kapazität und Auslastung der Aggregate in allen Clustern anzuzeigen.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+Auf der Seite „Aggregat-/Systemstatusdetails“ können Sie Details wie Aggregatkapazität und -konfiguration sowie Festplatteninformationen einsehen. Diese Informationen können Sie bei Bedarf vor der Konfiguration der Schwellenwerteinstellungen verwenden.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage* > *Aggregates*.
+. Eine der folgenden Möglichkeiten kann verwendet werden, um die Aggregatdetails anzuzeigen:
++
+** Informationen zum Systemstatus aller Aggregate in allen Clustern sind im Menü „Ansicht“ in der Ansicht „Systemstatus: Alle Aggregate“ verfügbar.
+** Informationen über die Kapazität und Auslastung aller Aggregate in allen Clustern lassen sich anzeigen, indem im Menü „Ansicht“ die Ansicht „Kapazität: Alle Aggregate“ ausgewählt wird.
+** Die vollständigen Details lassen sich durch Klicken auf den Namen des Aggregats anzeigen.
++
+Sie können die vollständigen Details auch einsehen, indem Sie im Dialogfeld „Minimale Details“ auf *Details anzeigen* klicken.
+
+
+
+. Im Dialogfeld „Minimale Details“ können die dem Aggregat zugeordneten Objekte über *View Related* angezeigt werden.
+
+
+*Verwandte Informationen*
+
+* link:../health-checker/reference_health_aggregate_details_page.html["Seite „Aggregate / Systemstatus-Details“"]
+* link:../performance-checker/performance-view-all.html#performance-all-aggregates-view["Performance: Ansicht „Alle Aggregate“"]
+* link:../reporting/task_create_report_to_view_aggregates_reaching_full_capacity.html["Erstellung eines Berichts zum Anzeigen von Aggregaten, die in Active IQ Unified Manager ihre volle Kapazität erreichen"]
+

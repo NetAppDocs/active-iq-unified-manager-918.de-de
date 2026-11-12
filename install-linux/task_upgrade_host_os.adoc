@@ -1,0 +1,70 @@
+---
+permalink: install-linux/task_upgrade_host_os.html 
+sidebar: sidebar 
+keywords: upgrade, host OS, red hat enterprise, linux 7.x, 8.x 
+summary: Wenn Unified Manager zuvor auf einem Red Hat Enterprise Linux 7.x-System installiert wurde und ein Upgrade auf Red Hat Enterprise Linux 8.x erforderlich ist, muss eines der in diesem Thema aufgeführten Verfahren befolgt werden. In beiden Fällen muss auf dem Red Hat Enterprise Linux 7.x-System eine Sicherungskopie von Unified Manager erstellt und diese anschließend auf einem Red Hat Enterprise Linux 8.x-System wiederhergestellt werden. 
+---
+= Aktualisierung des Red Hat Enterprise Linux Hostbetriebssystems für Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Unified Manager zuvor auf einem Red Hat Enterprise Linux 7.x-System installiert haben und ein Upgrade auf Red Hat Enterprise Linux 8.x durchführen müssen, ist eine der in diesem Thema beschriebenen Vorgehensweisen erforderlich. In beiden Fällen müssen Sie eine Sicherungskopie von Unified Manager auf dem Red Hat Enterprise Linux 7.x-System erstellen und diese anschließend auf dem Red Hat Enterprise Linux 8.x-System wiederherstellen. Unterstützt werden Red Hat Enterprise Linux Versionen von 8.0 bis 8.10.
+
+Der Unterschied zwischen den beiden unten aufgeführten Optionen besteht darin, dass Sie in einem Fall den Unified Manager auf einem neuen 8.x-Server wiederherstellen und im anderen Fall auf demselben Server.
+
+Da für diese Aufgabe eine Sicherung von Unified Manager auf dem Red Hat Enterprise Linux 7.x System erforderlich ist, sollten Sie die Sicherung nur dann erstellen, wenn Sie bereit sind, den gesamten Upgrade-Prozess abzuschließen, damit Unified Manager so kurz wie möglich offline ist. Für den Zeitraum, in dem das Red Hat Enterprise Linux 7.x System heruntergefahren ist und bevor das neue Red Hat Enterprise Linux 8.x gestartet wird, erscheinen in der Unified Manager UI Datenlücken.
+
+Detaillierte Anweisungen für die Sicherungs- und Wiederherstellungsprozesse finden Sie bei Bedarf unter link:../health-checker/concept_manage_backup_and_restore_operations.html["Verwaltung von Sicherungs- und Wiederherstellungsvorgängen"].
+
+Diese Schritte gelten, wenn Sie über ein Ersatzsystem verfügen, auf dem sich die Software Red Hat Enterprise Linux 8.x installieren lässt, sodass Sie die Unified Manager-Wiederherstellung auf diesem System durchführen können, während das Red Hat Enterprise Linux 7.x-System noch verfügbar ist.
+
+. Installation und Konfiguration eines neuen Servers mit der Software Red Hat Enterprise Linux 8.x.
++
+Weitere Informationen finden Sie unter link:reference_red_hat_software_and_installation_requirements.html["Linux Software und Installationsanforderungen"].
+
+. Auf dem Red Hat Enterprise Linux 8.x-System ist dieselbe Version der Unified Manager Software zu installieren, die auch auf dem vorhandenen Red Hat Enterprise Linux 7.x-System vorhanden ist.
++
+Weitere Informationen finden Sie unter link:task_install_unified_manager_linux.html["Installation von Unified Manager unter Linux"].
+
++
+Nach Abschluss der Installation erfolgen weder ein Start der UI noch eine Konfiguration von Clustern, Benutzern oder Authentifizierungseinstellungen. Die Sicherungsdatei ergänzt diese Informationen während des Wiederherstellungsprozesses.
+
+. Auf dem Red Hat Enterprise Linux 7.x-System wird im Administrationsmenü der Web-UI eine Sicherung von Unified Manager erstellt. Anschließend werden die Sicherungsdatei (`.7z` Datei) und der Inhalt des Datenbank-Repository-Verzeichnisses (`/database-dumps-repo` Unterverzeichnisses) an einen externen Speicherort kopiert.
+. Auf dem System Red Hat Enterprise Linux 7.x erfolgt das Herunterfahren von Unified Manager.
+. Auf dem Red Hat Enterprise Linux 8.x-System erfolgt das Kopieren der Sicherungsdatei (`.7z` Datei) vom externen Speicherort nach  `/opt/netapp/data/ocum-backup/` sowie der Datenbank-Repository-Dateien in das  `/database-dumps-repo` Unterverzeichnis unter dem  `/ocum-backup` Verzeichnis.
+. Mit dem folgenden Befehl wird die Unified Manager Datenbank aus der Sicherungsdatei wiederhergestellt:
++
+`um backup restore -f /opt/netapp/data/ocum-backup/<backup_file_name>`
+
+. Zum Starten der Web-Benutzeroberfläche von Unified Manager wird die IP-Adresse oder URL in den Webbrowser eingegeben, anschließend erfolgt die Anmeldung am System.
+
+
+Sobald Sie sich vergewissert haben, dass das System ordnungsgemäß funktioniert, können Sie Unified Manager vom Red Hat Enterprise Linux 7.x System entfernen.
+
+*Aktualisierung des Host-Betriebssystems auf demselben Server*
+
+Die folgenden Schritte gelten, wenn Sie kein Ersatzsystem haben, auf dem Sie die Software Red Hat Enterprise Linux 8.x installieren können.
+
+. Im Administrationsmenü der Web-UI werden ein Unified Manager Backup erstellt und anschließend die Backup-Datei (`.7z` Datei) sowie der Inhalt des Datenbank-Repository-Verzeichnisses (`/database-dumps-repo` Unterverzeichnis) an einen externen Speicherort kopiert.
+. Entfernung des Red Hat Enterprise Linux 7.x Image aus dem System und vollständiges Löschen des Systems.
+. Die Installation und Konfiguration der Red Hat Enterprise Linux 8.x Software erfolgt auf demselben System.
++
+Weitere Informationen finden Sie unter link:reference_red_hat_software_and_installation_requirements.html["Linux Software und Installationsanforderungen"].
+
+. Auf dem Red Hat Enterprise Linux 8.x-System ist dieselbe Version der Unified Manager Software zu installieren, die auf dem Red Hat Enterprise Linux 7.x-System verwendet wurde.
++
+Weitere Informationen finden Sie unter link:task_install_unified_manager_linux.html["Installation von Unified Manager unter Linux"].
+
++
+Nach Abschluss der Installation erfolgen weder ein Start der UI noch eine Konfiguration von Clustern, Benutzern oder Authentifizierungseinstellungen. Die Sicherungsdatei ergänzt diese Informationen während des Wiederherstellungsprozesses.
+
+. Kopieren der Sicherungsdatei (`.7z`Datei) vom externen Speicherort nach `/opt/netapp/data/ocum-backup/` und der Datenbank-Repository-Dateien in das `/database-dumps-repo` Unterverzeichnis unter dem `/ocum-backup` Verzeichnis.
+. Mit dem folgenden Befehl wird die Unified Manager Datenbank aus der Sicherungsdatei wiederhergestellt:
++
+`um backup restore -f /opt/netapp/data/ocum-backup/<backup_file_name>`
+
+. Zum Starten der Web-Benutzeroberfläche von Unified Manager wird die IP-Adresse oder URL in den Webbrowser eingegeben, anschließend erfolgt die Anmeldung am System.
+

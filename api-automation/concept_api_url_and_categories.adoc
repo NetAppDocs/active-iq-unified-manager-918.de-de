@@ -1,0 +1,75 @@
+---
+permalink: api-automation/concept_api_url_and_categories.html 
+sidebar: sidebar 
+keywords: active iq, unified manager, api, access, categories 
+summary: Mit den Active IQ Unified Manager APIs können Sie Storage-Objekte in Ihrer Umgebung managen und provisionieren. Einige dieser Funktionen sind auch über die Unified Manager Web-UI zugänglich. 
+---
+= API-Zugriff und Kategorien in Active IQ Unified Manager verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:pp: &#43;&#43;
+
+
+[role="lead"]
+Mit den Active IQ Unified Manager APIs können Sie Storage-Objekte in Ihrer Umgebung managen und provisionieren. Einige dieser Funktionen sind auch über die Unified Manager Web-UI zugänglich.
+
+
+
+[[construct-a-url-to-directly-access-rest-apis]]
+== Eine URL für den direkten Zugriff auf REST-APIs erstellen
+
+Sie können über eine Programmiersprache wie Python, C#, C{pp}++, JavaScript usw. direkt auf die REST APIs zugreifen. Für den Zugriff auf die REST APIs werden der Hostname oder die IP-Adresse und die URL im folgenden Format eingegeben
+
++https://<hostname>/api+
+
+[NOTE]
+====
+Der Standardport ist 443. Sie können den Port entsprechend Ihrer Umgebung konfigurieren.
+
+====
+
+
+[[access-the-online-api-documentation-page]]
+== Zugriff auf die Online-API-Dokumentationsseite
+
+Sie können die mit dem Produkt bereitgestellte Referenzinhaltsseite _API Documentation_ aufrufen, um die API-Dokumentation anzuzeigen und einen API-Aufruf manuell auszuführen, beispielsweise über die Schnittstelle Swagger. Der Zugriff auf diese Dokumentation erfolgt über *Menu Bar* > *Help button* > *API Documentation*.
+
+Alternativ können Sie den Hostnamen oder die IP-Adresse und die URL für den Zugriff auf die REST API-Seite im folgenden Format eingeben
+
++https://<hostname>/docs/api/+
+
+
+
+[[categories]]
+== Kategorien
+
+Die API-Aufrufe sind funktional nach Bereichen oder Kategorien organisiert. Eine bestimmte API lässt sich über die entsprechende API-Kategorie auffinden.
+
+Die mit Unified Manager bereitgestellten REST-APIs unterstützen Sie bei administrativen, Überwachungs- und Provisionierungsfunktionen. Die APIs sind in folgende Kategorien unterteilt.
+
+* *Datacenter*
++
+Diese Kategorie umfasst die APIs, die Sie bei der Storage-Verwaltung und -Analyse im Datacenter mithilfe von Tools wie Work Flow Automation und Ansible unterstützen. Die REST-APIs dieser Kategorie liefern Informationen über Cluster, Knoten, Aggregate, Volumes, LUNs, Dateifreigaben, Namespaces und andere Elemente in Ihrem Datacenter.
+
+* *Management-Server*
++
+Die APIs in der Kategorie *management-server* umfassen die  `jobs, system,` und  `events` APIs. Jobs sind Operationen, die für die asynchrone Ausführung geplant sind und mit dem Managen von Storage Objekten oder Workloads in Unified Manager zusammenhängen. Die  `events` API gibt Ereignisse in Ihrem Datacenter zurück, und die  `system` API gibt die Details der Unified Manager Instanz zurück.
+
+* *storage-provider*
++
+Diese Kategorie enthält alle APIs für die Provisionierung, die für das Managen und die Provisionierung von Dateifreigaben, LUNs, Performance Service Levels und Storage-Effizienzrichtlinien erforderlich sind. Die APIs ermöglichen außerdem die Konfiguration von Zugriffsendpunkten und Active Directories sowie die Zuweisung von Performance Service Levels und Storage-Effizienzrichtlinien zu Storage-Workloads.
+
+* *Verwaltung*
++
+Diese Kategorie enthält die APIs, die für die Ausführung administrativer Aufgaben verwendet werden, z. B. für die Pflege der Sicherungseinstellungen, das Anzeigen von Truststore-Zertifikaten für die Unified Manager Datenquellen und das Managen von ONTAP Clustern als Datenquellen für Unified Manager.
+
+* *Gateway*
++
+Unified Manager ermöglicht es Ihnen, ONTAP REST-APIs über die APIs in der Gateway-Kategorie aufzurufen und die Storage Objekte in Ihrem Datacenter zu managen.
+
+* *Sicherheit*
++
+Diese Kategorie enthält APIs zum Managen von Unified Manager Benutzern.
+
+

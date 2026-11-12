@@ -1,0 +1,44 @@
+---
+permalink: health-checker/task_perform_suggested_remedial_actions_for_full_volume.html 
+sidebar: sidebar 
+keywords: perform, suggested, remedial actions, volume 
+summary: Nach Erhalt des Fehlerereignisses „Volume Space Full“ prüfen Sie die auf der Seite mit den Ereignisdetails vorgeschlagenen Abhilfemaßnahmen und entscheiden sich dafür, eine der vorgeschlagenen Maßnahmen auszuführen. 
+---
+= Vorgeschlagene Korrekturmaßnahmen für ein volles Volume in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach Erhalt eines Fehlerereignisses „`Volume Space Full`“ prüfen Sie die auf der Seite mit den Ereignisdetails vorgeschlagenen Abhilfemaßnahmen und entscheiden sich dafür, eine der vorgeschlagenen Maßnahmen auszuführen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Ein Benutzer mit einer beliebigen Rolle kann alle Aufgaben in diesem Workflow ausführen, bei denen Unified Manager verwendet wird.
+
+In diesem Beispiel haben Sie auf der Unified ManagerEvent Management-Inventarseite ein Fehlerereignis „Volume Space Full“ gesehen und auf den Namen des Ereignisses geklickt.
+
+Mögliche Abhilfemaßnahmen, die Sie für ein volles Volume durchführen könnten, umfassen unter anderem folgende:
+
+* Aktivieren von automatischem Wachstum, Deduplizierung oder Komprimierung auf dem Volume
+* Ändern der Größe oder Verschieben des Volumens
+* Löschen oder Verschieben von Daten aus dem Volume
+
+
+Obwohl alle diese Aktionen entweder über ONTAP System Manager oder die ONTAP CLI durchgeführt werden müssen, können Sie Unified Manager verwenden, um Informationen zu finden, die Sie möglicherweise benötigen, um zu entscheiden, welche Aktionen zu ergreifen sind.
+
+.Schritte
+. Auf der Detailseite *Event* lassen sich durch Klicken auf den Volume-Namen im Feld „Source“ Details zum betroffenen Volume anzeigen.
+. Auf der Detailseite *Volume / Health* ist unter *Configuration* zu sehen, dass Deduplizierung und Komprimierung für das Volume bereits aktiviert sind.
++
+Sie entscheiden sich, das Volume in der Größe anzupassen.
+
+. Im Bereich *Zugehörige Geräte* wählen Sie den Namen des Hosting-Aggregats aus, um zu prüfen, ob das Aggregat ein größeres Volume aufnehmen kann.
+. Auf der Detailseite *Aggregate / Health* sehen Sie, dass das Aggregat, das das volle Volume hostet, über genügend nicht zugesicherte Kapazität verfügt, sodass Sie ONTAP System Manager verwenden, um die Größe des Volume zu erhöhen und ihm mehr Kapazität zuzuweisen.
+
+
+*Verwandte Informationen*
+
+link:../events/reference_event_details_page.html["Seite mit Ereignisdetails"]

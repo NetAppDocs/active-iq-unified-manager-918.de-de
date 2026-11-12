@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_add_annotations_dynamically.html 
+sidebar: sidebar 
+keywords: add, annotations, dynamically 
+summary: 'Beim Erstellen benutzerdefinierter Annotationen ordnet Unified Manager Cluster, Storage Virtual Machines (SVMs) und Volumes den Annotationen mithilfe von Regeln dynamisch zu. Diese Regeln weisen die Annotationen Storage-Objekten automatisch zu.' 
+---
+= Dynamisches Hinzufügen von Anmerkungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beim Erstellen benutzerdefinierter Annotationen ordnet Unified Manager Cluster, Storage Virtual Machines (SVMs) und Volumes den Annotationen mithilfe von Regeln dynamisch zu. Diese Regeln weisen die Annotationen Storage-Objekten automatisch zu.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Annotations*.
+. Auf der Seite *Anmerkungen* kann *Anmerkung hinzufügen* ausgewählt werden.
+. Im Dialogfeld *Anmerkung hinzufügen* können Sie einen Namen und eine Beschreibung für die Anmerkung eingeben.
+. Optional: Im Abschnitt *Anmerkungswerte* können Sie der Anmerkung Werte hinzufügen, indem Sie auf *Hinzufügen* klicken.
+. Auf *Speichern* klicken.
+

@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/reference_cluster_summary_page_opm.html 
+sidebar: sidebar 
+keywords: performance, cluster, summary page 
+summary: Die Seite „Performance Cluster Summary“ bietet eine Zusammenfassung der aktiven Ereignisse, der IOPS-Performance und der MB/s-Performance für einen Cluster. Diese Seite enthält außerdem die Gesamtzahl der Storage-Objekte im Cluster. 
+---
+= Die Seite „Performance Cluster Summary“ in Active IQ Unified Manager kann überprüft werden.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Performance Cluster Summary“ bietet eine Zusammenfassung der aktiven Ereignisse, der IOPS-Performance und der MB/s-Performance für einen Cluster. Diese Seite enthält außerdem die Gesamtzahl der Storage-Objekte im Cluster.

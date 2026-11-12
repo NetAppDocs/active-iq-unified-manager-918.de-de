@@ -1,0 +1,26 @@
+---
+permalink: config/task_restart_unified_manager_virtual_machine.html 
+sidebar: sidebar 
+keywords: restart, unified manager, virtual, machine 
+summary: Sie können die virtuelle Maschine über die Managementplattform von Unified Manager neu starten. Ein Neustart ist erforderlich, nachdem ein neues Sicherheitszertifikat generiert wurde oder wenn ein Problem mit der virtuellen Maschine auftritt. 
+---
+= Starten Sie die virtuelle Maschine Active IQ Unified Manager neu.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die virtuelle Maschine über die Managementplattform von Unified Manager neu starten. Ein Neustart ist erforderlich, nachdem ein neues Sicherheitszertifikat generiert wurde oder wenn ein Problem mit der virtuellen Maschine auftritt.
+
+.Bevor Sie beginnen
+Die virtuelle Appliance ist eingeschaltet.
+
+Sie sind bei der Managementplattform für die Wartung als Wartungsbenutzer angemeldet.
+
+Sie können die virtuelle Maschine auch von vSphere aus mit der Option *Restart Guest* neu starten. Weitere Informationen finden Sie in der VMware-Dokumentation.
+
+.Schritte
+. Auf die Wartungskonsole zugreifen.
+. Für den Neustart der virtuellen Maschine ist *System Configuration* > *Reboot Virtual Machine* auszuwählen.
+

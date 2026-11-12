@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_how_cluster_operations_can_affect_workload_latency.html 
+sidebar: sidebar 
+keywords: cluster, operations, affect, workload, latency 
+summary: 'Operationen (IOPS) stellen die Aktivität aller benutzerdefinierten und systemdefinierten Workloads auf einem Cluster dar. Die IOPS-Statistiken helfen dabei festzustellen, ob Clusterprozesse, wie das Erstellen von Backups oder das Ausführen der Deduplizierung, die Workload-Latenz (Antwortzeit) beeinträchtigen oder ein Performance-Ereignis verursacht haben oder dazu beigetragen haben.' 
+---
+= Bewertung, wie sich Clusteroperationen auf die Workload-Latenz in Active IQ Unified Manager auswirken können
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operationen (IOPS) stellen die Aktivität aller benutzerdefinierten und systemdefinierten Workloads auf einem Cluster dar. Die IOPS-Statistiken helfen dabei festzustellen, ob Clusterprozesse, wie das Erstellen von Backups oder das Ausführen der Deduplizierung, die Workload-Latenz (Antwortzeit) beeinträchtigen oder ein Performance-Ereignis verursacht haben oder dazu beigetragen haben.
+
+Bei der Analyse von Performance-Ereignissen können Sie anhand der IOPS-Statistiken feststellen, ob ein Performance-Ereignis durch ein Problem im Cluster verursacht wurde. Sie können die spezifischen Workload-Aktivitäten identifizieren, die möglicherweise maßgeblich zum Performance-Ereignis beigetragen haben. IOPS werden in Operationen pro Sekunde (ops/sec) gemessen.
+
+image::../media/opm_ops_chart_png.png[Unified Manager IOPS-Diagramm]
+
+Dieses Beispiel zeigt das IOPS-Diagramm. Die tatsächlichen Operationsstatistiken sind als blaue Linie dargestellt, die IOPS-Prognose der Operationsstatistiken als grüne Linie.
+
+[NOTE]
+====
+In manchen Fällen, in denen ein Cluster überlastet ist, zeigt Unified Manager möglicherweise die Meldung  `Data collection is taking too long on Cluster _cluster_name_` an. Dies bedeutet, dass nicht genügend Statistiken erfasst wurden, damit Unified Manager eine Analyse durchführen kann. Damit Statistiken erfasst werden können, ist eine Reduzierung der vom Cluster genutzten Ressourcen erforderlich.
+
+====

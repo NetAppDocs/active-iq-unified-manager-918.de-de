@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/task_specify_correlated_objects_time_range.html 
+sidebar: sidebar 
+keywords: specify, time range, correlated objects 
+summary: Die Zeitbereichsauswahl auf der Seite „Performance Explorer“ ermöglicht es Ihnen, den Zeitbereich für den Vergleich von Objektdaten festzulegen. Die Angabe eines Zeitbereichs grenzt den Inhalt der Seiten „Performance Explorer“ so ein, dass nur die Objektdaten innerhalb des von Ihnen angegebenen Zeitbereichs angezeigt werden. 
+---
+= Ein Zeitbereich für korrelierte Objekte in Active IQ Unified Manager wird angegeben
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Zeitbereichsauswahl auf der Seite „Performance Explorer“ ermöglicht es Ihnen, den Zeitbereich für den Vergleich von Objektdaten festzulegen. Die Angabe eines Zeitbereichs grenzt den Inhalt der Seiten „Performance Explorer“ so ein, dass nur die Objektdaten innerhalb des von Ihnen angegebenen Zeitbereichs angezeigt werden.
+
+Die Eingrenzung des Zeitraums bietet eine effiziente Methode, nur die Performance-Daten anzuzeigen, die für Sie von Interesse sind. Sie können einen vordefinierten Zeitraum auswählen oder einen benutzerdefinierten Zeitraum festlegen. Der Standardzeitraum umfasst die vorangegangenen 72 Stunden.

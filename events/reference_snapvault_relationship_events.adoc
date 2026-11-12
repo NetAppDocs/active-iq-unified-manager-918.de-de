@@ -1,0 +1,100 @@
+---
+permalink: events/reference_snapvault_relationship_events.html 
+sidebar: sidebar 
+keywords: snapvault, relationship, events, impact area, protection 
+summary: SnapVault Beziehungsereignisse liefern Ihnen Informationen über den Status Ihrer SnapVault Beziehungen, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu SnapVault Beziehung Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapVault Beziehungsereignisse liefern Ihnen Informationen über den Status Ihrer SnapVault Beziehungen, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-protection]]
+== Wirkungsbereich: Schutz
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Asynchroner Vault-Fehler(ocumEvtSnapVaultRelationshipUnhealthy)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Asynchrones Vault unterbrochen(ocumEvtSnapVaultRelationshipStateBrokenoff)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchrone Vault-Initialisierung fehlgeschlagen(ocumEvtSnapVaultRelationshipInitializeFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchrone Vault Aktualisierung fehlgeschlagen(ocumEvtSnapVaultRelationshipUpdateFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchroner Vault-Verzögerungsfehler(ocumEvtSnapVaultRelationshipLagError)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Warnung vor asynchroner Vault-Verzögerung(ocumEvtSnapVaultRelationshipLagWarning)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Asynchrone Vault Resynchronisierung fehlgeschlagen(ocumEvtSnapvaultRelationshipResyncFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+|===

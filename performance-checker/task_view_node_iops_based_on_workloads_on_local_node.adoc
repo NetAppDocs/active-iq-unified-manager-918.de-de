@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_view_node_iops_based_on_workloads_on_local_node.html 
+sidebar: sidebar 
+keywords: view, node, iops, workloads, reside, only, local node 
+summary: 'Das Diagramm des Knoten-IOPS-Zählers kann hervorheben, wo Vorgänge den lokalen Knoten nur über einen Netzwerk-LIF passieren, um auf Volumes auf einem Remote-Knoten lesen/schreiben-Vorgänge durchzuführen. Die Diagramme „IOPS - Total (Local)“ und „Breakdown (Local)“ zeigen die IOPS für Daten an, die sich ausschließlich in lokalen Volumes auf dem aktuellen Knoten befinden.' 
+---
+= Anzeige der Knoten-IOPS basierend auf lokalen Workloads in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Diagramm des Knoten-IOPS-Zählers kann hervorheben, wo Vorgänge nur den lokalen Knoten durchlaufen und dabei eine Netzwerk-LIF verwenden, um lesen/schreiben-Vorgänge auf Volumes auf einem Remote-Knoten auszuführen. Die Diagramme „IOPS - `Total (Local)`“ und „`Breakdown (Local)`“ zeigen die IOPS für Daten an, die sich ausschließlich in lokalen Volumes auf dem aktuellen Knoten befinden.
+
+Die "`Local`"-Versionen dieser Zählerdiagramme ähneln den Knotendiagrammen für Performance-Kapazität und Auslastung, da auch sie nur die Statistiken für Daten anzeigen, die sich auf lokalen Volumes befinden.
+
+Durch den Vergleich der "`Local`"-Versionen dieser Zählerdiagramme mit den regulären Total Versionen dieser Zählerdiagramme lässt sich erkennen, ob viel Datenverkehr über den lokalen Knoten läuft, um auf Volumes auf dem Remote-Knoten zuzugreifen. Diese Situation kann zu Performance-Problemen führen, die sich möglicherweise durch eine hohe Auslastung des Knotens bemerkbar machen, wenn zu viele Operationen über den lokalen Knoten laufen, um ein Volume auf einem Remote-Knoten zu erreichen. In solchen Fällen kann es sinnvoll sein, ein Volume auf den lokalen Knoten zu verschieben oder auf dem Remote-Knoten eine LIF zu erstellen, mit der sich der Datenverkehr von Hosts verbinden lässt, die auf dieses Volume zugreifen.
+
+.Schritte
+. Auf der Seite *Performance/Node Explorer* für den ausgewählten Knoten erfolgt die Auswahl der Option *Total* im Dropdown-Menü des IOPS-Diagramms.
++
+Das Diagramm „IOPS - Total“ wird angezeigt.
+
+. Über *Zoom View* lässt sich eine größere Version des Diagramms in einem neuen Browser-Tab anzeigen.
+. Auf der Seite *Performance/Node Explorer* wird im IOPS-Diagramm im Dropdown-Menü *Total (Local)* ausgewählt.
++
+Das Diagramm „IOPS - Total (Local)“ wird angezeigt.
+
+. Über *Zoom View* lässt sich eine größere Version des Diagramms in einem neuen Browser-Tab anzeigen.
+. Beide Diagramme lassen sich nebeneinander anzeigen, um Bereiche zu identifizieren, in denen die IOPS-Werte deutlich voneinander abweichen.
+. Wenn sich der Cursor über diesen Bereichen befindet, lassen sich die lokalen und gesamten IOPS für einen bestimmten Zeitpunkt vergleichen.
+

@@ -1,0 +1,67 @@
+---
+permalink: health-checker/task_migrate_um_virtual_appliance_to_rhel_system.html 
+sidebar: sidebar 
+keywords: unified manager, migrate, virtual, appliance, linux system 
+summary: Sie können ein Dump-Backup der Unified Manager MySQL-Datenbank von einer virtuellen Appliance auf ein Red Hat Enterprise Linux-System wiederherstellen, wenn Sie das Host-Betriebssystem ändern möchten, auf dem Unified Manager ausgeführt wird. 
+---
+= Migration einer Active IQ Unified Manager virtuellen Appliance auf ein Linux System
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Dump-Backup der Unified Manager MySQL-Datenbank von einer virtuellen Appliance auf ein Red Hat Enterprise Linux-System wiederherstellen, wenn Sie das Host-Betriebssystem ändern möchten, auf dem Unified Manager ausgeführt wird.
+
+.Bevor Sie beginnen
+* Auf der virtuellen Appliance:
++
+** Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+** Für den Wiederherstellungsvorgang müssen Sie den Namen des Unified Manager Wartungsbenutzers kennen.
+
+
+* Auf dem Linux-System:
++
+** Unified Manager muss auf einem Linux-Server gemäß den Anweisungen in link:../install-linux/task_install_unified_manager_linux.html["Installation von Unified Manager auf Linux-Systemen"] installiert worden sein.
+** Die Version von Unified Manager auf diesem Server muss mit der Version auf der virtuellen Appliance identisch sein, von der aus Sie die Sicherungsdatei verwenden.
+** Nach der Installation sollten Sie auf dem Linux-System weder die UI starten noch Cluster, Benutzer oder Authentifizierungseinstellungen konfigurieren. Die Sicherungsdatei stellt diese Informationen während des Wiederherstellungsprozesses bereit.
+** Sie benötigen die Anmeldedaten des Root-Benutzers für den Linux-Host.
+
+
+
+
+Diese Schritte beschreiben, wie eine Sicherungsdatei auf der virtuellen Appliance erstellt, die Sicherungsdateien nach Red Hat Enterprise Linux kopiert und anschließend die Datenbanksicherung auf dem neuen System wiederhergestellt wird.
+
+.Schritte
+. Auf der virtuellen Appliance erfolgt die Auswahl von *Management* > *Database Backup*.
+. Auf der Seite *Datenbanksicherung* können die *Sicherungseinstellungen* ausgewählt werden.
+. Der Backup-Pfad muss auf /jail/support geändert werden.
+. Im Abschnitt „Zeitplan“ wird *Täglich geplant* ausgewählt, und es wird eine Uhrzeit eingegeben, die einige Minuten nach der aktuellen Uhrzeit liegt, damit die Sicherung in Kürze erstellt wird.
+. Auf *Anwenden* klicken.
+. Es dauert einige Stunden, bis die Datensicherung erstellt ist.
++
+Eine vollständige Datensicherung kann über 1 GB groß sein und drei bis vier Stunden dauern.
+
+. Anmeldung als Root-Benutzer am Linux-Host, auf dem Unified Manager installiert ist, und Kopieren der Sicherungsdateien aus /support auf die virtuelle Appliance mithilfe von SCP.`root@<rhel_server>:/# scp -r admin@<vapp_server_ip_address>:/support/* .`
++
+`root@ocum_rhel-21:/# scp -r admin@10.10.10.10:/support/* .`
+
++
+Voraussetzung ist, dass Sie die .7z-Sicherungsdatei und alle .7z-Repository-Dateien in das Unterverzeichnis /database-dumps-repo kopiert haben.
+
+. An der Eingabeaufforderung erfolgt die Wiederherstellung des Backups: `um backup restore -f /<backup_file_path>/<backup_file_name>`
++
+`um backup restore -f /UM_9.7.N151113.1348_backup_unix_02-12-2019-04-16.7z`
+
+. Nach Abschluss des Wiederherstellungsvorgangs erfolgt die Anmeldung bei der Web-UI von Unified Manager.
+
+
+Sie sollten die folgenden Aufgaben ausführen:
+
+* Die Generierung eines neuen HTTPS-Sicherheitszertifikats und der Neustart des Unified Manager Server sind erforderlich.
+* Der Sicherungspfad wird auf die Standardeinstellung Ihres Linux-Systems (/data/ocum-backup) oder auf einen neuen Pfad Ihrer Wahl geändert, da auf dem Linux-System kein Pfad /jail/support vorhanden ist.
+* Wenn WFA verwendet wird, ist eine Neukonfiguration beider Seiten Ihrer Workflow Automation Verbindung erforderlich.
+* Bei Verwendung von SAML ist eine Neukonfiguration der Einstellungen für die SAML-Authentifizierung erforderlich.
+
+
+Nachdem Sie sich vergewissert haben, dass auf Ihrem Linux-System alles wie erwartet funktioniert, können Sie die virtuelle Appliance Unified Manager herunterfahren und entfernen.

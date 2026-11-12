@@ -1,0 +1,31 @@
+---
+permalink: config/task_access_unified_manager_web_ui.html 
+sidebar: sidebar 
+keywords: access, unified manager, web ui 
+summary: Nach der Installation von Unified Manager können Sie über die Web-Benutzeroberfläche Unified Manager einrichten, um mit der Überwachung Ihrer ONTAP Systeme zu beginnen. 
+---
+= Zugriff auf die Web-Benutzeroberfläche in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach der Installation von Unified Manager können Sie über die Web-Benutzeroberfläche Unified Manager einrichten, um mit der Überwachung Ihrer ONTAP Systeme zu beginnen.
+
+.Bevor Sie beginnen
+* Wenn Sie zum ersten Mal auf die Web-Benutzeroberfläche zugreifen, müssen Sie sich als Wartungsbenutzer (bzw. als umadmin-Benutzer bei Linux-Installationen) anmelden.
+* Wenn Sie Benutzern den Zugriff auf Unified Manager über den Kurznamen anstelle des vollqualifizierten Domainnamens (FQDN) oder der IP-Adresse ermöglichen möchten, muss Ihre Netzwerkkonfiguration diesen Kurznamen in einen gültigen FQDN auflösen.
+* Wenn der Server ein selbstsigniertes digitales Zertifikat verwendet, zeigt der Browser möglicherweise eine Warnung an, dass das Zertifikat nicht vertrauenswürdig ist. Sie können entweder das Risiko bestätigen, um den Zugriff fortzusetzen, oder ein von einer Zertifizierungsstelle (CA) signiertes digitales Zertifikat für die Serverauthentifizierung installieren.
+
+
+.Schritte
+. Der Aufruf der Unified Manager Weboberfläche im Browser erfolgt über die URL, die am Ende der Installation angezeigt wird. Die URL ist die IP-Adresse oder die vollqualifizierte Domain (FQDN) des Unified Manager Servers.
++
+Der Link hat folgendes Format: `\https://URL`.
+
+. Für die Anmeldung bei der Unified Manager Weboberfläche verwenden Sie Ihre Wartungsbenutzerdaten.
+
+
+
+NOTE: Wenn Sie innerhalb einer Stunde drei aufeinanderfolgende erfolglose Versuche unternehmen, sich bei der Web UI anzumelden, wird Ihr Zugriff auf das System gesperrt, und Sie müssen sich an Ihren Systemadministrator wenden. Dies gilt nur für lokale Benutzer.

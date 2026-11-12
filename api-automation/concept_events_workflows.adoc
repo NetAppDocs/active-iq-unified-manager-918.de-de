@@ -1,0 +1,43 @@
+---
+permalink: api-automation/concept_events_workflows.html 
+sidebar: sidebar 
+keywords: determine, issues, storage, objects, events 
+summary: Wenn ein Storage Objekt in Ihrem Datacenter einen Schwellenwert überschreitet, erhalten Sie eine Benachrichtigung über dieses Ereignis. Mithilfe dieser Benachrichtigung können Sie das Problem analysieren und mithilfe der Ereignis APIs eine Korrekturmaßnahme ergreifen. 
+---
+= Probleme mit Speicherobjekten mithilfe der Event-APIs von Active IQ Unified Manager ermitteln
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Storageobjekt in Ihrem Datacenter einen Schwellenwert überschreitet, erhalten Sie eine Benachrichtigung über dieses Ereignis. Mithilfe dieser Benachrichtigung können Sie das Problem analysieren und mithilfe der `events` APIs Korrekturmaßnahmen ergreifen.
+
+Dieser Workflow verwendet das Beispiel eines Volume als Ressourcenobjekt. Mithilfe der `events` APIs können Sie die Liste der Ereignisse abrufen, die mit einem Volume verknüpft sind, die kritischen Probleme für dieses Volume analysieren und anschließend Korrekturmaßnahmen ergreifen, um das Problem zu beheben.
+
+image::../media/handling_event_related_issues_of_a_storage_object_flowchart.gif[Ein Flussdiagramm, das die Analyse von Volumenereignissen von der Auflistung der Ereignisse über Korrekturmaßnahme bis zum Ende darstellt.]
+
+Mit den folgenden Schritten lassen sich die Probleme in Ihrem Volume ermitteln, bevor Korrekturmaßnahmen ergriffen werden.
+
+.Schritte
+. Analyse der kritischen Active IQ Unified Manager Ereignisbenachrichtigungen für die Volumes in Ihrem Datacenter.
+. Die Abfrage aller Ereignisse für die Volumes erfolgt mithilfe der folgenden Parameter in der API /management-server/events:
+`"*resource_type": "volume*"`
+`"*severity": "critical*"`
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Management-Server
+ a| 
+GET
+ a| 
+/management-server/events
+
+|===
+. Die Ausgabe kann angezeigt und die Probleme in den spezifischen Volumes analysiert werden.
+. Die erforderlichen Maßnahmen zur Behebung der Probleme können mithilfe der Unified Manager REST APIs oder der Web UI durchgeführt werden.
+

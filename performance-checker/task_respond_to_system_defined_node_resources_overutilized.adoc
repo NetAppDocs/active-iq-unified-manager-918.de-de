@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/task_respond_to_system_defined_node_resources_overutilized.html 
+sidebar: sidebar 
+keywords: node, resources, overutilized, performance, events 
+summary: Unified Manager generiert Warnereignisse zu überlasteten Knotenressourcen, wenn ein einzelner Knoten über die Grenzen seiner betrieblichen Effizienz hinaus arbeitet und dadurch potenziell die Latenzzeiten von Workloads beeinträchtigt. Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Performance Probleme zu korrigieren, bevor viele Workloads von Latenzproblemen betroffen sind. 
+---
+= Reaktion auf Ereignisse der Knotenressourcenüberlastung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager generiert Warnereignisse zu überlasteten Knotenressourcen, wenn ein einzelner Knoten über die Grenzen seiner betrieblichen Effizienz hinaus arbeitet und dadurch potenziell die Latenzzeiten von Workloads beeinträchtigt. Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Performance Probleme zu korrigieren, bevor viele Workloads von Latenzproblemen betroffen sind.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Es muss neue oder veraltete Performance-Ereignisse geben.
+
+
+Unified Manager generiert Warnereignisse für Richtlinienverstöße bei überlasteten Knotenressourcen, indem er Knoten identifiziert, die ihre Performancekapazität länger als 30 Minuten zu mehr als 100 % nutzen.
+
+Sie können System Manager oder die ONTAP Befehle verwenden, um diese Art von Performanceproblem zu beheben; dazu gehören unter anderem die folgenden Aufgaben:
+
+* Erstellung und Anwendung einer QoS-Richtlinie auf alle Volumes oder LUNs, die Systemressourcen übermäßig beanspruchen
+* Reduzierung der maximalen QoS Durchsatzbegrenzung einer Richtliniengruppe mit zugewiesenen Workloads
+* Verschieben eines Workloads auf ein anderes Aggregat oder einen anderen Knoten
+* Erhöhen der Kapazität durch Hinzufügen von Festplatten zum Knoten oder durch ein Upgrade auf einen Knoten mit schnellerer CPU und mehr RAM
+
+
+.Schritte
+. Die Seite *Ereignisdetails* enthält Informationen zum Ereignis.
+. In der *Beschreibung* wird die Schwellenwertüberschreitung beschrieben, die das Ereignis verursacht hat.
++
+Beispielsweise weist die Meldung „`Perf. Capacity Used value of 139% on simplicity-02 has triggered a WARNING event to identify potential performance problems in the data processing unit.`“ darauf hin, dass die Performance-Kapazität auf Node simplicity-02 überlastet ist und die Node-Performance beeinträchtigt.
+
+. Im Abschnitt *Systemdiagnose* sind drei Diagramme zu sehen: eines zur auf dem Knoten genutzten Performance Kapazität, eines zu den durchschnittlichen Storage IOPS, die von den wichtigsten Workloads genutzt werden, und eines zur Latenz der wichtigsten Workloads. In dieser Anordnung wird ersichtlich, welche Workloads die Ursache für die Latenz auf dem Knoten sind.
++
+Sie können durch Bewegen des Cursors über das IOPS-Diagramm sehen, auf welche Workloads QoS-Richtlinien angewendet werden und auf welche nicht.
+
+. Im Abschnitt *Empfohlene Maßnahmen* geht es darum, die Vorschläge zu prüfen und festzustellen, welche Maßnahmen zu ergreifen sind, um eine Erhöhung der Latenz für den Workload zu vermeiden.
++
+Falls erforderlich, zeigt ein Klick auf die Schaltfläche *Help* weitere Details zu den vorgeschlagenen Maßnahmen an, mit denen sich das Performance-Ereignis möglicherweise beheben lässt.
+
+

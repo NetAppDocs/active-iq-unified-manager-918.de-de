@@ -1,0 +1,21 @@
+---
+permalink: storage-mgmt/concept_why_you_use_quotas.html 
+sidebar: sidebar 
+keywords: use, quotas 
+summary: Sie können Quoten verwenden, um die Ressourcennutzung in FlexVol Volumes zu begrenzen, Benachrichtigungen zu erhalten, wenn die Ressourcennutzung bestimmte Werte erreicht, oder die Ressourcennutzung zu verfolgen. 
+---
+= Informationen zu Quoten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Quoten verwenden, um die Ressourcennutzung in FlexVol Volumes zu begrenzen, Benachrichtigungen zu erhalten, wenn die Ressourcennutzung bestimmte Werte erreicht, oder die Ressourcennutzung zu verfolgen.
+
+Sie legen aus folgenden Gründen ein Kontingent fest:
+
+* Um den Speicherplatz oder die Anzahl der Dateien zu begrenzen, die von einem Benutzer oder einer Gruppe verwendet werden können oder die in einem qtree enthalten sein können
+* Zum Nachverfolgen des von einem Benutzer, einer Gruppe oder einem qtree verwendeten Speicherplatzes oder der Anzahl der Dateien, ohne ein Limit festzulegen
+* Zum Warnen von Benutzern, wenn ihre Festplatten- oder Dateinutzung hoch ist
+

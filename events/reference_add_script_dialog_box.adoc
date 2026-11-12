@@ -1,0 +1,26 @@
+---
+permalink: events/reference_add_script_dialog_box.html 
+sidebar: sidebar 
+keywords: add, script, dialog, box 
+summary: Im Dialogfeld „Skript hinzufügen“ können Sie Skripte zu Unified Manager hinzufügen. Sie können Warnungen mit Ihren Skripten so konfigurieren, dass Ereignisse, die für Storage Objekte generiert werden, automatisch behoben werden. 
+---
+= Dialogfeld „Skript hinzufügen“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Skript hinzufügen“ können Sie Skripte zu Unified Manager hinzufügen. Sie können Warnungen mit Ihren Skripten so konfigurieren, dass Ereignisse, die für Storage Objekte generiert werden, automatisch behoben werden.
+
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+* *Auswahl der Skriptdatei*
++
+Ermöglicht die Auswahl eines Skripts für die Warnmeldung.
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung für das Skript angeben.
+
+

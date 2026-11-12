@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_confirm_that_response_time_is_within_expected_range.html 
+sidebar: sidebar 
+keywords: confirm, latency, within, expected, range 
+summary: 'Wenn eine Clusterkomponente überlastet ist, kann dies die Antwortzeit (Latenz) der darauf zugreifenden Volume-Workloads verringern. Sie können die Latenz jedes betroffenen Workloads auf der überlasteten Komponente überprüfen, um sicherzustellen, dass sie im erwarteten Bereich liegt. Durch Klicken auf einen Volume-Namen können Sie außerdem die Verlaufsdaten für dieses Volume anzeigen.' 
+---
+= Bestätigen Sie, dass die Latenz im Active IQ Unified Manager innerhalb des erwarteten Bereichs liegt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine Clusterkomponente überlastet ist, kann dies die Antwortzeit (Latenz) der darauf zugreifenden Volume-Workloads verringern. Sie können die Latenz jedes betroffenen Workloads auf der überlasteten Komponente überprüfen, um sicherzustellen, dass sie im erwarteten Bereich liegt. Durch Klicken auf einen Volume-Namen können Sie außerdem die Verlaufsdaten für dieses Volume anzeigen.
+
+Wenn sich das Performance-Ereignis im veralteten Zustand befindet, könnte die Latenz jedes an dem Ereignis beteiligten Opfers wieder innerhalb des erwarteten Bereichs liegen.

@@ -1,0 +1,45 @@
+---
+permalink: storage-mgmt/reference_window_layout_customization.html 
+sidebar: sidebar 
+keywords: window, layout, customization 
+summary: Mit Active IQ Unified Manager können Sie das Layout der Informationen auf den Storage- und Netzwerkobjektseiten anpassen. Durch die Anpassung der Fenster können Sie steuern, welche Daten angezeigt werden und wie diese dargestellt werden. 
+---
+= Anpassen des Fensterlayouts in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Active IQ Unified Manager können Sie das Layout der Informationen auf den Storage- und Netzwerkobjektseiten anpassen. Durch die Anpassung der Fenster können Sie steuern, welche Daten angezeigt werden und wie diese dargestellt werden.
+
+* *Sortierung*
++
+Sie können auf die Spaltenüberschrift klicken, um die Sortierreihenfolge der Spalteneinträge zu ändern. Wenn Sie auf die Spaltenüberschrift klicken, erscheinen die Sortierpfeile (image:../media/sort_asc_um60.gif["Symbol für aufsteigende Spaltensortierung"] und image:../media/sort_desc_um60.gif["Symbol für Spaltensortierung, absteigend"]) für diese Spalte.
+
+* *Filtern*
++
+Durch Klicken auf das Filtersymbol (image:../media/filtering_icon.gif[""]) lassen sich Filter anwenden, um die Anzeige von Informationen auf den Seiten für Storage- und Netzwerkobjekte so anzupassen, dass nur die Einträge angezeigt werden, die den angegebenen Bedingungen entsprechen. Die Filter werden im Bereich „Filter“ angewendet.
+
++
+Im Filterbereich lassen sich die meisten Spalten anhand der ausgewählten Optionen filtern. Beispielsweise lassen sich in der Ansicht „Zustand: Alle Volumes“ im Filterbereich alle Volumes anzeigen, die offline sind, wenn die entsprechende Filteroption unter „Status“ ausgewählt wird.
+
++
+Kapazitätsbezogene Spalten in jeder Liste zeigen Kapazitätsdaten immer in den entsprechenden Einheiten an, gerundet auf zwei Dezimalstellen. Dies gilt auch beim Filtern von Kapazitätsspalten. Wenn beispielsweise in der Ansicht „Health: All Aggregates“ in der Spalte „Total Data Capacity“ der Filter verwendet wird, um Daten größer als 20,45 GB zu filtern, wird die tatsächliche Kapazität von 20,454 GB als 20,45 GB angezeigt. Entsprechend wird beim Filtern von Daten kleiner als 20,45 GB die tatsächliche Kapazität von 20,449 GB als 20,45 GB angezeigt.
+
++
+Wenn Sie in der Ansicht „Integrität: Alle Aggregate“ den Filter in der Spalte „Verfügbare Daten %“ verwenden, um Daten über 20,45 % zu filtern, wird die tatsächliche Kapazität von 20,454 % als 20,45 % angezeigt. Wenn Daten unter 20,45 % gefiltert werden, wird die tatsächliche Kapazität von 20,449 % als 20,45 % angezeigt.
+
+* *Spalten ein- oder ausblenden*
++
+Über das Symbol für die Spaltenanzeige (*Ein-/Ausblenden*) lässt sich auswählen, welche Spalten angezeigt werden sollen. Nachdem die gewünschten Spalten ausgewählt wurden, lässt sich ihre Reihenfolge durch Ziehen mit der Maus ändern.
+
+* *Suche*
++
+Mithilfe des Suchfelds können Sie nach bestimmten Objektattributen suchen, um die Liste der Elemente auf der Inventarseite weiter einzugrenzen. Beispielsweise kann „cloud“ eingegeben werden, um die Liste der Volumes auf der Volumes-Inventarseite zu verfeinern, sodass alle Volumes angezeigt werden, die das Wort „cloud“ enthalten.
+
+* *Datenexport*
++
+Sie können auf die Schaltfläche *Reports* klicken (oder auf die Schaltfläche *Export*, um Daten in eine CSV `(.csv)`-Datei,  `(.pdf)`ein Dokument oder eine Microsoft Excel `(.xlsx)` Datei zu exportieren) und die exportierten Daten zum Erstellen von Berichten verwenden.
+
+

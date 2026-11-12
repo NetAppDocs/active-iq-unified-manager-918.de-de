@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_delete_values_from_annotations.html 
+sidebar: sidebar 
+keywords: delete, values, annotations 
+summary: Sie können Werte löschen, die mit benutzerdefinierten Annotationen verknüpft sind, wenn der jeweilige Wert nicht mehr auf die Annotation zutrifft. 
+---
+= Werte aus Anmerkungen in Active IQ Unified Manager löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Werte löschen, die mit benutzerdefinierten Annotationen verknüpft sind, wenn der jeweilige Wert nicht mehr auf die Annotation zutrifft.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Der Annotationswert darf keiner Annotationsregel oder Gruppenregel zugeordnet sein.
+
+
+Werte aus vordefinierten Annotationen können nicht gelöscht werden.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Annotations*.
+. In der Liste der Anmerkungen auf der Registerkarte *Anmerkungen* können Sie die Anmerkung auswählen, aus der ein Wert gelöscht werden soll.
+. Im Bereich *Werte* der Registerkarte *Anmerkungen* ist der zu löschende Wert auszuwählen; anschließend ist auf *Löschen* zu klicken.
+. Im Dialogfeld *Warning* erfolgt die Auswahl von *Yes*.
++
+Der Wert wird gelöscht und in der Liste der Werte für die ausgewählte Annotation nicht mehr angezeigt.
+
+

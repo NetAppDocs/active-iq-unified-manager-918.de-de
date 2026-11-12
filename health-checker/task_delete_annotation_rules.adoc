@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_delete_annotation_rules.html 
+sidebar: sidebar 
+keywords: delete, annotation rules 
+summary: Annotationsregeln können aus Active IQ Unified Manager gelöscht werden, wenn sie nicht mehr erforderlich sind. 
+---
+= Anmerkungsregeln in Active IQ Unified Manager löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Annotationsregeln können aus Active IQ Unified Manager gelöscht werden, wenn sie nicht mehr erforderlich sind.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Beim Löschen einer Annotationsregel wird die Annotation von den Storage Objekten getrennt und entfernt.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Annotations*.
+. Auf der Registerkarte *Anmerkungsregeln* wählen Sie die Anmerkungsregel aus, die Sie löschen möchten, und klicken dann auf *Löschen*.
+. Im Dialogfeld *Warning* dient *Yes* zur Bestätigung des Löschvorgangs.
+

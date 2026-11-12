@@ -1,0 +1,124 @@
+---
+permalink: events/reference_edit_alert_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, alert, dialog box, name, resources, events, actions 
+summary: Sie können Alarmeigenschaften wie die Ressource, mit der der Alarm verknüpft ist, Ereignisse, Skripte und Benachrichtigungsoptionen bearbeiten. 
+---
+= Bearbeiten der Alarmeigenschaften in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Alarmeigenschaften wie die Ressource, mit der der Alarm verknüpft ist, Ereignisse, Skripte und Benachrichtigungsoptionen bearbeiten.
+
+
+
+[[name]]
+== Name
+
+In diesem Bereich können Sie den Namen und die Beschreibung der Warnung bearbeiten.
+
+* *Alarmname*
++
+Ermöglicht die Bearbeitung des Alert-Namens.
+
+* *Warnungsbeschreibung*
++
+Ermöglicht Ihnen, eine Beschreibung für die Warnung anzugeben.
+
+* *Alarmzustand*
++
+Ermöglicht das Aktivieren oder Deaktivieren der Warnung.
+
+
+
+
+
+[[resources]]
+== Ressourcen
+
+In diesem Bereich können Sie einzelne Ressourcen auswählen oder die Ressourcen anhand einer dynamischen Regel gruppieren, für die Sie die Warnung auslösen möchten. Sie können nach Ressourcen suchen, indem Sie einen Ressourcentyp aus der Dropdown-Liste auswählen, oder Sie können den genauen Ressourcennamen angeben, um eine bestimmte Ressource anzuzeigen.
+
+* *Enthalten*
++
+Ermöglicht Ihnen, die Ressourcen einzubeziehen, für die Warnungen ausgelöst werden sollen. Sie können einen Text-String angeben, um Ressourcen zu gruppieren, die mit diesem String übereinstimmen, und diese Gruppe zur Aufnahme in die Warnung auswählen. Beispielsweise können Sie alle Volumes gruppieren, deren Name den String "`vol0`" enthält.
+
+* *Ausschließen*
++
+Ermöglicht das Ausschließen von Ressourcen, für die keine Warnmeldungen ausgelöst werden sollen. Beispielsweise können alle Volumes ausgeschlossen werden, deren Name die Zeichenfolge „`xyz`“ enthält.
+
++
+[NOTE]
+====
+Die Registerkarte „Ausschließen“ wird nur angezeigt, wenn Sie alle Ressourcen eines bestimmten Ressourcentyps auswählen, zum Beispiel +<<All Volumes>>+ oder +<<All Volumes whose name contains 'xyz'>>+.
+
+====
+
+
+
+
+[[events]]
+== Veranstaltungen
+
+In diesem Bereich können Sie die Ereignisse auswählen, für die Benachrichtigungen ausgelöst werden sollen. Sie können Benachrichtigungen für Ereignisse basierend auf einem bestimmten Schweregrad oder für eine Gruppe von Ereignissen auslösen.
+
+* *Ereignisschweregrad*
++
+Damit können Sie Ereignisse anhand des Typs des Schweregrads auswählen, der Kritisch, Fehler oder Warnung sein kann.
+
+* *Ereignisname enthält*
++
+Ermöglicht die Auswahl von Ereignissen, deren Name die angegebenen Zeichen enthält.
+
+
+
+
+
+[[actions]]
+== Aktionen
+
+In diesem Bereich können Sie die Benachrichtigungsmethode und die Benachrichtigungshäufigkeit festlegen.
+
+* *Benachrichtigung dieser Benutzer*
++
+Hier können Sie die E-Mail-Adresse oder den Benutzernamen bearbeiten oder eine neue E-Mail-Adresse oder einen neuen Benutzernamen angeben, um Benachrichtigungen zu erhalten.
+
+* *Benachrichtigungshäufigkeit*
++
+Damit lässt sich die Häufigkeit bearbeiten, mit der der Management-Server Benachrichtigungen sendet, bis das Ereignis bestätigt, behoben oder in den Status „Veraltet“ verschoben wird.
+
++
+Sie können zwischen folgenden Benachrichtigungsmethoden wählen:
+
++
+** Nur einmal benachrichtigen
+** Benachrichtigung mit einer festgelegten Häufigkeit
+** Benachrichtigung mit einer festgelegten Häufigkeit innerhalb des angegebenen Zeitraums
+
+
+* *SNMP-Trap senden*
++
+Damit können Sie festlegen, ob SNMP-Traps an den global konfigurierten SNMP-Host gesendet werden sollen.
+
+* *Skript ausführen*
++
+Ermöglicht es Ihnen, ein Skript mit der Warnung zu verknüpfen. Dieses Skript wird beim Generieren einer Warnung ausgeführt.
+
+
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert die Änderungen und schließt das Dialogfeld.
+
+* *Stornieren*
++
+Verwirft die Änderungen und schließt das Dialogfeld.
+
+

@@ -1,0 +1,49 @@
+---
+permalink: data-protection/task_resynchronize_protection_relationships.html 
+sidebar: sidebar 
+keywords: resynchronize, protection, relationships, volume, relationships page 
+summary: Auf der Seite „Volume Relationships“ können Sie eine Beziehung neu synchronisieren, entweder um sich von einem Ereignis zu erholen, das Ihr Quellvolume deaktiviert hat, oder wenn Sie die aktuelle Quelle in ein anderes Volume ändern möchten. 
+---
+= Neusynchronisierung von Schutzbeziehungen auf der Seite „Volume Beziehungen“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Volume Relationships“ können Sie eine Beziehung neu synchronisieren, entweder um sich von einem Ereignis zu erholen, das Ihr Quellvolume deaktiviert hat, oder wenn Sie die aktuelle Quelle in ein anderes Volume ändern möchten.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+.Schritte
+. Auf der Seite *Volume Relationships* lassen sich ein oder mehrere Volumes mit angehaltenen Beziehungen auswählen; anschließend kann in der Symbolleiste auf *Resynchronize* geklickt werden.
++
+Das Dialogfeld „Resynchronisieren“ wird angezeigt.
+
+. Auf der Registerkarte *Resynchronisierungsoptionen* lassen sich eine Übertragungspriorität und die maximale Transferrate auswählen.
+. Nach einem Klick auf *Source Snapshot Copies* ist in der Spalte *Snapshot Copy* auf *Default* zu klicken.
++
+Das Dialogfeld „Quell-Snapshot-Kopie auswählen“ wird angezeigt.
+
+. Zum Angeben einer vorhandenen Snapshot-Kopie anstelle der Standard-Snapshot-Kopie ist *Vorhandene Snapshot Copy* anzuklicken und eine Snapshot-Kopie aus der Liste auszuwählen.
+. Anschließend *Absenden* auswählen.
++
+Sie kehren zum Dialogfeld „Resynchronisieren“ zurück.
+
+. Bei Auswahl von mehr als einer Quelle für die Resynchronisierung wird für die nächste Quelle, für die eine vorhandene Snapshot-Kopie angegeben werden soll, *Default* ausgewählt.
+. Mit *Submit* wird der Resynchronisierungsvorgang gestartet.
++
+Der Resynchronisierungsauftrag startet, danach gelangen Sie zurück zur Seite „Volume Relationships“, und oben auf der Seite erscheint ein Link zu Aufträgen.
+
+. *Optional:* Auf der Seite *Volume Relationships* lässt sich über *View Jobs* der Status jedes Resynchronisierungsauftrags verfolgen.
++
+Eine gefilterte Liste der Jobs wird angezeigt.
+
+. *Optional:* Über den Pfeil *Back* in Ihrem Browser ist die Rückkehr zur Seite *Volume Relationships* möglich.
++
+Der Resynchronisierungsvorgang ist abgeschlossen, wenn alle Jobaufgaben erfolgreich abgeschlossen sind.
+
+

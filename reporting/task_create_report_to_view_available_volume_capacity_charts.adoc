@@ -1,0 +1,88 @@
+---
+permalink: reporting/task_create_report_to_view_available_volume_capacity_charts.html 
+sidebar: sidebar 
+keywords: create, report, view, available, volume, capacity, charts 
+summary: Sie können einen Bericht erstellen, um die verfügbare Volumenkapazität in einem Excel-Diagramm zu analysieren. 
+---
+= Es kann ein Bericht erstellt werden, um die verfügbaren Volumenkapazitätsdiagramme in Active IQ Unified Manager anzuzeigen.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die verfügbare Volumenkapazität in einem Excel-Diagramm zu analysieren.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mit den folgenden Schritten lässt sich eine Ansicht „Health: All Volumes“ öffnen, die Ansicht in Excel herunterladen, ein Diagramm zur verfügbaren Kapazität erstellen, die angepasste Excel-Datei hochladen und der Abschlussbericht planen.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. Die Auswahl erfolgt über *Reports* > *Download Excel*.
++
+image::../media/download_excel_menu.png[Ein Screenshot der Benutzeroberfläche, der zeigt, wie der Download von excel aus Berichten erfolgt.]
+
++
+Je nach Browser müssen Sie möglicherweise auf *OK* klicken, um die Datei zu speichern.
+
+. Falls erforderlich, kann auf *Bearbeitung aktivieren* geklickt werden.
+. Die heruntergeladene Datei lässt sich in Excel öffnen.
+. Auf dem `data` Blatt können Sie die Daten auswählen, die in den `Volume` und `Available Data` %-Spalten verwendet werden.
+. Im Menü *Einfügen* erfolgt die Auswahl einer Option `3-D piechart.`
++
+Das Diagramm zeigt, welche Volumes über den größten verfügbaren Speicherplatz verfügen. Das Diagramm erscheint im Datenblatt.
+
++
+[NOTE]
+====
+Je nach Netzwerkkonfiguration kann die Auswahl ganzer Spalten oder zu vieler Datenzeilen dazu führen, dass Ihr Kreisdiagramm unlesbar wird. Dieses Beispiel verwendet ein 3D-Kreisdiagramm, Sie können jedoch jeden beliebigen Diagrammtyp verwenden. Verwenden Sie das Diagramm, das die zu erfassenden Daten am besten darstellt.
+
+====
+. Als Diagrammtitel wird *Available Capacity* verwendet.
+. Nach einem Rechtsklick auf das Diagramm steht die Option *Diagramm verschieben* zur Auswahl.
+. Auszuwählen ist *New sheet*; das Blatt erhält den Namen *Storage Volume Charts*.
++
+[NOTE]
+====
+Das neue Tabellenblatt sollte nach den Informations- und Datenblättern erscheinen.
+
+====
++
+image::../media/move_chart.png[Ein Screenshot der Benutzeroberfläche mit der Benennung eines neuen Tabellenblatts.]
+
+. Über die Menüs *Design* und *Format*, die bei ausgewähltem Diagramm verfügbar sind, können Sie das Aussehen des Diagramms anpassen.
+. Wenn Sie zufrieden sind, können Sie die Datei mit Ihren Änderungen speichern.
+. In Unified Manager befindet sich die Option unter *Reports* > *Upload Excel*.
++
+[NOTE]
+====
+Wichtig ist, dass Sie sich in derselben Ansicht befinden, in der Sie die Excel-Datei heruntergeladen haben.
+
+====
+. Auszuwählen ist die Excel-Datei, die Sie geändert haben.
+. Auf *Öffnen* klicken.
+. Anschließend *Absenden* auswählen.
++
+Neben dem Menüpunkt *Reports* > *Upload Excel* erscheint ein Häkchen.
+
++
+image::../media/upload_excel.png[Ein Screenshot der Benutzeroberfläche, der das Hochladen von Excel-Dateien in Berichte zeigt.]
+
+. Anschließend erfolgt die Auswahl von *Scheduled Reports*.
+. Durch Klicken auf *Zeitplan hinzufügen* wird der Seite *Berichtszeitpläne* eine neue Zeile hinzugefügt, sodass die Zeitplanmerkmale für den neuen Bericht definiert werden können.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+[NOTE]
+====
+Für den Bericht ist das *XLSX* Format auszuwählen.
+
+====
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht dargestellten Ergebnissen sollten Sie möglicherweise die Lastverteilung auf Ihre Volumes optimieren.

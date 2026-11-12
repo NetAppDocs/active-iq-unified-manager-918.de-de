@@ -1,0 +1,76 @@
+---
+permalink: config/task_enable_remote_authentication.html 
+sidebar: sidebar 
+keywords: enable, remote, authentication 
+summary: Sie können die Remote-Authentifizierung aktivieren, damit der Unified Manager Server mit Ihren Authentifizierungsservern kommunizieren kann. Die Benutzer des Authentifizierungsservers können über die grafische Benutzeroberfläche von Unified Manager auf Storage-Objekte und Daten zugreifen und diese managen. 
+---
+= Remote Authentifizierung in Active IQ Unified Manager ist aktiviert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Remote-Authentifizierung aktivieren, damit der Unified Manager Server mit Ihren Authentifizierungsservern kommunizieren kann. Die Benutzer des Authentifizierungsservers können über die grafische Benutzeroberfläche von Unified Manager auf Storage-Objekte und Daten zugreifen und diese managen.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+[NOTE]
+====
+Der Unified Manager Server muss direkt mit dem Authentifizierungsserver verbunden sein. Sie müssen alle lokalen LDAP-Clients wie SSSD (System Security Services Daemon) oder NSLCD (Name Service LDAP Caching Daemon) deaktivieren.
+
+====
+Sie können die Remote-Authentifizierung entweder über Open LDAP oder Active Directory aktivieren. Wenn die Remote-Authentifizierung deaktiviert ist, können Remote-Benutzer nicht auf Unified Manager zugreifen.
+
+Die Remote-Authentifizierung wird über LDAP und LDAPS (Secure LDAP) unterstützt. Unified Manager verwendet Port 389 als Standardport für ungesicherte Kommunikation und Port 636 als Standardport für gesicherte Kommunikation.
+
+[NOTE]
+====
+Das zur Authentifizierung von Benutzern verwendete Zertifikat muss dem X.509-Format entsprechen.
+
+====
+.Schritte
+. Im linken Navigationsbereich wählen Sie *Allgemein* > *Remote-Authentifizierung* aus.
+. Das Kontrollkästchen für *Remote-Authentifizierung...* aktivieren.
+. Im Feld „Authentifizierungsdienst“ erfolgen die Auswahl des Diensttyps und die Konfiguration des Authentifizierungsdiensts.
++
+[cols="2*"]
+|===
+| Für den Authentifizierungstyp... | Eingabe der folgenden Informationen... 
+
+
+ a| 
+Active Directory
+ a| 
+** Name des Administrators des Authentifizierungsservers in einem der folgenden Formate:
++
+*** `domainname\username`
+*** `username@domainname`
+*** `Bind Distinguished Name` (unter Verwendung der entsprechenden LDAP-Notation)
+
+
+** Administratorpasswort
+** Basis individueller Name (unter Verwendung der entsprechenden LDAP-Notation)
+
+
+
+
+ a| 
+OpenLDAP
+ a| 
+** Bind individueller Name (in der entsprechenden LDAP-Notation)
+** Bind Passwort
+** Basisindividueller Name
+
+
+|===
++
+Wenn die Authentifizierung eines Active Directory-Benutzers lange dauert oder eine Zeitüberschreitung auftritt, benötigt der Authentifizierungsserver wahrscheinlich lange für eine Antwort. Das Deaktivieren der Unterstützung für verschachtelte Gruppen in Unified Manager kann die Authentifizierungszeit verkürzen.
+
++
+Wenn für den Authentifizierungsserver die Option „Use Secure Connection“ ausgewählt ist, kommuniziert Unified Manager mit dem Authentifizierungsserver über das Secure Sockets Layer (SSL)-Protokoll.
+
+. *Optional:* Authentifizierungsserver hinzufügen und die Authentifizierung testen.
+. Auf *Speichern* klicken.
+

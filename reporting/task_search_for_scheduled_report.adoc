@@ -1,0 +1,52 @@
+---
+permalink: reporting/task_search_for_scheduled_report.html 
+sidebar: sidebar 
+keywords: search, schedule, report 
+summary: Geplante Berichte können nach Name, Ansichtsname, Objekttyp oder Empfängern durchsucht werden. 
+---
+= Suche nach einem geplanten Bericht in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Geplante Berichte können nach Name, Ansichtsname, Objekttyp oder Empfängern durchsucht werden.
+
+. Im linken Navigationsbereich ist *Storage Management* > *Report Schedules* auszuwählen.
+. Das Textfeld *Geplante Berichte suchen* dient zur Suche nach geplanten Berichten.
++
+[cols="2*"]
+|===
+| Berichte nach ... finden | Ausprobieren ... 
+
+
+ a| 
+Name des Zeitplans
+ a| 
+Eingabe eines Teils des Namens des Berichtszeitplans.
+
+
+
+ a| 
+Name der Ansicht
+ a| 
+Einen Teil des Namens der Berichtsansicht eingeben. Standardansichten und benutzerdefinierte Ansichten erscheinen in der Ansichtsliste.
+
+
+
+ a| 
+Empfänger
+ a| 
+Eingabe eines Teils der E-Mail-Adresse.
+
+
+
+ a| 
+Dateityp
+ a| 
+Als Typ "PDF", "CSV" oder "XLSX" angeben.
+
+|===
+. Sie können auf eine Spaltenüberschrift klicken, um Berichte nach dieser Spalte in aufsteigender oder absteigender Reihenfolge zu sortieren, z. B. nach dem Namen des Zeitplans oder dem Format.
+

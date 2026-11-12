@@ -1,0 +1,92 @@
+---
+permalink: install-windows/task_install_unified_manager_on_windows.html 
+sidebar: sidebar 
+keywords: install, unified manager 
+summary: Sie können Unified Manager installieren, um Storage-Kapazität, Verfügbarkeit, Performance und Schutzprobleme zu überwachen und zu beheben. 
+---
+= Installation von Active IQ Unified Manager unter Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager installieren, um Storage-Kapazität, Verfügbarkeit, Performance und Schutzprobleme zu überwachen und zu beheben.
+
+.Bevor Sie beginnen
+* Das System, auf dem Sie Unified Manager installieren möchten, muss die System- und Softwareanforderungen erfüllen.
++
+Weitere Informationen finden Sie unter link:concept_virtual_infrastructure_or_hardware_system_requirements.html["Hardwaresystemanforderungen"].
+
++
+Weitere Informationen finden Sie unter link:reference_windows_software_and_installation_requirements.html["Windows Software und Installationsvoraussetzungen"].
+
++
+[NOTE]
+====
+Ab Unified Manager 9.5 ist OpenJDK im Installationspaket enthalten und wird automatisch installiert. Oracle Java wird ab Unified Manager 9.5 nicht mehr unterstützt.
+
+====
+* Sie sollten über Windows-Administratorrechte verfügen. Ihr Benutzername darf nicht mit einem Ausrufezeichen "`!`". Installation of Unified Manager might fail if the user name of user running the installation begins with "`!`" beginnen.
+* Alle Cluster werden unterstützt, mit Ausnahme von ASA r2 Systemen.
+* Sie benötigen einen unterstützten Webbrowser.
+* Das Passwort des Unified Manager Wartungsbenutzers sollte zwischen 8 und 20 Zeichen lang sein und Groß- oder Kleinbuchstaben, Ziffern und Sonderzeichen enthalten.
+* Die folgenden Sonderzeichen sind in der Passwortzeichenfolge für den Wartungsbenutzer oder den MySQL Root-Benutzer nicht zulässig: " ' ` % , = & < > | ^ \ / ( ) [ ] ;:
++
+Die folgenden Sonderzeichen sind zulässig: ~ ! @ # $ * - ? . + { }
+
+
+
+.Schritte
+. Die Anmeldung bei Windows erfolgt mit dem standardmäßigen lokalen Administratorkonto.
+. Anmeldung bei der NetApp Support Site und Navigation zur Download-Seite für Unified Manager:
++
+https://mysupport.netapp.com/site/products/all/details/activeiq-unified-manager/downloads-tab["NetApp Support Site"^]
+
+. Die gewünschte Version von Unified Manager ist auszuwählen und die Endbenutzer-Lizenzvereinbarung (EULA) ist zu akzeptieren.
+. Sie laden die Unified Manager Windows-Installationsdatei oder die ZIP-Datei in ein Zielverzeichnis auf dem Windows-System herunter.
+. Falls erforderlich, erfolgt zunächst das Entpacken der ZIP-Datei und anschließend der Wechsel in das Verzeichnis, in dem sich die Installationsdatei befindet.
+. Die ausführbare Installationsdatei (.exe) des Unified Manager wird per Rechtsklick als Administrator ausgeführt.
++
+Unified Manager erkennt fehlende oder vorinstallierte Drittanbieterpakete und listet diese auf. Falls die benötigten Drittanbieterpakete nicht im System installiert sind, installiert Unified Manager sie im Rahmen der Installation.
+
+. Klicken Sie auf *Weiter*.
+. Für das Erstellen des Wartungsbenutzers werden Benutzername und Passwort benötigt.
+. Im Assistenten für die Datenbankverbindung erfolgt die Eingabe des MySQL Root-Passworts.
+. Über *Ändern* kann ein neuer Speicherort für das Unified Manager Installationsverzeichnis und das MySQL-Datenverzeichnis angegeben werden.
++
+Wenn Sie das Installationsverzeichnis nicht ändern, wird Unified Manager im Standardinstallationsverzeichnis installiert.
+
+. Klicken Sie auf *Weiter*.
+. Im Assistenten „Ready to Install Shield“ folgt ein Klick auf *Install*.
+. Nach Abschluss der Installation ist *Fertigstellen* auszuwählen.
+. Wenn auf Ihrem Windows-System eine aktive Antivirensoftware installiert ist, ist nach Abschluss der Installation ein manueller Ausschluss der folgenden Pfade vom Virenscan erforderlich:
++
+** Unified Manager Datenverzeichnis
+** Unified Manager Installationsverzeichnis
+** MySQL Datenverzeichnis
+
+
+
+
+Bei der Installation entstehen mehrere Verzeichnisse:
+
+* Installationsverzeichnis
++
+Dies ist das Stammverzeichnis für Unified Manager, das Sie während der Installation angegeben haben. Beispiel: `C:\Program Files\NetApp\`
+
+* MySQL Datenverzeichnis
++
+Dies ist das Verzeichnis, in dem die MySQL-Datenbanken gespeichert sind, das Sie während der Installation angegeben haben. Beispiel: `C:\ProgramData\MySQL\MySQLServerData\`
+
+* Java Verzeichnis
++
+Dies ist das Verzeichnis, in dem OpenJDK installiert ist. Beispiel: `C:\Program Files\NetApp\JDK\`
+
+* Anwendungsdatenverzeichnis der Unified Manager Applikation (appDataDir)
++
+Dies ist das Verzeichnis, in dem alle von der Applikation generierten Daten gespeichert werden. Dazu gehören Protokolle, Support Bundles, Backups und alle anderen zusätzlichen Daten. Beispiel: `C:\ProgramData\NetApp\OnCommandAppData\`
+
+
+
+Sie können auf die Web UI zugreifen, um die Ersteinrichtung von Unified Manager durchzuführen, wie in der link:../config/concept_configure_unified_manager.html["Konfigurieren von Active IQ Unified Manager"] beschrieben.

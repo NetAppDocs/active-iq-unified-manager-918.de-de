@@ -1,0 +1,42 @@
+---
+permalink: events/task_manage_host_system_resource_events.html 
+sidebar: sidebar 
+keywords: manage, host, system, resource, events 
+summary: Unified Manager enthält einen Dienst, der Ressourcenprobleme auf dem Hostsystem überwacht, auf dem Unified Manager installiert ist. Probleme wie unzureichender Speicherplatz oder Arbeitsspeicher auf dem Hostsystem können Ereignisse der Managementstation auslösen, die als Bannermeldungen am oberen Rand der Benutzeroberfläche angezeigt werden. 
+---
+= Verwalten von Hostsystemressourcenereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager enthält einen Dienst, der Ressourcenprobleme auf dem Hostsystem überwacht, auf dem Unified Manager installiert ist. Probleme wie unzureichender Speicherplatz oder Arbeitsspeicher auf dem Hostsystem können Ereignisse der Managementstation auslösen, die als Bannermeldungen am oberen Rand der Benutzeroberfläche angezeigt werden.
+
+Ereignisse der Managementstation weisen auf ein Problem mit dem Hostsystem hin, auf dem Unified Manager installiert ist. Beispiele für Probleme mit der Managementstation sind geringer Speicherplatz auf dem Hostsystem, ein fehlender regulärer Datenerfassungszyklus von Unified Manager sowie eine nicht oder verspätet abgeschlossene Statistikanalyse, weil die nächste Datenerfassungsabfrage gestartet wurde.
+
+Im Gegensatz zu allen anderen Unified Manager Ereignismeldungen erscheinen diese speziellen Warnungs- und kritischen Ereignisse der Managementstation als Bannermeldungen.
+
+.Schritt
+. Zum Anzeigen von Ereignisinformationen der Managementstation sind folgende Schritte erforderlich:
++
+|===
+| Wenn Sie möchten... | Folgendes ist zu tun... 
+
+
+ a| 
+Details des Ereignisses anzeigen
+ a| 
+Durch Klicken auf das Ereignisbanner wird die Seite mit den Ereignisdetails angezeigt, die Lösungsvorschläge für das Problem enthält.
+
+
+
+ a| 
+Alle Ereignisse der Managementstation anzeigen
+ a| 
+.. Im linken Navigationsbereich auf *Event Management* klicken.
+.. Im Filterbereich auf der Inventarseite „Ereignisverwaltung“ befindet sich in der Liste „Quelltyp“ das Kästchen für „Verwaltungsstation“.
+
+
+|===
+

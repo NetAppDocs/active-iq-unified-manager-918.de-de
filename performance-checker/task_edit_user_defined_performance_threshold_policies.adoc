@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/task_edit_user_defined_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: edit, user-defined, performance, threshold, policies 
+summary: Die Schwellenwerteinstellungen für vorhandene Performance-Schwellenwertrichtlinien können bearbeitet werden. Dies kann hilfreich sein, wenn Sie feststellen, dass Sie für bestimmte Schwellenwertbedingungen zu viele oder zu wenige Benachrichtigungen erhalten. 
+---
+= Das Bearbeiten benutzerdefinierter Leistungsschwellenwertrichtlinien in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Schwellenwerteinstellungen für vorhandene Performance-Schwellenwertrichtlinien können bearbeitet werden. Dies kann hilfreich sein, wenn Sie feststellen, dass Sie für bestimmte Schwellenwertbedingungen zu viele oder zu wenige Benachrichtigungen erhalten.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Bei vorhandenen Schwellenwertrichtlinien können Sie weder den Richtliniennamen noch den Typ des überwachten Storage-Objekts ändern.
+
+.Schritte
+. Im linken Navigationsbereich ist *Ereignisschwellenwerte* > *Performance* auszuwählen.
++
+Die Seite „Performance-Schwellenwerte“ wird angezeigt.
+
+. Sie wählen die Schwellenwertrichtlinie aus, die Sie ändern möchten, und klicken auf *Bearbeiten*.
++
+Die Seite „Performance Schwellenwertrichtlinie bearbeiten“ wird angezeigt.
+
+. Nach dem Vornehmen von Änderungen an der Schwellenwertrichtlinie auf *Speichern* klicken.
++
+Sie kehren zur Seite „Performance-Schwellenwerte“ zurück.
+
+
+
+Nach dem Speichern werden Änderungen sofort auf allen Storage Objekten aktualisiert, die die Richtlinie verwenden.
+
+Je nach Art der Änderungen, die Sie an der Richtlinie vorgenommen haben, kann es sinnvoll sein, die für die Objekte konfigurierten Alarmeinstellungen zu überprüfen, die die Richtlinie auf der Seite „Alert Setup“ verwenden.

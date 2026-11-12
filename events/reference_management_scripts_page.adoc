@@ -1,0 +1,48 @@
+---
+permalink: events/reference_management_scripts_page.html 
+sidebar: sidebar 
+keywords: scripts, page, command, buttons, list, view 
+summary: Die Seite „Skripte“ ermöglicht es Ihnen, Ihre benutzerdefinierten Skripte zu Unified Manager hinzuzufügen. Sie können diese Skripte mit Warnmeldungen verknüpfen, um die automatische Neukonfiguration von Storage Objekten zu ermöglichen. 
+---
+= Informationen zur Seite „Skripte“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Skripte“ ermöglicht es Ihnen, Ihre benutzerdefinierten Skripte zu Unified Manager hinzuzufügen. Sie können diese Skripte mit Warnmeldungen verknüpfen, um die automatische Neukonfiguration von Storage Objekten zu ermöglichen.
+
+Auf der Seite „Skripte“ lassen sich Skripte in Unified Manager hinzufügen oder löschen.
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+* *Hinzufügen*
++
+Zeigt das Dialogfeld „Skript hinzufügen“ an, in dem Skripte hinzugefügt werden können.
+
+* *Löschen*
++
+Löscht das ausgewählte Skript.
+
+
+
+
+
+[[list-view]]
+== Listenansicht
+
+Die Listenansicht zeigt die Skripte, die Sie zu Unified Manager hinzugefügt haben, in Tabellenform an.
+
+* *Name*
++
+Zeigt den Namen des Skripts an.
+
+* *Beschreibung*
++
+Zeigt die Beschreibung des Skripts an.
+
+

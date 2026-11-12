@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_understand_performance_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: understand, performance, cluster, landing page 
+summary: Die Landingpage des Performance Cluster bietet einen allgemeinen Überblick über die Performance eines ausgewählten Clusters, wobei der Schwerpunkt auf dem Performance-Status der Top-10-Objekte innerhalb des Clusters liegt. Performance-Probleme werden oben auf der Seite im Bereich „Alle Ereignisse auf diesem Cluster“ angezeigt. 
+---
+= Die Landingpage des Performance Clusters in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Landingpage des Performance Cluster bietet einen allgemeinen Überblick über die Performance eines ausgewählten Clusters, wobei der Schwerpunkt auf dem Performance-Status der Top-10-Objekte innerhalb des Clusters liegt. Performance-Probleme werden oben auf der Seite im Bereich „Alle Ereignisse auf diesem Cluster“ angezeigt.
+
+Die Performance Cluster Landing page bietet einen allgemeinen Überblick über jeden Cluster, der von einer Instanz von Unified Manager gemanagt wird. Diese Seite stellt Informationen zu Ereignissen und Performance bereit und ermöglicht die Überwachung und Fehlerbehebung von Clustern. Die folgende Abbildung zeigt ein Beispiel der Performance Cluster Landing page für den Cluster mit dem Namen opm-mobility:
+
+image::../media/opm_cluster_landing_page_draft.gif[Ein Screenshot der Benutzeroberfläche, der ein Beispiel der Landing Page des Performance Clusters für den Cluster mit dem Namen opm-mobility zeigt.]
+
+Die Anzahl der Ereignisse auf der Seite „Clusterübersicht“ stimmt möglicherweise nicht mit der Anzahl der Ereignisse auf der Seite „Leistungsereignisinventar“ überein. Dies liegt daran, dass die Seite „Clusterübersicht“ in den Balken „Latenz“ und „Auslastung“ jeweils ein Ereignis anzeigen kann, wenn kombinierte Schwellenwertrichtlinien überschritten wurden, während die Seite „Leistungsereignisinventar“ nur ein Ereignis anzeigt, wenn eine kombinierte Richtlinie überschritten wurde.
+
+[NOTE]
+====
+Wenn ein Cluster aus der Verwaltung durch Unified Manager entfernt wurde, wird der Status *Entfernt* rechts neben dem Clusternamen oben auf der Seite angezeigt.
+
+====

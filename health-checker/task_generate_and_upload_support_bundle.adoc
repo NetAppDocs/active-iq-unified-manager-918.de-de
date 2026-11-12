@@ -1,0 +1,89 @@
+---
+permalink: health-checker/task_generate_and_upload_support_bundle.html 
+sidebar: sidebar 
+keywords: generate, upload, support bundle 
+summary: Sie können ein Support-Bundle mit Diagnoseinformationen erstellen, damit Sie es zur Fehlerbehebung an den technischen Support senden können. Sie können das Support-Bundle auch über die Managementplattform zu NetApp hochladen. 
+---
+= Erstellen und Hochladen eines Support-Bundles aus Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Supportpaket mit Diagnoseinformationen erstellen, das Sie zur Unterstützung bei der Fehlerbehebung an den technischen Support senden können.
+
+Ab Unified Manager 9.8 besteht, wenn Ihr Unified Manager Server mit dem Internet verbunden ist, auch die Möglichkeit, das Support-Bundle von der Wartungs-Managementplattform aus auf NetApp hochzuladen.
+
+.Bevor Sie beginnen
+Sie müssen als Wartungsbenutzer Zugriff auf die Managementplattform haben.
+
+Da einige Arten von Supportdaten viele Cluster-Ressourcen beanspruchen oder lange bis zum Abschluss benötigen können, können Sie beim Auswählen des vollständigen Supportpakets festlegen, welche Datentypen ein- oder ausgeschlossen werden sollen, um die Größe des Supportpakets zu reduzieren. Es besteht außerdem die Möglichkeit, ein schlankes Supportpaket zu erstellen, das nur Protokolle und Konfigurationsdatenbankeinträge der letzten 30 Tage enthält; Performance-Daten, Erfassungsaufzeichnungsdateien und Server-Heap-Dump sind nicht enthalten.
+
+Unified Manager speichert nur die beiden zuletzt generierten Support-Bundles. Ältere Support-Bundles löscht das System.
+
+.Schritte
+. In der Managementplattform erfolgt die Auswahl von *Support/Diagnostics* im *Main Menu*.
+. Je nach gewünschtem Detaillierungsgrad im Support Bundle steht *Generate Light Support Bundle* oder *Generate Support Bundle* zur Auswahl.
+. Wenn Sie das vollständige Supportpaket wählen, stehen die folgenden Datentypen zum Ein- oder Ausschließen im Supportpaket zur Auswahl:
++
+** *Datenbank-Dump*
++
+Ein Dump der MySQL Server Datenbank.
+
+** *Heap-Dump*
++
+Eine Momentaufnahme des Status der wichtigsten Unified Manager Serverprozesse. Diese Option ist standardmäßig deaktiviert und sollte nur auf Anfrage des Kundensupports ausgewählt werden.
+
+** *Akquisitionsaufzeichnungen*
++
+Eine Aufzeichnung der gesamten Kommunikation zwischen Unified Manager und den überwachten Clustern.
+
+
+
++
+[NOTE]
+====
+Wenn Sie alle Datentypen abwählen, wird das Support Bundle dennoch mit anderen Unified Manager Daten erstellt.
+
+====
+. Durch Eingabe von  `g` und anschließendes Drücken der Eingabetaste lässt sich das Support-Bundle generieren.
++
+Da die Generierung eines Support-Bundles ein speicherintensiver Vorgang ist, werden Sie aufgefordert, zu bestätigen, dass Sie das Support-Bundle zu diesem Zeitpunkt generieren möchten.
+
+. Die Eingabe von  `y` sowie das anschließende Drücken der Eingabetaste generieren das Support-Bundle.
++
+Wenn Sie das Support-Bundle jetzt nicht generieren möchten, ist `n` einzugeben; anschließend ist die Eingabetaste zu drücken.
+
+. Wenn Sie Datenbank-Dumpdateien in das vollständige Support-Bundle aufgenommen haben, erfolgt eine Aufforderung, den Zeitraum anzugeben, für den Performance Statistiken aufgenommen werden sollen. Das Einbeziehen von Performance Statistiken kann viel Zeit und Speicherplatz beanspruchen, daher kann die Datenbank auch ohne Performance Statistiken gedumpt werden:
++
+.. Das Startdatum ist im Format JJJJMMTT anzugeben.
++
+Beispielsweise entspricht  `20210101` dem 1. Januar 2021. Wenn keine Performance-Statistiken einbezogen werden sollen, wird  `n` verwendet.
+
+.. Einzugeben ist die Anzahl der Tage, die ab 0:00 Uhr des angegebenen Startdatums in die Statistiken einbezogen werden.
++
+Sie können eine Zahl von 1 bis 10 eingeben.
+
+
+
++
+Wenn Sie Performance Statistiken einschließen, zeigt das System den Zeitraum an, für den Performance Statistiken erfasst werden.
+
+. Nachdem das Support-Bundle erstellt wurde, werden Sie gefragt, ob Sie es zu NetApp hochladen möchten. Hierzu wird  `y` eingegeben und anschließend die Eingabetaste gedrückt.
++
+Sie werden aufgefordert, die Nummer Ihres Supportfalls einzugeben.
+
+. Falls bereits eine Fallnummer vorhanden ist, wird die Nummer eingegeben und anschließend die Eingabetaste gedrückt. Andernfalls wird einfach die Eingabetaste gedrückt.
++
+Das Support-Paket wird auf NetApp hochgeladen.
+
+
+
+Wenn Ihr Unified Manager Server nicht mit dem Internet verbunden ist oder Sie das Support-Bundle aus anderen Gründen nicht hochladen können, können Sie es manuell abrufen und senden. Sie können es mit einem SFTP-Client oder mithilfe von UNIX- oder Linux-CLI-Befehlen abrufen. Bei Windows Installationen können Sie Remote Desktop (RDP) verwenden, um das Support-Bundle abzurufen.
+
+Das generierte Support-Bundle befindet sich auf VMware-Systemen im Verzeichnis /support, auf Linux-Systemen im Verzeichnis /opt/netapp/data/support/ und auf Windows-Systemen im Verzeichnis ProgramData\NetApp\OnCommandAppData\ocum\support.
+
+*Verwandte Informationen*
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Unified Manager Benutzerrollen und -Funktionen"]

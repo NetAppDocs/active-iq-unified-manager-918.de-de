@@ -1,0 +1,85 @@
+---
+permalink: config/reference_system_configuration_menu.html 
+sidebar: sidebar 
+keywords: system, configuration, menu 
+summary: Das Menü „Systemkonfiguration“ ermöglicht Ihnen das Managen Ihrer virtuellen Appliance mithilfe verschiedener Optionen, wie z. B. der Anzeige des Serverstatus sowie dem Neustarten und Herunterfahren der virtuellen Maschine. 
+---
+= Im Active IQ Unified Manager steht das Menü „Systemkonfiguration“ zur Verfügung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Menü „Systemkonfiguration“ ermöglicht Ihnen das Managen Ihrer virtuellen Appliance mithilfe verschiedener Optionen, wie z. B. der Anzeige des Serverstatus sowie dem Neustarten und Herunterfahren der virtuellen Maschine.
+
+[NOTE]
+====
+Wenn Unified Manager auf einem Linux- oder Microsoft Windows-System installiert ist, steht in diesem Menü nur die Option „`Restore from a Unified Manager Backup`“ zur Verfügung.
+
+====
+Folgende Menüoptionen stehen zur Verfügung:
+
+* *Serverstatus anzeigen*
++
+Zeigt den aktuellen Serverstatus an. Zu den Statusoptionen gehören „Läuft“ und „Läuft nicht“.
+
++
+Falls der Server nicht läuft, müssen Sie sich möglicherweise an den technischen Support wenden.
+
+* *Virtuelle Maschine neu starten*
++
+Die virtuelle Maschine wird neu gestartet, dabei werden alle Services beendet. Nach dem Neustart starten die virtuelle Maschine und die Services erneut.
+
+* *Virtuelle Maschine herunterfahren*
++
+Fährt die virtuelle Maschine herunter und beendet alle Services.
+
++
+Diese Option steht nur in der Managementplattform der virtuellen Maschine zur Auswahl.
+
+* *Änderung des <logged in user> Benutzerpassworts*
++
+Ändert das Passwort des aktuell angemeldeten Benutzers, bei dem es sich nur um den Wartungsbenutzer handeln kann.
+
+* *Größe der Datenfestplatte erhöhen*
++
+Erhöht die Größe der Datenfestplatte (Festplatte 3) in der virtuellen Maschine.
+
+* *Swap-Datenträgergröße erhöhen*
++
+Erhöht die Größe der Auslagerungsfestplatte (Festplatte 2) in der virtuellen Maschine.
+
+* *Änderung der Zeitzone*
++
+Ändert die Zeitzone entsprechend Ihrem Standort.
+
+* *NTP-Server ändern*
++
+Ändert die NTP-Servereinstellungen, wie z. B. die IP-Adresse oder die vollqualifizierte Domain (FQDN).
+
+* *NTP-Service ändern*
++
+Wechselt zwischen den `ntp` und `systemd-timesyncd` Services.
+
+* *Wiederherstellung aus einer Unified Manager Sicherung*
++
+Stellt die Unified Manager Datenbank und die Konfigurationseinstellungen aus einer zuvor gesicherten Version wieder her.
+
+* *Serverzertifikat zurücksetzen*
++
+Setzt das Server-Sicherheitszertifikat zurück.
+
+* *Hostname ändern*
++
+Ändert den Namen des Hosts, auf dem die virtuelle Appliance installiert ist.
+
+* *Zurück*
++
+Verlassen des Menüs „Systemkonfiguration“ und Rückkehr zum Hauptmenü.
+
+* *Beenden*
++
+Verlässt das Menü der Wartungs-Managementplattform.
+
+

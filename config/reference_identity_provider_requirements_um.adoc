@@ -1,0 +1,93 @@
+---
+permalink: config/reference_identity_provider_requirements_um.html 
+sidebar: sidebar 
+keywords: identity, provider, requirements 
+summary: 'Wenn Unified Manager so konfiguriert wird, dass ein Identitätsanbieter (IdP) die SAML-Authentifizierung für alle Remote-Benutzer durchführt, müssen einige erforderliche Konfigurationseinstellungen beachtet werden, damit die Verbindung zu Unified Manager erfolgreich hergestellt werden kann.' 
+---
+= Verwendung eines Identitätsanbieters in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Unified Manager so konfiguriert wird, dass ein Identitätsanbieter (IdP) die SAML-Authentifizierung für alle Remote-Benutzer durchführt, müssen einige erforderliche Konfigurationseinstellungen beachtet werden, damit die Verbindung zu Unified Manager erfolgreich hergestellt werden kann.
+
+Sie müssen die Unified Manager URI und die Metadaten in den IdP-Server eingeben. Diese Informationen können Sie auf der Unified Manager SAML-Authentifizierungsseite kopieren. Unified Manager gilt im Standard Security Assertion Markup Language (SAML) als Serviceprovider (SP).
+
+
+
+[[supported-encryption-standards]]
+== Unterstützte Verschlüsselungsstandards
+
+* Advanced Encryption Standard (AES): AES-128 und AES-256
+* Sicherer Hash-Algorithmus (SHA): SHA-1 und SHA-256
+
+
+
+
+[[validated-identity-providers]]
+== Validierte Identitätsanbieter
+
+* Shibboleth
+* Active Directory Federation Services (ADFS)
+
+
+
+
+[[adfs-configuration-requirements]]
+== ADFS Konfigurationsanforderungen
+
+* Sie müssen drei Anspruchsregeln in der folgenden Reihenfolge definieren, die erforderlich sind, damit Unified Manager ADFS SAML-Antworten für diesen Vertrauensstellungseintrag der vertrauenden Seite analysieren kann.
++
+[cols="2*"]
+|===
+| Claim-Regel | Wert 
+
+
+ a| 
+SAM-Kontoname
+ a| 
+Name-ID
+
+
+
+ a| 
+SAM-Kontoname
+ a| 
+urn:oid:0.9.2342.19200300.100.1.1
+
+
+
+ a| 
+Tokengruppen -- Unqualifizierter Name
+ a| 
+urn:oid:1.3.6.1.4.1.5923.1.5.1.1
+
+|===
+* Sie müssen das Authentifizierungsverfahren auf "`Forms Authentication`" festlegen, da Benutzer sonst beim Abmelden von Unified Manager eine Fehlermeldung erhalten können. Die folgenden Schritte sind erforderlich:
++
+.. Die ADFS Management Console wird geöffnet.
+.. In der linken Baumansicht den Ordner „Authentifizierungsrichtlinien“ auswählen.
+.. Rechts unter „Aktionen“ befindet sich die Option „Globale primäre Authentifizierungsrichtlinie bearbeiten“.
+.. Als Authentifizierungsverfahren für das Intranet wird statt der Standardeinstellung "`Windows Authentication`" die Option "`Forms Authentication`" verwendet.
+
+
+* In einigen Fällen wird die Anmeldung über den IdP abgelehnt, wenn das Sicherheitszertifikat des Unified Manager CA-signiert ist. Es gibt zwei Lösungsansätze für dieses Problem:
++
+** Im Link finden Sie Anweisungen zum Deaktivieren der Widerrufsprüfung auf dem ADFS-Server für verkettete CA-Zertifikate der zugeordneten Relying Party:
++
+http://www.torivar.com/2016/03/22/adfs-3-0-disable-revocation-check-windows-2012-r2/["Widerrufsprüfung pro Relying Party Trust deaktivieren"]
+
+** Der CA-Server muss sich innerhalb des ADFS-Servers befinden, um die Zertifikatsanforderung des Unified Manager Servers zu signieren.
+
+
+
+
+
+
+[[other-configuration-requirements]]
+== Weitere Konfigurationsanforderungen
+
+* Die Taktabweichung von Unified Manager ist auf 5 Minuten eingestellt, daher darf die Zeitdifferenz zwischen dem IdP-Server und dem Unified Manager-Server nicht mehr als 5 Minuten betragen, da die Authentifizierung sonst fehlschlägt.
+

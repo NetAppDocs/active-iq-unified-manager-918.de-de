@@ -1,0 +1,31 @@
+---
+permalink: performance-checker/task_view_qos_policy_group_settings_for_volumes_or_luns.html 
+sidebar: sidebar 
+keywords: view, qos, policy, group, settings, applied, specific, volumes, luns 
+summary: Sie können die QoS-Richtliniengruppen anzeigen, die auf Ihre Volumes und LUNs angewendet wurden, und zur Ansicht „Performance/QoS Policy Groups“ wechseln, um die detaillierten Konfigurationseinstellungen für jede QoS-Richtlinie anzuzeigen. 
+---
+= QoS-Richtliniengruppeneinstellungen für Volumes oder LUNs in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die QoS-Richtliniengruppen anzeigen, die auf Ihre Volumes und LUNs angewendet wurden, und zur Ansicht „Performance/QoS Policy Groups“ wechseln, um die detaillierten Konfigurationseinstellungen für jede QoS-Richtlinie anzuzeigen.
+
+Die Schritte zum Anzeigen der auf ein Volume angewendeten QoS-Richtlinie werden im Folgenden beschrieben. Die Schritte zum Anzeigen dieser Informationen für eine LUN sind ähnlich.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
++
+Standardmäßig wird die Ansicht „Systemstatus: Alle Volumes“ angezeigt.
+
+. Im Menü „Ansicht“ können Sie *Performance: Volumes in QoS Policy Group* auswählen.
+. Das Volume, das Sie überprüfen möchten, finden Sie, wenn Sie nach rechts bis zur Spalte *QoS Policy Group* scrollen.
+. Den Namen der QoS-Richtliniengruppe auswählen.
++
+Je nachdem, ob es sich um eine traditionelle QoS-Richtlinie, eine adaptive QoS-Richtlinie oder eine QoS-Richtlinie handelt, die mithilfe von Unified Manager Performance Service Levels erstellt wurde, wird die entsprechende Quality of Service Seite angezeigt.
+
+. Die detaillierten Konfigurationseinstellungen für die QoS-Richtliniengruppe können angezeigt werden.
+. Über die Schaltfläche zum Erweitern (image:../media/chevron_down.gif[""]) neben dem Namen der QoS-Richtliniengruppe können weitere Details zur Richtliniengruppe aufgerufen werden.
+

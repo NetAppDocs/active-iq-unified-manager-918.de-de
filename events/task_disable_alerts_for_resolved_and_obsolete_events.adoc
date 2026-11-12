@@ -1,0 +1,42 @@
+---
+permalink: events/task_disable_alerts_for_resolved_and_obsolete_events.html 
+sidebar: sidebar 
+keywords: enable, disable, alerts, resolved, obsolete, events 
+summary: Es kann eine globale Einstellung konfiguriert werden, um Warnmeldungen für Ereignisse zu unterdrücken, die in die Status „Gelöst“ und „Veraltet“ wechseln. 
+---
+= Benachrichtigungen für gelöste und veraltete Ereignisse in Active IQ Unified Manager deaktivieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für alle Ereignisse, für die Sie Benachrichtigungen konfiguriert haben, wird eine Benachrichtigung versendet, wenn diese Ereignisse alle verfügbaren Status durchlaufen: Neu, Erledigt und Veraltet. Wenn Sie keine Benachrichtigungen für Ereignisse erhalten möchten, die in die Status Erledigt und Veraltet wechseln, können Sie eine globale Einstellung konfigurieren, um diese Benachrichtigungen zu unterdrücken.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Standardmäßig werden keine Warnmeldungen für Ereignisse gesendet, wenn diese in den Status „Resolved“ oder „Obsolete“ wechseln.
+
+.Schritte
+. Im linken Navigationsbereich auf *Storage Management* > *Alert Setup* klicken.
+. Auf der Seite *Benachrichtigungseinstellungen* steht neben dem Element *Benachrichtigungen für behobene und veraltete Ereignisse* ein Schieberegler zur Verfügung, mit dem eine der folgenden Aktionen ausgeführt werden kann:
++
+|===
+| Zu... | Folgendes ist zu tun... 
+
+
+ a| 
+Benachrichtigungen nicht mehr senden, sobald Ereignisse behoben oder veraltet sind
+ a| 
+Den Schieberegler nach links bewegen
+
+
+
+ a| 
+Versand von Warnmeldungen, sobald Ereignisse behoben oder obsolet sind
+ a| 
+Den Schieberegler nach rechts bewegen
+
+|===
+

@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_identify_volumes_nearing_full_capacity.html 
+sidebar: sidebar 
+keywords: create, report, identify, volumes, full capacity, snapshot, autodelete, turned off 
+summary: Sie können einen Bericht erstellen, der die Liste der Volumes enthält, die sich ihrer vollen Kapazität nähern, während die Funktion Snapshot Autodelete deaktiviert ist. Die Ergebnisse können Ihnen helfen, Volumes zu identifizieren, für die Sie die Funktion Snapshot Autodelete möglicherweise konfigurieren möchten. 
+---
+= Volumes mit nahezu ausgeschöpfter Kapazität und deaktivierter Snapshot Autodelete in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, der die Liste der Volumes enthält, die sich ihrer vollen Kapazität nähern, während die Funktion Snapshot Autodelete deaktiviert ist. Die Ergebnisse können Ihnen helfen, Volumes zu identifizieren, für die Sie die Funktion Snapshot Autodelete möglicherweise konfigurieren möchten.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Im Folgenden wird beschrieben, wie eine benutzerdefinierte Ansicht erstellt wird, die die erforderlichen Spalten in der richtigen Reihenfolge anzeigt, und wie anschließend die Generierung eines Berichts für diese Ansicht geplant wird.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Kapazität* > *Alle Volumes*.
+. Mit *Anzeigen/Ausblenden* können Sie alle Spalten ausblenden, die Sie im Bericht nicht benötigen.
+. Die Spalten „`Snapshot Autodelete`“ und „`Days To Full`“ lassen sich per Drag-and-Drop in die Nähe der Spalte „`Available Data Capacity`“ ziehen.
+. Nach einem Klick auf das Filtersymbol werden die folgenden beiden Filter hinzugefügt und anschließend *Filter anwenden* ausgewählt:
++
+** Weniger als 30 Tage bis voll
+** Automatisches Löschen von Snapshots ist deaktiviert
+
+
+. Durch Auswählen des oberen Bereichs der Spalte *Tage bis voll* erscheinen die Volumes mit den wenigsten verbleibenden Tagen oben in der Liste.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der den Inhalt der Ansicht widerspiegelt, z. B. "`Vols near capacity`".
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht dargestellten Ergebnissen könnte es sinnvoll sein, auf den Volumes Snapshot Autodelete zu aktivieren oder eine Möglichkeit zu finden, den verfügbaren Speicherplatz zu erhöhen.

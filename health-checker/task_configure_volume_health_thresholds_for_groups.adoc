@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_configure_volume_health_thresholds_for_groups.html 
+sidebar: sidebar 
+keywords: configure, volume, health, thresholds, groups 
+summary: Sie können Systemstatusschwellenwerte auf Gruppenebene für Volumes hinsichtlich Kapazität, Snapshot-Kopien, Qtree-Kontingenten, Wachstum und Inodes konfigurieren. 
+---
+= Konfiguration von Schwellenwerten für den Volume-Zustand für Gruppen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Systemstatusschwellenwerte auf Gruppenebene für Volumes hinsichtlich Kapazität, Snapshot-Kopien, Qtree-Kontingenten, Wachstum und Inodes konfigurieren.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Die Gruppenaktion des Typs „Volumen-Systemstatusschwelle“ wird nur auf Volumes einer Gruppe angewendet.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage Management* > *Gruppen*.
+. Auf der Registerkarte *Group Actions* steht die Option *Add* zur Auswahl.
+. Einen Namen und eine Beschreibung für die Gruppenaktion eingeben.
+. Im Dropdown-Menü *Gruppe* erfolgt die Auswahl einer Gruppe, für die die Gruppenaktion konfiguriert werden soll.
+. Als Systemstatusschwellenwert für das Volume wird *Action Type* ausgewählt.
+. Auswahl der Kategorie, für die der Schwellenwert festgelegt werden soll.
+. Die erforderlichen Werte für den Systemstatus-Schwellenwert werden eingegeben.
+. Klicken Sie auf *Add*.
+

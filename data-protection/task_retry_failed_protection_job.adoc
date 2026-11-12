@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_retry_failed_protection_job.html 
+sidebar: sidebar 
+keywords: retry, failed, protection job 
+summary: Nachdem Sie Maßnahmen zur Behebung eines fehlgeschlagenen Schutzauftrags ergriffen haben, können Sie den Auftrag mit der Funktion „Wiederholen“ erneut ausführen. Beim Wiederholen eines Auftrags wird ein neuer Auftrag mit der ursprünglichen Auftrags-ID erstellt. 
+---
+= Wiederholen eines fehlgeschlagenen Schutzauftrags in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie Maßnahmen zur Behebung eines fehlgeschlagenen Schutzauftrags ergriffen haben, können Sie den Auftrag mit *Retry* erneut ausführen. Das Wiederholen eines Auftrags erstellt einen neuen Auftrag mit der ursprünglichen Auftrags-ID.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Sie können jeweils nur einen fehlgeschlagenen Auftrag wiederholen. Wenn Sie mehrere Aufträge auswählen, wird die Schaltfläche „Wiederholen“ deaktiviert. Nur Aufträge vom Typ „Schutzkonfiguration“ und „Schutzbeziehungsoperation“ können wiederholt werden.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt der Aufruf von *Schutz* > *Aufträge*.
+. In der Liste der Aufträge ist ein einzelner fehlgeschlagener Auftrag vom Typ „Protection Configuration“ oder „Protection Relationship Operation“ auszuwählen.
++
+Die Schaltfläche *Wiederholen* ist aktiviert.
+
+. Auf *Retry* klicken.
++
+Der Auftrag startet neu.
+
+

@@ -1,0 +1,19 @@
+---
+permalink: storage-mgmt/task_bookmark_your_favorite_help_topics_onc.html 
+sidebar: sidebar 
+keywords: bookmark, favorite, help topics 
+summary: Im Tab „Hilfefavoriten“ können Sie häufig genutzte Hilfethemen als Lesezeichen speichern. Hilfe-Lesezeichen bieten schnellen Zugriff auf Ihre bevorzugten Themen. 
+---
+= Lesezeichen für bevorzugte Hilfethemen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Tab „Hilfefavoriten“ können Sie häufig genutzte Hilfethemen als Lesezeichen speichern. Hilfe-Lesezeichen bieten schnellen Zugriff auf Ihre bevorzugten Themen.
+
+.Schritte
+. Zum Hilfethema navigieren, das als Favorit hinzugefügt werden soll.
+. Auf *Favoriten* und anschließend auf *Hinzufügen* klicken.
+

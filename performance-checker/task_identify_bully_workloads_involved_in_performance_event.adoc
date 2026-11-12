@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/task_identify_bully_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, bully workloads, dynamic, performance, event 
+summary: 'Im Unified Manager können Sie ermitteln, welche Workloads für eine Clusterkomponente mit Ressourcenkonflikt die größte Nutzungsabweichung aufweisen. Die Identifizierung dieser Workloads hilft Ihnen zu verstehen, warum bestimmte Volumes im Cluster langsame Antwortzeiten (Latenz) aufweisen.' 
+---
+= Identifizierung überlastender Workloads in dynamischen Performance-Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Unified Manager können Sie ermitteln, welche Workloads für eine Clusterkomponente mit Ressourcenkonflikt die größte Nutzungsabweichung aufweisen. Die Identifizierung dieser Workloads hilft Ihnen zu verstehen, warum bestimmte Volumes im Cluster langsame Antwortzeiten (Latenz) aufweisen.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Es müssen neue, bestätigte oder veraltete dynamische Performance-Ereignisse vorliegen.
+
+
+Die Seite mit den Ereignisdetails zeigt eine Liste der benutzerdefinierten und systemdefinierten Workloads, sortiert nach der höchsten Auslastung der Komponente oder der größten Beeinträchtigung durch das Ereignis. Die Werte basieren auf den Spitzenwerten, die Unified Manager bei der Erkennung und letzten Analyse des Ereignisses ermittelt hat.
+
+.Schritte
+. Auf der Seite „Ereignisdetails“ können Informationen über das Ereignis angezeigt werden.
+. In den Diagrammen „Workload-Latenz“ und „Workload-Aktivität“ erfolgt die Auswahl von *Bully Workloads*.
+. Wenn Sie den Mauszeiger über die Diagramme bewegen, werden die wichtigsten benutzerdefinierten Bully Workloads angezeigt, die sich auf die Komponente auswirken.
+

@@ -1,0 +1,58 @@
+---
+permalink: storage-mgmt/task_create_and_edit_seps.html 
+sidebar: sidebar 
+keywords: create, edit, storage, efficiency, policies 
+summary: Wenn die vom System definierten Speichereffizienzrichtlinien nicht mit Ihren Arbeitslastanforderungen übereinstimmen, können Sie eigene Speichereffizienzrichtlinien erstellen, die für Ihre Arbeitslasten optimiert sind. 
+---
+= Erstellen und Bearbeiten von Speichereffizienzrichtlinien in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die vom System definierten Speichereffizienzrichtlinien nicht mit Ihren Arbeitslastanforderungen übereinstimmen, können Sie eigene Speichereffizienzrichtlinien erstellen, die für Ihre Arbeitslasten optimiert sind.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle des Anwendungsadministrators.
+* Der Name der Speichereffizienzrichtlinie muss eindeutig sein, und die folgenden reservierten Schlüsselwörter dürfen nicht verwendet werden:
++
+`High`, `Low`, `Unassigned`, `Learning`, `Idle`, `Default`, und `None`.
+
+
+
+Sie erstellen und bearbeiten benutzerdefinierte Speichereffizienzrichtlinien auf der Seite „Speichereffizienzrichtlinien“, indem Sie die Speichereffizienzmerkmale definieren, die Sie für die Applikationen benötigen, die auf Storage zugreifen.
+
+[NOTE]
+====
+Eine Speichereffizienzrichtlinie kann nicht geändert werden, wenn sie aktuell einer Arbeitslast zugewiesen ist.
+
+====
+.Schritte
+. Im linken Navigationsbereich ist unter *Einstellungen* *Richtlinien* > *Speichereffizienz* auszuwählen.
+. Auf der Seite *Storage Efficiency Policies* wird je nach Bedarf die entsprechende Schaltfläche ausgewählt, um eine neue Storage Efficiency Policy zu erstellen oder eine vorhandene Storage Efficiency Policy zu bearbeiten.
++
+|===
+| Zu... | Folgen Sie diesen Schritten... 
+
+
+ a| 
+Erstellung einer neuen Speichereffizienzrichtlinie
+ a| 
+Auf *Hinzufügen* klicken
+
+
+
+ a| 
+Vorhandene Speichereffizienzrichtlinie bearbeiten
+ a| 
+Sie können eine vorhandene Speichereffizienzrichtlinie auswählen und auf *Bearbeiten* klicken
+
+|===
++
+Daraufhin erscheint die Seite zum Hinzufügen oder Bearbeiten einer Speichereffizienzrichtlinie.
+
+. Zur Anpassung der Storage Efficiency Policy die Merkmale der Storage-Effizienz angeben und anschließend zum Speichern der Storage Efficiency Policy auf *Submit* klicken.
+
+
+Sie können die neue oder geänderte Speichereffizienzrichtlinie auf Workloads (LUNs, NFS-Dateifreigaben, CIFS-Freigaben) auf der Seite „Workloads“ oder bei der Provisionierung eines neuen Workloads anwenden.

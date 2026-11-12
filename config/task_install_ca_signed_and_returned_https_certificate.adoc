@@ -1,0 +1,63 @@
+---
+permalink: config/task_install_ca_signed_and_returned_https_certificate.html 
+sidebar: sidebar 
+keywords: install, ca signed, returned, https, certificate 
+summary: Sie können ein Sicherheitszertifikat hochladen und installieren, nachdem es von einer Certificate Authority signiert und zurückgegeben wurde. Die Datei, die Sie hochladen und installieren, muss eine signierte Version des vorhandenen selbstsignierten Zertifikats sein. Ein CA-signiertes Zertifikat hilft, Man-in-the-Middle-Angriffe zu verhindern, und bietet besseren Schutz als ein selbstsigniertes Zertifikat. 
+---
+= Installation eines von einer Zertifizierungsstelle signierten HTTPS-Zertifikats in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Sicherheitszertifikat hochladen und installieren, nachdem es von einer Certificate Authority signiert und zurückgegeben wurde. Die Datei, die Sie hochladen und installieren, muss eine signierte Version des vorhandenen selbstsignierten Zertifikats sein. Ein CA-signiertes Zertifikat hilft, Man-in-the-Middle-Angriffe zu verhindern, und bietet besseren Schutz als ein selbstsigniertes Zertifikat.
+
+*Was Sie vor Beginn beachten sollten
+
+Sie müssen die folgenden Aktionen abgeschlossen haben:
+
+* Die Datei mit der Zertifikatsignierungsanforderung wurde heruntergeladen und durch eine Zertifizierungsstelle signiert.
+* Zertifikatskette im PEM-Format gespeichert
+* Die Kette umfasste alle Zertifikate, vom Unified Manager Serverzertifikat bis zum Stamm-Signaturzertifikat, einschließlich aller vorhandenen Zwischenzertifikate.
+
+
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+[NOTE]
+====
+Beträgt die Gültigkeitsdauer des Zertifikats, für das ein CSR erstellt wurde, mehr als 397 Tage, wird sie von der CA vor der Unterzeichnung und Rücksendung des Zertifikats auf 397 Tage verkürzt.
+
+====
+.Schritte
+. Im linken Navigationsbereich auf *General* > *HTTPS Certificate* klicken.
+. Anschließend wählen Sie *HTTPS-Zertifikat installieren* aus.
+. In dem angezeigten Dialogfeld kann über *Datei auswählen...* die hochzuladende Datei gesucht werden.
+. Nach dem Auswählen der Datei installiert ein Klick auf *Install* die Datei.
++
+Informationen finden sich unter link:concept_install_https_certificate_generated_using_external_tools.html["Installation eines mit externen Tools generierten HTTPS-Zertifikats"].
+
+
+
+
+
+[[example-certificate-chain]]
+== Beispiel einer Zertifikatskette
+
+Das folgende Beispiel zeigt, wie die Zertifikatskettendatei aussehen könnte:
+
+[listing]
+----
+-----BEGIN CERTIFICATE-----
+<*Server certificate*>
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+<*Intermediate certificate \#1 (if present)*>
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+<*Intermediate certificate \#2 (if present)*>
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+<*Root signing certificate*>
+-----END CERTIFICATE-----
+----

@@ -1,0 +1,190 @@
+---
+permalink: events/reference_management_station_events.html 
+sidebar: sidebar 
+keywords: management, station, events, impact area, configuration, performance 
+summary: Die Ereignisse der Managementstation liefern Ihnen Informationen über den Status des Servers, auf dem Unified Manager installiert ist, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Level, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Management Stationsereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Ereignisse der Managementstation liefern Ihnen Informationen über den Status des Servers, auf dem Unified Manager installiert ist, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-configuration]]
+== Wirkungsbereich: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Speicherplatz auf dem Management Server fast voll(ocumEvtUnifiedManagerDiskSpaceNearlyFull)
+ a| 
+Risiko
+ a| 
+Managementstation
+ a| 
+Warnung
+
+
+
+ a| 
+Speicherplatz auf dem Verwaltungsserver voll(ocumEvtUnifiedManagerDiskSpaceFull)
+ a| 
+Vorfall
+ a| 
+Managementstation
+ a| 
+Kritisch
+
+
+
+ a| 
+Management Server mit wenig Arbeitsspeicher(ocumEvtUnifiedManagerMemoryLow)
+ a| 
+Risiko
+ a| 
+Managementstation
+ a| 
+Warnung
+
+
+
+ a| 
+Management Server fast ohne freien Speicher(ocumEvtUnifiedManagerMemoryAlmostOut)
+ a| 
+Vorfall
+ a| 
+Managementstation
+ a| 
+Kritisch
+
+
+
+ a| 
+Größe der MySQL-Protokolldatei erhöht; Neustart erforderlich(ocumEvtMysqlLogFileSizeWarning)
+ a| 
+Vorfall
+ a| 
+Managementstation
+ a| 
+Warnung
+
+
+
+ a| 
+Die insgesamt zugewiesene Größe des Audit-Protokolls ist fast ausgeschöpft.
+ a| 
+Risiko
+ a| 
+Managementstation
+ a| 
+Warnung
+
+
+
+ a| 
+Zertifikat des Syslog-Servers läuft demnächst ab
+ a| 
+Risiko
+ a| 
+Managementstation
+ a| 
+Warnung
+
+
+
+ a| 
+Zertifikat des Syslog Server abgelaufen
+ a| 
+Risiko
+ a| 
+Managementstation
+ a| 
+Fehler
+
+
+
+ a| 
+Überwachungsprotokolldatei manipuliert
+ a| 
+Risiko
+ a| 
+Managementstation
+ a| 
+Warnung
+
+
+
+ a| 
+Audit-Protokolldatei gelöscht
+ a| 
+Risiko
+ a| 
+Managementstation
+ a| 
+Warnung
+
+
+
+ a| 
+Verbindungsfehler beim Syslog-Server
+ a| 
+Risiko
+ a| 
+Managementstation
+ a| 
+Fehler
+
+
+
+ a| 
+Konfiguration des Syslog-Servers geändert
+ a| 
+Ereignis
+ a| 
+Managementstation
+ a| 
+Warnung
+
+|===
+
+
+[[impact-area-performance]]
+== Wirkungsbereich: Performance
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Die Analyse von Leistungsdaten ist beeinträchtigt(ocumEvtUnifiedManagerDataMissingAnalyze)
+ a| 
+Risiko
+ a| 
+Managementstation
+ a| 
+Warnung
+
+
+
+ a| 
+Die Erfassung von Leistungsdaten ist beeinträchtigt(ocumEvtUnifiedManagerDataMissingCollection)
+ a| 
+Vorfall
+ a| 
+Managementstation
+ a| 
+Kritisch
+
+|===
+[NOTE]
+====
+Diese beiden letzten Performance-Ereignisse waren nur für Unified Manager 7.2 verfügbar. Wenn eines dieser Ereignisse den Status „Neu“ aufweist und Sie anschließend auf eine neuere Version der Unified Manager Software aktualisieren, werden die Ereignisse nicht automatisch gelöscht. Sie müssen die Ereignisse manuell in den Status „Gelöst“ verschieben.
+
+====

@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_retrieve_support_bundle_using_windows_client.html 
+sidebar: sidebar 
+keywords: retrieve, support bundle, windows client 
+summary: Wenn Sie Windows Benutzer sind, können Sie ein Tool herunterladen und installieren, um das Support-Bundle von Ihrem Unified Manager Server abzurufen. Sie können das Support-Bundle an den technischen Support senden, um eine detailliertere Diagnose eines Problems zu erhalten. Filezilla oder WinSCP sind Beispiele für Tools, die Sie verwenden können. 
+---
+= Abrufen des Support Bundle mithilfe eines Windows Clients in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Windows Benutzer sind, können Sie ein Tool herunterladen und installieren, um das Support-Bundle von Ihrem Unified Manager Server abzurufen. Sie können das Support-Bundle an den technischen Support senden, um eine detailliertere Diagnose eines Problems zu erhalten. Filezilla oder WinSCP sind Beispiele für Tools, die Sie verwenden können.
+
+.Bevor Sie beginnen
+Sie müssen der Wartungsbenutzer sein, um diese Aufgabe ausführen zu können.
+
+Erforderlich ist ein Tool, das SCP oder SFTP unterstützt.
+
+.Schritte
+. Zum Abrufen des Support-Bundles wird ein Tool heruntergeladen und installiert.
+. Das Tool wird geöffnet.
+. Für die Verbindung zu Ihrem Unified Manager Verwaltungsserver wird SFTP verwendet.
++
+Das Tool zeigt den Inhalt des Verzeichnisses /support an und ermöglicht die Anzeige aller vorhandenen Support-Bundles.
+
+. Auswahl des Zielverzeichnisses für das Support Bundle, das kopiert werden soll.
+. Sie wählen das Support Bundle aus, das kopiert werden soll, und verwenden das Tool zum Kopieren der Datei vom Unified Manager Server auf Ihr lokales System.
+

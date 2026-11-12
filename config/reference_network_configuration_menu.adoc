@@ -1,0 +1,94 @@
+---
+permalink: config/reference_network_configuration_menu.html 
+sidebar: sidebar 
+keywords: network configuration menu 
+summary: Über das Menü „Netzwerkkonfiguration“ können Sie die Netzwerkeinstellungen managen. Dieses Menü sollte verwendet werden, wenn die Benutzeroberfläche von Unified Manager nicht verfügbar ist. 
+---
+= Menü „Netzwerkkonfiguration“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über das Menü „Netzwerkkonfiguration“ können Sie die Netzwerkeinstellungen managen. Dieses Menü sollte verwendet werden, wenn die Benutzeroberfläche von Unified Manager nicht verfügbar ist.
+
+[NOTE]
+====
+Dieses Menü ist nicht verfügbar, wenn Unified Manager auf Red Hat Enterprise Linux oder auf Microsoft Windows installiert ist.
+
+====
+Folgende Menüoptionen stehen zur Verfügung.
+
+* *Einstellungen für die Anzeige der IP-Adresse*
++
+Zeigt die aktuellen Netzwerkeinstellungen für die virtuelle Appliance an, einschließlich IP-Adresse, Netzwerk, Broadcast-Adresse, Netzmaske, Gateway und DNS-Server.
+
+* *Ändern der IP-Adresseneinstellungen*
++
+Damit können Sie alle Netzwerkeinstellungen der virtuellen Appliance ändern, einschließlich der IP-Adresse, der Netzmaske, des Gateways oder der DNS-Server. Wenn Sie Ihre Netzwerkeinstellungen über die Wartungs-Managementplattform von DHCP auf statische Netzwerkkonfiguration umstellen, können Sie den Hostnamen nicht bearbeiten. Damit die Änderungen wirksam werden, muss *Commit Changes* ausgewählt werden.
+
+* *Einstellungen für die Domainnamensuche anzeigen*
++
+Zeigt die für die Auflösung von Hostnamen verwendete Suchliste für Domainnamen an.
+
+* *Einstellungen für die Domainnamensuche ändern*
++
+Hiermit können Sie die Domänennamen ändern, nach denen bei der Auflösung von Hostnamen gesucht werden soll. Sie müssen *Commit Changes* auswählen, damit die Änderungen wirksam werden.
+
+* *Anzeige statischer Routen*
++
+Zeigt die aktuellen statischen Netzwerkrouten an.
+
+* *Statische Routen ändern*
++
+Ermöglicht das Hinzufügen oder Löschen statischer Netzwerkrouten. *Änderungen übernehmen* muss ausgewählt werden, damit die Änderungen wirksam werden.
+
++
+** *Route hinzufügen*
++
+Ermöglicht das Hinzufügen einer statischen Route.
+
+** *Route löschen*
++
+Ermöglicht das Löschen einer statischen Route.
+
+** *Zurück*
++
+Sie gelangen zurück zum *Main Menu*.
+
+** *Beenden*
++
+Beendet die Wartungs-Console.
+
+
+
+* *Netzwerkschnittstelle deaktivieren*
++
+Deaktiviert alle verfügbaren Netzwerkschnittstellen. Wenn nur eine Netzwerkschnittstelle verfügbar ist, kann sie nicht deaktiviert werden. Damit die Änderungen wirksam werden, muss *Commit Changes* ausgewählt werden.
+
+* *Netzwerkschnittstelle aktivieren*
++
+Aktiviert die verfügbaren Netzwerkschnittstellen. Sie müssen *Commit Changes* auswählen, damit die Änderungen wirksam werden.
+
+* *Änderungen übernehmen*
++
+Wendet alle an den Netzwerkeinstellungen der virtuellen Appliance vorgenommenen Änderungen an. Diese Option muss ausgewählt werden, damit vorgenommene Änderungen wirksam werden, andernfalls treten die Änderungen nicht in Kraft.
+
+* *Host anpingen*
++
+Dient zum Anpingen eines Zielhosts, um IP-Adressänderungen oder DNS-Konfigurationen zu bestätigen.
+
+* *Auf Standardeinstellungen zurücksetzen*
++
+Setzt alle Einstellungen auf die Werkseinstellungen zurück. Sie müssen *Änderungen übernehmen* auswählen, damit die Änderungen wirksam werden.
+
+* *Zurück*
++
+Sie gelangen zurück zum *Main Menu*.
+
+* *Beenden*
++
+Beendet die Wartungs-Console.
+
+

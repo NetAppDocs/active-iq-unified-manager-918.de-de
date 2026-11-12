@@ -1,0 +1,36 @@
+---
+permalink: install-windows/task_uninstall_third_party_products.html 
+sidebar: sidebar 
+keywords: MS Visual C, python, uninstall, uninstalling, 9.18 
+summary: Drittanbieterprodukte, einschließlich Python und der Microsoft Visual C 2013-Laufzeitumgebung, müssen deinstalliert werden. 
+---
+= Deinstallation von Drittanbieterprodukten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach dem Upgrade von Unified Manager können Sie Drittanbieterprodukte wie Python oder Microsoft Visual C++ 2013 deinstallieren. Dies ist optional.
+
+
+
+[[uninstall-python]]
+== Python deinstallieren
+
+.Schritte
+. In der *Systemsteuerung* erfolgt die Auswahl von *Programme* > *Programme und Funktionen*.
+. Die Auswahl von Python erfolgt aus der Liste der Programme.
+. Die Auswahl erfolgt über *Dieses Programm deinstallieren*. Zu deinstallieren sind alle Python-Versionen außer 3.13.3. Python Version 3.13.3 bleibt erhalten.
+
+
+
+
+[[uninstall-microsoft-visual-c-2013]]
+== Deinstallation von Microsoft Visual C++ 2013
+
+.Schritte
+. In der *Systemsteuerung* erfolgt die Auswahl von *Programme* > *Programme und Funktionen*.
+. Die Auswahl in der Liste der Programme fällt auf *Microsoft Visual C++ 2013*.
+. Die Option *Uninstall this program* wird ausgewählt.
+

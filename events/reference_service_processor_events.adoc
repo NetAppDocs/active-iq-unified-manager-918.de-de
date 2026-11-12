@@ -1,0 +1,45 @@
+---
+permalink: events/reference_service_processor_events.html 
+sidebar: sidebar 
+keywords: service, processor, events, impact area, availability 
+summary: Serviceprozessorereignisse liefern Ihnen Informationen über den Status Ihres Prozessors, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungs-Level, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Service Processor Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Serviceprozessorereignisse liefern Ihnen Informationen über den Status Ihres Prozessors, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungs-Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Dienstprozessor nicht konfiguriert(ocumEvtServiceProcessorNotConfigured)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Dienstprozessor offline(ocumEvtServiceProcessorOffline)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+|===

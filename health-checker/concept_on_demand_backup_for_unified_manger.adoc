@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_on_demand_backup_for_unified_manger.html 
+sidebar: sidebar 
+keywords: backup, on-demand, unified manager 
+summary: Mit der Benutzeroberfläche von Active IQ Unified Manager können Sie bei Bedarf ein On-Demand-Backup erstellen. Mit dem On-Demand-Backup können Sie mithilfe der vorhandenen Backup-Methode sofort ein Backup erstellen. Das On-Demand-Backup unterscheidet nicht zwischen MySQL- oder NetApp Snapshot-basierten Backups. 
+---
+= Grundlegendes zum On-Demand-Backup für Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Benutzeroberfläche von Active IQ Unified Manager können Sie bei Bedarf ein On-Demand-Backup erstellen. Mit dem On-Demand-Backup können Sie mithilfe der vorhandenen Backup-Methode sofort ein Backup erstellen. Das On-Demand-Backup unterscheidet nicht zwischen MySQL- oder NetApp Snapshot-basierten Backups.
+
+Sie können eine bedarfsgesteuerte Datensicherung über die Schaltfläche *Backup Now* auf der Seite „Database Backup“ durchführen. Die bedarfsgesteuerte Datensicherung ist unabhängig von den Zeitplänen, die Sie für Active IQ Unified Manager konfiguriert haben.

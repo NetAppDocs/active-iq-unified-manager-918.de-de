@@ -1,0 +1,23 @@
+---
+permalink: health-checker/concept_what_does_not_compliant_mean.html 
+sidebar: sidebar 
+keywords: not compliant, compliant 
+summary: 'Cluster und Storage Virtual Machines (SVMs) gelten als nicht konform, wenn eines der Sicherheitskriterien, die anhand der im NetApp Security Hardening Guide für ONTAP 9 definierten Empfehlungen bewertet werden, nicht erfüllt ist. Darüber hinaus gilt ein Cluster als nicht konform, wenn eine SVM als nicht konform gekennzeichnet ist.' 
+---
+= Informationen zum Compliance-Status von Clustern und SVMs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Clusters und Storage Virtual Machines (SVMs) gelten als nicht konform, wenn eines der Sicherheitskriterien, die anhand der Empfehlungen im _NetApp Security Hardening Guide for ONTAP 9_ bewertet werden, nicht erfüllt ist. Zusätzlich gilt ein Cluster als nicht konform, wenn eine SVM als nicht konform gekennzeichnet ist.
+
+Die Statussymbole auf den Sicherheitskarten haben in Bezug auf ihre Compliance die folgenden Bedeutungen:
+
+* image:../media/sev_normal_um60.png["normales grünes Häkchen-Symbol"] - Der Parameter ist wie empfohlen konfiguriert.
+* image:../media/sev_warning_um60.png["Warnsymbol"] - Der Parameter ist nicht wie empfohlen konfiguriert.
+* image:../media/sev_information_um60.gif["Informationssymbol"] - Entweder ist die Funktionalität im Cluster nicht aktiviert oder der Parameter ist nicht wie empfohlen konfiguriert, aber dieser Parameter trägt nicht zur Compliance des Objekts bei.
+
+
+Der Status der Volume-Verschlüsselung hat keinen Einfluss darauf, ob der Cluster oder die SVM als konform gelten.

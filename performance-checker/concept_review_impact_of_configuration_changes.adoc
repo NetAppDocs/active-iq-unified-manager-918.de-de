@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_review_impact_of_configuration_changes.html 
+sidebar: sidebar 
+keywords: review, impact, configuration, changes, workload, performance 
+summary: Konfigurationsänderungen am Cluster, wie z. B. ein ausgefallener Datenträger, ein HA Failover oder ein verschobenes Volume, können sich negativ auf die Volume Performance auswirken und zu erhöhter Latenz führen. 
+---
+= Bewertung, wie sich Konfigurationsänderungen auf die Workload-Performance in Active IQ Unified Manager auswirken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Konfigurationsänderungen am Cluster, wie z. B. ein ausgefallener Datenträger, ein HA Failover oder ein verschobenes Volume, können sich negativ auf die Volume Performance auswirken und zu erhöhter Latenz führen.
+
+In Unified Manager können Sie die Seite „Workload-Analyse“ einsehen, um festzustellen, wann eine aktuelle Konfigurationsänderung erfolgt ist, und dies mit den Operationen und der Latenz (Antwortzeit) vergleichen, um zu prüfen, ob sich die Aktivität für die ausgewählte Volume-Workload geändert hat.
+
+Die Performance Seiten von Unified Manager können nur eine begrenzte Anzahl von Änderungsereignissen erkennen. Die Systemstatus Seiten bieten Warnmeldungen für andere Ereignisse, die durch Konfigurationsänderungen verursacht werden. Sie können in Unified Manager nach dem Volume suchen, um den Ereignisverlauf anzuzeigen.

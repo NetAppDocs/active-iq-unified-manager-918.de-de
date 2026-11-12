@@ -1,0 +1,29 @@
+---
+permalink: data-protection/task_monitor_jobs.html 
+sidebar: sidebar 
+keywords: monitor, jobs 
+summary: Auf der Seite „Aufträge“ lassen sich der Auftragsstatus überwachen und Auftragseigenschaften wie Speicherdiensttyp, Status, Übermittlungszeitpunkt und Abschlusszeitpunkt anzeigen, um festzustellen, ob ein Auftrag erfolgreich abgeschlossen wurde. 
+---
+= Überwachung von Aufträgen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Aufträge“ lassen sich der Auftragsstatus überwachen und Auftragseigenschaften wie Speicherdiensttyp, Status, Übermittlungszeitpunkt und Abschlusszeitpunkt anzeigen, um festzustellen, ob ein Auftrag erfolgreich abgeschlossen wurde.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt der Aufruf von *Schutz* > *Aufträge*.
++
+Die Seite „Jobs“ wird angezeigt.
+
+. In der Spalte *Status* ist der Status der aktuell laufenden Aufträge ersichtlich.
+. Durch Klicken auf einen Jobnamen werden Details zu diesem Job angezeigt.
++
+Die Seite „Job details“ wird angezeigt.
+
+

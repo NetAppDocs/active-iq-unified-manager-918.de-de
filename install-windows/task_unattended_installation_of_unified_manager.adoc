@@ -1,0 +1,56 @@
+---
+permalink: install-windows/task_unattended_installation_of_unified_manager.html 
+sidebar: sidebar 
+keywords: perform, unattended, installation, unified manager 
+summary: Sie können Unified Manager ohne Benutzereingriff über die Befehlszeile installieren. Sie können die unbeaufsichtigte Installation abschließen, indem Sie die Parameter als Schlüssel-Wert-Paare übergeben. 
+---
+= Unbeaufsichtigte Installation von Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager ohne Benutzereingriff über die Befehlszeile installieren. Sie können die unbeaufsichtigte Installation abschließen, indem Sie die Parameter als Schlüssel-Wert-Paare übergeben.
+
+.Schritte
+. Für die Anmeldung an der Windows-Befehlszeilenschnittstelle wird das standardmäßige lokale Administratorkonto verwendet.
+. Wechseln Sie zu dem Speicherort, an dem Unified Manager installiert werden soll, und wählen Sie eine der folgenden Optionen:
++
+[cols="4a,4a"]
+|===
+| Option | Anweisungen 
+
+
+ a| 
+Wenn Drittanbieterpakete vorinstalliert sind
+ a| 
+`ActiveIQUnifiedManager-x.y.exe /V"MYSQL_PASSWORD=mysql_password INSTALLDIR=\"Installation directory\" MYSQL_DATA_DIR=\"MySQL data directory\" MAINTENANCE_PASSWORD=maintenance_password MAINTENANCE_USERNAME=maintenance_username /qn /l*v CompletePathForLogFile"`
+
+*Beispiel:*
+
+`ActiveIQUnifiedManager.exe /s /v"MYSQL_PASSWORD=netapp21! INSTALLDIR=\"C:\Program Files\NetApp\" MYSQL_DATA_DIR=\"C:\ProgramData\MYSQL\MySQLServer\" MAINTENANCE_PASSWORD=******* MAINTENANCE_USERNAME=admin /qn /l*v C:\install.log"`
+
+
+
+ a| 
+Wenn keine Drittanbieterpakete installiert sind
+ a| 
+`ActiveIQUnifiedManager-x.y.exe /V"MYSQL_PASSWORD=mysql_password INSTALLDIR=\"Installation directory\" MYSQL_DATA_DIR=\"MySQL data directory\" MAINTENANCE_PASSWORD=maintenance_password MAINTENANCE_USERNAME=maintenance_username /qr /l*v CompletePathForLogFile"`
+
+*Beispiel:*
+
+`ActiveIQUnifiedManager.exe /s /v"MYSQL_PASSWORD=netapp21! INSTALLDIR=\"C:\Program Files\NetApp\" MYSQL_DATA_DIR=\"C:\ProgramData\MYSQL\MySQLServer\" MAINTENANCE_PASSWORD=******* MAINTENANCE_USERNAME=admin /qr /l*v C:\install.log"`
+
+|===
++
+Die `/qr` Option aktiviert den stillen Modus mit reduzierter Benutzeroberfläche. Es wird eine einfache Benutzeroberfläche angezeigt, die den Installationsfortschritt anzeigt. Sie werden nicht zur Eingabe aufgefordert. Wenn Drittanbieterpakete wie JRE, MySQL und 7zip nicht vorinstalliert sind, empfiehlt sich die `/qr` Option. Die Installation schlägt fehl, wenn die `/qn` Option auf einem Server verwendet wird, auf dem keine Drittanbieterpakete installiert sind.
+
++
+Die  `/qn` Option aktiviert den stillen Modus ohne Benutzeroberfläche. Während der Installation werden weder eine Benutzeroberfläche noch Details angezeigt. Wenn keine Drittanbieterpakete installiert sind, sollte die  `/qn` Option nicht verwendet werden.
+
+. Die Anmeldung bei der Unified Manager Webbenutzeroberfläche ist über die folgende URL möglich:
++
+`\https://IP address`
+
+

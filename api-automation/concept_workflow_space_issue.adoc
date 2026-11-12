@@ -1,0 +1,74 @@
+---
+permalink: api-automation/concept_workflow_space_issue.html 
+sidebar: sidebar 
+keywords: determine, space, issue, aggregate 
+summary: Mit den Datacenter-APIs in Active IQ Unified Manager kann die Verfügbarkeit und Auslastung des Speicherplatzes in Ihren Volumes überwacht werden. Speicherplatzprobleme in Ihren Volumes können ermittelt und über- oder unterausgelastete Storage-Ressourcen identifiziert werden. 
+---
+= Ermittlung von Speicherplatzproblemen in Aggregaten mithilfe der Active IQ Unified Manager APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit den Datacenter-APIs in Active IQ Unified Manager kann die Verfügbarkeit und Auslastung des Speicherplatzes in Ihren Volumes überwacht werden. Speicherplatzprobleme in Ihren Volumes können ermittelt und über- oder unterausgelastete Storage-Ressourcen identifiziert werden.
+
+Die Datacenter-APIs für Aggregate rufen die relevanten Informationen über verfügbaren und belegten Speicherplatz sowie Einstellungen zur Speichereffizienz ab. Sie können die abgerufenen Informationen auch anhand bestimmter Attribute filtern.
+
+Eine Möglichkeit, Speicherplatzmangel in Ihren Aggregaten festzustellen, besteht darin, zu überprüfen, ob in Ihrer Umgebung Volumes mit aktiviertem Modus für die automatische Größenanpassung vorhanden sind. Anschließend folgt die Identifizierung der Volumes, die übermäßig ausgelastet sind, sowie gegebenenfalls die Durchführung von Korrekturmaßnahmen.
+
+Das folgende Flussdiagramm veranschaulicht den Prozess des Abrufens von Informationen über Volumes mit aktivierter automatischer Größenanpassung:
+
+image::../media/space_utilization.gif[Ein Flussdiagramm zur Identifizierung überlasteter Volumes mit aktiviertem Autosize-Modus in Clusteraggregaten]
+
+Dieser Ablauf setzt voraus, dass die Cluster bereits in ONTAP erstellt und zu Unified Manager hinzugefügt wurden.
+
+. Ermittlung des Cluster-Schlüssels, sofern der Wert nicht bekannt ist:
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Datacenter
+ a| 
+GET
+ a| 
+`/datacenter/cluster/clusters`
+
+|===
+. Unter Verwendung des Cluster-Schlüssels als Filterparameter fragt die Abfrage die Aggregate auf diesem Cluster ab.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Datacenter
+ a| 
+GET
+ a| 
+`/datacenter/storage/aggregates`
+
+|===
+. Anhand der Antwort ist die Speicherplatznutzung der Aggregate zu analysieren und festzustellen, welche Aggregate Speicherplatzprobleme aufweisen. Für jedes Aggregat mit Speicherplatzproblem ist der Aggregatschlüssel aus derselben JSON-Ausgabe zu ermitteln.
+. Mithilfe jedes Aggregatschlüssels werden alle Volumes gefiltert, deren Wert für den Parameter autosize.mode als `grow.`
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Datacenter
+ a| 
+GET
+ a| 
+`/datacenter/storage/volumes`
+
+|===
+. Es erfolgt eine Analyse, welche Volumes übermäßig genutzt werden.
+. Zur Behebung der Speicherplatzprobleme in Ihrem Volume sind gegebenenfalls Korrekturmaßnahmen erforderlich, z. B. das Verschieben des Volumes auf andere Aggregate. Diese Aktionen können über ONTAP oder die Unified Manager Web-Benutzeroberfläche ausgeführt werden.
+

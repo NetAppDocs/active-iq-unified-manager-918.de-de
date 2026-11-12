@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_report_work_flow.html 
+sidebar: sidebar 
+keywords: report, workflow 
+summary: Entscheidungsbaum, der den Berichts Workflow beschreibt. 
+---
+= Berichtsworkflows in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Entscheidungsbaum, der den Berichts Workflow beschreibt.
+
+image::../media/reports_view_workflow.png[Ein Diagramm, das einen Entscheidungsbaum-Workflow für das Anzeigen, Anpassen, Hochladen und Herunterladen von Berichten zeigt]

@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_volumes_at_specific_time_intervals.html 
+sidebar: sidebar 
+keywords: create, report, view, volume, transfer, trends, specific, time intervals 
+summary: Sie können einen Bericht erstellen, der Volume-Transfertrends in bestimmten Zeitintervallen anzeigt. 
+---
+= Erstellung eines Berichts zum Anzeigen von Trends beim Volumentransfer in bestimmten Zeitabständen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, der Volume-Transfertrends in bestimmten Zeitintervallen anzeigt.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mit den folgenden Schritten lässt sich eine benutzerdefinierte Ansicht für Volumes in bestimmten Zeitintervallen erstellen und anschließend ein Bericht für diese Ansicht generieren.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Beziehung* > *Transferstatus des letzten Monats*.
+. Mit *Anzeigen/Ausblenden* können Sie alle Spalten ausblenden, die Sie im Bericht nicht benötigen.
+. Ziehen Sie die Spalte „Transfer Duration“ neben die Spalte „`Operational Result`“.
+. Nach dem Klick auf das Filtersymbol folgt das Hinzufügen des folgenden Filters und anschließend der Klick auf *Apply Filter*:
++
+** Endzeit der Übertragung in den letzten 7 Tagen
+
+
+. Über den oberen Rand der Spalte "`Übertragungsdauer`" lassen sich die Volumes nach Zeitintervall sortieren.
+. Für die Ansicht wird ein bestimmter Name verwendet, der widerspiegelt, was in der Ansicht angezeigt wird, zum Beispiel „`Volumes by duration`“.
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Für den Berichtsplan wird ein Name eingegeben, die Häufigkeit auf *Wöchentlich* festgelegt und die anderen Berichtsfelder werden ausgefüllt; anschließend wird auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile geklickt.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Anhand der im Bericht dargestellten Ergebnisse können Sie die Übertragungszeitintervalle untersuchen.

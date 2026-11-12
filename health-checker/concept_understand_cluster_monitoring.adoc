@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_understand_cluster_monitoring.html 
+sidebar: sidebar 
+keywords: understand, cluster, monitor 
+summary: Sie können der Unified Manager Datenbank Cluster hinzufügen, um Cluster hinsichtlich Verfügbarkeit, Kapazität und anderer Details wie CPU-Auslastung, Schnittstellenstatistiken, freiem Festplattenspeicher, qtree Nutzung und Umgebungsdaten des Chassis zu überwachen. 
+---
+= Clusterüberwachung in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können der Unified Manager Datenbank Cluster hinzufügen, um Cluster hinsichtlich Verfügbarkeit, Kapazität und anderer Details wie CPU-Auslastung, Schnittstellenstatistiken, freiem Festplattenspeicher, qtree Nutzung und Umgebungsdaten des Chassis zu überwachen.
+
+Ereignisse werden generiert, wenn der Status anormal ist oder ein vordefinierter Schwellenwert überschritten wird. Sofern dies konfiguriert ist, sendet Unified Manager eine Benachrichtigung an einen festgelegten Empfänger, wenn ein Ereignis eine Warnung auslöst.

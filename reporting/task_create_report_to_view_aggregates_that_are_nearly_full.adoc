@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_that_are_nearly_full.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, full 
+summary: Es lässt sich ein Bericht erstellen, der die Aggregate hervorhebt, die zu 80 Prozent oder mehr gefüllt sind. 
+---
+= In Active IQ Unified Manager lässt sich ein Bericht erstellen, um Aggregate anzuzeigen, die zu 80 % oder mehr gefüllt sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die Aggregate hervorzuheben, die zu 80 % oder mehr gefüllt sind.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mit den folgenden Schritten wird eine benutzerdefinierte Ansicht erstellt, in der Aggregate angezeigt werden, die zu 80 % oder mehr belegt sind; anschließend wird die Generierung eines Berichts für diese Ansicht geplant.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage* > *Aggregates*.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Kapazität* > *Alle Aggregate*.
+. Mit *Anzeigen/Ausblenden* können Sie alle Spalten ausblenden, die Sie im Bericht nicht benötigen.
+. Die Spalten „`Available Data %`“ und „`Used Data %`“ sollten in die Nähe der Spalte „`Aggregate`“ gezogen werden.
+. Nach dem Klicken auf das Filtersymbol können die folgenden Filter hinzugefügt und anschließend *Filter anwenden* ausgewählt werden:
++
+** Der Anteil der genutzten Daten liegt über 80 %
+
+
+. Mit einem Klick auf den oberen Rand der Spalte „`Used Data %`“ lassen sich die Ergebnisse nach Kapazitätsprozent sortieren.
+. Die Ansicht kann unter einem bestimmten Namen gespeichert werden, der widerspiegelt, was in der Ansicht angezeigt wird, zum Beispiel „`Aggregate fast voll`“, und anschließend kann auf das Häkchen (image:../media/blue_check.gif[""]) .
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Über *Add Schedule* lässt sich der Seite „Berichtszeitpläne“ eine neue Zeile hinzufügen, sodass die Zeitplanmerkmale für den neuen Bericht definiert werden können.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht dargestellten Ergebnissen sollten Sie möglicherweise einige Daten aus bestimmten Aggregaten verschieben.

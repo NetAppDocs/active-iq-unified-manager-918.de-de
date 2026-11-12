@@ -1,0 +1,56 @@
+---
+permalink: events/reference_nvram_battery_events.html 
+sidebar: sidebar 
+keywords: nvram, battery, events, impact area, availability 
+summary: NVRAM Batterieereignisse liefern Ihnen Informationen über den Status Ihrer Batterien, damit Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungslevel, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu NVRAM Batterieereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NVRAM Batterieereignisse liefern Ihnen Informationen über den Status Ihrer Batterien, damit Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungslevel, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+NVRAM Batterie schwach(ocumEvtNvramBatteryLow)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+NVRAM Batterie entladen(ocumEvtNvramBatteryDischarged)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+NVRAM Batterie übermäßig geladen(ocumEvtNvramBatteryOverCharged)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+|===

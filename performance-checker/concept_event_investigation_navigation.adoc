@@ -1,0 +1,30 @@
+---
+permalink: performance-checker/concept_event_investigation_navigation.html 
+sidebar: sidebar 
+keywords: event, investigation, navigation 
+summary: Die Ereignisdetailseiten des Unified Manager bieten Ihnen einen detaillierten Einblick in jedes Performance-Ereignis. Dies ist bei der Untersuchung von Performance-Ereignissen, bei der Fehlerbehebung und bei der Feinabstimmung der System-Performance hilfreich. 
+---
+= Untersuchung von Leistungsereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Ereignisdetailseiten des Unified Manager bieten Ihnen einen detaillierten Einblick in jedes Performance-Ereignis. Dies ist bei der Untersuchung von Performance-Ereignissen, bei der Fehlerbehebung und bei der Feinabstimmung der System-Performance hilfreich.
+
+Je nach Art des Performance Ereignisses werden Ihnen möglicherweise eine von zwei Arten von Ereignisdetailseiten angezeigt:
+
+* Ereignisdetailseite für benutzerdefinierte und systemdefinierte Schwellenwertrichtlinienereignisse
+* Ereignisdetailseite für Ereignisse mit dynamischer Schwellenwertrichtlinie
+
+
+Dies ist ein Beispiel für die Navigation bei einer Ereignisuntersuchung.
+
+. Im linken Navigationsbereich auf *Event Management* klicken.
+. Im Menü „Ansicht“ lässt sich *Aktive Performance-Ereignisse* auswählen.
+. Durch Klicken auf den Namen des Ereignisses, das Sie untersuchen möchten, wird die Seite mit den Ereignisdetails angezeigt.
+. In der Description des Ereignisses und in den Suggested Actions (sofern verfügbar) finden sich weitere Details zum Ereignis, die bei der Behebung des Problems hilfreich sein können. Mit der Schaltfläche *Analyze Workload* lassen sich detaillierte Performance-Diagramme anzeigen, um das Problem weiter zu analysieren.
+
+
+image::../media/event_flow.png[Ein Screenshot der Benutzeroberfläche, der die Navigation zur Ereignisuntersuchung zeigt.]

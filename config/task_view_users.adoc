@@ -1,0 +1,21 @@
+---
+permalink: config/task_view_users.html 
+sidebar: sidebar 
+keywords: view, users 
+summary: Auf der Seite „Benutzer“ kann die Liste der Benutzer angezeigt werden, die Storage Objekte und Daten mit Unified Manager managen. Dort können Details zu den Benutzern angezeigt werden, z. B. Benutzername, Benutzertyp, E-Mail-Adresse und die den Benutzern zugewiesene Rolle. 
+---
+= Benutzer in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Benutzer“ kann die Liste der Benutzer angezeigt werden, die Storage Objekte und Daten mit Unified Manager managen. Dort können Details zu den Benutzern angezeigt werden, z. B. Benutzername, Benutzertyp, E-Mail-Adresse und die den Benutzern zugewiesene Rolle.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+.Schritt
+. Im linken Navigationsbereich erfolgt die Auswahl von *Allgemein* > *Benutzer*.
+

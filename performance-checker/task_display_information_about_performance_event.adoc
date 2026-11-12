@@ -1,0 +1,47 @@
+---
+permalink: performance-checker/task_display_information_about_performance_event.html 
+sidebar: sidebar 
+keywords: display, information, performance, events 
+summary: Auf der Inventarseite der Ereignisverwaltung können Sie eine Liste aller Performance Ereignisse auf den von Unified Manager überwachten Clustern anzeigen. Anhand dieser Informationen können Sie die wichtigsten Ereignisse ermitteln und anschließend detaillierte Informationen abrufen, um die Ursache des jeweiligen Ereignisses zu bestimmen. 
+---
+= Informationen zu Leistungsereignissen in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Inventarseite der Ereignisverwaltung können Sie eine Liste aller Performance Ereignisse auf den von Unified Manager überwachten Clustern anzeigen. Anhand dieser Informationen können Sie die wichtigsten Ereignisse ermitteln und anschließend detaillierte Informationen abrufen, um die Ursache des jeweiligen Ereignisses zu bestimmen.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+
+Die Ereignisliste ist nach Erkennungszeitpunkt sortiert, wobei die neuesten Ereignisse zuerst angezeigt werden. Sie können auf eine Spaltenüberschrift klicken, um die Ereignisse nach dieser Spalte zu sortieren. Beispielsweise können Sie nach der Spalte Status sortieren, um Ereignisse nach Schweregrad anzuzeigen. Wenn Sie nach einem bestimmten Ereignis oder einem bestimmten Ereignistyp suchen, können Sie die Filter- und Suchfunktionen verwenden, um die angezeigte Ereignisliste einzugrenzen.
+
+Auf dieser Seite werden Ereignisse aus allen Quellen angezeigt:
+
+* Benutzerdefinierte Performance-Schwellenwertrichtlinie
+* Systemdefinierte Performance-Schwellenwertrichtlinie
+* Dynamischer Performance-Schwellenwert
+
+
+Die Spalte „Ereignistyp“ listet die Quelle des Ereignisses auf. Sie können ein Ereignis auswählen, um Details dazu auf der Seite „Ereignisdetails“ anzuzeigen.
+
+.Schritte
+. Im linken Navigationsbereich auf *Event Management* klicken.
+. Im Menü „View“ ist *Active performance events* auszuwählen.
++
+Auf dieser Seite werden alle neuen und bestätigten Performance-Ereignisse angezeigt, die in den letzten 7 Tagen generiert wurden.
+
+. Wenn Sie das zu analysierende Ereignis gefunden haben, können Sie auf den Ereignisnamen klicken.
++
+Die Detailseite für das Ereignis wird angezeigt.
+
++
+[NOTE]
+====
+Sie können die Detailseite eines Ereignisses auch anzeigen, indem Sie auf der Seite „Performance Explorer“ oder in einer Benachrichtigungs-E-Mail auf den Link mit dem Ereignisnamen klicken.
+
+====
+

@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_understand_root_object.html 
+sidebar: sidebar 
+keywords: understand, root, object 
+summary: Das Stammobjekt dient als Grundlage, mit der andere Objektvergleiche vorgenommen werden. Dadurch können Sie die Daten anderer Objekte mit dem Stammobjekt anzeigen und vergleichen. So erhalten Sie eine Analyse der Performance-Daten, die Sie bei der Fehlerbehebung und der Verbesserung der Objekt-Performance unterstützt. 
+---
+= Stammobjekte werden für die Leistungsüberwachung in Active IQ Unified Manager verwendet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Stammobjekt dient als Grundlage, mit der andere Objektvergleiche vorgenommen werden. Dadurch können Sie die Daten anderer Objekte mit dem Stammobjekt anzeigen und vergleichen. So erhalten Sie eine Analyse der Performance-Daten, die Sie bei der Fehlerbehebung und der Verbesserung der Objekt-Performance unterstützt.
+
+Der Name des Stammobjekts wird oben im Vergleichsbereich angezeigt. Weitere Objekte werden unterhalb des Stammobjekts angezeigt. Sie können dem Vergleichsbereich zwar beliebig viele weitere Objekte hinzufügen, es ist jedoch nur ein Stammobjekt zulässig. Die Daten des Stammobjekts werden automatisch in den Diagrammen im Bereich „Zählerdiagramme“ angezeigt.
+
+Das Stammobjekt kann nicht geändert werden; es ist immer auf die aktuell angezeigte Objektseite festgelegt. Wenn Sie beispielsweise die Seite „Volume Performance Explorer“ von Volume1 öffnen, ist Volume1 das Stammobjekt und kann nicht geändert werden. Für einen Vergleich mit einem anderen Stammobjekt ist der Link zu einem Objekt auszuwählen und dessen Startseite zu öffnen.
+
+[NOTE]
+====
+Ereignisse und Schwellenwerte werden nur für Root-Objekte angezeigt.
+
+====

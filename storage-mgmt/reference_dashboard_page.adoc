@@ -1,0 +1,133 @@
+---
+permalink: storage-mgmt/reference_dashboard_page.html 
+sidebar: sidebar 
+keywords: dashboard page, 
+summary: Die Dashboard-Seite enthält „Bereiche“, in denen die Kapazität, Performance und der Sicherheitsstatus der Cluster, die Sie überwachen, auf hoher Ebene angezeigt werden. Diese Seite bietet außerdem einen Bereich mit Verwaltungsaktionen, in dem Korrekturen aufgelistet sind, die Unified Manager zur Behebung bestimmter Ereignisse vornehmen kann. 
+---
+= Informationen zur Dashboard-Seite von Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Dashboard-Seite enthält „Bereiche“, die die allgemeine Kapazität, Performance und den Sicherheitsstatus der Cluster anzeigen, die Sie überwachen. Diese Seite enthält außerdem den Bereich Management Actions, in dem Korrekturen aufgeführt sind, die Unified Manager zur Behebung bestimmter Ereignisse durchführen kann.
+
+Die meisten Bereiche zeigen außerdem die Anzahl der aktiven Ereignisse in der jeweiligen Kategorie sowie die Anzahl der in den letzten 24 Stunden neu hinzugekommenen Ereignisse an. Diese Informationen helfen Ihnen bei der Entscheidung, welche Cluster Sie möglicherweise genauer analysieren müssen, um Ereignisse zu beheben. Beim Klicken auf die Ereignisse werden die wichtigsten Ereignisse angezeigt, und es wird ein Link zur Event Management-Inventarseite bereitgestellt, die so gefiltert ist, dass die aktiven Ereignisse in dieser Kategorie angezeigt werden.
+
+Am oberen Rand des Dashboard lässt sich auswählen, ob die Panels Informationen für alle überwachten Cluster („Alle Cluster“) oder für einen einzelnen Cluster anzeigen. Zunächst lässt sich der Status aller Cluster anzeigen, und anschließend kann zu einzelnen Clustern gewechselt werden, wenn detaillierte Informationen angezeigt werden sollen.
+
+[NOTE]
+====
+Einige der unten aufgeführten Bereiche werden je nach Ihrer Konfiguration im Dashboard angezeigt.
+
+====
+
+
+[[management-actions-panel]]
+== Bereich „Managementaktionen“
+
+Es gibt bestimmte Probleme, die Unified Manager umfassend diagnostizieren und mit einer einzigen Lösung beheben kann. Falls verfügbar, werden diese Lösungen in diesem Bereich mit einer Schaltfläche *Fix It* oder *Fix All* angezeigt. Diese Probleme können direkt in Unified Manager behoben werden, ohne dass ONTAP System Manager oder die ONTAP CLI verwendet werden muss. Zum Anzeigen aller Probleme steht link:concept_fix_ontap_issues_directly_from_unified_manager.html["Direktes Beheben von ONTAP Problemen in Unified Manager"] Weitere Informationen zur Verfügung.
+
+
+
+[[capacity-panel]]
+== Kapazitätsbereich
+
+Bei der Anzeige aller Cluster zeigt dieses Panel für jeden Cluster die physisch genutzte Kapazität (nach Anwendung von Storage-Effizienzeinsparungen) und die physisch verfügbare Kapazität (ohne potenzielle Storage-Effizienzeinsparungen), die Anzahl der Tage bis zur voraussichtlichen vollständigen Auslastung der Festplatten sowie das Datenreduktionsverhältnis (ohne Snapshot Kopien) auf Grundlage der konfigurierten ONTAP Storage-Effizienzeinstellungen an. Außerdem wird die genutzte Kapazität für alle konfigurierten Cloud-Tiers aufgeführt. Durch Klicken auf das Balkendiagramm wird die Seite „Aggregates Inventory“ für diesen Cluster geöffnet. Durch Klicken auf den Text „Days To Full“ wird eine Meldung angezeigt, die das Aggregat mit der geringsten Anzahl verbleibender Kapazitätstage angibt; durch Klicken auf den Aggregatnamen werden weitere Details angezeigt.
+
+Bei der Anzeige eines einzelnen Clusters zeigt dieses Fenster die physisch belegte Kapazität und die physisch verfügbare Kapazität für die Datenaggregate an, sortiert nach jedem einzelnen Festplattentyp auf dem lokalen Tier sowie für den Cloud Tier. Durch Klicken auf das Balkendiagramm für einen Festplattentyp gelangen Sie zur Inventarseite „Volumes“ für die Volumes, die diesen Festplattentyp verwenden.
+
+
+
+[[performance-capacity-panel]]
+== Panel „Performance Capacity“
+
+Bei der Anzeige aller Cluster zeigt dieses Panel für jeden Cluster den Wert der Performance-Kapazität an, gemittelt über die vorherige 1 Stunde, sowie die Anzahl der Tage, bis die Performance-Kapazität die Obergrenze erreicht, basierend auf der täglichen Wachstumsrate. Durch Klicken auf das Balkendiagramm wird die Nodes-Inventarseite für diesen Cluster geöffnet. Zu beachten ist, dass auf der Nodes-Inventarseite die Performance-Kapazität angezeigt wird, gemittelt über die vorherigen 72 Stunden. Durch Klicken auf den Text „Days To Full“ wird eine Meldung angezeigt, die den Node mit der geringsten Anzahl verbleibender Tage der Performance-Kapazität identifiziert; durch Klicken auf den Node-Name werden weitere Details angezeigt.
+
+Beim Anzeigen eines einzelnen Clusters werden in diesem Panel der Prozentsatz der genutzten Cluster-Performancekapazität, die Gesamt-IOPS und der Gesamtdurchsatz (MB/s) sowie die Anzahl der Tage angezeigt, bis voraussichtlich jede dieser drei Kennzahlen ihren oberen Grenzwert erreicht.
+
+
+
+[[workload-iops-panel]]
+== Workload IOPS Panel
+
+Bei der Ansicht eines einzelnen Clusters zeigt dieses Panel die Gesamtzahl der Workloads an, die derzeit in einem bestimmten IOPS-Bereich ausgeführt werden, und die Anzahl für jeden Datenträgertyp, wenn sich der Mauszeiger über dem Diagramm befindet.
+
+
+
+[[workload-performance-panel]]
+== Bereich Workload-Performance
+
+Dieses Panel zeigt die Gesamtzahl der konformen und nicht konformen Workloads an, die jeder Richtlinie für Performance Service Level (PSL) zugewiesen sind. Außerdem wird die Anzahl der Workloads angezeigt, denen kein PSL zugewiesen ist. Ein Klick auf ein Balkendiagramm führt auf der Seite „Workloads“ zu den konformen Workloads, die dieser Richtlinie zugewiesen sind. Ein Klick auf die Zahl, die auf das Balkendiagramm folgt, führt zu den konformen und nicht konformen Workloads, die dieser Richtlinie zugewiesen sind.
+
+
+
+[[security-panel]]
+== Sicherheitsbereich
+
+Das Sicherheitspanel zeigt den allgemeinen Sicherheitsstatus für alle Cluster oder einen einzelnen Cluster an, je nach Ihrer aktuellen Ansicht. Dieses Panel zeigt Folgendes an:
+
+* eine Liste der Sicherheitsereignisse, die in den letzten 24 Stunden eingegangen sind. Durch Klicken auf ein Ereignis werden die Details auf der Seite „Ereignisdetails“ angezeigt.
+* Sicherheitsstatus des Clusters (Anzahl der konformen und nicht konformen Cluster)
+* der Sicherheitsstatus der Storage VMs (Anzahl der konformen und nicht konformen Storage VMs)
+* der Verschlüsselungsstatus des Volumes (Anzahl der verschlüsselten bzw. unverschlüsselten Volumes)
+* der Anti-Ransomware-Status der Volumes (Anzahl der Volumes, für die Anti-Ransomware aktiviert oder deaktiviert ist)
+
+
+Sie können auf die Balkendiagramme der konformen und nicht konformen Cluster, Storage-VMs, verschlüsselten und unverschlüsselten Volumes sowie des Anti-Ransomware-Status der Volumes klicken, um zu den jeweiligen Seiten zu gelangen und die Sicherheitsdetails der gefilterten Cluster, Storage-VMs und Volumes anzuzeigen.
+
+Die Einhaltung der Vorschriften basiert auf den https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp Security Hardening Guide für ONTAP 9"^]. Mit dem Pfeil nach rechts oben im Fenster lassen sich auf der Seite „Sicherheit“ die Sicherheitsdetails für alle Cluster anzeigen. Informationen dazu finden Sie unter link:../health-checker/task_view_detailed_security_status_for_clusters_and_svms.html["Anzeigen des detaillierten Sicherheitsstatus für Cluster und Storage VMs"].
+
+
+
+[[data-protection-panel]]
+== Bereich „Data Protection“
+
+Dieses Panel zeigt die Zusammenfassung des Datenschutzes für einen oder alle Cluster in einem Datacenter an. Es zeigt die Gesamtzahl der Datenschutzereignisse, MetroCluster Ereignisse und die Anzahl der aktiven Ereignisse an, die in den letzten 24 Stunden in ONTAP ausgelöst wurden. Über den Link in jedem dieser Ereignisse gelangen Sie zur Seite Event details. Über den Link *View All* können alle aktiven Schutzereignisse auf der Bestandsseite Event Management angezeigt werden. Das Panel zeigt Folgendes an:
+
+* Die Volume-Anzahl in einem Cluster oder in allen Clustern eines durch Snapshot copies geschützten Datacenters.
+* Die Volume-Anzahl in einem Cluster oder in allen Clustern eines Datacenter, die durch SnapMirror Beziehungen geschützt sind. Bei SnapMirror Beziehungen wird die Volume-Anzahl im Quell-Cluster berücksichtigt.
+* Die Anzahl der Cluster oder aller Cluster in einem Datacenter, die durch eine MetroCluster Konfiguration über IP oder FC geschützt sind.
+* Die Anzahl der Volume-Beziehungen mit einer auf dem Verzögerungsstatus basierenden SnapMirror Recovery Point Objective (RPO)-Verzögerung.
+
+
+Beim Bewegen des Mauszeigers lassen sich die jeweiligen Anzahlen und Legenden anzeigen. Über den Pfeil nach rechts oben im Bereich lassen sich die Details für einen einzelnen oder für alle Cluster auf der Seite „Data Protection“ anzeigen. Außerdem sind folgende Elemente anklickbar:
+
+* Die Balkendiagramme für ungeschützte Volumes und durch Snapshot Kopien geschützte Volumes führen zur Seite „Volumes“, auf der die Details angezeigt werden.
+* Die Balkendiagramme für die Cluster, die durch die MetroCluster Konfiguration geschützt sind oder nicht geschützt sind, führen zur Seite „Cluster“, auf der die Details angezeigt werden.
+* Die Balkendiagramme für alle Beziehungen führen zur Seite „Beziehungen“, auf der die Details anhand des Quell-Clusters gefiltert werden.
+
+
+Weitere Informationen sind unter link:../data-protection/view-protection-status.html["Anzeigen des Volume-Schutzstatus"] verfügbar.
+
+
+
+[[usage-overview-panel]]
+== Bereich „Nutzungsübersicht“
+
+Bei der Anzeige aller Cluster können Sie die Cluster nach höchster IOPS-Zahl, höchstem Durchsatz (MB/s) oder höchster genutzter physischer Kapazität sortieren.
+
+Bei der Anzeige eines einzelnen Clusters können Sie die Workloads sortiert nach den höchsten IOPS, dem höchsten Durchsatz (MB/s) oder der höchsten genutzten logischen Kapazität anzeigen.
+
+*Verwandte Informationen*
+
+link:../events/task_fix_issues_using_um_automatic_remediations.html["Beheben von Problemen mithilfe automatischer Korrekturmaßnahmen von Unified Manager"]
+
+link:../performance-checker/task_display_information_about_performance_event.html["Anzeigen von Informationen zu Performance-Ereignissen"]
+
+link:../performance-checker/concept_manage_performance_using_perf_capacity_available_iops.html["Managen der Performance mithilfe von Informationen zur Performance-Kapazität und zu verfügbaren IOPS"]
+
+link:../health-checker/reference_health_volume_details_page.html["Seite mit Details zu Volume/Systemstatus"]
+
+link:../performance-checker/reference_performance_event_analysis_and_notification.html["Performance Ereignisanalyse und Benachrichtigung"]
+
+link:../events/reference_description_of_event_severity_types.html["Beschreibung der Schweregrade von Ereignissen"]
+
+link:../performance-checker/concept_sources_of_performance_events.html["Quellen von Performance-Ereignissen"]
+
+link:../health-checker/concept_manage_cluster_security_objectives.html["Cluster-Sicherheitsziele managen"]
+
+link:../performance-checker/concept_monitor_cluster_performance_from_cluster_landing_page.html["Sie können die Cluster-Performance auf der Performance Cluster Landing page überwachen."]
+
+link:../performance-checker/concept_monitor_performance_using_object_performance.html["Überwachung der Performance mithilfe der Seiten zur Performance-Inventur"]

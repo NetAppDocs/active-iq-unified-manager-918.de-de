@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/task_respond_to_performance_incident_caused_by_ha_takeover.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, ha, takeover 
+summary: 'Mit Unified Manager können Sie ein Performance-Ereignis untersuchen, das durch hohe Data Processing auf einem Cluster-Knoten verursacht wurde, der sich in einem Hochverfügbarkeitspaar (HA) befindet. Mit Unified Manager können Sie außerdem den Systemstatus der Knoten prüfen, um festzustellen, ob kürzlich auf den Knoten erkannte Systemstatusereignisse zu dem Performance-Ereignis beigetragen haben.' 
+---
+= Reaktion auf ein Leistungsereignis, das durch eine HA Übernahme in Active IQ Unified Manager verursacht wurde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Unified Manager können Sie ein Performance-Ereignis untersuchen, das durch hohe Data Processing auf einem Cluster-Knoten verursacht wurde, der sich in einem Hochverfügbarkeitspaar (HA) befindet. Mit Unified Manager können Sie außerdem den Systemstatus der Knoten prüfen, um festzustellen, ob kürzlich auf den Knoten erkannte Systemstatusereignisse zu dem Performance-Ereignis beigetragen haben.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Es muss neue, bestätigte oder veraltete Performance-Ereignisse geben.
+
+
+.Schritte
+. Die Seite *Ereignisdetails* enthält Informationen zum Ereignis.
+. Die *Beschreibung* enthält die am Ereignis beteiligten Workloads und die betroffene Clusterkomponente.
++
+Es gibt ein betroffenes Volume, dessen Latenz durch die Clusterkomponente in Konflikt beeinträchtigt wurde. Der Data Processing Knoten, der alle Workloads von seinem Partnerknoten übernommen hat, ist die Clusterkomponente in Konflikt. Unter „Component in Contention“ ist das Data Processing Symbol rot hervorgehoben, und der Name des Knotens, der zum Zeitpunkt des Ereignisses die Data Processing verarbeitete, wird in Klammern angezeigt.
+
+. In der *Beschreibung* wählen Sie den Namen des Volumes aus.
++
+Die Seite „Volume Performance Explorer“ wird angezeigt. Oben auf der Seite zeigt in der Zeitleiste der Ereignisse ein Symbol für ein Änderungsereignis (image:../media/opm_change_icon.gif["Änderung des Ereignissymbols"]) den Zeitpunkt an, zu dem Unified Manager den Beginn der HA-Übernahme erkannt hat.
+
+. Wenn der Cursor auf das Änderungsereignissymbol für die HA-Übernahme zeigt, werden Details zur HA-Übernahme als Hover-Text angezeigt.
++
+Im Latenzdiagramm zeigt ein Ereignis an, dass das ausgewählte Volume aufgrund hoher Latenz etwa zur gleichen Zeit wie die HA-Übernahme den Performance-Schwellenwert überschritten hat.
+
+. Mit *Zoom View* wird das Latenzdiagramm auf einer neuen Seite angezeigt.
+. Im Menü „Ansicht“ dient *Cluster Components* zur Anzeige der Gesamtlatenz nach Clusterkomponente.
+. Wenn Sie den Mauszeiger auf das Änderungsereignissymbol für den Beginn der HA Übernahme richten, lässt sich die Latenz für Data Processing mit der Gesamtlatenz vergleichen.
++
+Zum Zeitpunkt der HA-Übernahme kam es aufgrund der erhöhten Workload-Anforderung auf dem Data Processing Knoten zu einem sprunghaften Anstieg der Data Processing. Die erhöhte CPU-Auslastung führte zu einer höheren Latenz und löste das Ereignis aus.
+
+. Nach der Reparatur des ausgefallenen Knotens erfolgt die Durchführung einer HA-Rückführung in ONTAP System Manager, wodurch die Workloads vom Partnerknoten auf den reparierten Knoten verschoben werden.
+. Nach Abschluss des HA Giveback und nach der nächsten Konfigurationserkennung in Unified Manager (ca. 15 Minuten) lassen sich auf der Inventarseite *Event Management* das Ereignis und die Workload finden, die durch das HA Takeover ausgelöst wurden.
++
+Das durch die HA-Übernahme ausgelöste Ereignis hat nun den Status „veraltet“, was darauf hinweist, dass das Ereignis behoben ist. Die Latenz der Data Processing-Komponente hat sich verringert, wodurch die Gesamtlatenz gesunken ist. Der Knoten, den das ausgewählte Volume nun für Data Processing verwendet, hat das Ereignis behoben.
+
+

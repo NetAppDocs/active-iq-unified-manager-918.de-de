@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/concept_manage_performance_using_perf_capacity_available_iops.html 
+sidebar: sidebar 
+keywords: managing, performance, performance, capacity, available, iops, information 
+summary: Die Leistungskapazität gibt an, wie viel Durchsatz Sie aus einer Ressource herausholen können, ohne die nutzbare Performance dieser Ressource zu überschreiten. Bei Betrachtung mit vorhandenen Performance-Zählern ist die Leistungskapazität der Punkt, an dem Sie die maximale Auslastung eines Knotens oder Aggregats erreichen, bevor Latenz zu einem Problem wird. 
+---
+= Verwaltung der Leistungskapazität und der verfügbaren IOPS in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+_Performance capacity_ gibt an, wie viel Durchsatz Sie aus einer Ressource herausholen können, ohne die nutzbare Performance dieser Ressource zu überschreiten. Bei der Anzeige mit vorhandenen Performance Zählern ist die Performance capacity der Punkt, an dem Sie die maximale Auslastung eines Knotens oder Aggregats erreichen, bevor Latenz zu einem Problem wird.
+
+Unified Manager erfasst in jedem Cluster Statistiken zur Performance-Kapazität von Knoten und Aggregaten. _Genutzte Performance-Kapazität_ ist der Prozentsatz der Performance-Kapazität, der derzeit verwendet wird, und _freie Performance-Kapazität_ ist der Prozentsatz der Performance-Kapazität, der noch verfügbar ist.
+
+Während die freie Performance Kapazität den prozentualen Anteil der Ressource angibt, der noch verfügbar ist, gibt _verfügbare IOPS_ die Anzahl der IOPS an, die einer Ressource hinzugefügt werden können, bevor die maximale Performance Kapazität erreicht wird. Mithilfe dieser Metrik können Sie sicherstellen, dass einer Ressource Workloads mit einer vordefinierten Anzahl von IOPS hinzugefügt werden können.
+
+Die Überwachung der Performance-Kapazitätsinformationen bietet folgende Vorteile:
+
+* Unterstützt die Provisionierung und den Ausgleich von Workflows.
+* Hilft Ihnen dabei, eine Überlastung eines Knotens oder eine Überschreitung seiner Ressourcengrenzen zu verhindern und somit den Aufwand für die Fehlersuche zu reduzieren.
+* Ermöglicht es Ihnen, genauer zu bestimmen, wo zusätzliche Storage Systeme benötigt werden.
+

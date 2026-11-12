@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_what_information_is_contained_in_an_alert_email.html 
+sidebar: sidebar 
+keywords: information, contained, alert, email 
+summary: Unified Manager Benachrichtigungs-E-Mails enthalten den Typ des Ereignisses, den Schweregrad des Ereignisses, den Namen der Richtlinie oder des Schwellenwerts, deren bzw. dessen Überschreitung das Ereignis verursacht hat, sowie eine Beschreibung des Ereignisses. Die E-Mail-Nachricht enthält außerdem für jedes Ereignis einen Hyperlink, über den sich die Detailseite des Ereignisses in der UI anzeigen lässt. 
+---
+= Die Informationen in einer Benachrichtigungs-E-Mail in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager Benachrichtigungs-E-Mails enthalten den Typ des Ereignisses, den Schweregrad des Ereignisses, den Namen der Richtlinie oder des Schwellenwerts, deren bzw. dessen Überschreitung das Ereignis verursacht hat, sowie eine Beschreibung des Ereignisses. Die E-Mail-Nachricht enthält außerdem für jedes Ereignis einen Hyperlink, über den sich die Detailseite des Ereignisses in der UI anzeigen lässt.
+
+Alle Benutzer, die den Erhalt von Alerts abonniert haben, erhalten Benachrichtigungs-E-Mails.
+
+Wenn sich ein Performance-Zähler oder ein Kapazitätswert während eines Erfassungszeitraums stark ändert, kann dies dazu führen, dass gleichzeitig ein kritisches und ein Warnereignis für dieselbe Schwellenwertrichtlinie ausgelöst werden. In diesem Fall erhalten Sie möglicherweise eine E-Mail für das Warnereignis und eine weitere für das kritische Ereignis. Dies liegt daran, dass Unified Manager es Ihnen ermöglicht, Benachrichtigungen für Warn- und kritische Schwellenwertüberschreitungen separat zu abonnieren.
+
+Nachfolgend ist ein Beispiel für eine Benachrichtigungs-E-Mail dargestellt:
+
+image::../media/um_email_alert.gif[Ein Screenshot der Benutzeroberfläche, der eine Beispiel-Alert-E-Mail zeigt.]

@@ -1,0 +1,40 @@
+---
+permalink: performance-checker/task_add_alerts_for_performance_events.html 
+sidebar: sidebar 
+keywords: add, alerts, performance, events 
+summary: Sie können Benachrichtigungen für einzelne Performance-Ereignisse genauso konfigurieren wie für alle anderen Ereignisse, die von Unified Manager empfangen werden. Wenn Sie außerdem alle Performance-Ereignisse gleich behandeln und E-Mails an dieselbe Person senden möchten, können Sie eine einzelne Benachrichtigung erstellen, die Sie informiert, sobald kritische oder Warnungs-Performance-Ereignisse ausgelöst werden. 
+---
+= Hinzufügen von Warnmeldungen für Leistungsereignisse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Benachrichtigungen für einzelne Performance-Ereignisse genauso konfigurieren wie für alle anderen Ereignisse, die von Unified Manager empfangen werden. Wenn Sie außerdem alle Performance-Ereignisse gleich behandeln und E-Mails an dieselbe Person senden möchten, können Sie eine einzelne Benachrichtigung erstellen, die Sie informiert, sobald kritische oder Warnungs-Performance-Ereignisse ausgelöst werden.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Das folgende Beispiel zeigt, wie ein Ereignis für alle kritischen Latenz-, IOPS- und MBps-Ereignisse erstellt wird. Mit derselben Methode können Ereignisse aus allen Performance-Zählern und für alle Warnereignisse ausgewählt werden.
+
+.Schritte
+. Im linken Navigationsbereich auf *Storage Management* > *Alert Setup* klicken.
+. Auf der Seite „Benachrichtigungseinstellungen“ erfolgt ein Klick auf *Hinzufügen*.
+. Im Dialogfeld „Warnung hinzufügen“ wird auf *Name* geklickt und ein Name sowie eine Beschreibung für die Warnung eingegeben.
+. Auf der Seite *Ressourcen* werden keine Ressourcen ausgewählt.
++
+Da keine Ressourcen ausgewählt sind, gilt die Warnung für alle Cluster, Aggregate, Volumes usw., für die diese Ereignisse empfangen werden.
+
+. Nach Auswahl von *Events* können die folgenden Aktionen durchgeführt werden:
++
+.. In der Liste „Ereignisschweregrad“ erfolgt die Auswahl von *Kritisch*.
+.. Im Feld „Ereignisname enthält“ wird  `*latency*` eingegeben; anschließend lässt sich über den Pfeil die Auswahl aller übereinstimmenden Ereignisse vornehmen.
+.. Im Feld „Ereignisname enthält“ wird  `*iops*` eingegeben; anschließend werden über den Pfeil alle übereinstimmenden Ereignisse ausgewählt.
+.. Im Feld „Ereignisname enthält“ wird `*mbps*` eingegeben; anschließend werden über den Pfeil alle übereinstimmenden Ereignisse ausgewählt.
+
+
+. Unter *Aktionen* folgt im Feld *Diese Benutzer benachrichtigen* die Auswahl des Namens des Benutzers, der die Benachrichtigungs-E-Mail erhalten soll.
+. Auf dieser Seite stehen alle weiteren Optionen zum Auslösen von SNMP-Traps und zum Ausführen eines Skripts zur Verfügung.
+. Auf *Speichern* klicken.
+

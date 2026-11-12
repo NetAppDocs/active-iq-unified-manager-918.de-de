@@ -1,0 +1,34 @@
+---
+permalink: performance-checker/concept_add_disks_and_reallocate_data.html 
+sidebar: sidebar 
+keywords: add, disks, reallocate, data 
+summary: Sie können einem Aggregat Festplatten hinzufügen, um die Storage-Kapazität und die Performance dieses Aggregats zu erhöhen. Nach dem Hinzufügen der Festplatten ist eine Verbesserung der Lese Performance erst nach der Neuverteilung der Daten auf die hinzugefügten Festplatten zu erkennen. 
+---
+= Informationen dazu, wie sich das Hinzufügen von Festplatten auf die Datenneuverteilung in Active IQ Unified Manager auswirkt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einem Aggregat Festplatten hinzufügen, um die Storage-Kapazität und die Performance dieses Aggregats zu erhöhen. Nach dem Hinzufügen der Festplatten ist eine Verbesserung der Lese Performance erst nach der Neuverteilung der Daten auf die hinzugefügten Festplatten zu erkennen.
+
+Diese Anweisungen gelten, wenn Unified Manager Aggregatereignisse empfangen hat, die durch dynamische Schwellenwerte oder systemdefinierte Performance-Schwellenwerte ausgelöst wurden:
+
+* Wenn Sie ein Ereignis mit einem dynamischen Schwellenwert erhalten haben, wird auf der Seite „Ereignisdetails“ das Clusterkomponentensymbol, das das von einer Ressourcenkonkurrenz betroffene Aggregat darstellt, rot hervorgehoben.
++
+Unterhalb des Symbols steht in Klammern der Name des Aggregats, der kennzeichnet, zu welchem Aggregat Sie Datenträger hinzufügen können.
+
+* Wenn Sie ein systemdefiniertes Schwellenwertereignis erhalten haben, enthält der Ereignisbeschreibungstext auf der Seite mit den Ereignisdetails den Namen des Aggregats, bei dem das Problem auftritt.
++
+Sie können diesem Aggregat Festplatten hinzufügen und Daten neu verteilen.
+
+
+
+Die dem Aggregat hinzugefügten Datenträger müssen bereits im Cluster vorhanden sein. Falls im Cluster keine zusätzlichen Datenträger verfügbar sind, ist möglicherweise eine Kontaktaufnahme mit Ihrem Administrator oder der Erwerb weiterer Datenträger erforderlich. Sie können ONTAP System Manager oder die ONTAP-Befehle verwenden, um Datenträger zu einem Aggregat hinzuzufügen.
+
+[NOTE]
+====
+Eine Neuzuweisung von Daten ist nur bei der Verwendung von HDD- und Flash Pool Aggregaten zu empfehlen. Auf SSD- oder FabricPool Aggregaten sollten Daten nicht neu zugewiesen werden.
+
+====

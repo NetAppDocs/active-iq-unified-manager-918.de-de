@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/concept_cluster_configuration_changes_detected_by_unified_manager.html 
+sidebar: sidebar 
+keywords: unified manager, configuration, changes, detected 
+summary: 'Unified Manager überwacht Ihre Cluster auf Konfigurationsänderungen, damit Sie feststellen können, ob eine Änderung möglicherweise ein Performance-Ereignis verursacht hat oder dazu beigetragen hat. Die Seiten des Performance Explorer zeigen ein Änderungssymbol () an, das Datum und Uhrzeit angibt, zu denen die Änderung erkannt wurde.' 
+---
+= Überwachen von Konfigurationsänderungen, die von Active IQ Unified Manager erkannt wurden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager überwacht Ihre Cluster auf Konfigurationsänderungen, um festzustellen, ob eine Änderung ein Performance Ereignis verursacht hat oder dazu beigetragen haben könnte. Die Seiten des Performance Explorer zeigen ein Änderungssymbol (image:../media/opm_change_icon.gif["Änderung des Ereignissymbols"]) an, das das Datum und die Uhrzeit angibt, zu denen die Änderung erkannt wurde.
+
+Auf den Seiten von Performance Explorer und auf der Seite Workload Analysis können die Performance-Diagramme geprüft werden, um festzustellen, ob sich das Änderungsereignis auf die Performance des ausgewählten Clusterobjekts ausgewirkt hat. Wenn die Änderung gleichzeitig oder ungefähr zur selben Zeit wie ein Performance-Ereignis erkannt wurde, hat sie möglicherweise zu dem Problem beigetragen, das die Ereigniswarnung ausgelöst hat.
+
+Unified Manager kann die folgenden Änderungsereignisse erkennen, die als Informationsereignisse kategorisiert sind:
+
+* Ein Volume bewegt sich zwischen Aggregaten.
++
+Unified Manager kann erkennen, ob eine Volume Verschiebung ausgeführt wird, abgeschlossen wurde oder fehlgeschlagen ist. Wenn Unified Manager während einer Volume Verschiebung nicht verfügbar ist, erkennt er die Volume Verschiebung nach der Wiederverfügbarkeit und zeigt ein entsprechendes Änderungsereignis an.
+
+* Der Durchsatzgrenzwert (MB/s oder IOPS) einer QoS-Richtliniengruppe, die einen oder mehrere überwachte Workloads enthält, ändert sich.
++
+Die Änderung eines Grenzwerts einer Richtliniengruppe kann zu vorübergehenden Spitzen bei der Latenz (Antwortzeit) führen, die wiederum Ereignisse für die Richtliniengruppe auslösen können. Die Latenz normalisiert sich allmählich wieder, und alle durch die Spitzen verursachten Ereignisse verlieren ihre Relevanz.
+
+* Ein Knoten in einem HA-Paar übernimmt den Storage seines Partnerknotens oder gibt ihn zurück.
++
+Unified Manager kann erkennen, wann eine Übernahme, Teilübernahme oder Rückgabe abgeschlossen wurde. Wenn die Übernahme durch einen ausgefallenen Knoten verursacht wird, erkennt Unified Manager dieses Ereignis nicht.
+
+* Ein ONTAP Upgrade oder ein Revert-Vorgang wird erfolgreich abgeschlossen.
++
+Die vorherige und die neue Version werden angezeigt.
+
+

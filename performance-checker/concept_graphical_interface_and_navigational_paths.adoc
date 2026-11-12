@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_graphical_interface_and_navigational_paths.html 
+sidebar: sidebar 
+keywords: graphical, interface, navigational, paths 
+summary: Unified Manager bietet hohe Flexibilität und ermöglicht die Erledigung vielfältiger Aufgaben auf unterschiedliche Weise. Im Laufe Ihrer Arbeit mit Unified Manager identifizieren Sie zahlreiche Navigationspfade. Obwohl hier nicht alle möglichen Navigationskombinationen dargestellt werden können, sollten Sie mit einigen der gängigsten Szenarien vertraut sein. 
+---
+= Die grafische Benutzeroberfläche und die Navigationspfade in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager bietet hohe Flexibilität und ermöglicht die Erledigung vielfältiger Aufgaben auf unterschiedliche Weise. Im Laufe Ihrer Arbeit mit Unified Manager identifizieren Sie zahlreiche Navigationspfade. Obwohl hier nicht alle möglichen Navigationskombinationen dargestellt werden können, sollten Sie mit einigen der gängigsten Szenarien vertraut sein.

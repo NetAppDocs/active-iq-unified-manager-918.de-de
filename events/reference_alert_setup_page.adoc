@@ -1,0 +1,129 @@
+---
+permalink: events/reference_alert_setup_page.html 
+sidebar: sidebar 
+keywords: alert, setup, page, command buttons, list view, details area 
+summary: Die Seite „Alert Setup“ zeigt eine Liste der Warnmeldungen an und bietet Informationen zum Namen, Status, zur Benachrichtigungsmethode und zur Benachrichtigungshäufigkeit der Warnmeldung. Auf dieser Seite können außerdem Warnmeldungen hinzugefügt, bearbeitet, entfernt, aktiviert oder deaktiviert werden. 
+---
+= Informationen zur Seite „Warnungseinrichtung“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Alert Setup“ zeigt eine Liste der Warnmeldungen an und bietet Informationen zum Namen, Status, zur Benachrichtigungsmethode und zur Benachrichtigungshäufigkeit der Warnmeldung. Auf dieser Seite können außerdem Warnmeldungen hinzugefügt, bearbeitet, entfernt, aktiviert oder deaktiviert werden.
+
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+* *Hinzufügen*
++
+Das Dialogfeld „Warnung hinzufügen“ wird angezeigt, in dem neue Warnungen hinzugefügt werden können.
+
+* *Bearbeiten*
++
+Das Dialogfeld „Warnung bearbeiten“ wird angezeigt, in dem ausgewählte Warnungen bearbeitet werden können.
+
+* *Löschen*
++
+Ausgewählte Warnmeldungen löschen.
+
+* *Aktivieren*
++
+Ermöglicht das Versenden von Benachrichtigungen für die ausgewählten Alarme.
+
+* *Deaktivieren*
++
+Deaktiviert die ausgewählten Warnmeldungen, wenn Benachrichtigungen vorübergehend nicht gesendet werden sollen.
+
+* *Test*
++
+Dient zur Überprüfung der Konfiguration der ausgewählten Warnmeldungen nach dem Hinzufügen oder Bearbeiten.
+
+* *Benachrichtigungen über behobene und veraltete Ereignisse*
++
+Damit lässt sich festlegen, ob Benachrichtigungen gesendet werden, wenn Ereignisse in die Status „Behoben“ oder „Veraltet“ verschoben werden. Dies kann dazu beitragen, dass Benutzer keine unnötigen Benachrichtigungen erhalten.
+
+
+
+
+
+[[list-view]]
+== Listenansicht
+
+Die Listenansicht zeigt Informationen zu den erstellten Warnmeldungen in tabellarischer Form an. Mithilfe der Spaltenfilter können Sie die angezeigten Daten anpassen. Außerdem können Sie eine Warnmeldung auswählen, um im Detailbereich weitere Informationen dazu anzuzeigen.
+
+* *Status*
++
+Gibt an, ob eine Warnung aktiviert (image:../media/alert_status_enabled.gif[""]) oder deaktiviert (image:../media/alert_status_disabled.gif[""]) ist.
+
+* *Alarm*
++
+Zeigt den Namen der Warnung an.
+
+* *Beschreibung*
++
+Zeigt eine Beschreibung der Warnung an.
+
+* *Benachrichtigungsmethode*
++
+Zeigt die für die Warnung ausgewählte Benachrichtigungsmethode an. Sie können Benutzer per E-Mail oder SNMP-Traps benachrichtigen.
+
+* *Benachrichtigungshäufigkeit*
++
+Legt die Häufigkeit (in Minuten) fest, mit der der Verwaltungsserver weiterhin Benachrichtigungen sendet, bis das Ereignis bestätigt oder behoben ist oder den Status „Veraltet“ erhält.
+
+
+
+
+
+[[details-area]]
+== Detailbereich
+
+Der Detailbereich enthält weitere Informationen zur ausgewählten Warnung.
+
+* *Alarmname*
++
+Zeigt den Namen der Warnung an.
+
+* *Warnungsbeschreibung*
++
+Zeigt eine Beschreibung der Warnung an.
+
+* *Ereignisse*
++
+Zeigt die Ereignisse an, für die Sie eine Benachrichtigung auslösen möchten.
+
+* *Ressourcen*
++
+Zeigt die Ressourcen an, für die die Warnmeldung ausgelöst werden soll.
+
+* *Beinhaltet*
++
+Zeigt die Ressourcengruppe an, für die die Warnung ausgelöst werden soll.
+
+* *Ausgenommen*
++
+Zeigt die Gruppe von Ressourcen an, für die Sie keine Warnung auslösen möchten.
+
+* *Benachrichtigungsmethode*
++
+Anzeige der Benachrichtigungsmethode für die Warnung.
+
+* *Benachrichtigungshäufigkeit*
++
+Zeigt an, wie häufig der Managementserver weiterhin Warnmeldungen sendet, bis das Ereignis bestätigt, behoben oder in den Status „Obsolete“ verschoben wird.
+
+* *Skriptname*
++
+Zeigt den Namen des Skripts an, das mit der ausgewählten Warnung verknüpft ist. Dieses Skript wird ausgeführt, wenn eine Warnung generiert wird.
+
+* *E-Mail-Empfänger*
++
+Zeigt die E-Mail-Adressen der Benutzer an, die die Warnungsbenachrichtigung erhalten.
+
+

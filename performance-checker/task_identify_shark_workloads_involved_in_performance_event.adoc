@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/task_identify_shark_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, shark workloads, involved, dynamic, performance, event 
+summary: Im Unified Manager können Sie die Workloads identifizieren, die bei einer Storage Komponente mit Ressourcenkonflikt die größte Nutzungsabweichung aufweisen. Die Identifizierung dieser Workloads hilft Ihnen bei der Entscheidung, ob diese Workloads in einen weniger ausgelasteten Cluster verschoben werden sollten. 
+---
+= Shark-Workloads in einem dynamischen Performance-Ereignis in Active IQ Unified Manager identifizieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Unified Manager können Sie die Workloads identifizieren, die bei einer Storage Komponente mit Ressourcenkonflikt die größte Nutzungsabweichung aufweisen. Die Identifizierung dieser Workloads hilft Ihnen bei der Entscheidung, ob diese Workloads in einen weniger ausgelasteten Cluster verschoben werden sollten.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Es gibt neue, bestätigte oder veraltete dynamische Performance-Ereignisse.
+
+
+Die Seite mit den Ereignisdetails zeigt eine Liste der benutzerdefinierten und systemdefinierten Workloads, sortiert nach der höchsten Auslastung der Komponente oder der größten Beeinträchtigung durch das Ereignis. Die Werte basieren auf den Spitzenwerten, die Unified Manager bei der Erkennung und letzten Analyse des Ereignisses ermittelt hat.
+
+.Schritte
+. Die Seite *Ereignisdetails* enthält Informationen zum Ereignis.
+. In den Diagrammen „Workload-Latenz“ und „Workload-Aktivität“ können Sie *Shark Workloads* auswählen.
+. Wenn Sie den Mauszeiger über die Diagramme bewegen, werden die wichtigsten benutzerdefinierten Workloads angezeigt, die sich auf die Komponente auswirken, sowie der Name des Shark Workloads.
+

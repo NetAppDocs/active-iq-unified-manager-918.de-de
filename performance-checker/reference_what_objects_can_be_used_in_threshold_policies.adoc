@@ -1,0 +1,97 @@
+---
+permalink: performance-checker/reference_what_objects_can_be_used_in_threshold_policies.html 
+sidebar: sidebar 
+keywords: objects, counters, combination, threshold, policies 
+summary: Nur bestimmte Performance Zähler können zusammen in Kombinationsrichtlinien verwendet werden. Wenn primäre und sekundäre Performance Zähler angegeben sind, müssen beide Performance Zähler ihre Maximalwerte überschreiten, bevor ein Ereignis generiert wird. 
+---
+= Kombinationsschwellenwertrichtlinienobjekte und Zähler in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nur bestimmte Performance Zähler können zusammen in Kombinationsrichtlinien verwendet werden. Wenn primäre und sekundäre Performance Zähler angegeben sind, müssen beide Performance Zähler ihre Maximalwerte überschreiten, bevor ein Ereignis generiert wird.
+
+|===
+| Primäres Storage-Objekt und Zähler | Sekundäres Storage Objekt und Zähler 
+
+
+ a| 
+Volume Latenz
+ a| 
+Volume-IOPS
+
+
+
+ a| 
+Volume MB/s
+
+
+
+ a| 
+Auslastung des Aggregats
+
+
+
+ a| 
+Genutzte Aggregat-Performance-Kapazität
+
+
+
+ a| 
+Knotenauslastung
+
+
+
+ a| 
+Genutzte Node Performance Kapazität
+
+
+
+ a| 
+Ausgenutzte Knotenleistungskapazität - Übernahme
+
+
+
+ a| 
+LUN Latenz
+ a| 
+LUN-IOPS
+
+
+
+ a| 
+LUN MB/s
+
+
+
+ a| 
+Auslastung des Aggregats
+
+
+
+ a| 
+Genutzte Aggregat-Performance-Kapazität
+
+
+
+ a| 
+Knotenauslastung
+
+
+
+ a| 
+Genutzte Node Performance Kapazität
+
+
+
+ a| 
+Ausgenutzte Knotenleistungskapazität - Übernahme
+
+|===
+[NOTE]
+====
+Wenn eine Volume-Kombinationsrichtlinie auf ein FlexGroup Volume anstatt auf ein FlexVol Volume angewendet wird, können nur die Attribute „Volume IOPS“ und „Volume MB/s“ als sekundärer Zähler ausgewählt werden. Wenn die Schwellenwertrichtlinie eines der Knoten- oder Aggregatattribute enthält, wird die Richtlinie nicht auf das FlexGroup Volume angewendet, und Sie erhalten eine Fehlermeldung, in der dieser Fall beschrieben wird. Dies liegt daran, dass FlexGroup Volumes auf mehr als einem Knoten oder Aggregat vorhanden sein können.
+
+====

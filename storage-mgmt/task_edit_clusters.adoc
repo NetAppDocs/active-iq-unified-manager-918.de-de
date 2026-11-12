@@ -1,0 +1,37 @@
+---
+permalink: storage-mgmt/task_edit_clusters.html 
+sidebar: sidebar 
+keywords: edit, clusters 
+summary: Über das Dialogfeld „Cluster bearbeiten“ können Sie die Einstellungen eines bestehenden Clusters ändern, z. B. den Hostnamen oder die IP-Adresse, den Benutzernamen, das Passwort und den Port. 
+---
+= Bearbeiten der Clustereinstellungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über das Dialogfeld „Cluster bearbeiten“ können Sie die Einstellungen eines bestehenden Clusters ändern, z. B. den Hostnamen oder die IP-Adresse, den Benutzernamen, das Passwort und den Port.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators oder die Rolle des Storage-Administrators.
+
+[NOTE]
+====
+Ab Unified Manager 9.7 können Cluster nur noch über HTTPS hinzugefügt werden.
+
+====
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Cluster Setup*.
+. Auf der Seite *Cluster Setup* erfolgt die Auswahl des Clusters, den Sie bearbeiten möchten; anschließend klicken Sie auf *Edit*.
+. Im Dialogfeld *Edit Cluster* lassen sich die Werte bei Bedarf ändern. + Wenn die Details für einen zu Unified Manager hinzugefügten Cluster geändert wurden, können die Zertifikatsdetails für die Mutual TLS-Kommunikation abhängig von der ONTAP Version angezeigt werden. Weitere Informationen zur ONTAP Version finden Sie unter link:../storage-mgmt/task_add_clusters.html["Zertifikate für die gegenseitige TLS-Kommunikation"]. + Die Zertifikatsdetails können über *Certificate Details* angezeigt werden. Wenn das Zertifikat abgelaufen ist, lässt sich das neue Zertifikat über die Schaltfläche *Regenerate* einbinden.
+. Anschließend *Absenden* auswählen.
+. Im Dialogfeld „Host autorisieren“ kann über *Zertifikat anzeigen* die Zertifikatsinformation zum Cluster angezeigt werden.
+. Klicken Sie auf *Ja*.
+
+
+*Verwandte Informationen*
+
+link:../config/task_add_users.html["Hinzufügen von Benutzern"]
+
+link:../health-checker/task_view_cluster_list_and_details.html["Anzeigen der Clusterliste und Details"]

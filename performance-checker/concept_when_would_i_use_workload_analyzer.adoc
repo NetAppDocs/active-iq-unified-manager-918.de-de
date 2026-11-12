@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_when_would_i_use_workload_analyzer.html 
+sidebar: sidebar 
+keywords: workload analyzer, use 
+summary: Typischerweise dient der Workload Analyzer dazu, ein von einem Benutzer gemeldetes Latenzproblem zu beheben, ein gemeldetes Ereignis oder eine Warnung eingehender zu analysieren oder eine Workload zu untersuchen, die sich auffällig verhält. 
+---
+= Informationen zur Verwendung des Workload Analyzer in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Typischerweise dient der Workload Analyzer dazu, ein von einem Benutzer gemeldetes Latenzproblem zu beheben, ein gemeldetes Ereignis oder eine Warnung eingehender zu analysieren oder eine Workload zu untersuchen, die sich auffällig verhält.
+
+Falls Benutzer Sie kontaktiert haben und mitteilen, dass die von ihnen verwendete Applikation sehr langsam ausgeführt wird, können Sie die Diagramme für Latenz, Durchsatz und Auslastung der Workload überprüfen, auf der die Applikation ausgeführt wird, um festzustellen, ob Storage die Ursache des Performance Problems ist. Sie können auch das Kapazitätsdiagramm verwenden, um festzustellen, ob die Kapazität niedrig ist, da ein ONTAP System mit einer Kapazitätsauslastung von über 85 % Performance Probleme verursachen kann. Diese Diagramme helfen Ihnen dabei festzustellen, ob das Problem durch Storage, das Netzwerk oder einen anderen damit zusammenhängenden Faktor verursacht wird.
+
+Falls Unified Manager ein Performance-Ereignis generiert hat und Sie die Ursache des Problems genauer untersuchen möchten, können Sie den Workload Analyzer auf der Seite mit den Ereignisdetails über die Schaltfläche *Analyze Workload* starten, um einige der Latenz-, Durchsatz- und Kapazitätstrends für die Workload zu untersuchen.
+
+Falls Sie beim Anzeigen einer beliebigen Workload-Inventarseite (Volume, LUN, Workload, NFS-Freigabe oder SMB/CIFS-Freigabe) eine Workload bemerken, die anscheinend nicht normal arbeitet, können Sie auf das Symbol „Mehr“ image:../media/more_icon.gif[""] und dann auf „Analyze Workload“ klicken, um die Seite „Workload Analysis“ zu öffnen und die Workload genauer zu untersuchen.

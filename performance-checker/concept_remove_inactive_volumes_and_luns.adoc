@@ -1,0 +1,34 @@
+---
+permalink: performance-checker/concept_remove_inactive_volumes_and_luns.html 
+sidebar: sidebar 
+keywords: remove, inactive, volumes, luns 
+summary: Wenn freier Speicherplatz im Aggregat als Problem erkannt wurde, können Sie nach ungenutzten Volumes und LUNs suchen und diese aus dem Aggregat löschen. Dies kann dazu beitragen, das Problem des geringen Festplattenspeichers zu entschärfen. 
+---
+= Entfernen inaktiver Volumes und LUNs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn freier Speicherplatz im Aggregat als Problem erkannt wurde, können Sie nach ungenutzten Volumes und LUNs suchen und diese aus dem Aggregat löschen. Dies kann dazu beitragen, das Problem des geringen Festplattenspeichers zu entschärfen.
+
+Wenn ein Performance-Ereignis auf einem Aggregat durch niedrigen Festplattenspeicher verursacht wird, gibt es mehrere Möglichkeiten, um festzustellen, welche Volumes und LUNs nicht mehr verwendet werden.
+
+Zur Identifizierung ungenutzter Volumes:
+
+* Auf der Seite mit den Ereignisdetails enthält das Feld *Anzahl der betroffenen Objekte* einen Link, der die Liste der betroffenen Volumes anzeigt.
++
+Über den Link werden die Volumes in der Ansicht „Performance: All Volumes“ angezeigt. Von dort aus lassen sich die betroffenen Volumes nach *IOPS* sortieren, sodass erkennbar ist, welche Volumes nicht aktiv waren.
+
+
+
+Identifizierung ungenutzter LUNs:
+
+. Auf der Seite mit den Ereignisdetails ist der Name des Aggregats, auf dem das Ereignis aufgetreten ist, zu notieren.
+. Im linken Navigationsbereich wählen Sie *Storage* > *LUNs* aus und dann im Menü Ansicht *Performance* > *Alle LUNs*.
+. Unter *Filtering* wird im linken Dropdown-Menü *Aggregate* ausgewählt, der Name des Aggregats in das Textfeld eingegeben und anschließend auf *Apply Filter* geklickt.
+. Zur Anzeige der inaktiven LUNs lässt sich die resultierende Liste der betroffenen LUNs nach *IOPS* sortieren.
+
+
+Nachdem Sie die nicht verwendeten Volumes und LUNs identifiziert haben, können Sie diese Objekte mit ONTAP System Manager oder den ONTAP Befehlen löschen.

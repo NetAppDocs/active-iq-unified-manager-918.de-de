@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_what_jobs_are.html 
+sidebar: sidebar 
+keywords: jobs 
+summary: Ein Job ist eine Reihe von Aufgaben, die Sie mit Unified Manager überwachen können. Die Ansicht von Jobs und den dazugehörigen Aufgaben ermöglicht es Ihnen festzustellen, ob diese erfolgreich abgeschlossen wurden. 
+---
+= Informationen zu Jobs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Job ist eine Reihe von Aufgaben, die Sie mit Unified Manager überwachen können. Die Ansicht von Jobs und den dazugehörigen Aufgaben ermöglicht es Ihnen festzustellen, ob diese erfolgreich abgeschlossen wurden.
+
+Jobs werden initiiert, wenn Sie SnapMirror- und SnapVault-Beziehungen erstellen, wenn Sie eine Beziehungsoperation durchführen (Aufheben, Bearbeiten, Anhalten, Entfernen, Fortsetzen, Resynchronisieren und umgekehrte Resynchronisierung), wenn Sie Aufgaben zur Datenwiederherstellung durchführen, wenn Sie sich bei einem Cluster anmelden usw.
+
+Wenn Sie einen Job initiieren, können Sie auf der Seite „Jobs“ und auf der Seite „Job details“ den Job und den Fortschritt der zugehörigen Aufgaben des Jobs überwachen.

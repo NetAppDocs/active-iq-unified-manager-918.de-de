@@ -1,0 +1,45 @@
+---
+permalink: events/reference_protection_events.html 
+sidebar: sidebar 
+keywords: protection, events, impact area, protection 
+summary: Schutzereignisse zeigen, ob ein Auftrag fehlgeschlagen oder abgebrochen worden ist, sodass sich Probleme überwachen lassen. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungslevel, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Schutzereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Schutzereignisse zeigen, ob ein Auftrag fehlgeschlagen oder abgebrochen worden ist, sodass sich Probleme überwachen lassen. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungslevel, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-protection]]
+== Wirkungsbereich: Schutz
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Schutzaufgabe fehlgeschlagen(ocumEvtProtectionJobTaskFailed)
+ a| 
+Vorfall
+ a| 
+Volume oder Storage Service
+ a| 
+Kritisch
+
+
+
+ a| 
+Schutzauftrag abgebrochen(ocumEvtProtectionJobAborted)
+ a| 
+Risiko
+ a| 
+Volume oder Storage Service
+ a| 
+Warnung
+
+|===

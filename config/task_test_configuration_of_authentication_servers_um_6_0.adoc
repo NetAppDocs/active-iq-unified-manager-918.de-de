@@ -1,0 +1,31 @@
+---
+permalink: config/task_test_configuration_of_authentication_servers_um_6_0.html 
+sidebar: sidebar 
+keywords: test, configuration, authentication servers 
+summary: Sie können die Konfiguration Ihrer Authentifizierungsserver überprüfen, um sicherzustellen, dass der Management Server mit ihnen kommunizieren kann. Sie können die Konfiguration überprüfen, indem Sie auf Ihren Authentifizierungsservern nach einem Remote-Benutzer oder einer Remote-Gruppe suchen und diese mithilfe der konfigurierten Einstellungen authentifizieren. 
+---
+= Die Konfiguration der Authentifizierungsserver in Active IQ Unified Manager wird getestet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Konfiguration Ihrer Authentifizierungsserver überprüfen, um sicherzustellen, dass der Management Server mit ihnen kommunizieren kann. Sie können die Konfiguration überprüfen, indem Sie auf Ihren Authentifizierungsservern nach einem Remote-Benutzer oder einer Remote-Gruppe suchen und diese mithilfe der konfigurierten Einstellungen authentifizieren.
+
+.Bevor Sie beginnen
+* Sie müssen die Remote-Authentifizierung aktiviert und Ihren Authentifizierungsservice so konfiguriert haben, dass der Unified Manager Server den Remote-Benutzer oder die Remote-Gruppe authentifizieren kann.
+* Sie müssen Ihre Authentifizierungsserver hinzugefügt haben, damit der Managementserver auf diesen Servern nach dem Remote-Benutzer oder der Remote-Gruppe suchen und diese authentifizieren kann.
+* Sie benötigen die Rolle des Anwendungsadministrators.
+
+
+Wenn der Authentifizierungsdienst auf Active Directory eingestellt ist und die Authentifizierung von Remote-Benutzern validiert wird, die zur primären Gruppe des Authentifizierungsservers gehören, werden in den Authentifizierungsergebnissen keine Informationen zur primären Gruppe angezeigt.
+
+.Schritte
+. Im linken Navigationsbereich wählen Sie *Allgemein* > *Remote-Authentifizierung* aus.
+. Dann folgt ein Klick auf *Authentifizierung testen*.
+. Im Dialogfeld „Test User“ geben Sie den Benutzernamen und das Kennwort des Remote-Benutzers oder den Benutzernamen der Remote-Gruppe an und klicken anschließend auf *Test*.
++
+Bei der Authentifizierung einer Remote-Gruppe dürfen Sie das Passwort nicht eingeben.
+
+

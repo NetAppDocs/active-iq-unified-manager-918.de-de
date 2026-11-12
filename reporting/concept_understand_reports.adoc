@@ -1,0 +1,25 @@
+---
+permalink: reporting/concept_understand_reports.html 
+sidebar: sidebar 
+keywords: understanding, reports 
+summary: Berichte zeigen detaillierte Informationen zu Storage-, Netzwerk-, Quality of Service- und Schutzbeziehungen an und helfen Ihnen dabei, potenzielle Probleme zu erkennen und zu lösen, bevor sie auftreten. 
+---
+= Berichte in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Berichte zeigen detaillierte Informationen zu Storage-, Netzwerk-, Quality of Service- und Schutzbeziehungen an und helfen Ihnen dabei, potenzielle Probleme zu erkennen und zu lösen, bevor sie auftreten.
+
+Wenn Sie eine Ansicht anpassen, können Sie diese unter einem eindeutigen Namen zur späteren Verwendung speichern. Auf Grundlage dieser Ansicht kann außerdem ein Bericht geplant werden, der regelmäßig ausgeführt und mit anderen geteilt werden kann. Sie können die Ansicht auch in Excel herunterladen, um sie mithilfe erweiterter Excel-Funktionen anzupassen, und diese Datei anschließend wieder in Unified Manager hochladen. Wenn Sie mit dieser Ansicht einen Bericht planen, wird die hochgeladene Excel-Datei verwendet, um aussagekräftige Berichte zu erstellen, die geteilt werden können.
+
+Auf der Seite „Berichtspläne“ ist das Managen aller geplanten Berichte möglich.
+
+[NOTE]
+====
+Zum Managen von Berichten ist die Rolle „Application Administrator“ oder „Storage Administrator“ erforderlich.
+
+====
+Sie können Berichte als CSV-, Excel- oder PDF-Dateien herunterladen.

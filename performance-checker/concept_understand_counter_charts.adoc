@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/concept_understand_counter_charts.html 
+sidebar: sidebar 
+keywords: understand, counter, charts 
+summary: Mit den Diagrammen im Bereich „Zählerdiagramme“ lassen sich Performancedaten für das Stammobjekt und für Objekte anzeigen und vergleichen, die Sie aus der Tabelle „Korrelierte Objekte“ hinzugefügt haben. Dies kann dabei helfen, Performance-Trends zu verstehen sowie Performance-Probleme zu isolieren und zu beheben. 
+---
+= Zählerdiagramme in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit den Diagrammen im Bereich „Zählerdiagramme“ lassen sich Performancedaten für das Stammobjekt und für Objekte anzeigen und vergleichen, die Sie aus der Tabelle „Korrelierte Objekte“ hinzugefügt haben. Dies kann dabei helfen, Performance-Trends zu verstehen sowie Performance-Probleme zu isolieren und zu beheben.
+
+Standardmäßig angezeigte Zählerdiagramme sind Ereignisse, Latenz, IOPS und MBps. Optional anzeigbare Diagramme sind Auslastung, genutzte Performance-Kapazität, verfügbare IOPS, IOPS/TB und Cache-Miss-Verhältnis. Zusätzlich können Sie für die Diagramme Latenz, IOPS, MBps und genutzte Performance-Kapazität Gesamtwerte oder aufgeschlüsselte Werte anzeigen.
+
+Der Performance Explorer zeigt standardmäßig bestimmte Zählerdiagramme an, unabhängig davon, ob das Storage-Objekt sie alle unterstützt oder nicht. Wenn ein Zähler nicht unterstützt wird, ist das Zählerdiagramm leer, und die Meldung `Not applicable for <object>` wird angezeigt.
+
+Die Diagramme zeigen Performance-Trends für das Stammobjekt und für alle im Vergleichsbereich ausgewählten Objekte. Die Daten in den einzelnen Diagrammen sind wie folgt angeordnet:
+
+* *X-Achse*
++
+Zeigt den angegebenen Zeitraum an. Wenn Sie keinen Zeitraum angegeben haben, wird standardmäßig der vorhergehende 72-Stunden-Zeitraum angezeigt.
+
+* *Y-Achse*
++
+Zeigt die für das/die ausgewählte(n) Objekt(e) spezifischen Zählereinheiten an.
+
+
+
+Die Farben der Trendlinien entsprechen der Farbe des Objektnamens, wie sie im Bereich „Vergleichen“ angezeigt wird. Sie können den Mauszeiger über einen Punkt auf einer beliebigen Trendlinie positionieren, um Details zur Zeit und zum Wert dieses Punkts anzuzeigen.
+
+Wenn Sie einen bestimmten Zeitraum innerhalb eines Diagramms untersuchen möchten, können Sie eine der folgenden Methoden verwenden:
+
+* Mit der Schaltfläche *<* lässt sich der Bereich „Zählerdiagramme“ auf die gesamte Seitenbreite erweitern.
+* Mit dem Cursor (wenn er sich in eine Lupe verwandelt) lässt sich ein Teil des Zeitraums im Diagramm auswählen, um den Fokus darauf zu legen und diesen Bereich zu vergrößern. Mit „Reset Chart Zoom“ kehrt das Diagramm zum Standardzeitraum zurück.
+* Über die Schaltfläche *Zoom View* lässt sich ein großes Einzelzählerdiagramm mit erweiterten Details und Schwellenwertindikatoren anzeigen.
+
+
+[NOTE]
+====
+Gelegentlich treten Lücken in den Trendlinien auf. Diese Lücken bedeuten, dass Unified Manager entweder keine Performance-Daten vom Storage-System erfasst hat oder möglicherweise nicht verfügbar war.
+
+====

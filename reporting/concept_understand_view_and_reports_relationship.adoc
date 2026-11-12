@@ -1,0 +1,29 @@
+---
+permalink: reporting/concept_understand_view_and_reports_relationship.html 
+sidebar: sidebar 
+keywords: understand, view, report, relationship 
+summary: Ansichten und Inventarseiten werden zu Berichten, wenn Sie sie herunterladen oder planen. 
+---
+= Die Beziehung zwischen Ansicht und Bericht in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ansichten und Inventarseiten werden zu Berichten, wenn Sie sie herunterladen oder planen.
+
+Sie können Ansichten und Inventarseiten anpassen und zur Wiederverwendung speichern. Fast alles, was Sie in Unified Manager anzeigen können, lässt sich speichern, wiederverwenden, anpassen, planen und als Bericht freigeben.
+
+Im Dropdown-Menü „Ansicht“ sind Elemente mit einem Löschsymbol vorhandene benutzerdefinierte Ansichten, die Sie oder ein anderer Benutzer erstellt haben. Elemente ohne Symbol sind Standardansichten, die mit Unified Manager bereitgestellt werden. Standardansichten können nicht geändert oder gelöscht werden.
+
+[NOTE]
+====
+* Wenn Sie eine benutzerdefinierte Ansicht aus der Liste löschen, werden auch alle Excel-Dateien oder geplanten Berichte gelöscht, die diese Ansicht verwenden.
+* Wenn Sie eine benutzerdefinierte Ansicht ändern, werden Berichte, die diese Ansicht verwenden, die Änderung bei der nächsten Erstellung und dem nächsten Versand per E-Mail gemäß dem Berichtszeitplan widerspiegeln. Beim Ändern von Ansichten ist sicherzustellen, dass Ihre Änderungen mit allen zugehörigen Excel-Anpassungen für die Berichte kompatibel sind. Bei Bedarf können Sie die Excel-Datei aktualisieren, indem Sie sie herunterladen, die erforderlichen Änderungen vornehmen und sie als neue Excel-Anpassung für die Ansicht hochladen.
+
+
+====
+image::../media/view_drop_down_3.png[Ein Screenshot der Benutzeroberfläche des Dropdown-Menüs „View“.]
+
+Nur Benutzer mit der Rolle „Applikationsadministrator“ oder „Storage-Administrator“ können das Löschsymbol sehen, eine Ansicht ändern oder löschen oder einen geplanten Bericht ändern oder löschen.

@@ -1,0 +1,49 @@
+---
+permalink: health-checker/concept_configure_destination_and_schedule_for_database_dump_backups.html 
+sidebar: sidebar 
+keywords: configure, destination, schedule, database dump, backups, snapshot copy, copies 
+summary: Sie können die Einstellungen für das Datenbank-Dump-Backup in Unified Manager konfigurieren, um den Datenbank-Backup-Pfad, die Anzahl der Aufbewahrungen und den Backup-Zeitplan festzulegen. Sie können täglich oder wöchentlich geplante Backups aktivieren. Standardmäßig sind geplante Backups deaktiviert, es sollte jedoch ein Backup-Zeitplan festgelegt werden. 
+---
+= Konfiguration der Einstellungen für die Datenbank-Dumpsicherung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Einstellungen für das Datenbank-Dump-Backup in Unified Manager konfigurieren, um den Datenbank-Backup-Pfad, die Anzahl der Aufbewahrungen und den Backup-Zeitplan festzulegen. Sie können täglich oder wöchentlich geplante Backups aktivieren. Standardmäßig sind geplante Backups deaktiviert, es sollte jedoch ein Backup-Zeitplan festgelegt werden.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Sie müssen über mindestens 150 GB freien Speicherplatz an dem von Ihnen als Sicherungspfad definierten Ort verfügen.
++
+Es wird empfohlen, einen Remote-Standort zu verwenden, der sich außerhalb des Unified Manager Host-Systems befindet.
+
+* Wenn Unified Manager auf einem Linux-System installiert ist und MySQL Backup verwendet wird, sind für das Backup-Verzeichnis die folgenden Berechtigungen und Besitzverhältnisse erforderlich.
++
+Berechtigungen: 0750, Eigentümer: jboss:maintenance
+
+* Wenn Unified Manager auf einem Windows-System installiert ist und MySQL-Backup verwendet wird, muss sichergestellt werden, dass nur der Administrator Zugriff auf das Backup-Verzeichnis hat.
+
+
+Die erste Datensicherung benötigt mehr Zeit als nachfolgende, da es sich um eine vollständige Sicherung handelt. Eine vollständige Sicherung kann über 1 GB groß sein und drei bis vier Stunden dauern. Nachfolgende Sicherungen sind inkrementell und benötigen weniger Zeit.
+
+[NOTE]
+====
+* Wenn Sie feststellen, dass die Anzahl der inkrementellen Sicherungsdateien für den den Sicherungen zugewiesenen Speicherplatz zu groß ist, können Sie regelmäßig eine vollständige Sicherung erstellen, um die alte Sicherung und ihre inkrementellen Dateien zu ersetzen. Alternativ können Sie eine Sicherung mithilfe von Snapshot-Kopien erstellen.
+* Ein Backup, das in den ersten 15 Tagen nach dem Hinzufügen eines neuen Clusters erstellt wurde, ist möglicherweise nicht genau genug, um die historischen Performance-Daten zu erhalten.
+
+
+====
+.Schritte
+. Im linken Navigationsbereich können Sie *General* > *Database Backup* auswählen.
+. Auf der Seite *Datenbanksicherung* können die *Sicherungseinstellungen* ausgewählt werden.
+. Die entsprechenden Werte für einen Sicherungspfad, die Anzahl der aufzubewahrenden Backups und den Zeitplan werden konfiguriert.
++
+Der Standardwert für die Anzahl der Aufbewahrungen ist 10; Sie können 0 verwenden, um eine unbegrenzte Anzahl von Backups zu erstellen.
+
+. Sie wählen die Schaltfläche *Scheduled Daily* oder *Scheduled Weekly* aus und geben anschließend die Details des Zeitplans an.
+. Auf *Anwenden* klicken.
+
+
+Die Sicherungsdateien des Datenbank-Dumps werden gemäß dem Zeitplan erstellt. Auf der Seite „Datenbanksicherung“ können Sie die verfügbaren Sicherungsdateien einsehen.

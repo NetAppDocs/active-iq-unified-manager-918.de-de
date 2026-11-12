@@ -1,0 +1,26 @@
+---
+permalink: events/task_fix_issues_using_um_automatic_remediations.html 
+sidebar: sidebar 
+keywords: fix, issues, use, unified manager, automatic, remediations 
+summary: Unified Manager kann bestimmte Ereignisse eingehend diagnostizieren und mithilfe der Schaltfläche „Fix It“ eine einzelne Lösung bereitstellen. Falls verfügbar, werden diese Lösungen im Dashboard, auf der Seite mit den Ereignisdetails und über die Auswahl „Workload Analysis“ im linken Navigationsmenü angezeigt. 
+---
+= Probleme lassen sich mithilfe der automatischen Fehlerbehebung in Active IQ Unified Manager beheben
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es gibt bestimmte Ereignisse, die Unified Manager gründlich diagnostizieren und mithilfe der Schaltfläche *Fix It* eine einzelne Lösung bereitstellen kann. Falls verfügbar, werden diese Lösungen im Dashboard, auf der Seite mit den Ereignisdetails und über die Auswahl „Workload-Analyse“ im linken Navigationsmenü angezeigt.
+
+Die meisten Ereignisse bieten verschiedene Lösungsmöglichkeiten, die auf der Seite „Ereignisdetails“ angezeigt werden, sodass Sie die beste Lösung mit ONTAP System Manager oder der ONTAP CLI implementieren können. Die Aktion *Fix It* ist verfügbar, wenn Unified Manager festgestellt hat, dass es nur eine Lösung zur Behebung des Problems gibt und dass diese mit einem ONTAP CLI-Befehl implementiert werden kann.
+
+.Schritte
+. Ereignisse, die über das *Dashboard* behoben werden können, lassen sich durch Klicken auf *Dashboard* anzeigen.
++
+image::../media/management_actions.png[Ein Screenshot der Benutzeroberfläche, der zeigt, wie Ereignisse im Dashboard angezeigt und behoben werden können.]
+
+. Zum Beheben von Problemen, die Unified Manager lösen kann, dient die Schaltfläche *Fix It*. Zum Beheben eines Problems, das auf mehreren Objekten vorhanden ist, dient die Schaltfläche *Fix All*.
+
+
+Informationen zu den Problemen, die durch automatische Fehlerbehebung behoben werden können, sind unter link:..//storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html["Welche Probleme kann Unified Manager beheben"] zu finden.

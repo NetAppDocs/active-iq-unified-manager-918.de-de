@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_nfs_share_reports.html 
+sidebar: sidebar 
+keywords: customize, nfs, share, reports 
+summary: Sie können NFS-Freigabeberichte anpassen, um Informationen zu NFS-Exportrichtlinien und -regeln für Volumes auf Ihren Storage Systemen zu analysieren. Beispielsweise können Sie Berichte so anpassen, dass Volumes mit nicht zugänglichen Mountpfaden und Volumes mit der Standardexportrichtlinie angezeigt werden. 
+---
+= Anpassen von NFS-Freigabeberichten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können NFS-Freigabeberichte anpassen, um Informationen zu NFS-Exportrichtlinien und -regeln für Volumes auf Ihren Storage Systemen zu analysieren. Beispielsweise können Sie Berichte so anpassen, dass Volumes mit nicht zugänglichen Mountpfaden und Volumes mit der Standardexportrichtlinie angezeigt werden.

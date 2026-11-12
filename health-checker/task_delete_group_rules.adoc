@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_delete_group_rules.html 
+sidebar: sidebar 
+keywords: delete, group rules 
+summary: Eine Gruppenregel kann aus Active IQ Unified Manager gelöscht werden, wenn sie nicht mehr benötigt wird. 
+---
+= Gruppenregeln in Active IQ Unified Manager löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Gruppenregel kann aus Active IQ Unified Manager gelöscht werden, wenn sie nicht mehr benötigt wird.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Wenn eine Gruppenregel gelöscht wird, werden die zugehörigen Speicherobjekte aus der Gruppe entfernt.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage Management* > *Gruppen*.
+. Im Reiter *Gruppenregeln* erfolgt die Auswahl der zu löschenden Gruppenregel; anschließend wird auf *Löschen* geklickt.
+. Die Bestätigung der Löschung erfolgt im Dialogfeld *Warning* durch Klicken auf *Yes*.
+

@@ -1,0 +1,37 @@
+---
+permalink: api-automation/concept_provision_workflow.html 
+sidebar: sidebar 
+keywords: workflow, workload, management 
+summary: 'Mit Active IQ Unified Manager können Sie Storage Workloads (LUNs, NFS-Dateifreigaben und CIFS-Freigaben) provisionieren und modifizieren. Die Provisionierung umfasst mehrere Schritte, von der Erstellung der Storage Virtual Machine (SVM) bis zur Anwendung von Performance Service Level und Storage Efficiency Policies auf die Storage Workloads. Das Modifizieren von Workloads umfasst die Schritte zum Ändern spezifischer Parameter und zum Aktivieren zusätzlicher Funktionen für diese.' 
+---
+= Bereitstellung und Änderung von Speicherworkloads in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Active IQ Unified Manager können Sie Storage Workloads (LUNs, NFS-Dateifreigaben und CIFS-Freigaben) provisionieren und modifizieren. Die Provisionierung umfasst mehrere Schritte, von der Erstellung der Storage Virtual Machine (SVM) bis zur Anwendung von Performance Service Level und Storage Efficiency Policies auf die Storage Workloads. Das Modifizieren von Workloads umfasst die Schritte zum Ändern spezifischer Parameter und zum Aktivieren zusätzlicher Funktionen für diese.
+
+Folgende Arbeitsabläufe werden beschrieben:
+
+* Workflow für die Provisionierung von Storage Virtual Machines (SVMs) in Unified Manager.
++
+[NOTE]
+====
+Dieser Workflow muss vor der Provisionierung von LUNs oder Dateifreigaben auf Unified Manager durchgeführt werden.
+
+====
+* Provisionierung von Dateifreigaben.
+* Provisionierung von LUNs.
+* Ändern von LUNs und Dateifreigaben (anhand des Beispiels zum Aktualisieren des Parameters „Performance Service Level“ für die Storage Workloads).
+* Ändern einer NFS-Dateifreigabe zur Unterstützung des CIFS-Protokolls
+* Arbeitslasten ändern, um QoS auf AQoS zu aktualisieren
+
+
+[NOTE]
+====
+Für jeden Provisionierungsworkflow (LUNs und Dateifreigaben) ist der Abschluss des Workflows zur Überprüfung der SVMs auf den Clustern erforderlich.
+
+====
+Vor der Verwendung der einzelnen APIs in den Workflows ist außerdem die Lektüre der Empfehlungen und Einschränkungen erforderlich. Die entsprechenden Details zu den APIs sind in den jeweiligen Abschnitten der zugehörigen Konzepte und Referenzen verfügbar.

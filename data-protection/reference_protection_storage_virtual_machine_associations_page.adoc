@@ -1,0 +1,102 @@
+---
+permalink: data-protection/reference_protection_storage_virtual_machine_associations_page.html 
+sidebar: sidebar 
+keywords: svm, association, page 
+summary: Auf der Seite „Storage VM-Zuordnung“ lassen sich vorhandene Storage VM-Zuordnungen zwischen Quell- und Ziel-Storage VMs anzeigen. 
+---
+= Verwalten von Speicher-VM-Zuordnungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage virtual machine (storage VM)-Zuordnungen sind Zuordnungen von einer Storage VM als Quelle zu einer Storage VM als Ziel, die von Partneranwendungen für die Ressourcenauswahl und die Provisionierung sekundärer Volumes verwendet werden.
+
+Zuordnungen werden zwischen einer Quell-Storage-VM und einer Ziel-Storage-VM erstellt, unabhängig davon, ob die Ziel-Storage-VM ein sekundäres oder ein tertiäres Ziel ist. Sie können eine sekundäre Ziel-Storage-VM nicht als Quelle verwenden, um eine Zuordnung mit einer tertiären Ziel-Storage-VM zu erstellen.
+
+Als Anwendungsadministrator oder Storage-Administrator können Sie die Storage VM-Zuordnungen in Ihrer Umgebung auf der Seite *Schutz* > *Storage VM-Zuordnungen* anzeigen.
+
+SVMs können auf drei Arten verknüpft werden:
+
+* *Beliebige Storage VM zuordnen*: Sie können eine Zuordnung zwischen einer beliebigen primären Quell-Storage-VM und einer oder mehreren Ziel-SVMs erstellen. Das bedeutet, dass alle vorhandenen SVMs, die derzeit geschützt werden müssen, sowie alle SVMs, die künftig erstellt werden, den angegebenen Ziel-SVMs zugeordnet sind. Beispielsweise kann es sinnvoll sein, Anwendungen aus mehreren unterschiedlichen Quellen an verschiedenen Standorten auf einer oder mehreren Ziel-SVMs an einem Standort zu sichern.
+* *Zuordnung einer bestimmten Storage VM*: Sie können eine Zuordnung zwischen einer bestimmten Quell Storage VM und einer oder mehreren bestimmten Ziel SVMs erstellen. Wenn Sie beispielsweise Storage Services für viele Kunden bereitstellen, deren Daten voneinander getrennt sein müssen, können Sie diese Option wählen, um eine bestimmte Quell Storage VM einer bestimmten Ziel Storage VM zuzuordnen, die nur diesem Kunden zugewiesen ist.
+* *Verknüpfung mit einer externen Storage VM*: Sie können eine Verknüpfung zwischen einer Quell-Storage VM und einem externen flexiblen Volume einer Ziel-Storage VM erstellen.
+
+
+
+
+[[create-storage-vm-associations]]
+== Erstellen von Storage VM-Zuordnungen
+
+Der Assistent zum Erstellen von Storage VM Zuordnungen ermöglicht es Partneranwendungen für den Datenschutz, eine Quell-Storage-VM einer Ziel-Storage-VM für die Verwendung mit SnapMirror und SnapVault Beziehungen zuzuordnen. Partneranwendungen verwenden diese Zuordnungen bei der erstmaligen Provisionierung von Ziel-Volumes, um zu bestimmen, welche Ressourcen auszuwählen sind.dd
+
+.Bevor Sie beginnen
+* Die Storage VM, die Sie zuordnen möchten, muss bereits vorhanden sein.
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Für jede Quell-Storage-VM und jeden Beziehungstyp ist auf jedem Ziel-Cluster nur eine Ziel-Storage-VM auswählbar.
+
+Das Ändern von Zuordnungen mithilfe der Funktionen „Löschen“ und „Erstellen“ wirkt sich nur auf zukünftige Provisionierungsvorgänge aus. Vorhandene Ziel-Volumes werden nicht verschoben.
+
+.Schritte
+. Im linken Navigationsbereich wählen Sie *Protection* > *Storage VM Associations* aus.
+. Auf der Seite *Speicher-VM-Zuordnungen* ist *Erstellen* auszuwählen.
++
+Der Assistent *Create Storage Virtual Machine Associations* wird gestartet.
+
+. Eine der folgenden Quellen ist auszuwählen:
++
+** *Beliebig*
++
+Diese Option eignet sich, wenn Sie eine Zuordnung zwischen einer beliebigen primären Storage VM als Quelle und einer oder mehreren Ziel Storage VMs erstellen möchten. Dies bedeutet, dass alle vorhandenen Storage VMs, die derzeit Schutz erfordern, sowie alle Storage VMs, die künftig erstellt werden, der angegebenen Ziel Storage VM zugeordnet werden. Beispielsweise kann es sinnvoll sein, Anwendungen aus mehreren unterschiedlichen Quellen an verschiedenen Standorten in einer oder mehreren Ziel Storage VMs an einem Standort zu sichern.
+
+** *Einzel*
++
+Diese Option wird verwendet, wenn eine bestimmte Quell-Storage-VM ausgewählt werden soll, die einer oder mehreren Ziel-Storage-VMs zugeordnet ist. Wenn beispielsweise Storage Services für viele Kunden bereitgestellt werden, deren Daten voneinander getrennt sein müssen, ist diese Option zu verwenden, um eine bestimmte Quell-Storage-VM einer bestimmten Ziel-Storage-VM zuzuordnen, die nur diesem Kunden zugewiesen ist.
+
+** *Keine (Extern)*
++
+Diese Option kommt infrage, wenn Sie eine Zuordnung zwischen einer Quell-Storage-VM und einem externen flexiblen Volume einer Ziel-Storage-VM erstellen möchten.
+
+
+
+. Auszuwählen ist einer oder sind beide Schutzbeziehungstypen, die erstellt werden sollen:
++
+** *SnapMirror*
+** *SnapVault*
+
+
+. Klicken Sie auf *Weiter*.
+. Ein oder mehrere Storage VM-Datensicherungsziele auswählen.
+. Klicken Sie auf *Finish*.
+
+
+
+
+[[delete-storage-vm-associations]]
+== Storage VM Zuordnungen löschen
+
+Sie können Storage VM Zuordnungen für Partneranwendungen löschen, um die sekundäre Provisionierungsbeziehung zwischen der Quell Storage VM und der Ziel Storage VM zu entfernen; dies kann beispielsweise sinnvoll sein, wenn die Ziel Storage VM voll ist und Sie neue Storage VM Schutzzuordnungen erstellen möchten.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Die Schaltfläche *Löschen* ist deaktiviert, bis mindestens eine Storage VM Zuordnung ausgewählt ist. Änderungen an Zuordnungen mithilfe der Funktionen „Löschen“ und „Erstellen“ wirken sich nur auf zukünftige Provisionierungsvorgänge aus; vorhandene Ziel-Volumes werden nicht verschoben.
+
+.Schritte
+. Im linken Navigationsbereich wählen Sie *Protection* > *Storage VM Associations* aus.
+. Mindestens eine Storage VM Zuordnung muss ausgewählt sein.
++
+Die Schaltfläche *Löschen* ist aktiviert.
+
+. *Löschen* auswählen.
++
+Ein Warndialogfeld wird angezeigt.
+
+. Klicken Sie auf *Yes*, um fortzufahren.
++
+Die ausgewählte Storage VM Zuordnung wird aus der Liste entfernt.
+
+

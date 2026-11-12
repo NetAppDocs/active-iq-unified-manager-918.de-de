@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_storage_efficiency_is.html 
+sidebar: sidebar 
+keywords: storage, efficiency 
+summary: 'Storage-Effizienz ermöglicht es Ihnen, die maximale Datenmenge zu den niedrigsten Kosten zu speichern und ein schnelles Datenwachstum bei gleichzeitig geringerem Speicherplatzbedarf zu bewältigen. Die NetApp Strategie für Storage-Effizienz basiert auf der integrierten Grundlage von Storage-Virtualisierung und einheitlichem Storage, die durch das zentrale ONTAP Betriebssystem und das WAFL Dateisystem (Write Anywhere File Layout) bereitgestellt werden.' 
+---
+= Informationen zur Speichereffizienz in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage-Effizienz ermöglicht es Ihnen, die maximale Datenmenge zu den niedrigsten Kosten zu speichern und ein schnelles Datenwachstum bei gleichzeitig geringerem Speicherplatzbedarf zu bewältigen. Die NetApp Strategie für Storage-Effizienz basiert auf der integrierten Grundlage von Storage-Virtualisierung und einheitlichem Storage, die durch das zentrale ONTAP Betriebssystem und das WAFL Dateisystem (Write Anywhere File Layout) bereitgestellt werden.
+
+Zur Storage-Effizienz gehört der Einsatz von Technologien wie Thin Provisioning, Snapshot Kopie, Deduplizierung, Datenkomprimierung, FlexClone, Thin Replication mit SnapVault und Volume SnapMirror, RAID-DP, Flash Cache, Flash Pool Aggregat und FabricPool-fähigen Aggregaten, die dazu beitragen, die Storage-Auslastung zu erhöhen und die Storage-Kosten zu senken.
+
+Die einheitliche Storage-Architektur ermöglicht die effiziente Konsolidierung eines SAN, eines Network Attached Storage (NAS) und von sekundärem Storage auf einer einzigen Plattform.
+
+Hochdichte Festplattenlaufwerke, wie z. B. Serial Advanced Technology Attachment (SATA)-Laufwerke, die innerhalb eines Flash Pool Aggregats oder mit Flash Cache und RAID-DP Technologie konfiguriert sind, erhöhen die Effizienz, ohne Performance und Ausfallsicherheit zu beeinträchtigen.
+
+Ein für FabricPool aktiviertes Aggregat umfasst ein reines SSD-Aggregat oder HDD-Aggregat (ab ONTAP 9.8) als lokalen Performance-Tier und einen Objektspeicher, den Sie als Cloud-Tier festlegen. Die Konfiguration von FabricPool unterstützt Sie beim Managen, auf welchem Storage-Tier, dem lokalen Tier oder dem Cloud-Tier, Daten gespeichert werden sollen, je nachdem, ob häufig auf sie zugegriffen wird.
+
+Technologien wie Thin Provisionierung, Snapshot-Kopien, Deduplizierung, Datenkomprimierung, Thin-Replikation mit SnapVault und Volume SnapMirror sowie FlexClone bieten bessere Einsparungen. Diese Technologien können einzeln oder zusammen genutzt werden, um maximale Storage-Effizienz zu erzielen.

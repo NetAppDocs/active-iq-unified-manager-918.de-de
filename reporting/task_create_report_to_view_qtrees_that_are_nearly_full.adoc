@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_qtrees_that_are_nearly_full.html 
+sidebar: sidebar 
+keywords: create, report, view, qtrees, full 
+summary: Es kann ein Bericht erstellt werden, um die Storage-Kapazität und Auslastung von qtrees zu analysieren und qtrees anzuzeigen, die nahezu voll sind. 
+---
+= Erstellung eines Berichts zum Anzeigen von qtrees, die in Active IQ Unified Manager nahezu voll sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es kann ein Bericht erstellt werden, um die Storage-Kapazität und Auslastung von qtrees zu analysieren und qtrees anzuzeigen, die nahezu voll sind.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mit den folgenden Schritten lässt sich eine benutzerdefinierte Ansicht erstellen, in der nahezu volle qtrees angezeigt werden; anschließend lässt sich die Generierung eines Berichts für diese Ansicht planen.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage* > *Qtrees*.
+. Mit *Anzeigen/Ausblenden* können Sie alle Spalten ausblenden, die Sie im Bericht nicht benötigen.
+. Die Spalte "`Disk Used %`" neben der Spalte "`Qtrees`" platzieren.
+. Nach dem Klicken auf das Filtersymbol können die folgenden Filter hinzugefügt und anschließend *Filter anwenden* ausgewählt werden:
++
+** Die Festplattenauslastung beträgt mehr als 75%
+
+
+. Die Ergebnisse lassen sich durch Klicken auf den oberen Bereich der Spalte „`Disk Used %`“ nach Kapazitätsprozent sortieren.
+. Für die Ansicht wird ein spezifischer Name verwendet, der den angezeigten Inhalt widerspiegelt, z. B. "`Qtrees fast voll`", danach folgt ein Klick auf das Häkchen (image:../media/blue_check.gif[""]).
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Mit *Add Schedule* lässt sich der Seite *Report Schedules* eine neue Zeile hinzufügen, sodass die Zeitplaneigenschaften für den neuen Bericht definiert werden können.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht gezeigten Ergebnissen sollten Sie gegebenenfalls die Festplatten-Hard- und Soft-Limits anpassen, sofern diese festgelegt sind, oder die Daten auf die qtrees verteilen.

@@ -1,0 +1,38 @@
+---
+permalink: reporting/task_create_report_to_identify_space_with_thin_provisioning_disabled.html 
+sidebar: sidebar 
+keywords: volume, provision, disk, volume, thin-provisioning 
+summary: Wenn ein Volume nicht per Thin Provisioning bereitgestellt wird, belegt es den gesamten Speicherplatz auf der Festplatte, der bei der Erstellung des Volumes festgelegt wurde. Die Identifizierung von Volumes, bei denen Thin Provisioning deaktiviert ist, hilft Ihnen bei der Entscheidung, ob Sie Thin Provisioning für bestimmte Volumes aktivieren möchten. 
+---
+= Volumes mit deaktiviertem Thin Provisioning in Active IQ Unified Manager identifizieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Volume nicht per Thin Provisioning bereitgestellt wird, belegt es den gesamten Speicherplatz auf der Festplatte, der bei der Erstellung des Volumes festgelegt wurde. Die Identifizierung von Volumes, bei denen Thin Provisioning deaktiviert ist, hilft Ihnen bei der Entscheidung, ob Sie Thin Provisioning für bestimmte Volumes aktivieren möchten.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Im Folgenden wird beschrieben, wie eine benutzerdefinierte Ansicht erstellt wird, die die erforderlichen Spalten in der richtigen Reihenfolge anzeigt, und wie anschließend die Generierung eines Berichts für diese Ansicht geplant wird.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Kapazität* > *Alle Volumes*.
+. Mit *Anzeigen/Ausblenden* können Sie alle Spalten ausblenden, die Sie im Bericht nicht benötigen.
+. Ziehen Sie die Spalten „`Used Data %`“ und „`Thin Provisioned`“ per Drag-and-Drop neben die Spalte „`Available Data Capacity`“.
+. Auf das Filtersymbol klicken, den folgenden Filter hinzufügen, *Thin provisioned* ist *No*, und dann *Apply Filter* auswählen.
+. Durch Klicken auf den oberen Bereich der Spalte „`Verwendete Daten %`“ werden die Ergebnisse so sortiert, dass die Volumes mit dem höchsten Prozentsatz oben in der Liste erscheinen.
+. Die Ansicht sollte unter einem Namen gespeichert werden, der widerspiegelt, was in der Ansicht angezeigt wird, zum Beispiel "`Vols no thin provisioning`".
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Mit *Add Schedule* lässt sich der Seite *Report Schedules* eine neue Zeile hinzufügen, sodass die Zeitplaneigenschaften für den neuen Bericht definiert werden können.
+. Für den Berichtsplan wird ein Name eingegeben und die anderen Berichtsfelder werden ausgefüllt. Anschließend ist auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile zu klicken.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht dargestellten Ergebnissen kann es sinnvoll sein, Thin Provisioning auf bestimmten Volumes zu aktivieren.

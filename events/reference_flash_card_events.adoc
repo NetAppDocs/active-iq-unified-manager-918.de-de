@@ -1,0 +1,34 @@
+---
+permalink: events/reference_flash_card_events.html 
+sidebar: sidebar 
+keywords: flash, card, events, impact area, availability 
+summary: Flash Kartenereignisse liefern Ihnen Informationen über den Status der auf Knoten in Ihrem Datacenter installierten Flash Karten, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungslevel, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Flash-Karten-Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Flash Kartenereignisse liefern Ihnen Informationen über den Status der auf Knoten in Ihrem Datacenter installierten Flash Karten, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungslevel, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Flash-Karten offline(ocumEvtFlashCardOffline)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+|===

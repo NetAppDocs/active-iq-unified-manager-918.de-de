@@ -1,0 +1,67 @@
+---
+permalink: data-protection/reference_reverse_resync_dialog_box.html 
+sidebar: sidebar 
+keywords: reverse, resync, dialog box 
+summary: Wenn eine Schutzbeziehung unterbrochen ist, weil das Quellvolume deaktiviert ist und das Zielvolume in ein lesen/schreiben Volume umgewandelt wird, ermöglicht die umgekehrte Resynchronisierung die Umkehrung der Beziehungsrichtung, sodass das Zielvolume zur neuen Quelle und die Quelle zum neuen Zielvolume wird. 
+---
+= Umgekehrte Resynchronisierung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine Schutzbeziehung unterbrochen ist, weil das Quellvolume deaktiviert ist und das Zielvolume in ein lesen/schreiben Volume umgewandelt wird, ermöglicht die umgekehrte Resynchronisierung die Umkehrung der Beziehungsrichtung, sodass das Zielvolume zur neuen Quelle und die Quelle zum neuen Zielvolume wird.
+
+Wenn ein Katastrophenfall das Quellvolume in Ihrer Schutzbeziehung deaktiviert, können Sie das Zielvolume zur Datenbereitstellung verwenden, indem Sie es in lesen/schreiben konvertieren, während Sie das Quellvolume reparieren oder ersetzen, das Quellvolume aktualisieren und die Beziehung wiederherstellen. Bei einer umgekehrten Resynchronisierung werden die Daten auf dem Quellvolume gelöscht, die neuer sind als die Daten in der gemeinsamen Snapshot-Kopie.
+
+
+
+[[before-reverse-resync]]
+== Vor der umgekehrten Resynchronisierung
+
+Zeigt die Quelle und das Ziel einer Beziehung vor einer umgekehrten Resynchronisierung an.
+
+* *Quell-Volume*
++
+Der Name und der Speicherort des Quell-Volumes vor einem umgekehrten Resynchronisierungsvorgang.
+
+* *Ziel-Volume*
++
+Der Name und der Speicherort des Ziel-Volumes vor einem umgekehrten Resynchronisierungsvorgang.
+
+
+
+
+
+[[after-reverse-resync]]
+== Nach der umgekehrten Resynchronisierung
+
+Zeigt an, was nach einem Reserve-Resynchronisierungsvorgang die Quelle und das Ziel einer Beziehung sind.
+
+* *Quell-Volume*
++
+Der Name und Speicherort des Quell-Volumes nach einem umgekehrten Resynchronisierungsvorgang.
+
+* *Ziel-Volume*
++
+Der Name und der Speicherort des Ziel-Volumes nach einer umgekehrten Resynchronisierung.
+
+
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aktionen ausführen:
+
+* *Einreichen*
++
+Beginnt den umgekehrten Resynchronisierungsprozess.
+
+* *Stornieren*
++
+Schließt das Dialogfeld „Umgekehrte Resynchronisierung“, ohne eine umgekehrte Resynchronisierungsoperation auszulösen.
+
+

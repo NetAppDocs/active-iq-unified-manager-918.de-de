@@ -1,0 +1,47 @@
+---
+permalink: performance-checker/task_select_performance_charts_to_display.html 
+sidebar: sidebar 
+keywords: select, performance, charts, display 
+summary: Über die Dropdown-Liste „Diagramme auswählen“ lassen sich die Typen von Performance-Zählerdiagrammen auswählen, die im Bereich „Zählerdiagramme“ angezeigt werden. Dadurch lassen sich spezifische Daten und Zähler entsprechend Ihren Performance-Anforderungen anzeigen. 
+---
+= Auswahl der Leistungsdiagramme zur Anzeige in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über die Dropdown-Liste „Diagramme auswählen“ lassen sich die Typen von Performance-Zählerdiagrammen auswählen, die im Bereich „Zählerdiagramme“ angezeigt werden. Dadurch lassen sich spezifische Daten und Zähler entsprechend Ihren Performance-Anforderungen anzeigen.
+
+.Schritte
+. Im Bereich *Zählerdiagramme* erfolgt die Auswahl über die Dropdown-Liste *Diagramme auswählen*.
+. Diagramme hinzufügen oder entfernen:
++
+|===
+| Zu... | Folgendes ist zu tun... 
+
+
+ a| 
+Einzelne Diagramme hinzufügen oder entfernen
+ a| 
+Die Kontrollkästchen neben den Diagrammen dienen zum Ein- oder Ausblenden der gewünschten Diagramme.
+
+
+
+ a| 
+Alle Diagramme hinzufügen
+ a| 
+Auf *Alle auswählen* klicken
+
+
+
+ a| 
+Alle Diagramme entfernen
+ a| 
+Auf *Alle abwählen* klicken
+
+|===
++
+Ihre Diagrammauswahl wird im Bereich „Zählerdiagramme“ angezeigt. Beim Hinzufügen von Diagrammen werden neue Diagramme im Bereich „Zählerdiagramme“ so eingefügt, dass sie der Reihenfolge der in der Dropdown-Liste „Diagramme auswählen“ aufgeführten Diagramme entsprechen. Bei der Auswahl weiterer Diagramme ist möglicherweise zusätzliches Scrollen nötig.
+
+

@@ -1,0 +1,30 @@
+---
+permalink: config/task_edit_user_setts.html 
+sidebar: sidebar 
+keywords: edit, user, settings 
+summary: Sie können die Benutzereinstellungen wie E-Mail-Adresse und Rolle bearbeiten, die für jeden Benutzer festgelegt sind. Beispielsweise können Sie die Rolle eines Benutzers ändern, der Storage Operator ist, und dem Benutzer Berechtigungen als Storage Administrator zuweisen. 
+---
+= Benutzereinstellungen in Active IQ Unified Manager bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Benutzereinstellungen, wie E-Mail-Adresse und Rolle, bearbeiten, die für jeden Benutzer festgelegt sind. Beispielsweise können Sie die Rolle eines Benutzers ändern, der ein Storage-Operator ist, und dem Benutzer Storage-Administratorrechte zuweisen.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Wenn Sie die einem Benutzer zugewiesene Rolle ändern, werden die Änderungen übernommen, sobald eine der folgenden Aktionen eintritt:
+
+* Der Benutzer meldet sich ab und wieder bei Unified Manager an.
+* Die Sitzungszeitüberschreitung von 24 Stunden ist erreicht.
+
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Allgemein* > *Benutzer*.
+. Auf der Seite „Benutzer“ den Benutzer auswählen, dessen Einstellungen bearbeitet werden sollen, und auf *Edit* klicken.
+. Im Dialogfeld „Benutzer bearbeiten“ können Sie die für den Benutzer festgelegten Einstellungen bearbeiten.
+. Auf *Speichern* klicken.
+

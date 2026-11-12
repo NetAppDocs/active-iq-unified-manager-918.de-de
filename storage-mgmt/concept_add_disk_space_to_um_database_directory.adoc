@@ -1,0 +1,23 @@
+---
+permalink: storage-mgmt/concept_add_disk_space_to_um_database_directory.html 
+sidebar: sidebar 
+keywords: add, disk, space, unified manager, database, directory 
+summary: Das Unified Manager Datenbankverzeichnis enthält alle von ONTAP Systemen erfassten Systemstatus- und Performance-Daten. Unter bestimmten Umständen kann es erforderlich sein, die Größe des Datenbankverzeichnisses zu erhöhen. 
+---
+= Hinzufügen von Festplattenspeicher zum Datenbankverzeichnis in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Unified Manager Datenbankverzeichnis enthält alle von ONTAP Systemen erfassten Systemstatus- und Performance-Daten. Unter bestimmten Umständen kann es erforderlich sein, die Größe des Datenbankverzeichnisses zu erhöhen.
+
+Das Datenbankverzeichnis kann beispielsweise voll werden, wenn Unified Manager Daten von einer großen Anzahl von Clustern erfasst, von denen jedes viele Knoten hat. Sie erhalten ein Warnereignis, wenn das Datenbankverzeichnis zu 90 % gefüllt ist, und ein kritisches Ereignis, wenn das Verzeichnis zu 95 % gefüllt ist.
+
+[NOTE]
+====
+Sobald das Verzeichnis zu 95% gefüllt ist, werden keine zusätzlichen Daten mehr von Clustern erfasst.
+
+====
+Die zum Erweitern der Kapazität des Datenverzeichnisses erforderlichen Schritte unterscheiden sich je nachdem, ob Unified Manager auf einem VMware ESXi Server, einem Red Hat Linux Server oder einem Microsoft Windows Server ausgeführt wird.

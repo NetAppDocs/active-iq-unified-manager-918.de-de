@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_group_volume_relationships_by_issue.html 
+sidebar: sidebar 
+keywords: create, report, group, volume, relationships, issue 
+summary: Sie können einen Bericht erstellen, der Volume-Beziehungen nach Problem gruppiert. 
+---
+= Erstellung eines Berichts zum Gruppieren von Volume-Beziehungen nach Problem in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, der Volume-Beziehungen nach Problem gruppiert.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mit den folgenden Schritten lässt sich eine benutzerdefinierte Ansicht erstellen, die Volume-Beziehungen nach Problem gruppiert; anschließend lässt sich die Generierung eines Berichts für diese Ansicht planen.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Beziehung* > *Alle Beziehungen*.
+. Mit *Anzeigen/Ausblenden* können Sie alle Spalten ausblenden, die Sie im Bericht nicht benötigen.
+. Die Spalte „`Unhealthy Reason`“ wird in die Nähe der Spalte „`State`“ gezogen.
+. Durch Klicken auf den oberen Bereich der Spalte „`Unhealthy Reason`“ können Sie die Volumes nach Problem gruppieren.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der den Inhalt der Ansicht widerspiegelt, z. B. "`Vol relationships by issue`".
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Anhand der im Bericht dargestellten Ergebnisse können Sie die Quelle und die Auswirkungen der einzelnen Problemtypen untersuchen.

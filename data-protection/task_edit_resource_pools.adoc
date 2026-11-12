@@ -1,0 +1,33 @@
+---
+permalink: data-protection/task_edit_resource_pools.html 
+sidebar: sidebar 
+keywords: edit, resource, pools 
+summary: Sie können einen bestehenden Ressourcenpool bearbeiten, wenn Sie den Namen und die Beschreibung des Ressourcenpools ändern möchten. 
+---
+= Ressourcenpools in Active IQ Unified Manager bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen bestehenden Ressourcenpool bearbeiten, wenn Sie den Namen und die Beschreibung des Ressourcenpools ändern möchten.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Die Schaltfläche „Bearbeiten“ ist nur aktiviert, wenn ein Ressourcenpool ausgewählt ist. Sind mehrere Ressourcenpools ausgewählt, ist die Schaltfläche „Bearbeiten“ deaktiviert.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Protection* > *Resource Pools*.
+. Sie wählen einen Ressourcenpool aus der Liste aus.
+. Klicken Sie auf *Bearbeiten*.
++
+Das Fenster „Ressourcenpool bearbeiten“ wird angezeigt.
+
+. Name und Beschreibung des Ressourcenpools lassen sich bei Bedarf bearbeiten.
+. Auf *Speichern* klicken.
++
+In der Ressourcenpoolliste erscheinen der neue Name und die neue Beschreibung.
+
+

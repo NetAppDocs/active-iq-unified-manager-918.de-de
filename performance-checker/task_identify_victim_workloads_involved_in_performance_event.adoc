@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/task_identify_victim_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, victim workloads, dynamic, performance, event 
+summary: 'Im Unified Manager können Sie ermitteln, welche Volume-Workloads die größte Abweichung bei der Antwortzeit (Latenz) aufweisen, die durch eine Storage-Komponente in Contention verursacht wird. Die Identifizierung dieser Workloads hilft Ihnen zu verstehen, warum die darauf zugreifenden Clientanwendungen langsamer als üblich arbeiten.' 
+---
+= Betroffene Workloads in dynamischen Performance-Ereignissen in Active IQ Unified Manager identifizieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Unified Manager können Sie ermitteln, welche Volume-Workloads die größte Abweichung bei der Antwortzeit (Latenz) aufweisen, die durch eine Storage-Komponente in Contention verursacht wird. Die Identifizierung dieser Workloads hilft Ihnen zu verstehen, warum die darauf zugreifenden Clientanwendungen langsamer als üblich arbeiten.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Es müssen neue, bestätigte oder veraltete dynamische Performance-Ereignisse vorliegen.
+
+
+Die Seite mit den Ereignisdetails zeigt eine Liste der benutzerdefinierten und systemdefinierten Workloads an, sortiert nach der größten Abweichung bei Aktivität oder Nutzung auf der Komponente oder danach, wie stark sie vom Ereignis betroffen sind. Die Werte basieren auf den Spitzenwerten, die Unified Manager bei der Erkennung und letzten Analyse des Ereignisses ermittelt hat.
+
+.Schritte
+. Die Seite *Ereignisdetails* enthält Informationen zum Ereignis.
+. In den Diagrammen „Workload-Latenz“ und „Workload-Aktivität“ erfolgt die Auswahl der Option *Victim Workloads*.
+. Wenn Sie den Mauszeiger über die Diagramme bewegen, sehen Sie die wichtigsten benutzerdefinierten Workloads, die sich auf die Komponente auswirken, sowie den Namen des betroffenen Workloads.
+

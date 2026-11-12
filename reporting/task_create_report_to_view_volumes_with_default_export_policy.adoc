@@ -1,0 +1,40 @@
+---
+permalink: reporting/task_create_report_to_view_volumes_with_default_export_policy.html 
+sidebar: sidebar 
+keywords: create, report, view, volumes, default, export, policy 
+summary: Sie können einen Bericht erstellen, um Volumes zu finden, die die Standardexportrichtlinie verwenden. 
+---
+= Ein Bericht zum Anzeigen von Volumes mithilfe der Standard-Exportrichtlinie in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um Volumes zu finden, die die Standardexportrichtlinie verwenden.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mithilfe der folgenden Schritte kann eine benutzerdefinierte Ansicht für Volumes erstellt werden, die die Standardexportrichtlinie verwenden; anschließend kann die Generierung eines Berichts für diese Ansicht geplant werden.
+
+.Schritte
+. Die Auswahl erfolgt im linken Navigationsbereich über *Storage* > *NFS Shares*.
+. Mit *Anzeigen/Ausblenden* können Sie alle Spalten ausblenden, die Sie im Bericht nicht benötigen.
+. Die Spalte "`Export Policy`" in die Nähe der Spalte "`Volume`" ziehen.
+. Nach dem Klick auf das Filtersymbol folgt das Hinzufügen des folgenden Filters und anschließend der Klick auf *Apply Filter*:
++
+** Export Policy enthält Standardwerte
+
+
+. Die Ansicht wird unter einem bestimmten Namen gespeichert, der widerspiegelt, was in der Ansicht angezeigt wird, z. B. „`Volumes mit einer Standardexportrichtlinie`“, und danach wird auf das Häkchen (image:../media/blue_check.gif[""]) geklickt.
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Über *Zeitplan hinzufügen* lässt sich der Seite „Berichtszeitpläne“ eine neue Zeile hinzufügen, sodass Sie die Zeitplanmerkmale für den neuen Bericht definieren können.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Auf Grundlage der im Bericht angezeigten Ergebnisse kann die Konfiguration einer benutzerdefinierten Exportrichtlinie sinnvoll sein.

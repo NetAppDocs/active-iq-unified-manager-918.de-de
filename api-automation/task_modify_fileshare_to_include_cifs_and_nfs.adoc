@@ -1,0 +1,159 @@
+---
+permalink: api-automation/task_modify_fileshare_to_include_cifs_and_nfs.html 
+sidebar: sidebar 
+keywords: modify, nfs, file, share, support, cifs 
+summary: 'Sie können eine NFS-Dateifreigabe ändern, damit sie das CIFS-Protokoll unterstützt. Bei der Erstellung der Dateifreigabe können sowohl Parameter der Zugriffssteuerungsliste (ACL) als auch Exportrichtlinienregeln für dieselbe Dateifreigabe angegeben werden. Wenn Sie CIFS jedoch auf demselben Volume aktivieren möchten, auf dem Sie eine NFS-Dateifreigabe erstellt haben, können Sie die ACL-Parameter dieser Dateifreigabe aktualisieren, damit sie CIFS unterstützt.' 
+---
+= Ändern einer NFS Dateifreigabe zur Unterstützung von CIFS mithilfe der Active IQ Unified Manager APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine NFS-Dateifreigabe ändern, damit sie das CIFS-Protokoll unterstützt. Bei der Erstellung der Dateifreigabe können sowohl Parameter der Zugriffssteuerungsliste (ACL) als auch Exportrichtlinienregeln für dieselbe Dateifreigabe angegeben werden. Wenn Sie CIFS jedoch auf demselben Volume aktivieren möchten, auf dem Sie eine NFS-Dateifreigabe erstellt haben, können Sie die ACL-Parameter dieser Dateifreigabe aktualisieren, damit sie CIFS unterstützt.
+
+.Bevor Sie beginnen
+. Eine NFS-Dateifreigabe muss bereits nur mit den Exportrichtliniendetails erstellt worden sein. Informationen dazu enthalten _Managing file shares_ und _Modifying storage workloads_.
+. Für diesen Vorgang benötigen Sie den Dateifreigabeschlüssel. Informationen zum Anzeigen von Dateifreigabedetails und zum Abrufen des Dateifreigabeschlüssels mithilfe der Job ID finden Sie unter „Bereitstellen von CIFS- und NFS-Dateifreigaben“.
+
+
+Dies gilt für eine NFS-Dateifreigabe, die Sie erstellt haben, indem Sie nur Exportrichtlinienregeln und keine ACL-Parameter hinzugefügt haben. Sie ändern die NFS-Dateifreigabe, sodass die ACL-Parameter einbezogen werden.
+
+.Schritte
+. Auf der NFS-Dateifreigabe erfolgt ein `PATCH`Vorgang mit den ACL-Details, um CIFS-Zugriff zuzulassen.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+PATCH
+ a| 
+`/storage-provider/file-shares`
+
+|===
++
+*Beispiel cURL*
+
++
+Basierend auf den Zugriffsrechten, die Sie der Benutzergruppe zuweisen, wird, wie im folgenden Beispiel dargestellt, eine ACL erstellt und der Dateifreigabe zugewiesen.
+
++
+[listing]
+----
+{
+  "access_control": {
+    "acl": [
+      {
+        "permission": "read",
+        "user_or_group": "everyone"
+      }
+    ],
+    "active_directory_mapping": {
+      "key": "3b648c1b-d965-03b7-20da-61b791a6263c"
+    }
+----
++
+*Beispielhafte JSON-Ausgabe*
+
++
+Die Operation gibt die Job-ID des Jobs zurück, der das Update ausführt.
+
+. Ob die Parameter korrekt hinzugefügt wurden, lässt sich durch Abfrage der Details der Dateifreigabe für dieselbe Dateifreigabe verifizieren.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===
++
+*Beispielhafte JSON-Ausgabe*
+
++
+[listing]
+----
+"access_control": {
+        "acl": [
+            {
+                "user_or_group": "everyone",
+                "permission": "read"
+            }
+        ],
+        "export_policy": {
+            "id": 1460288880641,
+            "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=export_policy,uuid=1460288880641",
+            "name": "default",
+            "rules": [
+                {
+                    "anonymous_user": "65534",
+                    "clients": [
+                        {
+                            "match": "0.0.0.0/0"
+                        }
+                    ],
+                    "index": 1,
+                    "protocols": [
+                        "nfs3",
+                        "nfs4"
+                    ],
+                    "ro_rule": [
+                        "sys"
+                    ],
+                    "rw_rule": [
+                        "sys"
+                    ],
+                    "superuser": [
+                        "none"
+                    ]
+                },
+                {
+                    "anonymous_user": "65534",
+                    "clients": [
+                        {
+                            "match": "0.0.0.0/0"
+                        }
+                    ],
+                    "index": 2,
+                    "protocols": [
+                        "cifs"
+                    ],
+                    "ro_rule": [
+                        "ntlm"
+                    ],
+                    "rw_rule": [
+                        "ntlm"
+                    ],
+                    "superuser": [
+                        "none"
+                    ]
+                }
+            ],
+            "_links": {
+                "self": {
+                    "href": "/api/datacenter/protocols/nfs/export-policies/7d5a59b3-953a-11e8-8857-00a098dcc959:type=export_policy,uuid=1460288880641"
+                }
+            }
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "/api/storage-provider/file-shares/7d5a59b3-953a-11e8-8857-00a098dcc959:type=volume,uuid=e581c23a-1037-11ea-ac5a-00a098dcc6b6"
+        }
+    }
+----
++
+Sie können die ACL zusammen mit der Exportrichtlinie für dieselbe Dateifreigabe sehen.
+
+

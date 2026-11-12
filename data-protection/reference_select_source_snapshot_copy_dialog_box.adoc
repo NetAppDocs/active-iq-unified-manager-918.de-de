@@ -1,0 +1,187 @@
+---
+permalink: data-protection/reference_select_source_snapshot_copy_dialog_box.html 
+sidebar: sidebar 
+keywords: select, source, snapshot, copy, dialog box 
+summary: Im Dialogfeld „Quell-Snapshot-Kopie auswählen“ erfolgt die Auswahl einer bestimmten Snapshot-Kopie für den Datentransfer zwischen Schutzbeziehungen, oder es wird das Standardverhalten verwendet, das davon abhängt, ob eine Beziehung initialisiert, aktualisiert oder resynchronisiert wird und ob es sich bei der Beziehung um SnapMirror oder SnapVault handelt. 
+---
+= Im Active IQ Unified Manager kann das Dialogfeld „Quell-Snapshot-Kopie auswählen“ verwendet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Quell-Snapshot-Kopie auswählen“ erfolgt die Auswahl einer bestimmten Snapshot-Kopie für den Datentransfer zwischen Schutzbeziehungen, oder es wird das Standardverhalten verwendet, das davon abhängt, ob eine Beziehung initialisiert, aktualisiert oder resynchronisiert wird und ob es sich bei der Beziehung um SnapMirror oder SnapVault handelt.
+
+
+
+[[default]]
+== Standard
+
+Zum Festlegen des Standardverhaltens für die Bestimmung der Snapshot-Kopie, die für Initialisierungs-, Aktualisierungs- und Resynchronisierungsübertragungen für SnapVault und SnapMirror Beziehungen verwendet wird.
+
+Wenn Sie einen SnapVault Transfer durchführen, ist das Standardverhalten für jeden Vorgang wie folgt:
+
+[cols="3*"]
+|===
+| Betrieb | Standardverhalten von SnapVault, wenn die Quelle auf lesen/schreiben gesetzt ist | Standardverhalten von SnapVault, wenn die Quelle Data Protection (DP) ist 
+
+
+ a| 
+Initialisieren
+ a| 
+Erstellt eine neue Snapshot-Kopie und überträgt diese.
+ a| 
+Überträgt die zuletzt exportierte Snapshot Kopie.
+
+
+
+ a| 
+Aktualisieren
+ a| 
+Übertragen werden nur gekennzeichnete Snapshot-Kopien, wie in der Richtlinie angegeben.
+ a| 
+Überträgt die zuletzt exportierte Snapshot Kopie.
+
+
+
+ a| 
+Resynchronisieren
+ a| 
+Überträgt alle gekennzeichneten Snapshot Kopien, die nach der neuesten gemeinsamen Snapshot Kopie erstellt wurden.
+ a| 
+Überträgt die neueste gekennzeichnete Snapshot Kopie.
+
+|===
+Wenn Sie einen SnapMirror Transfer durchführen, ist das Standardverhalten für jeden Vorgang wie folgt:
+
+[cols="3*"]
+|===
+| Betrieb | Standardmäßiges SnapMirror Verhalten | Standardverhalten von SnapMirror, wenn die Beziehung der zweite Hop in einer Kaskade von SnapMirror zu SnapMirror ist 
+
+
+ a| 
+Initialisieren
+ a| 
+Erstellung einer neuen Snapshot-Kopie und Übertragung dieser sowie aller Snapshot-Kopien, die vor der neuen Snapshot-Kopie erstellt wurden.
+ a| 
+Überträgt alle Snapshot Kopien aus der Quelle.
+
+
+
+ a| 
+Aktualisieren
+ a| 
+Erstellung einer neuen Snapshot-Kopie und Übertragung dieser sowie aller Snapshot-Kopien, die vor der neuen Snapshot-Kopie erstellt wurden.
+ a| 
+Überträgt alle Snapshot Kopien.
+
+
+
+ a| 
+Resynchronisieren
+ a| 
+Erstellt eine neue Snapshot Kopie und überträgt anschließend alle Snapshot Kopien von der Quelle.
+ a| 
+Überträgt alle Snapshot-Kopien vom sekundären Volume auf das tertiäre Volume und löscht alle Daten, die nach der Erstellung der neuesten gemeinsamen Snapshot-Kopie hinzugefügt wurden.
+
+|===
+
+
+[[existing-snapshot-copy]]
+== Vorhandene Snapshot Copy
+
+Ermöglicht die Auswahl einer vorhandenen Snapshot Kopie aus der Liste, sofern die Auswahl einer Snapshot Kopie für diesen Vorgang zulässig ist.
+
+* *Snapshot-Kopie*
++
+Zeigt die vorhandenen Snapshot-Kopien an, aus denen Sie eine für die Übertragung auswählen können.
+
+* *Erstellungsdatum*
++
+Zeigt das Datum und die Uhrzeit an, zu der die Snapshot-Kopie erstellt wurde. Die Snapshot-Kopien sind von der neuesten zur ältesten aufgelistet, wobei die neueste ganz oben in der Liste steht.
+
+
+
+Wenn Sie einen SnapVault Transfer durchführen und eine vorhandene Snapshot Kopie auswählen möchten, um sie von einer Quelle an ein Ziel zu übertragen, ist das Verhalten für die einzelnen Vorgänge wie folgt:
+
+[cols="3*"]
+|===
+| Betrieb | SnapVault Verhalten beim Angeben einer Snapshot Kopie | SnapVault Verhalten beim Angeben einer Snapshot Kopie in einer Kaskade 
+
+
+ a| 
+Initialisieren
+ a| 
+Überträgt die angegebene Snapshot Kopie.
+ a| 
+Die Auswahl von Quell Snapshot Kopien wird für Datensicherungsvolumes nicht unterstützt.
+
+
+
+ a| 
+Aktualisieren
+ a| 
+Überträgt die angegebene Snapshot Kopie.
+ a| 
+Die Auswahl von Quell Snapshot Kopien wird für Datensicherungsvolumes nicht unterstützt.
+
+
+
+ a| 
+Resynchronisieren
+ a| 
+Überträgt die ausgewählte Snapshot Kopie.
+ a| 
+Die Auswahl von Quell Snapshot Kopien wird für Datensicherungsvolumes nicht unterstützt.
+
+|===
+Wenn Sie eine SnapMirror Übertragung durchführen und eine vorhandene Snapshot-Kopie zur Übertragung von einer Quelle zu einem Ziel auswählen möchten, verhält sich das Verhalten für jeden Vorgang wie folgt:
+
+[cols="3*"]
+|===
+| Betrieb | SnapMirror Verhalten beim Angeben einer Snapshot-Kopie | SnapMirror Verhalten beim Angeben einer Snapshot-Kopie in einer Kaskade 
+
+
+ a| 
+Initialisieren
+ a| 
+Überträgt alle Snapshot-Kopien auf dem Quellsystem bis zur angegebenen Snapshot-Kopie.
+ a| 
+Die Auswahl von Quell Snapshot Kopien wird für Datensicherungsvolumes nicht unterstützt.
+
+
+
+ a| 
+Aktualisieren
+ a| 
+Überträgt alle Snapshot-Kopien auf dem Quellsystem bis zur angegebenen Snapshot-Kopie.
+ a| 
+Die Auswahl von Quell Snapshot Kopien wird für Datensicherungsvolumes nicht unterstützt.
+
+
+
+ a| 
+Resynchronisieren
+ a| 
+Überträgt alle Snapshot Kopien von der Quelle bis zur ausgewählten Snapshot Kopie und löscht anschließend alle Daten, die nach der Erstellung der neuesten gemeinsamen Snapshot Kopie hinzugefügt wurden.
+ a| 
+Die Auswahl von Quell Snapshot Kopien wird für Datensicherungsvolumes nicht unterstützt.
+
+|===
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Einreichen*
++
+Übermittelt Ihre Auswahl und schließt das Dialogfeld „Quell-Snapshot-Kopie auswählen“.
+
+* *Stornieren*
++
+Verwirft Ihre Auswahl und schließt das Dialogfeld „Quell-Snapshot-Kopie auswählen“.
+
+

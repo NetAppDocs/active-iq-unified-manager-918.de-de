@@ -1,0 +1,16 @@
+---
+permalink: storage-mgmt/concept_what_unified_manager_server_does.html 
+sidebar: sidebar 
+keywords: unified manager, server, does 
+summary: 'Die Unified Manager Serverinfrastruktur besteht aus einer Datenerfassungseinheit, einer Datenbank und einem Applikationsserver. Sie bietet Infrastruktur Services wie Erkennung, Überwachung, rollenbasierte Zugriffssteuerung (RBAC), Auditierung und Protokollierung.' 
+---
+= Informationen zum Active IQ Unified Manager Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Unified Manager Serverinfrastruktur besteht aus einer Datenerfassungseinheit, einer Datenbank und einem Applikationsserver. Sie bietet Infrastruktur Services wie Erkennung, Überwachung, rollenbasierte Zugriffssteuerung (RBAC), Auditierung und Protokollierung.
+
+Unified Manager sammelt Clusterinformationen, speichert die Daten in der Datenbank und analysiert die Daten, um festzustellen, ob Clusterprobleme vorliegen.

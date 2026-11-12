@@ -1,0 +1,66 @@
+---
+permalink: performance-checker/task_respond_to_cluster_imbalance_performance_events.html 
+sidebar: sidebar 
+keywords: cluster, imbalance, performance, events 
+summary: Unified Manager generiert Warnereignisse bei Cluster-Ungleichgewicht, wenn ein Knoten in einem Cluster deutlich stärker ausgelastet ist als die anderen Knoten und dadurch potenziell die Latenzzeiten von Workloads beeinträchtigt. Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Performance Probleme zu beheben, bevor viele Workloads von Latenzproblemen betroffen sind. 
+---
+= Reaktion auf Leistungsereignisse im Zusammenhang mit Clusterungleichgewichten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager generiert Warnereignisse bei Cluster-Ungleichgewicht, wenn ein Knoten in einem Cluster deutlich stärker ausgelastet ist als die anderen Knoten und dadurch potenziell die Latenzzeiten von Workloads beeinträchtigt. Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Performance Probleme zu beheben, bevor viele Workloads von Latenzproblemen betroffen sind.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+Unified Manager generiert Warnereignisse bei Verstößen gegen die Schwellenwertrichtlinie für Cluster-Ungleichgewichte, indem er den Wert der genutzten Performance-Kapazität aller Knoten im Cluster vergleicht, um festzustellen, ob zwischen einzelnen Knoten ein Lastunterschied von 30 % besteht.
+
+Diese Schritte helfen Ihnen, die folgenden Ressourcen zu identifizieren, damit Sie leistungsstarke Workloads auf einen weniger ausgelasteten Knoten verschieben können:
+
+* Die weniger ausgelasteten Knoten im selben Cluster
+* Die am wenigsten ausgelasteten Aggregate auf dem neuen Knoten
+* Die leistungsstärksten Volumes auf dem aktuellen Knoten
+
+
+.Schritte
+. Die Seite *Ereignisdetails* zeigt Informationen über das Ereignis an.
+. In der *Beschreibung* wird die Schwellenwertüberschreitung beschrieben, die das Ereignis verursacht hat.
++
+Beispielsweise weist die Meldung „`Der Zähler für die verwendete Performance Kapazität zeigt einen Lastunterschied von 62 % zwischen den Nodes im Cluster Dallas-1-8 an und hat auf Grundlage des Systemschwellenwerts von 30 % ein WARNING Ereignis ausgelöst`“ darauf hin, dass die Performance Kapazität auf einem der Nodes überbeansprucht wird und die Node Performance beeinträchtigt.
+
+. Der Text unter *Vorgeschlagene Maßnahmen* enthält Informationen zum Verschieben eines leistungsstarken Volume von dem Knoten mit dem hohen Wert für die genutzte Performance-Kapazität auf einen Knoten mit dem niedrigsten Wert für die genutzte Performance-Kapazität.
+. Die Knoten mit dem höchsten und niedrigsten Wert der genutzten Performance Kapazität:
++
+.. Im Abschnitt *Ereignisinformationen* ist der Name des Quell-Clusters auszuwählen.
+.. Auf der Seite *Cluster / Performance Summary* erfolgt die Auswahl von *Nodes* im Bereich *Managed Objects*.
+.. Auf der Inventarseite *Nodes* erfolgt die Sortierung der Knoten nach der Spalte *Performance Capacity Used*.
+.. Zu notieren sind die Namen der Knoten mit dem höchsten und dem niedrigsten Wert der genutzten Performance-Kapazität.
+
+
+. Das Volume mit den meisten IOPS auf dem Knoten mit dem höchsten Wert für die genutzte Performance-Kapazität:
++
+.. Der Knoten mit dem höchsten Wert für die genutzte Performance Kapazität.
+.. Auf der Seite *Node / Performance Explorer* erfolgt die Auswahl von *Aggregates on this Node* im Menü *View and Compare*.
+.. Das Aggregat mit dem höchsten Wert für die genutzte Performance-Kapazität auswählen.
+.. Auf der Seite *Aggregate / Performance Explorer* erfolgt die Auswahl von *Volumes on this Aggregate* im Menü *View and Compare*.
+.. Die Volumes werden nach der Spalte *IOPS* sortiert, und der Name des Volumes mit den meisten IOPS sowie der Name des Aggregats, in dem sich das Volume befindet, werden notiert.
+
+
+. Gesucht ist das Aggregat mit der geringsten Auslastung auf dem Knoten mit dem niedrigsten Wert für die genutzte Performance Kapazität:
++
+.. *Storage* > *Aggregates* zeigt die Inventarseite *Aggregates* an.
+.. Die Ansicht *Performance: All Aggregates* wird ausgewählt.
+.. Anschließend erfolgt die Auswahl der Schaltfläche *Filter* sowie das Hinzufügen eines Filters, bei dem "`Node`" dem in Schritt 4 notierten Namen des Knotens mit dem niedrigsten Wert für die genutzte Performance Kapazität entspricht.
+.. Der Name des Aggregats mit dem niedrigsten Wert für die genutzte Performance-Kapazität ist zu notieren.
+
+
+. Das Volume wird vom überlasteten Knoten auf das Aggregat verschoben, das auf dem neuen Knoten als gering ausgelastet identifiziert wurde.
++
+Sie können den Verschiebevorgang mit ONTAP System Manager, OnCommand Workflow Automation, ONTAP Befehlen oder einer Kombination dieser Tools durchführen.
+
+
+
+Nach einigen Tagen ist erkennbar, ob von diesem Cluster erneut dasselbe Cluster-Ungleichgewichtsereignis eingeht.

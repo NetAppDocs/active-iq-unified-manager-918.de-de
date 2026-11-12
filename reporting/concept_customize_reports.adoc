@@ -1,0 +1,26 @@
+---
+permalink: reporting/concept_customize_reports.html 
+sidebar: sidebar 
+keywords: customize, reports 
+summary: Es gibt viele Möglichkeiten zur Anpassung von Ansichten, sodass Sie einen Bericht erstellen können, der alle Informationen enthält, die Sie zum Managen Ihrer ONTAP Cluster benötigen. 
+---
+= Anpassen von Berichten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es gibt viele Möglichkeiten zur Anpassung von Ansichten, sodass Sie einen Bericht erstellen können, der alle Informationen enthält, die Sie zum Managen Ihrer ONTAP Cluster benötigen.
+
+Sie können mit einer Standard-Inventarseite oder einer benutzerdefinierten Ansicht beginnen und diese anschließend anpassen, indem Sie Spalten hinzufügen oder entfernen, die Spaltenreihenfolge ändern, die Daten filtern oder nach einer bestimmten Spalte in aufsteigender oder absteigender Reihenfolge sortieren.
+
+Ab Unified Manager 9.8 können Sie die Ansicht auch als Excel-Datei herunterladen und mithilfe erweiterter Funktionen anpassen. Anschließend erfolgt der Upload der angepassten Excel-Datei. Wenn Sie einen Bericht mit dieser Ansicht planen, verwendet dieser die angepasste Excel-Datei, um aussagekräftige Berichte zu erstellen, die Sie teilen können.
+
+Weitere Informationen zur Anpassung von Berichten mit Excel enthält _Sample Microsoft Excel reports_.
+
+[NOTE]
+====
+Zum Managen von Berichten ist die Rolle „Application Administrator“ oder „Storage Administrator“ erforderlich.
+
+====

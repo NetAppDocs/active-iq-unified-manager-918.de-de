@@ -1,0 +1,22 @@
+---
+permalink: health-checker/reference_description_of_cluster_object_windows_and_dialog_boxes.html 
+sidebar: sidebar 
+keywords: description, cluster, object, windows, dialog boxes 
+summary: Sie können alle Ihre Cluster und Clusterobjekte auf der jeweiligen Seite für das Storage-Objekt anzeigen. Sie können die Details auch auf der entsprechenden Detailseite für das Storage-Objekt anzeigen. Die System Manager Benutzeroberfläche kann nun über die folgenden Abschnitte STORAGE und PROTECTION in INVENTORY gestartet werden. 
+---
+= Informationen zu Clusterobjektfenstern und Dialogfeldern in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können alle Ihre Cluster und Clusterobjekte auf der jeweiligen Seite für das Storage-Objekt anzeigen. Sie können die Details auch auf der entsprechenden Detailseite für das Storage-Objekt anzeigen. Die System Manager Benutzeroberfläche kann nun über die folgenden Abschnitte STORAGE und PROTECTION in INVENTORY gestartet werden.
+
+* Seiten für Clusterinventar, Clusterstatus und Cluster Performance
+* Seiten Aggregate Inventory, Aggregate Health und Aggregate Performance
+* Seiten zu Volume-Inventar, Volume-Systemstatus und Volume-Performance
+* Seiten „Knoteninventar“ und „Knoten-Performance“
+* Seiten „StorageVM Inventar“, „StorageVM Systemstatus“ und „StorageVM Performance“
+* Seiten für Schutzbeziehungen
+

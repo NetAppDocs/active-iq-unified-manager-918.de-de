@@ -1,0 +1,53 @@
+---
+permalink: data-protection/task_resynchronize_protection_relationships_voldtls.html 
+sidebar: sidebar 
+keywords: resynchronize, protection, relationships, volume, health details page 
+summary: Sie können Daten in einer unterbrochenen SnapMirror oder SnapVault Beziehung neu synchronisieren, nachdem das Ziel auf lesen/schreiben gesetzt wurde, sodass die Daten auf der Quelle mit den Daten auf dem Ziel übereinstimmen. Eine erneute Synchronisierung kann auch erforderlich sein, wenn eine erforderliche gemeinsame Snapshot Kopie auf dem Quell-Volume gelöscht wurde und dadurch SnapMirror oder SnapVault Aktualisierungen fehlschlagen. 
+---
+= Neusynchronisierung von Schutzbeziehungen auf der Seite „Volume-/Integritätsdetails“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Daten in einer unterbrochenen SnapMirror oder SnapVault Beziehung neu synchronisieren, nachdem das Ziel auf lesen/schreiben gesetzt wurde, sodass die Daten auf der Quelle mit den Daten auf dem Ziel übereinstimmen. Eine erneute Synchronisierung kann auch erforderlich sein, wenn eine erforderliche gemeinsame Snapshot Kopie auf dem Quell-Volume gelöscht wurde und dadurch SnapMirror oder SnapVault Aktualisierungen fehlschlagen.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen OnCommand Workflow Automation eingerichtet haben.
+
+
+.Schritte
+. Auf der Registerkarte *Protection* der Detailseite *Volume / Health* wird in der Topologie die Schutzbeziehung, die neu synchronisiert werden soll, mit der rechten Maustaste angeklickt.
+. Die Auswahl im Menü erfolgt über *Resynchronize*.
++
+Alternativ lässt sich im Menü *Aktionen* die Option *Beziehung* > *Neu synchronisieren* auswählen, um die Beziehung, deren Details aktuell angezeigt werden, erneut zu synchronisieren.
+
++
+Das Dialogfeld „Resynchronisieren“ wird angezeigt.
+
+. Auf der Registerkarte *Resynchronisierungsoptionen* lassen sich eine Übertragungspriorität und die maximale Transferrate auswählen.
+. Nach einem Klick auf *Source Snapshot Copies* ist in der Spalte *Snapshot Copy* auf *Default* zu klicken.
++
+Das Dialogfeld „Quell-Snapshot-Kopie auswählen“ wird angezeigt.
+
+. Zum Angeben einer vorhandenen Snapshot-Kopie anstelle der Standard-Snapshot-Kopie ist *Vorhandene Snapshot Copy* anzuklicken und eine Snapshot-Kopie aus der Liste auszuwählen.
+. Anschließend *Absenden* auswählen.
++
+Sie kehren zum Dialogfeld „Resynchronisieren“ zurück.
+
+. Bei Auswahl von mehr als einer Quelle für die Resynchronisierung wird für die nächste Quelle, für die eine vorhandene Snapshot-Kopie angegeben werden soll, *Default* ausgewählt.
+. Mit *Submit* wird der Resynchronisierungsvorgang gestartet.
++
+Der Resynchronisierungsauftrag wird gestartet, Sie kehren zur Seite „Volume / Health details“ zurück, und oben auf der Seite wird ein Link zu Jobs angezeigt.
+
+. *Optional:* Auf der Seite *Volume / Health details* lässt sich über *View Jobs* der Status jedes Resynchronisierungsauftrags nachverfolgen.
++
+Eine gefilterte Liste der Jobs wird angezeigt.
+
+. *Optional:* Über den *Back*-Pfeil in Ihrem Browser gelangen Sie zurück zur Detailseite *Volume / Health*.
++
+Der Resynchronisierungsvorgang ist beendet, wenn alle Jobaufgaben erfolgreich abgeschlossen sind.
+
+

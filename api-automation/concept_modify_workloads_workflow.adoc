@@ -1,0 +1,348 @@
+---
+permalink: api-automation/concept_modify_workloads_workflow.html 
+sidebar: sidebar 
+keywords: modify, storage, workloads 
+summary: Das Ändern von Storage-Workloads umfasst das Aktualisieren von LUNs oder Dateifreigaben mit fehlenden Parametern oder das Ändern der vorhandenen Parameter. 
+---
+= Das Ändern von Speicherworkloads mithilfe von APIs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Ändern von Storage-Workloads umfasst das Aktualisieren von LUNs oder Dateifreigaben mit fehlenden Parametern oder das Ändern der vorhandenen Parameter.
+
+Dieser Workflow verwendet das Beispiel der Aktualisierung von Performance Service Levels für LUNs und Dateifreigaben.
+
+[NOTE]
+====
+Der Workflow setzt voraus, dass die LUN oder die Dateifreigabe mit Performance Service Levels provisioniert wurde.
+
+====
+
+
+[[modify-file-shares]]
+== Dateifreigaben ändern
+
+Beim Bearbeiten einer Dateifreigabe können Sie die folgenden Parameter aktualisieren:
+
+* Kapazität oder Größe.
+* Online- oder Offline-Einstellung.
+* Richtlinie zur Speichereffizienz.
+* Performance-Service-Level.
+* Einstellungen der Zugriffssteuerungsliste (ACL).
+* Exportrichtlinieneinstellungen. Sie können auch Exportrichtlinienparameter löschen und die standardmäßigen (leeren) Exportrichtlinienregeln für die Dateifreigabe wiederherstellen.
+
+
+[NOTE]
+====
+Bei einem einzelnen API-Lauf kann nur ein Parameter aktualisiert werden.
+
+====
+Dieses Verfahren beschreibt das Hinzufügen eines Performance Service Level zu einer Dateifreigabe. Dasselbe Verfahren kann auch zum Aktualisieren jeder anderen Eigenschaft einer Dateifreigabe verwendet werden.
+
+. Der CIFS- oder NFS-Dateifreigabeschlüssel der Dateifreigabe, die Sie aktualisieren möchten, muss ermittelt werden. Mit dieser API werden alle Dateifreigaben in Ihrem Datacenter abgefragt. Dieser Schritt kann übersprungen werden, wenn Ihnen der Dateifreigabeschlüssel bereits bekannt ist.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/file-shares`
+
+|===
+. Die Details der Dateifreigabe können Sie anzeigen, indem Sie die folgende API mit dem Dateifreigabeschlüssel ausführen, den Sie erhalten haben.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===
++
+In der Ausgabe sind die Details der Dateifreigabe zu sehen.
+
++
+[listing]
+----
+"assigned_performance_service_level": {
+        "key": null,
+        "name": "Unassigned",
+        "peak_iops": null,
+        "expected_iops": null,
+        "_links": {}
+      },
+----
+. Benötigt wird der Schlüssel für die Performance Service Level, die dieser Dateifreigabe zugewiesen werden soll. Derzeit ist ihr keine Richtlinie zugewiesen.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Performance-Servicelevels
+ a| 
+GET
+ a| 
+`/storage-provider/performance-service-levels`
+
+|===
++
+[NOTE]
+====
+Die Details der systemdefinierten Performance Service Levels können durch Setzen des `system_defined` Eingabeparameters auf `true` abgerufen werden. Der Ausgabe ist der Schlüssel des Performance Service Level zu entnehmen, der auf die Dateifreigabe angewendet werden soll.
+
+====
+. Performance Service Level auf die Dateifreigabe anwenden.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+PATCH
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===
++
+In der Eingabe müssen Sie nur den Parameter angeben, den Sie aktualisieren möchten, zusammen mit dem Dateifreigabeschlüssel. In diesem Fall handelt es sich um den Schlüssel des Performance Service Level.
+
++
+*Beispiel cURL*
+
++
+[listing]
+----
+curl -X POST "https://<hostname>/api/storage-provider/file-shares"`-H "accept: application/json" -H "Authorization: Basic <Base64EncodedCredentials>" -d
+"{
+\"performance_service_level\": { \"key\": \"1251e51b-069f-11ea-980d-fa163e82bbf2\" },
+}"
+----
++
+Die JSON-Ausgabe zeigt ein Job-Objekt an, mit dem überprüft werden kann, ob die Zugriffsendpunkte auf den Home- und Partnerknoten erfolgreich erstellt wurden.
+
+. Anhand des in Ihrer Ausgabe angezeigten Jobobjektschlüssels lässt sich überprüfen, ob der Dateifreigabe das Leistungsdienstniveau hinzugefügt wurde.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Verwaltungsserver
+ a| 
+GET
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
++
+Bei einer Abfrage über die ID des Job-Objekts ist erkennbar, ob die Dateifreigabe erfolgreich aktualisiert wurde. Im Fehlerfall empfiehlt sich eine Fehlerbehebung mit anschließender erneuter Ausführung der API. Nach erfolgreicher Erstellung lässt sich die Dateifreigabe abfragen, um das geänderte Objekt anzuzeigen:
+
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===
++
+In der Ausgabe sind die Details der Dateifreigabe zu sehen.
+
++
+[listing]
+----
+"assigned_performance_service_level": {
+        "key": "1251e51b-069f-11ea-980d-fa163e82bbf2",
+        "name": "Value",
+        "peak_iops": 75,
+        "expected_iops": 75,
+        "_links": {
+            "self": {
+                "href": "/api/storage-provider/performance-service-levels/1251e51b-069f-11ea-980d-fa163e82bbf2"
+            }
+        }
+----
+
+
+
+
+[[update-luns]]
+== Aktualisierung von LUNs
+
+Beim Aktualisieren einer LUN können Sie die folgenden Parameter ändern:
+
+* Kapazität oder Größe
+* Online- oder Offline-Einstellung
+* Richtlinie zur Storage-Effizienz
+* Performance-Service-Level
+* LUN erfassen
+
+
+[NOTE]
+====
+Bei einem einzelnen API-Lauf kann nur ein Parameter aktualisiert werden.
+
+====
+Dieses Verfahren beschreibt das Hinzufügen eines Performance Service Level zu einer LUN. Dasselbe Verfahren kann auch für die Aktualisierung jeder anderen LUN-Eigenschaft verwendet werden.
+
+. Der LUN-Schlüssel der LUN, die aktualisiert werden soll, ist zu ermitteln. Diese API liefert Details zu allen LUNs in Ihrem Datacenter. Dieser Schritt kann übersprungen werden, wenn der LUN-Schlüssel bereits bekannt ist.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/luns`
+
+|===
+. Die Details der LUN können Sie anzeigen, indem Sie die folgende API mit dem erhaltenen LUN-Schlüssel ausführen.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/luns/\{key}`
+
+|===
++
+Die Details der LUN können Sie in der Ausgabe einsehen. Sie sehen, dass dieser LUN kein Performance Service Level zugewiesen ist.
+
++
+*Beispielhafte JSON-Ausgabe*
+
++
+[listing]
+----
+
+  "assigned_performance_service_level": {
+        "key": null,
+        "name": "Unassigned",
+        "peak_iops": null,
+        "expected_iops": null,
+        "_links": {}
+      },
+----
+. Benötigt wird der Schlüssel für das Performance Service Level, das der LUN zugewiesen werden soll.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Performance-Servicelevels
+ a| 
+GET
+ a| 
+`/storage-provider/performance-service-levels`
+
+|===
++
+[NOTE]
+====
+Sie können die Details der systemdefinierten Performance Service Levels abrufen, indem Sie den `system_defined` Eingabeparameter auf `true` setzen. Aus der Ausgabe kann der Schlüssel des Performance Service Levels ermittelt werden, das Sie auf die LUN anwenden möchten.
+
+====
+. Das Performance Service Level auf die LUN anwenden.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+PATCH
+ a| 
+`/storage-provider/lun/\{key}`
+
+|===
++
+In der Eingabe müssen Sie lediglich den zu aktualisierenden Parameter sowie den LUN-Schlüssel angeben. In diesem Fall handelt es sich um den Schlüssel des Performance Service Level.
+
++
+*Beispiel cURL*
+
++
+[listing]
+----
+curl -X PATCH "https://<hostname>/api/storage-provider/luns/7d5a59b3-953a-11e8-8857-00a098dcc959" -H "accept: application/json" -H "Content-Type: application/json" H "Authorization: Basic <Base64EncodedCredentials>" -d
+"{ \"performance_service_level\": { \"key\": \"1251e51b-069f-11ea-980d-fa163e82bbf2\" }"
+----
++
+Die JSON-Ausgabe zeigt einen Job-Objektschlüssel an, mit dem Sie die aktualisierte LUN überprüfen können.
+
+. Die Details der LUN können Sie anzeigen, indem Sie die folgende API mit dem erhaltenen LUN-Schlüssel ausführen.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/luns/\{key}`
+
+|===
++
+Die Details der LUN können Sie in der Ausgabe einsehen. Dort sehen Sie, dass dieser LUN das Performance Service Level zugewiesen ist.
+
++
+*Beispielhafte JSON-Ausgabe*
+
++
+[listing]
+----
+
+     "assigned_performance_service_level": {
+        "key": "1251e51b-069f-11ea-980d-fa163e82bbf2",
+        "name": "Value",
+        "peak_iops": 75,
+        "expected_iops": 75,
+        "_links": {
+            "self": {
+                "href": "/api/storage-provider/performance-service-levels/1251e51b-069f-11ea-980d-fa163e82bbf2"
+            }
+----
+

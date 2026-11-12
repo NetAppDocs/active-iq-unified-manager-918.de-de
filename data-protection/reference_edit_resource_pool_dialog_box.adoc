@@ -1,0 +1,48 @@
+---
+permalink: data-protection/reference_edit_resource_pool_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, resource pool, dialog box 
+summary: Im Dialogfeld „Ressourcenpool bearbeiten“ können Sie den Namen und die Beschreibung eines vorhandenen Ressourcenpools ändern. Wenn beispielsweise der ursprüngliche Name und die Beschreibung ungenau oder fehlerhaft sind, können Sie sie präzisieren. 
+---
+= Im Active IQ Unified Manager steht das Dialogfeld „Ressourcenpool bearbeiten“ zur Verfügung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Ressourcenpool bearbeiten“ können Sie den Namen und die Beschreibung eines vorhandenen Ressourcenpools ändern. Wenn beispielsweise der ursprüngliche Name und die Beschreibung ungenau oder fehlerhaft sind, können Sie sie präzisieren.
+
+
+
+[[text-boxes]]
+== Textfelder
+
+Mithilfe der Textfelder können Sie die folgenden Informationen für den ausgewählten Ressourcenpool ändern:
+
+* *Name des Ressourcenpools*
++
+Ermöglicht die Eingabe eines neuen Namens.
+
+* *Beschreibung*
++
+Ermöglicht Ihnen die Eingabe einer neuen Beschreibung.
+
+
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Speichern*
++
+Speichert die Änderungen am Namen und der Beschreibung des Ressourcenpools.
+
+* *Stornieren*
++
+Verwirft die Änderungen und schließt das Dialogfeld „Ressourcenpool bearbeiten“.
+
+

@@ -1,0 +1,60 @@
+---
+permalink: events/task_change_or_cancel_scheduled_maintenance_window.html 
+sidebar: sidebar 
+keywords: change, cancel, scheduled, maintenance, window 
+summary: Wenn Sie ein Unified Manager Wartungsfenster konfiguriert haben, das in der Zukunft stattfinden soll, können Sie die Start- und Endzeiten ändern oder das Stattfinden des Wartungsfensters abbrechen. 
+---
+= Ändern oder Stornieren eines geplanten Wartungsfensters in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein Unified Manager Wartungsfenster konfiguriert haben, das in der Zukunft stattfinden soll, können Sie die Start- und Endzeiten ändern oder das Stattfinden des Wartungsfensters abbrechen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Das Abbrechen eines aktuell laufenden Wartungsfensters ist sinnvoll, wenn Sie die Clusterwartung vor dem geplanten Ende des Wartungsfensters abgeschlossen haben und wieder Ereignisse und Warnmeldungen vom Cluster empfangen möchten.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Cluster Setup*.
+. In der Spalte *Wartungsmodus* für den Cluster:
++
+|===
+| Wenn Sie möchten... | Ausführung dieses Schritts... 
+
+
+ a| 
+Ändern des Zeitrahmens für ein geplantes Wartungsfenster
+ a| 
+.. Neben dem Schieberegler befindet sich der Text „Geplant“.
+.. Start- und/oder Enddatum sowie -uhrzeit ändern und *Anwenden* auswählen.
+
+
+
+
+ a| 
+Verlängerung der Dauer eines aktiven Wartungsfensters
+ a| 
+.. Der Text „Active“ neben dem Schieberegler wird ausgewählt.
+.. Das Enddatum und die Endzeit werden geändert, und anschließend wird auf *Anwenden* geklickt.
+
+
+
+
+ a| 
+Abbrechen eines geplanten Wartungsfensters
+ a| 
+Der Schieberegler wird ausgewählt und nach links bewegt.
+
+
+
+ a| 
+Abbrechen eines aktiven Wartungsfensters
+ a| 
+Der Schieberegler wird ausgewählt und nach links bewegt.
+
+|===
+

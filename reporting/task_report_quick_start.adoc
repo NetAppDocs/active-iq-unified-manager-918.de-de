@@ -1,0 +1,91 @@
+---
+permalink: reporting/task_report_quick_start.html 
+sidebar: sidebar 
+keywords: reporting, quick, start 
+summary: Es ist möglich, einen Beispielbericht zu erstellen, der Volumes findet, die in die Cloud-Ebene verschoben werden sollen, die Ansicht anzupassen, ihn als Bericht zu speichern und die wöchentliche Freigabe zu planen. 
+---
+= Erste Schritte mit der Berichtsfunktion in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es wird ein benutzerdefinierter Beispielbericht erstellt, um das Untersuchen von Ansichten und das Planen von Berichten kennenzulernen. Dieser Schnellstartbericht ermittelt eine Liste von Volumes, die Sie möglicherweise in den Cloud Tier verschieben möchten, da eine beträchtliche Menge inaktiver (kalter) Daten vorhanden ist. Dazu wird die Ansicht „Performance: All Volumes“ geöffnet, die Ansicht mithilfe von Filtern und Spalten angepasst, die benutzerdefinierte Ansicht als Bericht gespeichert und der Bericht für die wöchentliche Freigabe geplant.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen FabricPool Aggregate konfiguriert haben und Volumes auf diesen Aggregaten besitzen.
+
+
+Im Folgenden wird beschrieben, wie Sie:
+
+* Öffnen der Standardansicht
+* Anpassen der Spalten durch Filtern und Sortieren der Daten
+* Ansicht speichern
+* Sie können die Generierung eines Berichts für die benutzerdefinierte Ansicht planen
+
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Performance* > *Alle Volumes*.
+. Über *Anzeigen/Ausblenden* lässt sich sicherstellen, dass die Spalte "`Disk Types`" in der Ansicht angezeigt wird.
++
+image::../media/show_hide_3.png[Ein Screenshot der Benutzeroberfläche, der die Dropdown-Liste des Menüs „Show/Hide“ zeigt.]
+
++
+Weitere Spalten können hinzugefügt oder entfernt werden, um eine Ansicht zu erstellen, die die für Ihren Bericht wichtigen Felder enthält.
+
+. Die Spalte „`Disk Types`“ kann neben die Spalte „`Cloud Recommendation`“ gezogen werden.
+. Sie fügen die folgenden drei Filter hinzu, indem Sie auf das Filtersymbol und anschließend auf *Filter anwenden* klicken:
++
+** Datenträgertypen enthält FabricPool
+** Cloud Recommendation enthält Tier
+** Kalte Daten größer als 10 GB image:../media/filter_cold_data_2.png["Ein Screenshot der Benutzeroberfläche, auf dem die Anwendung eines Filters über die Filteroption dargestellt ist."]
+
+
++
+Jeder Filter ist mit einem logischen UND verknüpft, sodass alle zurückgegebenen Volumes alle Kriterien erfüllen müssen. Es können maximal fünf Filter hinzugefügt werden.
+
+. Durch Klicken auf den oberen Rand der Spalte „Kalte Daten“ werden die Ergebnisse so sortiert, dass die Volumes mit den meisten kalten Daten oben in der Ansicht erscheinen.
+. Wenn die Ansicht angepasst wird, lautet der Ansichtsname „Nicht gespeicherte Ansicht“. Die Ansicht sollte so benannt werden, dass sie widerspiegelt, was in der Ansicht angezeigt wird, zum Beispiel "`Vols change tiering policy`". Anschließend lässt sich die Ansicht durch Klicken auf das Häkchen oder durch Drücken der Eingabetaste unter dem neuen Namen speichern.
++
+image::../media/report_vol_code_data_2.png[Ein Screenshot der Benutzeroberfläche, der die Seite zum Ändern der Tiering-Richtlinie von Vols mit den erforderlichen Spalten in der richtigen Reihenfolge zeigt.]
+
+. Sie können den Bericht als *CSV*-, *Excel*- oder *PDF*-Datei herunterladen, um die Ausgabe vor dem Planen oder Freigeben anzuzeigen.
++
+Die Datei kann mit einer installierten Applikation wie Microsoft Excel (CSV oder Excel) oder Adobe Acrobat (PDF) geöffnet oder gespeichert werden.
+
++
+[NOTE]
+====
+Sie können Ihren Bericht mithilfe komplexer Filter, Sortierungen, Pivot-Tabellen oder Diagramme weiter anpassen, indem Sie die Ansicht als Excel-Datei herunterladen. Nachdem Sie die Datei in Excel geöffnet haben, können Sie die erweiterten Funktionen nutzen, um Ihren Bericht anzupassen. Sobald das Ergebnis Ihren Anforderungen entspricht, können Sie die Excel-Datei hochladen. Diese Datei mit ihren Anpassungen wird beim Ausführen des Berichts auf die Ansicht angewendet.
+
+====
++
+Weitere Informationen zur Anpassung von Berichten mit Excel enthält _Sample Microsoft Excel reports_.
+
+. Auf der Inventarseite erfolgt die Auswahl der Schaltfläche *Geplante Berichte*. In der Liste erscheinen alle geplanten Berichte, die sich auf das Objekt beziehen, in diesem Fall Volumes.
++
+image::../media/scheduled_reports_3.gif[Ein Screenshot der UI, der alle geplanten Berichte zum Objekt anzeigt.]
+
+. Über *Zeitplan hinzufügen* lässt sich der Seite „Berichtszeitpläne“ eine neue Zeile hinzufügen, sodass Sie die Zeitplanmerkmale für den neuen Bericht definieren können.
+. Nach Eingabe eines Namens für den Bericht und Ausfüllen der übrigen Berichtsfelder erfolgt ein Klick auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
++
+Der folgende Beispielbericht liegt im CSV-Format vor:
+
++
+image::../media/csv_sample_report.gif[Ein Screenshot der Benutzeroberfläche, der einen Beispielbericht im CSV-Format zeigt.]
+
++
+Der folgende Beispielbericht liegt im PDF-Format vor:
+
++
+image::../media/pdf_sample_report.gif[Ein UI-Screenshot, der einen Beispielbericht im PDF-Format zeigt.]
+
+
+
+Auf Grundlage der im Bericht angezeigten Ergebnisse kann es sinnvoll sein, ONTAP System Manager oder die ONTAP CLI zu verwenden, um die Tiering-Richtlinie für bestimmte Volumes in "`auto`" oder "`all`" zu ändern, um mehr kalte Daten auf das Cloud-Tier auszulagern.

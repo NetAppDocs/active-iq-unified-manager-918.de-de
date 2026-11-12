@@ -1,0 +1,130 @@
+---
+permalink: events/reference_port_events.html 
+sidebar: sidebar 
+keywords: port, events, impact area, availability, performance 
+summary: Portereignisse liefern Ihnen Statusinformationen zu Cluster-Ports, sodass Sie Änderungen oder Probleme am Port überwachen können, z. B. ob der Port ausgefallen ist. 
+---
+= Informationen zu Portereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Portereignisse liefern Ihnen Statusinformationen zu Cluster-Ports, sodass Sie Änderungen oder Probleme am Port überwachen können, z. B. ob der Port ausgefallen ist.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Port-Status nicht verfügbar(ocumEvtPortStatusDown)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+|===
+
+
+[[impact-area-performance]]
+== Wirkungsbereich: Performance
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Kritischer Schwellenwert für Netzwerkport MB/s überschritten(ocumNetworkPortMbpsIncident)
+ a| 
+Vorfall
+ a| 
+Port
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwelle für Netzwerkport MB/s überschritten(ocumNetworkPortMbpsWarning)
+ a| 
+Risiko
+ a| 
+Port
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für FCP Port MB/s überschritten(ocumFcpPortMbpsIncident)
+ a| 
+Vorfall
+ a| 
+Port
+ a| 
+Kritisch
+
+
+
+ a| 
+FCP Port MB/s Warnschwelle überschritten(ocumFcpPortMbpsWarning)
+ a| 
+Risiko
+ a| 
+Port
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für die Netzwerkportauslastung überschritten(ocumNetworkPortUtilizationIncident)
+ a| 
+Vorfall
+ a| 
+Port
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwellenwert für Netzwerkportauslastung überschritten(ocumNetworkPortUtilizationWarning)
+ a| 
+Risiko
+ a| 
+Port
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert der FCP Port Auslastung überschritten(ocumFcpPortUtilizationIncident)
+ a| 
+Vorfall
+ a| 
+Port
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwellenwert für FCP Port Auslastung überschritten(ocumFcpPortUtilizationWarning)
+ a| 
+Risiko
+ a| 
+Port
+ a| 
+Warnung
+
+|===

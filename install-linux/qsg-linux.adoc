@@ -1,0 +1,80 @@
+---
+permalink: install-linux/qsg-linux.html 
+sidebar: sidebar 
+keywords: quick start guide, getting started, QSG, Linux QSG, RHEL QSG, quick installation 
+summary: Kurzanleitung für Unified Manager auf der Linux-Plattform. 
+---
+= Erste Schritte mit Active IQ Unified Manager unter Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Installationspaket herunterladen und Unified Manager auf einer physischen oder virtuellen Red Hat Enterprise Linux Plattform installieren.
+
+
+
+[[system-requirements]]
+== Systemvoraussetzungen
+
+* Betriebssystem: Red Hat Enterprise Linux Versionen 8.x und 9.4, basierend auf der x86_64-Architektur, installiert mit der Basisumgebung „Server with GUI“ aus der Option *Software Selection* des Betriebssystem-Installationsprogramms
+* Arbeitsspeicher: 12 GB, CPU: 9572 MHz gesamt
+* Freier Speicherplatz: 100 GB Speicherplatz im `/opt/netapp/data` Verzeichnis, 50 GB in der Root-Partition. Bei separat eingebundenen `/opt` und `/var/log` Verzeichnissen müssen für `/opt` 15 GB, für `/var/log` 16 GB und für `/tmp` 10 GB freier Speicherplatz verfügbar sein.
+
+
+Ausführliche Systemanforderungen und Informationen zur Installation des Produkts an einem gesicherten Standort finden Sie in der link:../install-linux/concept_requirements_for_install_unified_manager.html["Voraussetzungen für die Installation von Unified Manager"] und der link:http://mysupport.netapp.com/matrix["Interoperabilitätsmatrix"].
+
+
+
+[[install-active-iq-unified-manager]]
+== Active IQ Unified Manager installieren
+
+
+
+[[download-the-installer]]
+=== Herunterladen des Installationsprogramms
+
+. Zum Download stehen das  `ActiveIQUnifiedManager-<version>.zip`Installationspaket sowie das Code-Signing-Zertifikat (`.pem`) und die digitale Signatur (`.sig`) bereit.
+. Führen Sie in dem Verzeichnis, in dem Sie die Installationsdatei heruntergeladen haben, Folgendes aus:
++
+`# unzip ActiveIQUnifiedManager-<version>.zip`
+
+
+
+
+
+[[verify-integrity]]
+=== Integrität überprüfen
+
+Mit den folgenden Befehlen lässt sich die Integrität des Installationspakets überprüfen:
+
+* Durch Ausführen von `openssl x509 -pubkey -noout -in AIQUM-RHEL-CLIENT-INTER-ROOT.pem > <public_key_file_name>` wird eine Datei mit dem öffentlichen Schlüssel aus dem Code-Signing-Zertifikat erstellt.
+* Der Befehl `openssl dgst -sha256 -verify <public_key_file_name> -signature <signature_file_name> ActiveIQUnifiedManager-<version>.zip` dient zur Überprüfung der Signatur des Installationspakets.
+
+
+
+
+[[verify-repository-configuration]]
+=== Repository-Konfiguration überprüfen
+
+Die Vorgehensweise zur Konfiguration eines Red Hat Enterprise Linux-Repositorys ist standortspezifisch. Sie können das `pre_install_check.sh` im Installationspaket enthaltene Skript verwenden, um die Konfiguration Ihres Betriebssystems zu überprüfen. Wenn Ihr System mit dem Internet verbunden ist, erhalten Sie automatisch Anweisungen zur Einrichtung des Red Hat Enterprise Linux-Repositorys.
+
+`# sudo ./pre_install_check.sh`
+
+
+
+[[install-unified-manager]]
+=== Installation von Unified Manager
+
+Unified Manager verwendet das  `yum`Dienstprogramm, um die Software und alle abhängigen Softwarepakete zu installieren. Da es verschiedene Images von Red Hat Enterprise Linux gibt, hängen die installierten Pakete von der in den Images vorhandenen Software ab. Das  `yum`Dienstprogramm ermittelt die für die Installation erforderlichen abhängigen Softwarepakete. Weitere Informationen zu den abhängigen Softwarepaketen sind in der Dokumentation link:../install-linux/reference_red_hat_software_and_installation_requirements.html["Linux Software und Installationsanforderungen"] enthalten.
+
+Zur Installation von Unified Manager ist der folgende Befehl entweder als Root-Benutzer oder unter Verwendung von `sudo`, aus dem Verzeichnis auszuführen, in dem die Installationsdatei entpackt wurde:
+
+`# yum install netapp-um<version>.x86_64.rpm`
+
+oder
+
+`% sudo yum install netapp-um<version>.x86_64.rpm`
+
+Am Ende der Installation werden die Informationen zum Herstellen einer Verbindung mit der Unified Manager Web-UI angezeigt. Falls keine Verbindung zur Web-UI hergestellt werden kann, finden Sie in der mit der Software gelieferten  `README`Datei weitere Informationen zu den Einschränkungen von Port 443.

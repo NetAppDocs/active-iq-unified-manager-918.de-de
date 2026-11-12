@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_view_details_about_cifs_shares.html 
+sidebar: sidebar 
+keywords: smb, cifs, view, shares, details 
+summary: Auf der Seite „Integrität“ können in der Ansicht „Alle SMB-Freigaben“ Details zu SMB/CIFS-Freigaben angezeigt werden, z. B. Freigabename, Verbindungspfad, Sicherheitseinstellungen und Exportrichtlinien. 
+---
+= Details zu SMB/CIFS Freigaben in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Details zu allen SMB/CIFS-Freigaben anzeigen, z. B. den Freigabenamen, den Verbindungspfad, enthaltene Objekte, Sicherheitseinstellungen und für die Freigabe definierte Exportrichtlinien. In der Ansicht „Systemstatus: Alle SMB-Freigaben“ sind alle SMB-Freigaben auf allen überwachten Clustern zu sehen, und auf der Seite „Storage VM / Systemstatusdetails“ sind alle SMB-Freigaben auf einer bestimmten Storage Virtual Machine (SVM) zu sehen.
+
+.Bevor Sie beginnen
+* CIFS-Lizenz muss auf dem Cluster aktiviert sein.
+* Für die SMB/CIFS-Freigaben müssen die Netzwerkschnittstellen konfiguriert sein.
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+
+[NOTE]
+====
+Freigaben in Ordnern werden nicht angezeigt.
+
+====
+.Schritt
+. Im linken Navigationsbereich richten sich die folgenden Schritte danach, ob alle SMB/CIFS-Freigaben oder nur die Freigaben für eine bestimmte SVM angezeigt werden sollen.
++
+[cols="2*"]
+|===
+| Zu... | Folgen Sie diesen Schritten... 
+
+
+ a| 
+Alle SMB/CIFS-Freigaben
+ a| 
+Auf *Storage* > *SMB-Freigaben* klicken
+
+
+
+ a| 
+Anzeigen von SMB/CIFS-Freigaben für eine einzelne SVM
+ a| 
+.. *Storage* > *Storage VMs* auswählen
+.. Wählen Sie die SVM aus, deren SMB/CIFS-Freigabedetails angezeigt werden sollen.
+.. Die Registerkarte *SMB Shares* befindet sich auf der Seite „Storage VM / Systemstatusdetails“.
+
+
+|===
+
+
+Weitere Informationen sind unter link:../api-automation/concept_provision_file_share.html["Provisionierung von CIFS- und NFS-Dateifreigaben mithilfe von APIs"] verfügbar.

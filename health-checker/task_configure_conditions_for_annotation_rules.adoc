@@ -1,0 +1,45 @@
+---
+permalink: health-checker/task_configure_conditions_for_annotation_rules.html 
+sidebar: sidebar 
+keywords: unified manager, configure, conditions, annotation rules 
+summary: Sie können eine oder mehrere Bedingungen konfigurieren, um Annotationsregeln zu erstellen, die Unified Manager auf die Storage-Objekte anwendet. Die Storage-Objekte, die die Annotationsregel erfüllen, erhalten den in der Regel angegebenen Wert als Annotation. 
+---
+= Konfiguration von Bedingungen für Annotationsregeln in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine oder mehrere Bedingungen konfigurieren, um Annotationsregeln zu erstellen, die Unified Manager auf die Storage-Objekte anwendet. Die Storage-Objekte, die die Annotationsregel erfüllen, erhalten den in der Regel angegebenen Wert als Annotation.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Annotations*.
+. Im Reiter *Anmerkungsregeln* erfolgt die Auswahl von *Hinzufügen*.
+. Im Dialogfeld *Add Annotation Rule* wird ein Name für die Regel eingegeben.
+. Ein Objekttyp ist aus der Liste „Zielobjekttyp“ auszuwählen; anschließend sind ein Anmerkungsname und ein Wert aus der Liste auszuwählen.
+. Im Abschnitt *Bedingungen* des Dialogfelds erfolgt die Auswahl eines Operanden und eines Operators aus der Liste sowie die Eingabe eines Bedingungswerts; mit *Bedingung hinzufügen* lässt sich eine neue Bedingung erstellen.
+. Dann die Option *Speichern und Hinzufügen* auswählen.
+
+
+
+
+[[example-of-configuring-a-condition-for-an-annotation-rule]]
+== Beispiel für die Konfiguration einer Bedingung für eine Annotationsregel
+
+Eine Bedingung für den Objekttyp SVM, bei der der Objektname "`svm_data`" enthält.
+
+Im Dialogfeld „Anmerkungsregel hinzufügen“ sind die folgenden Schritte zur Konfiguration der Bedingung auszuführen:
+
+.Schritte
+. Einen Namen für die Annotationsregel eingeben.
+. Der Zielobjekttyp wird als SVM ausgewählt.
+. Eine Annotation aus der Liste der Annotationen sowie einen Wert auswählen.
+. Im Feld *Bedingungen* erfolgt die Auswahl von *Objektname* als Operand.
+. Als Operator ist *Enthält* festzulegen.
+. Die Eingabe des Werts erfolgt als `svm_data`.
+. Klicken Sie auf *Add*.
+

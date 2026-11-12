@@ -1,0 +1,157 @@
+---
+permalink: data-protection/reference_protection_jobs_page.html 
+sidebar: sidebar 
+keywords: jobs, page 
+summary: Auf der Seite „Aufträge“ sind der aktuelle Status und weitere Informationen zu allen derzeit laufenden sowie abgeschlossenen Aufträgen zum Schutz von Partner-Applikationen verfügbar. Mithilfe dieser Informationen lässt sich feststellen, welche Aufträge noch ausgeführt werden und ob ein Auftrag erfolgreich war oder fehlgeschlagen ist. 
+---
+= Informationen zur Jobseite in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Aufträge“ sind der aktuelle Status und weitere Informationen zu allen derzeit laufenden sowie abgeschlossenen Aufträgen zum Schutz von Partner-Applikationen verfügbar. Mithilfe dieser Informationen lässt sich feststellen, welche Aufträge noch ausgeführt werden und ob ein Auftrag erfolgreich war oder fehlgeschlagen ist.
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Abbrechen*
++
+Bricht den ausgewählten Auftrag ab. Diese Option ist nur verfügbar, wenn der ausgewählte Auftrag ausgeführt wird.
+
+* *Wiederholen*
++
+Ein fehlgeschlagener Auftrag vom Typ „Protection Configuration“ oder „Protection Relationship Operation“ wird neu gestartet. Es kann jeweils nur ein fehlgeschlagener Auftrag erneut ausgeführt werden. Wenn mehr als ein fehlgeschlagener Auftrag ausgewählt ist, ist die Schaltfläche *Retry* deaktiviert. Fehlgeschlagene Storage-Serviceaufträge können nicht erneut ausgeführt werden.
+
+* *Aktualisieren*
++
+Aktualisiert die Liste der Aufträge und die zugehörigen Informationen.
+
+
+
+
+
+[[jobs-list]]
+== Stellenliste
+
+Die Jobliste zeigt in tabellarischer Form eine Liste der Jobs an, die gerade ausgeführt werden. Standardmäßig werden in der Liste nur die Jobs angezeigt, die innerhalb der letzten Woche erstellt wurden. Mithilfe von Spaltensortierung und Filterung kann angepasst werden, welche Jobs angezeigt werden.
+
+* *Status*
++
+Zeigt den aktuellen Status eines Auftrags an. Der Status kann Fehler (image:../media/sev_error.gif[""]) oder Normal (image:../media/sev_normal.gif[""]) sein.
+
+* *Job-ID*
++
+Zeigt die Kennnummer des Auftrags an. Diese Spalte ist standardmäßig ausgeblendet.
+
++
+Die Job-Identifikationsnummer ist eindeutig und wird vom Server beim Start des Jobs vergeben. Sie können nach einem bestimmten Job suchen, indem Sie die Job-Identifikationsnummer in das vom Spaltenfilter bereitgestellte Textfeld eingeben.
+
+* *Name*
++
+Zeigt den Namen des Jobs an.
+
+* *Typ*
++
+Zeigt den Jobtyp an. Die Jobtypen sind wie folgt:
+
++
+** *Clustererfassung*
++
+Ein Workflow Automation Auftrag führt eine erneute Erkennung eines Clusters durch.
+
+** *Schutzkonfiguration*
++
+Ein Schutzauftrag initiiert Workflow Automation Workflows, wie z. B. Cron-Zeitpläne, SnapMirror Richtlinienerstellung usw.
+
+** *Vorgang der Schutzbeziehung*
++
+Ein Schutzjob führt SnapMirror Vorgänge aus.
+
+** *Schutz-Workflow-Kette*
++
+Ein Workflow Automation Job führt mehrere Workflows aus.
+
+** *Wiederherstellen*
++
+Ein Wiederherstellungsauftrag läuft.
+
+** *Aufräumarbeiten*
++
+Die Aufgabe besteht darin, Artefakte von Storage-Service-Mitgliedern zu bereinigen, die für Wiederherstellungszwecke nicht mehr benötigt werden.
+
+** *Konform*
++
+Die Aufgabe besteht darin, die Konfiguration der Storage Service-Mitglieder zu überprüfen, um sicherzustellen, dass sie den Vorgaben entsprechen.
+
+** *Zerstören*
++
+Der Job zerstört einen Storage-Service.
+
+** *Importieren*
++
+Die Aufgabe besteht darin, nicht verwaltete Storage-Objekte in einen bestehenden Storage-Service zu importieren.
+
+** *Ändern*
++
+Die Aufgabe besteht darin, Attribute eines bestehenden Storage-Service zu ändern.
+
+** *Abonnement*
++
+Die Aufgabe besteht darin, Mitglieder für einen Storage-Service anzumelden.
+
+** *Abbestellen*
++
+Die Aufgabe besteht darin, Mitglieder von einem Storage-Service abzumelden.
+
+** *Aktualisieren*
++
+Ein Schutzaktualisierungsauftrag läuft.
+
+** *WFA Konfiguration*
++
+Ein Auftrag von Workflow Automation überträgt Cluster-Anmeldeinformationen und synchronisiert Datenbank-Caches.
+
+
+
+* *Zustand*
++
+Zeigt den Ausführungsstatus des Jobs an. Folgende Statusoptionen stehen zur Verfügung:
+
++
+** *Abgebrochen*
++
+Der Auftrag wurde abgebrochen.
+
+** *Abbruch*
++
+Der Auftrag wird gerade abgebrochen.
+
+** *Abgeschlossen*
++
+Der Job ist abgeschlossen.
+
+** *Läuft*
++
+Der Auftrag läuft.
+
+
+
+* *Einreichungszeitpunkt*
++
+Zeigt den Zeitpunkt an, zu dem der Job übermittelt wurde.
+
+* *Dauer*
++
+Zeigt die für die Ausführung des Auftrags benötigte Zeit an. Diese Spalte wird standardmäßig angezeigt.
+
+* *Abschlusszeit*
++
+Zeigt den Zeitpunkt des Auftragsabschlusses an. Diese Spalte ist standardmäßig ausgeblendet.
+
+

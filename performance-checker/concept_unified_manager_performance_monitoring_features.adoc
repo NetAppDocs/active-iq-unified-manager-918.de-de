@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_unified_manager_performance_monitoring_features.html 
+sidebar: sidebar 
+keywords: unified manager, performance, monitoring, features 
+summary: Unified Manager erfasst und analysiert Performance-Statistiken von Systemen, auf denen ONTAP Software ausgeführt wird. Er verwendet dynamische Performance-Schwellenwerte und benutzerdefinierte Performance-Schwellenwerte, um eine Vielzahl von Performance-Zählern über viele Clusterkomponenten hinweg zu überwachen. 
+---
+= Die Leistungsüberwachungsfunktionen von Active IQ Unified Manager können erkundet werden.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager erfasst und analysiert Performance-Statistiken von Systemen, auf denen ONTAP Software ausgeführt wird. Er verwendet dynamische Performance-Schwellenwerte und benutzerdefinierte Performance-Schwellenwerte, um eine Vielzahl von Performance-Zählern über viele Clusterkomponenten hinweg zu überwachen.
+
+Eine hohe Antwortzeit (Latenz) deutet darauf hin, dass das Storage-Objekt, beispielsweise ein Volume, langsamer als üblich arbeitet. Dies weist außerdem darauf hin, dass sich die Performance von Clientanwendungen verringert hat, die das Volume nutzen. Unified Manager identifiziert die Storage-Komponente, in der das Performance-Problem liegt, und bietet eine Liste mit Handlungsempfehlungen zur Behebung des Performance-Problems.
+
+Unified Manager umfasst folgende Funktionen:
+
+* Überwacht und analysiert Performance Statistiken von Workloads aus einem System, auf dem ONTAP software ausgeführt wird.
+* Erfasst Performance-Zähler für Cluster, Knoten, Aggregate, Ports, SVMs, Volumes, LUNs, NVMe-Namespaces und Netzwerkschnittstellen (LIFs).
+* Zeigt detaillierte Diagramme an, die die Workload-Aktivität im Zeitverlauf darstellen, einschließlich IOPS (Operationen), MB/s (Durchsatz), Latenz (Antwortzeit), Auslastung, Performance-Kapazität und Cache-Verhältnis.
+* Ermöglicht die Erstellung benutzerdefinierter Performance-Schwellenwertrichtlinien, die Ereignisse auslösen und E-Mail-Benachrichtigungen senden, wenn die Schwellenwerte überschritten werden.
+* Verwendet systemdefinierte Schwellenwerte und dynamische Performance-Schwellenwerte, die die Aktivität Ihrer Workloads erfassen, um Performance-Probleme zu erkennen und Sie darauf aufmerksam zu machen.
+* Kennzeichnet die Quality of Service (QoS)-Richtlinien und Performance Service Level-Richtlinien (PSLs), die auf Ihre Volumes und LUNs angewendet werden.
+* Identifiziert eindeutig die Clusterkomponente, um die es zu einem Konflikt kommt.
+* Identifiziert Workloads, die Clusterkomponenten übermäßig beanspruchen, und Workloads, deren Performance durch die erhöhte Aktivität beeinträchtigt wird.
+

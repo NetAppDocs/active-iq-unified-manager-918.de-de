@@ -1,0 +1,33 @@
+---
+permalink: health-checker/task_view_list_of_snapshot_copies.html 
+sidebar: sidebar 
+keywords: view, list, Snapshot copies 
+summary: Sie können die Liste der Snapshot-Kopien für ein ausgewähltes Volume anzeigen. Mithilfe der Liste der Snapshot-Kopien können Sie berechnen, wie viel Speicherplatz freigegeben werden kann, wenn eine oder mehrere Snapshot-Kopien gelöscht werden, und Sie können die Snapshot-Kopien bei Bedarf löschen. 
+---
+= Die Liste der Snapshot-Kopien in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Liste der Snapshot-Kopien für ein ausgewähltes Volume anzeigen. Mithilfe der Liste der Snapshot-Kopien können Sie berechnen, wie viel Speicherplatz freigegeben werden kann, wenn eine oder mehrere Snapshot-Kopien gelöscht werden, und Sie können die Snapshot-Kopien bei Bedarf löschen.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Das Volume, das die Snapshot Kopien enthält, muss online sein.
+
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. In der Ansicht *Systemstatus: Alle Volumes* erfolgt die Auswahl des Volumes, das die anzuzeigenden Snapshot Kopien enthält.
+. Auf der Detailseite *Volume / Systemstatus* ist die Registerkarte *Kapazität* auszuwählen.
+. Im Bereich *Details* der Registerkarte *Capacity* wird im Abschnitt „Weitere Details“ der Link neben *Snapshot Copies* ausgewählt.
++
+Die Anzahl der Snapshot-Kopien ist ein Link, der die Liste der Snapshot-Kopien anzeigt.
+
+
+
+*Verwandte Informationen*
+
+link:../health-checker/reference_health_volume_details_page.html["Seite „Systemstatus/Volumes“"]

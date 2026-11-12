@@ -1,0 +1,29 @@
+---
+permalink: config/task_access_maintenance_console_using_vsphere.html 
+sidebar: sidebar 
+keywords: access, maintenance, console, using, vsphere, vm console 
+summary: Falls die Unified Manager Benutzeroberfläche nicht funktioniert oder falls Sie Funktionen ausführen müssen, die in der Benutzeroberfläche nicht verfügbar sind, können Sie auf die Managementplattform zugreifen, um Ihre virtuelle Appliance neu zu konfigurieren. 
+---
+= Zugriff auf die Wartungskonsole über die vSphere VM-Konsole in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Falls die Unified Manager Benutzeroberfläche nicht funktioniert oder falls Sie Funktionen ausführen müssen, die in der Benutzeroberfläche nicht verfügbar sind, können Sie auf die Managementplattform zugreifen, um Ihre virtuelle Appliance neu zu konfigurieren.
+
+.Bevor Sie beginnen
+* Sie müssen der Wartungsbenutzer sein.
+* Die virtuelle Appliance muss eingeschaltet sein, um auf die Wartungs Managementplattform zuzugreifen.
+
+
+.Schritte
+. Die virtuelle Appliance Unified Manager befindet sich im vSphere Client.
+. Sie wählen die Registerkarte *Console* aus.
+. Zum Anmelden ist ein Klick in das Fenster der Managementplattform erforderlich.
+. Die Anmeldung bei der Managementplattform für die Wartung erfolgt mit Ihrem Benutzernamen und Passwort.
++
+Nach 15 Minuten Inaktivität meldet die Wartungs-Managementplattform Sie ab.
+
+

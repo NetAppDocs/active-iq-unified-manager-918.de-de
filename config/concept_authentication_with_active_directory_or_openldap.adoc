@@ -1,0 +1,30 @@
+---
+permalink: config/concept_authentication_with_active_directory_or_openldap.html 
+sidebar: sidebar 
+keywords: authentication, active directory, openldap 
+summary: Sie können die Remote Authentifizierung auf dem Management-Server aktivieren und den Management-Server so konfigurieren, dass er mit Ihren Authentifizierungsservern kommuniziert, sodass Benutzer innerhalb der Authentifizierungsserver auf Unified Manager zugreifen können. 
+---
+= Authentifizierung mit Active Directory oder OpenLDAP in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Remote Authentifizierung auf dem Management-Server aktivieren und den Management-Server so konfigurieren, dass er mit Ihren Authentifizierungsservern kommuniziert, sodass Benutzer innerhalb der Authentifizierungsserver auf Unified Manager zugreifen können.
+
+Sie können einen der folgenden vordefinierten Authentifizierungsservices verwenden oder Ihren eigenen Authentifizierungsservice angeben:
+
+* Microsoft Active Directory
++
+[NOTE]
+====
+Sie können Microsoft Lightweight Directory Services nicht verwenden.
+
+====
+* OpenLDAP
+
+
+Sie können den erforderlichen Authentifizierungsservice auswählen und die entsprechenden Authentifizierungsserver hinzufügen, um den Remote-Benutzern im Authentifizierungsserver den Zugriff auf Unified Manager zu ermöglichen. Die Anmeldeinformationen für Remote-Benutzer oder -Gruppen werden vom Authentifizierungsserver verwaltet. Der Managementserver verwendet das Lightweight Directory Access Protocol (LDAP), um Remote-Benutzer innerhalb des konfigurierten Authentifizierungsservers zu authentifizieren.
+
+Für lokale Benutzer, die im Unified Manager angelegt werden, verwaltet der Verwaltungsserver eine eigene Datenbank mit Benutzernamen und Passwörtern. Der Verwaltungsserver führt die Authentifizierung durch und verwendet weder Active Directory noch OpenLDAP für die Authentifizierung.

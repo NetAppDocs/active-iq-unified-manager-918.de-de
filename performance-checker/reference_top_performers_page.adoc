@@ -1,0 +1,77 @@
+---
+permalink: performance-checker/reference_top_performers_page.html 
+sidebar: sidebar 
+keywords: top, performers, page 
+summary: 'Die Seite „Top Performers“ zeigt die Storage Objekte mit der höchsten oder der niedrigsten Performance an, basierend auf dem Performance Zähler, den Sie auswählen. In der Kategorie Storage VMs können beispielsweise die SVMs mit den höchsten IOPS, der höchsten Latenz oder den niedrigsten MB/s angezeigt werden. Auf dieser Seite wird außerdem angezeigt, ob für eines der Top Performers aktive Performance Ereignisse (New oder Acknowledged) vorliegen.' 
+---
+= Die Seite „Top-Performer“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Top Performers“ zeigt die Storage Objekte mit der höchsten oder der niedrigsten Performance an, basierend auf dem Performance Zähler, den Sie auswählen. In der Kategorie Storage VMs können beispielsweise die SVMs mit den höchsten IOPS, der höchsten Latenz oder den niedrigsten MB/s angezeigt werden. Auf dieser Seite wird außerdem angezeigt, ob für eines der Top Performers aktive Performance Ereignisse (New oder Acknowledged) vorliegen.
+
+Auf der Seite „Top Performers“ werden maximal 10 Objekte jedes Typs angezeigt. Zu beachten ist, dass das Objekt „Volume“ sowohl FlexVol Volumes als auch FlexGroup Volumes umfasst.
+
+* *Zeitraum*
++
+Sie können einen Zeitraum für die Anzeige der leistungsstärksten Objekte auswählen; der ausgewählte Zeitraum gilt für alle Storage Objekte. Verfügbare Zeiträume:
+
++
+** Letzte Stunde
+** Letzte 24 Stunden
+** Letzte 72 Stunden (Standard)
+** Letzte 7 Tage
+
+
+* *Metrik*
++
+Über das Menü *Metric* lässt sich ein anderer Zähler auswählen. Die Zähleroptionen sind objekttypspezifisch. Beispielsweise stehen für das Objekt *Volumes* die Zähler *Latenz*, *IOPS* und *MB/s* zur Verfügung. Eine Änderung des Zählers lädt die Paneldaten mit den Spitzenreitern auf Basis des ausgewählten Zählers neu.
+
++
+Verfügbare Zähler:
+
++
+** Latenz
+** IOPS
+** MB/s
+** Genutzte Performance-Kapazität (für Knoten und Aggregate)
+** Auslastung (für Knoten und Aggregate)
+
+
+* *Sortieren*
++
+Im Menü *Sortieren* kann für das ausgewählte Objekt und den ausgewählten Zähler eine aufsteigende oder absteigende Sortierung ausgewählt werden. Die Optionen sind *Höchste zuerst* und *Niedrigste zuerst*. Mit diesen Optionen können die Objekte mit der höchsten oder der niedrigsten Performance angezeigt werden.
+
+* *Zählerleiste*
++
+Der Zählerbalken im Diagramm zeigt die Performance Statistiken für jedes Objekt an, dargestellt als Balken für das jeweilige Element. Die Balkendiagramme sind farblich gekennzeichnet. Wenn der Zähler keinen Performance Schwellenwert überschreitet, wird der Zählerbalken blau angezeigt. Wenn eine Schwellenwertüberschreitung aktiv ist, also ein neues oder bestätigtes Ereignis vorliegt, wird der Balken in der Farbe des Ereignisses angezeigt: Warnereignisse werden gelb (image:../media/treemapstatus_warning_png.gif["Symbol für TreeMap – Warnstatus"]) und kritische Ereignisse rot (image:../media/treemapred_png.gif["Symbol für TreeMap - rote Farbe"]) dargestellt. Schwellenwertüberschreitungen werden zusätzlich durch Ereignisindikatorsymbole für den Schweregrad von Warnungen und kritischen Ereignissen gekennzeichnet.
+
++
+image::../media/top_10_example.gif[Ein Screenshot der Benutzeroberfläche, der die Performance-Statistiken für jedes Objekt als Zählerbalken im Diagramm darstellt.]
+
++
+In jedem Diagramm zeigt die X-Achse die Top-Performer für den ausgewählten Objekttyp an. Die Y-Achse zeigt die Einheiten an, die für den ausgewählten Zähler gelten. Ein Klick auf den Link mit dem Objektnamen unter jedem Element des vertikalen Balkendiagramms führt zur Performance Landing page für das ausgewählte Objekt.
+
+* *Ereignisanzeige für Schweregrad*
++
+Das Symbol für den *Severity Event*-Indikator wird links neben einem Objektnamen für aktive kritische (image:../media/sev_critical_um60.png["Symbol für Schweregrad, kritisch"]) oder Warnereignisse (image:../media/sev_warning_um60.png["Symbol für Schweregrad: Warnung"]) in den Top Performer-Diagrammen angezeigt. Durch Klicken auf das Symbol für den *Severity Event*-Indikator wird Folgendes angezeigt:
+
++
+** *Ein Ereignis*
++
+Navigiert zur Detailseite für dieses Ereignis.
+
+** *Zwei oder mehr Ereignisse*
++
+Navigiert zur Seite „Ereignisinventar“, die so gefiltert ist, dass alle Ereignisse für das ausgewählte Objekt angezeigt werden.
+
+
+
+* *Schaltfläche Export*
++
+Erstellt eine `.csv` Datei, die die Daten enthält, die in der Zählerleiste angezeigt werden. Sie können wählen, die Datei für den einzelnen Cluster zu erstellen, den Sie anzeigen, oder für alle Cluster im Datacenter.
+
+

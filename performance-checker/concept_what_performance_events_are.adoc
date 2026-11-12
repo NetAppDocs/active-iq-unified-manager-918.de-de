@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_what_performance_events_are.html 
+sidebar: sidebar 
+keywords: performance, events 
+summary: Performance Ereignisse sind Vorfälle im Zusammenhang mit der Workload Performance eines Clusters. Sie helfen Ihnen, Workloads mit langsamen Antwortzeiten zu identifizieren. Zusammen mit Systemstatusereignissen, die gleichzeitig aufgetreten sind, können Sie die Probleme ermitteln, die diese langsamen Antwortzeiten möglicherweise verursacht oder dazu beigetragen haben. 
+---
+= Informationen zu Leistungsereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Performance Ereignisse sind Vorfälle im Zusammenhang mit der Workload Performance eines Clusters. Sie helfen Ihnen, Workloads mit langsamen Antwortzeiten zu identifizieren. Zusammen mit Systemstatusereignissen, die gleichzeitig aufgetreten sind, können Sie die Probleme ermitteln, die diese langsamen Antwortzeiten möglicherweise verursacht oder dazu beigetragen haben.
+
+Wenn Unified Manager mehrere Vorkommen derselben Ereignisbedingung für dieselbe Clusterkomponente erkennt, betrachtet Unified Manager alle Vorkommen als ein einziges Ereignis und nicht als separate Ereignisse.

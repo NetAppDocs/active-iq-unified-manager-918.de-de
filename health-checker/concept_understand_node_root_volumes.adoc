@@ -1,0 +1,19 @@
+---
+permalink: health-checker/concept_understand_node_root_volumes.html 
+sidebar: sidebar 
+keywords: understand, node, root, volumes 
+summary: Sie können das Root-Volume des Knotens mit Unified Manager überwachen. Es empfiehlt sich, dass das Root-Volume des Knotens über ausreichend Kapazität verfügt, um einen Ausfall des Knotens zu verhindern. 
+---
+= Informationen zu Node Root Volumes in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Root-Volume des Knotens mit Unified Manager überwachen. Es empfiehlt sich, dass das Root-Volume des Knotens über ausreichend Kapazität verfügt, um einen Ausfall des Knotens zu verhindern.
+
+Wenn die genutzte Kapazität des Node-Root-Volumes 80 Prozent der gesamten Kapazität des Node-Root-Volumes überschreitet, wird das Ereignis „Node Root Volume Space Nearly Full“ generiert. Sie können eine Warnung für das Ereignis konfigurieren, um eine Benachrichtigung zu erhalten. Sie können mithilfe von ONTAP System Manager oder der ONTAP CLI geeignete Maßnahmen ergreifen, um zu verhindern, dass der Node ausfällt.
+
+
+NOTE: Die Funktionalität zur Überwachung von Knoten-Root-Volumes ist nicht verfügbar, wenn Cluster ONTAP Version 9.14.1 oder höher ausführen.

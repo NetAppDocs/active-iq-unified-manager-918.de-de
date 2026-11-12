@@ -1,0 +1,19 @@
+---
+permalink: health-checker/task_view_annotation_list_and_details.html 
+sidebar: sidebar 
+keywords: view, annotation list, details 
+summary: 'Sie können die Liste der Annotationen anzeigen, die dynamisch Clustern, Volumes und Storage Virtual Machines (SVMs) zugeordnet sind. Außerdem können Sie Details wie die Beschreibung, erstellt von, Erstellungsdatum, Werte, Regeln und die mit der Annotation verknüpften Objekte einsehen.' 
+---
+= Die Liste der Anmerkungen und Details in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Liste der Annotationen anzeigen, die dynamisch Clustern, Volumes und Storage Virtual Machines (SVMs) zugeordnet sind. Außerdem können Sie Details wie die Beschreibung, erstellt von, Erstellungsdatum, Werte, Regeln und die mit der Annotation verknüpften Objekte einsehen.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Annotations*.
+. Im Reiter *Anmerkungen* zeigt ein Klick auf den Namen der Anmerkung die zugehörigen Details an.
+

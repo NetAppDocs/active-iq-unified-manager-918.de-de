@@ -1,0 +1,56 @@
+---
+permalink: install-windows/task_uninstall_unified_manager_win.html 
+sidebar: sidebar 
+keywords: uninstall, unified manager 
+summary: Sie können Unified Manager mithilfe des Assistenten „Programme und Funktionen“ deinstallieren oder eine unbeaufsichtigte Deinstallation über die Befehlszeilenschnittstelle durchführen. 
+---
+= Deinstallation von Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:pp: &#43;&#43;
+
+
+[role="lead"]
+Sie können Unified Manager mithilfe des Assistenten „Programme und Funktionen“ deinstallieren oder eine unbeaufsichtigte Deinstallation über die Befehlszeilenschnittstelle durchführen.
+
+.Bevor Sie beginnen
+* Sie benötigen Windows-Administratorrechte.
+* Vor der Deinstallation der Software müssen alle Cluster (Datenquellen) vom Unified Manager server entfernt werden.
+* Die zum Zulassen oder Blockieren von MySQL Port 3306 erstellten Firewall-Regeln sollten manuell gelöscht werden. Die Firewall-Regeln werden nicht automatisch gelöscht.
+
+
+.Schritte
+. Die Deinstallation von Unified Manager kann über eine der folgenden Optionen erfolgen:
++
+** Wenn Sie Unified Manager über den Assistenten „Programme und Funktionen“ deinstallieren, sind folgende Schritte erforderlich:
++
+... Der Pfad lautet *Systemsteuerung* > *Programme und Funktionen*.
+... Nach der Auswahl von Active IQ Unified Manager erfolgt ein Klick auf *Deinstallieren*.
+
+
+** Wenn Sie Unified Manager über die Befehlszeile deinstallieren, sind die folgenden Schritte erforderlich:
++
+... Für die Anmeldung an der Windows-Befehlszeile sind Administratorrechte erforderlich.
+... Dann in das Verzeichnis Active IQ Unified Manager wechseln und den folgenden Befehl ausführen:
++
+`+msiexec /x {A78760DB-7EC0-4305-97DB-E4A89CDFF4E1} /qn /l*v %systemdrive%\UmUnInstall.log+`
+
++
+Wenn die Benutzerkontensteuerung (UAC) auf dem Server aktiviert ist und Sie als Domänenbenutzer angemeldet sind, müssen Sie die Deinstallationsmethode über die Befehlszeile verwenden.
+
++
+Unified Manager wurde von Ihrem System deinstalliert.
+
+
+
+
+
+. Die folgenden Drittanbieterpakete und -daten, die bei der Deinstallation von Unified Manager nicht entfernt werden, sind zu deinstallieren:
++
+** Drittanbieterpakete: JRE, MySQL, Microsoft Visual C&#43;&#43; 2015 Redistributable, Python und 7zip
+** Von Unified Manager generierte MySQL Applikationsdaten
+** Anwendungsprotokolle und Inhalte des Applikationsdatenverzeichnisses
+
+
+

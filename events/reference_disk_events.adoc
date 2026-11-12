@@ -1,0 +1,67 @@
+---
+permalink: events/reference_disk_events.html 
+sidebar: sidebar 
+keywords: disks, events, impact area, availability 
+summary: Datenträgerereignisse liefern Ihnen Informationen über den Status der Datenträger, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungs-Level, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Datenträgerereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Datenträgerereignisse liefern Ihnen Informationen über den Status der Datenträger, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungs-Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Flash Disks - Reserveblöcke fast vollständig verbraucht(ocumEvtClusterFlashDiskFewerSpareBlockError)
+ a| 
+Risiko
+ a| 
+Cluster
+ a| 
+Fehler
+
+
+
+ a| 
+Flash Disks - Keine Ersatzblöcke(ocumEvtClusterFlashDiskNoSpareBlockCritical)
+ a| 
+Vorfall
+ a| 
+Cluster
+ a| 
+Kritisch
+
+
+
+ a| 
+Einige nicht zugewiesene Datenträger(ocumEvtClusterUnassignedDisksSome)
+ a| 
+Risiko
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Einige ausgefallene Festplatten(ocumEvtDisksSomeFailed)
+ a| 
+Vorfall
+ a| 
+Cluster
+ a| 
+Kritisch
+
+|===

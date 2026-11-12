@@ -1,0 +1,16 @@
+---
+permalink: storage-mgmt/concept_understand_user_interface.html 
+sidebar: sidebar 
+keywords: understand, user, interface 
+summary: Die Benutzeroberfläche von Unified Manager besteht hauptsächlich aus einem Dashboard, das einen schnellen Überblick über die überwachten Objekte bietet. Die Benutzeroberfläche bietet außerdem Zugriff auf die Ansicht aller Clusterobjekte. 
+---
+= Informationen zur Active IQ Unified Manager Benutzeroberfläche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Benutzeroberfläche von Unified Manager besteht hauptsächlich aus einem Dashboard, das einen schnellen Überblick über die überwachten Objekte bietet. Die Benutzeroberfläche bietet außerdem Zugriff auf die Ansicht aller Clusterobjekte.
+
+Sie können eine bevorzugte Ansicht auswählen und die Aktionsschaltflächen nach Bedarf verwenden. Ihre Bildschirmkonfiguration wird in einem Arbeitsbereich gespeichert, sodass alle benötigten Funktionen beim Start von Unified Manager verfügbar sind. Wenn Sie jedoch zwischen verschiedenen Ansichten wechseln und anschließend wieder zurückkehren, kann die Ansicht abweichen.

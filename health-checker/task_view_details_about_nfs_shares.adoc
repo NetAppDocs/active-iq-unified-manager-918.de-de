@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_view_details_about_nfs_shares.html 
+sidebar: sidebar 
+keywords: view, details, nfs shares 
+summary: Auf der Seite „Integrität“ werden in der Ansicht „Alle NFS-Freigaben“ Details zu NFS-Freigaben angezeigt, z. B. Status, Volume-Pfad, Client-Zugriffsebenen und Exportrichtlinie. 
+---
+= Details zu NFS-Freigaben in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Details zu allen NFS-Freigaben anzeigen, z. B. ihren Status, den dem Volume zugeordneten Pfad (FlexGroup Volumes oder FlexVol Volumes), die Zugriffsebenen von Clients auf die NFS-Freigaben und die für die exportierten Volumes definierte Exportrichtlinie. In der Ansicht „Systemstatus: Alle NFS-Freigaben“ werden alle NFS-Freigaben auf allen überwachten Clustern angezeigt, und auf der Seite „Storage VM / Systemstatusdetails“ werden alle NFS-Freigaben auf einer bestimmten Storage Virtual Machine (SVM) angezeigt.
+
+.Bevor Sie beginnen
+* Die NFS-Lizenz muss auf dem Cluster aktiviert sein.
+* Die Netzwerkschnittstellen für die NFS-Freigaben müssen konfiguriert sein.
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+
+.Schritt
+. Im linken Navigationsbereich hängen die folgenden Schritte davon ab, ob alle NFS-Freigaben oder nur die NFS-Freigaben für eine bestimmte SVM angezeigt werden sollen.
++
+[cols="2*"]
+|===
+| Zu... | Folgen Sie diesen Schritten... 
+
+
+ a| 
+Anzeige aller NFS-Freigaben
+ a| 
+Unter *Storage* > *NFS Shares*
+
+
+
+ a| 
+NFS-Freigaben für einzelne SVM anzeigen
+ a| 
+.. *Storage* > *Storage VMs* auswählen
+.. Auswahl der SVM, für die die NFS-Freigabedetails angezeigt werden sollen.
+.. Auf der Seite „Storage VM / Systemstatusdetails“ wählen Sie die Registerkarte *NFS-Freigaben* aus.
+
+
+|===
+
+
+Weitere Informationen finden Sie unter link:../storage-mgmt/task_provision_fileshares.html["Provisionierung von Dateifreigabe-Volumes"] und link:../api-automation/concept_provision_file_share.html["Provisionierung von CIFS- und NFS-Dateifreigaben mithilfe von APIs"].

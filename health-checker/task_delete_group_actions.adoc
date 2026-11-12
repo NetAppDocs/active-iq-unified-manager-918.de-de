@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_delete_group_actions.html 
+sidebar: sidebar 
+keywords: delete, group actions 
+summary: Sie können eine Gruppenaktion in Unified Manager löschen, wenn sie nicht mehr benötigt wird. 
+---
+= Gruppenaktionen in Active IQ Unified Manager löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Gruppenaktion in Unified Manager löschen, wenn sie nicht mehr benötigt wird.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Wenn Sie die Gruppenaktion für den Volume Systemstatusschwellenwert löschen, werden globale Schwellenwerte auf die Storage Objekte in dieser Gruppe angewendet. Objektbezogene Systemstatusschwellenwerte, die für das Storage Objekt festgelegt sind, bleiben davon unberührt.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage Management* > *Gruppen*.
+. Auf der Registerkarte *Gruppenaktionen* ist die Gruppenaktion auszuwählen, die gelöscht werden soll, und anschließend *Löschen*.
+. Die Bestätigung der Löschung erfolgt im Dialogfeld *Warning* durch Klicken auf *Yes*.
+

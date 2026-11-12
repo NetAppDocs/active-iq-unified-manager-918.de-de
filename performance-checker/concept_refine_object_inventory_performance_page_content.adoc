@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_refine_object_inventory_performance_page_content.html 
+sidebar: sidebar 
+keywords: refining, performance, inventory, page, contents 
+summary: Die Inventarseiten für Performance Objekte enthalten Werkzeuge, mit denen Sie den Inhalt der Objektinventardaten verfeinern können, sodass sich bestimmte Daten schnell und einfach finden lassen. 
+---
+= Verfeinerung des Inhalts der Leistungsinventarseite in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Inventarseiten für Performance Objekte enthalten Werkzeuge, mit denen Sie den Inhalt der Objektinventardaten verfeinern können, sodass sich bestimmte Daten schnell und einfach finden lassen.
+
+Die auf den Inventarseiten für Performance-Objekte enthaltenen Informationen können sehr umfangreich sein und sich oft über mehrere Seiten erstrecken. Diese umfassenden Daten eignen sich hervorragend zur Überwachung, Nachverfolgung und Verbesserung der Performance; zum schnellen Auffinden bestimmter Daten sind jedoch Werkzeuge erforderlich, mit denen sich die gesuchten Daten rasch lokalisieren lassen. Daher enthalten die Inventarseiten für Performance-Objekte Funktionen zum Suchen, Sortieren und Filtern. Außerdem können Suche und Filterung zusammen verwendet werden, um die Ergebnisse weiter einzugrenzen.

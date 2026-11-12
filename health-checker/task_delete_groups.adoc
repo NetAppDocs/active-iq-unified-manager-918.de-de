@@ -1,0 +1,28 @@
+---
+permalink: health-checker/task_delete_groups.html 
+sidebar: sidebar 
+keywords: delete, groups 
+summary: Sie können eine Gruppe aus Unified Manager löschen, wenn die Gruppe nicht mehr erforderlich ist. 
+---
+= Gruppen in Active IQ Unified Manager löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Gruppe aus Unified Manager löschen, wenn die Gruppe nicht mehr erforderlich ist.
+
+.Bevor Sie beginnen
+* Keines der Storage-Objekte (Cluster, SVMs oder Volumes) darf einer Gruppenregel zugeordnet sein, die mit der Gruppe verknüpft ist, die Sie löschen möchten.
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage Management* > *Gruppen*.
+. Im Reiter *Gruppen* erfolgt die Auswahl der Gruppe, die gelöscht werden soll; anschließend erfolgt ein Klick auf *Löschen*.
+. Die Bestätigung der Löschung erfolgt im Dialogfeld *Warning* durch Klicken auf *Yes*.
++
+Das Löschen einer Gruppe löscht nicht die mit der Gruppe verknüpften Gruppenaktionen. Diese Gruppenaktionen werden jedoch nach dem Löschen der Gruppe nicht mehr zugeordnet.
+
+

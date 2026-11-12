@@ -1,0 +1,24 @@
+---
+permalink: events/task_configure_event_retention_settings.html 
+sidebar: sidebar 
+keywords: configure, event, retention, settings 
+summary: Sie können die Anzahl der Monate festlegen, für die ein Ereignis auf dem Unified Manager Server aufbewahrt wird, bevor es automatisch gelöscht wird. 
+---
+= Konfiguration der Einstellungen zur Ereignisaufbewahrung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Anzahl der Monate festlegen, für die ein Ereignis auf dem Unified Manager Server aufbewahrt wird, bevor es automatisch gelöscht wird.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Das Speichern von Ereignissen über einen Zeitraum von mehr als 6 Monaten hinaus kann die Server Performance beeinträchtigen und wird daher nicht empfohlen.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *General* > *Data Retention*.
+. Auf der Seite *Datenaufbewahrung* den Schieberegler im Bereich Ereignisaufbewahrung auf die Anzahl der Monate einstellen, für die Ereignisse aufbewahrt werden sollen, und anschließend auf *Speichern* klicken.
+

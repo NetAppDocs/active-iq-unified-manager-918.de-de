@@ -1,0 +1,38 @@
+---
+permalink: health-checker/task_configure_global_aggregate_health_threshold_values.html 
+sidebar: sidebar 
+keywords: configure, global, aggregate, health, threshold values 
+summary: Sie können globale Systemstatus-Schwellenwerte für alle Aggregate konfigurieren, um jede Schwellenwertverletzung zu überwachen. Bei Schwellenwertverletzungen werden entsprechende Ereignisse generiert, auf deren Grundlage Präventivmaßnahmen möglich sind. Die globalen Werte lassen sich anhand bewährter Einstellungen für Schwellenwerte konfigurieren, die für alle überwachten Aggregate gelten. 
+---
+= Konfiguration globaler Integritätsschwellenwerte für Aggregate in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können globale Systemstatus-Schwellenwerte für alle Aggregate konfigurieren, um jede Schwellenwertverletzung zu überwachen. Bei Schwellenwertverletzungen werden entsprechende Ereignisse generiert, auf deren Grundlage Präventivmaßnahmen möglich sind. Die globalen Werte lassen sich anhand bewährter Einstellungen für Schwellenwerte konfigurieren, die für alle überwachten Aggregate gelten.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Wenn Sie die Optionen global konfigurieren, werden die Standardwerte der Objekte geändert. Wenn die Standardwerte jedoch auf Objektebene geändert wurden, bleiben die globalen Werte unverändert.
+
+Die Schwellenwertoptionen haben Standardwerte für eine bessere Überwachung, Sie können die Werte jedoch an die Anforderungen Ihrer Umgebung anpassen.
+
+Wenn Autogrow auf Volumes aktiviert ist, die sich auf dem Aggregat befinden, gelten die Kapazitätsschwellenwerte des Aggregats anhand der von Autogrow festgelegten maximalen Volume-Größe als überschritten und nicht anhand der ursprünglichen Volume-Größe.
+
+[NOTE]
+====
+Die Systemstatus-Schwellenwerte gelten nicht für das Root-Aggregat des Knotens.
+
+====
+.Schritte
+. Im linken Navigationsbereich ist *Ereignisschwellenwerte* > *Aggregat* auszuwählen.
+. Konfiguration der entsprechenden Schwellenwerte für Kapazität, Wachstum und Snapshot-Kopien.
+. Auf *Speichern* klicken.
+
+
+*Verwandte Informationen*
+
+link:../config/task_add_users.html["Hinzufügen von Benutzern"]

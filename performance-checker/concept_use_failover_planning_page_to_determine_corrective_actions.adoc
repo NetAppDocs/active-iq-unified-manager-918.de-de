@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_use_failover_planning_page_to_determine_corrective_actions.html 
+sidebar: sidebar 
+keywords: node, failover, planning page, determine, corrective, actions 
+summary: Anhand der Informationen, die auf der Seite „Performance/Node Failover Planning“ angezeigt werden, können Sie Maßnahmen ergreifen, um sicherzustellen, dass ein Failover nicht dazu führt, dass die Performance eines HA-Paares unter ein akzeptables Level sinkt. 
+---
+= Die Korrekturmaßnahmen werden auf der Seite „Leistung/Knoten-Failover-Planung“ in Active IQ Unified Manager ermittelt.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anhand der Informationen, die auf der Seite „Performance/Node Failover Planning“ angezeigt werden, können Sie Maßnahmen ergreifen, um sicherzustellen, dass ein Failover nicht dazu führt, dass die Performance eines HA-Paares unter ein akzeptables Level sinkt.
+
+Um beispielsweise die geschätzten Performance-Einbußen bei einem Failover zu verringern, können Sie einige Volumes oder LUNs von einem Knoten im HA-Paar auf andere Knoten im Cluster verschieben. Dadurch wird sichergestellt, dass der primäre Knoten nach einem Failover weiterhin eine akzeptable Performance liefern kann.

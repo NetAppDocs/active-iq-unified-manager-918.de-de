@@ -1,0 +1,28 @@
+---
+permalink: health-checker/reference_description_of_predefined_annotation_values.html 
+sidebar: sidebar 
+keywords: description, predefined, annotation values 
+summary: Data-priority ist eine vordefinierte Annotation mit den Werten Mission critical, High und Low. Diese Werte ermöglichen es Ihnen, Storage Objekte auf der Grundlage der Priorität der darin enthaltenen Daten mit Annotationen zu versehen. Die vordefinierten Annotationswerte können nicht bearbeitet oder gelöscht werden. 
+---
+= Vordefinierte Annotationswerte in Active IQ Unified Manager verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die *Datenpriorität* ist eine vordefinierte Annotation mit den Werten „geschäftskritisch“, „Hoch“ und „Niedrig“. Mit diesen Werten lassen sich Storage Objekte anhand der Priorität der darin enthaltenen Daten annotieren. Die vordefinierten Annotationswerte können nicht bearbeitet oder gelöscht werden.
+
+* *Datenpriorität:Geschäftskritisch*
++
+Diese Annotation wird auf Storage Objekte angewendet, die geschäftskritische Daten enthalten. Beispielsweise können Objekte, die Produktionsanwendungen enthalten, als geschäftskritisch eingestuft werden.
+
+* *Datenpriorität:Hoch*
++
+Diese Annotation gilt für Storage-Objekte, die Daten mit hoher Priorität enthalten. Beispielsweise können Objekte, die Geschäftsanwendungen hosten, als Objekte mit hoher Priorität eingestuft werden.
+
+* *Datenpriorität:Niedrig*
++
+Diese Annotation wird auf Storage-Objekte angewendet, die Daten mit niedriger Priorität enthalten. Beispielsweise können Objekte auf Sekundär-Storage, wie etwa Sicherungs- und Spiegelungsziele, eine niedrige Priorität haben.
+
+

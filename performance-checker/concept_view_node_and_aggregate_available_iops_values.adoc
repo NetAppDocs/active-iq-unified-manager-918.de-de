@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/concept_view_node_and_aggregate_available_iops_values.html 
+sidebar: sidebar 
+keywords: view, node, aggregate, available, iops, values 
+summary: Sie können die verfügbaren IOPS-Werte für alle Knoten oder für alle Aggregate in einem Cluster überwachen oder Details für einen einzelnen Knoten oder ein einzelnes Aggregat anzeigen. 
+---
+= Verfügbare IOPS-Werte für Knoten und Aggregate in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die verfügbaren IOPS-Werte für alle Knoten oder für alle Aggregate in einem Cluster überwachen oder Details für einen einzelnen Knoten oder ein einzelnes Aggregat anzeigen.
+
+Werte für verfügbare IOPS werden auf den Performance Inventory-Seiten und in den Diagrammen der Performance Explorer-Seite für Nodes und Aggregate angezeigt. Wenn Sie beispielsweise einen Node auf der Seite „Node/Performance Explorer“ anzeigen, können Sie das Zählerdiagramm „`Available IOPS`“ aus der Liste auswählen, um die verfügbaren IOPS-Werte für den Node und mehrere Aggregate auf diesem Node zu vergleichen.
+
+image::../media/available_iops_zoom.gif[Ein Screenshot der Benutzeroberfläche, der zeigt, wie Sie einen Knoten auf der Seite „Node/Performance Explorer“ anzeigen und „Available IOPS“ aus der Liste auswählen können.]
+
+Die Überwachung des verfügbaren IOPS-Zählers ermöglicht Ihnen Folgendes:
+
+* Die Knoten oder Aggregate mit den höchsten verfügbaren IOPS-Werten helfen dabei, zu bestimmen, wo zukünftige Workloads eingesetzt werden können.
+* Die Knoten oder Aggregate mit den niedrigsten verfügbaren IOPS-Werten dienen zur Identifizierung der Ressourcen, die im Hinblick auf potenzielle zukünftige Performanceprobleme überwacht werden sollten.
+* Die am stärksten ausgelasteten Volumes und LUNs eines Aggregats mit einem geringen verfügbaren IOPS-Wert.
+

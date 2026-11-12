@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_analyze_performance_events.html 
+sidebar: sidebar 
+keywords: analyze, performance, events 
+summary: 'Sie können Performance-Ereignisse analysieren, um festzustellen, wann sie erkannt wurden, ob sie aktiv (neu oder bestätigt) oder veraltet sind, welche Workloads und Clusterkomponenten beteiligt sind und welche Möglichkeiten zur eigenständigen Behebung der Ereignisse bestehen.' 
+---
+= Analyse von Leistungsereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Performance-Ereignisse analysieren, um festzustellen, wann sie erkannt wurden, ob sie aktiv (neu oder bestätigt) oder veraltet sind, welche Workloads und Clusterkomponenten beteiligt sind und welche Möglichkeiten zur eigenständigen Behebung der Ereignisse bestehen.

@@ -1,0 +1,24 @@
+---
+permalink: health-checker/task_view_how_user_authentication_is_being_managed_on_all_clusters.html 
+sidebar: sidebar 
+keywords: view, cluster authentication status, user authentication, manage, clusters 
+summary: Die Sicherheitsseite zeigt die Arten der Authentifizierung an, die zur Benutzerauthentifizierung auf jedem Cluster verwendet werden, sowie die Anzahl der Benutzer, die mit der jeweiligen Art auf den Cluster zugreifen. Damit lässt sich überprüfen, ob die Benutzerauthentifizierung gemäß den Vorgaben Ihres Unternehmens sicher durchgeführt wird. 
+---
+= Anzeige, wie Cluster die Benutzerauthentifizierung auf allen Clustern in Active IQ Unified Manager verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Sicherheitsseite zeigt die Arten der Authentifizierung an, die zur Benutzerauthentifizierung auf jedem Cluster verwendet werden, sowie die Anzahl der Benutzer, die mit der jeweiligen Art auf den Cluster zugreifen. Damit lässt sich überprüfen, ob die Benutzerauthentifizierung gemäß den Vorgaben Ihres Unternehmens sicher durchgeführt wird.
+
+.Schritte
+. Im linken Navigationsbereich auf *Dashboard* klicken.
+. Oben im Dashboard erfolgt die Auswahl *Alle Cluster* über das Dropdown-Menü.
+. Im Bereich *Sicherheit* führt ein Klick auf den Pfeil nach rechts zur Seite *Sicherheit*.
+. Auf der Karte *Cluster-Authentifizierung* ist die Anzahl der Benutzer zu sehen, die mit dem jeweiligen Authentifizierungstyp auf das System zugreifen.
+. Auf der Karte *Cluster Security* sehen Sie, welche Authentifizierungsmechanismen zur Authentifizierung von Benutzern auf den einzelnen Clustern verwendet werden.
+
+
+Wenn einige Benutzer mit einer unsicheren Methode oder mit einer Methode, die von NetApp nicht empfohlen wird, auf das System zugreifen, können Sie diese Methode deaktivieren.

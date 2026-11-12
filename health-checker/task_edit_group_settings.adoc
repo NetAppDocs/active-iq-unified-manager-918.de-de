@@ -1,0 +1,26 @@
+---
+permalink: health-checker/task_edit_group_settings.html 
+sidebar: sidebar 
+keywords: edit, groups 
+summary: Sie können den Namen und die Beschreibung einer Gruppe bearbeiten, die Sie im Unified Manager erstellt haben. 
+---
+= Gruppen in Active IQ Unified Manager bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Namen und die Beschreibung einer Gruppe bearbeiten, die Sie im Unified Manager erstellt haben.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Wenn Sie eine Gruppe bearbeiten, um den Namen zu aktualisieren, müssen Sie einen eindeutigen Namen angeben; Sie können keinen bereits vorhandenen Gruppennamen verwenden.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage Management* > *Gruppen*.
+. Im Reiter *Gruppen* können Sie die Gruppe auswählen, die Sie bearbeiten möchten, und anschließend auf *Bearbeiten* klicken.
+. Im Dialogfeld *Gruppe bearbeiten* können Sie den Namen, die Beschreibung oder beides für die Gruppe ändern.
+. Auf *Speichern* klicken.
+

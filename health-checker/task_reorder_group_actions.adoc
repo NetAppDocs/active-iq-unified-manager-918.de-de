@@ -1,0 +1,26 @@
+---
+permalink: health-checker/task_reorder_group_actions.html 
+sidebar: sidebar 
+keywords: reorder, group actions 
+summary: Sie können die Reihenfolge der Gruppenaktionen ändern, die auf die Storage-Objekte in einer Gruppe angewendet werden sollen. Gruppenaktionen werden basierend auf ihrem Rang nacheinander auf Storage-Objekte angewendet. Der niedrigste Rang wird der Gruppenaktion zugewiesen, die Sie zuletzt konfiguriert haben. Sie können den Rang der Gruppenaktion entsprechend Ihren Anforderungen ändern. 
+---
+= Neuanordnung von Gruppenaktionen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Reihenfolge der Gruppenaktionen ändern, die auf die Storage-Objekte in einer Gruppe angewendet werden sollen. Gruppenaktionen werden basierend auf ihrem Rang nacheinander auf Storage-Objekte angewendet. Der niedrigste Rang wird der Gruppenaktion zugewiesen, die Sie zuletzt konfiguriert haben. Sie können den Rang der Gruppenaktion entsprechend Ihren Anforderungen ändern.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Sie können entweder eine einzelne Zeile oder mehrere Zeilen auswählen und anschließend mehrere Drag-and-Drop-Vorgänge ausführen, um die Rangfolge der Gruppenaktionen zu ändern. Die Änderungen müssen jedoch gespeichert werden, damit sich die Neupriorisierung im Raster der Gruppenaktionen widerspiegelt.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage Management* > *Gruppen*.
+. Auf der Registerkarte *Gruppenaktionen* auf *Neu anordnen* klicken.
+. Im Dialogfeld *Gruppenaktionen neu anordnen* können Sie die Zeilen per Drag & Drop verschieben, um die Reihenfolge der Gruppenaktionen nach Bedarf neu zu ordnen.
+. Auf *Speichern* klicken.
+

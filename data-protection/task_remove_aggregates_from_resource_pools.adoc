@@ -1,0 +1,39 @@
+---
+permalink: data-protection/task_remove_aggregates_from_resource_pools.html 
+sidebar: sidebar 
+keywords: remove, aggregates, resource pools 
+summary: Aggregate können aus einem bestehenden Ressourcenpool entfernt werden, beispielsweise wenn Sie ein Aggregat für einen anderen Zweck verwenden möchten. 
+---
+= Aggregate aus Ressourcenpools in Active IQ Unified Manager entfernen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Aggregate aus einem bestehenden Ressourcenpool entfernen, beispielsweise wenn Sie ein Aggregat für einen anderen Zweck verwenden möchten.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Die Mitglieder eines Ressourcenpools werden nur angezeigt, wenn ein Ressourcenpool ausgewählt ist.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Protection* > *Resource Pools*.
+. Sie wählen den Ressourcenpool aus, aus dem Sie Mitgliedsaggregate entfernen möchten.
++
+Die Liste der Mitgliedsaggregate wird im Bereich „Mitglieder“ angezeigt.
+
+. Ein oder mehrere Aggregate auswählen.
++
+Die Schaltfläche *Entfernen* ist aktiviert.
+
+. *Entfernen* auswählen.
++
+Ein Warndialogfeld wird angezeigt.
+
+. Klicken Sie auf *Yes*, um fortzufahren.
++
+Die ausgewählten Aggregate werden aus dem Bereich „Mitglieder“ entfernt.
+
+

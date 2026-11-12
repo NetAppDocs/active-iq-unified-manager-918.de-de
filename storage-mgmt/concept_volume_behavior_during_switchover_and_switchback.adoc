@@ -1,0 +1,56 @@
+---
+permalink: storage-mgmt/concept_volume_behavior_during_switchover_and_switchback.html 
+sidebar: sidebar 
+keywords: volume, behavior, switchover, switchback 
+summary: Ereignisse, die einen Switchover oder Switchback auslösen, bewirken, dass aktive Volumes in der Disaster-Recovery-Gruppe von einem Cluster auf den anderen Cluster verschoben werden. Die Volumes auf dem Cluster, die aktiv waren und Daten an Clients bereitstellten, werden gestoppt, und die Volumes auf dem anderen Cluster werden aktiviert und beginnen mit der Datenbereitstellung. Unified Manager überwacht nur die Volumes, die aktiv sind und ausgeführt werden. 
+---
+= Informationen zum Volume Verhalten bei Umschaltung und Rückschaltung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse, die einen Switchover oder Switchback auslösen, bewirken, dass aktive Volumes in der Disaster-Recovery-Gruppe von einem Cluster auf den anderen Cluster verschoben werden. Die Volumes auf dem Cluster, die aktiv waren und Daten an Clients bereitstellten, werden gestoppt, und die Volumes auf dem anderen Cluster werden aktiviert und beginnen mit der Datenbereitstellung. Unified Manager überwacht nur die Volumes, die aktiv sind und ausgeführt werden.
+
+Da Volumes von einem Cluster in einen anderen verschoben werden, wird empfohlen, beide Cluster zu überwachen. Eine einzelne Instanz von Unified Manager kann in einer MetroCluster Konfiguration beide Cluster überwachen. Aufgrund der Entfernung zwischen den beiden Standorten ist es jedoch manchmal erforderlich, zwei Unified Manager Instanzen zur Überwachung beider Cluster einzusetzen. Die folgende Abbildung zeigt eine einzelne Instanz von Unified Manager:
+
+image::../media/opm_mcc_switchover.gif[Ein Screenshot der Benutzeroberfläche, der eine einzelne Instanz von Unified Manager zeigt.]
+
+Die Volumes mit einem „p“ im Namen kennzeichnen die primären Volumes, und die Volumes mit einem „b“ im Namen sind gespiegelte Backup-Volumes, die von SnapMirror erstellt werden.
+
+Im Normalbetrieb:
+
+* Cluster A verfügt über zwei aktive Volumes: Vol1p und Vol2p.
+* Cluster B verfügt über zwei aktive Volumes: Vol3p und Vol4p.
+* Cluster A hat zwei inaktive Volumes: Vol3b und Vol4b.
+* Cluster B verfügt über zwei inaktive Volumes: Vol1b und Vol2b.
+
+
+Informationen zu jedem der aktiven Volumes (Statistiken, Ereignisse usw.) werden von Unified Manager erfasst. Die Statistiken für Vol1p und Vol2p werden von Cluster A erfasst, und die Statistiken für Vol3p und Vol4p werden von Cluster B erfasst.
+
+Nachdem ein katastrophaler Ausfall eine Umschaltung aktiver Volumes von Cluster B auf Cluster A verursacht hat:
+
+* Cluster A verfügt über vier aktive Volumes: Vol1p, Vol2p, Vol3b und Vol4b.
+* Cluster B verfügt über vier inaktive Volumes: Vol3p, Vol4p, Vol1b und Vol2b.
+
+
+Wie im Normalbetrieb werden Informationen zu jedem aktiven Volume von Unified Manager erfasst. In diesem Fall werden die Statistiken für Vol1p und Vol2p jedoch von Cluster A erfasst, ebenso wie die Statistiken für Vol3b und Vol4b.
+
+Vol3p und Vol3b sind nicht dieselben Volumes, da sie sich auf unterschiedlichen Clustern befinden. Die Informationen in Unified Manager für Vol3p sind nicht dieselben wie für Vol3b:
+
+* Während des Wechsels zu Cluster A sind Vol3p Statistiken und Ereignisse nicht sichtbar.
+* Beim ersten Switchover erscheint Vol3b wie ein neues Volume ohne jegliche historischen Informationen.
+
+
+Nach der Reparatur von Cluster B und der Durchführung eines Switchbacks ist Vol3p auf Cluster B wieder aktiv, mit den historischen Statistiken und einer Lücke in den Statistiken für den Zeitraum während des Switchovers. Vol3b ist von Cluster A aus erst nach einem weiteren Switchover sichtbar:
+
+image::../media/opm_mcc_volumes.gif[Ein Screenshot der Benutzeroberfläche, der das Verhalten von Volumes während des Umschaltens zeigt.]
+
+[NOTE]
+====
+* MetroCluster Volumes, die inaktiv sind, beispielsweise Vol3b auf Cluster A nach Switchback, werden mit der Meldung "`This volume was deleted`" gekennzeichnet. Das Volume ist nicht tatsächlich gelöscht, wird aber derzeit nicht von Unified Manager überwacht, da es nicht das aktive Volume ist.
+* Wenn ein einzelner Unified Manager beide Cluster in einer MetroCluster Konfiguration überwacht, liefert die Volume-Suche Informationen für das jeweils aktive Volume. Beispielsweise würde eine Suche nach „Vol3“ Statistiken und Ereignisse für Vol3b auf Cluster A liefern, falls ein Switchover stattgefunden hat und Vol3 auf Cluster A aktiv geworden ist.
+
+
+====

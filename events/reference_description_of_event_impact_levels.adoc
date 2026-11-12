@@ -1,0 +1,32 @@
+---
+permalink: events/reference_description_of_event_impact_levels.html 
+sidebar: sidebar 
+keywords: description, event, impact, levels 
+summary: 'Jedem Ereignis ist ein Auswirkungslevel (Incident, Risiko, Ereignis oder Upgrade) zugeordnet, damit Sie die Ereignisse priorisieren können, die eine sofortige Korrekturmaßnahme erfordern.' 
+---
+= Informationen zu den Auswirkungsstufen von Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jedem Ereignis ist ein Auswirkungslevel (Incident, Risiko, Ereignis oder Upgrade) zugeordnet, damit Sie die Ereignisse priorisieren können, die eine sofortige Korrekturmaßnahme erfordern.
+
+* *Incident*
++
+Ein Incident ist eine Reihe von Ereignissen, die dazu führen können, dass ein Cluster keine Daten mehr an den Client bereitstellt und nicht mehr genügend Speicherplatz zum Speichern von Daten verfügbar ist. Ereignisse mit einer Auswirkungsstufe vom Level Incident sind am schwerwiegendsten. Um eine Dienstunterbrechung zu vermeiden, sollten umgehend Korrekturmaßnahmen ergriffen werden.
+
+* *Risiko*
++
+Ein Risiko ist eine Reihe von Ereignissen, die potenziell dazu führen können, dass ein Cluster keine Daten mehr an den Client bereitstellt und der Speicherplatz zum Speichern von Daten knapp wird. Ereignisse mit einer Auswirkungsstufe von Risiko können zu Dienstunterbrechungen führen. Gegebenenfalls sind Korrekturmaßnahmen erforderlich.
+
+* *Ereignis*
++
+Ein Ereignis ist eine Zustands- oder Statusänderung von Storage Objekten und ihren Attributen. Ereignisse mit einem Auswirkungs-Level von Event dienen der Information und erfordern keine Korrekturmaßnahme.
+
+* *Upgrade*
++
+Upgrade-Ereignisse sind eine spezielle Art von Ereignissen, die von der Active IQ-Plattform gemeldet werden. Diese Ereignisse kennzeichnen Probleme, deren Behebung ein Upgrade der ONTAP Software, der Node-Firmware oder der Betriebssystemsoftware (aufgrund von Sicherheitshinweisen) erfordert. Bei einigen dieser Probleme ist möglicherweise eine sofortige Korrekturmaßnahme erforderlich, während andere bis zur nächsten planmäßigen Wartung warten können.
+
+

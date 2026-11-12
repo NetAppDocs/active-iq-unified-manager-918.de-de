@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_from_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, performance, cluster, landing, page 
+summary: Die Landingpage des Performance Clusters zeigt den allgemeinen Performance-Status eines ausgewählten Clusters an, das von einer Unified Manager Instanz überwacht wird. Diese Seite ermöglicht es Ihnen, die Gesamt-Performance eines bestimmten Clusters zu beurteilen und erkannte clusterspezifische Ereignisse schnell zu erfassen, zu lokalisieren oder zur Behebung zuzuweisen. 
+---
+= Die Clusterleistung kann auf der Seite „Performance Cluster Landing“ in Active IQ Unified Manager überwacht werden.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Landingpage des Performance Clusters zeigt den allgemeinen Performance-Status eines ausgewählten Clusters an, das von einer Unified Manager Instanz überwacht wird. Diese Seite ermöglicht es Ihnen, die Gesamt-Performance eines bestimmten Clusters zu beurteilen und erkannte clusterspezifische Ereignisse schnell zu erfassen, zu lokalisieren oder zur Behebung zuzuweisen.

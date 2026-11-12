@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_manage_performance_thresholds.html 
+sidebar: sidebar 
+keywords: manage, performance, thresholds 
+summary: Performance-Schwellenwertrichtlinien ermöglichen es, den Punkt festzulegen, an dem Unified Manager ein Ereignis generiert, um Systemadministratoren über Probleme zu informieren, die sich auf die Workload-Performance auswirken könnten. Diese Schwellenwertrichtlinien werden als benutzerdefinierte Performance-Schwellenwerte bezeichnet. 
+---
+= Verwalten von Leistungsschwellenwerten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Performance-Schwellenwertrichtlinien ermöglichen es Ihnen, den Punkt zu bestimmen, an dem Unified Manager ein Ereignis generiert, um Systemadministratoren über Probleme zu informieren, die sich auf die Workload-Performance auswirken könnten. Diese Schwellenwertrichtlinien sind als _benutzerdefinierte_ Performance-Schwellenwerte bekannt.
+
+Diese Version unterstützt benutzerdefinierte, systemdefinierte und dynamische Performance Schwellenwerte. Bei dynamischen und systemdefinierten Performance Schwellenwerten analysiert Unified Manager die Workload Aktivität, um den geeigneten Schwellenwert zu ermitteln. Mit benutzerdefinierten Schwellenwerten können Sie die oberen Performance Grenzwerte für viele Performance Zähler und für viele Storage Objekte festlegen.
+
+[NOTE]
+====
+Systemdefinierte Performance-Schwellenwerte und dynamische Performance-Schwellenwerte werden von Unified Manager festgelegt und sind nicht konfigurierbar. Falls Sie unnötige Ereignisse von systemdefinierten Performance-Schwellenwertrichtlinien erhalten, können einzelne Richtlinien auf der Seite „Ereigniseinstellungen“ deaktiviert werden.
+
+====

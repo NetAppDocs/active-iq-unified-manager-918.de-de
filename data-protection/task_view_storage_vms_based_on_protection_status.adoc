@@ -1,0 +1,62 @@
+---
+permalink: data-protection/task_view_storage_vms_based_on_protection_status.html 
+sidebar: sidebar 
+keywords: storage vm, view protection status 
+summary: Auf der Seite „Storage VMs“ des Inventars können Sie alle Storage VMs in Active IQ Unified Manager anzeigen und die Storage VMs anhand ihres Schutzstatus filtern. 
+---
+= Speicher-VMs basierend auf dem Schutzstatus in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Storage VMs“ des Inventars können Sie alle Storage VMs in Active IQ Unified Manager anzeigen und die Storage VMs anhand ihres Schutzstatus filtern.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Der Ansicht „Storage VMs“ wurde eine neue Spalte „Schutzrolle“ hinzugefügt, die Informationen dazu enthält, ob die Storage VM geschützt oder ungeschützt ist.
+
+[NOTE]
+====
+Wenn in Active IQ Unified Manager kein Quell-Cluster hinzugefügt wurde, sind in den Rastern alle Informationen zu diesem Cluster nicht verfügbar.
+
+====
+.Schritte
+. Im linken Navigationsbereich auf *STORAGE* > *Storage VMs* klicken.
+. Im Menü *VIEW* ist *Health* > *All Storage VMs* auszuwählen.
++
+Integrität: Alle Storage VMs wird angezeigt.
+
+. Mit *Filter* lässt sich eine der folgenden Storage VMs anzeigen.
++
+[cols="2*"]
+|===
+| Zum Anzeigen | Filterwert 
+
+
+ a| 
+*Geschützte Storage VMs*
+ a| 
+Die *Schutzrolle* ist *geschützt*
+
+
+
+ a| 
+*Ungeschützte Storage VMs*
+ a| 
+Die *Schutzrolle* ist *ungeschützt*
+
+|===
++
+[NOTE]
+====
+Es ist nicht möglich, die geschützten und ungeschützten Storage VMs gleichzeitig anzuzeigen. Zum erneuten Anwenden einer neuen Filteroption muss der vorhandene Filter gelöscht werden.
+
+====
+. *Filter anwenden* auswählen.
++
+Die Ansicht „Nicht gespeichert“ zeigt alle Storage VMs an, die basierend auf Ihren Filterauswahlen durch Storage VM Disaster Recovery entweder geschützt oder ungeschützt sind.
+
+

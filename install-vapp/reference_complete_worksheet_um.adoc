@@ -1,0 +1,229 @@
+---
+permalink: install-vapp/reference_complete_worksheet_um.html 
+sidebar: sidebar 
+keywords: complete, worksheet, installation, information, unified manager 
+summary: Bevor Sie Unified Manager installieren und konfigurieren, sollten Sie spezifische Informationen zu Ihrer Umgebung bereithalten. Sie können diese Informationen im Arbeitsblatt festhalten. 
+---
+= Das Arbeitsblatt in Active IQ Unified Manager wird vervollständigt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie Unified Manager installieren und konfigurieren, sollten Sie spezifische Informationen zu Ihrer Umgebung bereithalten. Sie können diese Informationen im Arbeitsblatt festhalten.
+
+
+
+[[unified-manager-installation-information]]
+== Installationsinformationen für Unified Manager
+
+Die für die Installation von Unified Manager erforderlichen Details.
+
+[cols="2*"]
+|===
+| System, auf dem die Software eingesetzt wird | Ihr Wert 
+
+
+ a| 
+ESXi Server IP-Adresse
+ a| 
+
+
+
+ a| 
+vollqualifizierter Domainname des Hosts
+ a| 
+
+
+
+ a| 
+Host-IP-Adresse
+ a| 
+
+
+
+ a| 
+Netzwerkmaske
+ a| 
+
+
+
+ a| 
+Gateway-IP-Adresse
+ a| 
+
+
+
+ a| 
+Primäre DNS-Adresse
+ a| 
+
+
+
+ a| 
+Sekundäre DNS-Adresse
+ a| 
+
+
+
+ a| 
+Suchdomänen
+ a| 
+
+
+
+ a| 
+Benutzername für Wartungsarbeiten
+ a| 
+
+
+
+ a| 
+Wartungsbenutzerpasswort
+ a| 
+
+|===
+
+
+[[unified-manager-configuration-information]]
+== Unified Manager Konfigurationsinformationen
+
+Die Details zur Konfiguration von Unified Manager nach der Installation. Einige Werte sind je nach Ihrer Konfiguration optional.
+
+[cols="2*"]
+|===
+| Einstellung | Ihr Wert 
+
+
+ a| 
+E-Mail-Adresse des Wartungsbenutzers
+ a| 
+
+
+
+ a| 
+NTP-Server
+ a| 
+
+
+
+ a| 
+SMTP Server Hostname oder IP-Adresse
+ a| 
+
+
+
+ a| 
+SMTP-Benutzername
+ a| 
+
+
+
+ a| 
+SMTP-Passwort
+ a| 
+
+
+
+ a| 
+SMTP-Port
+ a| 
+25 (Standardwert)
+
+
+
+ a| 
+E-Mail-Adresse, von der Benachrichtigungen versendet werden
+ a| 
+
+
+
+ a| 
+Hostname oder IP-Adresse des Authentifizierungsservers
+ a| 
+
+
+
+ a| 
+Name des Active Directory Administrators oder individueller Name für die LDAP-Bindung
+ a| 
+
+
+
+ a| 
+Active Directory Passwort oder LDAP Bind-Passwort
+ a| 
+
+
+
+ a| 
+Basis-individueller Name des Authentifizierungsservers
+ a| 
+
+
+
+ a| 
+URL des Identitätsanbieters (IdP)
+ a| 
+
+
+
+ a| 
+Metadaten des Identitätsanbieters (IdP)
+ a| 
+
+
+
+ a| 
+IP-Adressen von SNMP-Trap-Zielhosts
+ a| 
+
+
+
+ a| 
+SNMP-Port
+ a| 
+
+|===
+
+
+[[cluster-information]]
+== Clusterinformationen
+
+Die Details zu den Storage-Systemen, die Sie mit Unified Manager managen.
+
+[cols="2*"]
+|===
+| Cluster 1 von N | Ihr Wert 
+
+
+ a| 
+Hostname oder Cluster-Management-IP-Adresse
+ a| 
+
+
+
+ a| 
+ONTAP Administrator-Benutzername
+
+[NOTE]
+====
+Dem Administrator muss die Rolle "`admin`" zugewiesen worden sein.
+
+==== a| 
+
+
+
+ a| 
+ONTAP Administratorpasswort
+ a| 
+
+
+
+ a| 
+Protokoll
+ a| 
+HTTPS
+
+|===

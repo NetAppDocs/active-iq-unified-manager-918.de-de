@@ -1,0 +1,42 @@
+---
+permalink: config/task_configure_unified_manager_to_send_alert_notifications.html 
+sidebar: sidebar 
+keywords: configure, unified manager, send, alert, notifications 
+summary: Sie können Unified Manager so konfigurieren, dass Benachrichtigungen gesendet werden, die Sie über Ereignisse in Ihrer Umgebung informieren. Bevor Benachrichtigungen gesendet werden können, müssen jedoch mehrere weitere Optionen in Unified Manager konfiguriert werden. 
+---
+= Active IQ Unified Manager wird so konfiguriert, dass Warnmeldungen gesendet werden.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager so konfigurieren, dass Benachrichtigungen gesendet werden, die Sie über Ereignisse in Ihrer Umgebung informieren. Bevor Benachrichtigungen gesendet werden können, müssen jedoch mehrere weitere Optionen in Unified Manager konfiguriert werden.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Nach dem Deployment von Unified Manager und dem Abschluss der Erstkonfiguration sollte die Konfiguration Ihrer Umgebung so erfolgen, dass beim Empfang von Ereignissen Warnmeldungen ausgelöst und Benachrichtigungs-E-Mails oder SNMP-Traps generiert werden.
+
+.Schritte
+. link:task_configure_event_notification_settings.html["Konfiguration der Einstellungen für Ereignisbenachrichtigungen"].
++
+Wenn Sie bei bestimmten Ereignissen in Ihrer Umgebung Benachrichtigungen erhalten möchten, müssen Sie einen SMTP-Server konfigurieren und eine E-Mail-Adresse angeben, von der die Benachrichtigungen gesendet werden sollen. Wenn Sie SNMP-Traps verwenden möchten, können Sie diese Option auswählen und die erforderlichen Informationen angeben.
+
+. link:task_enable_remote_authentication.html["Remote-Authentifizierung aktivieren"].
++
+Wenn Sie möchten, dass entfernte LDAP- oder Active Directory-Benutzer auf die Unified Manager Instanz zugreifen und Warnmeldungen erhalten, müssen Sie die Remote-Authentifizierung aktivieren.
+
+. link:task_add_authentication_servers.html["Authentifizierungsserver hinzufügen"].
++
+Sie können Authentifizierungsserver hinzufügen, damit Remote-Benutzer innerhalb des Authentifizierungsservers auf Unified Manager zugreifen können.
+
+. link:task_add_users.html["Benutzer hinzufügen"].
++
+Sie können verschiedene Arten von lokalen oder Remote-Benutzern hinzufügen und ihnen spezifische Rollen zuweisen. Beim Erstellen einer Warnung weisen Sie einen Benutzer zu, der die Warnungsbenachrichtigungen erhalten soll.
+
+. link:task_add_alerts.html["Benachrichtigungen hinzufügen"].
++
+Nachdem Sie die E-Mail-Adresse für den Versand von Benachrichtigungen hinzugefügt, Benutzer zum Empfangen der Benachrichtigungen hinzugefügt, Ihre Netzwerkeinstellungen konfiguriert und die für Ihre Umgebung erforderlichen SMTP- und SNMP-Optionen konfiguriert haben, können Sie Warnungen zuweisen.
+
+

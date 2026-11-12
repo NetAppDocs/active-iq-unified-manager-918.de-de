@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_use_workload_analyzer.html 
+sidebar: sidebar 
+keywords: workload analyzer 
+summary: Es gibt viele Möglichkeiten, den Workload Analyzer über die Benutzeroberfläche zu starten. Hier beschreiben wir den Start des Tools über den linken Navigationsbereich. 
+---
+= Verwendung des Workload Analyzer in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es gibt viele Möglichkeiten, den Workload Analyzer über die Benutzeroberfläche zu starten. Hier beschreiben wir den Start des Tools über den linken Navigationsbereich.
+
+.Schritte
+. Im linken Navigationsbereich auf *Workload Analysis* klicken.
++
+Die Seite „Workload-Analyse“ wird angezeigt.
+
+. Wenn der Name der Workload bekannt ist, erfolgt die Eingabe des Namens. Wenn der vollständige Name nicht sicher bekannt ist, sind mindestens 3 Zeichen einzugeben, und das System zeigt eine Liste der Workloads an, die mit der Zeichenfolge übereinstimmen.
+. Wenn Statistiken für einen längeren Zeitraum als die standardmäßigen 2 Stunden angezeigt werden sollen, ist der Zeitraum auszuwählen und anschließend auf *Anwenden* zu klicken.
+. Im Bereich „Zusammenfassung“ können Sie die Ereignisse einsehen, die im angegebenen Zeitraum stattgefunden haben.
+. In den Performance- und Kapazitätsdiagrammen ist erkennbar, wann eine der Kennzahlen außerhalb des Normalbereichs liegt und ob Ereignisse mit dem anomalen Eintrag übereinstimmen.
+

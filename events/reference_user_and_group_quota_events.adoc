@@ -1,0 +1,67 @@
+---
+permalink: events/reference_user_and_group_quota_events.html 
+sidebar: sidebar 
+keywords: user, group, quota, events, impact area, capacity 
+summary: Ereignisse zu Benutzer- und Gruppenkontingenten liefern Ihnen Informationen über die Kapazität der Benutzer- und Gruppenkontingente sowie über Datei- und Festplattenlimits, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Benutzer- und Gruppenkontingentereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse zu Benutzer- und Gruppenkontingenten liefern Ihnen Informationen über die Kapazität der Benutzer- und Gruppenkontingente sowie über Datei- und Festplattenlimits, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-capacity]]
+== Wirkungsbereich: Kapazität
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Benutzer- oder Gruppenkontingent: Soft-Limit für Speicherplatz überschritten(ocumEvtUserOrGroupQuotaDiskSpaceSoftLimitBreached)
+ a| 
+Risiko
+ a| 
+Benutzer- oder Gruppenkontingent
+ a| 
+Warnung
+
+
+
+ a| 
+Hartes Speicherplatzlimit für Benutzer- oder Gruppenkontingente erreicht(ocumEvtUserOrGroupQuotaDiskSpaceHardLimitReached)
+ a| 
+Vorfall
+ a| 
+Benutzer- oder Gruppenkontingent
+ a| 
+Kritisch
+
+
+
+ a| 
+Soft-Limit für die Dateianzahl des Benutzer- oder Gruppenkontingents überschritten(ocumEvtUserOrGroupQuotaFileCountSoftLimitBreached)
+ a| 
+Risiko
+ a| 
+Benutzer- oder Gruppenkontingent
+ a| 
+Warnung
+
+
+
+ a| 
+Hartes Limit der Dateianzahl für Benutzer- oder Gruppenkontingent erreicht(ocumEvtUserOrGroupQuotaFileCountHardLimitReached)
+ a| 
+Vorfall
+ a| 
+Benutzer- oder Gruppenkontingent
+ a| 
+Kritisch
+
+|===

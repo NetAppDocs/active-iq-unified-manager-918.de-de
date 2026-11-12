@@ -1,0 +1,27 @@
+---
+permalink: events/task_edit_alerts.html 
+sidebar: sidebar 
+keywords: edit, alerts 
+summary: Sie können Alarmeigenschaften bearbeiten, wie z. B. die Ressource, mit der der Alarm verknüpft ist, Ereignisse, Empfänger, Benachrichtigungsoptionen, Benachrichtigungshäufigkeit und zugehörige Skripte. 
+---
+= Benachrichtigungen in Active IQ Unified Manager bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Alarmeigenschaften bearbeiten, wie z. B. die Ressource, mit der der Alarm verknüpft ist, Ereignisse, Empfänger, Benachrichtigungsoptionen, Benachrichtigungshäufigkeit und zugehörige Skripte.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+.Schritte
+. Im linken Navigationsbereich auf *Storage Management* > *Alert Setup* klicken.
+. Auf der Seite *Alert Setup* die zu bearbeitende Benachrichtigung auswählen und auf *Edit* klicken.
+. Im Dialogfeld *Warnung bearbeiten* können Sie die Abschnitte Name, Ressourcen, Ereignisse und Aktionen nach Bedarf bearbeiten.
++
+Sie können das mit der Warnung verknüpfte Skript ändern oder entfernen.
+
+. Auf *Speichern* klicken.
+

@@ -1,0 +1,51 @@
+---
+permalink: storage-mgmt/reference_cluster_connectivity_status_definitions.html 
+sidebar: sidebar 
+keywords: cluster, connectivity, status, definitions 
+summary: Die Verbindungsstatus zwischen Clustern in einer MetroCluster Konfiguration, z. B. Optimal, Beeinträchtigt oder Ausgefallen, werden erläutert. 
+---
+= Grundlegendes zur Cluster-Konnektivität in einer MetroCluster FC Konfiguration in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Konnektivität zwischen den Clustern in einer MetroCluster over FC-Konfiguration kann einen der folgenden Status aufweisen: Optimal, Eingeschränkt oder Nicht verfügbar. Das Verständnis der Konnektivitätsstatus ermöglicht Ihnen, Ihre MetroCluster Konfigurationen effektiv zu managen.
+
+|===
+| Verbindungsstatus | Beschreibung | Symbol angezeigt 
+
+
+ a| 
+Optimal
+ a| 
+Die Verbindungen zwischen den Clustern in der MetroCluster Konfiguration sind normal.
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif["Symbol für optimale MetroCluster Konnektivität"]
+
+
+
+ a| 
+Betroffen
+ a| 
+Ein oder mehrere Fehler beeinträchtigen den Status der Failover-Verfügbarkeit; beide Cluster in der MetroCluster Konfiguration sind jedoch weiterhin aktiv. Dies ist beispielsweise der Fall, wenn die ISL-Verbindung unterbrochen ist, wenn die Intercluster-IP-Verbindung unterbrochen ist oder wenn der Partnercluster nicht erreichbar ist.
+ a| 
+image:../media/metrocluster_connectivity_impacted.gif["Symbol für beeinträchtigte MetroCluster Konnektivität"]
+
+
+
+ a| 
+Ausgefallen
+ a| 
+Die Verbindung zwischen den Clustern in der MetroCluster Konfiguration ist unterbrochen, da einer oder beide Cluster ausgefallen sind oder sich im Failover-Modus befinden. Dies kann beispielsweise der Fall sein, wenn der Partner-Cluster aufgrund einer Katastrophe ausgefallen ist oder zu Testzwecken ein geplanter Switchover erfolgt.
+ a| 
+Umschaltung mit Fehlern:
+
+image::../media/metrocluster_connectivity_down.gif[Symbol für unterbrochene MetroCluster Verbindung]
+
+Umschaltung erfolgreich:
+
+image::../media/metrocluster_connectivity_failover.gif[MetroCluster Konnektivitäts-Failover-Symbol]
+
+|===

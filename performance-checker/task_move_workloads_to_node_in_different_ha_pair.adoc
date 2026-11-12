@@ -1,0 +1,95 @@
+---
+permalink: performance-checker/task_move_workloads_to_node_in_different_ha_pair.html 
+sidebar: sidebar 
+keywords: move, workloads, node, different, ha pair 
+summary: 'Mit Unified Manager lässt sich ein Aggregat auf einem Knoten in einem anderen Hochverfügbarkeitspaar (HA-Paar) identifizieren, das über mehr freie Performance-Kapazität verfügt als das HA-Paar, auf dem Ihre Workloads derzeit ausgeführt werden. Anschließend lassen sich ausgewählte Volumes auf Aggregate im neuen HA-Paar verschieben.' 
+---
+= Verschieben von Workloads auf einen Knoten in einem anderen HA-Paar in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Unified Manager lässt sich ein Aggregat auf einem Knoten in einem anderen Hochverfügbarkeitspaar (HA-Paar) identifizieren, das über mehr freie Performance-Kapazität verfügt als das HA-Paar, auf dem Ihre Workloads derzeit ausgeführt werden. Anschließend lassen sich ausgewählte Volumes auf Aggregate im neuen HA-Paar verschieben.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Ihr Cluster muss aus mindestens zwei HA-Paaren bestehen
++
+Dieses Sanierungsverfahren ist nicht geeignet, wenn in Ihrem Cluster nur ein HA-Paar vorhanden ist.
+
+* Die Namen der beiden Knoten im HA-Paar, bei denen derzeit ein Performanceproblem auftritt, müssen erfasst worden sein.
+* Sie müssen das Datum und die Uhrzeit aufgezeichnet haben, zu denen die Knoten das Performance-Ereignis empfangen haben.
+* Unified Manager muss Performance-Daten über einen Zeitraum von mindestens einem Monat erfasst und analysiert haben.
+
+
+Durch die Verlagerung leistungsstarker Workloads auf ein Aggregat auf einem Knoten mit mehr freier Performance-Kapazität können Workloads auf beiden Knoten effizienter arbeiten. Dieses Verfahren hilft Ihnen dabei, die folgenden Ressourcen zu identifizieren, damit Sie leistungsstarke Workloads auf einen Knoten mit mehr freier Performance-Kapazität in einem anderen HA-Paar verschieben können:
+
+* Die Knoten in einem anderen HA-Paar auf demselben Cluster, die über die größte freie Performancekapazität verfügen
+* Die Aggregate auf den neuen Knoten mit der größten freien Performancekapazität
+* Die leistungsstärksten Volumes auf den aktuellen Knoten
+
+
+.Schritte
+. Knoten identifizieren, die Teil eines anderen HA-Paars im selben Cluster sind:
++
+.. Auf der Seite *Ereignisdetails* wird der Name des Clusters ausgewählt, in dem sich die Knoten befinden.
++
+Auf der Seite Performance/Cluster-Startseite sind die Clusterdetails zu sehen.
+
+.. Auf der Seite *Übersicht* erfolgt die Auswahl von *Knoten* im Bereich *Verwaltete Objekte*.
++
+Die Liste der Knoten in diesem Cluster wird in der Ansicht „Performance: Alle Knoten“ angezeigt.
+
+.. Zu notieren sind die Namen der Knoten, die sich in anderen HA-Paaren befinden als in dem HA-Paar, bei dem derzeit ein Performance-Problem auftritt.
+
+
+. Es ist der Knoten im neuen HA-Paar mit der größten freien Performancekapazität zu identifizieren:
++
+.. In der Ansicht *Performance: All Nodes* lässt sich durch Klicken auf die Spalte *Performance Capacity Used* eine Sortierung der Knoten nach der niedrigsten prozentualen Auslastung vornehmen.
++
+Dies bietet eine Liste potenzieller Knoten, auf die Sie Arbeitslasten verschieben könnten.
+
+.. Sie notieren den Namen des Knotens in einem anderen HA-Paar, auf den Sie die Workloads verschieben möchten.
+
+
+. Es ist ein Aggregat auf dem neuen Knoten mit der größten freien Performance-Kapazität zu ermitteln:
++
+.. In der Ansicht *Performance: Alle Knoten* erfolgt die Auswahl des Knotens.
++
+Die Knotendetails sind auf der Seite „Performance/Node Explorer“ zu sehen.
+
+.. Im Menü *Anzeigen und Vergleichen* steht *Aggregate auf diesem Knoten* zur Auswahl.
++
+Die Aggregate dieses Knotens sind im Raster aufgeführt.
+
+.. Ein Klick auf die Spalte *Genutzte Performance-Kapazität* sortiert die Aggregate nach der geringsten Auslastung.
++
+Dies bietet eine Liste potenzieller Aggregate, auf die Sie Workloads verschieben könnten.
+
+.. Zu notieren ist der Name des Aggregats, in das die Workloads verschoben werden sollen.
+
+
+. Leistungsstarke Workloads der Knoten, die das Ereignis empfangen haben:
++
+.. Zur *Event*-Detailseite für das Event zurückkehren.
+.. Im Feld *Betroffene Volumes* erfolgt die Auswahl des Links für die Anzahl der Volumes des ersten Knotens.
++
+Die Ansicht „Performance: Alle Volumes“ zeigt eine gefilterte Liste der Volumes auf diesem Knoten an.
+
+.. Über die Spalte *Gesamtkapazität* können Sie die Volumes nach dem größten zugewiesenen Speicherplatz sortieren.
++
+Dies bietet eine Liste potenzieller Volumes, die Sie möglicherweise verschieben möchten.
+
+.. Zu notieren sind die Namen der Volumes, die verschoben werden sollen, sowie die Namen der aktuellen Aggregate, auf denen sie sich befinden.
+.. Die Schritte 4c und 4d sind auch für den zweiten Knoten auszuführen, der Teil dieses Ereignisses war, um mögliche Volumes zu identifizieren, die ebenfalls von diesem Knoten verschoben werden sollen.
+
+
+. Die Volumes sollten auf die Aggregate verschoben werden, die Sie auf dem neuen Knoten als diejenigen mit der größten freien Performance Kapazität identifiziert haben.
++
+Sie können den Verschiebevorgang mit ONTAP System Manager, OnCommand Workflow Automation, ONTAP Befehlen oder einer Kombination dieser Tools durchführen.
+
+
+
+Nach einigen Tagen lässt sich prüfen, ob Sie von diesem Knoten oder Aggregat dieselbe Art von Ereignissen erhalten.

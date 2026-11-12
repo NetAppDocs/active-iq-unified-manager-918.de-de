@@ -1,0 +1,220 @@
+---
+permalink: data-protection/reference_resource_pools_page.html 
+sidebar: sidebar 
+keywords: resource, pools, page 
+summary: Auf der Seite „Ressourcenpools“ werden bestehende Ressourcenpools und deren Mitglieder angezeigt, und sie ermöglicht das Erstellen, Überwachen und Managen von Ressourcenpools für die Provisionierung. 
+---
+= Informationen zur Seite „Ressourcenpools“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Ressourcenpools“ werden bestehende Ressourcenpools und deren Mitglieder angezeigt, und sie ermöglicht das Erstellen, Überwachen und Managen von Ressourcenpools für die Provisionierung.
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Erstellen*
++
+Startet das Dialogfeld „Ressourcenpool erstellen“, das zum Erstellen von Ressourcenpools verwendet werden kann.
+
+* *Bearbeiten*
++
+Hier können Sie den Namen und die Beschreibung der von Ihnen erstellten Ressourcenpools bearbeiten.
+
+* *Löschen*
++
+Ermöglicht das Löschen eines oder mehrerer Ressourcenpools.
+
+
+
+
+
+[[resource-pools-list]]
+== Liste der Ressourcenpools
+
+Die Liste der Ressourcenpools zeigt (in Tabellenform) die Eigenschaften der vorhandenen Ressourcenpools an.
+
+* *Ressourcenpool*
++
+Zeigt den Namen des Ressourcenpools an.
+
+* *Beschreibung*
++
+Beschreibt den Ressourcenpool.
+
+* *SnapLock Typ*
++
+Zeigt den SnapLock Typ an, der von den Aggregaten im Ressourcenpool verwendet wird. Gültige Werte für den SnapLock Typ sind Compliance, Enterprise und Non-SnapLock. Ein Ressourcenpool kann nur Aggregate eines SnapLock Typs enthalten.
+
+* *Gesamtkapazität*
++
+Zeigt die Gesamtkapazität (in MB, GB usw.) des Ressourcenpools an.
+
+* *Genutzte Kapazität*
++
+Zeigt die Menge an Speicherplatz an, die im Ressourcenpool verwendet wird (in MB, GB usw.).
+
+* *Verfügbare Kapazität*
++
+Zeigt den im Ressourcenpool verfügbaren Speicherplatz (in MB, GB usw.) an.
+
+* *Verwendet %*
++
+Zeigt den Prozentsatz des im Ressourcenpool belegten Speicherplatzes an.
+
+
+
+
+
+[[members-list-command-buttons]]
+== Befehlsschaltflächen für die Mitgliederliste
+
+Mit den Befehlsschaltflächen der Mitgliederliste können Sie die folgenden Aufgaben ausführen:
+
+* *Hinzufügen*
++
+Ermöglicht das Hinzufügen von Mitgliedern zum Ressourcenpool.
+
+* *Löschen*
++
+Hiermit können Sie ein oder mehrere Mitglieder aus dem Ressourcenpool löschen.
+
+
+
+
+
+[[members-list]]
+== Mitgliederliste
+
+Die Mitgliederliste zeigt (in Tabellenform) die Mitglieder des Ressourcenpools und deren Eigenschaften an, wenn ein Ressourcenpool ausgewählt ist.
+
+* *Status*
++
+Zeigt den aktuellen Status des Mitgliedsaggregats an. Der Status kann Kritisch (image:../media/sev_critical_um60.png[""]), Fehler (image:../media/sev_error_um60.png[""]), Warnung (image:../media/sev_warning_um60.png[""]) oder Normal (image:../media/sev_normal_um60.png[""]) sein.
+
+* *Aggregatname*
++
+Zeigt den Namen des Mitgliedsaggregats an.
+
+* *Zustand*
++
+Zeigt den aktuellen Zustand des Aggregats an, der einen der folgenden Werte annehmen kann:
+
++
+** Offline
++
+Lese- und Schreibzugriff ist nicht gestattet.
+
+** Online
++
+Lese- und Schreibzugriff auf die Volumes, die auf diesem Aggregat gehostet werden, ist zulässig.
+
+** Eingeschränkt
++
+Begrenzte Operationen (wie z. B. Paritätsrekonstruktion) sind zulässig, der Datenzugriff jedoch nicht.
+
+** Erstellen
++
+Das Aggregat wird erstellt.
+
+** Zerstören
++
+Das Aggregat wird zerstört.
+
+** Fehlgeschlagen
++
+Das Aggregat kann nicht online geschaltet werden.
+
+** Gefroren
++
+Das Aggregat verarbeitet (vorübergehend) keine Anfragen.
+
+** Inkonsistent
++
+Das Aggregat wurde als beschädigt markiert; Sie sollten sich an den technischen Support wenden.
+
+** Eisen eingeschränkt
++
+Diagnosetools können nicht auf dem Aggregat ausgeführt werden.
+
+** Montage
++
+Das Aggregat wird derzeit eingehängt.
+
+** Teilweise
++
+Für das Aggregat wurde mindestens eine Festplatte gefunden, es fehlen jedoch zwei oder mehr Festplatten.
+
+** Anhalten
++
+Das Aggregat wird in den Ruhezustand versetzt.
+
+** Ruhend
++
+Das Aggregat ist angehalten.
+
+** Zurückgesetzt
++
+Die Rücksetzung eines Aggregats ist abgeschlossen.
+
+** Nicht eingehängt
++
+Das Aggregat wurde ausgehängt.
+
+** Aushängen
++
+Das Aggregat wird offline genommen.
+
+** Unbekannt
++
+Das Aggregat wurde gefunden, die Aggregatinformationen wurden jedoch noch nicht vom Unified Manager Server abgerufen.
+
+
+
++
+Diese Spalte ist standardmäßig ausgeblendet.
+
+* *Cluster*
++
+Zeigt den Namen des Clusters an, zu dem das Aggregat gehört.
+
+* *Knoten*
++
+Zeigt den Namen des Knotens an, auf dem sich das Aggregat befindet.
+
+* *Gesamtkapazität*
++
+Zeigt die Gesamtkapazität (in MB, GB usw.) des Aggregats an.
+
+* *Genutzte Kapazität*
++
+Zeigt die im Aggregat belegte Speicherplatzmenge (in MB, GB usw.) an.
+
+* *Verfügbare Kapazität*
++
+Zeigt die Menge des Speicherplatzes an, die im Aggregat verfügbar ist (in MB, GB usw.).
+
+* *Verwendet %*
++
+Zeigt den Prozentsatz des im Aggregat verwendeten Speicherplatzes an.
+
+* *Datenträgertyp*
++
+Zeigt den RAID-Konfigurationstyp an, der einer der folgenden sein kann:
+
++
+** RAID0: Alle RAID-Gruppen sind vom Typ RAID0.
+** RAID4: Alle RAID-Gruppen sind vom Typ RAID4.
+** RAID-DP: Alle RAID-Gruppen sind vom Typ RAID-DP.
+** RAID-TEC: Alle RAID-Gruppen sind vom Typ RAID-TEC.
+** Gemischtes RAID: Das Aggregat enthält RAID-Gruppen verschiedener RAID-Typen (RAID0, RAID4, RAID-DP und RAID-TEC). Diese Spalte ist standardmäßig ausgeblendet.
+
+
+

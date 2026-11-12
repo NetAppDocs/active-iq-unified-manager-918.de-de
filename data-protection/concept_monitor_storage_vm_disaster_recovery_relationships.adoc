@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_monitor_storage_vm_disaster_recovery_relationships.html 
+sidebar: sidebar 
+keywords: disaster recovery, monitor, storage vm protection, relationships 
+summary: Active IQ Unified Manager unterstützt die Überwachung von Storage VM Disaster Recovery Beziehungen, die Disaster Recovery auf der Granularität einer Storage VM Ebene bereitstellen. Storage VM Disaster Recovery ermöglicht die Wiederherstellung der in den zugehörigen Volumes der Storage VM vorhandenen Daten sowie die Wiederherstellung der Storage VM Konfiguration. 
+---
+= Informationen zu Disaster-Recovery-Beziehungen von Storage VMs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager unterstützt die Überwachung von Storage VM Disaster Recovery Beziehungen, die Disaster Recovery auf der Granularität einer Storage VM Ebene bereitstellen. Storage VM Disaster Recovery ermöglicht die Wiederherstellung der in den zugehörigen Volumes der Storage VM vorhandenen Daten sowie die Wiederherstellung der Storage VM Konfiguration.
+
+Eine DR-Beziehung für eine Storage VM wird von der Quell-Storage VM zur Ziel-Storage VM erstellt, um eine asynchrone Notfallwiederherstellung bereitzustellen. Abhängig vom Cluster-Setup können Sie auswählen, ob die gesamte oder nur ein Teil der Storage VM Konfiguration (mit Ausnahme der Netzwerk- und Protokollkonfiguration) zusammen mit den Datenvolumes repliziert werden soll.
+
+Nachdem die Beziehung für die Notfallwiederherstellung der Storage VM konfiguriert wurde, wird die Ziel-Storage VM gestartet, wenn die Quell-Storage VM aufgrund eines Hardwarefehlers oder einer Umweltkatastrophe nicht mehr verfügbar ist, sodass mit möglichst geringer Unterbrechung auf die Daten zugegriffen werden kann. Sobald die Quell-Storage VM wieder verfügbar ist, wird sie mit der Ziel-Storage VM resynchronisiert; anschließend wird die Quelle neu gestartet, um die Daten bereitzustellen. Für die Konfiguration und das Managen der Beziehung für die Notfallwiederherstellung der Storage VM können SnapMirror Befehle verwendet werden.

@@ -1,0 +1,55 @@
+---
+permalink: events/task_assign_events_to_specific_users.html 
+sidebar: sidebar 
+keywords: assign, events, specific, users 
+summary: Sie können nicht zugewiesene Ereignisse sich selbst oder anderen Benutzern, einschließlich Remote-Benutzern, zuweisen. Sie können zugewiesene Ereignisse bei Bedarf einem anderen Benutzer neu zuweisen. Wenn beispielsweise bei einem Storage Objekt häufig Probleme auftreten, können Sie die Ereignisse für diese Probleme dem Benutzer zuweisen, der dieses Objekt verwaltet. 
+---
+= Zuweisung von Ereignissen an bestimmte Benutzer in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können nicht zugewiesene Ereignisse sich selbst oder anderen Benutzern, einschließlich Remote-Benutzern, zuweisen. Sie können zugewiesene Ereignisse bei Bedarf einem anderen Benutzer neu zuweisen. Wenn beispielsweise bei einem Storage Objekt häufig Probleme auftreten, können Sie die Ereignisse für diese Probleme dem Benutzer zuweisen, der dieses Objekt verwaltet.
+
+.Bevor Sie beginnen
+* Der Name und die E-Mail-Adresse des Benutzers müssen korrekt konfiguriert sein.
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+
+.Schritte
+. Im linken Navigationsbereich auf *Event Management* klicken.
+. Auf der Inventarseite *Event Management* erfolgt die Auswahl eines oder mehrerer Events, die zugewiesen werden sollen.
+. Die Zuweisung des Ereignisses erfolgt durch Auswahl einer der folgenden Optionen:
++
+|===
+| Wenn das Ereignis zugewiesen werden soll ... | Fahren Sie dann wie folgt fort... 
+
+
+ a| 
+Sie selbst
+ a| 
+Anschließend erfolgt die Auswahl von *Zuweisen an* > *Mich*.
+
+
+
+ a| 
+Ein anderer Benutzer
+ a| 
+.. Die Auswahl erfolgt über *Zuweisen an* > *Anderer Benutzer*.
+.. Im Dialogfeld „Besitzer zuweisen“ können Sie den Benutzernamen eingeben oder einen Benutzer aus der Dropdown-Liste auswählen.
+.. *Zuweisen* auswählen.
++
+Der Benutzer erhält eine E-Mail-Benachrichtigung.
+
++
+[NOTE]
+====
+Wenn Sie keinen Benutzernamen eingeben oder keinen Benutzer aus der Dropdown-Liste auswählen und auf *Zuweisen* klicken, bleibt das Ereignis nicht zugewiesen.
+
+====
+
+
+|===
+

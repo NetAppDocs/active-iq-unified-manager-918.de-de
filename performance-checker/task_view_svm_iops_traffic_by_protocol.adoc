@@ -1,0 +1,35 @@
+---
+permalink: performance-checker/task_view_svm_iops_traffic_by_protocol.html 
+sidebar: sidebar 
+keywords: view, svm, iops, traffic, protocol 
+summary: Die Seite „Performance/SVM Explorer“ zeigt detaillierte IOPS-Informationen für eine SVM an. Das Zählerdiagramm „IOPS - Total“ zeigt die gesamte IOPS-Auslastung auf der SVM an, und das Zählerdiagramm „IOPS - Breakdown“ ist hilfreich, um die Auswirkungen von Lese-, Schreib- und anderen IOPS-Vorgängen auf die SVM zu bestimmen. 
+---
+= Anzeige des SVM IOPS Datenverkehrs nach Protokoll in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Performance/SVM Explorer“ zeigt detaillierte IOPS-Informationen für eine SVM an. Das Zählerdiagramm „IOPS - Total“ zeigt die gesamte IOPS-Auslastung auf der SVM an, und das Zählerdiagramm „IOPS - Breakdown“ ist hilfreich, um die Auswirkungen von Lese-, Schreib- und anderen IOPS-Vorgängen auf die SVM zu bestimmen.
+
+Zusätzlich zeigt das Diagramm „IOPS - Protokolle“ einen detaillierten Vergleich des IOPS-Verkehrs für jedes auf der SVM verwendete Protokoll. Folgende Protokolle stehen zur Verfügung:
+
+* CIFS
+* NFS
+* FCP
+* iSCSI
+* NVMe-FC
+
+
+.Schritte
+. Auf der Seite *Performance/SVM Explorer* für die ausgewählte SVM erfolgt im IOPS-Diagramm die Auswahl von *Protokolle* im Dropdown-Menü.
++
+Das Diagramm „IOPS - Protokolle“ wird angezeigt.
+
+. Mit *Zoom View* lässt sich eine größere Version des Diagramms anzeigen.
++
+Die Vergleichstabelle für erweiterte IOPS-Protokolle wird angezeigt. Sie können den Vergleich einschränken, indem Sie die image:../media/eye_icon.gif["Augensymbol"] Optionen abwählen oder auswählen, die einem Protokoll zugeordnet sind.
+
+. Die genauen Werte werden angezeigt, wenn Sie den Cursor in den Diagrammbereich eines der beiden Diagramme bewegen und das Popup-Fenster eingeblendet wird.
+

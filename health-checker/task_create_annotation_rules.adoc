@@ -1,0 +1,79 @@
+---
+permalink: health-checker/task_create_annotation_rules.html 
+sidebar: sidebar 
+keywords: create, annotation rules 
+summary: 'Sie können Annotationsregeln erstellen, die Unified Manager verwendet, um Storage-Objekte wie Volumes, Cluster oder Storage Virtual Machines (SVMs) dynamisch zu annotieren.' 
+---
+= Erstellen von Annotationsregeln in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Annotationsregeln erstellen, die Unified Manager verwendet, um Storage-Objekte wie Volumes, Cluster oder Storage Virtual Machines (SVMs) dynamisch zu annotieren.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Storage-Objekte, die aktuell überwacht werden, werden sofort nach Erstellung der Annotationsregel annotiert. Neue Objekte werden erst nach Abschluss des Überwachungszyklus annotiert.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Annotations*.
+. Im Reiter *Anmerkungsregeln* erfolgt die Auswahl von *Hinzufügen*.
+. Im Dialogfeld *Add Annotation Rule* wird ein Name für die Anmerkungsregel angegeben.
+. Im Feld *Zielobjekttyp* erfolgt die Auswahl des Typs des Storage Objekts, das Sie annotieren möchten.
+. In den Feldern *Apply Annotation* können Sie die Annotation und den Annotationswert auswählen, die Sie verwenden möchten.
+. Im Abschnitt „Bedingungen“ erfolgt die entsprechende Aktion zum Erstellen einer Bedingung, einer Bedingungsgruppe oder von beidem:
++
+[cols="2*"]
+|===
+| Zum Erstellen... | Folgendes ist zu tun... 
+
+
+ a| 
+Eine Bedingung
+ a| 
+.. Es ist ein Operand aus der Liste der Operanden auszuwählen.
+.. Als Operator stehen entweder *Enthält* oder *Ist* zur Auswahl.
+.. Es ist ein Wert einzugeben oder ein Wert aus der verfügbaren Liste auszuwählen.
+
+
+
+
+ a| 
+Eine Bedingungsgruppe
+ a| 
+.. *Bedingungsgruppe hinzufügen* auswählen.
+.. Es ist ein Operand aus der Liste der Operanden auszuwählen.
+.. Als Operator stehen entweder *Enthält* oder *Ist* zur Auswahl.
+.. Es ist ein Wert einzugeben oder ein Wert aus der verfügbaren Liste auszuwählen.
+.. Mit *Bedingung hinzufügen* lassen sich bei Bedarf weitere Bedingungen erstellen; die Schritte a bis d sind für jede Bedingung zu wiederholen.
+
+
+|===
+. Klicken Sie auf *Add*.
+
+
+
+
+[[example-of-creating-an-annotation-rule]]
+== Beispiel für die Erstellung einer Annotationsregel
+
+Im Dialogfeld „Add Annotation Rule“ sind zum Erstellen einer Anmerkungsregel die folgenden Schritte erforderlich, einschließlich der Konfiguration einer Bedingung und des Hinzufügens einer Bedingungsgruppe:
+
+.Schritte
+. Für die Annotationsregel einen Namen festlegen.
+. Als Zielobjekttyp sollte Storage Virtual Machine (SVM) ausgewählt werden.
+. Aus der Liste der Annotationen wird eine Annotation ausgewählt und ein Wert angegeben.
+. Im Abschnitt „Bedingungen“ ist *Object Name* als Operand auszuwählen.
+. Als Operator ist *Enthält* festzulegen.
+. Die Eingabe des Werts erfolgt als `svm_data`.
+. Auf *Bedingungsgruppe hinzufügen* klicken.
+. Als Operand wird *Object Name* ausgewählt.
+. Als Operator ist *Enthält* festzulegen.
+. Die Eingabe des Werts erfolgt als `vol`.
+. Anschließend erfolgt die Auswahl von *Bedingung hinzufügen*.
+. Die Schritte 8 bis 10 werden wiederholt, indem in Schritt 8 *data-priority* als Operand, in Schritt 9 *Is* als Operator und in Schritt 10 *mission-critical* als Wert ausgewählt wird.
+. Klicken Sie auf *Add*.
+

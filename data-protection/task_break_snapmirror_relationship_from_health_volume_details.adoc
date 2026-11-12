@@ -1,0 +1,29 @@
+---
+permalink: data-protection/task_break_snapmirror_relationship_from_health_volume_details.html 
+sidebar: sidebar 
+keywords: break, snapmirror, relationship, volume, health details 
+summary: Auf der Seite „Volume/Health-Details“ können Sie eine Schutzbeziehung aufheben und Datentransfers zwischen einem Quell- und einem Zielvolume in einer SnapMirror Beziehung beenden. Eine Beziehung kann aufgehoben werden, wenn Sie Daten migrieren möchten, für Disaster Recovery oder für Applikationstests. Das Zielvolume wird in ein Volume mit lesen/schreiben geändert. Eine SnapVault Beziehung kann nicht aufgehoben werden. 
+---
+= Eine SnapMirror Schutzbeziehung auf der Seite „Volume/Integrität“ von Active IQ Unified Manager trennen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Volume/Health-Details“ können Sie eine Schutzbeziehung aufheben und Datentransfers zwischen einem Quell- und einem Zielvolume in einer SnapMirror Beziehung beenden. Eine Beziehung kann aufgehoben werden, wenn Sie Daten migrieren möchten, für Disaster Recovery oder für Applikationstests. Das Zielvolume wird in ein Volume mit lesen/schreiben geändert. Eine SnapVault Beziehung kann nicht aufgehoben werden.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+.Schritte
+. Auf der Registerkarte *Schutz* der Detailseite *Volume / Integrität* erfolgt die Auswahl der SnapMirror Beziehung, die in der Topologie getrennt werden soll.
+. Rechtsklick auf das Ziel und Auswahl von *Break* im Menü.
++
+Das Dialogfeld „Beziehung aufheben“ wird angezeigt.
+
+. Über *Weiter* lässt sich die Beziehung beenden.
+. In der Topologie lässt sich überprüfen, ob die Beziehung unterbrochen ist.
+

@@ -1,0 +1,35 @@
+---
+permalink: events/task_schedule_maintenance_window_to_disable_cluster_notifications.html 
+sidebar: sidebar 
+keywords: schedule, maintenance, window, disable, cluster, event, notifications 
+summary: Wenn Sie für einen Cluster eine geplante Ausfallzeit haben, beispielsweise für ein Cluster-Upgrade oder das Verschieben eines der Knoten, können Sie die Ereignisse und Warnungen, die normalerweise während dieses Zeitraums generiert würden, durch das Planen eines Wartungsfensters in Unified Manager unterdrücken. 
+---
+= Planen Sie ein Wartungsfenster, um Cluster-Ereignisbenachrichtigungen in Active IQ Unified Manager zu deaktivieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie für einen Cluster eine geplante Ausfallzeit haben, beispielsweise für ein Cluster-Upgrade oder das Verschieben eines der Knoten, können Sie die Ereignisse und Warnungen, die normalerweise während dieses Zeitraums generiert würden, durch das Planen eines Wartungsfensters in Unified Manager unterdrücken.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Während eines Wartungsfensters werden zwar weiterhin Ereignisse generiert, die sich auf alle Objekte in diesem Cluster beziehen, sie werden jedoch nicht auf der Ereignisseite angezeigt, und für diese Ereignisse werden keine Warnungen oder andere Benachrichtigungen gesendet.
+
+Die für das Wartungsfenster eingegebene Zeit basiert auf der Zeit auf dem Unified Manager Server.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Cluster Setup*.
+. In der Spalte *Wartungsmodus* für den Cluster erfolgt die Auswahl der Schieberegler-Schaltfläche und das Verschieben nach rechts.
++
+Das Kalenderfenster wird angezeigt.
+
+. Das Start- und Enddatum sowie die Uhrzeit für das Wartungsfenster können festgelegt werden; anschließend ist *Apply* auszuwählen.
++
+Neben dem Schieberegler erscheint die Meldung „Geplant“.
+
+
+
+Wenn der Startzeitpunkt erreicht ist, wechselt der Cluster in den Wartungsmodus und es wird ein Ereignis mit dem Titel „Object Maintenance Window Started“ generiert.

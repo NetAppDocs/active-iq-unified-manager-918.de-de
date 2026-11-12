@@ -1,0 +1,140 @@
+---
+permalink: api-automation/concept_events_api.html 
+sidebar: sidebar 
+keywords: view, events, system, details 
+summary: Die Events API ermöglicht es Ihnen, die Ereignisse abzurufen, die für die überwachten Cluster in Ihrem Datacenter generiert werden. 
+---
+= Verwaltung von Ereignissen und Warnmeldungen mithilfe von APIs in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die APIs  `events`,  `alerts` und  `scripts` in der Kategorie  `management-server` ermöglichen Ihnen, die Ereignisse, Warnungen und die mit den Warnungen verbundenen Skripte in Ihrer Active IQ Unified Manager Umgebung zu managen.
+
+
+
+[[view-and-modify-events]]
+== Ereignisse anzeigen und ändern
+
+Unified Manager empfängt die Ereignisse, die auf ONTAP für die von Unified Manager überwachten und verwalteten Cluster generiert werden. Mithilfe dieser APIs können Sie die für Ihre Cluster generierten Ereignisse anzeigen, beheben und aktualisieren.
+
+Durch Ausführen der `GET`Methode für die `/management-server/events`API lassen sich die Ereignisse in Ihrem Datacenter einschließlich historischer Daten abfragen. Mit den integrierten Filtern wie Name, Impact-Level, Impact-Bereich, Schweregrad, Status, Ressourcenname und Ressourcentyp lassen sich bestimmte Ereignisse anzeigen. Die Parameter für Ressourcentyp und Bereich geben Informationen über das Storage Objekt zurück, auf dem das Ereignis aufgetreten ist, und der Impact-Bereich gibt Informationen über das Problem zurück, für das das Ereignis ausgelöst wird, z. B. Verfügbarkeit, Kapazität, Konfiguration, Sicherheit, Schutz und Performance.
+
+Durch Ausführen des PATCH-Vorgangs für diese API können Sie den Workflow zur Behebung des Ereignisses aktivieren. Sie können ein Ereignis sich selbst oder einem anderen Benutzer zuweisen und den Empfang des Ereignisses bestätigen. Nachdem Sie die Schritte auf den Ressourcen zur Behebung des Problems durchgeführt haben, das das Ereignis ausgelöst hat, können Sie diese API verwenden, um das Ereignis als gelöst zu markieren.
+
+Weitere Informationen zu Ereignissen finden Sie unter link:../events/concept_what_active_iq_platform_events_are.html["Informationen zu Active IQ Plattformereignissen"].
+
+[cols="4*"]
+|===
+| Kategorie | HTTP-Verb | Pfad | Beschreibung 
+
+
+ a| 
+Management-Server
+ a| 
+GET
+ a| 
+`/management-server/events`
+`/management-server/events/{key}`
+ a| 
+Wenn Sie die Methode „Get ALL“ ausführen, enthält der Antworttext die Ereignisdetails aller Ereignisse in Ihrem Datacenter. Wenn Sie die Ereignisdetails anhand eines bestimmten Schlüssels abrufen, können Sie die Details eines bestimmten Ereignisses anzeigen und die nächsten Operationen für die Ressourcen ausführen. Der Antworttext enthält die Details dieses Ereignisses.
+
+
+
+ a| 
+Management-Server
+ a| 
+PATCH
+ a| 
+`management-server/events/{key}`
+ a| 
+Mit dieser API lässt sich ein Ereignis zuweisen oder der Status in „Bestätigt“ oder „Abgeschlossen“ ändern. Diese Methode kann auch verwendet werden, um das Ereignis Ihnen selbst oder einem anderen Benutzer zuzuweisen. Es handelt sich um einen synchronen Vorgang.
+
+|===
+
+
+[[manage-alerts]]
+== Benachrichtigungen verwalten
+
+Ereignisse werden automatisch und kontinuierlich generiert. Unified Manager generiert eine Warnung nur dann, wenn ein Ereignis bestimmte Filterkriterien erfüllt. Sie können die Ereignisse auswählen, für die Warnungen generiert werden sollen. Mithilfe der `/management-server/alerts` API lassen sich Warnungen so konfigurieren, dass automatisch Benachrichtigungen gesendet werden, wenn bestimmte Ereignisse oder Ereignisse bestimmter Schweregrade auftreten.
+
+Weitere Informationen zu Warnmeldungen finden Sie unter link:../events/concept_what_alerts_are.html["Informationen zu Benachrichtigungen"].
+
+[cols="4*"]
+|===
+| Kategorie | HTTP-Verb | Pfad | Beschreibung 
+
+
+ a| 
+Management-Server
+ a| 
+GET
+ a| 
+`/management-server/alerts`
+`/management-server/alerts/{key}`
+ a| 
+Sie können mithilfe des Warnungsschlüssels alle vorhandenen Warnmeldungen in Ihrer Umgebung oder eine bestimmte Warnmeldung abfragen. Sie können Informationen zu den in Ihrer Umgebung generierten Warnmeldungen anzeigen, z. B. die Beschreibung der Warnmeldung, die Aktion, die E-Mail-Adresse, an die die Benachrichtigung gesendet wird, sowie Ereignis und Schweregrad.
+
+
+
+ a| 
+Management-Server
+ a| 
+POST
+ a| 
+`/management-server/alerts`
+ a| 
+Mit dieser Methode können Sie Warnungen für bestimmte Ereignisse hinzufügen. Sie müssen den Warnungsnamen, die physische oder logische Ressource bzw. das Ereignis, für das die Warnung gilt, den Aktivierungsstatus der Warnung und die Verwendung von SNMP-Traps angeben. Optional können Sie weitere Details hinzufügen, für die die Warnung ausgelöst werden soll, z. B. die Aktion, die E-Mail-Adresse für Benachrichtigungen, die Skriptdetails (falls Sie ein Warnungsskript verwenden) usw.
+
+
+
+ a| 
+Management-Server
+ a| 
+PATCH und DELETE
+ a| 
+`management-server/events/{key}`
+ a| 
+Mithilfe dieser Methoden können Sie bestimmte Benachrichtigungen bearbeiten und löschen. Sie können verschiedene Attribute ändern, z. B. Beschreibung, Name sowie die Aktivierung und Deaktivierung der Benachrichtigung. Sie können eine Benachrichtigung löschen, sobald sie nicht mehr benötigt wird.
+
+|===
+
+NOTE: Beachten Sie bei der Auswahl einer Ressource zum Hinzufügen einer Warnung, dass die Auswahl eines Clusters als Ressource nicht automatisch die Storage Objekte innerhalb dieses Clusters auswählt. Wenn Sie beispielsweise eine Warnung für alle kritischen Ereignisse aller Cluster erstellen, erhalten Sie nur Warnungen für kritische Clusterereignisse. Sie erhalten keine Warnungen für kritische Ereignisse auf Knoten, Aggregaten usw.
+
+
+
+[[manage-scripts]]
+== Skripte managen
+
+Mithilfe der  `/management-server/scripts`API können Sie eine Warnung mit einem Skript verknüpfen, das bei Auslösung der Warnung ausgeführt wird. Skripte ermöglichen die automatische Änderung oder Aktualisierung mehrerer Storage Objekte in Unified Manager. Das Skript ist einer Warnung zugeordnet. Wenn ein Ereignis eine Warnung auslöst, wird das Skript ausgeführt. Sie können benutzerdefinierte Skripte hochladen und ihre Ausführung testen, wenn eine Warnung generiert wird. Sie können eine Warnung mit Ihrem Skript verknüpfen, sodass das Skript ausgeführt wird, wenn in Unified Manager für ein Ereignis eine Warnung ausgelöst wird.
+
+Weitere Informationen zu Skripten finden Sie unter link:../events/concept_manage_scripts.html["Skripte managen"].
+
+[cols="4*"]
+|===
+| Kategorie | HTTP-Verb | Pfad | Beschreibung 
+
+
+ a| 
+Management-Server
+ a| 
+GET
+ a| 
+`/management-server/scripts`
+ a| 
+Mit dieser API lassen sich alle vorhandenen Skripte in Ihrer Umgebung abfragen. Mit den Standardfilter- und Sortierfunktionen lassen sich nur bestimmte Skripte anzeigen.
+
+
+
+ a| 
+Management-Server
+ a| 
+POST
+ a| 
+`/management-server/scripts`
+ a| 
+Mit dieser API kann eine Beschreibung für das Skript hinzugefügt und die mit einer Warnung verknüpfte Skriptdatei hochgeladen werden.
+
+|===

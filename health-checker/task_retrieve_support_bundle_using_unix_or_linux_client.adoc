@@ -1,0 +1,74 @@
+---
+permalink: health-checker/task_retrieve_support_bundle_using_unix_or_linux_client.html 
+sidebar: sidebar 
+keywords: retrieve, support bundle, unix, linux, client 
+summary: 'Wenn Sie UNIX- oder Linux-Benutzer sind, können Sie das Support-Bundle von Ihrer vApp über die Befehlszeilenschnittstelle (CLI) auf Ihrem Linux-Client-Server abrufen. Zum Abrufen des Support-Bundles können entweder SCP oder SFTP verwendet werden.' 
+---
+= Abrufen des Support-Bundles mithilfe eines UNIX- oder Linux-Clients in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie UNIX- oder Linux-Benutzer sind, können Sie das Support-Bundle von Ihrer vApp über die Befehlszeilenschnittstelle (CLI) auf Ihrem Linux-Client-Server abrufen. Zum Abrufen des Support-Bundles können entweder SCP oder SFTP verwendet werden.
+
+.Bevor Sie beginnen
+Sie müssen der Wartungsbenutzer sein, um diese Aufgabe ausführen zu können.
+
+Sie müssen mithilfe der Managementplattform ein Support Bundle erstellt haben und der Name des Support Bundle muss verfügbar sein.
+
+.Schritte
+. Der Zugriff auf die CLI erfolgt über Telnet oder die Managementplattform mithilfe Ihres Linux Client-Servers.
+. Zugriff auf das /`support` Verzeichnis.
+. Der Abruf des Support-Bundles und das Kopieren in das lokale Verzeichnis erfolgen mit folgendem Befehl:
++
+[cols="2*"]
+|===
+| Wenn Sie ... verwenden | Anschließend ist der folgende Befehl zu verwenden... 
+
+
+ a| 
+SCP
+ a| 
+`scp <maintenance-user>@<vApp-name-or-ip>:/support/support_bundle_file_name.7z <destination-directory>`
+
+
+
+ a| 
+SFTP
+ a| 
+`sftp <maintenance-user>@<vApp-name-or-ip>:/support/support_bundle_file_name.7z <destination-directory>`
+
+|===
++
+Der Name des Support-Bundles wird Ihnen bei der Generierung über die Managementplattform bereitgestellt.
+
+. Die Eingabe des Passworts für den Wartungsbenutzer ist erforderlich.
+
+
+
+
+[[examples]]
+== Beispiele
+
+Das folgende Beispiel verwendet SCP, um das Support-Bundle abzurufen:
+
+[listing]
+----
+
+        `$ scp admin@10.10.12.69:/support/support_bundle_20160216_145359.7z .`
+Password: `<maintenance_user_password>`
+support_bundle_20160216_145359.7z   100%  119MB  11.9MB/s   00:10
+----
+Im folgenden Beispiel wird SFTP verwendet, um das Support Bundle abzurufen:
+
+[listing]
+----
+
+        `$ sftp admin@10.10.12.69:/support/support_bundle_20160216_145359.7z .`
+Password: `<maintenance_user_password>`
+Connected to 10.228.212.69.
+Fetching /support/support_bundle_20130216_145359.7z to ./support_bundle_20130216_145359.7z
+/support/support_bundle_20160216_145359.7z
+----

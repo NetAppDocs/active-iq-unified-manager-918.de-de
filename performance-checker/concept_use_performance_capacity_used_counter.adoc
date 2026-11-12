@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_use_performance_capacity_used_counter.html 
+sidebar: sidebar 
+keywords: performance, capacity, counter, manage, performance 
+summary: 'Üblicherweise streben Unternehmen einen Prozentsatz der genutzten Performance-Kapazität von unter 100 % an, um Ressourcen effizient zu nutzen und gleichzeitig zusätzliche Performance-Kapazität zur Unterstützung von Bedarfsspitzen zu reservieren. Mithilfe von Schwellenwertrichtlinien lässt sich anpassen, wann Warnmeldungen für hohe Werte der genutzten Performance-Kapazität gesendet werden.' 
+---
+= Verwenden des Zählers für genutzte Leistungskapazität in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Üblicherweise streben Unternehmen einen Prozentsatz der genutzten Performance-Kapazität von unter 100 % an, um Ressourcen effizient zu nutzen und gleichzeitig zusätzliche Performance-Kapazität zur Unterstützung von Bedarfsspitzen zu reservieren. Mithilfe von Schwellenwertrichtlinien lässt sich anpassen, wann Warnmeldungen für hohe Werte der genutzten Performance-Kapazität gesendet werden.
+
+Sie können auf der Grundlage Ihrer Performanceanforderungen spezifische Ziele festlegen. So könnten beispielsweise Finanzdienstleistungsunternehmen mehr Performancekapazität reservieren, um die rechtzeitige Ausführung von Transaktionen zu gewährleisten. Diese Unternehmen könnten Schwellenwerte für die genutzte Performancekapazität im Bereich von 70-80 Prozent festlegen. Fertigungsunternehmen mit geringeren Margen könnten dagegen weniger Performancekapazität reservieren, wenn sie bereit sind, zugunsten einer besseren Kontrolle der IT-Kosten ein Performance-Risiko einzugehen. Diese Unternehmen könnten Schwellenwerte für die genutzte Performancekapazität im Bereich von 85-95 Prozent festlegen.
+
+Wenn der Wert der verwendeten Performance-Kapazität den in einer benutzerdefinierten Schwellenwertrichtlinie festgelegten Prozentsatz überschreitet, sendet Unified Manager eine Benachrichtigungs-E-Mail und fügt das Ereignis der Seite Event Inventory hinzu. Dadurch können Sie potenzielle Probleme managen, bevor sie sich auf die Performance auswirken. Diese Ereignisse können auch als Indikatoren dafür verwendet werden, dass Sie Workloads innerhalb Ihrer Knoten und Aggregate verschieben und ändern müssen.

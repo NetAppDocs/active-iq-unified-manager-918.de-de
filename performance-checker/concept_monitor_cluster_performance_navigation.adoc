@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_navigation.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, navigation 
+summary: Sie können die Performance aller vom Unified Manager verwalteten Cluster überwachen. Die Überwachung Ihrer Cluster bietet Ihnen einen Überblick über die Cluster- und Objekt-Performance und umfasst die Überwachung von Performance-Ereignissen. Sie können Performance und Ereignisse auf einem allgemeinen Level anzeigen oder Details zur Cluster- und Objekt-Performance sowie zu Performance-Ereignissen genauer untersuchen. 
+---
+= Navigation zur Überwachung der Cluster-Performance in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Performance aller vom Unified Manager verwalteten Cluster überwachen. Die Überwachung Ihrer Cluster bietet Ihnen einen Überblick über die Cluster- und Objekt-Performance und umfasst die Überwachung von Performance-Ereignissen. Sie können Performance und Ereignisse auf einem allgemeinen Level anzeigen oder Details zur Cluster- und Objekt-Performance sowie zu Performance-Ereignissen genauer untersuchen.
+
+Dies ist ein Beispiel für viele mögliche Navigationspfade für die Cluster-Performance:
+
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage* > *Aggregates*.
+. Informationen zur Performance dieser Aggregate finden Sie in der Ansicht „Performance: All Aggregates“.
+. Zur Navigation zur Seite „Aggregate / Performance Explorer“ ist das zu untersuchende Aggregat auszuwählen und auf dessen Namen zu klicken.
+. Optional können Sie im Menü „Ansicht und Vergleich“ weitere Objekte auswählen, die mit diesem Aggregat verglichen werden sollen, und anschließend eines der Objekte dem Vergleichsbereich hinzufügen.
++
+Die Statistiken beider Objekte erscheinen zum Vergleich in den Zählerdiagrammen.
+
+. Im Vergleichsbereich rechts auf der Explorer-Seite lassen sich in einem der Zählerdiagramme über *Zoom View* Details zur Performance Historie für dieses Aggregat anzeigen.
+
+
+image::../media/monitor_cluster_performance.png[Ein Screenshot der Benutzeroberfläche, der zeigt, wie Sie ein bestimmtes Aggregat untersuchen können.]

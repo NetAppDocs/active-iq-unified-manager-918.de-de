@@ -1,0 +1,31 @@
+---
+permalink: performance-checker/task_view_volumes_or_luns_in_same_qos_policy_group.html 
+sidebar: sidebar 
+keywords: view, volumes, luns, same. qos, policy, group 
+summary: Sie können eine Liste der Volumes und LUNs anzeigen, die derselben QoS-Richtliniengruppe zugewiesen wurden. 
+---
+= Anzeige von Volumes oder LUNs innerhalb derselben QoS-Richtliniengruppe in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Liste der Volumes und LUNs anzeigen, die derselben QoS-Richtliniengruppe zugewiesen wurden.
+
+Bei herkömmlichen QoS-Richtliniengruppen, die von mehreren Volumes "`shared`" genutzt werden, kann dies hilfreich sein, um festzustellen, ob bestimmte Volumes den für die Richtliniengruppe definierten Durchsatz übermäßig nutzen. Dies kann auch bei der Entscheidung helfen, ob weitere Volumes zur Richtliniengruppe hinzugefügt werden können, ohne die anderen Volumes negativ zu beeinflussen.
+
+Bei adaptiven QoS-Richtlinien und Unified Manager Performance Service Levels Richtlinien kann es hilfreich sein, alle Volumes oder LUNs anzuzeigen, die eine Richtliniengruppe verwenden, damit ersichtlich ist, welche Objekte betroffen wären, wenn die Konfigurationseinstellungen für die QoS-Richtlinie geändert würden.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage* > *QoS-Richtliniengruppen*.
++
+Standardmäßig wird die Ansicht „Performance: Herkömmliche QoS-Richtliniengruppen“ angezeigt.
+
+. Wenn Sie an der herkömmlichen Richtliniengruppe interessiert sind, bleiben Sie auf dieser Seite. Andernfalls bietet eine der zusätzlichen Ansichtsoptionen die Möglichkeit, alle adaptiven QoS-Richtliniengruppen oder alle QoS-Richtliniengruppen anzuzeigen, die von Unified Manager Performance Service Levels erstellt wurden.
+. In der gewünschten QoS-Richtlinie lassen sich über die Schaltfläche zum Erweitern (image:../media/chevron_down.gif["Symbol für die Schaltfläche „Erweitern“"]) neben dem Namen der QoS Policy Group weitere Details anzeigen.image:../media/adaptive_qos_expanded.gif["Ein Screenshot der Benutzeroberfläche, der alle QoS-Richtliniengruppen anzeigt, die von Unified Manager Performance Service Levels erstellt wurden."]
+. Über den Link „Volumes“ oder „LUNs“ werden die Objekte angezeigt, die diese QoS-Richtlinie verwenden.
++
+Die Seite „Performance-Inventar“ für Volumes oder LUNs zeigt die sortierte Liste der Objekte an, die die QoS-Richtlinie verwenden.
+
+

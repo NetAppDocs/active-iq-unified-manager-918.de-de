@@ -1,0 +1,56 @@
+---
+permalink: events/reference_storage_shelf_events.html 
+sidebar: sidebar 
+keywords: storage, shelf, events, impact area, availability 
+summary: Storage Shelf Ereignisse zeigen an, ob Ihr Storage Shelf Anomalien aufweist, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Storage Shelf Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage Shelf Ereignisse zeigen an, ob Ihr Storage Shelf Anomalien aufweist, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Abnormaler Spannungsbereich(ocumEvtShelfVoltageAbnormal)
+ a| 
+Risiko
+ a| 
+Storage Shelf
+ a| 
+Warnung
+
+
+
+ a| 
+Abnormaler Strombereich(ocumEvtShelfCurrentAbnormal)
+ a| 
+Risiko
+ a| 
+Storage Shelf
+ a| 
+Warnung
+
+
+
+ a| 
+Abnormale Temperatur(ocumEvtShelfTemperatureAbnormal)
+ a| 
+Risiko
+ a| 
+Storage Shelf
+ a| 
+Warnung
+
+|===

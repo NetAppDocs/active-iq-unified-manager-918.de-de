@@ -1,0 +1,92 @@
+---
+permalink: data-protection/concept_types_of_snapmirror_protection.html 
+sidebar: sidebar 
+keywords: types, snapmirror, protection, consistency group, SnapMirror active sync 
+summary: Je nach Deployment Ihrer Storage-Topologie ermöglicht Ihnen Unified Manager die Konfiguration mehrerer Arten von SnapMirror Schutzbeziehungen. Alle Varianten der SnapMirror Datensicherung bieten Failover- und Disaster-Recovery-Schutz, unterscheiden sich jedoch hinsichtlich Performance, Versionsflexibilität und des Schutzes durch mehrere Sicherungskopien. 
+---
+= Arten des SnapMirror Schutzes in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Je nach Deployment Ihrer Storage-Topologie ermöglicht Ihnen Unified Manager die Konfiguration mehrerer Arten von SnapMirror Schutzbeziehungen. Alle Varianten der SnapMirror Datensicherung bieten Failover- und Disaster-Recovery-Schutz, unterscheiden sich jedoch hinsichtlich Performance, Versionsflexibilität und des Schutzes durch mehrere Sicherungskopien.
+
+
+
+[[traditional-snapmirror-asynchronous-protection-relationships]]
+== Traditionelle SnapMirror asynchrone Schutzbeziehungen
+
+Der traditionelle SnapMirror asynchrone Schutz bietet Spiegelungsschutz durch Blockreplikation zwischen Quell- und Ziel-Volumes.
+
+In traditionellen SnapMirror Beziehungen werden Spiegelungsoperationen schneller ausgeführt als in alternativen SnapMirror Beziehungen, da die Spiegelungsoperation auf Blockreplikation basiert. Traditioneller SnapMirror Schutz erfordert jedoch, dass das Zielvolume mit derselben oder einer neueren Minor-Version der ONTAP Software wie das Quellvolume innerhalb derselben Hauptversion ausgeführt wird, z. B. Version 8.x zu 8.x oder 9.x zu 9.x. Die Replikation von einer 9.1 Quelle zu einem 9.0 Ziel wird nicht unterstützt, da auf dem Ziel eine ältere Hauptversion ausgeführt wird.
+
+
+
+[[snapmirror-asynchronous-protection-with-version-flexible-replication]]
+== SnapMirror Asynchroner Schutz mit versionsflexibler Replikation
+
+SnapMirror Asynchroner Schutz mit versionsflexibler Replikation bietet logischen Replikationsspiegelschutz zwischen Quell- und Ziel-Volumes, selbst wenn diese Volumes unter verschiedenen Versionen der Software ONTAP 8.3 oder höher ausgeführt werden (z. B. Version 8.3 bis 8.3.1, oder 8.3 bis 9.1, oder 9.2.2 bis 9.2).
+
+In SnapMirror Beziehungen mit versionsflexibler Replikation werden Spiegelungsvorgänge nicht so schnell ausgeführt wie in herkömmlichen SnapMirror Beziehungen.
+
+Aufgrund der langsameren Ausführung ist SnapMirror mit versionsflexiblem Replikationsschutz in den folgenden Fällen nicht für die Implementierung geeignet:
+
+* Das Quellobjekt enthält mehr als 10 Millionen zu schützende Dateien.
+* Das Wiederherstellungspunktziel für die geschützten Daten beträgt zwei Stunden oder weniger. (Das heißt, das Ziel muss stets gespiegelte, wiederherstellbare Daten enthalten, die höchstens zwei Stunden älter sind als die Daten an der Quelle.)
+
+
+Unter beiden genannten Umständen ist die schnellere, auf Blockreplikation basierende Ausführung des standardmäßigen SnapMirror Schutzes erforderlich.
+
+
+
+[[snapmirror-asynchronous-protection-with-version-flexible-replication-and-backup-option]]
+== SnapMirror Asynchroner Schutz mit versionsflexibler Replikation und Backup-Option
+
+SnapMirror Asynchroner Schutz mit versionsflexibler Replikations- und Backup-Option bietet Spiegelschutz zwischen Quell- und Ziel-Volumes sowie die Möglichkeit, mehrere Kopien der gespiegelten Daten am Ziel zu speichern.
+
+Der Storage Administrator kann festlegen, welche Snapshot-Kopien von der Quelle zum Ziel gespiegelt werden, und auch, wie lange diese Kopien am Ziel aufbewahrt werden sollen, selbst wenn sie an der Quelle gelöscht werden.
+
+In SnapMirror Beziehungen mit versionsflexibler Replikation und Backup-Option werden Spiegelungsvorgänge nicht so schnell ausgeführt wie in herkömmlichen SnapMirror Beziehungen.
+
+
+
+[[snapmirror-unified-replication-mirror-and-vault]]
+== SnapMirror Einheitliche Replikation (Spiegelung und Vault)
+
+SnapMirror Unified Replication ermöglicht die Konfiguration von Disaster Recovery und Archivierung auf demselben Zielvolume. Wie bei SnapMirror führt die einheitliche Datensicherung beim ersten Aufruf einen Basistransfer durch. Ein Basistransfer gemäß der standardmäßigen Datensicherungsstrategie „MirrorAndVault“ erstellt eine Snapshot Kopie des Quellvolumes und überträgt diese Kopie zusammen mit den Datenblöcken, auf die sie verweist, auf das Zielvolume. Wie bei SnapVault umfasst die einheitliche Datensicherung im Basistransfer keine älteren Snapshot Kopien.
+
+
+
+[[snapmirror-synchronous-protection-with-strict-synchronization]]
+== SnapMirror synchroner Schutz mit strenger Synchronisierung
+
+SnapMirror Synchronous protection mit der Synchronisierung "`strict`" stellt sicher, dass das primäre und das sekundäre Volume stets eine exakte Kopie voneinander sind. Wenn beim Versuch, Daten auf das sekundäre Volume zu schreiben, ein Replikationsfehler auftritt, wird die Client-I/O auf dem primären Volume unterbrochen.
+
+
+
+[[snapmirror-synchronous-protection-with-regular-synchronization]]
+== SnapMirror synchroner Schutz mit regelmäßiger Synchronisierung
+
+SnapMirror Synchroner Schutz mit „`regular`“-Synchronisierung erfordert nicht, dass das primäre und das sekundäre Volume stets eine exakte Kopie voneinander sind; dadurch wird die Verfügbarkeit des primären Volumes sichergestellt. Wenn beim Versuch, Daten auf das sekundäre Volume zu schreiben, ein Replikationsfehler auftritt, geraten das primäre und das sekundäre Volume außer Synchronisation, und die Client-E/A wird weiterhin an das primäre Volume geleitet.
+
+[NOTE]
+====
+Die Schaltfläche „Wiederherstellen“ und die Schaltflächen für Beziehungsvorgänge sind bei der Überwachung synchroner Schutzbeziehungen in der Ansicht „Zustand: Alle Volumes“ oder auf der Detailseite „Volume/Health“ nicht verfügbar.
+
+====
+
+
+[[snapmirror-active-sync]]
+== SnapMirror Active Sync
+
+Die SnapMirror active sync Funktion ist mit ONTAP 9.8 und höher verfügbar, und sie kann zum Schutz von Applikationen mit LUNs verwendet werden, sodass ein transparentes Failover von Applikationen möglich ist und die Geschäftskontinuität im Katastrophenfall gewährleistet bleibt.
+
+Es ermöglicht die Identifizierung und Überwachung der synchronen SnapMirror Beziehungen für Konsistenzgruppen (CGs), die auf Clustern und Storage Virtual Machines in Unified Manager verfügbar sind. SnapMirror active sync wird auf AFF Clustern oder All SAN Array (ASA) Clustern unterstützt, wobei die primären und sekundären Cluster entweder AFF oder ASA sein können. SnapMirror active sync schützt Applikationen mit iSCSI oder FCP LUNs.
+
+Wenn Sie die Volumes und LUNs anzeigen, die durch die SnapMirror active sync Beziehung geschützt sind, erhalten Sie eine einheitliche Übersicht über Datensicherungsbeziehungen, Konsistenzgruppen im Volume-Inventar, die Datensicherungstopologie für Konsistenzgruppenbeziehungen sowie historische Daten für Konsistenzgruppenbeziehungen für bis zu ein Jahr. Sie können den Bericht auch herunterladen. Außerdem können Sie die Zusammenfassung der Konsistenzgruppenbeziehungen anzeigen, nach Unterstützung für Konsistenzgruppenbeziehungen suchen und Informationen zu Volumes abrufen, die durch die Konsistenzgruppe geschützt sind.
+
+Auf der Seite „Beziehungen“ können Sie außerdem die Quell- und Ziel-Storage-Objekte sowie deren Beziehung, die von der Consistency Group geschützt werden, sortieren, filtern und den Schutz erweitern.
+
+Weitere Informationen zu SnapMirror active sync sind unter link:https://docs.netapp.com/us-en/ontap/smbc/index.html["ONTAP 9 Dokumentation für Snapmirror active sync (ehemals SM-BC)"] verfügbar.

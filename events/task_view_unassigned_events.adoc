@@ -1,0 +1,25 @@
+---
+permalink: events/task_view_unassigned_events.html 
+sidebar: sidebar 
+keywords: view, unassigned, events 
+summary: Sie können nicht zugewiesene Ereignisse anzeigen und jedes einzelne einem Benutzer zuweisen, der es beheben kann. 
+---
+= Nicht zugewiesene Ereignisse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können nicht zugewiesene Ereignisse anzeigen und jedes einzelne einem Benutzer zuweisen, der es beheben kann.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+.Schritte
+. Im linken Navigationsbereich auf *Event Management* klicken.
++
+Standardmäßig zeigt die Inventarseite „Event Management“ neue und bestätigte Ereignisse an.
+
+. Im Bereich *Filter* erfolgt die Auswahl der Filteroption *Nicht zugewiesen* im Abschnitt *Zugewiesen an*.
+

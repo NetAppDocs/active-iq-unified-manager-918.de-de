@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task_configure_lag_threshold_settings_for_unmanaged_protection.html 
+sidebar: sidebar 
+keywords: configure, lag, threshold settings, unmanaged, protection, relationships 
+summary: Sie können die globalen Standard-Schwellenwerte für den Systemstatus von Verzögerungswarnungen und -fehlern für nicht verwaltete Schutzbeziehungen bearbeiten, sodass Ereignisse in Intervallen generiert werden, die Ihren Anforderungen entsprechen. 
+---
+= Konfiguration von Verzögerungsschwellenwerten für nicht verwaltete Schutzbeziehungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die globalen Standard-Schwellenwerte für den Systemstatus von Verzögerungswarnungen und -fehlern für nicht verwaltete Schutzbeziehungen bearbeiten, sodass Ereignisse in Intervallen generiert werden, die Ihren Anforderungen entsprechen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Die Verzögerungszeit darf das definierte Intervall des Übertragungszeitplans nicht überschreiten. Wenn der Übertragungszeitplan beispielsweise stündlich ist, darf die Verzögerungszeit nicht mehr als eine Stunde betragen. Der Verzögerungsschwellenwert gibt einen Prozentsatz an, den die Verzögerungszeit nicht überschreiten darf. Beim Beispiel von einer Stunde gilt: Wenn der Verzögerungsschwellenwert auf 150 % festgelegt ist, wird ein Ereignis ausgegeben, sobald die Verzögerungszeit mehr als 1,5 Stunden beträgt.
+
+Die in dieser Aufgabe beschriebenen Einstellungen gelten global für alle nicht verwalteten Schutzbeziehungen. Sie können nicht exklusiv für eine einzelne nicht verwaltete Schutzbeziehung festgelegt und angewendet werden.
+
+.Schritte
+. Im linken Navigationsbereich können Sie *Event Thresholds* > *Relationship* auswählen.
+. Bei Bedarf lässt sich der globale Standardprozentsatz für die Warn- oder Fehlerverzögerungszeit erhöhen oder verringern.
+. Damit bei keinem Verzögerungsschwellenwert ein Warn- oder Fehlerereignis ausgelöst wird, muss das Kontrollkästchen neben *Enabled* deaktiviert sein.
+. Auf *Speichern* klicken.
+
+
+*Verwandte Informationen*
+
+link:../config/task_add_users.html["Hinzufügen von Benutzern"]

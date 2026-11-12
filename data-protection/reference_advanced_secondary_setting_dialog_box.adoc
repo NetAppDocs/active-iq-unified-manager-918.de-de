@@ -1,0 +1,88 @@
+---
+permalink: data-protection/reference_advanced_secondary_setting_dialog_box.html 
+sidebar: sidebar 
+keywords: advanced, secondary, settings, dialog box 
+summary: Im Dialogfeld „Erweiterte sekundäre Einstellungen“ können Sie versionsflexible Replikation, Mehrfachkopie-Backups und speicherbezogene Einstellungen auf einem sekundären Volume aktivieren. Das Dialogfeld „Erweiterte sekundäre Einstellungen“ kann beispielsweise verwendet werden, wenn die aktuellen Einstellungen aktiviert, deaktiviert oder geändert werden sollen. 
+---
+= Im Active IQ Unified Manager steht das Dialogfeld „Erweiterte Sekundäreinstellungen“ zur Verfügung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Erweiterte sekundäre Einstellungen“ können Sie versionsflexible Replikation, Mehrfachkopie-Backups und speicherbezogene Einstellungen auf einem sekundären Volume aktivieren. Das Dialogfeld „Erweiterte sekundäre Einstellungen“ kann beispielsweise verwendet werden, wenn die aktuellen Einstellungen aktiviert, deaktiviert oder geändert werden sollen.
+
+Speicherbezogene Einstellungen maximieren die Menge der gespeicherten Daten, darunter Deduplizierung, Datenkomprimierung, automatisches Wachstum und Speicherplatzzusage.
+
+Das Dialogfeld enthält folgende Felder:
+
+* *Aktivierung der versionsflexiblen Replikation*
++
+Ermöglicht die versionsflexible Replikation mit SnapMirror. Die versionsflexible Replikation ermöglicht den SnapMirror Schutz eines Quell-Volumes, selbst wenn auf dem Ziel-Volume eine ältere ONTAP Version als auf dem Quell-Volume ausgeführt wird.
+
++
+** Backup aktivieren
++
+Wenn die versionsflexible Replikation aktiviert ist, werden auch mehrere Snapshot Kopien der SnapMirror Quelldaten an das SnapMirror Ziel übertragen und dort aufbewahrt.
+
+
+
+* *Deduplizierung aktivieren*
++
+Aktiviert die Deduplizierung auf dem sekundären Volume in einer SnapVault Beziehung, sodass doppelte Datenblöcke eliminiert werden und Speicherplatz eingespart wird. Die Deduplizierung kann sinnvoll sein, wenn die Speicherplatzeinsparung mindestens 10 Prozent beträgt und die Daten nicht schnell überschrieben werden. Die Deduplizierung wird häufig für virtualisierte Umgebungen, Dateifreigaben und Sicherungsdaten verwendet. Diese Einstellung ist standardmäßig deaktiviert. Wenn diese Einstellung aktiviert ist, wird dieser Vorgang nach jeder Übertragung initiiert.
+
++
+** Komprimierung aktivieren
++
+Aktiviert die transparente Datenkomprimierung. Die Komprimierung kann verwendet werden, wenn die Speicherplatzersparnis mindestens 10 Prozent beträgt, der potenzielle Mehraufwand akzeptabel ist und ausreichend Systemressourcen zur Verfügung stehen, damit die Komprimierung außerhalb der Spitzenzeiten abgeschlossen werden kann. In einer SnapVault Beziehung ist diese Einstellung standardmäßig deaktiviert. Die Komprimierung ist nur verfügbar, wenn die Deduplizierung ausgewählt ist.
+
+** Inline komprimieren
++
+Ermöglicht sofortige Speicherplatzeinsparungen durch Datenkomprimierung vor dem Schreiben der Daten auf die Festplatte. Inline-Komprimierung kann verwendet werden, wenn Ihr System während der Spitzenzeiten nicht mehr als 50 % ausgelastet ist und wenn das System neue Schreibvorgänge sowie zusätzliche CPU-Leistung während der Spitzenzeiten verarbeiten kann. Diese Einstellung ist nur verfügbar, wenn "`Enable Compression`" ausgewählt ist.
+
+
+
+* *Autogrow aktivieren*
++
+Ermöglicht die automatische Vergrößerung des Ziel-Volume, wenn der Prozentsatz des freien Speicherplatzes unter den angegebenen Schwellenwert fällt, sofern auf dem zugehörigen Aggregat Speicherplatz verfügbar ist.
+
+* *Maximale Größe*
++
+Legt den maximalen Prozentsatz fest, um den ein Volume wachsen kann. Der Standardwert liegt 20 Prozent über der Größe des Quellvolumes. Ein Volume wächst nicht automatisch, wenn seine aktuelle Größe den maximalen Prozentsatz für automatisches Wachstum erreicht oder überschreitet. Dieses Feld ist nur aktiviert, wenn die Einstellung für automatisches Wachstum aktiviert ist.
+
+* *Inkrementgröße*
++
+Gibt die prozentuale Schrittweite an, um die das Volume automatisch anwächst, bevor der maximale Prozentsatz des Quell-Volumes erreicht wird.
+
+* *Speicherplatzzusage*
++
+Stellt sicher, dass auf dem sekundären Volume genügend Speicherplatz zugewiesen wird, damit Datenübertragungen stets erfolgreich sind. Die Einstellung für die Speicherplatzzusage kann eine der folgenden sein:
+
++
+** Datei
+** Volumen
+** Keine + Beispielsweise haben Sie möglicherweise ein 200-GB-Volume, das Dateien mit insgesamt 50 GB enthält; diese Dateien umfassen jedoch nur 10 GB an Daten. Die Volume-Garantie reserviert 200 GB für das Zielvolume, unabhängig vom Inhalt auf der Quelle. Die Dateigarantie reserviert 50 GB, um sicherzustellen, dass ausreichend Speicherplatz für Dateien auf der Quelle vorhanden ist; wenn in diesem Szenario „Keine“ ausgewählt ist, reserviert das Zielvolume nur 10 GB für den tatsächlich von Dateidaten auf der Quelle genutzten Speicherplatz.
+
+
++
+Die Speicherplatzzusage ist standardmäßig auf Volume eingestellt.
+
+
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Anwenden*
++
+Speichert die ausgewählten Effizienzeinstellungen und wendet sie an, wenn Sie im Dialogfeld „Schutz konfigurieren“ auf *Anwenden* klicken.
+
+* *Stornieren*
++
+Verwirft Ihre Auswahl und schließt das Dialogfeld „Advanced Destination Settings“.
+
+

@@ -1,0 +1,456 @@
+---
+permalink: events/reference_storage_vm_events.html 
+sidebar: sidebar 
+keywords: storage, vm events, impact area, availability, configuration, performance, security 
+summary: 'Storage VM Ereignisse liefern Ihnen Informationen über den Status Ihrer Storage VMs (SVMs), sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Wirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad.' 
+---
+= Informationen zu Storage VM Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse für Storage VM (storage virtual machine, auch als SVM bezeichnet) liefern Ihnen Informationen zum Status Ihrer Storage VMs (SVMs), sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungslevel, den Quelltyp und den Schweregrad.
+
+Ein Sternchen (*) kennzeichnet EMS-Ereignisse, die in Unified Manager-Ereignisse umgewandelt wurden.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Storage VM CIFS-Service ausgefallen(ocumEvtVserverCifsServiceStatusDown)
+ a| 
+Vorfall
+ a| 
+SVM
+ a| 
+Kritisch
+
+
+
+ a| 
+SVM CIFS Service nicht konfiguriert (Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+SVM
+ a| 
+Informationen
+
+
+
+ a| 
+Versuche, eine nicht vorhandene CIFS-Freigabe zu verbinden *(nbladeCifsNoPrivShare)
+ a| 
+Vorfall
+ a| 
+SVM
+ a| 
+Kritisch
+
+
+
+ a| 
+CIFS NetBIOS Namenskonflikt *(nbladeCifsNbNameConflict)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+CIFS Shadow Copy Vorgang fehlgeschlagen *(cifsShadowCopyFailure)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Viele CIFS-Verbindungen *(nbladeCifsManyAuths)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Maximale Anzahl CIFS-Verbindungen überschritten *(nbladeCifsMaxOpenSameFile)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Maximale Anzahl der CIFS-Verbindungen pro Benutzer überschritten *(nbladeCifsMaxSessPerUsrConn)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+SVM FC/FCoE-Service ausgefallen(ocumEvtVserverFcServiceStatusDown)
+ a| 
+Vorfall
+ a| 
+SVM
+ a| 
+Kritisch
+
+
+
+ a| 
+SVM iSCSI Service ausgefallen(ocumEvtVserverIscsiServiceStatusDown)
+ a| 
+Vorfall
+ a| 
+SVM
+ a| 
+Kritisch
+
+
+
+ a| 
+NFS-Service der Storage VM ausgefallen(ocumEvtVserverNfsServiceStatusDown)
+ a| 
+Vorfall
+ a| 
+SVM
+ a| 
+Kritisch
+
+
+
+ a| 
+SVM FC/FCoE-Service nicht konfiguriert(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+SVM
+ a| 
+Informationen
+
+
+
+ a| 
+SVM iSCSI Service nicht konfiguriert(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+SVM
+ a| 
+Informationen
+
+
+
+ a| 
+SVM NFS-Dienst nicht konfiguriert(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+SVM
+ a| 
+Informationen
+
+
+
+ a| 
+Storage VM gestoppt(ocumEvtVserverDown)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Warnung
+
+
+
+ a| 
+AV Server ist zu ausgelastet, um neue Scan-Anfragen anzunehmen *(nbladeVscanConnBackPressure)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Keine AV-Server-Verbindung für Virenscan *(nbladeVscanNoScannerConn)
+ a| 
+Vorfall
+ a| 
+SVM
+ a| 
+Kritisch
+
+
+
+ a| 
+Kein AV-Server registriert *(nbladeVscanNoRegdScanner)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Keine reagierende AV-Serververbindung *(nbladeVscanConnInactive)
+ a| 
+Ereignis
+ a| 
+SVM
+ a| 
+Informationen
+
+
+
+ a| 
+Unbefugter Benutzerzugriffsversuch auf den AV-Server *(nbladeVscanBadUserPrivAccess)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Virus vom AV-Server gefunden *(nbladeVscanVirusDetected)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Fehler
+
+|===
+
+
+[[impact-area-configuration]]
+== Wirkungsbereich: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+SVM gefunden(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+SVM
+ a| 
+Informationen
+
+
+
+ a| 
+SVM gelöscht(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Informationen
+
+
+
+ a| 
+SVM umbenannt(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+SVM
+ a| 
+Informationen
+
+|===
+
+
+[[impact-area-performance]]
+== Wirkungsbereich: Performance
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Kritischer Schwellenwert für SVM IOPS überschritten(ocumSvmIopsIncident)
+ a| 
+Vorfall
+ a| 
+SVM
+ a| 
+Kritisch
+
+
+
+ a| 
+SVM IOPS-Warnschwelle überschritten(ocumSvmIopsWarning)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Warnung
+
+
+
+ a| 
+SVM MB/s Kritischer Schwellenwert überschritten(ocumSvmMbpsIncident)
+ a| 
+Vorfall
+ a| 
+SVM
+ a| 
+Kritisch
+
+
+
+ a| 
+SVM MB/s Warnschwelle überschritten(ocumSvmMbpsWarning)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für SVM-Latenz überschritten(ocumSvmLatencyIncident)
+ a| 
+Vorfall
+ a| 
+SVM
+ a| 
+Kritisch
+
+
+
+ a| 
+SVM Latenzwarnungsschwelle überschritten(ocumSvmLatencyWarning)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Warnung
+
+|===
+
+
+[[impact-area-security]]
+== Wirkungsbereich: Sicherheit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Audit-Protokoll deaktiviert(ocumVserverAuditLogDisabled)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Warnung
+
+
+
+ a| 
+Anmeldebanner deaktiviert(ocumVserverLoginBannerDisabled)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Warnung
+
+
+
+ a| 
+SSH verwendet unsichere Cipher(ocumVserverSSHInsecure)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Warnung
+
+
+
+ a| 
+Anmeldebanner geändert(ocumVserverLoginBannerChanged)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Warnung
+
+
+
+ a| 
+Die Anti-Ransomware-Überwachung der Storage VM ist deaktiviert (antiRansomwareSvmStateDisabled)
+ a| 
+Risiko
+ a| 
+SVM
+ a| 
+Warnung
+
+
+
+ a| 
+Die Überwachung von Storage VMs mit Anti-Ransomware ist aktiviert (Lernmodus) (antiRansomwareSvmStateDryrun)
+ a| 
+Ereignis
+ a| 
+SVM
+ a| 
+Informationen
+
+
+
+ a| 
+Storage VM geeignet für die Überwachung von Anti-Ransomware (Lernmodus) (ocumEvtSvmArwCandidate)
+ a| 
+Ereignis
+ a| 
+SVM
+ a| 
+Informationen
+
+|===

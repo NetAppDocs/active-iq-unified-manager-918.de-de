@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/reference_description_of_quotas_dialog_boxes.html 
+sidebar: sidebar 
+keywords: description, quotas, dialog, boxes 
+summary: Das Format der quotenbezogenen E-Mail-Benachrichtigungen und die Regeln für die Angabe von E-Mail-Adressen in der Ansicht „Alle Storage VMs“ auf der Seite „Health“ können konfiguriert werden. 
+---
+= Das Dialogfeld „Kontingente“ in Active IQ Unified Manager kann verwendet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die entsprechende Option auf der Registerkarte „Benutzer- und Gruppenkontingente“ in der Ansicht „Systemstatus: Alle Storage-VMs“ verwenden, um das Format der E-Mail-Benachrichtigung zu konfigurieren, die bei einem kontingentbezogenen Problem gesendet wird, und um Regeln zu konfigurieren, die E-Mail-Adressen basierend auf dem Benutzerkontingent festlegen.

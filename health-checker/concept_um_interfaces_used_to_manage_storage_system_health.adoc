@@ -1,0 +1,34 @@
+---
+permalink: health-checker/concept_um_interfaces_used_to_manage_storage_system_health.html 
+sidebar: sidebar 
+keywords: unified manager, interfaces, manage, storage system, health 
+summary: Dieser Abschnitt enthält Informationen zu den beiden Benutzeroberflächen, die Active IQ Unified Manager zur Fehlerbehebung bei Problemen mit Datenspeicherkapazität, Verfügbarkeit und Schutz bereitstellt. Die beiden Benutzeroberflächen sind die Unified Manager Weboberfläche und die Managementplattform. 
+---
+= Active IQ Unified Manager Schnittstellen dienen zur Verwaltung des Zustands des Speichersystems.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead lead"]
+Diese Abschnitte enthalten Informationen zu den beiden Benutzeroberflächen, die Active IQ Unified Manager zur Fehlerbehebung bei Problemen mit Datenspeicherkapazität, Verfügbarkeit und Schutz bereitstellt. Die beiden Benutzeroberflächen sind die Unified Manager Weboberfläche und die Managementplattform.
+
+Wenn Sie die Schutzfunktionen in Unified Manager nutzen möchten, müssen Sie auch OnCommand Workflow Automation (WFA) installieren und konfigurieren.
+
+
+
+[[unified-manager-web-ui]]
+== Unified Manager Web-Benutzeroberfläche
+
+Die Web-Benutzeroberfläche von Unified Manager ermöglicht es einem Administrator, Clusterprobleme im Zusammenhang mit Storage-Kapazität, Verfügbarkeit und Schutz von Daten zu überwachen und zu beheben.
+
+In diesen Abschnitten werden einige gängige Arbeitsabläufe beschrieben, denen ein Administrator folgen kann, um Probleme mit der Storage-Kapazität, der Datenverfügbarkeit oder dem Schutz zu beheben, die in der Unified Manager Weboberfläche angezeigt werden.
+
+
+
+[[maintenance-console]]
+== Managementplattform
+
+Die Managementplattform von Unified Manager ermöglicht es Administratoren, Betriebssystemprobleme, Probleme bei Versionsaktualisierungen, Benutzerzugriffsprobleme und Netzwerkprobleme im Zusammenhang mit dem Unified Manager Server zu überwachen, zu diagnostizieren und zu beheben. Wenn die Web-Benutzeroberfläche von Unified Manager nicht verfügbar ist, ist die Managementplattform die einzige Zugriffsmöglichkeit auf Unified Manager.
+
+Mithilfe dieser Informationen können Sie auf die Wartungs-Managementplattform zugreifen und damit Probleme im Zusammenhang mit der Funktionsweise des Unified Manager-Servers beheben.

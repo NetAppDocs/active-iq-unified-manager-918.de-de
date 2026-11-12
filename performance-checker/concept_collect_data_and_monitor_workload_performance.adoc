@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_collect_data_and_monitor_workload_performance.html 
+sidebar: sidebar 
+keywords: collect, data, monitor, workload, performance 
+summary: Unified Manager erfasst und analysiert alle 5 Minuten die Aktivität der Workloads, um Performance-Ereignisse zu identifizieren, und erkennt alle 15 Minuten Konfigurationsänderungen. Er speichert historische Performance- und Ereignisdaten im 5-Minuten-Takt für maximal 30 Tage und verwendet diese Daten, um die zu erwartende Latenzspanne für alle überwachten Workloads vorherzusagen. 
+---
+= Datenerfassung und Überwachung der Workload-Performance in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager erfasst und analysiert alle 5 Minuten die Aktivität der Workloads, um Performance-Ereignisse zu identifizieren, und erkennt alle 15 Minuten Konfigurationsänderungen. Er speichert historische Performance- und Ereignisdaten im 5-Minuten-Takt für maximal 30 Tage und verwendet diese Daten, um die zu erwartende Latenzspanne für alle überwachten Workloads vorherzusagen.
+
+Unified Manager muss mindestens drei Tage lang Arbeitslastaktivitäten erfassen, bevor die Analyse beginnen und die Latenzprognose für die E/A-Reaktionszeit auf der Seite „Arbeitslastanalyse“ und auf der Seite „Ereignisdetails“ angezeigt werden kann. Während dieser Erfassungsphase werden in der Latenzprognose nicht alle Änderungen angezeigt, die durch die Arbeitslastaktivität auftreten. Nach der Erfassung von drei Tagen Aktivität aktualisiert Unified Manager die Latenzprognose alle 24 Stunden um 0:00 Uhr, um Änderungen der Arbeitslastaktivität zu berücksichtigen und einen präziseren dynamischen Performance-Schwellenwert festzulegen.
+
+Während der ersten vier Tage, in denen Unified Manager eine Arbeitslast überwacht, wird die Latenzprognose für diese Arbeitslast nicht in den Latenzdiagrammen angezeigt, wenn seit der letzten Datenerfassung mehr als 24 Stunden vergangen sind. Ereignisse, die vor der letzten Erfassung erkannt wurden, sind weiterhin verfügbar.
+
+[NOTE]
+====
+Die Umstellung auf die Sommerzeit ändert die Systemzeit, wodurch sich die Latenzprognose der Performance-Statistiken für überwachte Workloads ändert. Unified Manager beginnt umgehend mit der Korrektur der Latenzprognose, was etwa 15 Tage in Anspruch nimmt. Während dieser Zeit kann Unified Manager weiterhin verwendet werden, aber da Unified Manager die Latenzprognose zum Erkennen dynamischer Ereignisse verwendet, sind einige Ereignisse möglicherweise nicht korrekt. Ereignisse, die vor der Zeitumstellung erkannt wurden, sind davon nicht betroffen.
+
+====

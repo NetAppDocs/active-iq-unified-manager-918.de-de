@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_add_group_actions.html 
+sidebar: sidebar 
+keywords: add, group, actions 
+summary: Sie können Gruppenaktionen konfigurieren, die auf Storage Objekte in einer Gruppe angewendet werden sollen. Durch die Konfiguration von Aktionen für eine Gruppe sparen Sie Zeit, da Sie diese Aktionen nicht jedem Objekt einzeln hinzufügen müssen. 
+---
+= Hinzufügen von Gruppenaktionen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Gruppenaktionen konfigurieren, die auf Storage Objekte in einer Gruppe angewendet werden sollen. Durch die Konfiguration von Aktionen für eine Gruppe sparen Sie Zeit, da Sie diese Aktionen nicht jedem Objekt einzeln hinzufügen müssen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage Management* > *Gruppen*.
+. Auf der Registerkarte *Group Actions* steht die Option *Add* zur Auswahl.
+. Im Dialogfeld *Gruppenaktion hinzufügen* werden ein Name und eine Beschreibung für die Aktion eingegeben.
+. Im Menü *Group* erfolgt die Auswahl der Gruppe, für die die Aktion konfiguriert werden soll.
+. Im Menü *Aktionstyp* wird ein Aktionstyp ausgewählt.
++
+Das Dialogfeld erweitert sich, sodass Sie den ausgewählten Aktionstyp mit den erforderlichen Parametern konfigurieren können.
+
+. Zur Konfiguration einer Gruppenaktion sind geeignete Werte für die erforderlichen Parameter einzugeben.
+. Klicken Sie auf *Add*.
+

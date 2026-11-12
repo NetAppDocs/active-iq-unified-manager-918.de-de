@@ -1,0 +1,177 @@
+---
+permalink: events/reference_event_management_inventory_page.html 
+sidebar: sidebar 
+keywords: event, management, inventory, page, filter, components, xommand buttons, list 
+summary: Die Bestandsseite von Event Management ermöglicht Ihnen die Anzeige einer Liste der aktuellen Ereignisse und ihrer Eigenschaften. Sie können Aufgaben wie das Bestätigen, Beheben und Zuweisen von Ereignissen ausführen. Außerdem können Sie für bestimmte Ereignisse eine Warnung hinzufügen. 
+---
+= Informationen zur Inventarseite für die Ereignisverwaltung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Bestandsseite von Event Management ermöglicht Ihnen die Anzeige einer Liste der aktuellen Ereignisse und ihrer Eigenschaften. Sie können Aufgaben wie das Bestätigen, Beheben und Zuweisen von Ereignissen ausführen. Außerdem können Sie für bestimmte Ereignisse eine Warnung hinzufügen.
+
+Die Informationen auf dieser Seite aktualisieren sich alle 5 Minuten automatisch, damit die aktuellsten neuen Ereignisse angezeigt werden.
+
+
+
+[[filter-components]]
+== Filterkomponenten
+
+Damit lassen sich die in der Ereignisliste angezeigten Informationen anpassen. Sie können die Liste der angezeigten Ereignisse mithilfe der folgenden Komponenten verfeinern:
+
+* Menü „Ansicht“ zum Auswählen aus einer vordefinierten Liste von Filteroptionen.
++
+Dies umfasst Elemente wie alle aktiven (neuen und bestätigten) Ereignisse, aktive Performance Ereignisse, mir (dem angemeldeten Benutzer) zugewiesene Ereignisse und alle während sämtlicher Wartungsfenster generierten Ereignisse.
+
+* Suchbereich zum Verfeinern der Ereignisliste durch Eingabe vollständiger oder teilweiser Begriffe.
+* Schaltfläche „Filter“, die den Filterbereich öffnet, in dem Sie aus allen verfügbaren Feldern und Feldattributen auswählen können, um die Ereignisliste einzugrenzen.
+
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Zuweisen an*
++
+Hiermit können Sie den Benutzer auswählen, dem das Ereignis zugewiesen wird. Wenn Sie einem Benutzer ein Ereignis zuweisen, erscheinen der Benutzername und der Zeitpunkt der Zuweisung in der Ereignisliste für die ausgewählten Ereignisse.
+
++
+** Mich
++
+Weist das Ereignis dem aktuell angemeldeten Benutzer zu.
+
+** Ein anderer Benutzer
++
+Es wird das Dialogfeld „Besitzer zuweisen“ angezeigt, in dem Sie das Ereignis anderen Benutzern zuweisen oder erneut zuweisen können. Sie können die Zuweisung von Ereignissen auch aufheben, indem Sie das Feld „Besitzer“ leer lassen.
+
+
+
+* *Bestätigen*
++
+Bestätigt die ausgewählten Ereignisse.
+
++
+Wenn Sie ein Ereignis bestätigen, werden Ihr Benutzername und der Zeitpunkt, zu dem Sie das Ereignis bestätigt haben, in der Ereignisliste für die ausgewählten Ereignisse hinzugefügt. Wenn Sie ein Ereignis bestätigen, sind Sie für die Verwaltung dieses Ereignisses verantwortlich.
+
++
+[NOTE]
+====
+Information Ereignisse können nicht quittiert werden.
+
+====
+* *Als gelöst markieren*
++
+Ermöglicht es Ihnen, den Ereignisstatus in „Gelöst“ zu ändern.
+
++
+Wenn Sie ein Ereignis beheben, werden Ihr Benutzername und der Zeitpunkt der Behebung in der Ereignisliste für die ausgewählten Ereignisse hinzugefügt. Nachdem Sie eine Korrekturmaßnahme für das Ereignis ergriffen haben, müssen Sie das Ereignis als behoben markieren.
+
+* *Warnung hinzufügen*
++
+Das Dialogfeld „Warnung hinzufügen“ wird angezeigt, in dem Sie Warnungen für die ausgewählten Ereignisse hinzufügen können.
+
+* *Berichte*
++
+Ermöglicht den Export von Details der aktuellen Ereignisansicht in eine Datei mit kommagetrennten Werten (.csv) oder ein PDF-Dokument.
+
+* *Spaltenauswahl ein-/ausblenden*
++
+Ermöglicht die Auswahl der auf der Seite angezeigten Spalten sowie ihrer Anzeigereihenfolge.
+
+
+
+
+
+[[events-list]]
+== Ereignisliste
+
+Zeigt Details aller Ereignisse geordnet nach Auslösezeitpunkt an.
+
+Standardmäßig wird die Ansicht „Alle aktiven Ereignisse“ angezeigt, um die neuen und quittierten Ereignisse der letzten sieben Tage mit dem Impact Level „Vorfall“ oder „Risiko“ anzuzeigen.
+
+* *Auslösezeit*
++
+Der Zeitpunkt, zu dem das Ereignis ausgelöst wurde.
+
+* *Schweregrad*
++
+Der Schweregrad des Ereignisses: Kritisch (image:../media/sev_critical_um60.png[""]), Fehler (image:../media/sev_error_um60.png[""]), Warnung (image:../media/sev_warning_um60.png[""]) und Information (image:../media/sev_information_um60.gif[""]).
+
+* *Zustand*
++
+Der Ereignisstatus: Neu, Bestätigt, Behoben oder Veraltet.
+
+* *Auswirkungslevel*
++
+Der Auswirkungs-Level des Ereignisses: Vorfall, Risiko, Ereignis oder Upgrade.
+
+* *Auswirkungsbereich*
++
+Der Wirkungsbereich des Ereignisses: Verfügbarkeit, Kapazität, Performance, Schutz, Konfiguration oder Sicherheit.
+
+* *Name*
++
+Der Name des Ereignisses. Durch Auswählen des Namens wird die Seite mit den Ereignisdetails für dieses Ereignis angezeigt.
+
+* *Quelle*
++
+Der Name des Objekts, bei dem das Ereignis aufgetreten ist. Die Auswahl des Namens zeigt die Seite mit den Systemstatus- oder Performance-Details für dieses Objekt an.
+
++
+Bei einem Verstoß gegen eine gemeinsame QoS-Richtlinie wird in diesem Feld nur das Workload-Objekt angezeigt, das die meisten IOPS oder MB/s verbraucht. Weitere Workloads, die diese Richtlinie verwenden, werden auf der Seite mit den Ereignisdetails angezeigt.
+
+* *Quellentyp*
++
+Der Objekttyp (z. B. Storage VM, Volume oder Qtree), dem das Ereignis zugeordnet ist.
+
+* *Zugewiesen an*
++
+Der Name des Benutzers, dem das Ereignis zugewiesen ist.
+
+* *Ereignisursprung*
++
+Unabhängig davon, ob das Ereignis vom "Active IQ Portal" oder direkt von "Active IQ Unified Manager" stammt.
+
+* *Anmerkungsname*
++
+Der Name der Annotation, die dem Storage Objekt zugewiesen ist.
+
+* *Anmerkungen*
++
+Die Anzahl der für ein Ereignis hinzugefügten Notizen.
+
+* *Ausstehende Tage*
++
+Die Anzahl der Tage seit der erstmaligen Generierung des Ereignisses.
+
+* *Zugewiesene Zeit*
++
+Die seit der Zuweisung des Ereignisses an einen Benutzer verstrichene Zeit. Wenn mehr als eine Woche vergangen ist, wird der Zeitstempel angezeigt, zu dem das Ereignis einem Benutzer zugewiesen wurde.
+
+* *Bestätigt von*
++
+Der Name des Benutzers, der das Ereignis bestätigt hat. Das Feld ist leer, wenn das Ereignis nicht bestätigt wurde.
+
+* *Bestätigte Zeit*
++
+Die seit der Bestätigung des Ereignisses verstrichene Zeit. Wenn mehr als eine Woche vergangen ist, wird der Zeitstempel angezeigt, zu dem das Ereignis bestätigt wurde.
+
+* *Gelöst durch*
++
+Der Name des Benutzers, der das Ereignis behoben hat. Das Feld ist leer, wenn das Ereignis nicht behoben ist.
+
+* *Zeitpunkt der Behebung*
++
+Die seit der Behebung des Ereignisses verstrichene Zeit. Wenn mehr als eine Woche vergangen ist, wird der Zeitstempel angezeigt, zu dem das Ereignis behoben wurde.
+
+* *Zeitpunkt der Außerkraftsetzung*
++
+Der Zeitpunkt, an dem der Status des Ereignisses zu Obsolete wurde.
+
+

@@ -1,0 +1,25 @@
+---
+permalink: data-protection/task_create_resource_pools.html 
+sidebar: sidebar 
+keywords: creating, resource, pools 
+summary: Im Dialogfeld „Ressourcenpool erstellen“ können Sie Aggregate zu Provisionierungszwecken gruppieren. 
+---
+= In Active IQ Unified Manager können Ressourcenpools erstellt werden.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Ressourcenpool erstellen“ können Sie Aggregate zu Provisionierungszwecken gruppieren.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+.Schritte
+Ressourcenpools können Aggregate aus verschiedenen Clustern enthalten, aber dasselbe Aggregat kann nicht zu verschiedenen Ressourcenpools gehören.
+
+. Im linken Navigationsbereich erfolgt die Auswahl von *Protection* > *Resource Pools*.
+. Auf der Seite *Ressourcenpools* erfolgt ein Klick auf *Erstellen*.
+. Im Dialogfeld *Ressourcenpool erstellen* können Sie gemäß den Anweisungen einen Namen und eine Beschreibung angeben sowie Aggregate als Mitglieder zu dem Ressourcenpool hinzufügen, den Sie erstellen möchten.
+

@@ -1,0 +1,45 @@
+---
+permalink: events/reference_inodes_events.html 
+sidebar: sidebar 
+keywords: inodes, events, impact area, capacity 
+summary: Inode-Ereignisse liefern Informationen dazu, wann ein Inode voll oder nahezu voll ist, sodass eine Überwachung auf potenzielle Probleme möglich ist. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungs-Level, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Inode-Ereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Inode-Ereignisse liefern Informationen dazu, wann ein Inode voll oder nahezu voll ist, sodass eine Überwachung auf potenzielle Probleme möglich ist. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungs-Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-capacity]]
+== Wirkungsbereich: Kapazität
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Inodes fast voll(ocumEvtInodesAlmostFull)
+ a| 
+Risiko
+ a| 
+Volumen
+ a| 
+Warnung
+
+
+
+ a| 
+Inodes voll (ocumEvtInodesFull)
+ a| 
+Risiko
+ a| 
+Volumen
+ a| 
+Fehler
+
+|===

@@ -1,0 +1,27 @@
+---
+permalink: health-checker/task_generate_hardware_inventory_report_for_contract_renewal.html 
+sidebar: sidebar 
+keywords: contract, renewal, cluster, inventory report, hardware, generate 
+summary: Für die Vertragsverlängerung an sicheren Standorten, die nicht mit der Active IQ Plattform verbunden sind, kann ein Bericht mit Cluster- und Knotenhardwaredetails erstellt werden. 
+---
+= Generieren eines Hardwareinventarberichts für die Vertragsverlängerung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, der eine vollständige Liste der Cluster- und Node-Informationen enthält, z. B. Hardware-Modellnummern und Seriennummern, Festplattentypen und -anzahlen, installierte Lizenzen und mehr. Dieser Bericht ist für die Vertragsverlängerung an sicheren Standorten ("`dark`" Sites) hilfreich, die nicht mit der NetAppActive IQ Plattform verbunden sind.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+.Schritte
+. Im linken Navigationsbereich können Sie *Storage* > *Nodes* auswählen.
+. Der nächste Schritt ist der Wechsel zur Ansicht *Zustand: Alle Knoten* oder *Performance: Alle Knoten*.
+. Die Auswahl erfolgt über *Berichte* > *** > **Hardware-Inventarbericht*.
++
+Der Hardwareinventarbericht steht als .csv-Datei mit vollständigen Informationen zum aktuellen Datum zum Herunterladen bereit.
+
+. Diese Informationen sind für Ihren NetApp Support-Ansprechpartner zur Vertragsverlängerung bestimmt.
+

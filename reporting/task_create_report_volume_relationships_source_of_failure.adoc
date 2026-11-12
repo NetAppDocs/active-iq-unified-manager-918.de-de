@@ -1,0 +1,44 @@
+---
+permalink: reporting/task_create_report_volume_relationships_source_of_failure.html 
+sidebar: sidebar 
+keywords: create, report, group, volume, relationships, source, failure 
+summary: Es kann ein Bericht erstellt werden, der Volumes nach dem Grund gruppiert, aus dem sich die Beziehung in einem fehlerhaften Zustand befindet. 
+---
+= Erstellung eines Berichts zur Gruppierung von Volume-Beziehungen nach Fehlerursache in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es kann ein Bericht erstellt werden, der Volumes nach dem Grund gruppiert, aus dem sich die Beziehung in einem fehlerhaften Zustand befindet.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mit den folgenden Schritten können Sie eine benutzerdefinierte Ansicht erstellen, die Volumes nach Fehlerursache gruppiert, und anschließend die Erstellung eines Berichts für diese Ansicht planen.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Beziehung* > *Alle Beziehungen*.
+. Mit *Show/Hide* lässt sich sicherstellen, dass die Spalten „`Relationship Health`“ und „`Unhealthy Reason`“ in der Ansicht erscheinen.
++
+Durch das Hinzufügen oder Entfernen weiterer Spalten lässt sich eine für Ihren Bericht wichtige Ansicht erstellen.
+
+. Die Spalten „`Systemstatus der Beziehung`“ und „`Grund für den fehlerhaften Zustand`“ lassen sich in die Nähe der Spalte „`Status`“ ziehen.
+. Nach dem Klick auf das Filtersymbol folgt das Hinzufügen des folgenden Filters und anschließend der Klick auf *Apply Filter*:
++
+** Der Systemstatus der Beziehung ist schlecht
+
+
+. Mit einem Klick auf den oberen Bereich der Spalte „`Unhealthy Reason`“ lässt sich die Gruppierung der Volume-Beziehungen nach Fehlerquelle vornehmen.
+. Für die Ansicht empfiehlt sich ein spezifischer Name, der widerspiegelt, was in der Ansicht angezeigt wird, zum Beispiel "`Vol Beziehungen nach Ausfall`".
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Anhand der im Bericht dargestellten Ergebnisse können Sie die Ursache und die Auswirkungen der einzelnen Fehlertypen untersuchen.

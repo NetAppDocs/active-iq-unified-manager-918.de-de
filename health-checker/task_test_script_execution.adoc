@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_test_script_execution.html 
+sidebar: sidebar 
+keywords: test, script, execution 
+summary: Sie können überprüfen, ob Ihr Skript korrekt ausgeführt wird, wenn eine Warnung für ein Storage-Objekt generiert wird. 
+---
+= Ausführung des Testskripts in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können überprüfen, ob Ihr Skript korrekt ausgeführt wird, wenn eine Warnung für ein Storage-Objekt generiert wird.
+
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen ein Skript im unterstützten Dateiformat in Unified Manager hochgeladen haben.
+
+
+.Schritte
+. Im linken Navigationsbereich wird *Storage Management* > *Scripts* ausgewählt.
+. Auf der Seite „Skripte“ erfolgt das Hinzufügen Ihres Testskripts.
+. Im linken Navigationsbereich auf *Storage Management* > *Alert Setup* klicken.
+. Auf der Seite *Alert Setup* können Sie eine der folgenden Aktionen auswählen:
++
+[cols="2*"]
+|===
+| Zu... | Folgendes ist zu tun... 
+
+
+ a| 
+Hinzufügen einer Benachrichtigung
+ a| 
+.. Klicken Sie auf *Add*.
+.. Im Abschnitt „Aktionen“ können Sie die Warnung Ihrem Testskript zuordnen.
+
+
+
+
+ a| 
+Eine Warnmeldung bearbeiten
+ a| 
+.. Eine Benachrichtigung auswählen und dann auf *Bearbeiten* klicken.
+.. Im Abschnitt „Aktionen“ können Sie die Warnung Ihrem Testskript zuordnen.
+
+
+|===
+. Auf *Speichern* klicken.
+. Auf der Seite *Alert Setup* den hinzugefügten oder geänderten Alarm auswählen und anschließend auf *Test* klicken.
++
+Das Skript wird mit dem Argument "`-test`" ausgeführt, und ein Benachrichtigungsalarm wird an die E-Mail-Adressen gesendet, die beim Erstellen des Alarms angegeben wurden.
+
+

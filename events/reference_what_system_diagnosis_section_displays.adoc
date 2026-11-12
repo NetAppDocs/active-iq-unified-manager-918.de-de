@@ -1,0 +1,29 @@
+---
+permalink: events/reference_what_system_diagnosis_section_displays.html 
+sidebar: sidebar 
+keywords: system, diagnosis, section, displays 
+summary: Der Abschnitt „Systemdiagnose“ auf der Seite mit den Ereignisdetails bietet Informationen, die Ihnen bei der Diagnose von Problemen helfen können, die möglicherweise für das Ereignis verantwortlich waren. 
+---
+= Informationen zur Systemdiagnose in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Abschnitt „Systemdiagnose“ auf der Seite mit den Ereignisdetails bietet Informationen, die Ihnen bei der Diagnose von Problemen helfen können, die möglicherweise für das Ereignis verantwortlich waren.
+
+Dieser Bereich wird nur bei einigen Ereignissen angezeigt.
+
+Einige Performance Ereignisse liefern Diagramme, die für das jeweils ausgelöste Ereignis relevant sind. Dazu gehören in der Regel ein IOPS- oder MB/s-Diagramm sowie ein Latenzdiagramm für die vorangegangenen zehn Tage. In dieser Anordnung lässt sich erkennen, welche Storage Komponenten die Latenz am stärksten beeinflussen oder von der Latenz betroffen sind, wenn das Ereignis aktiv ist.
+
+Bei dynamischen Performance-Ereignissen werden folgende Diagramme angezeigt:
+
+* Workload-Latenz - Zeigt den Verlauf der Latenz für die wichtigsten Opfer-, Bully- oder Shark-Workloads an der Komponente mit Ressourcenkonflikt an.
+* Workload-Aktivität - Zeigt Details zur Workload-Nutzung der Clusterkomponente bei Ressourcenkonflikten an.
+* Ressourcenaktivität - Anzeige historischer Performance Statistiken für die Clusterkomponente im Engpass.
+
+
+Andere Diagramme werden angezeigt, wenn einige Clusterkomponenten um Ressourcen konkurrieren.
+
+Andere Ereignisse liefern eine kurze Beschreibung der Art der Analyse, die das System für das Storage Objekt durchführt. In manchen Fällen gibt es bei systemdefinierten Performance-Richtlinien, die mehrere Performance-Zähler analysieren, eine oder mehrere Zeilen, eine für jede analysierte Komponente. In diesem Szenario zeigt ein grünes oder rotes Symbol neben der Diagnose an, ob in dieser bestimmten Diagnose ein Problem gefunden wurde oder nicht.

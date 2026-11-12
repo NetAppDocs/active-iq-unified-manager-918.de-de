@@ -1,0 +1,33 @@
+---
+permalink: health-checker/concept_what_database_restore_is.html 
+sidebar: sidebar 
+keywords: unified manager, database, restore 
+summary: Die Wiederherstellung einer MySQL-Datenbank ist der Vorgang, bei dem eine vorhandene Unified Manager Sicherungsdatei auf demselben oder auf einem anderen Unified Manager Server wiederhergestellt wird. Sie führen den Wiederherstellungsvorgang über die Unified Manager Wartungs-Managementplattform aus. 
+---
+= Informationen zur Wiederherstellung der Datenbank in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Wiederherstellung einer MySQL-Datenbank ist der Vorgang, bei dem eine vorhandene Unified Manager Sicherungsdatei auf demselben oder auf einem anderen Unified Manager Server wiederhergestellt wird. Sie führen den Wiederherstellungsvorgang über die Unified Manager Wartungs-Managementplattform aus.
+
+Wenn Sie eine Wiederherstellung auf demselben (lokalen) System durchführen und alle Sicherungsdateien lokal gespeichert sind, können Sie die Wiederherstellungsoption mit dem Standardspeicherort ausführen. Wenn Sie eine Wiederherstellung auf einem anderen Unified Manager System (einem Remote-System) durchführen, müssen Sie die Sicherungsdatei oder die Sicherungsdateien aus dem sekundären Storage auf die lokale Festplatte kopieren, bevor Sie die Wiederherstellungsoption ausführen.
+
+Während des Wiederherstellungsprozesses werden Sie von Unified Manager abgemeldet. Sie können sich nach Abschluss des Wiederherstellungsprozesses wieder im System anmelden.
+
+Wenn Sie das Sicherungsabbild auf einem neuen Server wiederherstellen, müssen Sie nach Abschluss der Wiederherstellung ein neues HTTPS-Sicherheitszertifikat generieren und den Unified Manager Server neu starten. Gegebenenfalls müssen Sie auch die SAML-Authentifizierungseinstellungen neu konfigurieren, wenn Sie das Sicherungsabbild auf einem neuen Server wiederherstellen.
+
+[NOTE]
+====
+Alte Sicherungsdateien können nach einem Upgrade von Unified Manager auf eine neuere Softwareversion nicht mehr zur Wiederherstellung eines Images verwendet werden. Um Speicherplatz zu sparen, werden beim Upgrade von Unified Manager alle alten Sicherungsdateien außer der neuesten automatisch gelöscht.
+
+====
+*Verwandte Informationen*
+
+link:../config/task_generate_an_https_security_certificate_ocf.html["Generieren eines HTTPS-Sicherheitszertifikats"]
+
+link:../config/task_enable_saml_authentication_um.html["Aktivieren der SAML-Authentifizierung"]
+
+link:../config/concept_authentication_with_active_directory_or_openldap.html["Authentifizierung mit Active Directory oder OpenLDAP"]

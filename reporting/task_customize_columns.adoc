@@ -1,0 +1,23 @@
+---
+permalink: reporting/task_customize_columns.html 
+sidebar: sidebar 
+keywords: customize, columns 
+summary: Mit Show/Hide können die Spalten ausgewählt werden, die im Bericht verwendet werden sollen. Die Spalten auf der Inventarseite können per Drag-and-drop neu angeordnet werden. 
+---
+= Spalten in einem Bericht in Active IQ Unified Manager anpassen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit *Show/Hide* können Sie die Spalten auswählen, die Sie in Ihrem Bericht verwenden möchten. Sie können die Spalten auf der Inventarseite per Drag-and-drop neu anordnen.
+
+.Schritte
+. Mit *Anzeigen/Ausblenden* lassen sich Spalten hinzufügen oder entfernen.
++
+image::../media/show_hide_3.png[Ein Screenshot der Benutzeroberfläche, der zeigt, wie sich Spalten hinzufügen oder entfernen lassen.]
+
+. Auf der Inventarseite können Sie die Spalten per Drag & Drop in die gewünschte Reihenfolge für Ihren Bericht anordnen.
+. Zum Speichern Ihrer Änderungen ist die Benennung der nicht gespeicherten Ansicht erforderlich.
+

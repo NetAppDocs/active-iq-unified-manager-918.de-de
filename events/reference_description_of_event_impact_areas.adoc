@@ -1,0 +1,43 @@
+---
+permalink: events/reference_description_of_event_impact_areas.html 
+sidebar: sidebar 
+keywords: description, event, impact, areas 
+summary: 'Ereignisse sind in sechs Auswirkungsbereiche (Verfügbarkeit, Kapazität, Konfiguration, Performance, Schutz und Sicherheit) eingeteilt, sodass Sie sich auf die Arten von Ereignissen konzentrieren können, für die Sie verantwortlich sind.' 
+---
+= Informationen zu Ereignisauswirkungsbereichen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse sind in sechs Auswirkungsbereiche (Verfügbarkeit, Kapazität, Konfiguration, Performance, Schutz und Sicherheit) eingeteilt, sodass Sie sich auf die Arten von Ereignissen konzentrieren können, für die Sie verantwortlich sind.
+
+* *Verfügbarkeit*
++
+Verfügbarkeitsereignisse benachrichtigen Sie, wenn ein Storage-Objekt offline geht, ein Protokolldienst ausfällt, ein Problem mit Storage Failover auftritt oder ein Hardwareproblem auftritt.
+
+* *Kapazität*
++
+Kapazitätsereignisse benachrichtigen Sie, wenn Ihre Aggregate, Volumes, LUNs oder Namespaces sich einer Größenschwelle nähern oder diese erreicht haben, oder wenn die Wachstumsrate für Ihre Umgebung ungewöhnlich ist.
+
+* *Konfiguration*
++
+Konfigurationsereignisse informieren Sie über die Erkennung, Löschung, Hinzufügung, Entfernung oder Umbenennung Ihrer Storage Objekte. Konfigurationsereignisse haben ein Auswirkungslevel von Event und den Typ des Schweregrads Information.
+
+* *Leistung*
++
+Performance-Ereignisse informieren Sie über Ressourcen-, Konfigurations- oder Aktivitätsbedingungen in Ihrem Cluster, die sich negativ auf die Geschwindigkeit der Datenspeicherung oder des Datenabrufs bei Ihren überwachten Storage-Objekten auswirken könnten.
+
+* *Schutz*
++
+Schutzereignisse benachrichtigen Sie über Incidents oder Risiken im Zusammenhang mit SnapMirror Beziehungen, Probleme mit der Zielkapazität, Probleme mit SnapVault Beziehungen oder Probleme mit Schutzaufträgen. Alle ONTAP Objekte, insbesondere Aggregate, Volumes und SVMs, die sekundäre Volumes und Schutzbeziehungen hosten, zählen zum Schutzauswirkungsbereich.
+
+* *Sicherheit*
++
+Sicherheitsereignisse informieren Sie darüber, wie sicher Ihre ONTAP Cluster, Storage Virtual Machines (SVMs) und Volumes auf der Grundlage der in der https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp Security Hardening Guide für ONTAP 9"^] definierten Parameter sind.
+
++
+Zusätzlich umfasst dieser Bereich Upgrade-Ereignisse, die von der Active IQ Plattform gemeldet werden.
+
+

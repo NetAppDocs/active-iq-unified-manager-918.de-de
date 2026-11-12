@@ -1,0 +1,37 @@
+---
+permalink: performance-checker/task_view_performance_capacity_counter_charts_to_identify_issues.html 
+sidebar: sidebar 
+keywords: view, performance, capacity, counter charts, identify, issues 
+summary: Auf der Seite „Performance Explorer“ können Sie Diagramme zur genutzten Performance Kapazität für Knoten und Aggregate anzeigen. Dadurch können Sie detaillierte Daten zur Performance Kapazität der ausgewählten Knoten und Aggregate für einen bestimmten Zeitraum anzeigen. 
+---
+= Anzeigen von Leistungskapazitätszählerdiagrammen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Performance Explorer“ können Sie Diagramme zur genutzten Performance Kapazität für Knoten und Aggregate anzeigen. Dadurch können Sie detaillierte Daten zur Performance Kapazität der ausgewählten Knoten und Aggregate für einen bestimmten Zeitraum anzeigen.
+
+Das Standard-Zählerdiagramm zeigt die Werte der genutzten Performance-Kapazität für die ausgewählten Knoten oder Aggregate an. Das Aufschlüsselungs-Zählerdiagramm zeigt die Gesamtwerte der Performance-Kapazität für das Stammobjekt, getrennt nach der Nutzung durch Benutzerprotokolle und Hintergrundsystemprozesse. Zusätzlich wird auch der Umfang der freien Performance-Kapazität angezeigt.
+
+[NOTE]
+====
+Da einige Hintergrundaktivitäten im Zusammenhang mit System- und Datenmanagement als Benutzer-Workloads identifiziert und als Benutzerprotokolle kategorisiert werden, kann der Anteil der Benutzerprotokolle künstlich hoch erscheinen, wenn diese Prozesse ausgeführt werden. Diese Prozesse laufen typischerweise um Mitternacht, wenn die Clusterauslastung gering ist. Falls um Mitternacht ein Anstieg der Benutzerprotokollaktivität zu beobachten ist, sollte geprüft werden, ob Cluster-Backup-Jobs oder andere Hintergrundaktivitäten für diese Zeit konfiguriert sind.
+
+====
+.Schritte
+. Auf der *Landing* page eines Knotens oder Aggregats steht die Registerkarte *Explorer* zur Auswahl.
+. Im Bereich *Zählerdiagramme* können Sie *Diagramme auswählen* anklicken und anschließend das Diagramm *Perf. Verwendete Kapazität* auswählen.
+. Nach unten scrollen, bis das Diagramm angezeigt wird.
++
+Die Farben im Standarddiagramm zeigen an, wann sich das Objekt im optimalen Bereich befindet (gelb), wann es unterausgelastet ist (grün) und wann es überausgelastet ist (rot). Das Aufschlüsselungsdiagramm zeigt detaillierte Angaben zur Performance-Kapazität nur für das Root-Objekt.
+
++
+image::../media/headroom_counter_charts.gif[Ein Screenshot der Benutzeroberfläche, der das Aufschlüsselungsdiagramm mit detaillierter Performance-Kapazität nur für das Stammobjekt zeigt.]
+
+. Wenn Sie eines der Diagramme in voller Größe anzeigen möchten, klicken Sie auf *Zoom View*.
++
+Auf diese Weise können Sie mehrere Zählerdiagramme in separaten Fenstern öffnen, um die Werte der genutzten Performance-Kapazität mit den IOPS- oder MBps-Werten über denselben Zeitraum zu vergleichen.
+
+

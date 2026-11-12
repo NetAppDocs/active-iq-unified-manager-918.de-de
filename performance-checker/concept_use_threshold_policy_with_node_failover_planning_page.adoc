@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_use_threshold_policy_with_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: threshold, policy, node, failover, planning page 
+summary: Sie können eine Knotenschwellenwertrichtlinie erstellen, sodass Sie auf der Seite „Performance/Node Failover Planning“ benachrichtigt werden, wenn ein potenzieller Failover die Performance des Übernahmeknotens auf ein inakzeptables Level verschlechtern würde. 
+---
+= Schwellenwertrichtlinien für die Node Failover Planung in Active IQ Unified Manager erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Knotenschwellenwertrichtlinie erstellen, sodass Sie auf der Seite „Performance/Node Failover Planning“ benachrichtigt werden, wenn ein potenzieller Failover die Performance des Übernahmeknotens auf ein inakzeptables Level verschlechtern würde.
+
+Die systemdefinierte Performance-Schwellenwertrichtlinie mit dem Namen "`Node HA pair over-utilized`" generiert ein Warnereignis, wenn der Schwellenwert in sechs aufeinanderfolgenden Erfassungszeiträumen (30 Minuten) überschritten wird. Der Schwellenwert gilt als überschritten, wenn die kombinierte genutzte Performance-Kapazität der Nodes in einem HA-Paar 200 % übersteigt.
+
+Das Ereignis aus der systemdefinierten Schwellenwertrichtlinie weist darauf hin, dass ein Failover dazu führt, dass die Latenz des übernehmenden Knotens auf ein inakzeptables Level ansteigt. Wenn für einen bestimmten Knoten ein von dieser Richtlinie generiertes Ereignis angezeigt wird, können Sie zur Seite Performance/Node Failover Planning für diesen Knoten navigieren, um den aufgrund eines Failover prognostizierten Latenzwert anzuzeigen.
+
+Zusätzlich zur Verwendung dieser systemdefinierten Schwellenwertrichtlinie können Sie Schwellenwertrichtlinien mithilfe des Zählers „Performance Capacity Used - Takeover“ erstellen und die Richtlinie dann auf ausgewählte Knoten anwenden. Durch die Angabe eines Schwellenwerts unter 200 % erhalten Sie ein Ereignis, bevor der Schwellenwert für die systemdefinierte Richtlinie überschritten wird. Sie können außerdem die Mindestdauer, für die der Schwellenwert überschritten wird, auf unter 30 Minuten festlegen, wenn Sie benachrichtigt werden möchten, bevor das Ereignis für die systemdefinierte Richtlinie generiert wird.
+
+Sie können beispielsweise eine Schwellenwertrichtlinie definieren, die ein Warnereignis generiert, wenn die kombinierte genutzte Performance-Kapazität der Nodes in einem HA-Paar länger als 10 Minuten 175 % überschreitet. Diese Richtlinie kann auf Node1 und Node2 angewendet werden, die ein HA-Paar bilden. Nach Erhalt einer Benachrichtigung über ein Warnereignis für Node1 oder Node2 kann für diesen Node die Seite Performance/Node Failover Planning aufgerufen werden, um die geschätzten Performance-Auswirkungen auf den übernehmenden Node zu bewerten. Es können Korrekturmaßnahmen ergriffen werden, um eine Überlastung des übernehmenden Node zu vermeiden, falls tatsächlich ein Failover eintritt. Wenn Maßnahmen ergriffen werden, solange die kombinierte genutzte Performance-Kapazität der Nodes unter 200 % liegt, erreicht die Latenz des übernehmenden Node auch dann kein inakzeptables Level, wenn während dieser Zeit ein Failover eintritt.

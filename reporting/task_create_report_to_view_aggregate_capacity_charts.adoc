@@ -1,0 +1,99 @@
+---
+permalink: reporting/task_create_report_to_view_aggregate_capacity_charts.html 
+sidebar: sidebar 
+keywords: create, report, show, aggregate, total, available, capacity, charts 
+summary: Für die Analyse der gesamten und zugesagten Storage-Kapazität in einem Excel-Diagrammformat lässt sich ein Bericht erstellen. 
+---
+= Diagramme zur gesamten und verfügbaren Kapazität von Aggregaten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die Analyse der gesamten und zugesagten Storage-Kapazität in einem Excel-Diagrammformat lässt sich ein Bericht erstellen.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mit den folgenden Schritten lässt sich eine Ansicht „Gesundheit: Alle Aggregate“ öffnen, die Ansicht in Excel herunterladen, ein Diagramm für die Gesamt- und die zugesagte Kapazität erstellen, die angepasste Excel-Datei hochladen und der Abschlussbericht planen.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage* > *Aggregates*.
+. Die Auswahl erfolgt über *Reports* > *Download Excel*.
++
+image::../media/download_excel_menu.png[Ein Screenshot der Benutzeroberfläche, der zeigt, wie der Download von excel aus Berichten erfolgt.]
+
++
+Je nach Browser müssen Sie möglicherweise auf *OK* klicken, um die Datei zu speichern.
+
+. Die heruntergeladene Datei lässt sich in Excel öffnen.
+. Falls erforderlich, kann auf *Bearbeitung aktivieren* geklickt werden.
+. Im Datenblatt können Sie mit der rechten Maustaste auf die Spalte „Typ“ klicken und *Sortieren* > *Sortieren A bis Z* auswählen.
++
+image::../media/sort_01.png[Ein Screenshot der Benutzeroberfläche, der die Auswahl der Sortierung in der Spalte „Typ“ zeigt.]
+
++
+Dadurch werden Ihre Daten nach Speichertyp sortiert, zum Beispiel:
+
++
+** HDD
+** Hybrid
+** SSD
+** SSD (FabricPool)
+
+
+. Auswahl der Spalten  `Type, Total Data Capacity,` und  `Available Data Capacity`.
+. Im Menü *Einfügen* erfolgt die Auswahl eines  `3-D column`Diagramms.
++
+Das Diagramm erscheint im Datenblatt.
+
++
+image::../media/3d_column_01.png[Ein UI-Screenshot, der das 3D-Säulendiagramm zeigt.]
+
+. Nach einem Rechtsklick auf das Diagramm steht die Option *Diagramm verschieben* zur Auswahl.
+. *New sheet* auswählen und das Blatt *Total Storage Charts* benennen.
++
+[NOTE]
+====
+Das neue Tabellenblatt sollte nach den Informations- und Datenblättern erscheinen.
+
+====
+. Als Diagrammtitel wird *Gesamtkapazität versus verfügbare Kapazität* verwendet.
+. Über die Menüs *Design* und *Format*, die bei ausgewähltem Diagramm verfügbar sind, können Sie das Aussehen des Diagramms anpassen.
+. Wenn Sie zufrieden sind, können Sie die Datei mit Ihren Änderungen speichern. Dateiname und Speicherort sind unverändert zu lassen.
++
+image::../media/total_vs_available_capacity.png[Ein Screenshot der Benutzeroberfläche, der ein Diagramm der Gesamtkapazität im Vergleich zur verfügbaren Kapazität zeigt.]
+
+. In Unified Manager befindet sich die Option unter *Reports* > *Upload Excel*.
++
+[NOTE]
+====
+Wichtig ist, dass Sie sich in derselben Ansicht befinden, in der Sie die Excel-Datei heruntergeladen haben.
+
+====
+. Auszuwählen ist die Excel-Datei, die Sie geändert haben.
+. Auf *Öffnen* klicken.
+. Anschließend *Absenden* auswählen.
++
+Neben dem Menüpunkt *Reports* > *Upload Excel* erscheint ein Häkchen.
+
++
+image::../media/upload_excel.png[Ein Screenshot der Benutzeroberfläche, der das Hochladen von Excel-Dateien in Berichte zeigt.]
+
+. Anschließend erfolgt die Auswahl von *Scheduled Reports*.
+. Durch Klicken auf *Zeitplan hinzufügen* wird der Seite *Berichtszeitpläne* eine neue Zeile hinzugefügt, sodass die Zeitplanmerkmale für den neuen Bericht definiert werden können.
++
+[NOTE]
+====
+Für den Bericht ist das *XLSX* Format auszuwählen.
+
+====
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Auf Grundlage der im Bericht dargestellten Ergebnisse kann es sinnvoll sein, die Last auf Ihre Aggregate auszugleichen.

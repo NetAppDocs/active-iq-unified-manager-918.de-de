@@ -1,0 +1,65 @@
+---
+permalink: config/task_access_maintenance_console.html 
+sidebar: sidebar 
+keywords: access, maintenance console 
+summary: Wenn die Unified Manager Benutzeroberfläche nicht in Betrieb ist oder wenn Sie Funktionen ausführen müssen, die in der Benutzeroberfläche nicht verfügbar sind, können Sie auf die Wartungs-Managementplattform zugreifen, um Ihr Unified Manager System zu managen. 
+---
+= Zugriff auf die Wartungskonsole in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die Unified Manager Benutzeroberfläche nicht in Betrieb ist oder wenn Sie Funktionen ausführen müssen, die in der Benutzeroberfläche nicht verfügbar sind, können Sie auf die Wartungs-Managementplattform zugreifen, um Ihr Unified Manager System zu managen.
+
+.Bevor Sie beginnen
+Sie müssen Unified Manager installiert und konfiguriert haben.
+
+Nach 15 Minuten Inaktivität meldet die Wartungs-Managementplattform Sie ab.
+
+[NOTE]
+====
+Bei der Installation auf VMware ist eine gleichzeitige Anmeldung über Secure Shell nicht möglich, wenn Sie sich bereits als Wartungsbenutzer über die VMware Managementplattform angemeldet haben.
+
+====
+.Schritt
+. Der Zugriff auf die Managementplattform erfolgt in den folgenden Schritten:
++
+[cols="2*"]
+|===
+| Auf diesem Betriebssystem... | Folgen Sie diesen Schritten... 
+
+
+ a| 
+VMware
+ a| 
+.. Die Verbindung zur IP-Adresse oder zur vollqualifizierten Domain der virtuellen Unified Manager Appliance erfolgt mithilfe von Secure Shell.
+.. Zur Anmeldung bei der Managementplattform dienen Ihr Wartungsbenutzername und Ihr Passwort.
+
+
+
+
+ a| 
+Linux
+ a| 
+.. Die Verbindung mit der IP-Adresse oder dem vollqualifizierten Domainnamen des Unified Manager Systems erfolgt mithilfe von Secure Shell.
+.. Die Anmeldung am System erfolgt mit dem Benutzernamen und Passwort des Wartungsbenutzers (umadmin).
+.. Den Befehl  `maintenance_console` eingeben und die Eingabetaste drücken.
+
+
+
+
+ a| 
+Windows
+ a| 
+.. Für die Anmeldung am Unified Manager System werden Administratoranmeldedaten verwendet.
+.. Starten von PowerShell als Windows-Administrator.
+.. Den Befehl  `maintenance_console` eingeben und die Eingabetaste drücken.
+
+
+|===
++
+Das Menü der Unified Manager Wartungs-Managementplattform wird angezeigt.
+
+

@@ -1,0 +1,48 @@
+---
+permalink: config/task_set_session_inactivity_timeout.html 
+sidebar: sidebar 
+keywords: inactivity, timeout 
+summary: 'Sie können für Unified Manager den Wert für die Zeitüberschreitung bei Inaktivität festlegen, sodass die Sitzung nach einer bestimmten Zeit automatisch beendet wird. Standardmäßig ist die Zeitüberschreitung auf 4.320 Minuten (72 Stunden) eingestellt.' 
+---
+= Die Zeitüberschreitung bei Sitzungsinaktivität in Active IQ Unified Manager festlegen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können für Unified Manager den Wert für die Inaktivitäts-Zeitüberschreitung festlegen, sodass die Sitzung nach einer bestimmten Zeit der Inaktivität automatisch beendet wird. Standardmäßig ist die Zeitüberschreitung auf 4.320 Minuten (72 Stunden) festgelegt.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Diese Einstellung betrifft alle angemeldeten Benutzersitzungen.
+
+[NOTE]
+====
+Diese Option ist nicht verfügbar, wenn Sie die Security Assertion Markup Language (SAML) Authentifizierung aktiviert haben.
+
+====
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Allgemein* > *Funktionseinstellungen*.
+. Auf der Seite *Feature Settings* können Sie die Inaktivitäts-Zeitüberschreitung festlegen, indem Sie eine der folgenden Optionen auswählen:
++
+[cols="2*"]
+|===
+| Wenn Sie möchten... | Fahren Sie dann wie folgt fort... 
+
+
+ a| 
+Es ist keine Zeitüberschreitung festgelegt, sodass die Sitzung niemals automatisch geschlossen wird.
+ a| 
+Im Bereich *Inactivity Timeout* den Schieberegler nach links (aus) verschieben und auf *Apply* klicken.
+
+
+
+ a| 
+Festlegen einer bestimmten Anzahl von Minuten als Wert für die Zeitüberschreitung
+ a| 
+Im Bereich *Inactivity Timeout* den Schieberegler nach rechts (Ein) bewegen, den Wert für die Inaktivitäts-Zeitüberschreitung in Minuten angeben und *Apply* auswählen.
+
+|===
+

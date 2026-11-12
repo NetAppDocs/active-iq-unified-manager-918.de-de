@@ -1,0 +1,49 @@
+---
+permalink: events/task_upload_new_active_iq_rules_file.html 
+sidebar: sidebar 
+keywords: upload, new, active iq AIQ rules, rules file, CA secure rules, config advisor rules 
+summary: Unified Manager prüft automatisch, ob eine neue Active IQ-Regeldatei verfügbar ist, und lädt eine neue Datei herunter, wenn neuere Regeln vorhanden sind. An Standorten ohne externen Netzwerkzugriff müssen Sie die Regeldatei jedoch manuell hochladen. 
+---
+= Hochladen einer neuen Active IQ Regeldatei in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager sucht automatisch nach einer neuen Active IQ-Ereignisdatei (Regeln) und lädt eine neue Datei herunter, wenn neuere Regeln verfügbar sind. An Standorten ohne externen Netzwerkzugriff ist jedoch ein manuelles Hochladen der Regeldatei erforderlich.
+
+
+NOTE: Active IQ Regeln werden auch als Config Advisor (CA) Sicherheitsregeln bezeichnet.
+
+Bei der Installation oder dem Upgrade von Unified Manager auf eine bestimmte Version an einem Standort ohne Netzwerkverbindung sind die mitgelieferten Active IQ-Regeln automatisch zum Upload verfügbar. Es wird jedoch empfohlen, etwa einmal im Monat eine neue Regeldatei von der Support Site von NetApp herunterzuladen, um sicherzustellen, dass aktualisierte Ereignisse generiert werden und Ihre Storage Systeme weiterhin optimal funktionieren.
+
+.Bevor Sie beginnen
+* Die Ereignisberichterstattung im Active IQ portal muss aktiviert sein. Diese Funktion ist standardmäßig aktiviert. Informationen hierzu enthält link:../config/concept_active_iq_platform_events.html["Aktivieren von Active IQ Portalereignissen"].
+* Sie müssen die Regeldatei von der NetApp Support Site herunterladen.
++
+Die Regeldatei befindet sich hier: https://mysupport.netapp.com/api/content-service/staticcontents/content/public/tools/unifiedmanager/ca/secure_rules.zip[]
+
+
+
+.Schritte
+. Auf einem Computer mit Netzwerkzugriff können Sie die NetApp Support Site aufrufen und die aktuelle rules `.zip`-Datei herunterladen.
++
+Das mitgelieferte Regelpaket umfasst das Regel-Repository, Datenquellen und einen NetApp KB-Artikel.
+
++
+
+NOTE: Auf Windows-Systemen an einem Standort ohne Netzwerkverbindung ist der NetApp KB-Artikel standardmäßig nicht im Installationsprogramm enthalten. Die Datei _secure_rules.zip_ kann von der Support-Website heruntergeladen und hochgeladen werden, um den KB-Artikel für alle Regeln anzuzeigen.
+
+. Die Regeldatei wird auf ein Medium übertragen, das in den Sicherheitsbereich mitgenommen werden kann, und anschließend auf ein System im Sicherheitsbereich kopiert.
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage Management* > *Ereigniseinrichtung*.
+. Auf der Seite *Event Setup* ist auf die Schaltfläche *Upload Rules* zu klicken.
+. Im Dialogfeld *Upload Rules* können Sie zu der Regel `.zip`datei navigieren, die Sie heruntergeladen haben, sie auswählen und auf *Upload* klicken.
++
+Dieser Vorgang kann einige Minuten dauern.
+
+
+
+Die Regeldatei wird auf dem Unified Manager Server entpackt. Nachdem Ihre verwalteten Cluster nach Mitternacht eine AutoSupport Datei generiert haben, prüft Unified Manager die Cluster anhand der Regeldatei und generiert bei Bedarf neue Risiko- und Incident-Ereignisse.
+
+Weitere Informationen enthält dieser Knowledge Base (KB)-Artikel: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/How_to_update_AIQCASecure_rules_manually_in_Active_IQ_Unified_Manager["Manuelles Aktualisieren von AIQCASecure-Regeln in Active IQ Unified Manager"].

@@ -1,0 +1,28 @@
+---
+permalink: events/concept_what_happens_when_an_event_is_received.html 
+sidebar: sidebar 
+keywords: happens, when, event, received 
+summary: 'Wenn Unified Manager ein Ereignis empfängt, erscheint es auf der Dashboard-Seite, auf der Inventarseite „Event Management“, auf den Registerkarten „Summary“ und „Explorer“ der Seite „Cluster/Performance“ sowie auf der objektspezifischen Inventarseite (z. B. der Inventarseite „Volumes/Health“).' 
+---
+= Hier wird erläutert, wie Active IQ Unified Manager ein empfangenes Ereignis verarbeitet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Unified Manager ein Ereignis empfängt, erscheint es auf der Dashboard-Seite, auf der Inventarseite „Event Management“, auf den Registerkarten „Summary“ und „Explorer“ der Seite „Cluster/Performance“ sowie auf der objektspezifischen Inventarseite (z. B. der Inventarseite „Volumes/Health“).
+
+Wenn Unified Manager mehrere aufeinanderfolgende Vorkommen desselben Ereigniszustands für dieselbe Clusterkomponente erkennt, behandelt er alle Vorkommen als ein einziges Ereignis und nicht als separate Ereignisse. Die Dauer des Ereignisses erhöht sich, um anzuzeigen, dass das Ereignis noch aktiv ist.
+
+Je nachdem, wie Sie die Einstellungen auf der Seite „Benachrichtigungseinrichtung“ konfigurieren, können Sie andere Benutzer über diese Ereignisse benachrichtigen. Die Benachrichtigung löst folgende Aktionen aus:
+
+* Eine E-Mail über das Ereignis kann an alle Benutzer mit der Rolle Unified Manager Administrator gesendet werden.
+* Das Ereignis kann an zusätzliche E-Mail-Empfänger gesendet werden.
+* Ein SNMP Trap lässt sich an den Trap-Empfänger senden.
+* Mit einem benutzerdefinierten Skript lässt sich eine Aktion ausführen.
+
+
+Das folgende Diagramm zeigt diesen Arbeitsablauf.
+
+image::../media/um_perf_threshold_event_flow.gif[Ein Diagramm, das die Verarbeitung von Schwellenwertereignissen von der Zählererfassung bis zur E-Mail-Benachrichtigung zeigt]

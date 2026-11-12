@@ -1,0 +1,18 @@
+---
+permalink: config/concept_what_role_based_access_control_does.html 
+sidebar: sidebar 
+keywords: role-based, access, control 
+summary: 'Die rollenbasierte Zugriffskontrolle (RBAC) ermöglicht Administratoren, Benutzergruppen durch das Definieren von Rollen zu managen. Wenn der Zugriff auf bestimmte Funktionen auf ausgewählte Administratoren beschränkt werden muss, müssen für diese Administratorkonten eingerichtet werden. Wenn die Informationen, die Administratoren einsehen können, und die Vorgänge, die sie ausführen können, eingeschränkt werden sollen, müssen den erstellten Administratorkonten Rollen zugewiesen werden.' 
+---
+= Informationen zur rollenbasierten Zugriffssteuerung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+RBAC (rollenbasierte Zugriffssteuerung) bietet die Möglichkeit, zu steuern, wer Zugriff auf verschiedene Funktionen und Ressourcen auf dem Active IQ Unified Manager Server hat. RBAC ermöglicht Administratoren die Verwaltung von Benutzergruppen durch die Definition von Rollen. Wenn der Zugriff auf bestimmte Funktionen auf ausgewählte Administratoren beschränkt werden muss, müssen für diese Administratorkonten eingerichtet werden. Wenn die Informationen, die Administratoren anzeigen können, und die Vorgänge, die sie ausführen können, eingeschränkt werden sollen, müssen den erstellten Administratorkonten Rollen zugewiesen werden.
+
+Der Verwaltungsserver verwendet rollenbasierte Zugriffskontrolle (RBAC) für die Benutzeranmeldung und Rollenberechtigungen. Wenn Sie die Standardeinstellungen des Verwaltungsservers für den administrativen Benutzerzugriff nicht geändert haben, müssen Sie sich nicht anmelden, um diese anzuzeigen.
+
+Wenn Sie einen Vorgang initiieren, der bestimmte Berechtigungen erfordert, fordert der Managementserver Sie zur Anmeldung auf. Um beispielsweise Administratorkonten zu erstellen, müssen Sie sich mit einem Konto mit Zugriff als Application Administrator anmelden.

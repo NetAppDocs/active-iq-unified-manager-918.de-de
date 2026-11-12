@@ -1,0 +1,71 @@
+---
+permalink: data-protection/reference_resynchronize_dialog_box.html 
+sidebar: sidebar 
+keywords: resynchronize, dialog box 
+summary: Mit dem Dialogfeld „Resynchronisieren“ lassen sich Daten in einer SnapMirror oder SnapVault Beziehung resynchronisieren, die zuvor unterbrochen wurde und deren Ziel anschließend in ein lesen/schreiben-Volume umgewandelt wurde. Eine Resynchronisierung kann auch erforderlich sein, wenn eine erforderliche gemeinsame Snapshot-Kopie auf dem Quellvolume gelöscht wird und dadurch SnapMirror oder SnapVault Aktualisierungen fehlschlagen. 
+---
+= Im Active IQ Unified Manager steht das Dialogfeld „Resynchronisieren“ zur Verfügung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dem Dialogfeld „Resynchronisieren“ lassen sich Daten in einer SnapMirror oder SnapVault Beziehung resynchronisieren, die zuvor unterbrochen wurde und deren Ziel anschließend in ein lesen/schreiben-Volume umgewandelt wurde. Eine Resynchronisierung kann auch erforderlich sein, wenn eine erforderliche gemeinsame Snapshot-Kopie auf dem Quellvolume gelöscht wird und dadurch SnapMirror oder SnapVault Aktualisierungen fehlschlagen.
+
+
+
+[[resynchronization-options-tab]]
+== Registerkarte „Resynchronisierungsoptionen“
+
+Über die Registerkarte „Resynchronisierungsoptionen“ können Sie die Übertragungspriorität und die maximale Transferrate für die Schutzbeziehung festlegen, die Sie resynchronisieren.
+
+* *Transferpriorität*
++
+Die Priorität, mit der der Transfer ausgeführt wird. Sie können entweder „Normal“ oder „Niedrig“ auswählen. Beziehungen mit Richtlinien, die eine normale Transferpriorität festlegen, werden vor solchen mit Richtlinien ausgeführt, die eine niedrige Transferpriorität festlegen.
+
+* *Maximale Transferrate*
++
+Legt die maximale Rate fest, mit der Daten über das Netzwerk zwischen Clustern übertragen werden. Wenn diese Option ausgewählt ist, wird die Netzwerkbandbreite auf den von Ihnen angegebenen Wert begrenzt. Sie können einen numerischen Wert eingeben und anschließend Kilobyte pro Sekunde (KB/s), Megabyte pro Sekunde (MB/s), Gigabyte pro Sekunde (GB/s) oder TB/s auswählen. Wenn Sie keine maximale Transferrate verwenden, ist der Basistransfer zwischen Beziehungen unbegrenzt.
+
+
+
+
+
+[[source-snapshot-copies-tab]]
+== Registerkarte „Quell-Snapshot Kopien“
+
+Die Registerkarte „Quell-Snapshot-Kopien“ zeigt die folgenden Informationen zur Quell-Snapshot-Kopie an, die für den Basistransfer verwendet wird:
+
+* *Quell-Volume*
++
+Zeigt die Namen der entsprechenden Quellvolumes an.
+
+* *Ziel-Volume*
++
+Zeigt die Namen der ausgewählten Ziel-Volumes an.
+
+* *Quellentyp*
++
+Zeigt den Volume-Typ an: entweder lesen/schreiben oder Datenschutz.
+
+* *Snapshot-Kopie*
++
+Zeigt die Snapshot-Kopie an, die für den Datentransfer verwendet wird. Wenn Sie auf den Wert der Snapshot-Kopie klicken, wird das Dialogfeld „Quell-Snapshot-Kopie auswählen“ angezeigt, in dem Sie abhängig von der Art der Schutzbeziehung und dem Vorgang, den Sie ausführen, eine bestimmte Snapshot-Kopie für Ihren Transfer auswählen können.
+
+
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+* *Einreichen*
++
+Startet den Resynchronisierungsvorgang und schließt das Dialogfeld „Resynchronisieren“.
+
+* *Stornieren*
++
+Verwirft Ihre Auswahl und schließt das Dialogfeld „Resynchronisieren“.
+
+

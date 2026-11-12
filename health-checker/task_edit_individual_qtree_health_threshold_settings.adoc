@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_edit_individual_qtree_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: edit, individual, qtree, health, threshold, settings 
+summary: Sie können die Systemstatus-Schwellenwerteinstellungen für die qtree-Kapazität für einen oder mehrere qtrees bearbeiten. Wenn ein Schwellenwert überschritten wird, werden Warnmeldungen generiert, und Sie erhalten Benachrichtigungen. Diese Benachrichtigungen helfen Ihnen, anhand des generierten Ereignisses Präventivmaßnahmen zu ergreifen. 
+---
+= Individuelle qtree Integritätsschwellenwerte in Active IQ Unified Manager bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Systemstatus-Schwellenwerteinstellungen für die qtree-Kapazität für einen oder mehrere qtrees bearbeiten. Wenn ein Schwellenwert überschritten wird, werden Warnmeldungen generiert, und Sie erhalten Benachrichtigungen. Diese Benachrichtigungen helfen Ihnen, anhand des generierten Ereignisses Präventivmaßnahmen zu ergreifen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Auf Grundlage von Änderungen der Schwellenwerte werden Ereignisse im nächsten Überwachungszyklus generiert oder als veraltet markiert.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage* > *Qtrees*.
+. In der Ansicht *Kapazität: Alle Qtrees* werden ein oder mehrere Qtrees ausgewählt, und anschließend wird auf *Schwellenwerte bearbeiten* geklickt.
+. Im Dialogfeld *Qtree-Schwellenwerte bearbeiten* lassen sich die Kapazitätsschwellenwerte für den ausgewählten qtree bzw. die ausgewählten qtrees ändern und anschließend *Speichern* auswählen.
++
+[NOTE]
+====
+Auch auf der Registerkarte „Qtrees“ der Seite „Storage VM / Systemstatusdetails“ lassen sich individuelle qtree-Schwellenwerte festlegen.
+
+====
+

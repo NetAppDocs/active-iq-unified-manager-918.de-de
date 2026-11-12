@@ -1,0 +1,24 @@
+---
+permalink: config/task_configure_audit_logs.html 
+sidebar: sidebar 
+keywords: configure, audit logs 
+summary: Über die Schaltfläche „Konfigurieren“ im Abschnitt „Revisionsprotokolle“ lässt sich die Rotationsrichtlinie für Revisionsprotokolldateien konfigurieren und außerdem die Remote-Protokollierung für die Revisionsprotokolle aktivieren. 
+---
+= Konfiguration der Audit-Protokolle von Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Schaltfläche *Configure* im Abschnitt „Revisionsprotokolle“ lässt sich die Rotationsrichtlinie für Revisionsprotokolldateien konfigurieren und außerdem die Remote Protokollierung für die Revisionsprotokolle aktivieren.
+
+Sie können die Werte in *MAX FILE SIZE* und *AUDIT LOG RETENTION DAYS* entsprechend der gewünschten Datenmenge und -häufigkeit festlegen, die Sie im System speichern möchten. Der Wert im Feld *TOTAL AUDIT LOG SIZE* ist die Größe der gesamten im System vorhandenen Revisionsprotokolldaten. Die Rotationsrichtlinie wird durch die Werte im Feld *AUDIT LOG RETENTION DAYS*, *MAX FILE SIZE* und *TOTAL AUDIT LOG SIZE* bestimmt. Wenn die Größe der Revisionsprotokoll-Sicherung den in *TOTAL AUDIT LOG SIZE* konfigurierten Wert erreicht, wird die Datei gelöscht, die zuerst archiviert wurde. Das bedeutet, dass die älteste Datei gelöscht wird. Der Dateieintrag bleibt jedoch weiterhin in der Datenbank verfügbar und ist als "`Rollover Delete`" gekennzeichnet. Der Wert *AUDIT LOG RETENTION DAYS* steht für die Anzahl der Tage, für die die Revisionsprotokolldateien aufbewahrt werden. Jede Datei, die älter ist als der in diesem Feld festgelegte Wert, wird rotiert.
+
+.Schritte
+. *Revisionsprotokolle* > > *Konfigurieren* auswählen.
+. Werte für *MAXIMALE DATEIGRÖSSE*, *GESAMTGRÖSSE DES REVISIONSPROTOKOLLS* und *AUFBEWAHRUNGSTAGE DES REVISIONSPROTOKOLLS* werden eingegeben.
++
+Die Aktivierung der Remote-Protokollierung erfolgt über *Enable Remote Logging*.
+
+

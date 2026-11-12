@@ -1,0 +1,39 @@
+---
+permalink: install-vapp/task_download_unified_manager_ova_file.html 
+sidebar: sidebar 
+keywords: download, unified manager, installation, file 
+summary: Für den Einsatz von Unified Manager als virtuelle Appliance wird die Unified Manager Installationsdatei von der NetApp Support Site heruntergeladen. 
+---
+= Die Installationsdatei für Active IQ Unified Manager wird heruntergeladen.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für den Einsatz von Unified Manager als virtuelle Appliance wird die Unified Manager Installationsdatei von der NetApp Support Site heruntergeladen.
+
+.Bevor Sie beginnen
+Sie sollten über die Anmeldedaten für die NetApp Support Site verfügen.
+
+Die Installationsdatei ist eine `.tar`Datei, die ein Stammzertifikat, eine `README`Datei und eine `OVA`Datei enthält, die die für eine virtuelle Appliance konfigurierte Unified Manager Software umfasst.
+
+.Schritte
+. Anmeldung bei der NetApp Support Site und Navigation zur Download-Seite für Unified Manager:
++
+https://mysupport.netapp.com/site/products/all/details/activeiq-unified-manager/downloads-tab["NetApp Support Site"]
+
+. Die gewünschte Version von Unified Manager ist auszuwählen und die Endbenutzer-Lizenzvereinbarung (EULA) ist zu akzeptieren.
+. Die  `.tar`Datei für die VMware vSphere Installation wird heruntergeladen und in einem lokalen Verzeichnis oder Netzwerkverzeichnis gespeichert, auf das Ihr vSphere Client zugreifen kann.
+. Die Überprüfung der Prüfsumme stellt sicher, dass die Software korrekt heruntergeladen wurde.
+. Im Verzeichnis, in dem Sie die  `.tar`Datei heruntergeladen haben, ist im Terminalfenster der folgende Befehl zum Entpacken des Unified Manager Bundle einzugeben:
++
+[listing]
+----
+tar -xvzf ActiveIQUnifiedManager-<version>.tar.gz
+----
++
+Die benötigte `OVA` Datei, ein Stammzertifikat und eine `README` Datei für Unified Manager werden in das Zielverzeichnis entpackt.
+
+. Zur Überprüfung der Integrität der  `OVA`Datei können die in der  `README`Datei beschriebenen Schritte herangezogen werden.
+

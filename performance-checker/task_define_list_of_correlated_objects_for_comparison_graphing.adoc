@@ -1,0 +1,68 @@
+---
+permalink: performance-checker/task_define_list_of_correlated_objects_for_comparison_graphing.html 
+sidebar: sidebar 
+keywords: defining, list, correlated, objects, comparison, graphing 
+summary: 'Im Bereich „Zählerdiagramm“ können Sie eine Liste korrelierter Objekte für Daten- und Performance-Vergleiche definieren. Wenn beispielsweise Ihre Storage Virtual Machine (SVM) ein Performance-Problem aufweist, können Sie alle Volumes in der SVM vergleichen, um das Volume zu identifizieren, das das Problem möglicherweise verursacht.' 
+---
+= Korrelierte Objekte für die grafische Darstellung von Vergleichen im Active IQ Unified Manager definieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Bereich „Zählerdiagramm“ können Sie eine Liste korrelierter Objekte für Daten- und Performance-Vergleiche definieren. Wenn beispielsweise Ihre Storage Virtual Machine (SVM) ein Performance-Problem aufweist, können Sie alle Volumes in der SVM vergleichen, um das Volume zu identifizieren, das das Problem möglicherweise verursacht.
+
+Sie können beliebige Objekte aus dem Raster der korrelierten Objekte in die Bereiche „Vergleichsdiagramm“ und „Zählerdiagramm“ einfügen. Dadurch können Sie Daten mehrerer Objekte sowie des Stammobjekts anzeigen und vergleichen. Objekte lassen sich dem Raster der korrelierten Objekte hinzufügen und daraus entfernen; das Stammobjekt im Vergleichsbereich kann jedoch nicht entfernt werden.
+
+[NOTE]
+====
+Das Hinzufügen vieler Objekte zum Vergleichsbereich kann sich negativ auf die Performance auswirken. Zur Aufrechterhaltung der Performance empfiehlt sich die Auswahl einer begrenzten Anzahl von Diagrammen für den Datenvergleich.
+
+====
+.Schritte
+. Im Objektraster ist das Objekt zu suchen, das hinzugefügt werden soll, und anschließend die Schaltfläche *Hinzufügen* auszuwählen.
++
+Die Schaltfläche „Hinzufügen“ wird grau, und das Objekt wird zur Liste der zusätzlichen Objekte im Vergleichsbereich hinzugefügt. Die Daten des Objekts werden den Diagrammen in den Bereichen „Counter Charts“ hinzugefügt. Die Farbe des Augensymbols des Objekts (image:../media/eye_icon.gif[""]) entspricht der Farbe der Trendlinie der Objektdaten in den Diagrammen.
+
+. *Optional:* Daten für ausgewählte Objekte ein- oder ausblenden:
++
+|===
+| Dazu ... | Diese Maßnahme durchführen... 
+
+
+ a| 
+Ein ausgewähltes Objekt ausblenden
+ a| 
+Im Vergleichsbereich kann auf das Augensymbol (image:../media/eye_icon.gif[""]) des ausgewählten Objekts geklickt werden. Die Daten des Objekts sind dann ausgeblendet, und das Augensymbol für dieses Objekt wird grau.
+
+
+
+ a| 
+Ausgeblendetes Objekt anzeigen
+ a| 
+Im Vergleichsbereich auf das graue Augensymbol des ausgewählten Objekts klicken.
+
+Das Augensymbol nimmt wieder seine ursprüngliche Farbe an, und die Diagramme im Bereich „Zählerdiagramme“ enthalten wieder die Objektdaten.
+
+|===
+. *Optional:* Ausgewählte Objekte aus dem Bereich *Comparing* entfernen:
++
+|===
+| Dazu ... | Diese Maßnahme durchführen... 
+
+
+ a| 
+Ein ausgewähltes Objekt entfernen
+ a| 
+Über dem Namen des ausgewählten Objekts im Vergleichsbereich erscheint die Schaltfläche „Objekt entfernen“ (*X*), sobald sich der Mauszeiger darüber befindet; anschließend kann die Schaltfläche angeklickt werden. Dadurch wird das Objekt aus dem Vergleichsbereich entfernt, und seine Daten werden aus den Zählerdiagrammen gelöscht.
+
+
+
+ a| 
+Alle ausgewählten Objekte entfernen
+ a| 
+Oben im Vergleichsbereich befindet sich die Schaltfläche „Alle Objekte entfernen“ (*X*). Alle ausgewählten Objekte und ihre Daten werden entfernt, sodass nur das Stammobjekt übrig bleibt.
+
+|===
+

@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_reorder_annotation_rules.html 
+sidebar: sidebar 
+keywords: reorder, annotation rules 
+summary: Sie können die Reihenfolge ändern, in der Unified Manager Annotationsregeln auf Storage-Objekte anwendet. Annotationsregeln werden entsprechend ihrer Priorität nacheinander auf Storage-Objekte angewendet. Beim Konfigurieren einer Annotationsregel ist ihr Rang der niedrigste. Sie können den Rang der Annotationsregel jedoch entsprechend Ihren Anforderungen ändern. 
+---
+= Neuordnung von Anmerkungsregeln in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Reihenfolge ändern, in der Unified Manager Annotationsregeln auf Storage-Objekte anwendet. Annotationsregeln werden entsprechend ihrer Priorität nacheinander auf Storage-Objekte angewendet. Beim Konfigurieren einer Annotationsregel ist ihr Rang der niedrigste. Sie können den Rang der Annotationsregel jedoch entsprechend Ihren Anforderungen ändern.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Sie können entweder eine einzelne Zeile oder mehrere Zeilen auswählen und viele Drag-and-Drop-Vorgänge ausführen, um die Rangfolge der Anmerkungsregeln zu ändern. Die Änderungen müssen jedoch gespeichert werden, damit die Neugewichtung auf der Registerkarte Annotation Rules angezeigt wird.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Annotations*.
+. Auf der Registerkarte *Annotation Rules* kann auf *Reorder* geklickt werden.
+. Im Dialogfeld *Anmerkungsregeln neu anordnen* können Sie einzelne oder mehrere Zeilen per Drag & Drop verschieben, um die Reihenfolge der Anmerkungsregeln neu zu ordnen.
+. Auf *Speichern* klicken.
++
+Die Änderungen müssen gespeichert werden, damit die Neuanordnung angezeigt wird.
+
+

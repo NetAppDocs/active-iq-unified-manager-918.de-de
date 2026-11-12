@@ -1,0 +1,25 @@
+---
+permalink: config/task_regenerate_client_certificate.html 
+sidebar: sidebar 
+keywords: client certificate, regenerate, validity, maintenance console 
+summary: In der Managementplattform für die Wartung können Sie Ihr Unified Manager Clientzertifikat neu generieren. 
+---
+= Das Clientzertifikat in Active IQ Unified Manager neu generieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Managementplattform verwenden, um Ihr Unified Manager Client-Zertifikat neu zu generieren. Ihr Zertifikat hat eine verlängerte Gültigkeitsdauer von fünf Jahren.
+
+.Schritte
+. Melden Sie sich als Wartungsbenutzer an.
+. Wählen Sie *Regenerate Client Certificate* aus und drücken Sie *Enter*.
+. Falls das System eine Authentifizierung anfordert, müssen die erforderlichen Anmeldeinformationen eingegeben werden.
+. *Confirm Regeneration* wird ausgewählt und *Enter* wird gedrückt.
+. Nach der Neugenerierung des Zertifikats muss der Unified Manager Dienst neu gestartet werden, um die Änderungen anzuwenden.
+. Zur Überprüfung des aktualisierten Zertifikats ist eine Anmeldung bei ONTAP erforderlich. Der Status des Clientzertifikats und der Gültigkeitsstatus sind zu sehen.
+
+
+*Verwandte Informationen*  https://docs.netapp.com/us-en/ontap/authentication/manage-certificates-sm-task.html["ONTAP Zertifikate mit System Manager verwalten"^]

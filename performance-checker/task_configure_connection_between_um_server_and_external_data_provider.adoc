@@ -1,0 +1,114 @@
+---
+permalink: performance-checker/task_configure_connection_between_um_server_and_external_data_provider.html 
+sidebar: sidebar 
+keywords: configuring, connection, unified manager, server, external, data, provider 
+summary: Unified Manager kann Cluster Performance Daten an einen externen Server senden. Sie können die Art der gesendeten Statistikdaten und das Sendeintervall festlegen. 
+---
+= Eine Verbindung zwischen Active IQ Unified Manager und einem externen Datenanbieter wird konfiguriert.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager kann Cluster Performance Daten an einen externen Server senden. Sie können die Art der gesendeten Statistikdaten und das Sendeintervall festlegen.
+
+.Bevor Sie beginnen
+* Sie benötigen eine Benutzerkennung, die zur Anmeldung an der Wartungs-Managementplattform des Unified Manager Servers berechtigt.
+* Sie benötigen folgende Informationen über den externen Datenanbieter:
++
+** Servername oder IP-Adresse (IPv4 oder IPv6)
+** Standardport des Servers (falls nicht der Standardport 2003 verwendet wird)
+
+
+* Sie müssen den Remote-Server und die Drittanbietersoftware so konfiguriert haben, dass sie statistische Daten vom Unified Manager Server empfangen können.
+* Wichtig ist, welche Gruppe von Statistiken gesendet werden soll:
++
+** PERFORMANCE_INDICATOR: Performance Monitor Statistiken
+** RESSOURCENNUTZUNG: Ressourcennutzung und Performance Monitor Statistiken
+** DRILL_DOWN: Alle Statistiken
+
+
+* Sie müssen das Zeitintervall kennen, in dem Sie Statistiken übertragen möchten: 5, 10 oder 15 Minuten.
++
+Unified Manager erfasst standardmäßig Statistiken im 5-Minuten-Takt. Wenn Sie das Übertragungsintervall auf 10 (oder 15) Minuten einstellen, ist die Datenmenge, die bei jeder Übertragung gesendet wird, zwei- bzw. dreimal so groß wie bei Verwendung des standardmäßigen 5-Minuten-Intervalls.
+
++
+[NOTE]
+====
+Wenn Sie das Unified Manager Performance-Erfassungsintervall auf 10 oder 15 Minuten ändern, müssen Sie das Übertragungsintervall so ändern, dass es dem Unified Manager Erfassungsintervall entspricht oder größer ist.
+
+====
+
+
+Sie können eine Verbindung zwischen einem Unified Manager Server und einem externen Datenprovider-Server konfigurieren.
+
+.Schritte
+. Die Anmeldung an der Managementplattform des Unified Manager Servers erfolgt als Wartungsbenutzer.
++
+Die Eingabeaufforderungen der Unified Manager Wartungsmanagementplattform werden angezeigt.
+
+. Geben Sie in der Wartungs-Managementplattform die Nummer der Menüoption *External Data Provider* ein.
++
+Das Menü „External Server Connection“ wird angezeigt.
+
+. Die Nummer der Menüoption *Add/Modify Server Connection* eingeben.
++
+Die aktuellen Serververbindungsinformationen werden angezeigt.
+
+. Bei entsprechender Aufforderung  `*y*` eingeben, um fortzufahren.
+. Bei Aufforderung erfolgt die Eingabe der IP-Adresse oder des Namens des Zielservers sowie der Informationen zum Server-Port, sofern diese vom Standardport 2003 abweichen.
+. Wenn Sie dazu aufgefordert werden, können Sie  `*y*` eingeben, um zu überprüfen, dass die eingegebenen Informationen korrekt sind.
+. Mit einer beliebigen Taste kehren Sie zum Menü „Externe Serververbindung“ zurück.
+. Eingabe der Nummer der Menüoption *Serverkonfiguration ändern*.
++
+Die Informationen zur aktuellen Serverkonfiguration werden angezeigt.
+
+. Bei entsprechender Aufforderung  `*y*` eingeben, um fortzufahren.
+. Wenn eine entsprechende Aufforderung angezeigt wird, geben Sie den Typ der zu sendenden Statistiken, das Zeitintervall, in dem die Statistiken gesendet werden, sowie an, ob die Übertragung der Statistiken jetzt aktiviert werden soll:
++
+|===
+| Für.. | Eingeben... 
+
+
+ a| 
+Statistikengruppe-ID
+ a| 
+`*0*` - PERFORMANCE_INDICATOR (Standard)
+
+`*1*` - RESSOURCENNUTZUNG
+
+`*2*` - DRILL_DOWN
+
+
+
+ a| 
+Anbieter-Tag
+ a| 
+Ein aussagekräftiger Name für den Ordner, in dem die Statistiken auf dem externen Server gespeichert werden. "`netapp-performance`" ist der Standardname, Sie können aber auch einen anderen Wert eingeben.
+
+Mithilfe der Punktnotation lässt sich eine hierarchische Ordnerstruktur definieren. Beispielsweise befinden sich die Statistiken nach der Eingabe `*stats.performance.netapp*` unter *stats* > *performance* > *netapp*.
+
+
+
+ a| 
+Sendeintervall
+ a| 
+`*5*` (Standardeinstellung), `*10*`, oder `*15*` Minuten
+
+
+
+ a| 
+Aktivieren/Deaktivieren
+ a| 
+`*0*` - Deaktivieren
+
+`*1*` - Aktivieren (Standard)
+
+|===
+. Wenn Sie dazu aufgefordert werden, können Sie  `*y*` eingeben, um zu überprüfen, dass die eingegebenen Informationen korrekt sind.
+. Mit einer beliebigen Taste kehren Sie zum Menü „Externe Serververbindung“ zurück.
+. Zum Verlassen der Wartungs-Managementplattform  `*x*` eingeben.
+
+
+Nachdem Sie die Verbindung konfiguriert haben, werden die ausgewählten Performance-Daten in dem von Ihnen angegebenen Zeitintervall an den Zielserver gesendet. Es dauert einige Minuten, bis die Metriken im externen Tool angezeigt werden. Möglicherweise müssen Sie Ihren Browser aktualisieren, um die neuen Metriken in der Metrikhierarchie zu sehen.

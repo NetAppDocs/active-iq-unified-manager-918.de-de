@@ -1,0 +1,138 @@
+---
+permalink: performance-checker/reference_types_of_performance_counter_charts.html 
+sidebar: sidebar 
+keywords: types, performance, counter, charts 
+summary: Es gibt Standard Performance-Diagramme, die die Zählerwerte für das ausgewählte Storage-Objekt anzeigen. Jedes der Zählerdiagramme zur Aufschlüsselung zeigt die Gesamtwerte aufgeschlüsselt nach Lese-, Schreib- und anderen Kategorien an. Darüber hinaus zeigen einige Zählerdiagramme zur Aufschlüsselung zusätzliche Details an, wenn das Diagramm in der Zoom-Ansicht angezeigt wird. 
+---
+= Informationen zu den verschiedenen Typen von Leistungsindikator-Diagrammen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es gibt Standard Performance-Diagramme, die die Zählerwerte für das ausgewählte Storage-Objekt anzeigen. Jedes der Zählerdiagramme zur Aufschlüsselung zeigt die Gesamtwerte aufgeschlüsselt nach Lese-, Schreib- und anderen Kategorien an. Darüber hinaus zeigen einige Zählerdiagramme zur Aufschlüsselung zusätzliche Details an, wenn das Diagramm in der Zoom-Ansicht angezeigt wird.
+
+Die folgende Tabelle zeigt die verfügbaren Performance-Zählerdiagramme.
+
+|===
+| Verfügbare Diagramme | Diagrammbeschreibung 
+
+
+ a| 
+Veranstaltungen
+ a| 
+Zeigt kritische Ereignisse, Fehler, Warnungen und Informationsereignisse in Korrelation mit den statistischen Diagrammen für das Stammobjekt an. Zusätzlich zu Performance Ereignissen werden Integritätsereignisse angezeigt, um ein vollständiges Bild der Gründe zu liefern, aus denen die Performance beeinträchtigt sein kann.
+
+
+
+ a| 
+Latenz - Gesamt
+ a| 
+Anzahl der Millisekunden, die zur Beantwortung von Anfragen der Applikation erforderlich sind. Die durchschnittlichen Latenzwerte sind E/A-gewichtet.
+
+
+
+ a| 
+Latenz - Aufschlüsselung
+ a| 
+Dieselben Informationen wie unter „Latenz insgesamt“, jedoch mit in Lese-, Schreib- und sonstige Latenz aufgeteilten Performance-Daten. Diese Diagrammoption gilt nur, wenn das ausgewählte Objekt eine SVM, ein Knoten, ein Aggregat, ein Volume, eine LUN oder ein Namespace ist.
+
+
+
+ a| 
+Latenz - Clusterkomponenten
+ a| 
+Dieselben Informationen wie unter „Latenz gesamt“, jedoch mit nach Clusterkomponenten aufgeschlüsselten Performance Daten zur Latenz. Diese Diagrammoption gilt nur, wenn das ausgewählte Objekt ein Volume ist.
+
+
+
+ a| 
+IOPS - Gesamt
+ a| 
+Anzahl der pro Sekunde verarbeiteten Ein-/Ausgabeoperationen. Bei der Anzeige für einen Knoten zeigt die Auswahl von "`Total`" die IOPS für Daten an, die über diesen Knoten übertragen werden und sich auf dem lokalen oder dem Remote-Knoten befinden können, und die Auswahl von "`Total (Local)`" zeigt die IOPS für Daten an, die sich nur auf dem aktuellen Knoten befinden.
+
+
+
+ a| 
+IOPS - Aufschlüsselung
+ a| 
+Dieselben Informationen wie in „IOPS Gesamt“, jedoch mit den Performance Daten getrennt nach Lese-, Schreib- und sonstigen IOPS. Diese Diagrammoption gilt nur, wenn das ausgewählte Objekt eine SVM, ein Knoten, ein Aggregat, ein Volume, eine LUN oder ein Namespace ist.
+
+In der Zoom-Ansicht zeigt das Volumendiagramm die minimalen und maximalen QoS-Durchsatzwerte an, sofern diese in ONTAP konfiguriert sind.
+
+Bei der Anzeige für einen Knoten zeigt die Auswahl von „`Breakdown`“ die IOPS-Aufschlüsselung für Daten an, die sich durch diesen Knoten bewegen und sich auf dem lokalen oder dem Remote-Knoten befinden können; die Auswahl von „`Breakdown (Local)`“ zeigt die IOPS-Aufschlüsselung für Daten an, die sich nur auf dem aktuellen Knoten befinden.
+
+
+
+ a| 
+IOPS - Protokolle
+ a| 
+Dieselben Informationen werden in „IOPS Total“ angezeigt, jedoch sind die Performance-Daten in separate Diagramme für CIFS-, NFS-, FCP-, NVMe- und iSCSI-Protokolldatenverkehr unterteilt. Diese Diagrammoption gilt nur, wenn das ausgewählte Objekt eine SVM ist.
+
+
+
+ a| 
+IOPS/TB - Gesamt
+ a| 
+Anzahl der pro Sekunde verarbeiteten Ein-/Ausgabeoperationen, basierend auf dem gesamten vom Workload belegten Speicherplatz, in Terabyte. Auch als E/A-Dichte bezeichnet, misst dieser Zähler, wie viel Performance mit einer bestimmten Storage Kapazität bereitgestellt werden kann. Bei der Anzeige in der Zoom-Ansicht zeigt das Volume-Diagramm die Werte für den erwarteten QoS-Durchsatz und den Spitzendurchsatz an, sofern diese in ONTAP konfiguriert sind.
+
+Diese Diagrammoption gilt nur, wenn es sich bei dem ausgewählten Objekt um ein Volume handelt.
+
+
+
+ a| 
+MB/s - Gesamt
+ a| 
+Anzahl der Megabyte an Daten, die pro Sekunde zum und vom Objekt übertragen werden.
+
+
+
+ a| 
+MB/s - Aufschlüsselung
+ a| 
+Die gleichen Informationen wie im MB/s-Diagramm, jedoch mit den Durchsatzdaten, getrennt nach Festplattenlesevorgängen, Flash Cache-Lesevorgängen, Schreibvorgängen und Sonstigem. In der Zoom-Ansicht zeigt das Volume-Diagramm die maximalen QoS-Durchsatzwerte an, sofern diese in ONTAP konfiguriert sind.
+
+Diese Diagrammoption gilt nur, wenn es sich bei dem ausgewählten Objekt um eine SVM, einen Knoten, ein Aggregat, ein Volume, eine LUN oder einen Namespace handelt.
+
+[NOTE]
+====
+Flash Cache Daten werden nur für Knoten angezeigt, und nur dann, wenn ein Flash Cache Modul auf dem Knoten installiert ist.
+
+====
+
+
+ a| 
+Genutzte Performance-Kapazität - Gesamt
+ a| 
+Prozentsatz der Performance-Kapazität, den der Knoten oder das Aggregat verbraucht.
+
+
+
+ a| 
+Verwendete Performance Kapazität - Aufschlüsselung
+ a| 
+Daten zur genutzten Performance-Kapazität, getrennt nach Benutzerprotokollen und Systemhintergrundprozessen. Zusätzlich wird die freie Performance-Kapazität angezeigt.
+
+
+
+ a| 
+Verfügbare IOPS - Gesamt
+ a| 
+Anzahl der aktuell für dieses Objekt verfügbaren (freien) Ein-/Ausgabeoperationen pro Sekunde. Dieser Wert ergibt sich aus der Differenz zwischen den aktuell genutzten IOPS und den gesamten IOPS, die Unified Manager für das Objekt berechnet. Diese Diagrammoption gilt nur, wenn das ausgewählte Objekt ein Knoten oder Aggregat ist.
+
+
+
+ a| 
+Auslastung - Gesamt
+ a| 
+Prozentualer Anteil der verfügbaren Ressourcen des Objekts, der verwendet wird. Die Auslastung gibt die Knotenauslastung bei Knoten, die Festplattenauslastung bei Aggregaten und die Bandbreitenauslastung bei Ports an. Diese Diagrammoption gilt nur, wenn das ausgewählte Objekt ein Knoten, ein Aggregat oder ein Port ist.
+
+
+
+ a| 
+Cache-Fehlerrate - Gesamt
+ a| 
+Prozentsatz der Leseanfragen von Client-Applikationen, die von der Festplatte statt aus dem Cache beantwortet werden. Diese Diagrammoption gilt nur, wenn es sich bei dem ausgewählten Objekt um ein Volume handelt.
+
+|===

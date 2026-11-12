@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_apply_filtering_to_correlated_objects.html 
+sidebar: sidebar 
+keywords: apply, filter, reduce, list, correlated, objects, grid 
+summary: Durch Filtern können Sie eine kleinere, besser definierte Teilmenge von Objekten im Raster anzeigen. Wenn Sie beispielsweise 25 Volumes im Raster haben, können Sie durch Filtern nur diejenigen Volumes anzeigen lassen, deren Durchsatz unter 90 MBps liegt oder deren Latenz über 1 ms/op liegt. 
+---
+= Korrelierte Objekte im Active IQ Unified Manager Raster filtern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch Filtern können Sie eine kleinere, besser definierte Teilmenge von Objekten im Raster anzeigen. Wenn Sie beispielsweise 25 Volumes im Raster haben, können Sie durch Filtern nur diejenigen Volumes anzeigen lassen, deren Durchsatz unter 90 MBps liegt oder deren Latenz über 1 ms/op liegt.

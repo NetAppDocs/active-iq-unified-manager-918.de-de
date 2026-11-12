@@ -1,0 +1,67 @@
+---
+permalink: events/reference_volume_move_status_events.html 
+sidebar: sidebar 
+keywords: volume, move, status, events, impact area, capacity 
+summary: Statusereignisse für Volume Verschiebungen informieren Sie über den Status Ihrer Volume Verschiebung, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungs Level, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Statusereignissen bei Volume Moves in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Statusereignisse für Volume Verschiebungen informieren Sie über den Status Ihrer Volume Verschiebung, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Auswirkungs Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-capacity]]
+== Wirkungsbereich: Kapazität
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Status der Volume Verschiebung: In Bearbeitung(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Volumen
+ a| 
+Informationen
+
+
+
+ a| 
+Status der Volume-Verschiebung - Fehlgeschlagen(ocumEvtVolumeMoveFailed)
+ a| 
+Risiko
+ a| 
+Volumen
+ a| 
+Fehler
+
+
+
+ a| 
+Status der Volumenverschiebung: Abgeschlossen(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Volumen
+ a| 
+Informationen
+
+
+
+ a| 
+Volume Move - Umstellung verschoben(ocumEvtVolumeMoveCutoverDeferred)
+ a| 
+Risiko
+ a| 
+Volumen
+ a| 
+Warnung
+
+|===

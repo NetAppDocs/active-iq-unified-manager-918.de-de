@@ -1,0 +1,72 @@
+---
+permalink: health-checker/task_add_scripts.html 
+sidebar: sidebar 
+keywords: add, scripts 
+summary: Sie können in Unified Manager Skripte hinzufügen und diese mit Warnmeldungen verknüpfen. Diese Skripte werden automatisch ausgeführt, wenn eine Warnmeldung generiert wird, und ermöglichen es Ihnen, Informationen zu den Storage Objekten abzurufen, für die das Ereignis generiert wird. 
+---
+= Skripte in Active IQ Unified Manager hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können in Unified Manager Skripte hinzufügen und diese mit Warnmeldungen verknüpfen. Diese Skripte werden automatisch ausgeführt, wenn eine Warnmeldung generiert wird, und ermöglichen es Ihnen, Informationen zu den Storage Objekten abzurufen, für die das Ereignis generiert wird.
+
+.Bevor Sie beginnen
+* Sie müssen die Skripte, die Sie dem Unified Manager Server hinzufügen möchten, erstellt und gespeichert haben.
+* Die unterstützten Dateiformate für Skripte sind Perl, Shell, PowerShell, Python und  `.bat`Dateien.
++
+[cols="2*"]
+|===
+| Plattform, auf der Unified Manager installiert ist | Unterstützte Sprachen 
+
+
+ a| 
+VMware
+ a| 
+Perl- und Shell-Skripte
+
+
+
+ a| 
+Linux
+ a| 
+Perl, Python und Shell Skripte
+
+
+
+ a| 
+Windows
+ a| 
+PowerShell, Perl-, Python- und .bat-Skripte
+
+|===
++
+** Für Perl Skripte muss Perl auf dem Unified Manager Server installiert sein. Bei VMware Installationen ist Perl 5 standardmäßig installiert, und die Skripte unterstützen nur die von Perl 5 unterstützten Funktionen. Wenn Perl nach Unified Manager installiert wurde, muss der Unified Manager Server neu gestartet werden.
+** Für PowerShell-Skripte muss auf dem Windows-Server die entsprechende PowerShell-Ausführungsrichtlinie festgelegt werden, damit die Skripte ausgeführt werden können.
+
+
++
+[NOTE]
+====
+Wenn Ihr Skript Protokolldateien erstellt, um den Fortschritt des Alarmskripts zu verfolgen, müssen Sie sicherstellen, dass sich die Protokolldateien nicht irgendwo im Unified Manager Installationsordner befinden.
+
+====
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Sie können benutzerdefinierte Skripte hochladen und Ereignisdetails zur Warnung erfassen.
+
+[NOTE]
+====
+Wenn diese Funktion in der Benutzeroberfläche nicht verfügbar ist, wurde die Funktionalität von Ihrem Administrator deaktiviert. Bei Bedarf kann diese Funktionalität unter *Storage Management* > *Feature Settings* aktiviert werden.
+
+====
+.Schritte
+. Im linken Navigationsbereich wird *Storage Management* > *Scripts* ausgewählt.
+. Auf der Seite *Skripte* erfolgt die Auswahl von *Hinzufügen*.
+. Im Dialogfeld *Skript hinzufügen* wird mit *Durchsuchen* die Skriptdatei ausgewählt.
+. Geben Sie für das ausgewählte Skript eine Beschreibung ein.
+. Klicken Sie auf *Add*.
+

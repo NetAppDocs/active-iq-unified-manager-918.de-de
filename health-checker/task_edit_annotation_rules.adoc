@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_edit_annotation_rules.html 
+sidebar: sidebar 
+keywords: edit, annotation rules 
+summary: Sie können Annotationsregeln bearbeiten, um die Bedingungsgruppen und die Bedingungen innerhalb der Bedingungsgruppe zu ändern und so Annotationen zu Storage Objekten hinzuzufügen oder von ihnen zu entfernen. 
+---
+= Anmerkungsregeln in Active IQ Unified Manager bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Annotationsregeln bearbeiten, um die Bedingungsgruppen und die Bedingungen innerhalb der Bedingungsgruppe zu ändern und so Annotationen zu Storage Objekten hinzuzufügen oder von ihnen zu entfernen.
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+Annotationen werden von Storage-Objekten getrennt, wenn Sie die zugehörigen Annotationsregeln bearbeiten.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Annotations*.
+. Im Reiter *Annotation Rules* können Sie die Anmerkungsregel auswählen, die Sie bearbeiten möchten, und anschließend auf *Actions* > *Edit* klicken.
+. Im Dialogfeld *Anmerkungsregel bearbeiten* können Sie nach Bedarf den Regelnamen, den Anmerkungsnamen und -wert, die Bedingungsgruppen und die Bedingungen ändern.
++
+Der Zielobjekttyp einer Annotationsregel kann nicht geändert werden.
+
+. Auf *Speichern* klicken.
+

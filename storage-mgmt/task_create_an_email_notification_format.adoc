@@ -1,0 +1,26 @@
+---
+permalink: storage-mgmt/task_create_an_email_notification_format.html 
+sidebar: sidebar 
+keywords: create, email, notification, format, user, group, quotas 
+summary: 'Sie können ein Benachrichtigungsformat für die E-Mails erstellen, die ein Benutzer oder eine Benutzergruppe erhalten, wenn ein kontingentbezogenes Problem auftritt (weiches Limit überschritten oder endgültiges Limit erreicht).' 
+---
+= Ein E-Mail-Benachrichtigungsformat für Benutzer- und Gruppenkontingente in Active IQ Unified Manager erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Benachrichtigungsformat für die E-Mails erstellen, die ein Benutzer oder eine Benutzergruppe erhalten, wenn ein kontingentbezogenes Problem auftritt (weiches Limit überschritten oder endgültiges Limit erreicht).
+
+.Bevor Sie beginnen
+Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+.Schritte
+. Im linken Navigationsbereich auf *Allgemein* > *E-Mail-Format für Kontingente* klicken.
+. In den Feldern *Von*, *Betreff* und *E-Mail-Details* können die Details eingegeben oder geändert werden.
+. Über *Vorschau* lässt sich eine Vorschau der E-Mail-Benachrichtigung anzeigen.
+. Zum Schließen des Vorschaufensters *Schließen* auswählen.
+. Bei Bedarf lässt sich der Inhalt der E-Mail-Benachrichtigung anpassen.
+. Auf *Speichern* klicken.
+

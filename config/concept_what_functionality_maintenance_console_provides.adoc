@@ -1,0 +1,26 @@
+---
+permalink: config/concept_what_functionality_maintenance_console_provides.html 
+sidebar: sidebar 
+keywords: functionality, maintenance, console 
+summary: Mit der Unified Manager Managementplattform für Wartung können Sie die Einstellungen auf Ihrem Unified Manager System managen und alle erforderlichen Änderungen vornehmen, um Probleme zu vermeiden. 
+---
+= Informationen zur Wartungskonsole in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Unified Manager Managementplattform für Wartung können Sie die Einstellungen auf Ihrem Unified Manager System managen und alle erforderlichen Änderungen vornehmen, um Probleme zu vermeiden.
+
+Je nach dem Betriebssystem, auf dem Sie Unified Manager installiert haben, bietet die Managementplattform folgende Wartungsfunktionen:
+
+* Fehlerbehebung bei Problemen mit Ihrer virtuellen Appliance, insbesondere wenn die Weboberfläche von Unified Manager nicht verfügbar ist
+* Aktualisierung auf neuere Versionen von Unified Manager
+* Support-Bundles für den Versand an den technischen Support generieren
+* Netzwerkeinstellungen konfigurieren
+* Passwort des Wartungsbenutzers ändern
+* Verbindung zu einem externen Datenanbieter zum Senden von Performance Statistiken herstellen
+* Änderung der internen Erfassung von Performance-Daten
+* Wiederherstellung der Unified Manager Datenbank und der Konfigurationseinstellungen aus einer zuvor gesicherten Version.
+

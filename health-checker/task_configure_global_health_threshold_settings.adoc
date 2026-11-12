@@ -1,0 +1,36 @@
+---
+permalink: health-checker/task_configure_global_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: configure, global health, threshold settings 
+summary: Globale Systemstatus-Schwellenwertbedingungen für Kapazität, Wachstum, Snapshot-Reserve, Kontingente und Inodes können konfiguriert werden, um die Größe von Aggregaten, Volumes und qtrees effektiv zu überwachen. Außerdem lassen sich die Einstellungen für die Generierung von Ereignissen beim Überschreiten von Verzögerungsschwellenwerten bearbeiten. 
+---
+= Konfiguration der globalen Integritätsschwellenwerteinstellungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Globale Systemstatus-Schwellenwertbedingungen für Kapazität, Wachstum, Snapshot-Reserve, Kontingente und Inodes können konfiguriert werden, um die Größe von Aggregaten, Volumes und qtrees effektiv zu überwachen. Außerdem lassen sich die Einstellungen für die Generierung von Ereignissen beim Überschreiten von Verzögerungsschwellenwerten bearbeiten.
+
+Globale Systemstatus-Schwellenwerteinstellungen gelten für alle Objekte, denen sie zugeordnet sind, z. B. Aggregate, Volumes usw. Wenn Schwellenwerte überschritten werden, wird ein Ereignis generiert und, falls Warnungen konfiguriert sind, eine Warnungsbenachrichtigung gesendet. Für Schwellenwerte sind standardmäßig empfohlene Werte festgelegt, die Sie jedoch ändern können, damit in Intervallen Ereignisse generiert werden, die Ihren spezifischen Anforderungen entsprechen. Wenn Schwellenwerte geändert werden, werden Ereignisse im nächsten Überwachungszyklus generiert oder als veraltet markiert.
+
+Globale Einstellungen für Systemstatus-Schwellenwerte sind im Abschnitt „Ereignisschwellenwerte“ des linken Navigationsmenüs verfügbar. Sie können die Schwellenwerteinstellungen auch für einzelne Objekte auf der Inventarseite oder auf der Detailseite des jeweiligen Objekts ändern.
+
+* Informationen finden sich unter link:task_configure_global_aggregate_health_threshold_values.html["Konfiguration globaler Schwellenwerte für den Aggregate-Systemstatus"].
++
+Sie können die Systemstatus-Schwellenwerteinstellungen für Kapazität, Wachstum und Snapshot-Kopien für alle Aggregate konfigurieren, um jede Schwellenwertüberschreitung nachzuverfolgen.
+
+* Informationen finden sich unter link:task_configure_global_volume_health_threshold_values.html["Konfiguration globaler Schwellenwerte für den Volume-Systemstatus"].
++
+Sie können die Einstellungen für die Systemstatusschwellenwerte für Kapazität, Snapshot Kopien, qtree Kontingente, Volume Wachstum, Reserveplatz für Überschreibungen und Inodes für alle Volumes bearbeiten, um jede Schwellenwertüberschreitung nachzuverfolgen.
+
+* Informationen finden sich unter link:task_configure_global_qtree_health_threshold_values.html["Konfiguration globaler qtree Systemstatus-Schwellenwerte"].
++
+Sie können die Systemstatus-Schwellenwerteinstellungen für die Kapazität aller qtrees bearbeiten, um jede Schwellenwertüberschreitung zu verfolgen.
+
+* Informationen finden sich unter link:task_configure_lag_threshold_settings_for_unmanaged_protection.html["Bearbeiten der Einstellungen für Systemstatusschwellenwerte der Verzögerung für nicht verwaltete Schutzbeziehungen"].
++
+Sie können den Prozentsatz für die Verzögerungszeit bei Warnungen oder Fehlern erhöhen oder verringern, sodass Ereignisse in Intervallen auftreten, die besser Ihren Anforderungen entsprechen.
+
+

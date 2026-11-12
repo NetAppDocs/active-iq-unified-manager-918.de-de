@@ -1,0 +1,48 @@
+---
+permalink: data-protection/task_create_snapvault_protection_relationship_from_health_volume_details.html 
+sidebar: sidebar 
+keywords: create, snapvault, protection, relationship, volume, health details page 
+summary: Sie können über die Seite „Volume / Integritätsdetails“ eine SnapVault Beziehung erstellen, sodass Datensicherungen zu Schutzzwecken auf Volumes aktiviert werden. 
+---
+= Erstellung einer SnapVault Schutzbeziehung auf der Seite „Volume-/Integritätsdetails“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können über die Seite „Volume / Integritätsdetails“ eine SnapVault Beziehung erstellen, sodass Datensicherungen zu Schutzzwecken auf Volumes aktiviert werden.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Voraussetzung für diese Aufgabe ist, dass Workflow Automation eingerichtet ist.
+
+
+Das Menü *Protect* wird in den folgenden Fällen nicht angezeigt:
+
+* Wenn die RBAC-Einstellungen diese Aktion nicht zulassen: beispielsweise wenn Sie nur über Operator-Berechtigungen verfügen
+* Wenn die Volume-ID unbekannt ist: beispielsweise, wenn eine clusterübergreifende Beziehung besteht und der Ziel-Cluster noch nicht erkannt wurde
+
+
+.Schritte
+. Auf der Registerkarte *Schutz* der Detailseite *Volume / Health* lässt sich in der Topologieansicht ein Volume, das geschützt werden soll, mit der rechten Maustaste anklicken.
+. Die Auswahl erfolgt im Menü *Schützen* > *SnapVault*.
++
+Das Dialogfeld „Schutz konfigurieren“ wird angezeigt.
+
+. Durch Klicken auf *SnapVault* wird die *SnapVault* Registerkarte angezeigt, und die Informationen zur sekundären Ressource können konfiguriert werden.
+. Über *Advanced* lassen sich Deduplizierung, Komprimierung, automatisches Wachstum und Speicherplatzzusage nach Bedarf festlegen; anschließend kann auf *Apply* geklickt werden.
+. Im Dialogfeld *Schutz konfigurieren* sind die Bereiche *Zielinformationen* und *Beziehungseinstellungen* zu vervollständigen.
+. Auf *Anwenden* klicken.
++
+Sie gelangen zurück zur Seite „Volume / Health details“.
+
+. Oben auf der Detailseite *Volume / Health* befindet sich der Link zum Schutzkonfigurationsauftrag.
++
+Die Seite „Job details“ wird angezeigt.
+
+. Mit *Aktualisieren* werden die Aufgabenliste und die mit dem Schutzkonfigurationsauftrag verbundenen Aufgabendetails aktualisiert, außerdem lässt sich feststellen, wann der Auftrag abgeschlossen ist.
++
+Wenn die Aufgaben abgeschlossen sind, werden die neuen Beziehungen in der Topologieansicht der Detailseite „Volume / Health“ angezeigt.
+
+

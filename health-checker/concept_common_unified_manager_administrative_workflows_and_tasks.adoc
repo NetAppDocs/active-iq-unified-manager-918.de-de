@@ -1,0 +1,50 @@
+---
+permalink: health-checker/concept_common_unified_manager_administrative_workflows_and_tasks.html 
+sidebar: sidebar 
+keywords: Common, unified, manager, health, workflows, tasks 
+summary: Informationen zu gängigen administrativen Arbeitsabläufen, einschließlich der Überwachung von Clustern, der Diagnose von Verfügbarkeits- und Kapazitätsproblemen und des Sendens von Diagnosedaten an den Support. 
+---
+= Verständnis gängiger Active IQ Unified Manager Arbeitsabläufe und Aufgaben im Zusammenhang mit dem Zustand
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zu den gängigen administrativen Workflows und Aufgaben im Zusammenhang mit Unified Manager gehören die Auswahl der zu überwachenden Storage-Cluster, die Diagnose von Zuständen, die sich nachteilig auf Datenverfügbarkeit, Kapazität und Datenschutz auswirken, die Wiederherstellung verlorener Daten, die Konfiguration und Verwaltung von Volumes sowie das Bündeln und Senden von Diagnosedaten an den technischen Support, falls erforderlich.
+
+Unified Manager ermöglicht es Storage-Administratoren, ein Dashboard anzuzeigen, die Gesamtkapazität, Verfügbarkeit und den Schutzstatus der verwalteten Storage-Cluster zu bewerten und anschließend eventuell auftretende spezifische Probleme schnell zu identifizieren, zu lokalisieren, zu diagnostizieren und zur Behebung zuzuweisen.
+
+Die wichtigsten Probleme im Zusammenhang mit einem Cluster, einer Storage Virtual Machine (SVM), einem Volume oder einem FlexGroup Volume, die sich auf die Storage-Kapazität oder Datenverfügbarkeit Ihrer verwalteten Storage-Objekte auswirken, werden in den Systemstatusdiagrammen und Ereignissen auf der Dashboard-Seite angezeigt. Bei kritischen Problemen bietet diese Seite Links zur Unterstützung geeigneter Fehlerbehebungs-Workflows.
+
+Unified Manager kann auch in Arbeitsabläufe eingebunden werden, die verwandte Verwaltungstools wie OnCommand Workflow Automation (WFA) umfassen, um die direkte Konfiguration von Storage-Ressourcen zu unterstützen.
+
+In diesem Dokument werden gängige Arbeitsabläufe im Zusammenhang mit den folgenden administrativen Aufgaben beschrieben:
+
+* Diagnose und Management von Verfügbarkeitsproblemen
++
+Wenn Hardwareausfälle oder Konfigurationsprobleme bei Storage-Ressourcen dazu führen, dass auf der Dashboard-Seite Ereignisse zur Datenverfügbarkeit angezeigt werden, können Storage-Administratoren über die eingebetteten Links Verbindungsinformationen zur betroffenen Storage-Ressource und Hinweise zur Fehlerbehebung anzeigen sowie die Problemlösung anderen Administratoren zuweisen.
+
+* Konfiguration und Überwachung von Performance-Vorfällen
++
+Der Administrator kann die Performance der überwachten Ressourcen des Storage-Systems überwachen und managen. Weitere Informationen enthält link:../performance-checker/concept_introduction_to_unified_manager_performance_monitoring.html["Einführung in die Performance-Überwachung mit Active IQ Unified Manager"].
+
+* Diagnose und Management von Kapazitätsproblemen bei Volumes
++
+Bei Problemen mit der Storage-Kapazität eines Volumes, die auf der Dashboard-Seite angezeigt werden, können Storage-Administratoren den eingebetteten Links folgen, um die aktuellen und historischen Trends in Bezug auf die Storage-Kapazität des betroffenen Volumes anzuzeigen, Hinweise zur Fehlerbehebung einzusehen und die Behebung des Problems anderen Administratoren zuzuweisen.
+
+* Konfigurieren, Überwachen und Diagnostizieren von Problemen mit Schutzbeziehungen
++
+Nach dem Erstellen und Konfigurieren von Schutzbeziehungen können Speicheradministratoren potenzielle Probleme im Zusammenhang mit Schutzbeziehungen, den aktuellen Status der Schutzbeziehungen, Informationen über den aktuellen und bisherigen Erfolg von Schutzaufträgen für die betroffenen Beziehungen sowie Hinweise zur Fehlerbehebung einsehen. Weitere Informationen finden Sie in link:../data-protection/concept_manage_and_monitor_protection_relationships.html["Informationen zur Verwaltung und Überwachung von Schutzbeziehungen"].
+
+* Erstellen von Sicherungsdateien und Wiederherstellen von Daten aus Sicherungsdateien.
+* Zuordnung von Storage-Objekten zu Annotationen
++
+Durch die Verknüpfung von Speicherobjekten mit Annotationen können Speicheradministratoren die Ereignisse filtern und anzeigen, die mit den Speicherobjekten in Zusammenhang stehen. Dadurch können Speicheradministratoren die mit den Ereignissen verbundenen Probleme priorisieren und beheben.
+
+* Mithilfe von REST-APIs können Sie Ihre Cluster managen, indem Sie die von Unified Manager erfassten Informationen zu Systemstatus, Kapazität und Performance anzeigen. Weitere Informationen finden Sie in link:../api-automation/concept_get_started_with_um_apis.html["Erste Schritte mit Active IQ Unified Manager REST APIs"].
+* Senden eines Support Bundles an den technischen Support
++
+Storage-Administratoren können über die Managementplattform ein Support-Paket abrufen und an den technischen Support senden. Support-Pakete müssen an den technischen Support gesendet werden, wenn das Problem eine detailliertere Diagnose und Fehlerbehebung erfordert, als eine AutoSupport Meldung bieten kann.
+
+

@@ -1,0 +1,49 @@
+---
+permalink: performance-checker/task_view_event_details_in_performance_explorer_events_timeline.html 
+sidebar: sidebar 
+keywords: view, event, details, timeline 
+summary: Im Bereich „Events Timeline“ des Performance Explorer können Sie alle Ereignisse und die zugehörigen Details anzeigen. Dies ist eine schnelle und effiziente Methode zum Anzeigen aller Systemstatus- und Performance-Ereignisse, die auf dem Stammobjekt innerhalb eines bestimmten Zeitraums aufgetreten sind, was bei der Fehlerbehebung von Performance-Problemen hilfreich sein kann. 
+---
+= Ereignisdetails in der Ereigniszeitleiste von Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Bereich „Events Timeline“ des Performance Explorer können Sie alle Ereignisse und die zugehörigen Details anzeigen. Dies ist eine schnelle und effiziente Methode zum Anzeigen aller Systemstatus- und Performance-Ereignisse, die auf dem Stammobjekt innerhalb eines bestimmten Zeitraums aufgetreten sind, was bei der Fehlerbehebung von Performance-Problemen hilfreich sein kann.
+
+Der Bereich „Ereigniszeitleiste“ zeigt kritische, Fehler-, Warn- und Informationsereignisse an, die im ausgewählten Zeitraum für das Stammobjekt aufgetreten sind. Jeder Schweregrad hat eine eigene Zeitleiste. Einzelne und mehrere Ereignisse werden durch einen Ereignispunkt auf der Zeitleiste dargestellt. Die Ereignisdetails sind sichtbar, wenn sich der Mauszeiger über einem Ereignispunkt befindet. Um die visuelle Granularität mehrerer Ereignisse zu erhöhen, kann der Zeitraum verkleinert werden. Dadurch werden mehrere Ereignisse auf einzelne Ereignisse verteilt, sodass jedes Ereignis separat angezeigt und untersucht werden kann.
+
+Jeder Performance-Ereignispunkt auf der Ereigniszeitleiste entspricht vertikal einem entsprechenden Ausschlag in den Trendlinien der Zählerdiagramme, die unterhalb der Ereigniszeitleiste angezeigt werden. Dies stellt einen direkten visuellen Zusammenhang zwischen Ereignissen und der allgemeinen Performance her. Systemstatusereignisse werden ebenfalls auf der Zeitleiste angezeigt, diese Ereignistypen entsprechen jedoch nicht zwangsläufig einem Ausschlag in einem der Performance-Diagramme.
+
+.Schritte
+. Im Bereich *Ereigniszeitleiste* wird beim Positionieren des Cursors über einem Ereignispunkt auf der Zeitleiste eine Zusammenfassung des Ereignisses oder der Ereignisse an diesem Ereignispunkt angezeigt.
++
+Ein Pop-up-Dialog zeigt Informationen zu den Ereignistypen, zu Datum und Uhrzeit des Auftretens der Ereignisse, zum Status und zur Ereignisdauer an.
+
+. Vollständige Details für ein oder mehrere Ereignisse anzeigen:
++
+|===
+| Dazu ... | Durch Klicken hier... 
+
+
+ a| 
+Details zu einem einzelnen Ereignis anzeigen
+ a| 
+*Ereignisdetails anzeigen* im Popup-Dialogfeld.
+
+
+
+ a| 
+Details für mehrere Ereignisse
+ a| 
+*Ereignisdetails anzeigen* im Popup-Dialog.
+
+[NOTE]
+====
+Wenn Sie im Dialogfeld „Mehrere Ereignisse“ auf ein einzelnes Ereignis klicken, wird die entsprechende Seite mit Ereignisdetails angezeigt.
+
+====
+|===
+

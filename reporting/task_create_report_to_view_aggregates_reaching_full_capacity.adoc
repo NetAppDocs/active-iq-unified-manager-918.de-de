@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_reaching_full_capacity.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, reaching, full capacity 
+summary: Sie können einen Bericht erstellen, um die Aggregate zu finden, die an ihre Kapazitätsgrenze stoßen, damit Sie zusätzliche Kapazität hinzufügen oder Workloads auf andere Aggregate verlagern können. 
+---
+= Erstellung eines Berichts zum Anzeigen von Aggregaten, die in Active IQ Unified Manager ihre volle Kapazität erreichen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die Aggregate zu finden, die an ihre Kapazitätsgrenze stoßen, damit Sie zusätzliche Kapazität hinzufügen oder Workloads auf andere Aggregate verlagern können.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Mithilfe der folgenden Schritte kann eine benutzerdefinierte Ansicht erstellt werden, die Aggregate anzeigt, die ihre volle Kapazität erreichen; anschließend kann die Generierung eines Berichts für diese Ansicht geplant werden.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage* > *Aggregates*.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Kapazität* > *Alle Aggregate*.
+. Mit *Anzeigen/Ausblenden* können Sie alle Spalten ausblenden, die Sie im Bericht nicht benötigen.
+. Nach dem Klick auf das Filtersymbol folgt das Hinzufügen des folgenden Filters und anschließend der Klick auf *Apply Filter*:
++
+** Weniger als 45 Tage bis zur vollständigen Befüllung
+
+
+. Durch Klicken auf den oberen Bereich der Spalte "`Days to Full`" werden die Ergebnisse nach der geringsten Anzahl verbleibender Tage bis zum Erreichen der vollen Kapazität sortiert.
+. Die Ansicht wird unter einem spezifischen Namen gespeichert, der widerspiegelt, was die Ansicht anzeigt, z. B. „`Tage bis zur vollen Aggregatkapazität`“, anschließend wird auf das Häkchen (image:../media/blue_check.gif[""]) geklickt.
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Durch Klicken auf *Zeitplan hinzufügen* wird der Seite *Berichtszeitpläne* eine neue Zeile hinzugefügt, sodass die Zeitplanmerkmale für den neuen Bericht definiert werden können.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Anhand der im Bericht angezeigten Ergebnisse kann es sinnvoll sein, den Storage auf Aggregaten zu erhöhen, die ihre volle Kapazität erreichen. Zusätzlich kann es sinnvoll sein, den Schwellenwert für Tage bis zur vollständigen Kapazität auf mehr als die standardmäßigen 7 Tage zu erhöhen, damit Ereignisse empfangen werden, die mehr Zeit für eine Reaktion bieten, wenn der freie Speicherplatz auf Aggregaten knapp wird.

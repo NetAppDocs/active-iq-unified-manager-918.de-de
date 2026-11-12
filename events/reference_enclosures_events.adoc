@@ -1,0 +1,103 @@
+---
+permalink: events/reference_enclosures_events.html 
+sidebar: sidebar 
+keywords: enclosures, events, impact area, availability, configuration 
+summary: Gehäuseereignisse liefern Ihnen Informationen über den Status von Disk Shelf Gehäusen in Ihrem Datacenter, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad. 
+---
+= Informationen zu Gehäuseereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gehäuseereignisse liefern Ihnen Informationen über den Status von Disk Shelf Gehäusen in Ihrem Datacenter, sodass Sie potenzielle Probleme überwachen können. Die Ereignisse sind nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, das Impact Level, den Quelltyp und den Schweregrad.
+
+
+
+[[impact-area-availability]]
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Lüfter des Disk Shelf ausgefallen(ocumEvtShelfFanFailed)
+ a| 
+Vorfall
+ a| 
+Storage Shelf
+ a| 
+Kritisch
+
+
+
+ a| 
+Netzteile des Disk Shelf ausgefallen(ocumEvtShelfPowerSupplyFailed)
+ a| 
+Vorfall
+ a| 
+Storage Shelf
+ a| 
+Kritisch
+
+
+
+ a| 
+Disk Shelf Multipath nicht konfiguriert(ocumDiskShelfConnectivityNotInMultiPath)
+
+Dieses Ereignis gilt nicht für:
+
+* Cluster, die sich in einer MetroCluster Konfiguration befinden
+* Die folgenden Plattformen: FAS2554, FAS2552, FAS2520 und FAS2240
+
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Shelf-Pfadfehler(ocumDiskShelfConnectivityPathFailure)
+ a| 
+Risiko
+ a| 
+Storage-Shelf
+ a| 
+Warnung
+
+|===
+
+
+[[impact-area-configuration]]
+== Wirkungsbereich: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungs-Level | Quellentyp | Schwere 
+
+
+ a| 
+Disk Shelf entdeckt(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Node
+ a| 
+Informationen
+
+
+
+ a| 
+Disk Shelves entfernt(Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Node
+ a| 
+Informationen
+
+|===

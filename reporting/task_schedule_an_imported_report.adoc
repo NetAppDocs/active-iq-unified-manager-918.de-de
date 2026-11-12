@@ -1,0 +1,40 @@
+---
+permalink: reporting/task_schedule_an_imported_report.html 
+sidebar: sidebar 
+keywords: schedule, imported, reports 
+summary: Bereits vorhandene Berichte, die in einer früheren Version von Unified Manager erstellt und importiert wurden, können geplant werden. 
+---
+= Importierte .rptdesign-Berichte in Active IQ Unified Manager planen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bereits vorhandene Berichte, die in einer früheren Version von Unified Manager erstellt und importiert wurden, können geplant werden.
+
+Für die Planung importierter Berichte ist Folgendes erforderlich:
+
+* importierte, mit BIRT entworfene Berichte aus .rptdesign-Dateien in einer früheren Unified Manager Version
+* gilt beim Upgrade auf Unified Manager 9.6 GA oder höher
+
+
+Nach dem Upgrade auf Unified Manager 9.6 GA oder höher werden die importierten Berichte auf der Seite „Berichtszeitpläne“ aufgelistet. Sie können den Zeitplan dieser Berichte bearbeiten, um die E-Mail-Adressen der Empfänger, die Häufigkeit und das Format (PDF oder CSV) festzulegen. Andernfalls können diese Berichte in der Unified Manager UI weder bearbeitet noch angezeigt werden.
+
+.Schritte
+. Die Seite „Berichtszeitpläne“ wird geöffnet. Wenn Sie Berichte importiert haben, erscheint eine Meldung.
++
+image::../media/message_non_scehduled_reports.png[Ein Screenshot der Benutzeroberfläche mit der Meldung wird angezeigt, wenn importierte Berichte vorhanden sind.]
+
+. Über den Namen der *Ansicht* lässt sich die SQL-Abfrage anzeigen, mit der der Bericht generiert wird.
++
+image::../media/importedreport1.png[Ein Screenshot der Benutzeroberfläche, der die zur Berichtserstellung verwendete SQL-Abfrage zeigt.]
+
+. Über das Symbol „Mehr“ image:../media/more_icon.gif[""] und *Bearbeiten* lassen sich die Details des Berichtszeitplans definieren und der Bericht speichern.
++
+[NOTE]
+====
+Über das Symbol „Mehr“ image:../media/more_icon.gif[""] können Sie auch unerwünschte Berichte löschen.
+
+====
+

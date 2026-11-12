@@ -1,0 +1,55 @@
+---
+permalink: api-automation/concept_view_workloads.html 
+sidebar: sidebar 
+keywords: view, storage, workloads 
+summary: 'Die hier aufgeführten APIs ermöglichen die Anzeige einer konsolidierten Liste von Storage Workloads für alle ONTAP Cluster in Ihrem Datacenter. Die APIs bieten außerdem eine Übersicht über die Anzahl der in Ihrer Active IQ Unified Manager Umgebung provisionierten Storage Workloads sowie über deren Kapazitäts- und Performance-Statistiken (IOPS).' 
+---
+= Speicherworkloads mithilfe von APIs in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die hier aufgeführten APIs ermöglichen die Anzeige einer konsolidierten Liste von Storage Workloads für alle ONTAP Cluster in Ihrem Datacenter. Die APIs bieten außerdem eine Übersicht über die Anzahl der in Ihrer Active IQ Unified Manager Umgebung provisionierten Storage Workloads sowie über deren Kapazitäts- und Performance-Statistiken (IOPS).
+
+
+
+[[view-storage-workloads]]
+== Storage Workloads anzeigen
+
+Sie können die folgende Methode verwenden, um alle Storage Workloads in allen Clustern in Ihrem Datacenter anzuzeigen. Informationen zum Filtern der Antwort anhand bestimmter Spalten finden Sie in der API-Referenzdokumentation Ihrer Unified Manager Instanz.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/workloads`
+
+|===
+
+
+[[view-storage-workloads-summary]]
+== Zusammenfassung der Storage Workloads anzeigen
+
+Mit der folgenden Methode können die genutzte Kapazität, die verfügbare Kapazität, die genutzten IOPS, die verfügbaren IOPS sowie die Anzahl der von jedem Performance Service Level gemanagten Storage Workloads bewertet werden. Die angezeigten Storage Workloads können sich auf beliebige LUNs, NFS-Dateifreigaben oder CIFS-Freigaben beziehen. Die API bietet eine Übersicht über die Storage Workloads, eine Übersicht über die vom Unified Manager provisionierten Storage Workloads, eine Datacenter Übersicht sowie eine Übersicht über den gesamten, genutzten und verfügbaren Speicherplatz und die IOPS im Datacenter in Bezug auf die zugewiesenen Performance Service Levels. Die als Antwort auf diese API empfangenen Informationen werden zum Ausfüllen des Dashboards in der Unified Manager Benutzeroberfläche verwendet.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Storage-Provider
+ a| 
+GET
+ a| 
+`/storage-provider/workloads-summary`
+
+|===

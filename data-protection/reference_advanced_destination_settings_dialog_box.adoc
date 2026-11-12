@@ -1,0 +1,30 @@
+---
+permalink: data-protection/reference_advanced_destination_settings_dialog_box.html 
+sidebar: sidebar 
+keywords: advanced, destination, settings, dialog box 
+summary: Im Dialogfeld „Erweiterte Zieleinstellungen“ können Sie die Speicherplatzzusage für ein Zielvolume aktivieren. Dies ist beispielsweise sinnvoll, wenn die Speicherplatzzusage auf dem Quellvolume deaktiviert ist, Sie sie aber auf dem Zielvolume aktivieren möchten. Die Einstellungen für Deduplizierung, Komprimierung und automatisches Wachstum in einer SnapMirror Beziehung werden vom Quellvolume übernommen und können nicht geändert werden. 
+---
+= Im Active IQ Unified Manager kann das Dialogfeld „Erweiterte Zieleinstellungen“ verwendet werden.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Erweiterte Zieleinstellungen“ können Sie die Speicherplatzzusage für ein Zielvolume aktivieren. Dies ist beispielsweise sinnvoll, wenn die Speicherplatzzusage auf dem Quellvolume deaktiviert ist, Sie sie aber auf dem Zielvolume aktivieren möchten. Die Einstellungen für Deduplizierung, Komprimierung und automatisches Wachstum in einer SnapMirror Beziehung werden vom Quellvolume übernommen und können nicht geändert werden.
+
+
+
+[[space-guarantee]]
+== Platzgarantie
+
+Stellt sicher, dass auf dem Ziel-Volume ausreichend Speicherplatz reserviert wird, damit Datenübertragungen stets erfolgreich sind. Die Einstellung für die Speicherplatzzusage kann eine der folgenden sein:
+
+* Datei
+* Volumen
+* Keine
+
+
+Beispielsweise könnte ein 200-GB-Volume Dateien mit einer Gesamtgröße von 50 GB enthalten; diese Dateien enthalten jedoch nur 10 GB an Daten. Die Volume-Garantie reserviert 200 GB für das Zielvolume, unabhängig vom Inhalt auf dem Quellvolume. Die Dateigarantie reserviert 50 GB, um sicherzustellen, dass auf dem Zielvolume genügend Speicherplatz für die Quelldateien vorhanden ist; die Auswahl von *None* bedeutet in diesem Fall, dass auf dem Zielvolume nur 10 GB für den tatsächlich von den Dateidaten auf dem Quellvolume belegten Speicherplatz reserviert werden.
+
+Die Speicherplatzzusage ist standardmäßig auf Volume eingestellt.

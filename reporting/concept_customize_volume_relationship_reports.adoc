@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_volume_relationship_reports.html 
+sidebar: sidebar 
+keywords: customize, volume, relationship, reports 
+summary: Der Bericht Volume Relationships Inventory ermöglicht Ihnen, die Details des Storage-Inventars in einem Cluster zu analysieren, den für Volumes erforderlichen Schutzgrad zu verstehen und die Volume-Details nach Fehlerquelle, Muster und Zeitplänen zu filtern. 
+---
+= Anpassen von Volume-Beziehungsberichten in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Bericht Volume Relationships Inventory ermöglicht Ihnen, die Details des Storage-Inventars in einem Cluster zu analysieren, den für Volumes erforderlichen Schutzgrad zu verstehen und die Volume-Details nach Fehlerquelle, Muster und Zeitplänen zu filtern.

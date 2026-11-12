@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_what_storage_capacity_health_thresholds_are.html 
+sidebar: sidebar 
+keywords: storage, capacity, health, thresholds 
+summary: Ein Systemstatus-Schwellenwert für die Storage-Kapazität ist der Punkt, an dem der Unified Manager Server Ereignisse generiert, um Kapazitätsprobleme bei Storage-Objekten zu melden. Sie können Warnmeldungen so konfigurieren, dass bei jedem Auftreten solcher Ereignisse eine Benachrichtigung gesendet wird. 
+---
+= Informationen zu den Schwellenwerten für die Speicherkapazität in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Systemstatus-Schwellenwert für die Storage-Kapazität ist der Punkt, an dem der Unified Manager Server Ereignisse generiert, um Kapazitätsprobleme bei Storage-Objekten zu melden. Sie können Warnmeldungen so konfigurieren, dass bei jedem Auftreten solcher Ereignisse eine Benachrichtigung gesendet wird.
+
+Die Systemstatus-Schwellenwerte für die Storage-Kapazität aller Aggregate, Volumes und qtrees sind auf Standardwerte eingestellt. Sie können die Einstellungen nach Bedarf für ein Objekt oder eine Gruppe von Objekten ändern.

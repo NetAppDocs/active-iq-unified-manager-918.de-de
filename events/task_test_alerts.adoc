@@ -1,0 +1,31 @@
+---
+permalink: events/task_test_alerts.html 
+sidebar: sidebar 
+keywords: test, alerts 
+summary: Sie können eine Warnung testen, um zu überprüfen, ob Sie sie korrekt konfiguriert haben. Wenn ein Ereignis ausgelöst wird, wird eine Warnung generiert, und eine Warnungs-E-Mail wird an die konfigurierten Empfänger gesendet. Mithilfe der Testwarnung können Sie überprüfen, ob die Benachrichtigung gesendet wird und ob Ihr Skript ausgeführt wird. 
+---
+= Warnungen in Active IQ Unified Manager testen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Warnung testen, um zu überprüfen, ob Sie sie korrekt konfiguriert haben. Wenn ein Ereignis ausgelöst wird, wird eine Warnung generiert, und eine Warnungs-E-Mail wird an die konfigurierten Empfänger gesendet. Mithilfe der Testwarnung können Sie überprüfen, ob die Benachrichtigung gesendet wird und ob Ihr Skript ausgeführt wird.
+
+.Bevor Sie beginnen
+* Die Benachrichtigungseinstellungen wie die E-Mail-Adresse der Empfänger, der SMTP-Server und der SNMP-Trap müssen konfiguriert sein.
++
+Der Unified Manager Server kann diese Einstellungen verwenden, um Benutzern Benachrichtigungen zu senden, wenn ein Ereignis generiert wird.
+
+* Sie müssen ein Skript zugewiesen und dieses so konfiguriert haben, dass es ausgeführt wird, wenn die Warnung generiert wird.
+* Sie benötigen die Rolle des Anwendungsadministrators.
+
+
+.Schritte
+. Im linken Navigationsbereich auf *Storage Management* > *Alert Setup* klicken.
+. Auf der Seite *Alert Setup* können Sie den Alert auswählen, der getestet werden soll, und anschließend auf *Test* klicken.
++
+An die E-Mail-Adressen, die Sie beim Erstellen der Warnung angegeben haben, wird eine Test-E-Mail für Warnungen gesendet.
+
+

@@ -1,0 +1,30 @@
+---
+permalink: data-protection/task_remove_protection_relationship.html 
+sidebar: sidebar 
+keywords: remove, protection, relationship, volume, relationships page 
+summary: Auf der Seite „Volume Beziehungen“ kann eine Schutzbeziehung zwischen Quelle und Ziel dauerhaft entfernt werden. Diese Aktion kann nicht rückgängig gemacht werden. 
+---
+= Das Entfernen einer Schutzbeziehung von der Seite „Volume Relationships“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Volume-Beziehungen“ können Sie eine Schutzbeziehung entfernen, um eine bestehende Beziehung zwischen der ausgewählten Quelle und dem Ziel dauerhaft zu löschen, beispielsweise wenn Sie eine Beziehung mit einem anderen Ziel erstellen möchten. Dieser Vorgang entfernt alle Metadaten und kann nicht rückgängig gemacht werden.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+.Schritte
+. Auf der Seite *Volume Relationships* können Sie ein oder mehrere Volumes mit Schutzbeziehungen auswählen, die entfernt werden sollen, und anschließend in der Symbolleiste auf *Remove* klicken.
++
+Das Dialogfeld „Beziehung entfernen“ wird angezeigt.
+
+. Mit *Weiter* lässt sich die Beziehung entfernen.
++
+Die Beziehung wird von der Seite „Volume Relationships“ entfernt.
+
+

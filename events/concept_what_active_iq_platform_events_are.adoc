@@ -1,0 +1,24 @@
+---
+permalink: events/concept_what_active_iq_platform_events_are.html 
+sidebar: sidebar 
+keywords: active iq, platform, events 
+summary: Unified Manager kann Ereignisse anzeigen, die von der Active IQ Plattform erkannt wurden. Diese Ereignisse werden durch die Anwendung einer Reihe von Regeln auf AutoSupport Meldungen erstellt, die von allen von Unified Manager überwachten Storage-Systemen generiert werden. 
+---
+= Informationen zu Active IQ Plattformereignissen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager kann Ereignisse anzeigen, die von der Active IQ Plattform erkannt wurden. Diese Ereignisse werden durch die Anwendung einer Reihe von Regeln auf AutoSupport Meldungen erstellt, die von allen von Unified Manager überwachten Storage-Systemen generiert werden.
+
+Weitere Informationen sind unter link:../events/concept_how_active_iq_platform_events_are_generated.html["Wie Plattformereignisse von Active IQ generiert werden"] verfügbar.
+
+Unified Manager prüft automatisch, ob eine neue Regeldatei vorhanden ist, und lädt eine neue Datei nur dann herunter, wenn neuere Regeln verfügbar sind. An Standorten ohne externen Netzwerkzugriff müssen Sie die Regeln manuell über *Storage Management* > *Event Setup* > *Upload Rules* hochladen.
+
+Diese Active IQ Ereignisse überschneiden sich nicht mit bestehenden Unified Manager Ereignissen und identifizieren Vorfälle oder Risiken in Bezug auf Systemkonfiguration, Verkabelung, bewährte Verfahren und Verfügbarkeitsprobleme.
+
+Weitere Informationen zum Aktivieren von Plattformereignissen finden Sie unter link:../config/concept_active_iq_platform_events.html["Aktivieren von Active IQ Portalereignissen"]. Weitere Informationen zum Hochladen der Regeldatei finden Sie unter link:../events/task_upload_new_active_iq_rules_file.html["Hochladen einer neuen Active IQ Regeldatei"].
+
+NetApp Active IQ ist ein cloudbasierter Service, der prädiktive Analysen und proaktiven Support zur Optimierung des Speichersystembetriebs in der NetApp Hybrid Cloud bietet. Siehe  https://docs.netapp.com/us-en/active-iq/index.html["NetApp Active IQ"^] für weitere Informationen.

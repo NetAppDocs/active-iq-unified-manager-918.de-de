@@ -1,0 +1,94 @@
+---
+permalink: storage-mgmt/concept_mcc_svmdr_vmawareness.html 
+sidebar: sidebar 
+keywords: view, virtual, infrastructure, disaster, recovery, setup, datastores, metrocluster configuration 
+summary: 'Sie können die Konfigurations- und Performance-Metriken der Datastores anzeigen, die in einer MetroCluster Konfiguration oder in einem Disaster-Recovery-Setup für eine Storage Virtual Machine (storage VM) (SVM DR) gehostet werden.' 
+---
+= Sichtbarkeit der virtuellen Infrastruktur in einer Disaster Recovery Einrichtung mit Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Konfigurations- und Performance-Metriken der Datastores anzeigen, die in einer MetroCluster Konfiguration oder in einem Disaster-Recovery-Setup für eine Storage Virtual Machine (storage VM) (SVM DR) gehostet werden.
+
+In Unified Manager können Sie die NAS-Volumes oder LUNs in einer MetroCluster Konfiguration anzeigen, die in vCenter Server als Datastores angebunden sind. Die in einer MetroCluster Konfiguration gehosteten Datastores werden in derselben topologischen Ansicht dargestellt wie ein Datastore in einer Standardumgebung.
+
+Sie können auch die NAS Volumes oder LUNs in einer Storage VM Disaster Recovery-Konfiguration anzeigen, die den Datastores in vCenter Server zugeordnet sind.
+
+
+
+[[view-datastores-in-metrocluster-configuration]]
+== Datenspeicher in der MetroCluster Konfiguration anzeigen
+
+Vor dem Anzeigen von Datenspeichern in einer MetroCluster Konfiguration sind die folgenden Voraussetzungen zu beachten:
+
+* Im Falle eines Switchover und Switchback sollte die Erkennung der primären und sekundären Cluster des HA-Paares sowie der vCenter Server abgeschlossen sein.
+* Die primären und sekundären Cluster des HA-Paars sowie die vCenter Server müssen durch Unified Manager verwaltet werden.
+* Die erforderliche Einrichtung muss auf ONTAP und vCenter Server abgeschlossen sein. Die ONTAP und vCenter Dokumentation enthält Informationen dazu.
++
+https://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 Dokumentationszentrum"]
+
+
+
+Die folgenden Schritte dienen zum Anzeigen von Datenspeichern:
+
+. Auf der Seite *VMWARE* > *Virtuelle Maschinen* erfolgt die Auswahl der VM, die den Datenspeicher hostet. Anschließend erfolgt ein Klick auf den *Workload Analyzer* oder den Link zum Datenspeicherobjekt. Im Standardszenario, wenn der primäre Standort, der das Volume oder die LUN hostet, wie erwartet funktioniert, sind die vServer Clusterdetails des primären Standorts zu sehen.
+. Im Katastrophenfall und bei einem anschließenden Switchover zum sekundären Standort verweist die Datastore-Verknüpfung auf die Performance-Kennzahlen des Volumes oder der LUN im sekundären Cluster. Dies wird nach Abschluss des nächsten Zyklus der Cluster- und vServer-Erkennung (Erfassung) berücksichtigt.
+. Nach einem erfolgreichen Switchback spiegelt die Datastore-Verknüpfung wieder die Performance-Kennzahlen des Volumes oder der LUN im primären Cluster wider. Dies ist nach Abschluss des nächsten Zyklus der Cluster- und vServer-Erkennung sichtbar.
+
+
+
+
+[[view-datastores-in-storage-vm-disaster-recovery-configuration]]
+== Anzeige von Datenspeichern in der Disaster-Recovery-Konfiguration von Storage-VMs
+
+Vor dem Anzeigen von Datenspeichern in einer Storage VM Disaster Recovery Konfiguration sind die folgenden Voraussetzungen zu beachten:
+
+* Im Falle eines Switchover und Switchback sollte die Erkennung der primären und sekundären Cluster des HA-Paares sowie der vCenter Server abgeschlossen sein.
+* Sowohl der Quell- als auch der Ziel-Cluster sowie die Storage VM-Peers sollten von Unified Manager gemanagt werden.
+* Die erforderliche Konfiguration muss auf ONTAP und dem vCenter Server abgeschlossen sein.
++
+** Bei NAS-Datastores (NFS und VMFS) umfassen die Schritte im Katastrophenfall das Hochfahren der sekundären Storage VM, die Überprüfung der Daten-LIFs und -Routen, die Wiederherstellung verlorener Verbindungen auf dem vCenter Server und das Starten der VMs.
++
+Für einen Switchback auf den primären Standort sollten die Daten zwischen den Volumes synchronisiert sein, bevor der primäre Standort die Daten bereitstellt.
+
+** Bei SAN-Datastores (iSCSI und FC für VMFS) formatiert der vCenter Server die gemountete LUN im VMFS-Format. Im Fall eines Notfalls umfassen die Schritte das Starten der sekundären Storage VM sowie die Überprüfung der Daten-LIFs und Routen. Wenn sich die IPs des iSCSI-Ziels von den primären LIFs unterscheiden, müssen sie manuell hinzugefügt werden. Die neuen LUNs sollten als Geräte unter dem iSCSI-Adapter des Storage-Adapters des Hosts verfügbar sein. Danach sollten neue VMFS-Datastores mit den neuen LUNs erstellt und die alten VMs mit neuen Namen registriert werden. Die VMs müssen betriebsbereit sein.
++
+Im Fall einer Wiederherstellung sollten die Daten zwischen den Volumes synchronisiert werden. Neue VMFS Datastores sollten dann erneut mit den LUNs erstellt und die alten VMs unter neuen Namen registriert werden.
+
++
+Informationen zur Einrichtung finden Sie in der Dokumentation zu ONTAP und vCenter Server.
+
++
+https://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 Dokumentationszentrum"]
+
+
+
+
+
+Die folgenden Schritte dienen zum Anzeigen von Datenspeichern:
+
+. Auf der Seite *VMWARE* > *Virtuelle Maschinen* lässt sich die VM-Inventarliste auswählen, die den Datenspeicher hostet. Anschließend lässt sich der Link zum Datenspeicherobjekt auswählen. Im Standardszenario sind die Performancedaten der Volumes und LUNs in der primären Storage VM zu sehen.
+. Im Katastrophenfall verweist die Datastore-Verknüpfung nach einem anschließenden Switchover zur sekundären Storage VM auf die Performance-Metriken des Volumes oder der LUN in der sekundären Storage VM. Dies wird berücksichtigt, nachdem der nächste Zyklus der Cluster- und vServer-Erkennung (Erfassung) abgeschlossen ist.
+. Nach einem erfolgreichen Switchback spiegelt der Datastore-Link erneut die Performance-Metriken des Volumes oder der LUN in der primären Storage VM wider. Dies zeigt sich, nachdem der nächste Zyklus der Cluster- und vServer-Erkennung abgeschlossen ist.
+
+
+
+
+[[unsupported-scenarios]]
+== Nicht unterstützte Szenarien
+
+* Für eine MetroCluster Konfiguration gelten die folgenden Einschränkungen:
++
+** Cluster werden nur in den Zuständen  `NORMAL` und  `SWITCHOVER` berücksichtigt. Andere Zustände wie  `PARTIAL_SWITCHOVER, PARTIAL_SWITCHBACK` und  `NOT_REACHABLE` werden nicht unterstützt.
+** Sofern Automatic Switch Over (ASO) nicht aktiviert ist, kann bei einem Ausfall des primären Clusters der sekundäre Cluster nicht erkannt werden, und die Topologie verweist weiterhin auf das Volume oder die LUN im primären Cluster.
+
+
+* Bei einer Konfiguration zur Notfallwiederherstellung von Storage VMs gilt die folgende Einschränkung:
++
+** Eine Konfiguration, bei der Site Recovery Manager (SRM) oder Storage Replication Adapter (SRA) für eine SAN Storage Umgebung aktiviert ist, wird nicht unterstützt.
+
+
+

@@ -1,0 +1,22 @@
+---
+permalink: reporting/task_filter_data.html 
+sidebar: sidebar 
+keywords: filtering, data 
+summary: Die Daten können so gefiltert werden, dass die Ergebnisse Ihren Berichtsanforderungen entsprechen. Durch das Filtern werden nur die Daten angezeigt, die für Sie von Interesse sind. 
+---
+= Daten in Active IQ Unified Manager filtern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Daten können so gefiltert werden, dass die Ergebnisse Ihren Berichtsanforderungen entsprechen. Durch das Filtern werden nur die Daten angezeigt, die für Sie von Interesse sind.
+
+.Schritte
+. Mit dem Filtersymbol lassen sich Filter hinzufügen, um die gewünschten Ergebnisse einzugrenzen; anschließend können Sie *Filter anwenden* auswählen.
++
+image::../media/filter_cold_data_2.png[Ein Screenshot der Benutzeroberfläche, der zeigt, wie sich Filter hinzufügen und anwenden lassen.]
+
+. Zum Speichern Ihrer Änderungen ist die Benennung der nicht gespeicherten Ansicht erforderlich.
+

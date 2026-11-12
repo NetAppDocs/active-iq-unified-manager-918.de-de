@@ -1,0 +1,23 @@
+---
+permalink: reporting/task_search_to_refine_view.html 
+sidebar: sidebar 
+keywords: search, refine, view 
+summary: Sobald die gewünschte Ansicht vorliegt, können die Ergebnisse mithilfe des Suchfelds weiter verfeinert werden, damit der Fokus auf den Ergebnissen liegt, die in den Bericht aufgenommen werden sollen. 
+---
+= Suche zur Verfeinerung Ihrer Ansicht in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sobald die gewünschte Ansicht vorliegt, können die Ergebnisse mithilfe des Suchfelds weiter verfeinert werden, damit der Fokus auf den Ergebnissen liegt, die in den Bericht aufgenommen werden sollen.
+
+.Schritte
+. Die benutzerdefinierte oder Standardansicht, die Sie als Grundlage für Ihren Bericht verwenden möchten, wird geöffnet.
+. Im Suchfeld kann Text eingegeben werden, um die in der Ansicht aufgeführten Daten zu verfeinern. In jeder der angezeigten Spalten können Teildaten eingegeben werden. Wenn beispielsweise nach Knoten gesucht werden soll, deren Name "US_East" enthält, kann die vollständige Knotenliste eingegrenzt werden.
++
+Die Ergebnisse Ihrer Suche werden in der benutzerdefinierten Ansicht gespeichert und für den daraus resultierenden geplanten Bericht verwendet.
+
+. Zum Speichern Ihrer Änderungen ist die Benennung der nicht gespeicherten Ansicht erforderlich.
+

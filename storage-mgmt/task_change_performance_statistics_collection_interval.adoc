@@ -1,0 +1,40 @@
+---
+permalink: storage-mgmt/task_change_performance_statistics_collection_interval.html 
+sidebar: sidebar 
+keywords: change, performance, statistics, collection, interval 
+summary: Das Standardintervall für die Erfassung von Performance Statistiken beträgt 5 Minuten. Sie können dieses Intervall auf 10 oder 15 Minuten ändern, falls die Erfassung von Daten großer Cluster nicht innerhalb der Standardzeit abgeschlossen wird. Diese Einstellung betrifft die Erfassung von Statistiken aller Cluster, die von dieser Unified Manager Instanz überwacht werden. 
+---
+= Das Erfassungsintervall für Leistungsstatistiken in Active IQ Unified Manager ändern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Standardintervall für die Erfassung von Performance Statistiken beträgt 5 Minuten. Sie können dieses Intervall auf 10 oder 15 Minuten ändern, falls die Erfassung von Daten großer Cluster nicht innerhalb der Standardzeit abgeschlossen wird. Diese Einstellung betrifft die Erfassung von Statistiken aller Cluster, die von dieser Unified Manager Instanz überwacht werden.
+
+.Bevor Sie beginnen
+Sie müssen über eine Benutzerkennung und ein Passwort verfügen, die für die Anmeldung an der Managementplattform für die Wartung des Unified Manager Servers autorisiert sind.
+
+Die Bannermeldungen weisen auf das Problem hin, dass Erfassungen von Performance-Statistiken nicht rechtzeitig abgeschlossen werden `Unable to consistently collect from cluster <cluster_name> or Data collection is taking too long on cluster <cluster_name>.`
+
+Das Erfassungsintervall sollte nur dann geändert werden, wenn dies aufgrund eines Problems bei der Erfassung von Statistiken erforderlich ist. Diese Einstellung sollte aus keinem anderen Grund geändert werden.
+
+[NOTE]
+====
+Eine Änderung dieses Werts gegenüber der Standardeinstellung von 5 Minuten kann sich auf die Anzahl und Häufigkeit der von Unified Manager gemeldeten Performance-Ereignisse auswirken. Beispielsweise lösen systemdefinierte Performance-Schwellenwerte Ereignisse aus, wenn die Richtlinie 30 Minuten lang überschritten wird. Bei einer Erfassungsdauer von 5 Minuten muss die Richtlinie in sechs aufeinanderfolgenden Erfassungsperioden überschritten werden. Bei einer Erfassungsdauer von 15 Minuten muss die Richtlinie nur in zwei Erfassungsperioden überschritten werden.
+
+====
+Eine Meldung am unteren Rand der Seite „Cluster Setup“ gibt das aktuelle Intervall für die Erfassung statistischer Daten an.
+
+.Schritte
+. Sie melden sich per SSH als Wartungsbenutzer am Unified Manager Host an.
++
+Die Eingabeaufforderungen der Unified Manager Wartungs-Managementplattform werden angezeigt.
+
+. Die Nummer der Menüoption mit der Bezeichnung *Konfiguration des Performance-Abfrageintervalls* eingeben und anschließend die Eingabetaste drücken.
+. Falls Sie dazu aufgefordert werden, geben Sie das Passwort des Wartungsbenutzers erneut ein.
+. Sie geben die Zahl für das neue Abfrageintervall ein, die Sie festlegen möchten, und drücken anschließend die Eingabetaste.
+
+
+Wenn Sie das Unified Manager Erfassungsintervall auf 10 oder 15 Minuten geändert haben und derzeit eine Verbindung zu einem externen Datenanbieter (z. B. Graphite) besteht, müssen Sie das Übertragungsintervall des Datenanbieters so ändern, dass es dem Unified Manager Erfassungsintervall entspricht oder größer ist.

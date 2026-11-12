@@ -1,0 +1,327 @@
+---
+permalink: data-protection/reference_relationship_all_relationships_view.html 
+sidebar: sidebar 
+keywords: volume, relationships, metrocluster 
+summary: Die Ansicht „Alle Beziehungen“ auf der Seite „Beziehungen“ zeigt Informationen zu Schutzbeziehungen auf dem Speichersystem an. 
+---
+= Anzeige der Beziehungen: Alle Beziehungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Ansicht „Beziehung: Alle Beziehungen“ zeigt Informationen über Schutzbeziehungen im Storage-System.
+
+Standardmäßig enthält der Bericht, der beim Aufrufen der Seite „Relationships“ angezeigt wird, die Schutzbeziehungen der obersten Ebene für Volumes und Storage VMs. Mit den Steuerelementen am oberen Rand der Seite lassen sich eine bestimmte Ansicht auswählen, Suchen zum Auffinden bestimmter Objekte ausführen, Filter zum Eingrenzen der Liste der angezeigten Daten erstellen und anwenden, Spalten auf der Seite hinzufügen, entfernen oder neu anordnen und die Daten auf der Seite in eine Datei im Format .csv, .pdf oder .xlsx exportieren. Nach dem Anpassen der Seite lassen sich die Ergebnisse als benutzerdefinierte Ansicht speichern, und es lässt sich ein Bericht über diese Daten planen, der regelmäßig erstellt und per E-Mail versendet wird. Standardmäßig enthält der angezeigte Bericht beim Auswählen des Menüs *Relationships* Schutzbeziehungen für Volumes und Storage VMs in Ihrem Datacenter. Mit der Option *Filter* lassen sich nur ausgewählte Storage-Systeme anzeigen, also beispielsweise nur Volumes oder nur Storage VMs. Derselbe Bericht wird auf der Seite Storage angezeigt und nur für die ausgewählte Storage-Entität. Wenn Beziehungen von Volumes oder Storage VMs angezeigt werden sollen, kann entweder die Seite *Storage* > *Volumes* > *Relationship: All Relationships* oder *Protection* > *Relationships* > *Relationship: All Relationships* aufgerufen werden. Anschließend lässt sich die Option *Relationship Object Type* in *Filter* verwenden, um nur Daten zu Volumes oder Storage VMs zu filtern.
+
+Auf der Seite „Beziehungen“, auf der alle Schutzbeziehungen aufgelistet sind, befindet sich für den Ziel-Cluster der Link *Im System Manager anzeigen*, über den dieselben Objekte im ONTAP System Manager angezeigt werden können.
+
+* *Status*
++
+Zeigt den aktuellen Status der Schutzbeziehung an.
+
++
+Der Status kann Fehler (image:../media/sev_error_um60.png[""]), Warnung (image:../media/sev_warning_um60.png[""]) oder OK (image:../media/sev_normal_um60.png[""]) sein.
+
+* *Quell-Storage-VM*
++
+Zeigt den Namen der Quell-SVM an. Weitere Details zur Quell-SVM können durch Klicken auf den SVM-Namen angezeigt werden.
+
++
+Wenn eine SVM im Cluster vorhanden ist, aber noch nicht dem Unified Manager Inventar hinzugefügt wurde oder wenn die SVM nach der letzten Aktualisierung des Clusters erstellt wurde, ist dieses Feld leer. Es ist sicherzustellen, dass die SVM vorhanden ist, oder eine erneute Clustererkennung ist durchzuführen, um die Ressourcenliste zu aktualisieren.
+
+* *Quelle*
++
+Je nach Ihrer Auswahl wird entweder das geschützte Quellvolume oder die geschützte source storage VM angezeigt. Weitere Details zum Quellvolume oder zur storage VM können durch Klicken auf den Namen des Volumes oder der storage VM angezeigt werden.
+
++
+Wird diese Meldung `Resource-key not discovered` angezeigt, kann dies darauf hindeuten, dass das Volume zwar im Cluster vorhanden ist, aber noch nicht dem Unified Manager Inventar hinzugefügt wurde, oder dass es nach der letzten Aktualisierung des Clusters erstellt wurde. Dabei muss sichergestellt sein, dass das Volume vorhanden ist, oder auf dem Cluster muss eine erneute Erkennung durchgeführt werden, um die Ressourcenliste zu aktualisieren.
+
+* *Ziel-Storage VM*
++
+Zeigt den Namen der Ziel-SVM an. Durch Klicken auf den SVM-Namen können Sie weitere Details zur Ziel-SVM anzeigen.
+
+* *Ziel*
++
+Zeigt den Namen des Zielvolumes oder der Storage VM basierend auf Ihrer Auswahl an. Weitere Details zum Zielvolume oder zur Storage VM lassen sich durch Klicken auf den jeweiligen Objektnamen anzeigen.
+
+* *Beziehungsobjekttyp*
++
+Zeigt den Typ des in der Beziehung verwendeten Objekts an, z. B. Storage VM, Volume oder Consistency Group. Bei Objekten in einer Konsistenzbeziehung werden die Beziehungsquelle und -ziele sowie die Consistency Group angezeigt. Ein Klick darauf führt zur LUN-Seite, auf der die Beziehung angezeigt wird.
+
+* *Richtlinie*
++
+Zeigt den Namen der Datensicherungsstrategie für die SnapMirror Beziehung an. Ein Klick auf den Namen der Datensicherungsstrategie zeigt die zugehörigen Details an, darunter die folgenden Informationen:
+
++
+** Übertragungspriorität
++
+Legt die Priorität fest, mit der eine Übertragung für asynchrone Vorgänge ausgeführt wird. Die Übertragungspriorität ist „Normal“ oder „Niedrig“. Übertragungen mit normaler Priorität werden vor Übertragungen mit niedriger Priorität geplant. Der Standardwert ist „Normal“.
+
+** Zugriffszeit ignorieren
++
+Gilt nur für SnapVault Beziehungen. Diese Einstellung legt fest, ob inkrementelle Übertragungen Dateien ignorieren, deren Zugriffszeit sich lediglich geändert hat. Die Werte sind entweder True oder False. Der Standardwert ist False.
+
+** Wenn eine Beziehung nicht synchron ist
++
+Legt die Aktion fest, die ONTAP ausführt, wenn eine synchrone Beziehung nicht synchronisiert werden kann. StrictSync Beziehungen schränken den Zugriff auf das primäre Volume ein, wenn die Synchronisierung mit dem sekundären Volume fehlschlägt. Sync Beziehungen schränken den Zugriff auf das primäre Volume nicht ein, wenn die Synchronisierung mit dem sekundären Volume fehlschlägt.
+
+** Versuchslimit
++
+Legt die maximale Anzahl von Versuchen fest, die für jede manuelle oder geplante Übertragung einer SnapMirror Beziehung unternommen werden. Der Standardwert ist 8.
+
+** Kommentare
++
+Bietet ein Textfeld für Kommentare, die speziell für die ausgewählte Richtlinie gelten.
+
+** SnapMirror Etikett
++
+Gibt die SnapMirror Bezeichnung für den ersten Zeitplan an, der der Snapshot-Kopierrichtlinie zugeordnet ist. Die SnapMirror Bezeichnung wird vom SnapVault Subsystem verwendet, wenn Sie Snapshot-Kopien zu einem SnapVault Ziel sichern.
+
+** Aufbewahrungseinstellung
++
+Legt fest, wie lange Backups aufbewahrt werden, basierend auf der Zeit oder der Anzahl der Backups.
+
+** Tatsächliche Snapshot Copies
++
+Gibt die Anzahl der Snapshot Kopien auf diesem Volume an, die mit der angegebenen Bezeichnung übereinstimmen.
+
+** Snapshot Kopien beibehalten
++
+Gibt die Anzahl der SnapVault Snapshot-Kopien an, die nicht automatisch gelöscht werden, selbst wenn das für die Richtlinie festgelegte Limit erreicht ist. Die Werte sind entweder True oder False. Der Standardwert ist False.
+
+** Warnschwelle für die Aufbewahrung
++
+Legt die Snapshot Kopie-Grenze fest, bei der eine Warnung gesendet wird, die anzeigt, dass die maximale Aufbewahrungsgrenze nahezu erreicht ist.
+
+
+
+* *Verzögerungsdauer*
++
+Zeigt die Zeitspanne an, um die die Daten auf dem Spiegel gegenüber der Quelle hinterherhinken.
+
++
+Die Verzögerungsdauer sollte bei StrictSync Beziehungen nahe bei oder gleich 0 Sekunden liegen.
+
+* *Lag-Status*
++
+Zeigt den Verzögerungsstatus für verwaltete Beziehungen und für nicht verwaltete Beziehungen an, denen ein Zeitplan zugeordnet ist. Der Verzögerungsstatus kann Folgendes sein:
+
++
+** Fehler
++
+Die Verzögerungsdauer ist größer oder gleich dem Schwellenwert für den Verzögerungsfehler.
+
+** Warnung
++
+Die Verzögerungsdauer ist größer als oder gleich dem Schwellenwert für die Verzögerungswarnung.
+
+** OK
++
+Die Verzögerungsdauer liegt im normalen Bereich.
+
+** Nicht zutreffend
++
+Der Verzögerungsstatus ist für synchrone Beziehungen nicht anwendbar, da kein Zeitplan konfiguriert werden kann.
+
+
+
+* *Letzte erfolgreiche Aktualisierung*
++
+Zeigt den Zeitpunkt der letzten erfolgreichen SnapMirror- oder SnapVault-Operation an.
+
++
+Das letzte erfolgreiche Update ist für synchrone Beziehungen nicht anwendbar.
+
+* *Konstituentenbeziehungen*
++
+Zeigt an, ob im ausgewählten Objekt Volumina vorhanden sind.
+
+* *Beziehungsart*
++
+Zeigt den Beziehungstyp an, der zum Replizieren eines Volumes verwendet wird. Zu den Beziehungstypen gehören:
+
++
+** Asynchroner Spiegel
+** Asynchroner Vault
+** Asynchrones MirrorVault
+** StrictSync
+** Synchronisieren
+
+
+* *Übertragungsstatus*
++
+Zeigt den Übertragungsstatus für die Schutzbeziehung an. Der Übertragungsstatus kann einer der folgenden sein:
+
++
+** Abbruch
++
+SnapMirror Übertragungen sind aktiviert; es wird jedoch derzeit ein Vorgang zum Abbruch einer Übertragung ausgeführt, der möglicherweise die Entfernung des Checkpoints umfasst.
+
+** Überprüfung
++
+Das Ziel-Volume wird derzeit diagnostisch überprüft, und es findet kein Datentransfer statt.
+
+** Finalisierung
++
+SnapMirror Übertragungen sind aktiviert. Das Volume befindet sich aktuell in der Nachübertragungsphase für inkrementelle SnapVault Übertragungen.
+
+** Leerlauf
++
+Transfers sind aktiviert, und es wird kein Transfer ausgeführt.
+
+** In-Sync
++
+Die Daten in den beiden Volumes in der synchronen Beziehung sind synchronisiert.
+
+** Nicht synchronisiert
++
+Die Daten im Ziel-Volume sind nicht mit dem Quell-Volume synchronisiert.
+
+** Vorbereitung
++
+SnapMirror Übertragungen sind aktiviert. Das Volume befindet sich aktuell in der Vorübertragungsphase für inkrementelle SnapVault Übertragungen.
+
+** In der Warteschlange
++
+SnapMirror Transfers sind aktiviert. Derzeit sind keine Transfers in Bearbeitung.
+
+** Ruhend
++
+SnapMirror Transfers sind deaktiviert. Es ist kein Transfer im Gange.
+
+** Anhalten
++
+Eine SnapMirror Übertragung ist im Gange. Zusätzliche Übertragungen sind deaktiviert.
+
+** Übertragung
++
+SnapMirror Datentransfers sind aktiviert, und ein Transfer wird ausgeführt.
+
+** Übergang
++
+Der asynchrone Datentransfer vom Quell- zum Ziel-Volume ist abgeschlossen, und der Übergang zum synchronen Betrieb hat begonnen.
+
+** Warten
++
+Ein SnapMirror Transfer wurde eingeleitet, aber einige zugehörige Aufgaben warten darauf, in die Warteschlange eingereiht zu werden.
+
+
+
+* *Dauer des letzten Transfers*
++
+Zeigt die Zeit an, die für den Abschluss des letzten Datentransfers benötigt wurde.
+
++
+Die Übertragungsdauer gilt nicht für StrictSync Beziehungen, da die Übertragung gleichzeitig erfolgen sollte.
+
+* *Größe der letzten Übertragung*
++
+Zeigt die Größe des letzten Datentransfers in Byte an.
+
++
+Die Übertragungsgröße ist für StrictSync Beziehungen nicht zutreffend.
+
+* *Mediatoren*
++
+Anzeige des Mediatorstatus.
+
++
+** Nicht zutreffend
++
+Wenn der Cluster SnapMirror active sync nicht unterstützt.
+
+** Nicht konfiguriert
++
+Falls dies nicht konfiguriert ist oder zwar konfiguriert ist, aber nur der Ziel-Cluster und nicht der Quell-Cluster in Unified Manager hinzugefügt wurde.
+
+** Mediator IP-Adresse
++
+Wenn dies konfiguriert ist und sowohl Quell- als auch Ziel-Cluster in Unified Manager hinzugefügt wurden.
+
+
+
+* *Zustand*
++
+Zeigt den Status der SnapMirror oder SnapVault Beziehung an. Der Status kann Uninitialized, SnapMirrored oder Broken-Off sein. Wenn ein Quellvolume ausgewählt ist, ist der Beziehungsstatus nicht anwendbar und wird nicht angezeigt.
+
+* *Beziehungsintegrität*
++
+Zeigt den Integritätsstatus der Beziehung des Clusters an.
+
+* *Grund für den fehlerhaften Zustand*
++
+Der Grund, warum sich die Beziehung in einem fehlerhaften Zustand befindet.
+
+* *Transferpriorität*
++
+Zeigt die Priorität an, mit der ein Transfer ausgeführt wird. Die Transferpriorität ist „Normal“ oder „Niedrig“. Transfers mit normaler Priorität werden vor Transfers mit niedriger Priorität geplant.
+
++
+Die Übertragungspriorität ist für synchrone Beziehungen nicht anwendbar, da alle Übertragungen mit derselben Priorität behandelt werden.
+
+* *Zeitplan*
++
+Zeigt den Namen des der Beziehung zugeordneten Schutzzeitplans an.
+
++
+Der Zeitplan gilt nicht für synchrone Beziehungen.
+
+* *Versionsflexible Replikation*
++
+Es wird entweder „Ja“, „Ja mit Backup-Option“ oder „Keine“ angezeigt.
+
+* *Quell-Cluster*
++
+Zeigt den FQDN, den Kurznamen oder die IP-Adresse des Quell-Clusters für die SnapMirror Beziehung an.
+
+* *FQDN des Quell-Clusters*
++
+Zeigt den Namen des Quell-Clusters für die SnapMirror Beziehung an.
+
+* *Quell-Node*
++
+Zeigt den Namen des Links für den Quell-Node-Namen der SnapMirror Beziehung eines Volumes an und zeigt den Link zur Node-Anzahl der SnapMirror Beziehung an, wenn das Objekt eine Storage VM oder eine Konsistenzgruppe ist.
+
+
+
+In der benutzerdefinierten Ansicht können Sie beim Klicken auf den Link für den Node-Name den Schutz für Storage Objekte anzeigen und erweitern, zu denen die Volumes dieser Konsistenzgruppen in einer SnapMirror Active Sync Beziehung gehören.
+
+Wenn Sie auf den Link „Knotenanzahl“ klicken, gelangen Sie zur Knotenseite mit den zugehörigen Knoten dieser Beziehung. Ist die Knotenanzahl 0, wird kein Wert angezeigt, da keine Knoten mit dieser Beziehung verknüpft sind.
+
+* *Ziel-Node*
++
+Zeigt den Link des Ziel-Node-Namens für die SnapMirror Beziehung eines Volumes an und zeigt den Link zur Node-Anzahl der SnapMirror Beziehung an, wenn das Objekt eine Storage VM oder eine Konsistenzgruppe ist.
+
++
+Wenn Sie auf den Link „Knotenanzahl“ klicken, gelangen Sie zur Knotenseite mit den zugehörigen Knoten dieser Beziehung. Ist die Knotenanzahl 0, wird kein Wert angezeigt, da keine Knoten mit dieser Beziehung verknüpft sind.
+
+* *Ziel-Cluster*
++
+Zeigt den Namen des Ziel-Clusters für die SnapMirror Beziehung an.
+
+* *Ziel-Cluster-FQDN*
++
+Zeigt den FQDN, den Kurznamen oder die IP-Adresse des Ziel-Clusters für die SnapMirror Beziehung an.
+
+* *Geschützt durch*
++
+Zeigt die verschiedenen Beziehungen an. In dieser Spalte können Sie die Volume- und Konsistenzgruppenbeziehungen für Cluster und die Reihenfolge der Storage Virtual Machines anzeigen, einschließlich:
+
++
+** SnapMirror
+** Storage VM DR
+** SnapMirror, Storage-VM-DR
+** Konsistenzgruppe
+** SnapMirror, Konsistenzgruppe.
+
+
+
+
+*Verwandte Informationen*
+
+* Informationen zur Ansicht *Beziehung: MetroCluster* finden Sie unter link:../storage-mgmt/task_monitor_metrocluster_configurations.html["Überwachung von MetroCluster Konfigurationen"].
+* Informationen zur Ansicht *Beziehung: Transferstatus des letzten Monats* sind unter link:../data-protection/reference_relationship_last_1_month_transfer_status_view.html["Beziehung: Ansicht des Übertragungsstatus des letzten Monats"] verfügbar.
+* Informationen zur Ansicht *Beziehung: Alle Beziehungen* sind unter link:../data-protection/reference_relationship_last_1_month_transfer_rate_view.html["Beziehung: Ansicht der Datentransferrate des letzten Monats"] verfügbar.
+

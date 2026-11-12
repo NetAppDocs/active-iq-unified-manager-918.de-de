@@ -1,0 +1,51 @@
+---
+permalink: install-vapp/reference_vmware_software_and_installation_requirements.html 
+sidebar: sidebar 
+keywords: vmware, software, installation, requirements 
+summary: Das VMware vSphere System, auf dem Sie Unified Manager installieren, erfordert eine bestimmte Version des Betriebssystems und bestimmte Versionen der unterstützenden Software. 
+---
+= Informationen zur VMware Software und zu den Installationsvoraussetzungen für Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das VMware vSphere System, auf dem Sie Unified Manager installieren, erfordert eine bestimmte Version des Betriebssystems und bestimmte Versionen der unterstützenden Software.
+
+
+
+[[operating-system-software]]
+== Betriebssystemsoftware
+
+Das unterstützte Betriebssystem ist VMware ESXi 8.0.
+
+[NOTE]
+====
+Unified Manager OVA auf VMware vSphere-Systemen verwendet intern Debian OS 13 (Trixie). Informationen zu den von den unterstützten ESXi-Serverversionen unterstützten Versionen der virtuellen Maschinenhardware finden Sie in der VMware-Dokumentation.
+
+====
+Die folgenden Versionen von vSphere werden unterstützt:
+
+* VMware vCenter Server 7.0 und 8.0
+
+
+Die Interoperability Matrix enthält die vollständige und aktuellste Liste der unterstützten ESXi Versionen.
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]
+
+Die VMware ESXi-Serverzeit sollte mit der NTP-Serverzeit übereinstimmen, damit die virtuelle Appliance korrekt funktioniert. Die Synchronisierung der VMware ESXi-Serverzeit mit der NTP-Serverzeit verhindert einen Zeitfehler.
+
+
+
+[[installation-requirements]]
+== Installationsanforderungen
+
+VMware High Availability für die virtuelle Appliance Unified Manager wird unterstützt.
+
+Wenn Sie auf einem Storage-System mit ONTAP Software einen NFS-Datenspeicher einsetzen, kann mit dem NetApp NFS Plug-in für VMware VAAI die Thick Provisionierung verwendet werden.
+
+Falls das Deployment in Ihrer für High Availability aktivierten Umgebung aufgrund unzureichender Ressourcen fehlschlägt, müssen Sie möglicherweise die Cluster Features Virtual Machine Options ändern, indem Sie VM Restart Priority deaktivieren und Host Isolation Response aktiviert lassen.
+
+
+NOTE: Bei der Installation oder Aktualisierung von Unified Manager werden die erforderlichen Drittanbietersoftware und Sicherheitspatches automatisch auf einem VMware vSphere System installiert bzw. aktualisiert. Da die Installations- und Aktualisierungsprozesse von Unified Manager diese Komponenten steuern, sollten Sie keine eigenständige Installation oder Aktualisierung einer Drittanbieterkomponente vornehmen.

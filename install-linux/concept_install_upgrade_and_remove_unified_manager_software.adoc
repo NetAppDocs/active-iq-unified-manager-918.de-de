@@ -1,0 +1,16 @@
+---
+permalink: install-linux/concept_install_upgrade_and_remove_unified_manager_software.html 
+sidebar: sidebar 
+keywords: install, upgrade, remove, unified manager software 
+summary: Auf Linux-Systemen können Sie die Unified Manager Software installieren, auf eine neuere Version der Software aktualisieren oder Unified Manager entfernen. 
+---
+= Installation, Aktualisierung und Deinstallation der Active IQ Unified Manager Software
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf Linux-Systemen können Sie die Unified Manager Software installieren, auf eine neuere Version der Software aktualisieren oder Unified Manager entfernen.
+
+Unified Manager kann auf Red Hat Enterprise Linux Servern installiert werden. Der Linux Server, auf dem Sie Unified Manager installieren, kann entweder auf einem physischen Rechner oder auf einer virtuellen Maschine ausgeführt werden, die unter VMware ESXi, Microsoft Hyper-V oder Citrix XenServer ausgeführt wird.

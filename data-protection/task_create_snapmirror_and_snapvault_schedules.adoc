@@ -1,0 +1,44 @@
+---
+permalink: data-protection/task_create_snapmirror_and_snapvault_schedules.html 
+sidebar: sidebar 
+keywords: create, snapmirror, snapvault, schedules 
+summary: Sie können einfache oder erweiterte SnapMirror- und SnapVaultZeitpläne erstellen, um automatische Transfers zum Schutz von Daten auf einem Quell- oder Primär-Volume zu aktivieren, sodass die Transfers je nachdem, wie häufig sich die Daten auf Ihren Volumes ändern, häufiger oder seltener erfolgen. 
+---
+= Erstellung von SnapMirror und SnapVault Zeitplänen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einfache oder erweiterte SnapMirror- und SnapVaultZeitpläne erstellen, um automatische Transfers zum Schutz von Daten auf einem Quell- oder Primär-Volume zu aktivieren, sodass die Transfers je nachdem, wie häufig sich die Daten auf Ihren Volumes ändern, häufiger oder seltener erfolgen.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Der Bereich „Destination Information“ im Dialogfeld „Configure Protection“ muss bereits ausgefüllt sein.
+* Voraussetzung für diese Aufgabe ist, dass Workflow Automation eingerichtet ist.
+
+
+.Schritte
+. Auf der Registerkarte *SnapMirror* oder *SnapVault* des Dialogfelds *Schutz konfigurieren* befindet sich im Bereich *Beziehungseinstellungen* der Link *Zeitplan erstellen*.
++
+Das Dialogfeld „Zeitplan erstellen“ wird angezeigt.
+
+. Im Feld *Terminplanname* können Sie den gewünschten Namen für den Terminplan eingeben.
+. Wählen Sie eine der folgenden Optionen aus:
++
+** *Standard*
++
+Diese Option wird verwendet, wenn Sie einen einfachen Intervallplan erstellen möchten.
+
+** *Fortschrittlich*
++
+Diese Option ist für das Erstellen eines Zeitplans im Cron-Stil vorgesehen.
+
+
+
+. Klicken Sie auf *Create*.
++
+Der neue Zeitplan wird in der Dropdown-Liste SnapMirror Zeitplan oder SnapVault Zeitplan angezeigt.
+
+

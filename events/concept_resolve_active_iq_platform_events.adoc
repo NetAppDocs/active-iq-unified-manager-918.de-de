@@ -1,0 +1,22 @@
+---
+permalink: events/concept_resolve_active_iq_platform_events.html 
+sidebar: sidebar 
+keywords: active iq, resolve, events 
+summary: Vorfälle und Risiken der Active IQ-Plattform ähneln anderen Unified Manager-Ereignissen, da sie anderen Benutzern zur Behebung zugewiesen werden können und dieselben verfügbaren Status aufweisen. Wenn diese Ereignistypen jedoch mithilfe der Schaltfläche „Fix It“ behoben werden, kann die Behebung innerhalb weniger Stunden überprüft werden. 
+---
+= Active IQ Plattformereignisse in Active IQ Unified Manager beheben
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vorfälle und Risiken der Active IQ Plattform ähneln anderen Unified Manager Ereignissen, da sie anderen Benutzern zur Behebung zugewiesen werden können und dieselben verfügbaren Status aufweisen. Wenn diese Ereignisse jedoch mit der Schaltfläche *Fix It* behoben werden, kann die Behebung innerhalb weniger Stunden überprüft werden.
+
+Das folgende Diagramm zeigt die Maßnahmen, die Sie ergreifen müssen (grün), und die Maßnahmen, die Unified Manager ergreift (schwarz), wenn Ereignisse behoben werden, die von der Active IQ Plattform generiert wurden.
+
+image::../media/aiq_and_um_event_resolution.png[Ein Screenshot der Benutzeroberfläche, der die Maßnahmen zeigt, die Sie ergreifen müssen, sowie die Maßnahmen, die Unified Manager bei der Behebung von Ereignissen ergreift.]
+
+Bei einer manuellen Behebung müssen Sie sich bei System Manager oder der ONTAP Befehlszeilenschnittstelle anmelden, um das Problem zu beheben. Die Überprüfung des Problems ist erst möglich, nachdem der Cluster um Mitternacht eine neue AutoSupport Meldung generiert hat.
+
+Bei einer halbautomatischen Behebung mithilfe der Schaltfläche *Fix It* können Sie innerhalb weniger Stunden überprüfen, ob die Behebung erfolgreich war.

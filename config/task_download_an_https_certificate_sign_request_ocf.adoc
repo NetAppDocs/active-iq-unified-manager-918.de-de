@@ -1,0 +1,25 @@
+---
+permalink: config/task_download_an_https_certificate_sign_request_ocf.html 
+sidebar: sidebar 
+keywords: download, https, certificate, signing, request 
+summary: Sie können eine Zertifikatssignierungsanforderung für das aktuelle HTTPS-Sicherheitszertifikat herunterladen, um die Datei einer Zertifizierungsstelle zur Signierung vorzulegen. Ein von einer Zertifizierungsstelle signiertes Zertifikat hilft, Man-in-the-Middle-Angriffe zu verhindern, und bietet besseren Schutz als ein selbstsigniertes Zertifikat. 
+---
+= Herunterladen einer HTTPS-Zertifikatsignierungsanforderung in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Zertifikatssignierungsanforderung für das aktuelle HTTPS-Sicherheitszertifikat herunterladen, um die Datei einer Zertifizierungsstelle zur Signierung vorzulegen. Ein von einer Zertifizierungsstelle signiertes Zertifikat hilft, Man-in-the-Middle-Angriffe zu verhindern, und bietet besseren Schutz als ein selbstsigniertes Zertifikat.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+.Schritte
+. Im linken Navigationsbereich auf *General* > *HTTPS Certificate* klicken.
+. Sie können auf *Download HTTPS Certificate Signing Request* klicken.
+. Die `<hostname>.csr` Datei speichern.
+
+
+Sie können die Datei einer Zertifizierungsstelle zum Signieren vorlegen und anschließend das signierte Zertifikat installieren.

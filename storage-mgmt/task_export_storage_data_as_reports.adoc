@@ -1,0 +1,74 @@
+---
+permalink: storage-mgmt/task_export_storage_data_as_reports.html 
+sidebar: sidebar 
+keywords: export, storage, data, reports 
+summary: Sie können Storage-Daten in verschiedenen Ausgabeformaten exportieren und die exportierten Daten dann zum Erstellen von Berichten verwenden. Wenn beispielsweise 10 kritische Ereignisse noch nicht behoben wurden, können Sie die Daten von der Inventarseite der Ereignisverwaltung exportieren, um einen Bericht zu erstellen und diesen dann an Administratoren zu senden, die die Probleme beheben können. 
+---
+= Speicherdaten können in Active IQ Unified Manager als Berichte exportiert werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Storage-Daten in verschiedenen Ausgabeformaten exportieren und die exportierten Daten dann zum Erstellen von Berichten verwenden. Wenn beispielsweise 10 kritische Ereignisse noch nicht behoben wurden, können Sie die Daten von der Inventarseite der Ereignisverwaltung exportieren, um einen Bericht zu erstellen und diesen dann an Administratoren zu senden, die die Probleme beheben können.
+
+Daten können von den Inventarseiten *Storage* und *Network* in eine  `.csv`Datei,  `.xlsx`Datei oder ein  `.pdf`Dokument exportiert und zum Erstellen von Berichten verwendet werden. Es gibt weitere Bereiche im Produkt, in denen nur  `.csv`- oder  `.pdf`Dateien generiert werden können.
+
+.Schritte
+. Führen Sie eine der folgenden Aktionen aus:
++
+|===
+| Wenn Sie exportieren möchten... | Folgendes ist zu tun... 
+
+
+ a| 
+Inventardetails der Storage Objekte
+ a| 
+Im linken Navigationsmenü wird *Storage* oder *Network* ausgewählt; anschließend folgt die Auswahl eines Storage-Objekts. Zur Auswahl stehen eine der vom System bereitgestellten Ansichten oder eine von Ihnen erstellte benutzerdefinierte Ansicht.
+
+
+
+ a| 
+Details zur QoS-Richtliniengruppe
+ a| 
+Die Auswahl erfolgt im linken Navigationsmenü über *Storage* > *QoS Policy Groups*.
+
+
+
+ a| 
+Details zur Speicherkapazität und zum Schutzverlauf
+ a| 
+Die Auswahl eines einzelnen Aggregats oder Volumes erfolgt unter *Storage* > *Aggregates* oder *Storage* > *Volumes*.
+
+
+
+ a| 
+Ereignisdetails
+ a| 
+Die Auswahl von *Event Management* erfolgt im linken Navigationsmenü.
+
+
+
+ a| 
+Top-10-Performancedetails von Storage Objekten
+ a| 
+Über *Storage* > *Clusters* > *Performance:All Clusters* lässt sich dann ein Cluster auswählen und die Registerkarte *Top Performers* öffnen. Anschließend können Sie ein Storage Objekt und einen Performance Zähler auswählen.
+
+|===
+. Die Schaltfläche *Reports* auswählen (oder auf einigen UI-Seiten die Schaltfläche *Export*).
+. Zum Bestätigen der Exportanfrage *CSV herunterladen*, *PDF herunterladen* oder *Excel herunterladen* auswählen.
++
+Auf der Registerkarte „Top Performers“ können Sie auswählen, einen Bericht mit den Statistiken für den einzelnen angezeigten Cluster oder für alle Cluster im Datacenter herunterzuladen.
+
++
+Die Datei wurde heruntergeladen.
+
+. Die Datei lässt sich in der entsprechenden Applikation öffnen.
+
+
+*Verwandte Informationen*
+
+link:["Systemstatus/Cluster-Inventarseite"]
+
+link:../reporting/task_schedule_report.html["Planen eines Berichts"]

@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_view_encryption_status_of_all_volumes.html 
+sidebar: sidebar 
+keywords: view, encryption status, volumes 
+summary: Sie können eine Liste aller Volumes und deren aktuellen Verschlüsselungsstatus einsehen, um festzustellen, ob die Daten auf Ihren Volumes ausreichend vor dem Zugriff durch unbefugte Benutzer geschützt sind. 
+---
+= Der Verschlüsselungsstatus aller Volumes in Active IQ Unified Manager kann angezeigt werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Liste aller Volumes und deren aktuellen Verschlüsselungsstatus einsehen, um festzustellen, ob die Daten auf Ihren Volumes ausreichend vor dem Zugriff durch unbefugte Benutzer geschützt sind.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+Für ein Volume sind folgende Verschlüsselungsarten möglich:
+
+* Software - Volumes, die mit den Softwareverschlüsselungslösungen NetApp Volume Encryption (NVE) oder NetApp Aggregate Encryption (NAE) geschützt sind.
+* Hardware - Volumes, die mit der Hardwareverschlüsselung NetApp Storage Encryption (NSE) geschützt sind.
+* Software und Hardware - Volumes, die sowohl durch Software- als auch durch Hardwareverschlüsselung geschützt sind.
+* Keine - Volumes, die nicht verschlüsselt sind.
+
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. Im Menü „Ansicht“ erfolgt die Auswahl von *Systemstatus* > *Volume-Verschlüsselung*
+. In der Ansicht *Systemstatus: Volume-Verschlüsselung* können Sie nach dem Feld *Verschlüsselungstyp* sortieren oder mithilfe des Filters Volumes anzeigen, die einen bestimmten Verschlüsselungstyp aufweisen oder die nicht verschlüsselt sind (Verschlüsselungstyp "`None`").
+

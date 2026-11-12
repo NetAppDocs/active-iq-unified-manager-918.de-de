@@ -1,0 +1,26 @@
+---
+permalink: data-protection/task_verify_um_data_source_caching_in_workflow_automation.html 
+sidebar: sidebar 
+keywords: verify, unified manager, data source, cache, workflow automation 
+summary: Sie können feststellen, ob das Caching der Datenquellen in Unified Manager ordnungsgemäß funktioniert, indem Sie prüfen, ob die Datenquellenerfassung in Workflow Automation erfolgreich ist. Dies empfiehlt sich beispielsweise bei der Integration von Workflow Automation mit Unified Manager, um sicherzustellen, dass die Funktionen von Workflow Automation nach der Integration verfügbar sind. 
+---
+= Überprüfung des Caching der Active IQ Unified Manager Datenquelle in Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können feststellen, ob das Caching der Datenquellen in Unified Manager ordnungsgemäß funktioniert, indem Sie prüfen, ob die Datenquellenerfassung in Workflow Automation erfolgreich ist. Dies empfiehlt sich beispielsweise bei der Integration von Workflow Automation mit Unified Manager, um sicherzustellen, dass die Funktionen von Workflow Automation nach der Integration verfügbar sind.
+
+.Bevor Sie beginnen
+Um diese Aufgabe ausführen zu können, muss Ihnen in Workflow Automation entweder die Administratorrolle oder die Architektenrolle zugewiesen sein.
+
+.Schritte
+. In der Workflow Automation UI erfolgt die Auswahl von *Execution* > *Data Sources*.
+. Per Rechtsklick auf den Namen der Unified Manager Datenquelle und anschließendes Auswählen von *Acquire Now*.
+. Zu überprüfen ist, ob die Datenerfassung fehlerfrei verläuft.
++
+Für eine erfolgreiche Integration von Workflow Automation mit Unified Manager müssen Erfassungsfehler behoben werden.
+
+

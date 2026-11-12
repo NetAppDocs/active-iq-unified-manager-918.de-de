@@ -1,0 +1,28 @@
+---
+permalink: health-checker/task_view_all_security_events.html 
+sidebar: sidebar 
+keywords: view, active, security events 
+summary: Sie können alle aktiven Sicherheitsereignisse einsehen und jedes einzelne einem Benutzer zuweisen, der das Problem beheben kann. Falls Sie bestimmte Sicherheitsereignisse nicht erhalten möchten, hilft Ihnen diese Liste außerdem dabei, die zu deaktivierenden Ereignisse zu identifizieren. 
+---
+= Alle aktiven Sicherheitsereignisse in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können alle aktiven Sicherheitsereignisse einsehen und jedes einzelne einem Benutzer zuweisen, der das Problem beheben kann. Falls Sie bestimmte Sicherheitsereignisse nicht erhalten möchten, hilft Ihnen diese Liste außerdem dabei, die zu deaktivierenden Ereignisse zu identifizieren.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+.Schritte
+. Im linken Navigationsbereich auf *Event Management* klicken.
++
+Standardmäßig zeigt die Inventarseite „Event Management“ neue und bestätigte Ereignisse an.
+
+. Im Menü „Ansicht“ ist die Option „Aktive Sicherheitsereignisse“ auszuwählen.
++
+Die Seite zeigt alle neuen und bestätigten Sicherheitsereignisse an, die in den letzten 7 Tagen generiert wurden.
+
+

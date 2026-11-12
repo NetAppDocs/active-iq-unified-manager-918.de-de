@@ -1,0 +1,16 @@
+---
+permalink: install-linux/concept_upgrade_third_party_products_on_linux_um.html 
+sidebar: sidebar 
+keywords: data center manager, upgrade, third-party products 
+summary: Sie können Drittanbieterprodukte wie JRE auf Unified Manager aktualisieren, wenn Unified Manager auf Linux-Systemen installiert ist. 
+---
+= Aktualisierung von Drittanbieterprodukten nach der Installation von Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Drittanbieterprodukte wie JRE aktualisieren, wenn Unified Manager bereits auf Linux-Systemen installiert ist.
+
+Die Unternehmen, die diese Drittanbieterprodukte entwickeln, melden regelmäßig Sicherheitslücken. Sie können die Software nach eigenem Zeitplan auf neuere Versionen aktualisieren.

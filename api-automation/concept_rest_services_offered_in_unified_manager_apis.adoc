@@ -1,0 +1,59 @@
+---
+permalink: api-automation/concept_rest_services_offered_in_unified_manager_apis.html 
+sidebar: sidebar 
+keywords: rest, services, offer, active iq, unified, manager 
+summary: Sie sollten sich mit den angebotenen REST Services und Operationen vertraut machen, bevor Sie die Active IQ Unified Manager APIs verwenden. 
+---
+= REST Services verstehen, die in Active IQ Unified Manager angeboten werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten sich mit den angebotenen REST Services und Operationen vertraut machen, bevor Sie die Active IQ Unified Manager APIs verwenden.
+
+Die Provisionierungs- und Verwaltungs-APIs, die zur Konfiguration des API-Servers verwendet werden, unterstützen Lese- (GET) oder Schreibvorgänge (POST, PATCH, DELETE). Im Folgenden sind einige Beispiele für die von den APIs unterstützten GET-, PATCH-, POST- und DELETE-Operationen aufgeführt:
+
+* Beispiel für GET: `GET /datacenter/cluster/clusters` ruft Clusterdetails in Ihrem Datacenter ab. Die maximale Anzahl der Datensätze, die von der  `GET` Operation zurückgegeben wird, beträgt 1000.
++
+[NOTE]
+====
+Die APIs ermöglichen Ihnen, die Datensätze nach unterstützten Attributen zu filtern, zu sortieren und zu ordnen.
+
+====
+* Beispiel für POST: `POST /datacenter/svm/svms` erstellt eine benutzerdefinierte Storage Virtual Machine (SVM).
+* Beispiel für PATCH: `PATCH /datacenter/svm/svms/{key}` ändert die Eigenschaften einer SVM mithilfe ihres eindeutigen Schlüssels.
+* Beispiel für DELETE: `DELETE /storage-provider/access-endpoints/{key}` löscht einen Zugriffsendpunkt von einer LUN, SVM oder Dateifreigabe mithilfe seines eindeutigen Schlüssels.
+
+
+Die mit den APIs ausführbaren REST-Operationen hängen von der Rolle des Benutzers Operator, Storage Administrator oder Application Administrator ab.
+
+[cols="2*"]
+|===
+| Benutzerrolle | Unterstützte REST-Methode 
+
+
+ a| 
+Operator
+ a| 
+Schreibgeschützter Zugriff auf die Daten. Benutzer mit dieser Rolle können alle GET-Anfragen ausführen.
+
+
+
+ a| 
+Storage-Administrator
+ a| 
+Lesezugriff auf alle Daten. Benutzer mit dieser Rolle können alle GET-Anfragen ausführen.
+
+Darüber hinaus verfügen sie über Schreibzugriff (zum Ausführen von PATCH-, POST- und DELETE-Anfragen), um bestimmte Aktivitäten auszuführen, z. B. das Managen von Storage Service Objekten und Storage Management Optionen.
+
+
+
+ a| 
+Anwendungsadministrator
+ a| 
+Lese- und Schreibzugriff auf alle Daten. Benutzer mit dieser Rolle können GET-, PATCH-, POST- und DELETE-Anfragen für alle Funktionen ausführen.
+
+|===
+Weitere Informationen zu allen REST-Operationen enthält die _Online API Dokumentation_.

@@ -1,0 +1,16 @@
+---
+permalink: storage-mgmt/concept_override_management_actions_through_scripts.html 
+sidebar: sidebar 
+keywords: override, management, actions, scripts 
+summary: Sie können benutzerdefinierte Skripte erstellen und sie Warnmeldungen zuordnen, um für bestimmte Ereignisse spezifische Aktionen auszuführen, anstatt die standardmäßigen Verwaltungsaktionen zu verwenden, die auf der Seite „Management Actions“ oder im Unified Manager Dashboard dafür verfügbar sind. 
+---
+= Verwaltungsaktionen in Active IQ Unified Manager mit Skripten überschreiben
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können benutzerdefinierte Skripte erstellen und sie Warnmeldungen zuordnen, um für bestimmte Ereignisse spezifische Aktionen auszuführen, anstatt die standardmäßigen Verwaltungsaktionen zu verwenden, die auf der Seite „Management Actions“ oder im Unified Manager Dashboard dafür verfügbar sind.
+
+Wenn Sie für einen Ereignistyp bestimmte Aktionen ausführen und diese nicht als Teil der von Unified Manager bereitgestellten Management Actions Funktion beheben möchten, können Sie ein benutzerdefiniertes Skript für die jeweilige Aktion konfigurieren. Anschließend können Sie das Skript einer Warnung für diesen Ereignistyp zuordnen und solche Ereignisse einzeln bearbeiten. In diesem Fall werden auf der Seite Management Actions oder im Unified Manager Dashboard keine Verwaltungsaktionen für diesen spezifischen Ereignistyp generiert.

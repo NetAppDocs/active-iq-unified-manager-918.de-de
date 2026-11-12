@@ -1,0 +1,47 @@
+---
+permalink: install-linux/task_restart_unified_manager.html 
+sidebar: sidebar 
+keywords: restart, unified manager 
+summary: Möglicherweise müssen Sie Unified Manager nach der Vornahme von Konfigurationsänderungen neu starten. 
+---
+= Active IQ Unified Manager neu starten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie Unified Manager nach der Vornahme von Konfigurationsänderungen neu starten.
+
+.Bevor Sie beginnen
+Sie benötigen Root-Benutzerzugriff auf den Red Hat Enterprise Linux Server, auf dem Unified Manager installiert ist.
+
+.Schritte
+. Die Anmeldung als Root-Benutzer beim Server, auf dem der Unified Manager Service neu gestartet werden soll, ist erforderlich.
+. Das Stoppen des Unified Manager Service und des zugehörigen MySQL Service erfolgt in dieser Reihenfolge:
++
+`systemctl stop ocieau`
+
++
+`systemctl stop ocie`
+
++
+`systemctl stop mysqld`
+
+. Der Start der MySQL und Unified Manager Services erfolgt in dieser Reihenfolge:
++
+`systemctl start mysqld`
+
++
+`systemctl start ocie`
+
++
+`systemctl start ocieau`
+
+
+
+[NOTE]
+====
+`mysqld` ist ein Daemon-Programm, das zum Starten und Stoppen des MySQL-Servers benötigt wird.
+
+====

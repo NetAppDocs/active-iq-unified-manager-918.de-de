@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_stopped_svms.html 
+sidebar: sidebar 
+keywords: create, report, view, stopped, storage VMs 
+summary: Sie können einen Bericht erstellen, der eine Liste aller gestoppten SVMs anzeigt. 
+---
+= Ein Bericht zum Anzeigen gestoppter Speicher-VMs im Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, der eine Liste aller gestoppten SVMs anzeigt.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+Im Folgenden werden die Schritte zum Erstellen einer benutzerdefinierten Ansicht beschrieben, in der angehaltene Storage VMs angezeigt werden; anschließend wird die Generierung eines Berichts für diese Ansicht geplant.
+
+.Schritte
+. Die Auswahl erfolgt im linken Navigationsbereich über *Storage* > *Storage VMs*.
+. Im Menü „View“ erfolgt die Auswahl von *Health* > *All Storage VMs*.
+. Mit *Anzeigen/Ausblenden* können Sie alle Spalten ausblenden, die Sie im Bericht nicht benötigen.
+. Die Spalte „`State`“ wird in die Nähe der Spalte „`Storage VM`“ gezogen.
+. Nach dem Klick auf das Filtersymbol folgt das Hinzufügen des folgenden Filters und anschließend der Klick auf *Apply Filter*:
++
+** Der Zustand ist angehalten
+
+
+. Die Ansicht unter einem spezifischen Namen speichern, der widerspiegelt, was in der Ansicht angezeigt wird, z. B. „`Stopped SVMs`“, und auf das Häkchen (image:../media/blue_check.gif[""]) klicken.
+. Auf der Inventarseite die Schaltfläche *Geplante Berichte* auswählen.
+. Durch Klicken auf *Zeitplan hinzufügen* wird der Seite *Berichtszeitpläne* eine neue Zeile hinzugefügt, sodass die Zeitplanmerkmale für den neuen Bericht definiert werden können.
+. Sie geben einen Namen für den Berichtsplan ein, füllen die anderen Berichtsfelder aus und klicken dann auf das Häkchen (image:../media/blue_check.gif[""]) am Ende der Zeile.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und mit der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Anhand der im Bericht angezeigten Ergebnisse lässt sich prüfen, warum die SVM angehalten ist und ob die angehaltenen SVMs neu gestartet werden sollten.

@@ -1,0 +1,39 @@
+---
+permalink: data-protection/task_create_cascade_or_fanout_relationships_to_extend_protection.html 
+sidebar: sidebar 
+keywords: create, cascade fanout, relationships, extend protection, existing protection relationship 
+summary: Sie können den Schutz einer bestehenden Beziehung erweitern, indem Sie entweder einen Fanout vom Quellvolume oder eine Kaskade vom Zielvolume einer bestehenden Beziehung erstellen. Dies kann beispielsweise sinnvoll sein, wenn Sie Daten von einem Standort auf mehrere Standorte kopieren oder zusätzlichen Schutz durch die Erstellung weiterer Backups gewährleisten möchten. 
+---
+= Die Erweiterung des Schutzes mithilfe von Kaskaden- oder Fanout-Beziehungen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Schutz einer bestehenden Beziehung erweitern, indem Sie entweder einen Fanout vom Quellvolume oder eine Kaskade vom Zielvolume einer bestehenden Beziehung erstellen. Dies kann beispielsweise sinnvoll sein, wenn Sie Daten von einem Standort auf mehrere Standorte kopieren oder zusätzlichen Schutz durch die Erstellung weiterer Backups gewährleisten möchten.
+
+Sie können den Schutz mithilfe einer Konsistenzgruppe auf Volumes ausweiten. Eine Konsistenzgruppe ist ein Container, der mehrere Volumes enthält, sodass Sie alle Volumes als eine Einheit managen können. Sie können die SnapMirror active sync Konsistenzgruppe und die synchrone Konsistenzgruppenbeziehung auf der Seite „Beziehungen“ von Unified Manager anzeigen.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Sie müssen Workflow Automation eingerichtet haben.
+
+
+.Schritte
+. Die Auswahl erfolgt über *Schutz* > *Beziehungen*. Alternativ können Sie die Beziehungen auf der Seite mit den Volumendetails einsehen.
+. Auf der Seite *Volume-Beziehungen* erfolgt die Auswahl der SnapMirror Beziehung, für die der Schutz erweitert werden soll.
+. In der Aktionsleiste erfolgt die Auswahl von *Schutz erweitern*.
+. Im Menü ist je nachdem, ob eine Fanout-Beziehung von der Quelle oder eine Kaskadenbeziehung vom Ziel erstellt werden soll, entweder *Von Quelle* oder *Von Ziel* auszuwählen.
+. Je nach Art der Schutzbeziehung, die Sie erstellen, erfolgt die Auswahl entweder über *Mit SnapMirror* oder *Mit SnapVault*.
++
+Das Dialogfeld *Schutz konfigurieren* wird angezeigt.
+
++
+[NOTE]
+====
+Dies kann auf der Seite „unified relationship / Volume Relationship“ und „Volume / Health details“ erreicht werden.
+
+====
+. Sie vervollständigen die Informationen wie im Dialogfeld *Schutz konfigurieren* angegeben.
+

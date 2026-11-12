@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_calculate_reclaimable_space_for_snapshot_copies.html 
+sidebar: sidebar 
+keywords: calculate, reclaimable space, snapshot copies 
+summary: Sie können berechnen, wie viel Speicherplatz freigegeben werden kann, wenn eine oder mehrere Snapshot-Kopien gelöscht werden. 
+---
+= Berechnung des zurückforderbaren Speicherplatzes für Snapshot Kopien in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können berechnen, wie viel Speicherplatz freigegeben werden kann, wenn eine oder mehrere Snapshot-Kopien gelöscht werden.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Das Volume muss online sein.
+* Das Volume muss ein FlexVol volume sein; diese Funktion wird bei FlexGroup Volumes nicht unterstützt.
+
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. In der Ansicht *Systemstatus: Alle Volumes* erfolgt die Auswahl des Volumes, das die anzuzeigenden Snapshot Kopien enthält.
++
+Die Liste der Snapshot-Kopien wird angezeigt.
+
+. Auf der Detailseite *Volume / Systemstatus* ist die Registerkarte *Kapazität* auszuwählen.
+. Im Bereich *Details* der Registerkarte *Capacity* wird im Abschnitt „Weitere Details“ der Link neben *Snapshot Copies* ausgewählt.
++
+Die Anzahl der Snapshot-Kopien ist ein Link, der die Liste der Snapshot-Kopien anzeigt.
+
+. In der Ansicht *Snapshot Copies* erfolgt die Auswahl der Snapshot-Kopien, für die der zurückforderbare Speicherplatz berechnet werden soll.
+. Anschließend ist *Berechnen* auszuwählen.
++
+Der zurückgewinnbare Speicherplatz (in Prozent sowie in KB, MB, GB usw.) auf dem Volume wird angezeigt.
+
+. Zur Neuberechnung des zurückgewinnbaren Speicherplatzes werden die erforderlichen Snapshot Kopien ausgewählt und auf *Recalculate* geklickt.
+

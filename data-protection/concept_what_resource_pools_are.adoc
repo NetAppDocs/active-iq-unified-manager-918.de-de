@@ -1,0 +1,25 @@
+---
+permalink: data-protection/concept_what_resource_pools_are.html 
+sidebar: sidebar 
+keywords: resource pools 
+summary: Ressourcenpools sind Gruppen von Aggregaten, die von einem Storage-Administrator mit Unified Manager erstellt werden, um Partnerapplikationen für das Backup-Management Provisionierung bereitzustellen. 
+---
+= Informationen zu Ressourcenpools in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ressourcenpools sind Gruppen von Aggregaten, die von einem Storage-Administrator mit Unified Manager erstellt werden, um Partnerapplikationen für das Backup-Management Provisionierung bereitzustellen.
+
+Sie können Ihre Ressourcen anhand von Attributen wie Performance, Kosten, physischem Standort oder Verfügbarkeit bündeln. Durch die Gruppierung verwandter Ressourcen in einem Pool können Sie den Pool für Überwachung und Provisionierung als eine einzelne Einheit behandeln. Dies vereinfacht die Verwaltung dieser Ressourcen und ermöglicht eine flexiblere und effizientere Nutzung des Storage.
+
+Während der Provisionierung des sekundären Storage ermittelt Unified Manager anhand der folgenden Kriterien das am besten geeignete Aggregat im Ressourcenpool für den Schutz:
+
+* Das Aggregat ist ein Datenaggregat (kein Root-Aggregat) und es ist ONLINE.
+* Das Aggregat befindet sich auf einem Ziel-Cluster-Knoten, dessen ONTAP Version der Hauptversion des Quell-Clusters entspricht oder höher ist.
+* Das Aggregat verfügt über den größten verfügbaren Speicherplatz aller Aggregate im Ressourcenpool.
+* Nach der Provisionierung des Ziel-Volumes liegt der Aggregatspeicherplatz innerhalb des für das Aggregat definierten Schwellenwerts für nahezu volle Auslastung und nahezu Überbelegung (globaler oder lokaler Schwellenwert, je nachdem, welcher anwendbar ist).
+* Die Anzahl der FlexVol Volumes auf dem Zielknoten darf das Plattformlimit nicht überschreiten.
+

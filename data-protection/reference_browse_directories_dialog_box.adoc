@@ -1,0 +1,55 @@
+---
+permalink: data-protection/reference_browse_directories_dialog_box.html 
+sidebar: sidebar 
+keywords: browse, directories, dialog box 
+summary: Sie können das Dialogfeld „Verzeichnisse durchsuchen“ verwenden, wenn Sie Daten in einem Verzeichnis auf einem Cluster und einer SVM wiederherstellen möchten, die sich von der ursprünglichen Quelle unterscheiden. Der ursprüngliche Quell-Cluster und das Quell-Volume sind standardmäßig ausgewählt. 
+---
+= Im Active IQ Unified Manager steht das Dialogfeld „Verzeichnisse durchsuchen“ zur Verfügung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Dialogfeld „Verzeichnisse durchsuchen“ verwenden, wenn Sie Daten in einem Verzeichnis auf einem Cluster und einer SVM wiederherstellen möchten, die sich von der ursprünglichen Quelle unterscheiden. Der ursprüngliche Quell-Cluster und das Quell-Volume sind standardmäßig ausgewählt.
+
+Im Dialogfeld „Verzeichnisse durchsuchen“ können Sie den Cluster, die SVM, das Volume und den Verzeichnispfad auswählen, in dem Sie die Daten wiederherstellen möchten.
+
+* *Cluster*
++
+Listet die verfügbaren Clusterziele auf, in die Sie Daten wiederherstellen können. Standardmäßig ist der Cluster des ursprünglichen Quell-Volumes ausgewählt.
+
+* *SVM-Auswahlliste*
++
+Listet die für den ausgewählten Cluster verfügbaren SVMs auf. Standardmäßig ist die SVM des ursprünglichen Quellvolumes ausgewählt.
+
+* *Volumen*
++
+Listet alle lesen/schreiben Volumes in einer ausgewählten SVM auf. Sie können die Volumes nach Name und verfügbarem Speicherplatz filtern. Das Volume mit dem meisten verfügbaren Speicherplatz steht zuerst, gefolgt von den übrigen in absteigender Reihenfolge. Standardmäßig ist das ursprüngliche Quellvolume ausgewählt.
+
+* *Textfeld für den Dateipfad*
++
+Ermöglicht die Eingabe des Dateipfads, in den die Daten wiederhergestellt werden sollen. Der eingegebene Pfad muss bereits existieren.
+
+* *Name*
++
+Zeigt die Namen der verfügbaren Ordner für das ausgewählte Volume an. Durch Klicken auf einen Ordner in der Namensliste werden die Unterordner angezeigt, sofern welche vorhanden sind. In den Ordnern enthaltene Dateien werden nicht angezeigt. Durch Klicken auf image:../media/icon_upfolder.gif["Symbol für übergeordneten Ordner"] nach der Auswahl eines Ordners gelangen Sie in der Verzeichnisstruktur eine Ebene nach oben.
+
+
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Verzeichnis auswählen*
++
+Wendet Ihre Auswahl an und schließt das Dialogfeld „Verzeichnisse durchsuchen“. Wenn kein Verzeichnis ausgewählt ist, ist diese Schaltfläche deaktiviert.
+
+* *Stornieren*
++
+Verwirft Ihre Auswahl und schließt das Dialogfeld „Verzeichnisse durchsuchen“.
+
+

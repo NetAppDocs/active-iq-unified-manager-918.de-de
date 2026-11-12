@@ -1,0 +1,88 @@
+---
+permalink: events/reference_event_details_page.html 
+sidebar: sidebar 
+keywords: event, details, page 
+summary: Auf der Seite mit den Ereignisdetails lassen sich die Details eines ausgewählten Ereignisses anzeigen, z. B. der Schweregrad des Ereignisses, das Auswirkungs-Level, der Auswirkungsbereich und die Ereignisquelle. Außerdem lassen sich zusätzliche Informationen zu möglichen Korrekturmaßnahmen zur Behebung des Problems anzeigen. 
+---
+= Informationen zur Seite „Ereignisdetails“ in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite mit den Ereignisdetails lassen sich die Details eines ausgewählten Ereignisses anzeigen, z. B. der Schweregrad des Ereignisses, das Auswirkungs-Level, der Auswirkungsbereich und die Ereignisquelle. Außerdem lassen sich zusätzliche Informationen zu möglichen Korrekturmaßnahmen zur Behebung des Problems anzeigen.
+
+* *Ereignisname*
++
+Der Name des Ereignisses und der Zeitpunkt, zu dem das Ereignis zuletzt beobachtet wurde.
+
++
+Bei nicht auf die Performance bezogenen Ereignissen sind die Informationen zum letzten Auftreten nicht bekannt, solange sich das Ereignis im Status „Neu“ oder „Bestätigt“ befindet, und werden daher ausgeblendet.
+
+* *Ereignisbeschreibung*
++
+Eine kurze Beschreibung des Ereignisses.
+
++
+In einigen Fällen enthält die Ereignisbeschreibung einen Grund für das Auslösen des Ereignisses.
+
+* *Komponente in Konflikt*
++
+Bei dynamischen Performance-Ereignissen werden in diesem Abschnitt Symbole angezeigt, die die logischen und physischen Komponenten des Clusters darstellen. Wenn eine Komponente in einem Konflikt steht, ist ihr Symbol eingekreist und rot hervorgehoben.
+
++
+Eine Beschreibung der hier angezeigten Komponenten ist unter _Cluster-Komponenten und warum sie in Konflikt geraten können_ verfügbar.
+
+
+
+Beschreibungen der Abschnitte Ereignisinformationen, Systemdiagnose und Vorgeschlagene Maßnahmen finden sich in anderen Themen.
+
+
+
+[[command-buttons]]
+== Befehlsschaltflächen
+
+Mithilfe der Befehlsschaltflächen können Sie folgende Aufgaben ausführen:
+
+* *Notizen-Symbol*
++
+Ermöglicht es Ihnen, eine Notiz zum Ereignis hinzuzufügen oder zu aktualisieren sowie alle von anderen Benutzern hinterlassenen Notizen einzusehen.
+
+
+
+*Aktionsmenü*
+
+* *Mir zuweisen*
++
+Ordnet Ihnen das Ereignis zu.
+
+* *Anderen zuweisen*
++
+Öffnet das Dialogfeld „Besitzer zuweisen“, über das sich das Ereignis anderen Benutzern zuweisen oder neu zuweisen lässt.
+
++
+Wenn Sie einem Benutzer ein Ereignis zuweisen, werden der Name des Benutzers und der Zeitpunkt der Zuweisung in die Ereignisliste für die ausgewählten Ereignisse aufgenommen.
+
++
+Die Zuweisung von Ereignissen kann auch aufgehoben werden, indem das Feld „Eigentümer“ leer gelassen wird.
+
+* *Bestätigen*
++
+Bestätigung der ausgewählten Ereignisse, damit keine wiederholten Alarmbenachrichtigungen mehr eingehen.
+
++
+Wenn Sie ein Ereignis bestätigen, werden Ihr Benutzername und der Zeitpunkt der Bestätigung in der Ereignisliste (Bestätigt von) für die ausgewählten Ereignisse angezeigt. Wenn Sie ein Ereignis bestätigen, übernehmen Sie die Verantwortung für dessen Verwaltung.
+
+* *Als gelöst markieren*
++
+Ermöglicht es Ihnen, den Ereignisstatus in Resolved zu ändern.
+
++
+Wenn Sie ein Ereignis beheben, werden Ihr Benutzername und der Zeitpunkt, zu dem Sie das Ereignis behoben haben, in der Ereignisliste (Behoben von) für die ausgewählten Ereignisse hinzugefügt. Nachdem Sie eine Korrekturmaßnahme für das Ereignis ergriffen haben, müssen Sie das Ereignis als behoben markieren.
+
+* *Warnung hinzufügen*
++
+Das Dialogfeld „Warnung hinzufügen“ wird angezeigt, in dem Sie eine Warnung für das ausgewählte Ereignis hinzufügen können.
+
+

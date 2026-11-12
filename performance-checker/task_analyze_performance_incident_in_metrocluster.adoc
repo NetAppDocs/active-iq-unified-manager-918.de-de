@@ -1,0 +1,37 @@
+---
+permalink: performance-checker/task_analyze_performance_incident_in_metrocluster.html 
+sidebar: sidebar 
+keywords: analyzing, dynamic, performance, event, remote, cluster, metrocluster, configuration 
+summary: Mit Unified Manager können Sie dynamische Performance-Ereignisse auf einem Remote-Cluster in einer MetroCluster Konfiguration analysieren. Die Analyse hilft Ihnen festzustellen, ob ein Ereignis auf dem Remote-Cluster ein Ereignis auf dem Partner-Cluster verursacht hat. 
+---
+= Analyse eines MetroCluster Leistungsereignisses auf einem Remote Cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Unified Manager können Sie dynamische Performance-Ereignisse auf einem Remote-Cluster in einer MetroCluster Konfiguration analysieren. Die Analyse hilft Ihnen festzustellen, ob ein Ereignis auf dem Remote-Cluster ein Ereignis auf dem Partner-Cluster verursacht hat.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Sie müssen ein Performance-Ereignis auf einem lokalen Cluster in einer MetroCluster Konfiguration analysiert und die Ereigniserkennungszeit ermittelt haben.
+* Sie müssen den Systemstatus des lokalen Clusters und des Partner-Clusters, das an dem Performance-Ereignis beteiligt ist, überprüft sowie den Namen des Partner-Clusters ermittelt haben.
+
+
+.Schritte
+. Bei der Unified Manager Instanz, die den Partnercluster überwacht, ist eine Anmeldung erforderlich.
+. Im linken Navigationsbereich lässt sich durch Klicken auf *Ereignisse* die Ereignisliste anzeigen.
+. Im Selektor *Time Range* erfolgt die Auswahl von *Last Hour*; anschließend folgt ein Klick auf *Apply Range*.
+. Im Selektor *Filter* wird im linken Dropdown-Menü *Cluster* ausgewählt, der Name des Partnerclusters in das Textfeld eingegeben und anschließend auf *Filter anwenden* geklickt.
++
+Wenn für den ausgewählten Cluster in der letzten Stunde keine Ereignisse verzeichnet wurden, bedeutet dies, dass der Cluster in dem Zeitraum, in dem das Ereignis auf seinem Partner erkannt wurde, keine Performance-Probleme hatte.
+
+. Wenn im ausgewählten Cluster in der letzten Stunde Ereignisse erkannt wurden, ist die Ereigniserkennungszeit mit der Ereigniserkennungszeit des Ereignisses im lokalen Cluster zu vergleichen.
++
+Wenn diese Ereignisse ressourcenintensive Workloads betreffen, die zu Ressourcenkonflikten auf der Datenverarbeitungskomponente führen, könnten einer oder mehrere dieser Workloads das Ereignis im lokalen Cluster verursacht haben. Sie können auf das Ereignis klicken, um es zu analysieren und die vorgeschlagenen Maßnahmen zu seiner Behebung auf der Seite mit den Ereignisdetails einzusehen.
+
++
+Falls diese Ereignisse keine Bully-Workloads betreffen, haben sie das Performance-Ereignis auf dem lokalen Cluster nicht verursacht.
+
+

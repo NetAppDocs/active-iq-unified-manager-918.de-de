@@ -1,0 +1,31 @@
+---
+permalink: events/task_view_events_that_occurred_during_maintenance_window.html 
+sidebar: sidebar 
+keywords: view, events, occurred, maintenance, window 
+summary: Bei Bedarf können Sie die Ereignisse anzeigen, die während eines Unified Manager Wartungsfensters für alle Storage-Objekte generiert wurden. Die meisten Ereignisse erscheinen nach Abschluss des Wartungsfensters und nachdem alle Systemressourcen wieder betriebsbereit sind im Status „Veraltet“. 
+---
+= Anzeigen von Ereignissen, die während eines Wartungsfensters in Active IQ Unified Manager generiert wurden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei Bedarf können Sie die Ereignisse anzeigen, die während eines Unified Manager Wartungsfensters für alle Storage-Objekte generiert wurden. Die meisten Ereignisse erscheinen nach Abschluss des Wartungsfensters und nachdem alle Systemressourcen wieder betriebsbereit sind im Status „Veraltet“.
+
+.Bevor Sie beginnen
+Bevor Ereignisse verfügbar sind, muss mindestens ein Wartungsfenster abgeschlossen sein.
+
+Ereignisse, die während eines Wartungsfensters aufgetreten sind, werden standardmäßig nicht auf der Inventarseite „Ereignisverwaltung“ angezeigt.
+
+.Schritte
+. Im linken Navigationsbereich ist *Ereignisse* zu wählen.
++
+Standardmäßig werden alle aktiven (neuen und bestätigten) Ereignisse auf der Inventarseite Event Management angezeigt.
+
+. Im Ansichtsbereich kann die Option *Alle während der Wartung generierten Ereignisse* ausgewählt werden.
++
+Die Liste der Ereignisse, die in den letzten 7 Tagen während aller Wartungsfenstersitzungen und auf allen Clustern ausgelöst wurden, wird angezeigt.
+
+. Falls für einen einzelnen Cluster mehrere Wartungsfenster stattgefunden haben, können Sie auf das Kalendersymbol *Triggered Time* klicken und den Zeitraum für die Ereignisse des Wartungsfensters auswählen, die Sie anzeigen möchten.
+

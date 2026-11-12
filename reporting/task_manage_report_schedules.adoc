@@ -1,0 +1,61 @@
+---
+permalink: reporting/task_manage_report_schedules.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Ihre Berichtszeitpläne auf der Seite „Berichtszeitpläne“ managen. Dort können Sie bestehende Zeitpläne anzeigen, bearbeiten oder löschen. 
+---
+= Verwaltung von Berichtsplänen in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ihre Berichtszeitpläne auf der Seite „Berichtszeitpläne“ managen. Dort können Sie bestehende Zeitpläne anzeigen, bearbeiten oder löschen.
+
+[NOTE]
+.Bevor Sie beginnen
+====
+Auf der Seite „Berichtszeitpläne“ lassen sich keine neuen Berichte planen. Geplante Berichte lassen sich nur auf den Objektinventarseiten hinzufügen.
+
+====
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+
+
+.Schritte
+. Im linken Navigationsbereich ist *Storage Management* > *Report Schedules* auszuwählen.
+. Auf der Seite „Berichtszeitpläne“:
++
+[cols="2*"]
+|===
+| Wenn Sie möchten... | Dann... 
+
+
+ a| 
+Vorhandenen Zeitplan anzeigen
+ a| 
+Das Durchblättern der Liste der vorhandenen Berichte erfolgt mithilfe der Scrollleisten und Seitensteuerungen.
+
+
+
+ a| 
+Einen bestehenden Zeitplan bearbeiten
+ a| 
+.. Für den gewünschten Zeitplan wählen Sie das Symbol „Mehr“ image:../media/more_icon.gif[""] aus.
+.. Klicken Sie auf *Bearbeiten*.
+.. Die notwendigen Änderungen sind vorzunehmen.
+.. Ihre Änderungen lassen sich durch Klicken auf das Häkchen speichern.
+
+
+
+
+ a| 
+Löschen eines bestehenden Zeitplans
+ a| 
+.. Für den gewünschten Zeitplan wählen Sie das Symbol „Mehr“ image:../media/more_icon.gif[""] aus.
+.. Klicken Sie auf *Delete*.
+.. Bestätigung Ihrer Entscheidung.
+
+
+|===
+

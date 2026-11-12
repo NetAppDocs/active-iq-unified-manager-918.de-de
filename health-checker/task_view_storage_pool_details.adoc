@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_view_storage_pool_details.html 
+sidebar: sidebar 
+keywords: view, storage pool, details 
+summary: Sie können die Details des Storage Pools einsehen, um den Systemstatus des Storage Pools, den gesamten und verfügbaren Cache sowie die verwendeten und verfügbaren Zuweisungen zu überwachen. 
+---
+= Speicherpooldetails in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Details des Storage Pools einsehen, um den Systemstatus des Storage Pools, den gesamten und verfügbaren Cache sowie die verwendeten und verfügbaren Zuweisungen zu überwachen.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+.Schritte
+. Im linken Navigationsbereich erfolgt die Auswahl von *Storage* > *Aggregates*.
+. Einen Aggregatnamen auswählen.
++
+Die Details des ausgewählten Aggregats werden angezeigt.
+
+. Die Registerkarte *Festplatteninformationen* auswählen.
++
+Es werden detaillierte Datenträgerinformationen angezeigt.
+
++
+[NOTE]
+====
+Die Cache-Tabelle wird nur angezeigt, wenn das ausgewählte Aggregat einen Storage Pool verwendet.
+
+====
+. In der Cache-Tabelle befindet sich der Zeiger über dem Namen des erforderlichen Storage-Pools.
++
+Die Details des Storage Pools werden angezeigt.
+
+

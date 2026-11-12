@@ -1,0 +1,31 @@
+---
+permalink: api-automation/concept_storage_resource_model.html 
+sidebar: sidebar 
+keywords: storage, resource, ONTAP 
+summary: Die Storage Ressourcen in ONTAP lassen sich grob in physische Storage Ressourcen und logische Storage Ressourcen unterteilen. Für ein effektives Managen Ihrer ONTAP Systeme mithilfe der in Active IQ Unified Manager bereitgestellten APIs ist es erforderlich, das Storage Ressourcenmodell und die Beziehungen zwischen den verschiedenen Storage Ressourcen zu verstehen. 
+---
+= Verständnis des ONTAP Speicherressourcenmodells in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Storage Ressourcen in ONTAP lassen sich grob in _physische Storage Ressourcen_ und _logische Storage Ressourcen_ unterteilen. Für ein effektives Management Ihrer ONTAP Systeme mithilfe der in Active IQ Unified Manager bereitgestellten APIs ist ein Verständnis des Storage Ressourcenmodells und der Beziehungen zwischen den verschiedenen Storage Ressourcen erforderlich.
+
+* *Physische Storage Ressourcen*
++
+Bezieht sich auf die physischen Storage Objekte, die von ONTAP bereitgestellt werden. Zu den physischen Storage Ressourcen gehören Festplatten, Cluster, Storage Controller, Knoten und Aggregate.
+
+* *Logische Storage-Ressourcen*
++
+Bezeichnet die von ONTAP bereitgestellten Storage Ressourcen, die nicht an eine physische Ressource gebunden sind. Diese Ressourcen sind einer Storage Virtual Machine (SVM, ehemals Vserver) zugeordnet und existieren unabhängig von einer spezifischen physischen Storage Ressource wie einer Festplatte, einer Array LUN oder einem Aggregat.
+
++
+Zu den logischen Storage-Ressourcen gehören Volumes aller Typen und qtrees sowie die Funktionen und Konfigurationen, die mit diesen Ressourcen verwendet werden können, wie z. B. Snapshot Kopien, Deduplizierung, Komprimierung und Quotas.
+
+
+
+Die folgende Abbildung zeigt die Storage Ressourcen in einem 2-Knoten-Cluster:
+
+image::../media/storage_resource_model.gif[Ein Screenshot der Benutzeroberfläche, der Storage-Ressourcen in einem 2-Knoten-Cluster zeigt.]

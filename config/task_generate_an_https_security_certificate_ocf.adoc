@@ -1,0 +1,65 @@
+---
+permalink: config/task_generate_an_https_security_certificate_ocf.html 
+sidebar: sidebar 
+keywords: generate, https, security, certificate 
+summary: Wenn Active IQ Unified Manager zum ersten Mal installiert wird, wird ein Standard HTTPS Zertifikat installiert. Es kann ein neues HTTPS Sicherheitszertifikat generiert werden, das das vorhandene Zertifikat ersetzt. 
+---
+= In Active IQ Unified Manager kann ein HTTPS-Sicherheitszertifikat generiert werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Active IQ Unified Manager zum ersten Mal installiert wird, wird ein Standard HTTPS Zertifikat installiert. Es kann ein neues HTTPS Sicherheitszertifikat generiert werden, das das vorhandene Zertifikat ersetzt.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle des Anwendungsadministrators.
+
+Es kann verschiedene Gründe für die Neugenerierung des Zertifikats geben, beispielsweise wenn Sie bessere Werte für den individuellen Namen (DN) wünschen, eine höhere Schlüssellänge oder eine längere Gültigkeitsdauer benötigen oder wenn das aktuelle Zertifikat abgelaufen ist.
+
+Wenn Sie keinen Zugriff auf die Unified Manager Web-UI haben, können Sie das HTTPS-Zertifikat über die Managementplattform mit denselben Werten neu generieren. Beim Neugenerieren von Zertifikaten können Sie die Schlüssellänge und die Gültigkeitsdauer des Schlüssels festlegen. Wenn Sie in der Managementplattform die Option  `Reset Server Certificate` verwenden, wird ein neues HTTPS-Zertifikat mit einer Gültigkeit von 397 Tagen erstellt. Dieses Zertifikat verfügt über einen RSA-Schlüssel mit einer Länge von 2048 Bit.
+
+.Schritte
+. Im linken Navigationsbereich auf *General* > *HTTPS Certificate* klicken.
+. *Regenerate HTTPS Certificate* auswählen.
++
+Das Dialogfeld „HTTPS-Zertifikat neu generieren“ wird angezeigt.
+
+. Je nachdem, wie das Zertifikat generiert werden soll, ist eine der folgenden Optionen auszuwählen:
++
+[cols="2*"]
+|===
+| Wenn Sie möchten... | Folgendes ist zu tun... 
+
+
+ a| 
+Neugenerierung des Zertifikats mit den aktuellen Werten
+ a| 
+Die Option *Neu generieren mit aktuellen Zertifikatsattributen* auswählen.
+
+
+
+ a| 
+Erzeugen des Zertifikats mit verschiedenen Werten
+ a| 
+Auswahl der Option *Aktuelle Zertifikatsattribute aktualisieren*.
+
+Die Felder „Allgemeiner Name“ und „Alternative Namen“ verwenden die Werte des vorhandenen Zertifikats, wenn Sie keine neuen Werte eingeben. Der „`Common Name`“ sollte auf den FQDN des Hosts gesetzt werden. Die anderen Felder erfordern keine Werte, Sie können jedoch Werte eingeben, z. B. für E-MAIL, COMPANY, DEPARTMENT, Stadt, Bundesland und Land, wenn diese Werte im Zertifikat eingetragen werden sollen. Außerdem kann aus der verfügbaren KEY SIZE (der Schlüsselalgorithmus ist „`RSA`“) und dem VALIDITY PERIOD ausgewählt werden.
+
+[NOTE]
+====
+** Die zulässigen Werte für die Schlüssellänge sind `2048`, `3072` und `4096`.
+** Die Gültigkeitsdauer beträgt mindestens 1 Tag und maximal 36500 Tage.
++
+Obwohl eine Gültigkeitsdauer von 36.500 Tagen zulässig ist, empfiehlt sich eine Gültigkeitsdauer von maximal 397 Tagen bzw. 13 Monaten. Wenn Sie eine Gültigkeitsdauer von mehr als 397 Tagen wählen und planen, einen CSR für dieses Zertifikat zu exportieren und von einer bekannten CA signieren zu lassen, beträgt die Gültigkeit des von der CA zurückgegebenen signierten Zertifikats nur 397 Tage.
+
+** Sie können das Kontrollkästchen „Lokale Identifikationsinformationen ausschließen (z. B. localhost)“ aktivieren, wenn Sie die lokalen Identifikationsinformationen aus dem Feld „Alternative Namen“ im Zertifikat entfernen möchten. Wenn dieses Kontrollkästchen aktiviert ist, wird im Feld „Alternative Namen“ nur das verwendet, was Sie in das Feld eingeben. Wenn das Feld leer bleibt, enthält das resultierende Zertifikat überhaupt kein Feld „Alternative Namen“.
+
+
+====
+|===
+. Mit *Ja* kann das Zertifikat neu generiert werden.
+. Damit das neue Zertifikat wirksam wird, ist ein Neustart des Unified Manager Server erforderlich.
+. Die neuen Zertifikatsinformationen können durch Anzeige des HTTPS-Zertifikats überprüft werden.
+

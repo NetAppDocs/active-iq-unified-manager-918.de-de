@@ -1,0 +1,43 @@
+---
+permalink: health-checker/task_view_volume_list_and_details.html 
+sidebar: sidebar 
+keywords: view, volume list, details 
+summary: Mithilfe der Ansicht „Alle Volumes“ auf der Seite „Integrität“ lässt sich Ihr Volume-Bestand überwachen, und die Ansicht „Alle Volumes“ auf der Seite „Kapazität“ bietet Details zu Kapazität und Auslastung. 
+---
+= Die Volumenliste und Details in Active IQ Unified Manager anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Ansicht „Systemstatus: Alle Volumes“ können Sie Ihren Bestand an Volumes überwachen. Die Ansicht „Kapazität: Alle Volumes“ ermöglicht es Ihnen, Informationen über die Kapazität und Auslastung der Volumes in einem Cluster anzuzeigen.
+
+.Bevor Sie beginnen
+Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+
+Auf der Seite „Volume/Systemstatusdetails“ können Sie detaillierte Informationen zu überwachten Volumes anzeigen, darunter Kapazität, Effizienz, Konfiguration und Schutz der Volumes. Außerdem können Sie Informationen zu den zugehörigen Geräten und zugehörigen Warnmeldungen für ein bestimmtes Volume anzeigen.
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage* > *Volumes*.
+. Eine der folgenden Möglichkeiten steht zum Anzeigen der Volumendetails zur Verfügung:
++
+** Zur Anzeige detaillierter Informationen über den Systemstatus von Volumes in einem Cluster wählen Sie im Menü „Ansicht“ die Ansicht „Systemstatus: Alle Volumes“.
+** Für detaillierte Informationen über die Kapazität und Auslastung der Volumes in einem Cluster steht im Menü „Ansicht“ die Ansicht „Kapazität: Alle Volumes“ zur Verfügung.
+** Die vollständigen Details lassen sich durch Klicken auf den Volumennamen anzeigen.
++
+Sie können die vollständigen Details auch einsehen, indem Sie im Dialogfeld „Minimale Details“ auf *Details anzeigen* klicken.
+
+
+
+. *Optional:* Durch Klicken auf *Zugehörige Objekte anzeigen* im Dialogfeld „Minimale Details“ lassen sich die Objekte anzeigen, die mit dem Volume in Verbindung stehen.
+
+
+*Verwandte Informationen*
+
+* link:../health-checker/reference_health_volume_details_page.html["Volume: Seite mit Systemstatusdetails"]
+* link:../performance-checker/performance-view-all.html#performance-all-volumes-view["Performance: Ansicht „Alle Volumes“"]
+* link:../health-checker/task_view_antiransomware_status_of_all_volumes_storage_vms.html#view-security-details-of-all-volumes-with-anti-ransomware-detection["Sicherheit: Anti-Ransomware-Ansicht"]
+* link:../data-protection/task_view_volume_protection_relationships.html["Anzeigen von Volume-Schutzbeziehungen"]
+* link:../reporting/task_create_report_to_view_available_volume_capacity_charts.html["Erstellen eines Berichts zur Anzeige verfügbarer Volume-Kapazitätsdiagramme"]
+

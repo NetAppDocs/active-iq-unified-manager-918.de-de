@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_delete_annotations.html 
+sidebar: sidebar 
+keywords: delete, annotations 
+summary: Benutzerdefinierte Anmerkungen und deren Werte können gelöscht werden, wenn sie nicht mehr benötigt werden. 
+---
+= Anmerkungen in Active IQ Unified Manager löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Benutzerdefinierte Anmerkungen und deren Werte können gelöscht werden, wenn sie nicht mehr benötigt werden.
+
+.Bevor Sie beginnen
+* Die Rolle Application Administrator oder Storage Administrator ist erforderlich.
+* Die Annotationswerte dürfen nicht in anderen Annotationen oder Gruppenregeln verwendet werden.
+
+
+.Schritte
+. Auswahl im linken Navigationsbereich: *Storage Management* > *Annotations*.
+. Im Tab *Annotations* ist die Anmerkung auszuwählen, die gelöscht werden soll.
++
+Es erscheinen die Details der ausgewählten Annotation.
+
+. Zum Löschen der ausgewählten Annotation und ihres Werts *Actions* > *Delete* auswählen.
+. Im Warnungsdialogfeld erfolgt die Bestätigung der Löschung durch Klicken auf *Ja*.
+

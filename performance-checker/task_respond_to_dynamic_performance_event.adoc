@@ -1,0 +1,63 @@
+---
+permalink: performance-checker/task_respond_to_dynamic_performance_event.html 
+sidebar: sidebar 
+keywords: dynamic, performance, qos, policy, group, throttling 
+summary: 'Mit Unified Manager können Sie ein Performance-Ereignis untersuchen, das durch eine QoS-Richtliniengruppe verursacht wurde, die den Workload-Durchsatz (MB/s) drosselt. Die Drosselung erhöhte die Antwortzeiten (Latenz) von Volume Workloads in der Richtliniengruppe. Anhand der Ereignisinformationen können Sie feststellen, ob neue Grenzwerte für die Richtliniengruppen erforderlich sind, um die Drosselung zu stoppen.' 
+---
+= Reaktion auf ein dynamisches QoS-Drosselungsereignis in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Unified Manager können Sie ein Performance-Ereignis untersuchen, das durch eine QoS-Richtliniengruppe verursacht wurde, die den Workload-Durchsatz (MB/s) drosselt. Die Drosselung erhöhte die Antwortzeiten (Latenz) von Volume Workloads in der Richtliniengruppe. Anhand der Ereignisinformationen können Sie feststellen, ob neue Grenzwerte für die Richtliniengruppen erforderlich sind, um die Drosselung zu stoppen.
+
+.Bevor Sie beginnen
+* Sie benötigen die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“.
+* Es muss neue, bestätigte oder veraltete Performance-Ereignisse geben.
+
+
+.Schritte
+. Die Seite *Ereignisdetails* enthält Informationen zum Ereignis.
+. Unter *Beschreibung* werden die Namen der von der Drosselung betroffenen Workloads angezeigt.
++
+[NOTE]
+====
+Die Beschreibung kann für Opfer und Verursacher dieselbe Workload anzeigen, da die Drosselung die Workload zu ihrem eigenen Opfer macht.
+
+====
+. Der Name des Volume wird mithilfe einer Applikation wie beispielsweise einem Texteditor notiert.
++
+Sie können anhand des Volume-Namens suchen, um ihn später wiederzufinden.
+
+. In den Diagrammen „Workload-Latenz“ und „Workload-Auslastung“ wird *Bully Workloads* ausgewählt.
+. Beim Bewegen des Mauszeigers über die Diagramme werden die wichtigsten benutzerdefinierten Workloads angezeigt, die sich auf die Richtliniengruppe auswirken.
++
+Die Arbeitslast an oberster Stelle der Liste weist die größte Abweichung auf und hat die Drosselung verursacht. Die Aktivität gibt den prozentualen Anteil des von jeder Arbeitslast genutzten Limits der Richtliniengruppe an.
+
+. Im Bereich *Suggested Actions* lässt sich für die oberste Workload die Schaltfläche *Analyze Workload* auswählen.
+. Auf der Seite „Workload Analysis“ ist das Latenzdiagramm auf die Ansicht aller Cluster Components und das Durchsatzdiagramm auf Breakdown eingestellt.
++
+Die Aufschlüsselungsdiagramme werden unterhalb des Latenzdiagramms und des IOPS-Diagramms angezeigt.
+
+. Im *Latenz*-Diagramm lässt sich anhand der QoS-Grenzwerte erkennen, in welchem Ausmaß die Drosselung die Latenz zum Zeitpunkt des Ereignisses beeinflusst hat.
++
+Die QoS Richtliniengruppe hat einen maximalen Durchsatz von 1.000 Operationen pro Sekunde (op/sec), den die darin enthaltenen Workloads gemeinsam nicht überschreiten können. Zum Zeitpunkt des Ereignisses hatten die Workloads in der Richtliniengruppe einen kombinierten Durchsatz von über 1.200 op/sec, wodurch die Richtliniengruppe ihre Aktivität auf 1.000 op/sec drosselte.
+
+. Zum Vergleich dienen die Werte für die *Lese-/Schreiblatenz* und die Werte für *Lese-/Schreib-/Sonstiges*.
++
+Beide Diagramme zeigen eine hohe Anzahl von Leseanfragen mit hoher Latenz, während die Anzahl der Anfragen und die Latenz bei Schreibanfragen gering sind. Anhand dieser Werte lässt sich feststellen, ob ein hoher Durchsatz oder eine hohe Anzahl von Operationen die Latenz erhöht hat. Diese Werte können bei der Entscheidung verwendet werden, eine Richtliniengruppenbegrenzung für den Durchsatz oder die Operationen festzulegen.
+
+. Mit ONTAP System Manager kann das aktuelle Limit der Richtliniengruppe auf 1.300 Operationen/Sek. erhöht werden.
+. Nach einem Tag können Sie zu Unified Manager zurückkehren und auf der Seite *Workload Analysis* die in Schritt 3 erfasste Workload eingeben.
+. Auswahl des Diagramms „Durchsatzaufschlüsselung“.
++
+Das Diagramm „Lesen/Schreiben/Sonstiges“ wird angezeigt.
+
+. Oben auf der Seite wird der Mauszeiger auf das Symbol für das Änderungsereignis (image:../media/opm_change_icon.gif["Änderung des Ereignissymbols"]) für die Änderung der Richtliniengruppenbegrenzung bewegt.
+. Vergleich zwischen dem Diagramm *Lesen/Schreiben/Sonstiges* und dem Diagramm *Latenz*.
++
+Die Lese- und Schreibanfragen sind gleich, aber die Drosselung hat aufgehört und die Latenz hat sich verringert.
+
+
